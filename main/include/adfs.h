@@ -15,7 +15,10 @@
 #define E_NOTFOUND				6 //file was not found
 #define E_FSFULL				7
 #define E_EOF					8 //end of file reached
+#define E_BADFILEBLOCKCHAIN		9 //file chain unexpectedly interrupted
+#define E_FORMAT_NOTAUTH		10 //format was not authenticated corectly using OK string
 
+ 
 
 
 typedef unsigned char ErrCode;
@@ -132,7 +135,7 @@ typedef union _fsPageBlock
 	} d;
 } FsPageBlockStart;
 
-#define SIZEOF_PAGEDATA (2)
+#define SIZEOF_PAGEDATA (4)
 typedef union _fsPage
 {
 	unsigned char raw[FS_PAGE];
@@ -140,9 +143,12 @@ typedef union _fsPage
 	struct 
 	{
 		unsigned short eraseCycles;	
+		unsigned short dataBytes; //file bytes present on current page		
 		unsigned char data[FS_PAGE - SIZEOF_PAGEDATA];
 	} d;
 } FsPage;
+
+#define MAX_PAGEDATABYTES (FS_PAGE - SIZEOF_PAGEDATA)
 
 
 extern FsPageConfig gConfigPage;
@@ -160,20 +166,19 @@ typedef struct _fsPointer
 {
 	uint32_t pos; //position relative to begining of file
 	BlockAddr currentBlock;
-	PageAddrInBlock currentPage;
-	BlockAddr prevPage; //needed to remake chain when current block 
+	PageAddrInBlock currentPageAddr;
+	unsigned short curBytePosInPage;//cur byte in page
+	BlockAddr prevBlock; //needed to remake chain when current block 
 							//is found bad => find new block and copy over
-	unsigned short dataBytesCurPage;
 	BlockAddr nextBlock;
+	
+	FsPage currentPageData;
 	
 } FsPointer;
 
 typedef struct _fsFile
 {
 	FileEntry fileEntry;
-	
-	//filepointer
-	uint32_t ptr;
 	
 	uchar dirty;
 	
@@ -182,14 +187,11 @@ typedef struct _fsFile
 	//read and write pointers
 	FsPointer readP;
 	FsPointer writeP;
-	
-
 
 	FilePoolEntry *filePoolSlot;
 	
-	//	
-	FsPage pageCache;
-	
+	uint32_t fileSize;
+
 } FsFile;
 
 typedef struct _filePoolEntry
