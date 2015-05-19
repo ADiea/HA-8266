@@ -1,0 +1,40 @@
+fs
+
+
+page 512
+block 128*1024 //256 pages
+
+
+Page
+0-2 EraseCycles
+3-511 Data
+
+
+FS
+
+Block	Page 		Byte 			Contents																	OBS
+000		000			000-000511		[EraseCount][ADFS][Version(2B)] = 8B + Reserved 							FirstBlock
+		001-255		512-131071		Reserved
+001		000			000-000511		[Page0:[EraseCount][UsageBlock0(1B)][UsageBlock1(1B)]...[UsageBlock509]]	BlockMap
+		001			512-001023		[Page1:[EraseCount][UsageBlock510(1B)]...]
+		...			...				...
+		255			...-131071		[Page255:[EraseCount][UsageBlock...(1B)]....]
+002		000-255		000--131071		[Page0=BlockPage:[EraseCount][Data]][Page1=NormalPage]...												Block 0
+...
+
+
+BlockPage
+
+Byte		Contents
+000-002		[EraseCount]
+003-005		[NextBlock]
+006-007		[DataSizeThisPage]
+008-511		Data
+
+
+NormalPage
+
+Byte		Contents
+000-002		[EraseCount]
+003-004		[DataSizeThisPage]
+005-511		Data
