@@ -116,7 +116,8 @@ typedef union _fsPageCfg
 	} d;
 } FsPageConfig;
 
-#define SIZEOF_PAGEDATA_BLOCKSTART (2 + 2 + 2 + 2)
+#define SIZEOF_PAGEDATA (6)
+
 typedef union _fsPageBlock
 {
 	unsigned char raw[FS_PAGE];
@@ -125,13 +126,12 @@ typedef union _fsPageBlock
 	{
 		unsigned short eraseCycles;
 		unsigned short dataBytes;	//file bytes present on current page
-		unsigned short fileID;
 		BlockAddr  nextBlock; 		//next block containing file data
-		unsigned char data[FS_PAGE - SIZEOF_PAGEDATA_BLOCKSTART];
+		unsigned char data[FS_PAGE - SIZEOF_PAGEDATA];
 	} d;
 } FsPageBlockStart;
 
-#define SIZEOF_PAGEDATA (6)
+
 typedef union _fsPage
 {
 	unsigned char raw[FS_PAGE];
@@ -145,9 +145,8 @@ typedef union _fsPage
 	} d;
 } FsPage;
 
-#define MAX_PAGEDATABYTES (FS_PAGE - SIZEOF_PAGEDATA)
-#define MAX_PAGEDATABYTESFIRSTPAGE (FS_PAGE - SIZEOF_PAGEDATA_BLOCKSTART)
-
+#define MAX_PAGE_DATABYTES (FS_PAGE - SIZEOF_PAGEDATA)
+#define MAX_BLOCK_DATABYTES (MAX_PAGE_DATABYTES * PAGES_PER_BLOCK )
 
 extern FsPageConfig gConfigPage;
 
