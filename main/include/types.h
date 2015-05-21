@@ -17,4 +17,7 @@ typedef unsigned char uchar;
 #define CONFIG 0x2
 
 
+#define DEV_ERR_OK 0
+#define DEV_OTHER_ERR 1
+
 #endif /*__TYPES__H*/

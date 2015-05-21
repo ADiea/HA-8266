@@ -78,42 +78,42 @@ void enableDev(uchar dev, uchar op)
 			}
 		}
 		
-		if( dev == DEV_RADIO && (ERR_OK != devRadio_init(op)))
+		if( dev == DEV_RADIO && (DEV_ERR_OK != devRadio_init(op)))
 		{
 			LOG(ERR, "Dev [%x] init failed %x", dev, op);
 					break;	
 		}
-		else if( dev == DEV_SDCARD && (ERR_OK != devSDCard_init(op)))
+		else if( dev == DEV_SDCARD && (DEV_ERR_OK != devSDCard_init(op)))
 		{
 			LOG(ERR, "Dev [%x] init failed %x", dev, op);
 			break;
 		}				
-		else if( dev == DEV_RGB && (ERR_OK != devRGB_init(op)))
+		else if( dev == DEV_RGB && (DEV_ERR_OK != devRGB_init(op)))
 		{
 			LOG(ERR, "Dev [%x] init failed %x", dev, op);
 			break;
 		}
-		else if( dev == DEV_MQ135 && (ERR_OK != devMQ135_init(op)))
+		else if( dev == DEV_MQ135 && (DEV_ERR_OK != devMQ135_init(op)))
 		{
 			LOG(ERR, "Dev [%x] init failed %x", dev, op);
 			break;
 		}
-		else if( dev == DEV_DHT22 && (ERR_OK != devDHT22_init(op)))
+		else if( dev == DEV_DHT22 && (DEV_ERR_OK != devDHT22_init(op)))
 		{
 			LOG(ERR, "Dev [%x] init failed %x", dev, op);
 			break;
 		}
-		else if( dev == DEV_WIFI && (ERR_OK != devWiFi_init(op)))
+		else if( dev == DEV_WIFI && (DEV_ERR_OK != devWiFi_init(op)))
 		{
 			LOG(ERR, "Dev [%x] init failed %x", dev, op);
 			break;
 		}
-		else if( dev == DEV_DSTEMP && (ERR_OK != devDSTemp_init(op)))
+		else if( dev == DEV_DSTEMP && (DEV_ERR_OK != devDSTemp_init(op)))
 		{
 			LOG(ERR, "Dev [%x] init failed %x", dev, op);
 			break;
 		}
-		else if( dev == DEV_UART && (ERR_OK != devUART_init(op)))
+		else if( dev == DEV_UART && (DEV_ERR_OK != devUART_init(op)))
 		{
 			LOG(ERR, "Dev [%x] init failed %x", dev, op);
 			break;

@@ -4,22 +4,20 @@
 //EXTERN CONSTANTS
 #define MODE_W 0x1
 #define MODE_R 0x2
+#define MODE_A 0x4 //append
 
 
-#define E_OK 					0
-#define E_BADPARAM 				1
-#define E_FILEINUSE 			2
-#define E_NOFREESLOTS 			3
-#define E_READFAILURE 			4
-#define E_PAGE_CORRUPTED 		5 //page or all redundancy levels are corrupted
-#define E_NOTFOUND				6 //file was not found
-#define E_FSFULL				7
-#define E_EOF					8 //end of file reached
-#define E_BADFILEBLOCKCHAIN		9 //file chain unexpectedly interrupted
-#define E_FORMAT_NOTAUTH		10 //format was not authenticated corectly using OK string
-
- 
-
+#define FS_E_OK 					0
+#define FS_E_BADPARAM 				1
+#define FS_E_FILEINUSE 			2
+#define FS_E_NOFREESLOTS 			3
+#define FS_E_READFAILURE 			4
+#define FS_E_PAGE_CORRUPTED 		5 //page or all redundancy levels are corrupted
+#define FS_E_NOTFOUND				6 //file was not found
+#define FS_E_FSFULL				7
+#define FS_E_EOF					8 //end of file reached
+#define FS_E_BADFILEBLOCKCHAIN		9 //file chain unexpectedly interrupted
+#define FS_E_FORMAT_NOTAUTH		10 //format was not authenticated corectly using OK string
 
 typedef unsigned char ErrCode;
 
@@ -64,9 +62,6 @@ typedef unsigned char ErrCode;
 #define BLOCK_UNUSED 	  0xFF
 #define BLOCK_INUSE		  0x00
 
-
-
-
 //FS LAYOUT
 #define CONFIG_OFFSET 0
 #define CONFIG_SIZE CONFIG_PAGES 
@@ -83,7 +78,6 @@ typedef unsigned char ErrCode;
 
 #define FIRST_DATA_BLOCK_ADDR (FILETABLE_OFFSET + FILETABLE_TOTAL_SIZE)
 #define NUM_DATA_BLOCKS MAX_FILES
-
 
 //FILE 
 //redIndex = redundancy index
@@ -149,6 +143,7 @@ typedef union _fsPage
 } FsPage;
 
 #define MAX_PAGEDATABYTES (FS_PAGE - SIZEOF_PAGEDATA)
+#define MAX_PAGEDATABYTESFIRSTPAGE (FS_PAGE - SIZEOF_PAGEDATA_BLOCKSTART)
 
 
 extern FsPageConfig gConfigPage;
@@ -185,8 +180,10 @@ typedef struct _fsFile
 	BlockAddr nextReservedBlock;
 
 	//read and write pointers
-	FsPointer readP;
-	FsPointer writeP;
+	//FsPointer readP;
+	//FsPointer writeP;
+	FsPointer filePtr;
+	
 
 	FilePoolEntry *filePoolSlot;
 	

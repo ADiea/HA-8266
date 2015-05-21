@@ -3,7 +3,7 @@
 
 uchar devDSTemp_init(uchar operation)
 {
-	uchar retVal = ERR_OK;
+	uchar retVal = DEV_ERR_OK;
 	do
 	{
 		if(operation & ENABLE)
