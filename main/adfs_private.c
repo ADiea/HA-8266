@@ -19,6 +19,7 @@ ErrCode setFilePtr(uint32_t pos, FsFile *fsFile);
 
 ErrCode writeCurrentFilePage(FsFile *fsFile);
 
+//TODO take into account fileID on every page
 ErrCode updateFileSize(FsFile *fsFile)
 {
 	ErrCode err = FS_E_OK;
@@ -181,6 +182,7 @@ ErrCode writeCurrentFilePage(FsFile *fsFile)
 
 
 //might have bugs!
+//TODO take into account fileID on every page
 ErrCode setFilePtr(uint32_t pos, FsFile *fsFile)
 {
 	if(!fsFile)

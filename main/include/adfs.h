@@ -2,22 +2,23 @@
 #define ADFS_H
 
 //EXTERN CONSTANTS
-#define MODE_W 0x1
-#define MODE_R 0x2
-#define MODE_A 0x4 //append
+#define MODE_WRITE 		0x1
+#define MODE_READ 		0x2
+#define MODE_APPEND		0x4
+#define MODE_CREATE		0x8
 
 
 #define FS_E_OK 					0
 #define FS_E_BADPARAM 				1
-#define FS_E_FILEINUSE 			2
+#define FS_E_FILEINUSE 				2
 #define FS_E_NOFREESLOTS 			3
 #define FS_E_READFAILURE 			4
 #define FS_E_PAGE_CORRUPTED 		5 //page or all redundancy levels are corrupted
 #define FS_E_NOTFOUND				6 //file was not found
-#define FS_E_FSFULL				7
+#define FS_E_FSFULL					7
 #define FS_E_EOF					8 //end of file reached
 #define FS_E_BADFILEBLOCKCHAIN		9 //file chain unexpectedly interrupted
-#define FS_E_FORMAT_NOTAUTH		10 //format was not authenticated corectly using OK string
+#define FS_E_FORMAT_NOTAUTH			10 //format was not authenticated corectly using OK string
 
 typedef unsigned char ErrCode;
 
@@ -30,7 +31,7 @@ typedef unsigned char ErrCode;
 #define FS_BLOCK  65536 //bytes
 
 #define MAX_FILES 65536
-#define MAX_FILENAME 60 //bytes
+#define MAX_FILENAME 58 //bytes
 
 #define CONFIG_PAGES 1
 
@@ -51,8 +52,9 @@ typedef unsigned char ErrCode;
 
 //FILE
 #define BLOCK_ADDR_SIZEOF 2
+#define FILE_ID_SIZEOF 2
 #define FILE_META_SIZEOF 1
-#define FILEENTRY_SIZE (MAX_FILENAME + BLOCK_ADDR_SIZEOF + FILE_META_SIZEOF)
+#define FILEENTRY_SIZE (MAX_FILENAME + BLOCK_ADDR_SIZEOF + FILE_META_SIZEOF + FILE_ID_SIZEOF)
 #define NUM_FILE_ENTRIES_PER_PAGE ((FS_PAGE - SIZEOF_ERASECYCLES) / FILEENTRY_SIZE)
 
 //BLOCKMAP
@@ -122,14 +124,14 @@ typedef union _fsPageBlock
 	struct 
 	{
 		unsigned short eraseCycles;
-		unsigned short dataBytes;	//file bytes present on current page		
+		unsigned short dataBytes;	//file bytes present on current page
+		unsigned short fileID;
 		BlockAddr  nextBlock; 		//next block containing file data
-		unsigned short CRC;			//(and file table pages)
 		unsigned char data[FS_PAGE - SIZEOF_PAGEDATA_BLOCKSTART];
 	} d;
 } FsPageBlockStart;
 
-#define SIZEOF_PAGEDATA (4)
+#define SIZEOF_PAGEDATA (6)
 typedef union _fsPage
 {
 	unsigned char raw[FS_PAGE];
@@ -138,6 +140,7 @@ typedef union _fsPage
 	{
 		unsigned short eraseCycles;	
 		unsigned short dataBytes; //file bytes present on current page		
+		unsigned short fileID;
 		unsigned char data[FS_PAGE - SIZEOF_PAGEDATA];
 	} d;
 } FsPage;
@@ -153,6 +156,7 @@ typedef struct _fsFileEntry
 {
 	unsigned char fileName[MAX_FILENAME];
 	BlockAddr	firstBlock;
+	unsigned short fileID; //CRC of fileName
 	unsigned char fileMeta;
 } FileEntry;
 

@@ -80,7 +80,7 @@ FsFile* fopen(const char *filename, const char mode, char *err)
 		}
 	
 		uchar i = 0;
-		if(mode & MODE_W)
+		if(mode & MODE_WRITE)
 		{
 			for(i=0; i<MAX_POOL_FILES; i++)
 			{
@@ -119,9 +119,24 @@ FsFile* fopen(const char *filename, const char mode, char *err)
 		if(*err != FS_E_OK)
 		{
 			LOG(ERR, "FS findFile failed with [%d]", *err);
-			retFile = NULL;
-			fileSlot->locked = 0;
-			break;
+			
+			if(mode & MODE_CREATE)
+			{
+				*err = fcreate(filename, fileSlot);
+				if(*err != FS_E_OK)
+				{
+					LOG(ERR, "FS fopen: fcreate failed [%d]", *err);
+					retFile = NULL;
+					fileSlot->locked = 0;
+					break;
+				}
+			}
+			else
+			{
+				retFile = NULL;
+				fileSlot->locked = 0;
+				break;
+			}
 		}
 		
 		retFile->filePoolSlot = fileSlot;
@@ -135,7 +150,7 @@ FsFile* fopen(const char *filename, const char mode, char *err)
 		}
 		
 		uint32_t newPosition = 0;
-		if(mode & MODE_A)
+		if(mode & MODE_APPEND)
 		{
 			newPosition = 0xFFFFFFFF;
 		}
@@ -152,7 +167,7 @@ FsFile* fopen(const char *filename, const char mode, char *err)
 		readCurrentFilePage(retFile, FS_PAGE);
 						
 		//if opened in write mode, secure next free block
-		if(mode & MODE_W)
+		if(mode & MODE_WRITE)
 		{
 			*err = findUnusedBlock(retFile->curBlock, &(retFile->nextReservedBlock));
 			
@@ -192,7 +207,7 @@ ErrCode formatFS(uchar *formatKey)
 		
 		//erase block map, all blocks are unused
 		
-		//!! NOT ok to assume all bytes are 0xFF b/c card comes formatted with FAT32 fs ///
+		//!! must erase all flash to ensure no pages have eraseCycles to big => invalid page ///
 		
 		
 	}while(0);
@@ -201,21 +216,125 @@ ErrCode formatFS(uchar *formatKey)
 }
 
 //reads and advances file pointer
-uchar fread(uchar *dest, uchar size, ErrCode *err)
+uchar fread(FsFile *f, uchar *dest, uchar size, ErrCode *err)
 {
 	uchar readBytes = 0;
+	unsigned short bytesAvailable;
+	
+	do
+	{
+		if(!f || !dest || !err)
+		{
+			return FS_E_BADPARAM;
+		}
+		
+		do
+		{
+		
+			//test end_of_file
+			if(f->filePtr.curBytePosInPage >= f->filePtr.currentPageData.d.dataBytes)
+			{
+				*err = FS_E_EOF;
+				break;
+			}
+		
+			bytesAvailable = f->filePtr.currentPageData.d.dataBytes - f->filePtr.curBytePosInPage;
+			if(bytesAvailable  <= size)
+			{
+				memcpy(dst, f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA, size);
+				size = 0;
+				readBytes += size;
+				
+				f->filePtr.pos += size;
+				f->filePtr.curBytePosInPage += size;
+				
+			}
+			else 
+			{
+				memcpy(dst, f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA, bytesAvailable);
+				size -= bytesAvailable;
+				readBytes += bytesAvailable;
+				
+				f->filePtr.pos += bytesAvailable;
+				f->filePtr.curBytePosInPage += bytesAvailable;
+				
+				//change page
+				if(f->filePtr.currentPageAddr < PAGES_PER_BLOCK - 1)
+				{
+					f->filePtr.currentPageAddr++;
+					
+					err = readCurrentFilePage(f, FS_PAGE);
+					if(FS_E_OK != err)
+					{
+						LOG(ERR, "FS fread: cannot read file page 0x%x: %d", f->filePtr.currentPageAddr, err);
+						*err = FS_E_READFAILURE;
+						break;
+					}
+					
+					if(f->filePtr.currentPageData.d.fileID != f->fileEntry.fileID)
+					{
+						//Page does not belong to this file
+						f->filePtr.currentPageAddr--;
+						*err = FS_E_EOF;
+						break;
+					}
+					
+					f->filePtr.curBytePosInPage = 0;
+					
+				}
+				else
+				{
+					if(0xFFFF == f->filePtr.nextBlock)
+					{
+						LOG(DBG, "FS fread: This was the last block");
+						*err = FS_E_EOF;
+						break;					
+					}
+					
+					f->filePtr.currentPageAddr = 0;
+					f->filePtr.prevBlock = f->filePtr.currentBlock;
+					f->filePtr.currentBlock = f->filePtr.nextBlock;
+					
+					//read first page and determine next block
+					err = readCurrentFilePage(f, FS_PAGE);
+					if(FS_E_OK != err)
+					{
+						LOG(ERR, "FS fread: cannot read first page of block 0x%x: %d", f->filePtr.currentBlock, err);
+						*err = FS_E_READFAILURE;
+						break;
+					}
+			
+					f->filePtr.curBytePosInPage = 0;
+					f->filePtr.nextBlock = (FsPageBlockStart)(f->filePtr.currentPageData).d.nextBlock;	
+				}
+			}
+		}
+		while(size >0);
+	}
+	while(0);
+
+	return readBytes;
+}
+
+uchar fwrite(FsFile *f, uchar *source, uchar size, ErrCode *err)
+{
+	uchar writeBytes = 0;
 
 	do
 	{
-	
+		if(!f || !source || !err)
+		{
+			return FS_E_BADPARAM;
+		}	
 		
 	
 	
 	}while(0);
 
 
-	return readBytes;
+	return writeBytes;
 }
+
 
 ErrCode fcreate(const char *filename, FilePoolEntry *fEntry)
 {
@@ -229,7 +348,7 @@ ErrCode fcreate(const char *filename, FilePoolEntry *fEntry)
 		}
 
 		//locate free block
-		//locate next free filetable entry
+		//locate next free filetable entry = startBlock=0xffff
 		//create filetable entry
 		//create firstblock page
 		//writecurrentpage
@@ -252,23 +371,22 @@ ErrCode fdelete(FsFile *f)
 			break;
 		}
 
-		//
+		//walk blocks mark unused in temporary cache -> persist to blockmap
+		//mark startblock 0xffff in fileentry = free fileentry
 	
 	}while(0);
 
 	return ret;
 }
 
-
-
 //set pointer position
-ErrCode fSetPtr(uint32_t newPtr)
+ErrCode fSetPtr(FsFile *f, uint32_t newPtr)
 {
 
 }
 
 //set file pointer delta position
-ErrCode fSetPtrDelta(int32_t newPtr)
+ErrCode fSetPtrDelta(FsFile *f, int32_t newPtr)
 {
 
 }
