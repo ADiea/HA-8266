@@ -215,14 +215,14 @@ ErrCode formatFS(uchar *formatKey)
 }
 
 //reads and advances file pointer
-uchar fread(FsFile *f, uchar *dest, uchar size, ErrCode *err)
+uchar fread(FsFile *f, uchar *dst, uchar size, ErrCode *err)
 {
 	uchar readBytes = 0;
 	unsigned short bytesAvailable;
 	
 	do
 	{
-		if(!f || !dest || !err)
+		if(!f || !dst || !err)
 		{
 			return FS_E_BADPARAM;
 		}
@@ -239,7 +239,7 @@ uchar fread(FsFile *f, uchar *dest, uchar size, ErrCode *err)
 			bytesAvailable = f->filePtr.currentPageData.d.dataBytes - f->filePtr.curBytePosInPage;
 			if(bytesAvailable  <= size)
 			{
-				memcpy(dst, f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA, size);
+				memcpy(dst + readBytes, f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA, size);
 				size = 0;
 				readBytes += size;
 				
@@ -249,7 +249,7 @@ uchar fread(FsFile *f, uchar *dest, uchar size, ErrCode *err)
 			}
 			else 
 			{
-				memcpy(dst, f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA, bytesAvailable);
+				memcpy(dst + readBytes, f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA, bytesAvailable);
 				size -= bytesAvailable;
 				readBytes += bytesAvailable;
 				
@@ -290,6 +290,7 @@ uchar fread(FsFile *f, uchar *dest, uchar size, ErrCode *err)
 					f->filePtr.currentPageAddr = 0;
 					f->filePtr.prevBlock = f->filePtr.currentBlock;
 					f->filePtr.currentBlock = f->filePtr.nextBlock;
+					f->filePtr.curBytePosInPage = 0;
 					
 					//read first page and determine next block
 					err = readCurrentFilePage(f, FS_PAGE);
@@ -299,8 +300,7 @@ uchar fread(FsFile *f, uchar *dest, uchar size, ErrCode *err)
 						*err = FS_E_READFAILURE;
 						break;
 					}
-			
-					f->filePtr.curBytePosInPage = 0;
+					
 					f->filePtr.nextBlock = (FsPageBlockStart)(f->filePtr.currentPageData).d.nextBlock;	
 				}
 			}
@@ -326,9 +326,7 @@ uchar fwrite(FsFile *f, uchar *source, uchar size, ErrCode *err)
 			}
 	*/
 	
-	//update filesize
-	//make dirty
-	//update pointer
+
 	
 	do
 	{
@@ -342,6 +340,113 @@ uchar fwrite(FsFile *f, uchar *source, uchar size, ErrCode *err)
 
 	return writeBytes;
 }
+
+//TODO
+	//update filesize
+	//make dirty
+	//update pointer
+
+//writes and advances file pointer; updates filesize
+uchar fwrite(FsFile *f, uchar *src, uchar size, ErrCode *err)
+{
+	uchar writeBytes = 0;
+	unsigned short bytesAvailable;
+	
+	do
+	{
+		if(!f || !src || !err)
+		{
+			return FS_E_BADPARAM;
+		}
+		
+		do
+		{
+			//test end_of_file
+			if(f->filePtr.curBytePosInPage >= f->filePtr.currentPageData.d.dataBytes)
+			{
+				*err = FS_E_EOF;
+				break;
+			}
+		
+			bytesAvailable = f->filePtr.currentPageData.d.dataBytes - f->filePtr.curBytePosInPage;
+			if(bytesAvailable  <= size)
+			{
+				//src
+				memcpy(f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA, dst + writeBytes, size);
+				size = 0;
+				writeBytes += size;
+				
+				f->filePtr.pos += size;
+				f->filePtr.curBytePosInPage += size;
+				
+			}
+			else 
+			{
+				//src
+				memcpy(dst + writeBytes, f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA, bytesAvailable);
+				size -= bytesAvailable;
+				writeBytes += bytesAvailable;
+				
+				f->filePtr.pos += bytesAvailable;
+				f->filePtr.curBytePosInPage += bytesAvailable;
+				
+				//change page
+				if(f->filePtr.currentPageAddr < PAGES_PER_BLOCK - 1)
+				{
+					f->filePtr.currentPageAddr++;
+					
+					err = readCurrentFilePage(f, FS_PAGE);
+					if(FS_E_OK != err)
+					{
+						LOG(ERR, "FS fread: cannot read file page 0x%x: %d", f->filePtr.currentPageAddr, err);
+						*err = FS_E_READFAILURE;
+						break;
+					}
+					
+					if(f->filePtr.currentPageData.d.fileID != f->fileEntry.fileID)
+					{
+						//Page does not belong to this file
+						f->filePtr.currentPageAddr--;
+						*err = FS_E_EOF;
+						break;
+					}
+					f->filePtr.curBytePosInPage = 0;
+				}
+				else
+				{
+					if(0xFFFF == f->filePtr.nextBlock)
+					{
+						LOG(DBG, "FS fread: This was the last block");
+						*err = FS_E_EOF;
+						break;					
+					}
+					
+					f->filePtr.currentPageAddr = 0;
+					f->filePtr.prevBlock = f->filePtr.currentBlock;
+					f->filePtr.currentBlock = f->filePtr.nextBlock;
+					f->filePtr.curBytePosInPage = 0;
+					
+					//read first page and determine next block
+					err = readCurrentFilePage(f, FS_PAGE);
+					if(FS_E_OK != err)
+					{
+						LOG(ERR, "FS fread: cannot read first page of block 0x%x: %d", f->filePtr.currentBlock, err);
+						*err = FS_E_READFAILURE;
+						break;
+					}
+					
+					f->filePtr.nextBlock = (FsPageBlockStart)(f->filePtr.currentPageData).d.nextBlock;	
+				}
+			}
+		}
+		while(size >0);
+	}
+	while(0);
+
+	return writeBytes;
+}
+
+
 
 
 ErrCode fcreate(const char *filename, FilePoolEntry *fEntry)
