@@ -10,103 +10,9 @@ ErrCode findUnusedBlock(BlockAddr startBlock, BlockAddr* destBlock);
 ErrCode readRedundantPage(uchar maxRedundancyLevel, PageAddr pageOffset, PageAddr sectorSize, PageAddr pageAddr, 
 							FsPage *page);
 
-ErrCode updateFileSize(FsFile *fsFile);
-
 ErrCode readCurrentFilePage(FsFile *fsFile, unsigned short pageSize);
 ErrCode readCurrentFilePageHeader(FsFile *fsFile);
-
-
-
 ErrCode writeCurrentFilePage(FsFile *fsFile);
-
-//TODO move block wise first!
-ErrCode updateFileSize(FsFile *fsFile)
-{
-	ErrCode err = FS_E_OK;
-
-	unsigned short dataBytes;
-	
-	do
-	{
-		fsFile->fileSize = 0;
-		
-		fsFile->filePtr.pos = 0;
-		fsFile->filePtr.currentBlock = fsFile->fileEntry.firstBlock;
-		fsFile->filePtr.currentPageAddr = 0;
-		fsFile->filePtr.curBytePosInPage = 0;
-		fsFile->filePtr.prevBlock = fsFile->fileEntry.firstBlock;
-		
-		//read first page and determine next block
-		err = readCurrentFilePageHeader(fsFile);
-		if(FS_E_OK != err)
-		{
-			LOG(ERR, "FS updateFileSize: cannot read first file page: %d", err);
-			break;
-		}
-		
-		fsFile->filePtr.nextBlock = (FsPageBlockStart)(fsFile->filePtr.currentPageData).d.nextBlock;		
-		
-		
-		do
-		{
-			dataBytes = fsFile->filePtr.currentPageData.d.dataBytes;
-			fsFile->fileSize += dataBytes;
-			fsFile->filePtr.pos += dataBytes;
-			fsFile->filePtr.curBytePosInPage = dataBytes;
-			
-			if(dataBytes < MAX_PAGE_DATABYTES)
-			{
-				//last page reached
-				break;
-			}
-			
-			
-			if(fsFile->filePtr.currentPageAddr < PAGES_PER_BLOCK - 1)
-			{
-				fsFile->filePtr.currentPageAddr++;
-				
-				err = readCurrentFilePageHeader(fsFile);
-				if(FS_E_OK != err)
-				{
-					LOG(ERR, "FS updateFileSize: cannot read file page 0x%x: %d", fsFile->filePtr.currentPageAddr, err);
-				}
-				
-				if(fsFile->filePtr.currentPageData.d.fileID != fsFile->fileEntry.fileID)
-				{
-					//last page reached
-					break;
-				}
-				
-			}
-			else
-			{
-				if(0xFFFF == fsFile->filePtr.nextBlock)
-				{
-					LOG(DBG, "FS updateFileSize: This was the last block");
-					break;					
-				}
-				
-				fsFile->filePtr.currentPageAddr = 0;
-				fsFile->filePtr.prevBlock = fsFile->filePtr.currentBlock;
-				fsFile->filePtr.currentBlock = fsFile->filePtr.nextBlock;
-				
-				//read first page and determine next block
-				err = readCurrentFilePageHeader(fsFile);
-				if(FS_E_OK != err)
-				{
-					LOG(ERR, "FS updateFileSize: cannot read first page of block 0x%x: %d", fsFile->filePtr.currentBlock, err);
-					break;
-				}
-		
-				fsFile->filePtr.nextBlock = (FsPageBlockStart)(fsFile->filePtr.currentPageData).d.nextBlock;	
-			}
-			
-		}while(1);
-
-	}while(0);
-	
-	return err;
-}
 
 ErrCode readCurrentFilePageHeader(FsFile *fsFile)
 {
@@ -194,42 +100,11 @@ ErrCode findUnusedBlock(BlockAddr startBlock, BlockAddr* destBlock)
 	
 	uchar foundEmptyBlock = 0;
 	uchar i;
-	uchar jumpOverBlock;
-	
-	//get locked blocks by current files
-	BlockAddr lockedBlocks[MAX_POOL_FILES];
-	for(i=0; i<MAX_POOL_FILES; i++ )
-	{
-		if(g_filePool[i].locked)
-		{
-			lockedBlocks[i] = g_filePool[i].file.nextReservedBlock;	
-		}
-		else
-		{
-			lockedBlocks[i] = INVALID_BLOCK;	
-		}
-	}
-		
+
 	//go around in a loop starting from startBlock
 	for(; iBlockNumber < gConfigPage.d.numBlocks; iBlockNumber++)	
 	{
 		curBlock = (startBlock + iBlockNumber) % gConfigPage.d.numBlocks;
-		
-		jumpOverBlock = 0;
-		
-		for(i=0; i<MAX_POOL_FILES; i++ )
-		{
-			if(curBlock == lockedBlocks[i])	
-			{
-				jumpOverBlock = 1;
-				break;
-			}
-		}
-		
-		if(jumpOverBlock)
-		{
-			continue;
-		}
 
 		neededPageAddr = GET_BLOCK_META_PAGEADDR(curBlock, 0);		
 		if(neededPageAddr != curPageAddr)

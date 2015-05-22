@@ -103,7 +103,6 @@ FsFile* fopen(const char *filename, const char mode, char *err)
 			fileSlot = getFreeFileSlot();
 		}
 		
-		
 		if(!fileSlot)
 		{
 			*err = FS_E_NOFREESLOTS;
@@ -112,9 +111,7 @@ FsFile* fopen(const char *filename, const char mode, char *err)
 		
 		fileSlot->locked = 1;
 		retFile = &(fileSlot->file);
-		
-		
-		
+				
 		*err = findFile(filename, &(retFile->fileEntry));
 		if(*err != FS_E_OK)
 		{
@@ -141,41 +138,43 @@ FsFile* fopen(const char *filename, const char mode, char *err)
 		
 		retFile->filePoolSlot = fileSlot;
 		retFile->dirty = 0;
-		retFile->nextReservedBlock = INVALID_BLOCK;
 		
-		*err = updateFileSize(retFile);
-		if(FS_E_OK != err)
-		{
-			LOG(ERR, "FS fOpen: updateFileSize failed with %d", *err);
-		}
 		
-		uint32_t newPosition = 0;
-		if(mode & MODE_APPEND)
-		{
-			newPosition = 0xFFFFFFFF;
-		}
+		uint32_t newPosition = 0xFFFFFFFF;
+		retFile->filePtr.pos = 0;
 		
-		//init file pointer
+		//init file pointer to max to determine size
 		*err = fSetPtr(retFile, newPosition);
 		if(FS_E_OK != *err)
 		{
-			LOG(ERR, "FS fOpen: set file ptr failed with %d", *err);
-			//TODO: exit?
-		}
-		
-		//read the current pointer page into the cache
-		readCurrentFilePage(retFile, FS_PAGE);
-						
-		//if opened in write mode, secure next free block
-		if(mode & MODE_WRITE)
-		{
-			*err = findUnusedBlock(retFile->curBlock, &(retFile->nextReservedBlock));
-			
-			if(*err != FS_E_OK)
+			if(FS_E_EOF == *err)
 			{
-				LOG(ERR, "FS fopen: findUnusedBlock failed with [%d]", *err);
+				*err = FS_E_OK;
+				retFile->fileSize = retFile->filePtr.pos;
+				LOG(INFO, "FS fOpen: filesize: %d", retFile->fileSize);
+			}
+			else
+			{				
+				LOG(ERR, "FS fOpen: set file ptr failed with %d", *err);
+				//TODO: exit?
 			}
 		}
+
+		//if the file is not opened in append mode, reset position to 0
+		if(!(mode & MODE_APPEND))
+		{
+			newPosition = 0;
+			
+			*err = fSetPtr(retFile, newPosition);
+			if(FS_E_OK != *err)
+			{
+				LOG(ERR, "FS fOpen: set file ptr failed with %d", *err);
+				//TODO exit?
+			}
+		}
+	
+		//read the current pointer page into the cache
+		readCurrentFilePage(retFile, FS_PAGE);
 
 	} while(0);
 	
@@ -230,7 +229,6 @@ uchar fread(FsFile *f, uchar *dest, uchar size, ErrCode *err)
 		
 		do
 		{
-		
 			//test end_of_file
 			if(f->filePtr.curBytePosInPage >= f->filePtr.currentPageData.d.dataBytes)
 			{
@@ -278,9 +276,7 @@ uchar fread(FsFile *f, uchar *dest, uchar size, ErrCode *err)
 						*err = FS_E_EOF;
 						break;
 					}
-					
 					f->filePtr.curBytePosInPage = 0;
-					
 				}
 				else
 				{
@@ -320,14 +316,26 @@ uchar fwrite(FsFile *f, uchar *source, uchar size, ErrCode *err)
 {
 	uchar writeBytes = 0;
 
+	//BlockAddr nextFreeBlock;
+	
+	/*		*err = findUnusedBlock(retFile->curBlock, &nextFreeBlock);
+			
+			if(*err != FS_E_OK)
+			{
+				LOG(ERR, "FS fopen: findUnusedBlock failed with [%d]", *err);
+			}
+	*/
+	
+	//update filesize
+	//make dirty
+	//update pointer
+	
 	do
 	{
 		if(!f || !source || !err)
 		{
 			return FS_E_BADPARAM;
 		}	
-		
-	
 	
 	}while(0);
 
@@ -403,9 +411,6 @@ ErrCode fSetPtrDelta(FsFile *fsFile, int32_t pos)
 	return fSetPtr(fsFile, pos);
 }
 
-//TODO take into account fileID on every page
-//set pointer position
-//TODO: move block wise first!
 ErrCode fSetPtr(FsFile *fsFile, uint32_t pos)
 {
 	if(!fsFile)
@@ -413,135 +418,7 @@ ErrCode fSetPtr(FsFile *fsFile, uint32_t pos)
 		return FS_E_BADPARAM;
 	}
 
-	if(fsFile->fileSize < pos)
-	{
-		pos = fsFile->fileSize;
-		LOG(INFO, "setFilePtr: reached end of file. reqPos %d FileSize: %d", pos, fsFile->fileSize);
-	}
-	
 	ErrCode _err = FS_E_OK;
-		
-	if( pos < fsFile->filePtr.pos)
-	{
-		//LOG(DBG, "setFilePtr: ");
-		LOG(INFO, "setFilePtr: go backwards");
-		fsFile->filePtr.pos = 0;
-		fsFile->filePtr.currentBlock = fsFile->fileEntry.firstBlock;
-		fsFile->filePtr.currentPageAddr = 0;
-		fsFile->filePtr.curBytePosInPage = 0;
-		fsFile->filePtr.prevBlock = fsFile->fileEntry.firstBlock;
-		
-		//read first page and determine next block
-		_err = readCurrentFilePageHeader(fsFile);
-		if(FS_E_OK != _err)
-		{
-			return _err;
-		}
-		
-		fsFile->filePtr.nextBlock = (FsPageBlockStart)(fsFile->filePtr.currentPageData).d.nextBlock;
-	}
-	
-	uint32_t dif = pos - fsFile->filePtr.pos;
-	LOG(DBG, "FS >> setFilePtr: reqPos=%d curPos=%d dif=%d", pos, fsFile->filePtr.pos, dif);
-	
-	uchar done = 0;
-	
-	do
-	{
-		if(dif < fsFile->filePtr.currentPageData.d.dataBytes - fsFile->filePtr.curBytePosInPage)
-		{
-			done = 1;
-			fsFile->filePtr.curBytePosInPage += dif;			
-			fsFile->filePtr.pos += dif;
-		}
-		else 
-		{
-			dif -= fsFile->filePtr.currentPageData.d.dataBytes - fsFile->filePtr.curBytePosInPage - 1;
-			fsFile->filePtr.pos += fsFile->filePtr.currentPageData.d.dataBytes - fsFile->filePtr.curBytePosInPage - 1;
-			
-			fsFile->filePtr.curBytePosInPage = 0;
-			
-			if(fsFile->filePtr.currentPageAddr + 1 < PAGES_PER_BLOCK)
-			{
-				fsFile->filePtr.currentPageAddr++;
-			}
-			else if(fsFile->filePtr.nextBlock != 0xFFFF)
-			{
-				fsFile->filePtr.currentPageAddr = 0;
-				fsFile->filePtr.prevBlock = fsFile->filePtr.currentBlock;
-				fsFile->filePtr.currentBlock = fsFile->filePtr.nextBlock;
-			}
-			else
-			{
-				LOG(ERR, "FS setFilePtr: next block is not set. cur block: 0x%x. dif=%d", fsFile->filePtr.currentBlock, dif);
-				
-				_err = FS_E_BADFILEBLOCKCHAIN;
-				break;
-			}
-			
-			if(dif < MAX_PAGEDATABYTES)
-			{
-				done = 1;
-				fsFile->filePtr.curBytePosInPage = dif;
-				fsFile->filePtr.pos += dif;
-			}
-			else 
-			{
-				dif -= MAX_PAGEDATABYTES;
-				fsFile->filePtr.pos += MAX_PAGEDATABYTES;
-			}
-			
-			//read new page into the buffer
-			if(done || fsFile->filePtr.currentPageAddr == 0)
-			{
-				_err = readCurrentFilePageHeader(fsFile);
-				if(FS_E_OK != _err)
-				{
-					break;	
-				}
-				//verify dif validity
-				if(0xFFFF == fsFile->filePtr.currentPageData.d.dataBytes)
-				{
-					LOG(ERR, "FS setFilePtr Invalid page reached! Block 0x%x Page 0x%x", fsFile->filePtr.currentBlock, fsFile->filePtr.currentPageAddr);
-				}
-				else if(dif > fsFile->filePtr.currentPageData.d.dataBytes && done)
-				{				
-					fsFile->filePtr.curBytePosInPage -= (dif - fsFile->filePtr.currentPageData.d.dataBytes); 
-					fsFile->filePtr.pos -= (dif - fsFile->filePtr.currentPageData.d.dataBytes); 
-					LOG(WARN, "Pointer was off, EOF reached");
-				}
-
-				if(fsFile->filePtr.currentPageAddr == 0)
-				{
-					fsFile->filePtr.nextBlock = (FsPageBlockStart)(fsFile->filePtr.currentPageData).d.nextBlock;
-				}
-			}
-		}
-	}
-	while(!done);
-	
-	LOG(DBG, "FS << setFilePtr: reqPos=%d curPos=%d dif=%d", pos, fsFile->filePtr.pos, dif);
-	
-	return _err;
-}
-
-///////////////////////////////////////////////////////////////////////////////////////
-
-ErrCode fSetPtr(FsFile *fsFile, uint32_t pos)
-{
-	if(!fsFile)
-	{
-		return FS_E_BADPARAM;
-	}
-
-	if(fsFile->fileSize < pos)
-	{
-		pos = fsFile->fileSize;
-		LOG(INFO, "setFilePtr: reached end of file. reqPos %d FileSize: %d", pos, fsFile->fileSize);
-	}
-	
-	ErrCode _err = FS_E_OK;
-	
 	uint32_t bytesLeft;
 		
 	if( pos < fsFile->filePtr.pos)
@@ -607,98 +484,65 @@ ErrCode fSetPtr(FsFile *fsFile, uint32_t pos)
 		}
 		else // dif smaller than block boundary. 
 		{
-			bytesLeft = fsFile->filePtr.pos % MAX_PAGE_DATABYTES;
+			bytesLeft = fsFile->filePtr.curBytePosInPage;//fsFile->filePtr.pos % MAX_PAGE_DATABYTES;
+			
+			if(fsFile->filePtr.curBytePosInPage != fsFile->filePtr.pos % MAX_PAGE_DATABYTES)
+			{
+				LOG(ERR, "FS %s file ptr inconsistency: pos=%d curBytePosInPage=%d page=%d file=%d", 
+					_FUNCTION_, fsFile->filePtr.pos, fsFile->filePtr.curBytePosInPage, fsFile->filePtr.currentPageAddr,
+					);
+			}
+			
 			if(bytesLeft + dif > MAX_PAGE_DATABYTES) //dif bigger than page boundary
 			{
 				//get bytes left in page
 				bytesLeft = MAX_BLOCK_DATABYTES - bytesLeft;
 				
+				dif -= bytesLeft;
+				fsFile->filePtr.pos += bytesLeft;
+				fsFile->filePtr.curBytePosInPage += bytesLeft;
 				
-				
+				//move to next page if possible
+				if(fsFile->filePtr.currentPageAddr + 1 < PAGES_PER_BLOCK)
+				{
+					fsFile->filePtr.currentPageAddr++;
+					
+					_err = readCurrentFilePageHeader(fsFile);
+					if(FS_E_OK != _err)
+					{
+						_err = FS_E_PAGE_CORRUPTED;
+						break;	
+					}
+					
+					//is next page is from another file ?
+					if(fsFile->filePtr.currentPageData.d.fileID != fsFile->fileEntry.fileID)
+					{
+						fsFile->filePtr.currentPageAddr--;
+						
+						_err = FS_E_EOF;
+						done = 1;		
+					}
+					else //page changed ok
+					{
+						fsFile->filePtr.curBytePosInPage = 0;
+					}
+				}
+				else 
+				{
+					_err = FS_E_EOF;
+					done = 1;					
+				}
 			}
 			else //dif smaller than page boundary
 			{
-				
-			}
-			
-		}
-		
-	}while(!done);
-	
-	do
-	{
-		if(dif < fsFile->filePtr.currentPageData.d.dataBytes - fsFile->filePtr.curBytePosInPage)
-		{
-			done = 1;
-			fsFile->filePtr.curBytePosInPage += dif;			
-			fsFile->filePtr.pos += dif;
-		}
-		else 
-		{
-			dif -= fsFile->filePtr.currentPageData.d.dataBytes - fsFile->filePtr.curBytePosInPage - 1;
-			fsFile->filePtr.pos += fsFile->filePtr.currentPageData.d.dataBytes - fsFile->filePtr.curBytePosInPage - 1;
-			
-			fsFile->filePtr.curBytePosInPage = 0;
-			
-			if(fsFile->filePtr.currentPageAddr + 1 < PAGES_PER_BLOCK)
-			{
-				fsFile->filePtr.currentPageAddr++;
-			}
-			else if(fsFile->filePtr.nextBlock != 0xFFFF)
-			{
-				fsFile->filePtr.currentPageAddr = 0;
-				fsFile->filePtr.prevBlock = fsFile->filePtr.currentBlock;
-				fsFile->filePtr.currentBlock = fsFile->filePtr.nextBlock;
-			}
-			else
-			{
-				LOG(ERR, "FS setFilePtr: next block is not set. cur block: 0x%x. dif=%d", fsFile->filePtr.currentBlock, dif);
-				
-				_err = FS_E_BADFILEBLOCKCHAIN;
-				break;
-			}
-			
-			if(dif < MAX_PAGEDATABYTES)
-			{
-				done = 1;
-				fsFile->filePtr.curBytePosInPage = dif;
 				fsFile->filePtr.pos += dif;
-			}
-			else 
-			{
-				dif -= MAX_PAGEDATABYTES;
-				fsFile->filePtr.pos += MAX_PAGEDATABYTES;
-			}
-			
-			//read new page into the buffer
-			if(done || fsFile->filePtr.currentPageAddr == 0)
-			{
-				_err = readCurrentFilePageHeader(fsFile);
-				if(FS_E_OK != _err)
-				{
-					break;	
-				}
-				//verify dif validity
-				if(0xFFFF == fsFile->filePtr.currentPageData.d.dataBytes)
-				{
-					LOG(ERR, "FS setFilePtr Invalid page reached! Block 0x%x Page 0x%x", fsFile->filePtr.currentBlock, fsFile->filePtr.currentPageAddr);
-				}
-				else if(dif > fsFile->filePtr.currentPageData.d.dataBytes && done)
-				{				
-					fsFile->filePtr.curBytePosInPage -= (dif - fsFile->filePtr.currentPageData.d.dataBytes); 
-					fsFile->filePtr.pos -= (dif - fsFile->filePtr.currentPageData.d.dataBytes); 
-					LOG(WARN, "Pointer was off, EOF reached");
-				}
-
-				if(fsFile->filePtr.currentPageAddr == 0)
-				{
-					fsFile->filePtr.nextBlock = (FsPageBlockStart)(fsFile->filePtr.currentPageData).d.nextBlock;
-				}
+				fsFile->filePtr.curBytePosInPage += dif;
+				dif = 0;
+				done = 1;
 			}
 		}
-	}
-	while(!done);
-	
+	}while(!done);
+
 	LOG(DBG, "FS << setFilePtr: reqPos=%d curPos=%d dif=%d", pos, fsFile->filePtr.pos, dif);
 	
 	return _err;

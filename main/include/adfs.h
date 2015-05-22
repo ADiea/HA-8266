@@ -177,19 +177,10 @@ typedef struct _fsPointer
 typedef struct _fsFile
 {
 	FileEntry fileEntry;
-	
-	uchar dirty;
-	
-	BlockAddr nextReservedBlock;
-
-	//read and write pointers
-	//FsPointer readP;
-	//FsPointer writeP;
 	FsPointer filePtr;
-	
-
 	FilePoolEntry *filePoolSlot;
-	
+
+	uchar dirty;	
 	uint32_t fileSize;
 
 } FsFile;
