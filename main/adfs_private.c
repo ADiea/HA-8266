@@ -2,9 +2,14 @@
 
 FsPageConfig gConfigPage;
 
+FsPage g_blockMapCachePage;
+BlockAddr g_blockMapCacheFirstBlock;
+PageAddr g_blockMapCachePageAddr;
+uchar g_blockMapCacheDirty;
+
 FilePoolEntry* getFreeFileSlot();
 ErrCode findFile(const char *fname, FileEntry *fentry);
-ErrCode findUnusedBlock(BlockAddr startBlock, BlockAddr* destBlock);
+ErrCode findUnusedBlock(BlockAddr* freeBlock);
 
 //sectorSize is used together with the redundancylevel to compute the correct address
 ErrCode readRedundantPage(uchar maxRedundancyLevel, PageAddr pageOffset, PageAddr sectorSize, PageAddr pageAddr, 
@@ -83,9 +88,9 @@ ErrCode writeCurrentFilePage(FsFile *fsFile)
 	return _err;
 }
 
-ErrCode findUnusedBlock(BlockAddr startBlock, BlockAddr* destBlock)
+ErrCode findUnusedBlock(BlockAddr* freeBlock)
 {
-	if(!destBlock)
+	if(!freeBlock)
 	{
 		return FS_E_BADPARAM;
 	}
@@ -94,12 +99,11 @@ ErrCode findUnusedBlock(BlockAddr startBlock, BlockAddr* destBlock)
 	BlockAddr iBlockNumber = 0;
 	BlockAddr curBlock;
 	PageAddr neededPageAddr;
-	PageAddr curPageAddr = 0;
-	
-	FsPage page;
 	
 	uchar foundEmptyBlock = 0;
 	uchar i;
+	
+	BlockAddr startBlock = g_blockMapCacheFirstBlock;
 
 	//go around in a loop starting from startBlock
 	for(; iBlockNumber < gConfigPage.d.numBlocks; iBlockNumber++)	
@@ -107,25 +111,40 @@ ErrCode findUnusedBlock(BlockAddr startBlock, BlockAddr* destBlock)
 		curBlock = (startBlock + iBlockNumber) % gConfigPage.d.numBlocks;
 
 		neededPageAddr = GET_BLOCK_META_PAGEADDR(curBlock, 0);		
-		if(neededPageAddr != curPageAddr)
+		if(neededPageAddr != g_blockMapCachePageAddr)
 		{
+			//is cache page dirty?
+			if(g_blockMapCacheDirty)
+			{
+				//write back
+				ret = writeRedundantPage(REDUNDANCY_BLOCKMAP, BLOCKMAP_OFFSET, BLOCKMAP_SIZE, 
+								g_blockMapCachePageAddr, &g_blockMapCachePage);
+				
+				if(FS_E_OK != ret)
+				{
+					LOG(ERR, "FS findUnusedBlock: canot write page [0x%x] corrupted: %d", g_blockMapCachePageAddr, ret);
+					continue;
+				}
+			}
+		
+			g_blockMapCachePageAddr = neededPageAddr;
+			
 			//read needed page
-			ret = readRedundantPage(REDUNDANCY_BLOCKMAP, BLOCKMAP_OFFSET, BLOCKMAP_SIZE, neededPageAddr, &page);
+			ret = readRedundantPage(REDUNDANCY_BLOCKMAP, BLOCKMAP_OFFSET, BLOCKMAP_SIZE, 
+							g_blockMapCachePageAddr, &g_blockMapCachePage);
 			
 			if(FS_E_OK != ret)
 			{
 				LOG(ERR, "FS findUnusedBlock: page [0x%x] corrupted: %d", neededPageAddr, ret);
 				continue;
 			}
-			
-			curPageAddr = neededPageAddr;
 		}
 		
-		uchar curBlockData = page.raw[GET_BLOCK_META_PAGEOFFSET(curBlock)];
+		uchar curBlockData = g_blockMapCachePage.raw[GET_BLOCK_META_PAGEOFFSET(curBlock)];
 		
 		if(BLOCK_UNUSED == curBlockData)
 		{
-			*destBlock = curBlock;
+			*freeBlock = curBlock;
 			foundEmptyBlock = 1;
 			break;
 		}
@@ -136,8 +155,10 @@ ErrCode findUnusedBlock(BlockAddr startBlock, BlockAddr* destBlock)
 		ret = FS_E_FSFULL;
 	}
 	
-	return ret;	
+	return ret;
 }
+
+
 
 ErrCode findFile(const char *fname, FileEntry *fentry)
 {

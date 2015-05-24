@@ -17,6 +17,20 @@ ErrCode fsInit()
 		gConfigPage.d.numBlocks = 0;
 	}
 	
+	g_blockMapCacheFirstBlock = 0;
+	g_blockMapCachePageAddr = GET_BLOCK_META_PAGEADDR(g_blockMapCacheFirstBlock, 0);
+	
+	//read needed page
+	retCode = readRedundantPage(REDUNDANCY_BLOCKMAP, BLOCKMAP_OFFSET, BLOCKMAP_SIZE, 
+							g_blockMapCachePageAddr, &g_blockMapCachePage);
+	
+	if(FS_E_OK != ret)
+	{
+		LOG(ERR, "FS fsInit: first blockmap page corrupted: %d", retCode);
+		
+	}
+
+	
 	return retCode;
 }
 
