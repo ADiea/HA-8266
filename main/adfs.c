@@ -1,6 +1,11 @@
 
 #include "adfs_private.c"
 
+//TODO: check dirty before changing currentpage
+//TODO: check dirty before changing currentpage
+//TODO: check dirty before changing currentpage
+
+
 ErrCode fsInit()
 {
 	//read first page 
@@ -34,6 +39,34 @@ ErrCode fsInit()
 	return retCode;
 }
 
+ErrCode fsShutdown()
+{
+	ErrCode ret = FS_E_OK;
+	uchar i;
+	
+	//close all opened files
+	for(i=0; i<MAX_POOL_FILES; i++)
+	{
+		if(g_filePool[i].locked)
+		{
+			fclose(&(g_filePool[i].file));
+		}
+	}
+	
+	//is cache page dirty?
+	if(g_blockMapCacheDirty)
+	{
+		//write back
+		ret = writeRedundantPage(REDUNDANCY_BLOCKMAP, BLOCKMAP_OFFSET, BLOCKMAP_SIZE, 
+						g_blockMapCachePageAddr, &g_blockMapCachePage);
+		
+		if(FS_E_OK != ret)
+		{
+			LOG(ERR, "FS %s: cannot write page [0x%x] corrupted: %d", _FUNCTION_, g_blockMapCachePageAddr, ret);
+			continue;
+		}
+	}
+}
 
 ErrCode fclose(FsFile* f)
 {
@@ -106,7 +139,7 @@ FsFile* fopen(const char *filename, const char mode, char *err)
 						return NULL;
 					}
 				}
-				else
+				else //don't break we want to check all fileslots
 				{
 					fileSlot = &(g_filePool[i]);
 				}
@@ -253,17 +286,17 @@ uchar fread(FsFile *f, uchar *dst, uchar size, ErrCode *err)
 			bytesAvailable = f->filePtr.currentPageData.d.dataBytes - f->filePtr.curBytePosInPage;
 			if(bytesAvailable  <= size)
 			{
-				memcpy(dst + readBytes, f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA, size);
-				size = 0;
+				memcpy(dst + readBytes, f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA + f->filePtr.curBytePosInPage, size);
 				readBytes += size;
 				
 				f->filePtr.pos += size;
 				f->filePtr.curBytePosInPage += size;
+				size = 0;
 				
 			}
 			else 
 			{
-				memcpy(dst + readBytes, f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA, bytesAvailable);
+				memcpy(dst + readBytes, f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA + f->filePtr.curBytePosInPage, bytesAvailable);
 				size -= bytesAvailable;
 				readBytes += bytesAvailable;
 				
@@ -316,6 +349,17 @@ uchar fread(FsFile *f, uchar *dst, uchar size, ErrCode *err)
 					}
 					
 					f->filePtr.nextBlock = (FsPageBlockStart)(f->filePtr.currentPageData).d.nextBlock;	
+					
+					/* fileid not for first page
+					if(f->filePtr.currentPageData.d.fileID != f->fileEntry.fileID)
+					{
+						//Page does not belong to this file
+						//f->filePtr.currentPageAddr--;
+						
+						*err = FS_E_EOF;
+						break;
+					}
+					*/
 				}
 			}
 		}
@@ -326,45 +370,14 @@ uchar fread(FsFile *f, uchar *dst, uchar size, ErrCode *err)
 	return readBytes;
 }
 
-uchar fwrite(FsFile *f, uchar *source, uchar size, ErrCode *err)
-{
-	uchar writeBytes = 0;
-
-	//BlockAddr nextFreeBlock;
-	
-	/*		*err = findUnusedBlock(retFile->curBlock, &nextFreeBlock);
-			
-			if(*err != FS_E_OK)
-			{
-				LOG(ERR, "FS fopen: findUnusedBlock failed with [%d]", *err);
-			}
-	*/
-	
-
-	
-	do
-	{
-		if(!f || !source || !err)
-		{
-			return FS_E_BADPARAM;
-		}	
-	
-	}while(0);
-
-
-	return writeBytes;
-}
-
-//TODO
-	//update filesize
-	//make dirty
-	//update pointer
 
 //writes and advances file pointer; updates filesize
 uchar fwrite(FsFile *f, uchar *src, uchar size, ErrCode *err)
 {
 	uchar writeBytes = 0;
 	unsigned short bytesAvailable;
+	
+	BlockAddr nextFreeBlock;
 	
 	do
 	{
@@ -375,34 +388,52 @@ uchar fwrite(FsFile *f, uchar *src, uchar size, ErrCode *err)
 		
 		do
 		{
-			//test end_of_file
-			if(f->filePtr.curBytePosInPage >= f->filePtr.currentPageData.d.dataBytes)
-			{
-				*err = FS_E_EOF;
-				break;
-			}
-		
-			bytesAvailable = f->filePtr.currentPageData.d.dataBytes - f->filePtr.curBytePosInPage;
+			bytesAvailable = MAX_PAGE_DATABYTES - f->filePtr.curBytePosInPage;
 			if(bytesAvailable  <= size)
 			{
-				//src
-				memcpy(f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA, dst + writeBytes, size);
-				size = 0;
+				memcpy(f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA + f->filePtr.curBytePosInPage, src + writeBytes, size);
+				
 				writeBytes += size;
 				
+				if(f->filePtr.currentPageData.d.dataBytes > f->filePtr.curBytePosInPage + size)
+				{
+					f->fileSize -= (f->filePtr.currentPageData.d.dataBytes - f->filePtr.curBytePosInPage - size);
+				}
+				else
+				{
+					f->fileSize += (f->filePtr.curBytePosInPage + size - f->filePtr.currentPageData.d.dataBytes);
+				}
+				
+				f->filePtr.currentPageData.d.dataBytes = f->filePtr.curBytePosInPage + size;
 				f->filePtr.pos += size;
 				f->filePtr.curBytePosInPage += size;
 				
+				f->dirty = 1;
+				size = 0;
 			}
 			else 
 			{
-				//src
-				memcpy(dst + writeBytes, f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA, bytesAvailable);
+				memcpy(f->filePtr.currentPageData.raw + SIZEOF_PAGEDATA + f->filePtr.curBytePosInPage, src + writeBytes, bytesAvailable);
 				size -= bytesAvailable;
 				writeBytes += bytesAvailable;
 				
+				if(f->filePtr.currentPageData.d.dataBytes > f->filePtr.curBytePosInPage + bytesAvailable)
+				{
+					f->fileSize -= (f->filePtr.currentPageData.d.dataBytes - f->filePtr.curBytePosInPage - bytesAvailable);
+				}
+				else
+				{
+					f->fileSize += (f->filePtr.curBytePosInPage + bytesAvailable - f->filePtr.currentPageData.d.dataBytes);
+				}
+				
+				f->filePtr.currentPageData.d.dataBytes = f->filePtr.curBytePosInPage + size;
+				
+				
 				f->filePtr.pos += bytesAvailable;
 				f->filePtr.curBytePosInPage += bytesAvailable;
+				
+				//current page is full, persist it
+				writeCurrentFilePage(f);
 				
 				//change page
 				if(f->filePtr.currentPageAddr < PAGES_PER_BLOCK - 1)
@@ -416,13 +447,13 @@ uchar fwrite(FsFile *f, uchar *src, uchar size, ErrCode *err)
 						*err = FS_E_READFAILURE;
 						break;
 					}
-					
+
 					if(f->filePtr.currentPageData.d.fileID != f->fileEntry.fileID)
 					{
-						//Page does not belong to this file
-						f->filePtr.currentPageAddr--;
-						*err = FS_E_EOF;
-						break;
+						//Page does not belong to this file, make it belong
+						f->filePtr.currentPageData.d.fileID = f->fileEntry.fileID;
+						f->filePtr.currentPageData.d.dataBytes = 0;
+						f->dirty = 1;
 					}
 					f->filePtr.curBytePosInPage = 0;
 				}
@@ -430,9 +461,32 @@ uchar fwrite(FsFile *f, uchar *src, uchar size, ErrCode *err)
 				{
 					if(0xFFFF == f->filePtr.nextBlock)
 					{
-						LOG(DBG, "FS fread: This was the last block");
-						*err = FS_E_EOF;
-						break;					
+						LOG(DBG, "FS fwrite: Last block reached, searching free block");
+						*err = findUnusedBlock(&nextFreeBlock);
+			
+						if(*err != FS_E_OK)
+						{
+							LOG(ERR, "FS %s: findUnusedBlock failed with [%d]", _FUNCTION_, *err);
+							break;
+						}
+						
+						f->filePtr.currentPageAddr = 0;
+						
+						//reread first block page to update next block info
+						err = readCurrentFilePage(f, FS_PAGE);
+						if(FS_E_OK != err)
+						{
+							LOG(ERR, "FS fread: (1)cannot read file page 0x%x: %d", f->filePtr.currentPageAddr, err);
+							*err = FS_E_READFAILURE;
+							break;
+						}
+						f->filePtr.nextBlock = nextFreeBlock;
+						(FsPageBlockStart)(f->filePtr.currentPageData).d.nextBlock = nextFreeBlock;
+						f->filePtr.currentPageData.d.dataBytes = 0;
+						//this overlaps nextblock!! f->filePtr.currentPageData.d.fileID = f->fileEntry.fileID;
+						writeCurrentFilePage(f);
+						
+						markBlockInMap(nextFreeBlock, BLOCK_INUSE);
 					}
 					
 					f->filePtr.currentPageAddr = 0;
@@ -449,6 +503,17 @@ uchar fwrite(FsFile *f, uchar *src, uchar size, ErrCode *err)
 						break;
 					}
 					
+					/* file id not for first page
+					//check if page is of the same file
+					if(f->filePtr.currentPageData.d.fileID != f->fileEntry.fileID)
+					{
+						//Page does not belong to this file, make it belong
+						f->filePtr.currentPageData.d.fileID = f->fileEntry.fileID;
+						f->filePtr.currentPageData.d.dataBytes = 0;
+						f->dirty = 1;
+					}
+					*/
+					
 					f->filePtr.nextBlock = (FsPageBlockStart)(f->filePtr.currentPageData).d.nextBlock;	
 				}
 			}
@@ -460,31 +525,71 @@ uchar fwrite(FsFile *f, uchar *src, uchar size, ErrCode *err)
 	return writeBytes;
 }
 
-
-
-
 ErrCode fcreate(const char *filename, FilePoolEntry *fEntry)
 {
 	ErrCode ret = FS_E_OK;
+	BlockAddr nextFreeBlock;
+	
 	do
 	{
-		if(!filename)
+		if(!filename || !fEntry)
 		{
 			ret = FS_E_BADPARAM;
 			break;
 		}
 
-		//locate free block
+		//faster
+		FsFile *f = &(fEntry->file);
+		
+		//locate free block & create firstblock page
+		ret = findUnusedBlock(&nextFreeBlock);
+			
+		if(*err != FS_E_OK)
+		{
+			LOG(ERR, "FS %s: findUnusedBlock failed with [%d]", _FUNCTION_, *err);
+			break;
+		}		
+				
+		f->fileSize = 0;
+		
+		f->filePtr.pos = 0;
+		f->filePtr.currentPageAddr = 0;
+		f->filePtr.curBytePosInPage = 0;
+		f->filePtr.prevBlock = nextFreeBlock;
+		f->filePtr.currentBlock = nextFreeBlock;
+		f->filePtr.nextBlock = 0xFFFF;
+		
+		//read first block page 
+		err = readCurrentFilePage(f, FS_PAGE);
+		if(FS_E_OK != err)
+		{
+			LOG(ERR, "FS %s (1) fread cannot read first file page: %d", _FUNCTION_, err);
+			*err = FS_E_READFAILURE;
+			break;
+		}
+						
+		(FsPageBlockStart)(f->filePtr.currentPageData).d.nextBlock = 0xFFFF;
+		f->filePtr.currentPageData.d.dataBytes = 0;
+		//mark current page as dirty
+		f->dirty = 1;
+						
+		err = markBlockInMap(nextFreeBlock, BLOCK_INUSE);
+		if(FS_E_OK != err)
+		{
+			LOG(ERR, "FS %s markBlockInMap failed with %d", _FUNCTION_, err);
+		}
+				
 		//locate next free filetable entry = startBlock=0xffff
-		//create filetable entry
-		//create firstblock page
-		//writecurrentpage
-	
-	}while(0);
-
+		//locate free and fill filetable entry + copy entry to file
+		err = createFileEntry(filename, nextFreeBlock, f);
+		if(FS_E_OK != err)
+		{
+			LOG(ERR, "FS %s createFileEntry failed with %d", _FUNCTION_, err);
+		}
+	}
+	while(0);
 
 	return ret;
-
 }
 
 ErrCode fdelete(FsFile *f)
