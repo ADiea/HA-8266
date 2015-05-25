@@ -603,8 +603,15 @@ ErrCode fdelete(FsFile *f)
 			break;
 		}
 
+		//invalidate fileentry
+		ret = invalidateFileEntry(f->fileEntryPageAddr, f->fileEntryPageOffset);
+		if(FS_E_OK != ret)
+		{
+			LOG(ERR, "FS %s invalidateFileEntry failed with %d", _FUNCTION_, err);
+		}			
+		
 		//walk blocks mark unused in temporary cache -> persist to blockmap
-		//mark startblock 0xffff in fileentry = free fileentry
+		
 	
 	}while(0);
 

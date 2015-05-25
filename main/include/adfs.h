@@ -182,6 +182,8 @@ typedef struct _fsFile
 
 	uchar dirty;	
 	uint32_t fileSize;
+	PageAddr fileEntryPageAddr;
+	uint16_t fileEntryPageOffset;
 
 } FsFile;
 

@@ -26,6 +26,7 @@ ErrCode readCurrentFilePageHeader(FsFile *fsFile);
 ErrCode writeCurrentFilePage(FsFile *fsFile);
 
 ErrCode createFileEntry(const char *fname, BlockAddr blockAddr, FsFile *file);
+ErrCode invalidateFileEntry(PageAddr fEntryPage, uint16_t fEntryOffset);
 
 ErrCode readCurrentFilePageHeader(FsFile *fsFile)
 {
@@ -246,6 +247,7 @@ ErrCode findUnusedBlock(BlockAddr* freeBlock)
 	return ret;
 }
 
+//TODO: populate f->fileEntryPageAddr, f->fileEntryPageOffset
 ErrCode createFileEntry(const char *fname, BlockAddr blockAddr, FsFile *file)
 {
 	if(!fname)
@@ -317,7 +319,39 @@ ErrCode createFileEntry(const char *fname, BlockAddr blockAddr, FsFile *file)
 	return retCode;
 }
 
+ErrCode invalidateFileEntry(PageAddr fEntryPage, uint16_t fEntryOffset)
+{
+	ErrCode retCode = FS_E_OK;
+	
+	FsPage page;
 
+	do
+	{
+		retCode = readRedundantPage(REDUNDANCY_FILETABLE, FILETABLE_OFFSET, FILETABLE_SIZE, fEntryPage, &page);
+			
+		if(FS_E_OK != retCode)
+		{
+			LOG(ERR, "FS %s FTable page [%x] read fail: %d", _FUNCTION_, fEntryPage, retCode);
+			break;
+		}
+			
+		page.raw[offset + MAX_FILENAME + 0] = 0xFF;
+		page.raw[offset + MAX_FILENAME + 1] = 0xFF;
+		
+		retCode = writeRedundantPage(REDUNDANCY_FILETABLE, FILETABLE_OFFSET, FILETABLE_SIZE, fEntryPage, &page);				
+					
+		if(FS_E_OK != retCode)
+		{
+			LOG(ERR, "FS %s FTable page [%x] write fail: %d", _FUNCTION_, fEntryPage, retCode);
+			break;
+		}
+	}
+	while(0);
+	
+	return retCode;
+}
+
+//TODO populate f->fileEntryPageAddr, f->fileEntryPageOffset; step1: parameter fsfile instead of fentry
 ErrCode findFile(const char *fname, FileEntry *fentry)
 {
 	if(!fentry || !fname)
