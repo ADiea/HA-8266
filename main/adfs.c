@@ -595,6 +595,11 @@ ErrCode fcreate(const char *filename, FilePoolEntry *fEntry)
 ErrCode fdelete(FsFile *f)
 {
 	ErrCode ret = FS_E_OK;
+	BlockAddr currentBlock;
+	BlockAddr nextBlock;
+	
+	FsPage page;
+	
 	do
 	{
 		if(!f)
@@ -603,6 +608,8 @@ ErrCode fdelete(FsFile *f)
 			break;
 		}
 
+		currentBlock = f->fileEntry.firstBlock;
+		
 		//invalidate fileentry
 		ret = invalidateFileEntry(f->fileEntryPageAddr, f->fileEntryPageOffset);
 		if(FS_E_OK != ret)
@@ -611,8 +618,43 @@ ErrCode fdelete(FsFile *f)
 		}			
 		
 		//walk blocks mark unused in temporary cache -> persist to blockmap
-		
-	
+		do
+		{
+			LOG(INF, "FS Erasing block 0xk%", currentBlock);
+			
+			ret = _readPartOfPage(GET_BLOCK_ADDR( currentBlock ), &page, FS_PAGE);
+
+			if(FS_E_OK != ret)
+			{
+				LOG(ERR, "FS %s: block 0x%x page 0x0 read fail: %d", _FUNCTION_, currentBlock, _err);
+				break;
+			}
+
+			nextBlock = ((FsPageBlockStart)page).d.nextBlock;
+			
+			if(!PAGE_VALID(page))
+			{
+				LOG(ERR, "FS %s: block 0x%x page 0x0 INVALID", _FUNCTION_, fsFile->filePtr.currentBlock);
+				markBlockInMap(fsFile->filePtr.currentBlock, BLOCK_INVALID);
+			}
+			else
+			{
+				markBlockInMap(currentBlock, BLOCK_UNUSED);
+				
+				((FsPageBlockStart)page).d.nextBlock = 0xFFFF;
+				*page.d.eraseCycles ++;
+				ret = _writePage(GET_BLOCK_ADDR( currentBlock ), &page, FS_PAGE);
+
+				if(FS_E_OK != ret)
+				{
+					LOG(ERR, "FS %s: block 0x%x page 0x0 write fail: %d", _FUNCTION_, currentBlock, _err);
+					break;
+				}
+			}
+			currentBlock = nextBlock;
+		}
+		while(currentBlock != 0xFFFF);
+
 	}while(0);
 
 	return ret;

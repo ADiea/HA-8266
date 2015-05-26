@@ -33,7 +33,6 @@ ErrCode readCurrentFilePageHeader(FsFile *fsFile)
 	return readCurrentFilePage(fsFile, SIZEOF_PAGEDATA); //include largest header possible
 }
 
-
 ErrCode readCurrentFilePage(FsFile *fsFile, unsigned short pageSize)
 {
 	if(!fsFile)
@@ -55,10 +54,13 @@ ErrCode readCurrentFilePage(FsFile *fsFile, unsigned short pageSize)
 		if(!PAGE_VALID(fsFile->filePtr.currentPageData))
 		{
 			LOG(ERR, "FS readCurrentFilePage: block 0x%x page 0x%x INVALID", fsFile->filePtr.currentBlock, fsFile->filePtr.currentPageAddr);
+			markBlockInMap(fsFile->filePtr.currentBlock, BLOCK_INVALID);
+			
 			if( 0 == fsFile->filePtr.currentPageAddr)
 			{
 				//TODO Move block, repair file entry in filetable
 				//get free block....
+				
 			}
 			else
 			{
@@ -304,12 +306,15 @@ ErrCode createFileEntry(const char *fname, BlockAddr blockAddr, FsFile *file)
 				//copy resulted fileentry into the file
 				memcpy(file->fileEntry, page.raw[GET_FILEENTRY_BYTE_ADDR(fileIdx)], FILEENTRY_SIZE);
 				
-				retCode = writeRedundantPage(REDUNDANCY_FILETABLE, FILETABLE_OFFSET, FILETABLE_SIZE, tablePage, &page);				
+				retCode = writeRedundantPage(REDUNDANCY_FILETABLE, FILETABLE_OFFSET, FILETABLE_SIZE, tablePage, &page);
 				
 				if(FS_E_OK != retCode)
 				{
 					LOG(ERR, "FS %s FTable page [%x] write fail: %d", _FUNCTION_, tablePage, retCode);
 				}
+				
+				f->fileEntryPageAddr = tablePage;
+				f->fileEntryPageOffset = offset;
 				
 				foundFile = 1;
 				break;

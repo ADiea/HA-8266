@@ -63,6 +63,7 @@ typedef unsigned char ErrCode;
 
 #define BLOCK_UNUSED 	  0xFF
 #define BLOCK_INUSE		  0x00
+#define BLOCK_INVALID 	  0xAA
 
 //FS LAYOUT
 #define CONFIG_OFFSET 0
