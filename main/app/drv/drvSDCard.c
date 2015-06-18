@@ -26,8 +26,9 @@ uchar devSDCard_init(uchar operation)
 	return retVal;
 }
 
+/*
 uchar devSDCard_getSize(uint32_t *highDWord, uint32_t *lowDWord)
 {
 
 
-}
+}*/

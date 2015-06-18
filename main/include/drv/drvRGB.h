@@ -10,9 +10,9 @@ typedef struct _Color
 	uchar b;
 } tColor;
 
-tColor COLOR_RED = {0xFF, 0, 0};
-tColor COLOR_GREEN = {0, 0xFF, 0};
-tColor COLOR_BLUE = {0, 0, 0xFF};
+extern tColor COLOR_RED;
+extern tColor COLOR_GREEN;
+extern tColor COLOR_BLUE;
 
 uchar devRGB_init(uchar operation);
 

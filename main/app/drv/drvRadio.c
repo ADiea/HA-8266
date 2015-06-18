@@ -1,6 +1,6 @@
-#include "drv/drvUART.h"
+#include "drv/drvRadio.h"
 
-uchar devUART_init(uchar operation)
+uchar devRadio_init(uchar operation)
 {
 	uchar retVal = DEV_ERR_OK;
 	do
@@ -12,8 +12,7 @@ uchar devUART_init(uchar operation)
 			//configure device
 			if(operation & CONFIG)
 			{
-				// Configure the UART
-				uart_init(BIT_RATE_115200,0);
+			
 			}
 		}
 		else

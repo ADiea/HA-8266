@@ -1,5 +1,9 @@
 #include "drv/drvRGB.h"
 
+tColor COLOR_RED = {0xFF, 0, 0};
+tColor COLOR_GREEN = {0, 0xFF, 0};
+tColor COLOR_BLUE = {0, 0, 0xFF};
+
 uchar devRGB_init(uchar operation)
 {
 	uchar retVal = DEV_ERR_OK;
