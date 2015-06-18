@@ -16,9 +16,6 @@ ifndef ESP_HOME
 $(error ESP_HOME is not set. Please configure it in Makefile-user.mk)
 endif
 
-MODULES = app/drv
-#TARGET = app/drv
-
 # Include main Sming Makefile
 include $(SMING_HOME)/Makefile-project.mk
 
