@@ -2,6 +2,7 @@
 #define DRV_RGB
 
 #include "types.h"
+#include "device.h"
 
 typedef struct _Color
 {

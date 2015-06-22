@@ -1,4 +1,6 @@
 #include "drv/drvUART.h"
+#include "debug.h"
+#include <SmingCore/SmingCore.h>
 
 uchar devUART_init(uchar operation)
 {
@@ -13,7 +15,12 @@ uchar devUART_init(uchar operation)
 			if(operation & CONFIG)
 			{
 				// Configure the UART
-				//uart_init(BIT_RATE_115200,0);
+				Serial.begin(SERIAL_BAUD_RATE);
+#if DEBUG_BUILD
+				Serial.systemDebugOutput(true); // Enable debug output to serial
+				// enable some system messages
+				//system_set_os_print(1);
+#endif
 			}
 		}
 		else

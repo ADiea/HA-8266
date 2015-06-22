@@ -1,49 +1,14 @@
 #include <user_config.h>
 #include <SmingCore/SmingCore.h>
 
-#include "types.h"
+
 #include "debug.h"
+#include "device.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#include "drv/drvUART.h"
-#include "drv/drvRGB.h"
-#include "drv/drvRadio.h"
-#include "drv/drvSDCard.h"
-#include "drv/drvDHT22.h"
-#include "drv/drvMQ135.h"
-#include "drv/drvWiFi.h"
-#include "drv/drvDS18B20.h"
-
-#ifdef __cplusplus
-}
-#endif
-
-#define WIFI_SSID "PleaseEnterSSID" // Put you SSID and Password here
+#define ONE_SECOND 1000000
+#define WIFI_SSID "PleaseEnterSSID"
 #define WIFI_PWD "PleaseEnterPass"
 
-unsigned char gDevicesState = 0x0;
-
-#if DEBUG_BUILD
-
-#define HEART_BEAT 5000 /* milliseconds */
-LOCAL os_timer_t gInfo_timer;
-
-LOCAL void ICACHE_FLASH_ATTR heartbeat_cb(void *arg)
-{
-	//wdt_feed();
-	LOG(INFO, "System Info\r\n");
-	LOG(INFO, "Time=%ld\r\n", system_get_time());
-	LOG(INFO, "Chip id=%ld\r\n", system_get_chip_id());
-	LOG(INFO, "Free heap size=%ld\r\n", system_get_free_heap_size());
-	LOG(INFO, "Mem info:\r\n");
-	system_print_meminfo();
-	LOG(INFO, "\r\n");
-}
-
-#endif /*DEBUG_BUILD*/
 
 HttpServer server;
 FTPServer ftp;
@@ -53,102 +18,26 @@ Vector<String> namesInput;
 const int countInputs = sizeof(inputs) /  sizeof(inputs[0]);
 
 
-void startTimer(os_timer_t* pTimer, os_timer_func_t *pCallback, uint32_t ms, bool bRepeat)
-{
-	// os_timer_disarm(ETSTimer *ptimer)
-	os_timer_disarm(pTimer);
-	// os_timer_setfn(ETSTimer *ptimer, ETSTimerFunc *pfunction, void *parg)
-	os_timer_setfn(pTimer, pCallback, (void *)0);
-	// void os_timer_arm(ETSTimer *ptimer,uint32_t milliseconds, bool repeat_flag)
-	os_timer_arm(pTimer, ms, bRepeat);
-}
-
-inline uchar isDevEnabled(uchar dev)
-{
-	return (dev & gDevicesState);
-}
+static void mainLoop();
 
 
-//de testat pinii daca corespund
-void enableDev(uchar dev, uchar op)
-{
-	do
+#if DEBUG_BUILD
+	#define HEART_BEAT (5*ONE_SECOND)
+	Timer tmrHeartBeat;
+
+	static void heartbeat_cb(void)
 	{
-		if(op & DISABLE)
-		{
-			if(!isDevEnabled(dev))
-			{
-				LOG(INFO, "Dev already disabled %d", dev);
-				break;
-			}
-		}
-		else
-		{
-			if(isDevEnabled(dev))
-			{
-				LOG(INFO, "Dev already enabled %d", dev);
-				break;
-			}
-		}
-
-		if( dev == DEV_RADIO && (DEV_ERR_OK != devRadio_init(op)))
-		{
-			LOG(ERR, "Dev [%x] init failed %x", dev, op);
-					break;
-		}
-		else if( dev == DEV_SDCARD && (DEV_ERR_OK != devSDCard_init(op)))
-		{
-			LOG(ERR, "Dev [%x] init failed %x", dev, op);
-			break;
-		}
-		else if( dev == DEV_RGB && (DEV_ERR_OK != devRGB_init(op)))
-		{
-			LOG(ERR, "Dev [%x] init failed %x", dev, op);
-			break;
-		}
-		else if( dev == DEV_MQ135 && (DEV_ERR_OK != devMQ135_init(op)))
-		{
-			LOG(ERR, "Dev [%x] init failed %x", dev, op);
-			break;
-		}
-		else if( dev == DEV_DHT22 && (DEV_ERR_OK != devDHT22_init(op)))
-		{
-			LOG(ERR, "Dev [%x] init failed %x", dev, op);
-			break;
-		}
-		else if( dev == DEV_WIFI && (DEV_ERR_OK != devWiFi_init(op)))
-		{
-			LOG(ERR, "Dev [%x] init failed %x", dev, op);
-			break;
-		}
-		else if( dev == DEV_DSTEMP && (DEV_ERR_OK != devDSTemp_init(op)))
-		{
-			LOG(ERR, "Dev [%x] init failed %x", dev, op);
-			break;
-		}
-		else if( dev == DEV_UART && (DEV_ERR_OK != devUART_init(op)))
-		{
-			LOG(ERR, "Dev [%x] init failed %x", dev, op);
-			break;
-		}
-		else
-		{
-			LOG(ERR, "Unknown dev %x", dev);
-			break;
-		}
-
-		//All went well, update gDevicesState
-		if(op & DISABLE)
-		{
-			gDevicesState &= ~dev;
-		}
-		else
-		{
-			gDevicesState |= dev;
-		}
+		//wdt_feed();
+		LOG(INFO, "System Info\r\n");
+		LOG(INFO, "Time=%ld\r\n", system_get_time());
+		LOG(INFO, "Free heap size=%ld\r\n", system_get_free_heap_size());
+		LOG(INFO, "Mem info:\r\n");
+		system_print_meminfo();
+		LOG(INFO, "\r\n");
 	}
-	while(0);
-}
+#endif /*DEBUG_BUILD*/
+
+
 
 void onIndex(HttpRequest &request, HttpResponse &response)
 {
@@ -229,24 +118,21 @@ void connectOk()
 
 	startFTP();
 	startWebServer();
-	/*
+
 	do
 	{
 		mainLoop();
 	}
-	while(1);*/
+	while(1);
+
 }
 
 
 void initSystem()
 {
 
-#if DEBUG_BUILD
 	enableDev(DEV_UART, ENABLE | CONFIG);
-#endif
 
-	// enable some system messages
-	system_set_os_print(1);
 
 	//setup SDCard and load custom system settings, then disable SDCard
 	enableDev(DEV_SDCARD, ENABLE | CONFIG);
@@ -270,26 +156,22 @@ void initSystem()
 
 void startSystem()
 {
+
 #if DEBUG_BUILD
-	startTimer(&gInfo_timer, (os_timer_func_t *)heartbeat_cb, HEART_BEAT, true);
+	tmrHeartBeat.initializeUs(HEART_BEAT, heartbeat_cb).start();
+	LOG(INFO, "Chip id=%ld\r\n", system_get_chip_id());
 #endif
 
 }
 
-
-
-void mainLoop()
+static void mainLoop()
 {
-
-
+	delayMicroseconds(10*ONE_SECOND);
 }
 
 
 void init()
 {
-	Serial.begin(SERIAL_BAUD_RATE); // 115200 by default
-	Serial.systemDebugOutput(true); // Enable debug output to serial
-
 	initSystem();
 
 	//setRGBColor(&COLOR_RED);

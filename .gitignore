@@ -3,7 +3,7 @@
 *.ko
 *.obj
 *.elf
-/main/out/*
+/main/out/build/*
 
 # Precompiled Headers
 *.gch

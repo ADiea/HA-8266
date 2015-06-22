@@ -1,5 +1,12 @@
 fs
 
+sffs - secure flash file system
+embedded -> low ram footprint; no malloc, works with stack allocated file descriptor
+simplified -> certain limitations make the fs simple to implement and more robust
+secure -> blocks cannot be written into more than a certain number of times, 
+			then they become invalid and the information is moved to other blocks
+minimize writes -> designed as to minimize writes to metadata pages, pages that describe the file
+
 
 page 512
 block 128*1024 //256 pages

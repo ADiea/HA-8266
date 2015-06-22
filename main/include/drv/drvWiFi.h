@@ -2,6 +2,7 @@
 #define DRV_WIFI
 
 #include "types.h"
+#include "device.h"
 
 uchar devWiFi_init(uchar operation);
 

@@ -2,6 +2,7 @@
 #define DRV_DHT22
 
 #include "types.h"
+#include "device.h"
 
 uchar devDHT22_init(uchar operation);
 

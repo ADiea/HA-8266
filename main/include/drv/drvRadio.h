@@ -2,6 +2,7 @@
 #define DRV_RADIO
 
 #include "types.h"
+#include "device.h"
 
 uchar devRadio_init(uchar operation);
 
