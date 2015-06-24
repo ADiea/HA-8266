@@ -9,6 +9,8 @@
 #define WIFI_SSID "PleaseEnterSSID"
 #define WIFI_PWD "PleaseEnterPass"
 
+//Globals
+TempReading gLastTempHumid;
 
 HttpServer server;
 FTPServer ftp;
@@ -166,7 +168,24 @@ void startSystem()
 
 static void mainLoop()
 {
-	delayMicroseconds(10*ONE_SECOND);
+	LOG(INFO, "main-loop\n");
+
+	devRGB_setColor(COLOR_RED);
+	delayMicroseconds(2*ONE_SECOND);
+	devRGB_setColor(COLOR_GREEN);
+	delayMicroseconds(2*ONE_SECOND);
+	devRGB_setColor(COLOR_BLUE);
+	delayMicroseconds(2*ONE_SECOND);
+
+	uchar errTemp = devDHT22_read(&gLastTempHumid);
+	if(DEV_ERR_OK != errTemp)
+	{
+		LOG(ERR, "DHT22 read FAIL:%d\n", errTemp);
+	}
+	else
+	{
+		LOG(INFO, "H:%f T:%f\n", gLastTempHumid.humid, gLastTempHumid.temp);
+	}
 }
 
 

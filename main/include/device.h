@@ -14,23 +14,26 @@
 #include "drv/drvWiFi.h"
 #include "drv/drvDS18B20.h"
 
-#define DEV_RADIO   0x01
-#define DEV_SDCARD  0x02
-#define DEV_RGB     0x04
-#define DEV_MQ135   0x08
-#define DEV_DHT22   0x10
-#define DEV_WIFI    0x20
-#define DEV_DSTEMP  0x40
-#define DEV_UART    0x80
+#define DEV_RADIO   0x0001
+#define DEV_SDCARD  0x0002
+#define DEV_RGB     0x0004
+#define DEV_MQ135   0x0008
+#define DEV_DHT22   0x0010
+#define DEV_WIFI    0x0020
+#define DEV_DSTEMP  0x0040
+#define DEV_UART    0x0080
 
-#define DISABLE 0x0
-#define ENABLE 0x1
-#define CONFIG 0x2
+#define DISABLE 	0x01
+#define ENABLE 		0x02
+#define CONFIG 		0x04
 
-#define DEV_ERR_OK 0
-#define DEV_OTHER_ERR 1
+#define DEV_ERR_OK 		0
+#define DEV_OTHER_ERR 	1
+#define DEV_DEVIO_ERR 	2
+#define DEV_PARAM_ERR 	3
 
-inline uchar isDevEnabled(uchar dev);
-void enableDev(uchar dev, uchar op);
+#define isDevEnabled(dev) ((dev) & gDevicesState)
+
+void enableDev(unsigned short, uchar op);
 
 #endif /*__DEVICE_H_*/

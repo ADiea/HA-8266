@@ -4,11 +4,15 @@
 #include "types.h"
 #include "device.h"
 
-typedef struct _Color
+typedef union _Color
 {
-	uchar r;
-	uchar g;
-	uchar b;
+	uchar buf[4]; //pad to 4 bytes
+	struct c
+	{
+		uchar r;
+		uchar g;
+		uchar b;
+	};
 } tColor;
 
 extern tColor COLOR_RED;
@@ -17,7 +21,7 @@ extern tColor COLOR_BLUE;
 
 uchar devRGB_init(uchar operation);
 
-void devRGB_setColor(tColor *c); 
+void devRGB_setColor(tColor c);
 
 
 #endif /*DRV_RGB*/

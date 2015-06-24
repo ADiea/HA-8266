@@ -4,7 +4,14 @@
 #include "types.h"
 #include "device.h"
 
-uchar devDHT22_init(uchar operation);
+struct TempReading
+{
+	float temp;
+	float humid;
+};
 
+
+uchar devDHT22_init(uchar operation);
+uchar devDHT22_read(TempReading* dest);
 
 #endif /*DRV_DHT22*/

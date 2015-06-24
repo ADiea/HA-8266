@@ -1,22 +1,39 @@
 #include "device.h"
 
-unsigned char gDevicesState = 0x0;
+unsigned short gDevicesState = 0x0000;
 
-inline uchar isDevEnabled(uchar dev)
+struct devCtl
 {
-	return (dev & gDevicesState);
-}
+	unsigned short dev;
+	uchar (*initFunc)(uchar);
+};
+
+devCtl gDevices[] =
+{
+	{DEV_RADIO, devRadio_init},
+	{DEV_SDCARD, devSDCard_init},
+	{DEV_RGB, devRGB_init},
+	{DEV_MQ135, devMQ135_init},
+	{DEV_DHT22, devDHT22_init},
+	{DEV_WIFI, devWiFi_init},
+	{DEV_DSTEMP, devDSTemp_init},
+	{DEV_UART, devUART_init}
+};
+
+#define NUM_DEVICES (sizeof(gDevices)/sizeof(gDevices[0]))
 
 //TODO: test if GPIO pins correspond to HW layout
-void enableDev(uchar dev, uchar op)
+void enableDev(unsigned short dev, uchar op)
 {
+	uchar i = 0;
+	uchar retVal;
 	do
 	{
 		if(op & DISABLE)
 		{
 			if(!isDevEnabled(dev))
 			{
-				LOG(INFO, "Dev alry DIS %d", dev);
+				LOG(INFO, "DEV %x is DIS", dev);
 				break;
 			}
 		}
@@ -24,54 +41,27 @@ void enableDev(uchar dev, uchar op)
 		{
 			if(isDevEnabled(dev))
 			{
-				LOG(INFO, "Dev alry ENA %d", dev);
+				LOG(INFO, "DEV %x is ENA", dev);
 				break;
 			}
 		}
 
-		if( dev == DEV_RADIO && (DEV_ERR_OK != devRadio_init(op)))
+		for(; i<NUM_DEVICES; i++)
 		{
-			LOG(ERR, "Dev %x init FAIL %x", dev, op);
-					break;
+			if(dev == gDevices[i].dev)
+			{
+				retVal = gDevices[i].initFunc(op);
+				if(DEV_ERR_OK != retVal)
+				{
+					LOG(ERR, "DEV %x,%x FAIL: %d\n", dev, op, retVal);
+				}
+				break;
+			}
 		}
-		else if( dev == DEV_SDCARD && (DEV_ERR_OK != devSDCard_init(op)))
+
+		if( NUM_DEVICES == i )
 		{
-			LOG(ERR, "Dev %x init FAIL %x", dev, op);
-			break;
-		}
-		else if( dev == DEV_RGB && (DEV_ERR_OK != devRGB_init(op)))
-		{
-			LOG(ERR, "Dev %x init FAIL %x", dev, op);
-			break;
-		}
-		else if( dev == DEV_MQ135 && (DEV_ERR_OK != devMQ135_init(op)))
-		{
-			LOG(ERR, "Dev %x init FAIL %x", dev, op);
-			break;
-		}
-		else if( dev == DEV_DHT22 && (DEV_ERR_OK != devDHT22_init(op)))
-		{
-			LOG(ERR, "Dev %x init FAIL %x", dev, op);
-			break;
-		}
-		else if( dev == DEV_WIFI && (DEV_ERR_OK != devWiFi_init(op)))
-		{
-			LOG(ERR, "Dev %x init FAIL %x", dev, op);
-			break;
-		}
-		else if( dev == DEV_DSTEMP && (DEV_ERR_OK != devDSTemp_init(op)))
-		{
-			LOG(ERR, "Dev %x init FAIL %x", dev, op);
-			break;
-		}
-		else if( dev == DEV_UART && (DEV_ERR_OK != devUART_init(op)))
-		{
-			LOG(ERR, "Dev %x init FAIL %x", dev, op);
-			break;
-		}
-		else
-		{
-			LOG(ERR, "Unknown dev %x", dev);
+			LOG(ERR, "DEV %x unknown", dev);
 			break;
 		}
 

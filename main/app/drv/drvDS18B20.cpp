@@ -1,4 +1,3 @@
-
 #include "drv/drvDS18B20.h"
 
 uchar devDSTemp_init(uchar operation)
