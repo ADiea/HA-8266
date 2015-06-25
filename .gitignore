@@ -4,6 +4,7 @@
 *.obj
 *.elf
 /main/out/build/*
+/main/app/wifipass.h
 
 # Precompiled Headers
 *.gch

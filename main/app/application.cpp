@@ -5,9 +5,14 @@
 #include "debug.h"
 #include "device.h"
 
+/*
+ The following 2 defines are present in wifipass.h
+ #define WIFI_SSID "PleaseEnterSSID"
+ #define WIFI_PWD "PleaseEnterPass"
+*/
+#include "wifipass.h"
+
 #define ONE_SECOND 1000000
-#define WIFI_SSID "PleaseEnterSSID"
-#define WIFI_PWD "PleaseEnterPass"
 
 //Globals
 TempReading gLastTempHumid;
@@ -15,14 +20,10 @@ TempReading gLastTempHumid;
 HttpServer server;
 FTPServer ftp;
 
-int inputs[] = {0, 2}; // Set input GPIO pins here
-Vector<String> namesInput;
-const int countInputs = sizeof(inputs) /  sizeof(inputs[0]);
 
+static void mainLoop(void);
 
-static void mainLoop();
-
-
+	Timer tmrMainLoop;
 #if DEBUG_BUILD
 	#define HEART_BEAT (5*ONE_SECOND)
 	Timer tmrHeartBeat;
@@ -30,8 +31,11 @@ static void mainLoop();
 	static void heartbeat_cb(void)
 	{
 		//wdt_feed();
-		LOG(INFO, "System Info\r\n");
-		LOG(INFO, "Time=%ld\r\n", system_get_time());
+		Serial.print("Local Time    : ");
+		Serial.println(SystemClock.getSystemTimeString());
+		Serial.print("UTC Time: ");
+		Serial.println(SystemClock.getSystemTimeString(eTZ_UTC));
+
 		LOG(INFO, "Free heap size=%ld\r\n", system_get_free_heap_size());
 		LOG(INFO, "Mem info:\r\n");
 		system_print_meminfo();
@@ -71,8 +75,8 @@ void onAjaxInput(HttpRequest &request, HttpResponse &response)
 	json["status"] = (bool)true;
 
 	JsonObject& gpio = json.createNestedObject("gpio");
-	for (int i = 0; i < countInputs; i++)
-		gpio[namesInput[i].c_str()] = digitalRead(inputs[i]);
+	//for (int i = 0; i < countInputs; i++)
+	//	gpio[namesInput[i].c_str()] = digitalRead(inputs[i]);
 
 	response.sendJsonObject(stream);
 }
@@ -116,16 +120,12 @@ void startFTP()
 // Will be called when WiFi station was connected to AP
 void connectOk()
 {
-	Serial.println("I'm CONNECTED");
+	Serial.println("I'm CONNECTED\n");
 
 	startFTP();
 	startWebServer();
 
-	do
-	{
-		mainLoop();
-	}
-	while(1);
+
 
 }
 
@@ -141,7 +141,7 @@ void initSystem()
 	enableDev(DEV_SDCARD, DISABLE);
 
 	//DHT22 periodically enabled to read data
-	enableDev(DEV_DHT22, DISABLE);
+	enableDev(DEV_DHT22, ENABLE | CONFIG);
 
 	enableDev(DEV_MQ135, ENABLE | CONFIG);
 
@@ -163,28 +163,42 @@ void startSystem()
 	tmrHeartBeat.initializeUs(HEART_BEAT, heartbeat_cb).start();
 	LOG(INFO, "Chip id=%ld\r\n", system_get_chip_id());
 #endif
-
+	tmrMainLoop.initializeUs(HEART_BEAT, mainLoop).start(false);
 }
 
 static void mainLoop()
 {
-	LOG(INFO, "main-loop\n");
-
-	devRGB_setColor(COLOR_RED);
-	delayMicroseconds(2*ONE_SECOND);
-	devRGB_setColor(COLOR_GREEN);
-	delayMicroseconds(2*ONE_SECOND);
-	devRGB_setColor(COLOR_BLUE);
-	delayMicroseconds(2*ONE_SECOND);
-
-	uchar errTemp = devDHT22_read(&gLastTempHumid);
-	if(DEV_ERR_OK != errTemp)
+	while(1)
 	{
-		LOG(ERR, "DHT22 read FAIL:%d\n", errTemp);
-	}
-	else
-	{
-		LOG(INFO, "H:%f T:%f\n", gLastTempHumid.humid, gLastTempHumid.temp);
+		//LOG(INFO, "main-loop\n");
+		//wdt_feed();
+		devRGB_setColor(COLOR_RED);
+		delayMicroseconds(.5*ONE_SECOND);
+		//wdt_feed();
+		devRGB_setColor(COLOR_GREEN);
+		delayMicroseconds(0.5*ONE_SECOND);
+		//wdt_feed();
+		devRGB_setColor(COLOR_BLUE);
+		delayMicroseconds(0.5*ONE_SECOND);
+		//wdt_feed();
+
+		uchar errTemp = devDHT22_read(&gLastTempHumid);
+		if(DEV_ERR_OK != errTemp)
+		{
+			LOG(ERR, "DHT22 read FAIL:%d\n", errTemp);
+		}
+		else
+		{
+
+			//LOG(INFO, "%f H:%f T:%f\n", 3.14f, gLastTempHumid.humid, gLastTempHumid.temp);
+			LOG(INFO, "H:");
+			Serial.print(gLastTempHumid.humid);
+			LOG(INFO, " T:");
+			Serial.print(gLastTempHumid.temp);
+			LOG(INFO, "\n");
+		}
+
+
 	}
 }
 
@@ -193,23 +207,21 @@ void init()
 {
 	initSystem();
 
-	//setRGBColor(&COLOR_RED);
-	LOG(INFO, "System start.");
+	LOG(INFO, "System start.\n");
+
+	WDT.enable(false);
 
 	startSystem();
 
-	WifiStation.enable(true);
+	/*WifiStation.enable(true);
 	WifiStation.config(WIFI_SSID, WIFI_PWD);
 	WifiAccessPoint.enable(false);
-
-	for (int i = 0; i < countInputs; i++)
-	{
-		namesInput.add(String(inputs[i]));
-		pinMode(inputs[i], INPUT);
-	}
-
-	//setRGBColor(&COLOR_GREEN);
+*/
+	WifiStation.enable(false);
+	WifiAccessPoint.enable(false);
 
 	// Run our method when station was connected to AP
 	WifiStation.waitConnection(connectOk);
+
+
 }

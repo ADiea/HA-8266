@@ -2,7 +2,7 @@
 #include <SmingCore/SmingCore.h>
 #include <Libraries/DHT/DHT.h>
 
-#define SENSOR_PIN 2 //GPIO2
+#define SENSOR_PIN 14 //GPIO14
 
 DHT *dht = NULL;
 

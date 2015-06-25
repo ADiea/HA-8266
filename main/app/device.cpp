@@ -33,7 +33,7 @@ void enableDev(unsigned short dev, uchar op)
 		{
 			if(!isDevEnabled(dev))
 			{
-				LOG(INFO, "DEV %x is DIS", dev);
+				LOG(INFO, "DEV %x is DIS\n", dev);
 				break;
 			}
 		}
@@ -41,7 +41,7 @@ void enableDev(unsigned short dev, uchar op)
 		{
 			if(isDevEnabled(dev))
 			{
-				LOG(INFO, "DEV %x is ENA", dev);
+				LOG(INFO, "DEV %x is ENA\n", dev);
 				break;
 			}
 		}
@@ -61,7 +61,7 @@ void enableDev(unsigned short dev, uchar op)
 
 		if( NUM_DEVICES == i )
 		{
-			LOG(ERR, "DEV %x unknown", dev);
+			LOG(ERR, "DEV %x unknown\n", dev);
 			break;
 		}
 
