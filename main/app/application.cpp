@@ -5,6 +5,8 @@
 #include "debug.h"
 #include "device.h"
 
+#include "fatfs/ff.h"		/* Declarations of FatFs API */
+
 /*
  The following 2 defines are present in wifipass.h
  #define WIFI_SSID "PleaseEnterSSID"
@@ -20,6 +22,8 @@ TempReading gLastTempHumid;
 HttpServer server;
 FTPServer ftp;
 
+FATFS FatFs;		/* FatFs work area needed for each volume */
+FIL Fil;			/* File object needed for each open file */
 
 static void mainLoop(void);
 
@@ -154,16 +158,33 @@ void initSystem()
 
 	//setup Wifi
 	enableDev(DEV_WIFI, ENABLE | CONFIG);
+	
+	f_mount(&FatFs, "", 0);		/* Give a work area to the default drive */
 }
 
 void startSystem()
 {
-
+unsigned int bw;
 #if DEBUG_BUILD
 	tmrHeartBeat.initializeUs(HEART_BEAT, heartbeat_cb).start();
 	LOG(INFO, "Chip id=%ld\r\n", system_get_chip_id());
 #endif
 	tmrMainLoop.initializeUs(HEART_BEAT, mainLoop).start(false);
+	
+	if (f_open(&Fil, "newfile.txt", FA_WRITE | FA_CREATE_ALWAYS) == FR_OK) {	/* Create a file */
+
+		f_write(&Fil, "It works!\r\n", 11, &bw);	/* Write data to the file */
+
+		f_close(&Fil);								/* Close the file */
+
+		if (bw == 11) {		/* Lights green LED if data written well */
+			LOG(INFO, "Write to file OK\n");
+		}
+		else
+		{
+			LOG(INFO, "Write to file FAIL %d\n", bw);
+		}
+	}
 }
 
 static void mainLoop()
