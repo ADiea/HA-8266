@@ -159,7 +159,12 @@ void initSystem()
 	//setup Wifi
 	enableDev(DEV_WIFI, ENABLE | CONFIG);
 	
-	f_mount(&FatFs, "", 0);		/* Give a work area to the default drive */
+	FRESULT mountRes = f_mount(&FatFs, "", 0);		/* Give a work area to the default drive */
+	if(FR_OK != mountRes)
+	{
+		LOG(INFO, "f_mount: FAIL %d\n", mountRes);
+	}
+
 }
 
 void startSystem()
@@ -170,14 +175,17 @@ unsigned int bw;
 	LOG(INFO, "Chip id=%ld\r\n", system_get_chip_id());
 #endif
 	tmrMainLoop.initializeUs(HEART_BEAT, mainLoop).start(false);
-	
-	if (f_open(&Fil, "newfile.txt", FA_WRITE | FA_CREATE_ALWAYS) == FR_OK) {	/* Create a file */
 
+	FRESULT fRes = f_open(&Fil, "newfile.txt", FA_WRITE | FA_CREATE_ALWAYS);
+	if (fRes == FR_OK)
+	{
+		/* Create a file */
 		f_write(&Fil, "It works!\r\n", 11, &bw);	/* Write data to the file */
 
 		f_close(&Fil);								/* Close the file */
 
-		if (bw == 11) {		/* Lights green LED if data written well */
+		if (bw == 11) /* Lights green LED if data written well */
+		{
 			LOG(INFO, "Write to file OK\n");
 		}
 		else
@@ -185,6 +193,11 @@ unsigned int bw;
 			LOG(INFO, "Write to file FAIL %d\n", bw);
 		}
 	}
+	else
+	{
+		LOG(INFO, "fopen FAIL %d", fRes);
+	}
+
 }
 
 static void mainLoop()
@@ -210,7 +223,6 @@ static void mainLoop()
 		}
 		else
 		{
-
 			//LOG(INFO, "%f H:%f T:%f\n", 3.14f, gLastTempHumid.humid, gLastTempHumid.temp);
 			LOG(INFO, "H:");
 			Serial.print(gLastTempHumid.humid);
@@ -218,8 +230,6 @@ static void mainLoop()
 			Serial.print(gLastTempHumid.temp);
 			LOG(INFO, "\n");
 		}
-
-
 	}
 }
 
@@ -233,16 +243,14 @@ void init()
 	WDT.enable(false);
 
 	startSystem();
-
-	/*WifiStation.enable(true);
-	WifiStation.config(WIFI_SSID, WIFI_PWD);
+/*
+	WifiStation.enable(false);
 	WifiAccessPoint.enable(false);
 */
-	WifiStation.enable(false);
+	WifiStation.enable(true);
+	WifiStation.config(WIFI_SSID, WIFI_PWD);
 	WifiAccessPoint.enable(false);
 
 	// Run our method when station was connected to AP
 	WifiStation.waitConnection(connectOk);
-
-
 }

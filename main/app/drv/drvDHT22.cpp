@@ -24,8 +24,7 @@ uchar devDHT22_init(uchar operation)
 					dht = NULL;
 				}
 
-				//TODO check if DHT22 or AM2301
-				dht = new DHT(SENSOR_PIN, DHT22);
+				dht = new DHT(SENSOR_PIN, DHT22, true);
 
 				dht->begin();
 			}
@@ -49,10 +48,7 @@ uchar devDHT22_read(TempReading* dest)
 {
 	if(dest && dht)
 	{
-		dest->humid = dht->readHumidity();
-		dest->temp = dht->readTemperature();
-
-		if (isnan(dest->humid) || isnan(dest->temp))
+		if (!dht->readTempAndHumidity(&(dest->temp), &(dest->humid)))
 		{
 			return DEV_DEVIO_ERR;
 		}

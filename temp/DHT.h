@@ -6,7 +6,7 @@
  #include "WProgram.h"
 #endif
 
-#define ONE_DURATION_THRESH_US 35 //From datasheet: '0' if HIGH lasts 26-28us,
+#define ONE_DURATION_THRESH_US 30 //From datasheet: '0' if HIGH lasts 26-28us,
 								  //				'1' if HIGH lasts 70us
 
 /*
@@ -28,15 +28,13 @@
 #define DHT21 21
 #define AM2301 21
 
-#define READ_FAIL 0
-#define READ_OK 1
-#define READ_CACHE 2
 
 class DHT
 {
 public:
 	DHT(uint8_t pin, uint8_t type, boolean pullup = false, uint8_t count = ONE_DURATION_THRESH_US)
-		: m_kSensorPin(pin), m_kSensorType(type), m_kThreshOne(count), m_bPllupEnabled(pullup), m_bFirstreading(true){};
+		: m_kSensorPin(pin), m_kSensorType(type), m_kThreshOne(count),
+		  m_bPllupEnabled(pullup), m_firstRead(true), m_lastreadtime(0){};
 
 	void begin(void);
 
@@ -50,8 +48,10 @@ public:
 	float computeHeatIndexC(float tempCelsius, float percentHumidity); //TODO:test accuracy against computeHeatIndexF
 	float computeHeatIndexF(float tempFahrenheit, float percentHumidity);
 private:
-	uint8_t read(void);
+	boolean read(void);
+	void updateInternalCache();
 
+	boolean m_firstRead;
 	uint8_t m_kSensorPin, m_kSensorType, m_kThreshOne;
 	uint8_t m_data[6];
 	unsigned long m_lastreadtime;

@@ -29,30 +29,29 @@
 #include "drv/drvSDCard.h"
 #include <SmingCore/SmingCore.h>
 
-#define PIN_DO 15 
-#define PIN_DI 5 //or 4
-#define PIN_CK 4 //or 5
-#define PIN_SS 13
-
+#define PIN_CARD_DO 5
+#define PIN_CARD_DI 4
+#define PIN_CARD_CK 15
+#define PIN_CARD_SS 12
 
 /*-------------------------------------------------------------------------*/
 /* Platform dependent macros and functions needed to be modified           */
 /*-------------------------------------------------------------------------*/
 
-#define DO_INIT()	pinMode(PIN_DO, INPUT)				/* Initialize port for MMC DO as input */
-#define DO			digitalRead(PIN_DO)	/* Test for MMC DO ('H':true, 'L':false) */
+#define DO_INIT()	do{pinMode(PIN_CARD_DO, INPUT);pullup(PIN_CARD_DO);}while(0)			/* Initialize port for MMC DO as input */
+#define DO			digitalRead(PIN_CARD_DO)	/* Test for MMC DO ('H':true, 'L':false) */
 
-#define DI_INIT()	pinMode(PIN_DI, OUTPUT)	/* Initialize port for MMC DI as output */
-#define DI_H()		digitalWrite(PIN_DI, HIGH)	/* Set MMC DI "high" */
-#define DI_L()		digitalWrite(PIN_DI, LOW)	/* Set MMC DI "low" */
+#define DI_INIT()	pinMode(PIN_CARD_DI, OUTPUT)	/* Initialize port for MMC DI as output */
+#define DI_H()		digitalWrite(PIN_CARD_DI, HIGH)	/* Set MMC DI "high" */
+#define DI_L()		digitalWrite(PIN_CARD_DI, LOW)	/* Set MMC DI "low" */
 
-#define CK_INIT()	pinMode(PIN_CK, OUTPUT)	/* Initialize port for MMC SCLK as output */
-#define CK_H()		digitalWrite(PIN_CK, HIGH)	/* Set MMC SCLK "high" */
-#define	CK_L()		digitalWrite(PIN_CK, LOW)	/* Set MMC SCLK "low" */
+#define CK_INIT()	pinMode(PIN_CARD_CK, OUTPUT)	/* Initialize port for MMC SCLK as output */
+#define CK_H()		do{digitalWrite(PIN_CARD_CK, HIGH);delayMicroseconds(4);}while(0)	/* Set MMC SCLK "high" */
+#define	CK_L()		do{digitalWrite(PIN_CARD_CK, LOW);delayMicroseconds(4);}while(0)	/* Set MMC SCLK "low" */
 
-#define CS_INIT()	pinMode(PIN_SS, OUTPUT)	/* Initialize port for MMC CS as output */
-#define	CS_H()		digitalWrite(PIN_SS, HIGH)	/* Set MMC CS "high" */
-#define CS_L()		digitalWrite(PIN_SS, LOW)	/* Set MMC CS "low" */
+#define CS_INIT()	pinMode(PIN_CARD_SS, OUTPUT)	/* Initialize port for MMC CS as output */
+#define	CS_H()		digitalWrite(PIN_CARD_SS, HIGH)	/* Set MMC CS "high" */
+#define CS_L()		digitalWrite(PIN_CARD_SS, LOW)	/* Set MMC CS "low" */
 
 
 static
@@ -214,7 +213,13 @@ int wait_ready (void)	/* 1:OK, 0:Timeout */
 
 	for (tmr = 5000; tmr; tmr--) {	/* Wait for ready in timeout of 500ms */
 		rcvr_mmc(&d, 1);
-		if (d == 0xFF) break;
+		if (d == 0xFF)
+		{
+		LOG(INFO, "SD wait:%d00us\n", tmr);
+		break;
+		}
+
+
 		dly_us(100);
 	}
 
@@ -405,13 +410,20 @@ DSTATUS disk_initialize (
 	dly_us(10000);			/* 10ms */
 	CS_INIT(); CS_H();		/* Initialize port pin tied to CS */
 	CK_INIT(); CK_L();		/* Initialize port pin tied to SCLK */
-	DI_INIT();				/* Initialize port pin tied to DI */
+	DI_INIT(); DI_H();				/* Initialize port pin tied to DI */
 	DO_INIT();				/* Initialize port pin tied to DO */
 
 	for (n = 10; n; n--) rcvr_mmc(buf, 1);	/* Apply 80 dummy clocks and the card gets ready to receive command */
 
 	ty = 0;
-	if (send_cmd(CMD0, 0) == 1) {			/* Enter Idle state */
+
+	BYTE retCmd;
+
+	retCmd = send_cmd(CMD0, 0);
+
+	if (retCmd == 1)
+	{
+		/* Enter Idle state */
 		if (send_cmd(CMD8, 0x1AA) == 1) {	/* SDv2? */
 			rcvr_mmc(buf, 4);							/* Get trailing return value of R7 resp */
 			if (buf[2] == 0x01 && buf[3] == 0xAA) {		/* The card can work at vdd range of 2.7-3.6V */
@@ -428,6 +440,7 @@ DSTATUS disk_initialize (
 			if (send_cmd(ACMD41, 0) <= 1) 	{
 				ty = CT_SD1; cmd = ACMD41;	/* SDv1 */
 			} else {
+
 				ty = CT_MMC; cmd = CMD1;	/* MMCv3 */
 			}
 			for (tmr = 1000; tmr; tmr--) {			/* Wait for leaving idle state */
@@ -435,15 +448,21 @@ DSTATUS disk_initialize (
 				dly_us(1000);
 			}
 			if (!tmr || send_cmd(CMD16, 512) != 0)	/* Set R/W block length to 512 */
+			{
 				ty = 0;
+			}
 		}
+	}
+	else
+	{
+		LOG(INFO, "SD_! %x", retCmd);
 	}
 	CardType = ty;
 	s = ty ? 0 : STA_NOINIT;
 	Stat = s;
 
 	deselect();
-
+	LOG(INFO, "SD init TYPE %d STAT %d\n", ty, s);
 	return s;
 }
 

@@ -15,100 +15,26 @@ void DHT::begin(void)
 {
 	// set up the pins!
 	pinMode(m_kSensorPin, INPUT);
-	if (m_bPllupEnabled)
-	{
+	//if (m_bPllupEnabled)
+	//{
 		pullup(m_kSensorPin);
-	}
+	/*}
 	else
 	{
 		digitalWrite(m_kSensorPin, HIGH);
-	}
-	m_lastreadtime = 0;
+	}*/
 }
 
-float DHT::readSensor(bool bReadTemperature, bool bFarenheit/* = false*/)
-{
-	float f = NAN;
 
-	if (read())
-	{
-		switch (m_sensorType)
-		{
-		case DHT11:
-			if(bReadTemperature)
-			{
-				f = m_data[2];
-			}
-			else /* Read humidity */
-			{
-				f = m_data[0];
-			}
-			break;
-
-		case DHT22:
-		case DHT21:
-			if(bReadTemperature)
-			{
-				f = m_data[2] & 0x7F;
-				f *= 256;
-				f += m_data[3];
-				f /= 10;
-				if (m_data[2] & 0x80)
-					f *= -1;
-			}
-			else /* Read humidity */
-			{
-				f = m_data[0];
-				f *= 256;
-				f += m_data[1];
-				f /= 10;
-			}
-			break;
-
-		default:
-			debugf("DHT Sensor type not implemented");
-			return f;
-		}
-
-		if (bFarenheit)
-			f = convertCtoF(f);
-	}
-
-	return f;
-}
 
 float DHT::readTemperature(bool bFarenheit/* = false*/)
 {
-	float f = NAN;
-
-	if (read())
+	float f;
+	if(readTempAndHumidity(&f, NULL, bFarenheit))
 	{
-		switch (m_sensorType)
-		{
-		case DHT11:
-			f = m_data[2];
-			break;
-
-		case DHT22:
-		case DHT21:
-			f = m_data[2] & 0x7F;
-			f *= 256;
-			f += m_data[3];
-			f /= 10;
-			if (m_data[2] & 0x80)
-				f *= -1;
-			break;
-
-		default:
-			debugf("DHT Sensor type not implemented");
-			return f;
-		}
-
-		if (bFarenheit)
-			f = convertCtoF(f);
+		return f;
 	}
-
-	return f;
+	return NAN;
 }
 
 float DHT::convertCtoF(float c)
@@ -119,84 +45,31 @@ float DHT::convertCtoF(float c)
 float DHT::readHumidity(void)
 {
 	float f;
-	if (read())
+	if(readTempAndHumidity(NULL, &f))
 	{
-		switch (m_sensorType)
-		{
-		case DHT11:
-
-			return f;
-		case DHT22:
-		case DHT21:
-
-			return f;
-		}
+		return f;
 	}
-	debugf("DHT Read fail Humid");
 	return NAN;
 }
 
 bool DHT::readTempAndHumidity(float* temp, float* humid, bool bFarenheit/* = false*/)
 {
 	bool bSuccess = false;
-	float f;
-	uint8_t readResult = read();
 
-	if ()
+	if (read())
 	{
 		bSuccess = true;
-
-		switch (m_kSensorType)
+		if(temp)
 		{
-		case DHT11:
-			if(temp)
-			{
-				*temp = m_data[2];
-				m_lastTemp = m_data[2];
-			}
-			if(humid)
-			{
-				*humid = m_data[0];
-				m_lastHumid = m_data[0];
-			}
-
-			break;
-
-		case DHT22:
-		case DHT21:
-			if(temp)
-			{
-				f = m_data[2] & 0x7F;
-				f *= 256;
-				f += m_data[3];
-				f /= 10;
-				if (m_data[2] & 0x80)
-					f *= -1;
-				*temp = f;
-				m_lastTemp = f;
-			}
-			if(humid)
-			{
-				f = m_data[0];
-				f *= 256;
-				f += m_data[1];
-				f /= 10;
-				*humid = f;
-				m_lastHumid = f;
-			}
-
-			break;
-
-		default:
-			debugf("DHT Sensor type not implemented");
-			bSuccess = false;
-			break;
+			*temp = m_lastTemp;
+			if (bFarenheit)
+				*temp = convertCtoF(*temp);
 		}
-
-		if (temp && bFarenheit && bSuccess)
-			*temp = convertCtoF(*temp);
+		if(humid)
+		{
+			*humid = m_lastHumid;
+		}
 	}
-
 	return bSuccess;
 }
 
@@ -227,8 +100,9 @@ float DHT::computeHeatIndexC(float tempCelsius, float percentHumidity)
 			+ 0.00072546 * tempCelsius * h2 + -0.00000358 * t2C * h2;
 }
 
-void updateInternalCache()
+void DHT::updateInternalCache()
 {
+	float f;
 	/*Compute and write temp and humid to internal cache*/
 	switch (m_kSensorType)
 	{
@@ -263,17 +137,19 @@ void updateInternalCache()
 	}
 }
 
-uint8_t DHT::read(void)
+boolean DHT::read(void)
 {
 	uint8_t laststate = HIGH;
 	uint8_t counter = 0;
 	uint8_t j = 0, i;
 	unsigned long currenttime;
-	float f;
 
 	// pull the pin high and wait 250 milliseconds
+	pinMode(m_kSensorPin, OUTPUT);
 	digitalWrite(m_kSensorPin, HIGH);
-	delay(250);
+
+	//if(m_firstRead)
+		delay(250);
 
 	currenttime = millis();
 	if (currenttime < m_lastreadtime)
@@ -281,10 +157,12 @@ uint8_t DHT::read(void)
 		// ie there was a rollover
 		m_lastreadtime = 0;
 	}
-	if ((currenttime - m_lastreadtime) < 2500)
+	if ((currenttime - m_lastreadtime) < 2200 && !m_firstRead)
 	{
-		return READ_CACHE; // return last correct measurement
+		return true; // return last correct measurement
 	}
+
+	m_firstRead = false;
 
 	/*
 	 Serial.print("Currtime: "); Serial.print(currenttime);
@@ -295,23 +173,25 @@ uint8_t DHT::read(void)
 	m_data[0] = m_data[1] = m_data[2] = m_data[3] = m_data[4] = 0;
 
 	// now pull it low for ~20 milliseconds
+
 	digitalWrite(m_kSensorPin, LOW);
 	delayMicroseconds(20000);
-
+	cli();
 	// make pin input and activate pullup
 	pinMode(m_kSensorPin, INPUT);
-
-	if (m_bPllupEnabled)
-	{
+	digitalWrite(m_kSensorPin, HIGH);
+	//if (m_bPllupEnabled)
+	//{
 		pullup(m_kSensorPin);
-	}
+	/*}
 	else
 	{
 		digitalWrite(m_kSensorPin, HIGH);
-	}
+	}*/
+
 	delayMicroseconds(10);
 
-	cli();
+
 
 	// read in timings
 	for (i = 0; i < MAXTIMINGS || j >= 40; i++)
@@ -334,18 +214,24 @@ uint8_t DHT::read(void)
 		// ignore first 3 transitions
 		if ((i >= 4) && (i % 2 == 0))
 		{
+			//Serial.print(i, DEC);
+
 			// shove each bit into the storage bytes
 			m_data[j / 8] <<= 1;
-			if (counter > m_count)
+
+			if (counter > m_kThreshOne)
+			{
+				//Serial.print("#");
 				m_data[j / 8] |= 1;
+			}
+			//Serial.print(" ");
 			j++;
 		}
-
 	}
 
 	sei();
 
-	/*
+
 	 Serial.println(j, DEC);
 	 Serial.print(m_data[0], HEX); Serial.print(", ");
 	 Serial.print(m_data[1], HEX); Serial.print(", ");
@@ -353,16 +239,20 @@ uint8_t DHT::read(void)
 	 Serial.print(m_data[3], HEX); Serial.print(", ");
 	 Serial.print(m_data[4], HEX); Serial.print(" =? ");
 	 Serial.println(m_data[0] + m_data[1] + m_data[2] + m_data[3], HEX);
-	 */
+
+
+	// pull the pin high at the end(will stay high at least 250ms(actually >2s) for the next reading)
+		//pinMode(m_kSensorPin, OUTPUT);
+		//digitalWrite(m_kSensorPin, HIGH);
 
 	// check we read 40 bits and that the checksum matches
 	if ((j >= 40)
 			&& (m_data[4] == ((m_data[0] + m_data[1] + m_data[2] + m_data[3]) & 0xFF)))
 	{
 		updateInternalCache();
-		return READ_OK;
+		return true;
 	}
 
-	return READ_FAIL;
+	return false;
 
 }
