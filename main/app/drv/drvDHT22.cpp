@@ -58,3 +58,39 @@ uchar devDHT22_read(TempReading* dest)
 	return DEV_PARAM_ERR;
 }
 
+float devDHT22_heatIndex(float temp, float humid)
+{
+	if(dht)
+	{
+		LOG(INFO, "H_idx_F,");
+		Serial.print(dht->computeHeatIndexF(dht->convertCtoF(temp), humid));
+		LOG(INFO, " H_idx_C,");
+		Serial.print(dht->computeHeatIndexC(temp, humid));
+	}
+	return 0;
+}
+
+float devDHT22_dewPoint(float temp, float humid)
+{
+	if(dht)
+	{
+		uint32_t tick1, tick2;
+		tick1 = system_get_time();
+		LOG(INFO, "DP_Acc,");
+		Serial.print(dht->computeDewPoint(temp, humid, DEW_ACCURATE));
+		tick2 = system_get_time(); LOG(INFO, ",%lu", tick2 - tick1);tick1 = system_get_time();
+
+		LOG(INFO, "DP_AccFast,");
+		Serial.print(dht->computeDewPoint(temp, humid, DEW_ACCURATE_FAST));
+		tick2 = system_get_time(); LOG(INFO, ",%lu", tick2 - tick1);tick1 = system_get_time();
+
+		LOG(INFO, "DP_Fast,");
+		Serial.print(dht->computeDewPoint(temp, humid, DEW_FAST));
+		tick2 = system_get_time(); LOG(INFO, ",%lu,", tick2 - tick1);tick1 = system_get_time();
+
+		LOG(INFO, "DP_Fastest,");
+		Serial.print(dht->computeDewPoint(temp, humid, DEW_FASTEST));
+		tick2 = system_get_time(); LOG(INFO, ",%lu", tick2 - tick1);tick1 = system_get_time();
+	}
+	return 0;
+}

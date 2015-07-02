@@ -34,6 +34,14 @@
 #define PIN_CARD_CK 15
 #define PIN_CARD_SS 12
 
+FATFS FatFs;		/* FatFs work area needed for each volume */
+FIL Fil;
+
+#define SCK_SLOW_INIT 4
+#define SCK_NORMAL 1
+
+uchar gUsDelay = SCK_SLOW_INIT;
+
 /*-------------------------------------------------------------------------*/
 /* Platform dependent macros and functions needed to be modified           */
 /*-------------------------------------------------------------------------*/
@@ -46,8 +54,8 @@
 #define DI_L()		digitalWrite(PIN_CARD_DI, LOW)	/* Set MMC DI "low" */
 
 #define CK_INIT()	pinMode(PIN_CARD_CK, OUTPUT)	/* Initialize port for MMC SCLK as output */
-#define CK_H()		do{digitalWrite(PIN_CARD_CK, HIGH);delayMicroseconds(4);}while(0)	/* Set MMC SCLK "high" */
-#define	CK_L()		do{digitalWrite(PIN_CARD_CK, LOW);delayMicroseconds(4);}while(0)	/* Set MMC SCLK "low" */
+#define CK_H()		do{digitalWrite(PIN_CARD_CK, HIGH);delayMicroseconds(gUsDelay);}while(0)	/* Set MMC SCLK "high" */
+#define	CK_L()		do{digitalWrite(PIN_CARD_CK, LOW);delayMicroseconds(gUsDelay);}while(0)	/* Set MMC SCLK "low" */
 
 #define CS_INIT()	pinMode(PIN_CARD_SS, OUTPUT)	/* Initialize port for MMC CS as output */
 #define	CS_H()		digitalWrite(PIN_CARD_SS, HIGH)	/* Set MMC CS "high" */
@@ -60,6 +68,158 @@ void dly_us (UINT n)	/* Delay n microseconds (avr-gcc -Os) */
 	delayMicroseconds(n);
 }
 
+void devSDCard_benchmark()
+{
+	unsigned int bw;
+	uchar buf[1024];
+
+	unsigned int i;
+
+	for(i=0; i<1024; i++)
+		buf[i] = '0'+(i%10);
+	FRESULT fRes;
+	uint32_t t1, t2, td;
+
+	t1 = system_get_time();
+	LOG(INFO, "Write 1K in 1K increment\n");
+	fRes = f_open(&Fil, "b1k.txt", FA_WRITE | FA_CREATE_ALWAYS);
+	if (fRes == FR_OK)
+	{
+		f_write(&Fil, buf, 1024, &bw);	/* Write data to the file */
+
+		f_close(&Fil);								/* Close the file */
+
+		if (bw != 1024) /* Lights green LED if data written well */
+		{
+			LOG(INFO, "Write to file FAIL\n");
+		}
+	}
+	else
+	{
+		LOG(INFO, "fopen FAIL %d", fRes);
+	}
+	t2 = system_get_time();
+	LOG(INFO, "Test end: %lu\n", t2 - t1);
+
+	t1 = system_get_time();
+	LOG(INFO, "(2) Write 1K in 1K increment\n");
+	fRes = f_open(&Fil, "b1k.txt", FA_WRITE | FA_CREATE_ALWAYS);
+	if (fRes == FR_OK)
+	{
+		f_write(&Fil, buf, 1024, &bw);	/* Write data to the file */
+
+		f_close(&Fil);								/* Close the file */
+
+		if (bw != 1024) /* Lights green LED if data written well */
+		{
+			LOG(INFO, "Write to file FAIL\n");
+		}
+	}
+	else
+	{
+		LOG(INFO, "fopen FAIL %d", fRes);
+	}
+	t2 = system_get_time();
+	LOG(INFO, "Test end: %lu = ", t2 - t1); Serial.print(1000000./(t2-t1)); LOG(INFO, "kBps\n");
+
+
+	t1 = system_get_time();
+	LOG(INFO, "Write 1K in 4 bytes increment\n");
+	fRes = f_open(&Fil, "b1k4.txt", FA_WRITE | FA_CREATE_ALWAYS);
+	if (fRes == FR_OK)
+	{
+		for(i=0; i<1024/4; i++)
+		{
+			f_write(&Fil, buf, 4, &bw);	/* Write data to the file */
+		}
+
+		f_close(&Fil);								/* Close the file */
+
+		if (bw != 4) /* Lights green LED if data written well */
+		{
+			LOG(INFO, "Write to file FAIL\n");
+		}
+	}
+	else
+	{
+		LOG(INFO, "fopen FAIL %d", fRes);
+	}
+	t2 = system_get_time();
+	LOG(INFO, "Test end: %lu = ", t2 - t1); Serial.print(1000000./(t2-t1)); LOG(INFO, "kBps\n");
+
+	t1 = system_get_time();
+	LOG(INFO, "Write 1k in 64 bytes increment\n");
+	fRes = f_open(&Fil, "b1k64.txt", FA_WRITE | FA_CREATE_ALWAYS);
+	if (fRes == FR_OK)
+	{
+		for(i=0; i<1024/64; i++)
+		{
+			f_write(&Fil, buf, 64, &bw);	/* Write data to the file */
+		}
+
+		f_close(&Fil); /* Close the file */
+
+		if (bw != 128) /* Lights green LED if data written well */
+		{
+			LOG(INFO, "Write to file FAIL\n");
+		}
+	}
+	else
+	{
+		LOG(INFO, "fopen FAIL %d", fRes);
+	}
+	t2 = system_get_time();
+	LOG(INFO, "Test end: %lu = ", t2 - t1); Serial.print(1000000./(t2-t1)); LOG(INFO, "kBps\n");
+
+	t1 = system_get_time();
+	LOG(INFO, "Write 8k in 256 bytes increment\n");
+	fRes = f_open(&Fil, "b8k128.txt", FA_WRITE | FA_CREATE_ALWAYS);
+	if (fRes == FR_OK)
+	{
+		for(i=0; i<32; i++)
+		{
+			f_write(&Fil, buf, 256, &bw);	/* Write data to the file */
+		}
+
+		f_close(&Fil); /* Close the file */
+
+		if (bw != 128) /* Lights green LED if data written well */
+		{
+			LOG(INFO, "Write to file FAIL\n");
+		}
+	}
+	else
+	{
+		LOG(INFO, "fopen FAIL %d", fRes);
+	}
+	t2 = system_get_time();
+	LOG(INFO, "Test end: %lu = ", t2 - t1); Serial.print(8000000./(t2-t1)); LOG(INFO, "kBps\n");
+
+	t1 = system_get_time();
+	LOG(INFO, "Write 8k in 128 bytes increment\n");
+	fRes = f_open(&Fil, "b8k512.txt", FA_WRITE | FA_CREATE_ALWAYS);
+	if (fRes == FR_OK)
+	{
+		for(i=0; i<16; i++)
+		{
+			f_write(&Fil, buf, 512, &bw);	/* Write data to the file */
+		}
+
+		f_close(&Fil); /* Close the file */
+
+		if (bw != 128) /* Lights green LED if data written well */
+		{
+			LOG(INFO, "Write to file FAIL\n");
+		}
+	}
+	else
+	{
+		LOG(INFO, "fopen FAIL %d", fRes);
+	}
+	t2 = system_get_time();
+	LOG(INFO, "Test end: %lu = ", t2 - t1); Serial.print(8000000./(t2-t1)); LOG(INFO, "kBps\n");
+
+}
 
 uchar devSDCard_init(uchar operation)
 {
@@ -73,7 +233,15 @@ uchar devSDCard_init(uchar operation)
 			//configure device
 			if(operation & CONFIG)
 			{
-			
+				FRESULT mountRes = f_mount(&FatFs, "", 0);		/* Give a work area to the default drive */
+				if(FR_OK != mountRes)
+				{
+					LOG(INFO, "f_mount: FAIL %d\n", mountRes);
+				}
+				else
+				{
+					LOG(INFO, "f_mount: SUCCESS %d\n", mountRes);
+				}
 			}
 		}
 		else
@@ -215,7 +383,7 @@ int wait_ready (void)	/* 1:OK, 0:Timeout */
 		rcvr_mmc(&d, 1);
 		if (d == 0xFF)
 		{
-		LOG(INFO, "SD wait:%d00us\n", tmr);
+		//LOG(INFO, "SD wait:%d00us\n", tmr);
 		break;
 		}
 
@@ -256,6 +424,7 @@ int select (void)	/* 1:OK, 0:Timeout */
 	rcvr_mmc(&d, 1);	/* Dummy clock (force DO enabled) */
 	if (wait_ready()) return 1;	/* Wait for card ready */
 
+	LOG(INFO, "SDCard select() failed\n");
 	deselect();
 	return 0;			/* Failed */
 }
@@ -364,7 +533,7 @@ BYTE send_cmd (		/* Returns command response (bit7==1:Send failed)*/
 	do
 		rcvr_mmc(&d, 1);
 	while ((d & 0x80) && --n);
-
+	//LOG(INFO, "SDcard send_cmd %d (%d try)\n", d, n);
 	return d;			/* Return with the response value */
 }
 
@@ -407,6 +576,8 @@ DSTATUS disk_initialize (
 
 	if (drv) return RES_NOTRDY;
 
+	gUsDelay = SCK_SLOW_INIT;
+
 	dly_us(10000);			/* 10ms */
 	CS_INIT(); CS_H();		/* Initialize port pin tied to CS */
 	CK_INIT(); CK_L();		/* Initialize port pin tied to SCLK */
@@ -419,7 +590,13 @@ DSTATUS disk_initialize (
 
 	BYTE retCmd;
 
-	retCmd = send_cmd(CMD0, 0);
+	n=5;
+	do
+	{
+		retCmd = send_cmd(CMD0, 0);
+		n--;
+	}
+	while(n && retCmd != 1);
 
 	if (retCmd == 1)
 	{
@@ -463,6 +640,9 @@ DSTATUS disk_initialize (
 
 	deselect();
 	LOG(INFO, "SD init TYPE %d STAT %d\n", ty, s);
+
+	gUsDelay = SCK_NORMAL;
+
 	return s;
 }
 

@@ -5,8 +5,6 @@
 #include "debug.h"
 #include "device.h"
 
-#include "fatfs/ff.h"		/* Declarations of FatFs API */
-
 /*
  The following 2 defines are present in wifipass.h
  #define WIFI_SSID "PleaseEnterSSID"
@@ -22,8 +20,12 @@ TempReading gLastTempHumid;
 HttpServer server;
 FTPServer ftp;
 
-FATFS FatFs;		/* FatFs work area needed for each volume */
-FIL Fil;			/* File object needed for each open file */
+static inline unsigned get_ccount(void)
+{
+	unsigned r;
+	asm volatile ("rsr %0, ccount" : "=r"(r));
+	return r;
+}
 
 static void mainLoop(void);
 
@@ -125,20 +127,14 @@ void startFTP()
 void connectOk()
 {
 	Serial.println("I'm CONNECTED\n");
-
 	startFTP();
 	startWebServer();
-
-
-
 }
 
 
 void initSystem()
 {
-
 	enableDev(DEV_UART, ENABLE | CONFIG);
-
 
 	//setup SDCard and load custom system settings, then disable SDCard
 	enableDev(DEV_SDCARD, ENABLE | CONFIG);
@@ -158,46 +154,41 @@ void initSystem()
 
 	//setup Wifi
 	enableDev(DEV_WIFI, ENABLE | CONFIG);
-	
-	FRESULT mountRes = f_mount(&FatFs, "", 0);		/* Give a work area to the default drive */
-	if(FR_OK != mountRes)
-	{
-		LOG(INFO, "f_mount: FAIL %d\n", mountRes);
-	}
-
 }
 
 void startSystem()
 {
-unsigned int bw;
+
 #if DEBUG_BUILD
 	tmrHeartBeat.initializeUs(HEART_BEAT, heartbeat_cb).start();
 	LOG(INFO, "Chip id=%ld\r\n", system_get_chip_id());
 #endif
 	tmrMainLoop.initializeUs(HEART_BEAT, mainLoop).start(false);
 
-	FRESULT fRes = f_open(&Fil, "newfile.txt", FA_WRITE | FA_CREATE_ALWAYS);
-	if (fRes == FR_OK)
-	{
-		/* Create a file */
-		f_write(&Fil, "It works!\r\n", 11, &bw);	/* Write data to the file */
+	unsigned tick1;
+	unsigned tick2;
+	unsigned tickdiff, tickdiff2;
 
-		f_close(&Fil);								/* Close the file */
+	/*Test timings 80Mhz -> tick=12.5ns -> 1us ~ 80 ticks*/
+	tick1 = get_ccount();
+	tick2 = get_ccount();
+	tickdiff = tick2 - tick1;
+	LOG(INFO, "Tick diff %lu\r\n", tickdiff);
 
-		if (bw == 11) /* Lights green LED if data written well */
-		{
-			LOG(INFO, "Write to file OK\n");
-		}
-		else
-		{
-			LOG(INFO, "Write to file FAIL %d\n", bw);
-		}
-	}
-	else
-	{
-		LOG(INFO, "fopen FAIL %d", fRes);
-	}
+	tick1 = get_ccount();
+	os_delay_us(1);
+	tick2 = get_ccount();
+	tickdiff2 = tick2 - tick1;
+	LOG(INFO, "Tick diff 1us %lu corrected %lu\r\n", tickdiff2, tickdiff2 - tickdiff);
 
+	tick1 = system_get_time();
+	os_delay_us(10);
+	tick2 = system_get_time();
+	tickdiff = tick2 - tick1;
+	LOG(INFO, "Tick diff 10us %lu\r\n", tickdiff);
+
+
+	devSDCard_benchmark();
 }
 
 static void mainLoop()
@@ -206,13 +197,13 @@ static void mainLoop()
 	{
 		//LOG(INFO, "main-loop\n");
 		//wdt_feed();
-		devRGB_setColor(COLOR_RED);
+		//devRGB_setColor(COLOR_RED);
 		delayMicroseconds(.5*ONE_SECOND);
 		//wdt_feed();
-		devRGB_setColor(COLOR_GREEN);
+		//devRGB_setColor(COLOR_GREEN);
 		delayMicroseconds(0.5*ONE_SECOND);
 		//wdt_feed();
-		devRGB_setColor(COLOR_BLUE);
+		//devRGB_setColor(COLOR_BLUE);
 		delayMicroseconds(0.5*ONE_SECOND);
 		//wdt_feed();
 
@@ -224,10 +215,14 @@ static void mainLoop()
 		else
 		{
 			//LOG(INFO, "%f H:%f T:%f\n", 3.14f, gLastTempHumid.humid, gLastTempHumid.temp);
-			LOG(INFO, "H:");
+			LOG(INFO, "H,");
 			Serial.print(gLastTempHumid.humid);
-			LOG(INFO, " T:");
+			LOG(INFO, "T,");
 			Serial.print(gLastTempHumid.temp);
+			//LOG(INFO, "*C ");
+			//LOG(INFO, " HIdx:");
+			/*Serial.print(*/devDHT22_heatIndex(gLastTempHumid.temp, gLastTempHumid.humid)/*)*/;
+			devDHT22_dewPoint(gLastTempHumid.temp, gLastTempHumid.humid);
 			LOG(INFO, "\n");
 		}
 	}

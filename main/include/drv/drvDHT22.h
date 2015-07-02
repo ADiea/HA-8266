@@ -10,7 +10,8 @@ struct TempReading
 	float humid;
 };
 
-
+float devDHT22_heatIndex(float temp, float humid);
+float devDHT22_dewPoint(float temp, float humid);
 uchar devDHT22_init(uchar operation);
 uchar devDHT22_read(TempReading* dest);
 

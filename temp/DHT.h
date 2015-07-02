@@ -28,13 +28,21 @@
 #define DHT21 21
 #define AM2301 21
 
+#define DSHEET_READ_INTERVAL 2000
+#define LONG_READ_INTERVAL 4000
+
+#define DEW_ACCURATE 0
+#define DEW_FAST 1
+#define DEW_ACCURATE_FAST 2
+#define DEW_FASTEST 3
+
 
 class DHT
 {
 public:
-	DHT(uint8_t pin, uint8_t type, boolean pullup = false, uint8_t count = ONE_DURATION_THRESH_US)
+	DHT(uint8_t pin, uint8_t type, boolean pullup = false, uint8_t count = ONE_DURATION_THRESH_US, uint16_t maxIntervalRead = DSHEET_READ_INTERVAL)
 		: m_kSensorPin(pin), m_kSensorType(type), m_kThreshOne(count),
-		  m_bPllupEnabled(pullup), m_firstRead(true), m_lastreadtime(0){};
+		  m_bPllupEnabled(pullup), m_firstRead(true), m_lastreadtime(0), m_maxIntervalRead(maxIntervalRead){};
 
 	void begin(void);
 
@@ -45,8 +53,10 @@ public:
 	bool readTempAndHumidity(float* temp, float* humid, bool bFarenheit = false);
 
 	float convertCtoF(float);
+	float convertFtoC(float);
 	float computeHeatIndexC(float tempCelsius, float percentHumidity); //TODO:test accuracy against computeHeatIndexF
 	float computeHeatIndexF(float tempFahrenheit, float percentHumidity);
+	double computeDewPoint(float tempCelsius, float percentHumidity, uint8_t algType = DEW_ACCURATE);
 private:
 	boolean read(void);
 	void updateInternalCache();
@@ -56,6 +66,11 @@ private:
 	uint8_t m_data[6];
 	unsigned long m_lastreadtime;
 	boolean m_bPllupEnabled;
+
+	//The datasheet advises to read no more than one every 2 seconds.
+	//However if reads are done at greater intervals the sensor's output will be less subject to self-heating
+	//Reference: http://www.kandrsmith.org/RJS/Misc/dht_sht_how_fast.html
+	uint16_t m_maxIntervalRead;
 
 	float m_lastTemp, m_lastHumid;
 };
