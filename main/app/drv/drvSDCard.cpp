@@ -131,14 +131,15 @@ void devSDCard_benchmark()
 		for(i=0; i<1024/4; i++)
 		{
 			f_write(&Fil, buf, 4, &bw);	/* Write data to the file */
+
+			if (bw != 4) /* Lights green LED if data written well */
+			{
+				LOG(INFO, "Write to file FAIL: %d\n", i);
+				break;
+			}
 		}
 
 		f_close(&Fil);								/* Close the file */
-
-		if (bw != 4) /* Lights green LED if data written well */
-		{
-			LOG(INFO, "Write to file FAIL\n");
-		}
 	}
 	else
 	{
@@ -155,14 +156,15 @@ void devSDCard_benchmark()
 		for(i=0; i<1024/64; i++)
 		{
 			f_write(&Fil, buf, 64, &bw);	/* Write data to the file */
+
+			if (bw != 64) /* Lights green LED if data written well */
+			{
+				LOG(INFO, "Write to file FAIL: %d\n", i);
+				break;
+			}
 		}
 
 		f_close(&Fil); /* Close the file */
-
-		if (bw != 128) /* Lights green LED if data written well */
-		{
-			LOG(INFO, "Write to file FAIL\n");
-		}
 	}
 	else
 	{
@@ -179,14 +181,15 @@ void devSDCard_benchmark()
 		for(i=0; i<32; i++)
 		{
 			f_write(&Fil, buf, 256, &bw);	/* Write data to the file */
+
+			if (bw != 256) /* Lights green LED if data written well */
+			{
+				LOG(INFO, "Write to file FAIL: %d\n", i);
+				break;
+			}
 		}
 
 		f_close(&Fil); /* Close the file */
-
-		if (bw != 128) /* Lights green LED if data written well */
-		{
-			LOG(INFO, "Write to file FAIL\n");
-		}
 	}
 	else
 	{
@@ -203,14 +206,17 @@ void devSDCard_benchmark()
 		for(i=0; i<16; i++)
 		{
 			f_write(&Fil, buf, 512, &bw);	/* Write data to the file */
+
+
+			if (bw != 512) /* Lights green LED if data written well */
+			{
+				LOG(INFO, "Write to file FAIL: %d\n", i);
+				break;
+			}
 		}
 
 		f_close(&Fil); /* Close the file */
 
-		if (bw != 128) /* Lights green LED if data written well */
-		{
-			LOG(INFO, "Write to file FAIL\n");
-		}
 	}
 	else
 	{

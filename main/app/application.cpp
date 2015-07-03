@@ -30,6 +30,8 @@ static inline unsigned get_ccount(void)
 static void mainLoop(void);
 
 	Timer tmrMainLoop;
+#define LOOP_TIME (3*ONE_SECOND)
+
 #if DEBUG_BUILD
 	#define HEART_BEAT (5*ONE_SECOND)
 	Timer tmrHeartBeat;
@@ -38,14 +40,13 @@ static void mainLoop(void);
 	{
 		//wdt_feed();
 		Serial.print("Local Time    : ");
-		Serial.println(SystemClock.getSystemTimeString());
-		Serial.print("UTC Time: ");
-		Serial.println(SystemClock.getSystemTimeString(eTZ_UTC));
+		Serial.print(SystemClock.getSystemTimeString());
+		Serial.print(" UTC Time: ");
+		Serial.print(SystemClock.getSystemTimeString(eTZ_UTC));
 
-		LOG(INFO, "Free heap size=%ld\r\n", system_get_free_heap_size());
-		LOG(INFO, "Mem info:\r\n");
-		system_print_meminfo();
-		LOG(INFO, "\r\n");
+		LOG(INFO, "\nFree heap size=%ld\r\n", system_get_free_heap_size());
+		//LOG(INFO, "Mem info:\r\n");		system_print_meminfo();
+		//LOG(INFO, "\r\n");
 	}
 #endif /*DEBUG_BUILD*/
 
@@ -127,8 +128,8 @@ void startFTP()
 void connectOk()
 {
 	Serial.println("I'm CONNECTED\n");
-	startFTP();
-	startWebServer();
+	//startFTP();
+	//startWebServer();
 }
 
 
@@ -163,7 +164,7 @@ void startSystem()
 	tmrHeartBeat.initializeUs(HEART_BEAT, heartbeat_cb).start();
 	LOG(INFO, "Chip id=%ld\r\n", system_get_chip_id());
 #endif
-	tmrMainLoop.initializeUs(HEART_BEAT, mainLoop).start(false);
+	tmrMainLoop.initializeUs(LOOP_TIME, mainLoop).start();
 
 	unsigned tick1;
 	unsigned tick2;
@@ -189,23 +190,25 @@ void startSystem()
 
 
 	devSDCard_benchmark();
+
+	LOG(INFO,"H,T,H_idx_C,DP_Acc,DP_Acc(us),DP_AccFast,DP_AccFast(us),DP_Fast,DP_Fast(us),DP_Fastest,DP_Fastest(us)\n");
 }
 
 static void mainLoop()
 {
+
+#if 0
 	while(1)
 	{
+#endif
 		//LOG(INFO, "main-loop\n");
 		//wdt_feed();
-		//devRGB_setColor(COLOR_RED);
-		delayMicroseconds(.5*ONE_SECOND);
-		//wdt_feed();
-		//devRGB_setColor(COLOR_GREEN);
-		delayMicroseconds(0.5*ONE_SECOND);
-		//wdt_feed();
-		//devRGB_setColor(COLOR_BLUE);
-		delayMicroseconds(0.5*ONE_SECOND);
-		//wdt_feed();
+		WDT.alive();
+		devRGB_setColor(COLOR_RED);
+		//delayMicroseconds(.5*ONE_SECOND);
+
+
+
 
 		uchar errTemp = devDHT22_read(&gLastTempHumid);
 		if(DEV_ERR_OK != errTemp)
@@ -215,17 +218,21 @@ static void mainLoop()
 		else
 		{
 			//LOG(INFO, "%f H:%f T:%f\n", 3.14f, gLastTempHumid.humid, gLastTempHumid.temp);
-			LOG(INFO, "H,");
 			Serial.print(gLastTempHumid.humid);
-			LOG(INFO, "T,");
+			LOG(INFO, ",");
 			Serial.print(gLastTempHumid.temp);
 			//LOG(INFO, "*C ");
 			//LOG(INFO, " HIdx:");
-			/*Serial.print(*/devDHT22_heatIndex(gLastTempHumid.temp, gLastTempHumid.humid)/*)*/;
+			devDHT22_heatIndex(gLastTempHumid.temp, gLastTempHumid.humid);
 			devDHT22_dewPoint(gLastTempHumid.temp, gLastTempHumid.humid);
 			LOG(INFO, "\n");
 		}
+
+		devRGB_setColor(COLOR_GREEN);
+		WDT.alive();
+#if 0
 	}
+#endif
 }
 
 

@@ -6,7 +6,8 @@
  * 6/25/15 ADiea: 	pullup option
  *  	 	 	 	heat index functions
  *  	 	 	 	read temp and humidity in one function call
- *  	 	 	 	cache converted value for last temp and humid
+ *  	 	 	 	cache converted values of temp and humid
+ *  	 	 	 	eliminate 0.25s wait before each read
  *
  * -/-/-	written by Adafruit Industries
  */
@@ -26,7 +27,6 @@ void DHT::begin(void)
 		digitalWrite(m_kSensorPin, HIGH);
 	}
 }
-
 
 
 float DHT::readTemperature(bool bFarenheit/* = false*/)
@@ -135,14 +135,10 @@ double DHT::computeDewPoint(float tempCelsius, float percentHumidity, uint8_t al
 			if(result < 0)
 				result = 0;
 			//ESGG now holds the saturation vapor pressure https://en.wikipedia.org/wiki/Vapor_pressure
-			//debugf("Sat Water Vapor(mBar)=");
-			//Serial.print(result);
 
 			//Convert from mBar to kPa (1mBar = 0.1 kPa) and divide by 0.61078 constant
 			//Determine vapor pressure (takes the RH into account)
 			result = percentHumidity * result / (10 * 0.61078);
-			//debugf("Water Vapor(K)=", result);
-			//Serial.print(result);
 
 			result = log(result);
 			//http://www.colorado.edu/geography/weather_station/Geog_site/about.htm
@@ -164,13 +160,9 @@ double DHT::computeDewPoint(float tempCelsius, float percentHumidity, uint8_t al
 						  tempCelsius * (3.031240396e-6 +
 						  tempCelsius * (2.034080948e-8 +
 						  tempCelsius * 6.136820929e-11)))));
-	        //debugf("Sat Water Vapor(kPa)=");
-	        //Serial.print(result);
 	        //Convert from mBar to kPa (1mBar = 0.1 kPa) and divide by 0.61078 constant
 	        //Determine vapor pressure (takes the RH into account)
 	        result = percentHumidity * result / (10 * 0.61078);
-			//debugf("Water Vapor(K)=");
-			//Serial.print(result);
 			result = log(result);
 			result = (241.88 * result) / (17.558 - result);
 		}
@@ -255,16 +247,18 @@ boolean DHT::read(void)
 	uint8_t j = 0, i;
 	unsigned long currenttime;
 
-	// pull the pin high and wait 250 milliseconds
+	// pull the pin high
 	pinMode(m_kSensorPin, OUTPUT);
 	digitalWrite(m_kSensorPin, HIGH);
 
+	//wait 250 milliseconds
 	if(m_firstRead)
 		delay(250);
 
 	currenttime = millis();
 
-	/*subtraction of 2 unsigned values yields correct result no matter if there was one overflow*/
+	/*subtraction of 2 unsigned values yields correct result
+	 *no matter if there was one overflow*/
 	if ((currenttime - m_lastreadtime) < m_maxIntervalRead && !m_firstRead)
 	{
 		return true; // return last correct measurement
@@ -280,11 +274,12 @@ boolean DHT::read(void)
 
 	m_data[0] = m_data[1] = m_data[2] = m_data[3] = m_data[4] = 0;
 
-	// now pull it low for ~20 milliseconds
-
+	// now pull it low for ~20 ms
 	digitalWrite(m_kSensorPin, LOW);
 	delayMicroseconds(20000);
+
 	cli();
+
 	// make pin input and activate pullup
 	pinMode(m_kSensorPin, INPUT);
 	digitalWrite(m_kSensorPin, HIGH);
@@ -336,7 +331,6 @@ boolean DHT::read(void)
 	}
 
 	sei();
-
 /*
 	 Serial.println(j, DEC);
 	 Serial.print(m_data[0], HEX); Serial.print(", ");
@@ -360,5 +354,4 @@ boolean DHT::read(void)
 	}
 
 	return false;
-
 }

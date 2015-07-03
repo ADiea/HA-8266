@@ -32,8 +32,8 @@
 #define LONG_READ_INTERVAL 4000
 
 #define DEW_ACCURATE 0
-#define DEW_FAST 1
-#define DEW_ACCURATE_FAST 2
+#define DEW_ACCURATE_FAST 1
+#define DEW_FAST 2
 #define DEW_FASTEST 3
 
 
@@ -46,15 +46,13 @@ public:
 
 	void begin(void);
 
-	float readSensor(bool bReadTemperature, bool bFarenheit = false);
 	float readTemperature(bool bFarenheit = false);
 	float readHumidity(void);
-
 	bool readTempAndHumidity(float* temp, float* humid, bool bFarenheit = false);
 
 	float convertCtoF(float);
 	float convertFtoC(float);
-	float computeHeatIndexC(float tempCelsius, float percentHumidity); //TODO:test accuracy against computeHeatIndexF
+	float computeHeatIndexC(float tempCelsius, float percentHumidity);
 	float computeHeatIndexF(float tempFahrenheit, float percentHumidity);
 	double computeDewPoint(float tempCelsius, float percentHumidity, uint8_t algType = DEW_ACCURATE);
 private:
