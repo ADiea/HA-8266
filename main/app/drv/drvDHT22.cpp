@@ -1,6 +1,6 @@
 #include "drv/drvDHT22.h"
 #include <SmingCore/SmingCore.h>
-#include <Libraries/DHT/DHT.h>
+
 
 #define SENSOR_PIN 14 //GPIO14
 
@@ -24,7 +24,7 @@ uchar devDHT22_init(uchar operation)
 					dht = NULL;
 				}
 
-				dht = new DHT(SENSOR_PIN, DHT22, true);
+				dht = new DHT(SENSOR_PIN);
 
 				dht->begin();
 			}
@@ -44,11 +44,11 @@ uchar devDHT22_init(uchar operation)
 	return retVal;
 }
 
-uchar devDHT22_read(TempReading* dest)
+uchar devDHT22_read(TempAndHumidity& dest)
 {
-	if(dest && dht)
+	if(dht)
 	{
-		if (!dht->readTempAndHumidity(&(dest->temp), &(dest->humid)))
+		if (!dht->readTempAndHumidity(dest))
 		{
 			return DEV_DEVIO_ERR;
 		}
@@ -58,38 +58,85 @@ uchar devDHT22_read(TempReading* dest)
 	return DEV_PARAM_ERR;
 }
 
-float devDHT22_heatIndex(float temp, float humid)
+float devDHT22_heatIndex()
 {
 
 	if(dht)
 	{
 		LOG(INFO, ",");
-		Serial.print(dht->computeHeatIndexC(temp, humid));
+		Serial.print(dht->getHeatIndex());
 	}
 	return 0;
 }
 
-float devDHT22_dewPoint(float temp, float humid)
+float devDHT22_dewPoint()
 {
 	if(dht)
 	{
 		uint32_t tick1, tick2;
 		tick1 = system_get_time();
 		LOG(INFO, ",");
-		Serial.print(dht->computeDewPoint(temp, humid, DEW_ACCURATE));
+		Serial.print(dht->getDewPoint(DEW_ACCURATE));
 		tick2 = system_get_time(); LOG(INFO, ",%lu", tick2 - tick1);tick1 = system_get_time();
 
 		LOG(INFO, ",");
-		Serial.print(dht->computeDewPoint(temp, humid, DEW_ACCURATE_FAST));
+		Serial.print(dht->getDewPoint(DEW_ACCURATE_FAST));
 		tick2 = system_get_time(); LOG(INFO, ",%lu", tick2 - tick1);tick1 = system_get_time();
 
 		LOG(INFO, ",");
-		Serial.print(dht->computeDewPoint(temp, humid, DEW_FAST));
+		Serial.print(dht->getDewPoint(DEW_FAST));
 		tick2 = system_get_time(); LOG(INFO, ",%lu", tick2 - tick1);tick1 = system_get_time();
 
 		LOG(INFO, ",");
-		Serial.print(dht->computeDewPoint(temp, humid, DEW_FASTEST));
+		Serial.print(dht->getDewPoint(DEW_FASTEST));
 		tick2 = system_get_time(); LOG(INFO, ",%lu", tick2 - tick1);tick1 = system_get_time();
+
 	}
 	return 0;
 }
+
+float devDHT22_comfortRatio()
+{
+	ComfortState cf;
+	if(dht)
+	{
+		LOG(INFO, ",");
+		Serial.print(dht->getComfortRatio(cf));
+		LOG(INFO, ",");
+		switch(cf)
+		{
+		case Comfort_OK:
+			LOG(INFO, "Comfort_OK");
+			break;
+		case Comfort_TooHot:
+			LOG(INFO, "Comfort_TooHot");
+			break;
+		case Comfort_TooCold:
+			LOG(INFO, "Comfort_TooCold");
+			break;
+		case Comfort_TooDry:
+			LOG(INFO, "Comfort_TooDry");
+			break;
+		case Comfort_TooHumid:
+			LOG(INFO, "Comfort_TooHumid");
+			break;
+		case Comfort_HotAndHumid:
+			LOG(INFO, "Comfort_HotAndHumid");
+			break;
+		case Comfort_HotAndDry:
+			LOG(INFO, "Comfort_HotAndDry");
+			break;
+		case Comfort_ColdAndHumid:
+			LOG(INFO, "Comfort_ColdAndHumid");
+			break;
+		case Comfort_ColdAndDry:
+			LOG(INFO, "Comfort_ColdAndDry");
+			break;
+		default:
+			LOG(INFO, "Unknown:%d", cf);
+			break;
+		}
+	}
+	return 0;
+}
+

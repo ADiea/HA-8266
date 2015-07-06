@@ -3,16 +3,12 @@
 
 #include "types.h"
 #include "device.h"
+#include <Libraries/DHT/DHT.h>
 
-struct TempReading
-{
-	float temp;
-	float humid;
-};
-
-float devDHT22_heatIndex(float temp, float humid);
-float devDHT22_dewPoint(float temp, float humid);
+float devDHT22_heatIndex();
+float devDHT22_dewPoint();
 uchar devDHT22_init(uchar operation);
-uchar devDHT22_read(TempReading* dest);
+uchar devDHT22_read(TempAndHumidity& dest);
+float devDHT22_comfortRatio();
 
 #endif /*DRV_DHT22*/

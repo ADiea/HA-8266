@@ -38,7 +38,7 @@ FATFS FatFs;		/* FatFs work area needed for each volume */
 FIL Fil;
 
 #define SCK_SLOW_INIT 4
-#define SCK_NORMAL 1
+#define SCK_NORMAL 0
 
 uchar gUsDelay = SCK_SLOW_INIT;
 
@@ -199,7 +199,7 @@ void devSDCard_benchmark()
 	LOG(INFO, "Test end: %lu = ", t2 - t1); Serial.print(8000000./(t2-t1)); LOG(INFO, "kBps\n");
 
 	t1 = system_get_time();
-	LOG(INFO, "Write 8k in 128 bytes increment\n");
+	LOG(INFO, "Write 8k in 512 bytes increment\n");
 	fRes = f_open(&Fil, "b8k512.txt", FA_WRITE | FA_CREATE_ALWAYS);
 	if (fRes == FR_OK)
 	{
@@ -224,7 +224,34 @@ void devSDCard_benchmark()
 	}
 	t2 = system_get_time();
 	LOG(INFO, "Test end: %lu = ", t2 - t1); Serial.print(8000000./(t2-t1)); LOG(INFO, "kBps\n");
+#if 0
+	t1 = system_get_time();
+	LOG(INFO, "Write 32k in 1024 bytes increment\n");
+	fRes = f_open(&Fil, "b8k512.txt", FA_WRITE | FA_CREATE_ALWAYS);
+	if (fRes == FR_OK)
+	{
+		for(i=0; i<32; i++)
+		{
+			f_write(&Fil, buf, 1024, &bw);	/* Write data to the file */
 
+
+			if (bw != 1024) /* Lights green LED if data written well */
+			{
+				LOG(INFO, "Write to file FAIL: %d\n", i);
+				break;
+			}
+		}
+
+		f_close(&Fil); /* Close the file */
+
+	}
+	else
+	{
+		LOG(INFO, "fopen FAIL %d", fRes);
+	}
+	t2 = system_get_time();
+	LOG(INFO, "Test end: %lu = ", t2 - t1); Serial.print(32000000./(t2-t1)); LOG(INFO, "kBps\n");
+#endif
 }
 
 uchar devSDCard_init(uchar operation)
