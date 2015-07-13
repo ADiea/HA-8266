@@ -1,10 +1,10 @@
    Section|                   Description| Start (hex)|   End (hex)|Used space
 ------------------------------------------------------------------------------
       data|        Initialized Data (RAM)|    3FFE8000|    3FFE8582|    1410
-    rodata|           ReadOnly Data (RAM)|    3FFE8590|    3FFEB054|   10948
-       bss|      Uninitialized Data (RAM)|    3FFEB058|    3FFF51E0|   41352
-      text|            Cached Code (IRAM)|    40100000|    40105D7D|   23933
-irom0_text|           Uncached Code (SPI)|    40209000|    40242F7F|  237439
-Total Used RAM : 53710
-Free RAM : 28210
-Free IRam : 8853
+    rodata|           ReadOnly Data (RAM)|    3FFE8590|    3FFEA104|    7028
+       bss|      Uninitialized Data (RAM)|    3FFEA108|    3FFF3ED8|   40400
+      text|            Cached Code (IRAM)|    40100000|    40105B9D|   23453
+irom0_text|           Uncached Code (SPI)|    40209000|    4023EC33|  220211
+Total Used RAM : 48838
+Free RAM : 33082
+Free IRam : 9333

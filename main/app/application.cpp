@@ -1,7 +1,6 @@
 #include <user_config.h>
 #include <SmingCore/SmingCore.h>
 
-
 #include "debug.h"
 #include "device.h"
 
@@ -18,7 +17,7 @@
 TempAndHumidity gLastTempHumid;
 NtpClient *gNTPClient;
 HttpServer server;
-FTPServer ftp;
+//FTPServer ftp;
 
 static inline unsigned get_ccount(void)
 {
@@ -39,10 +38,10 @@ static void mainLoop(void);
 	static void heartbeat_cb(void)
 	{
 		return;
-		Serial.print("Local Time    : ");
-		Serial.print(SystemClock.getSystemTimeString());
-		Serial.print(" UTC Time: ");
-		Serial.print(SystemClock.getSystemTimeString(eTZ_UTC));
+		//Serial.print("Local Time    : ");
+		//Serial.print(SystemClock.getSystemTimeString());
+		//Serial.print(" UTC Time: ");
+		//Serial.print(SystemClock.getSystemTimeString(eTZ_UTC));
 
 		LOG(INFO, "\nFree heap size=%ld\r\n", system_get_free_heap_size());
 
@@ -56,8 +55,8 @@ uint32_t totalActiveSockets=0;
 	{
 		TemplateFileStream *tmpl = new TemplateFileStream("index.html");
 		auto &vars = tmpl->variables();
-		//vars["counter"] = String(counter);
 		response.sendTemplate(tmpl); // this template object will be deleted automatically
+
 	}
 
 	void onFile(HttpRequest &request, HttpResponse &response)
@@ -87,14 +86,14 @@ uint32_t totalActiveSockets=0;
 
 	void wsMessageReceived(WebSocket& socket, const String& message)
 	{
-		Serial.printf("WebSocket message received:\r\n%s\r\n", message.c_str());
+		//Serial.printf("WebSocket message received:\r\n%s\r\n", message.c_str());
 		String response = "Echo: " + message;
 		socket.sendString(response);
 	}
 
 	void wsBinaryReceived(WebSocket& socket, uint8_t* data, size_t size)
 	{
-		Serial.printf("Websocket binary data recieved, size: %d\r\n", size);
+		//Serial.printf("Websocket binary data recieved, size: %d\r\n", size);
 	}
 
 	void wsDisconnected(WebSocket& socket)
@@ -107,10 +106,20 @@ uint32_t totalActiveSockets=0;
 			clients[i].sendString("We lost our friend :( Total: " + String(totalActiveSockets));
 	}
 
+void a(int x)
+{
+	for(int i=0;i<255;i++)
+	{
+		if(x%2)x++;
+		else
+			x--;
+	}
 
+}
 
 void startWebServer()
 {
+	////Serial.print(3);
 	server.listen(80);
 	server.addPath("/", onIndex);
 	server.setDefaultHandler(onFile);
@@ -122,12 +131,12 @@ void startWebServer()
 	server.setWebSocketBinaryHandler(wsBinaryReceived);
 	server.setWebSocketDisconnectionHandler(wsDisconnected);
 
-	Serial.println("\r\n=== WEB SERVER STARTED ===");
-	Serial.println(WifiStation.getIP());
-	Serial.println("==============================\r\n");
+	//Serial.println("\r\n=== WEB SERVER STARTED ===");
+	//Serial.println(WifiStation.getIP());
+	//Serial.println("==============================\r\n");
 }
 
-void startFTP()
+/*void startFTP()
 {
 	if (!fileExist("index.html"))
 		fileSetContent("index.html", "<h3>Please connect to FTP and upload files from folder 'web/build' (details in code)</h3>");
@@ -135,12 +144,12 @@ void startFTP()
 	// Start FTP server
 	ftp.listen(21);
 	ftp.addUser("me", "123"); // FTP account
-}
+}*/
 
 // Will be called when WiFi station was connected to AP
 void connectOk()
 {
-	Serial.println("I'm CONNECTED\n");
+	//Serial.println("I'm CONNECTED\n");
 	//startFTP();
 	startWebServer();
 
@@ -150,8 +159,7 @@ void connectOk()
 		gNTPClient->setAutoQueryInterval(10*60);
 		gNTPClient->setAutoQuery(true);
 		gNTPClient->setAutoUpdateSystemClock(true);
-		// Request to update time now.
-		gNTPClient->requestTime();
+		gNTPClient->requestTime(); // Request to update time now.
 	}
 }
 
@@ -228,7 +236,7 @@ void startSystem()
 	LOG(INFO,"Time,H,T,readTime(us),H_idx_C,DP_Acc,DP_Acc(us),DP_AccFast," \
 			"DP_AccFast(us),DP_Fast,DP_Fast(us),DP_Fastest,DP_Fastest(us)," \
 			"ComfortRatio,ComfortText\n");
-
+/*
 	if (!fileExist("index.html"))
 	{
 		LOG(INFO,"NO index.html\n");
@@ -311,6 +319,7 @@ void startSystem()
 				"\n"
 				"<div id=\"output\"></div>\n");
 	}
+*/
 }
 
 static void mainLoop()
@@ -331,10 +340,10 @@ static void mainLoop()
 	else
 	{
 		//LOG(INFO, "%f H:%f T:%f\n", 3.14f, gLastTempHumid.humid, gLastTempHumid.temp);
-		Serial.print(gLastTempHumid.humid);
+		//Serial.print(gLastTempHumid.humid);
 		LOG(INFO, ",");
 
-		Serial.print(gLastTempHumid.temp);
+		//Serial.print(gLastTempHumid.temp);
 		LOG(INFO, ",%lu", tick2 - tick1);
 
 		devDHT22_heatIndex();

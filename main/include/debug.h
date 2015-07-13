@@ -3,7 +3,7 @@
 
 #include <SmingCore/SmingCore.h>
 
-#define DEBUG_BUILD 1
+#define DEBUG_BUILD 0
 
 #define ERR 0	
 #define WARN 1

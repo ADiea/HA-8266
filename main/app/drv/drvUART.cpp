@@ -15,9 +15,10 @@ uchar devUART_init(uchar operation)
 			if(operation & CONFIG)
 			{
 				// Configure the UART
-				Serial.begin(SERIAL_BAUD_RATE);
+				//Serial.begin(SERIAL_BAUD_RATE);
+				//Serial.commandProcessing(false);
 #if DEBUG_BUILD
-				Serial.systemDebugOutput(true); // Enable debug output to serial
+				//Serial.systemDebugOutput(true); // Enable debug output to serial
 				// enable some system messages
 				//system_set_os_print(1);
 #endif

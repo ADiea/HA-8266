@@ -120,7 +120,7 @@ void devSDCard_benchmark()
 		LOG(INFO, "fopen FAIL %d", fRes);
 	}
 	t2 = system_get_time();
-	LOG(INFO, "Test end: %lu = ", t2 - t1); Serial.print(1000000./(t2-t1)); LOG(INFO, "kBps\n");
+	LOG(INFO, "Test end: %lu = ", t2 - t1); //Serial.print(1000000./(t2-t1)); LOG(INFO, "kBps\n");
 
 
 	t1 = system_get_time();
@@ -146,7 +146,7 @@ void devSDCard_benchmark()
 		LOG(INFO, "fopen FAIL %d", fRes);
 	}
 	t2 = system_get_time();
-	LOG(INFO, "Test end: %lu = ", t2 - t1); Serial.print(1000000./(t2-t1)); LOG(INFO, "kBps\n");
+	LOG(INFO, "Test end: %lu = ", t2 - t1); //Serial.print(1000000./(t2-t1)); LOG(INFO, "kBps\n");
 
 	t1 = system_get_time();
 	LOG(INFO, "Write 1k in 64 bytes increment\n");
@@ -171,7 +171,7 @@ void devSDCard_benchmark()
 		LOG(INFO, "fopen FAIL %d", fRes);
 	}
 	t2 = system_get_time();
-	LOG(INFO, "Test end: %lu = ", t2 - t1); Serial.print(1000000./(t2-t1)); LOG(INFO, "kBps\n");
+	LOG(INFO, "Test end: %lu = ", t2 - t1); //Serial.print(1000000./(t2-t1)); LOG(INFO, "kBps\n");
 
 	t1 = system_get_time();
 	LOG(INFO, "Write 8k in 256 bytes increment\n");
@@ -196,7 +196,7 @@ void devSDCard_benchmark()
 		LOG(INFO, "fopen FAIL %d", fRes);
 	}
 	t2 = system_get_time();
-	LOG(INFO, "Test end: %lu = ", t2 - t1); Serial.print(8000000./(t2-t1)); LOG(INFO, "kBps\n");
+	LOG(INFO, "Test end: %lu = ", t2 - t1); //Serial.print(8000000./(t2-t1)); LOG(INFO, "kBps\n");
 
 	t1 = system_get_time();
 	LOG(INFO, "Write 8k in 512 bytes increment\n");
@@ -223,7 +223,7 @@ void devSDCard_benchmark()
 		LOG(INFO, "fopen FAIL %d", fRes);
 	}
 	t2 = system_get_time();
-	LOG(INFO, "Test end: %lu = ", t2 - t1); Serial.print(8000000./(t2-t1)); LOG(INFO, "kBps\n");
+	LOG(INFO, "Test end: %lu = ", t2 - t1); //Serial.print(8000000./(t2-t1)); LOG(INFO, "kBps\n");
 #if 0
 	t1 = system_get_time();
 	LOG(INFO, "Write 32k in 1024 bytes increment\n");
@@ -250,7 +250,7 @@ void devSDCard_benchmark()
 		LOG(INFO, "fopen FAIL %d", fRes);
 	}
 	t2 = system_get_time();
-	LOG(INFO, "Test end: %lu = ", t2 - t1); Serial.print(32000000./(t2-t1)); LOG(INFO, "kBps\n");
+	LOG(INFO, "Test end: %lu = ", t2 - t1); //Serial.print(32000000./(t2-t1)); LOG(INFO, "kBps\n");
 #endif
 }
 

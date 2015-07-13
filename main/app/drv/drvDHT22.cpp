@@ -64,7 +64,7 @@ float devDHT22_heatIndex()
 	if(dht)
 	{
 		LOG(INFO, ",");
-		Serial.print(dht->getHeatIndex());
+		//Serial.print(dht->getHeatIndex());
 	}
 	return 0;
 }
@@ -76,19 +76,19 @@ float devDHT22_dewPoint()
 		uint32_t tick1, tick2;
 		tick1 = system_get_time();
 		LOG(INFO, ",");
-		Serial.print(dht->getDewPoint(DEW_ACCURATE));
+		//Serial.print(dht->getDewPoint(DEW_ACCURATE));
 		tick2 = system_get_time(); LOG(INFO, ",%lu", tick2 - tick1);tick1 = system_get_time();
 
 		LOG(INFO, ",");
-		Serial.print(dht->getDewPoint(DEW_ACCURATE_FAST));
+		//Serial.print(dht->getDewPoint(DEW_ACCURATE_FAST));
 		tick2 = system_get_time(); LOG(INFO, ",%lu", tick2 - tick1);tick1 = system_get_time();
 
 		LOG(INFO, ",");
-		Serial.print(dht->getDewPoint(DEW_FAST));
+		//Serial.print(dht->getDewPoint(DEW_FAST));
 		tick2 = system_get_time(); LOG(INFO, ",%lu", tick2 - tick1);tick1 = system_get_time();
 
 		LOG(INFO, ",");
-		Serial.print(dht->getDewPoint(DEW_FASTEST));
+		//Serial.print(dht->getDewPoint(DEW_FASTEST));
 		tick2 = system_get_time(); LOG(INFO, ",%lu", tick2 - tick1);tick1 = system_get_time();
 
 	}
@@ -101,7 +101,7 @@ float devDHT22_comfortRatio()
 	if(dht)
 	{
 		LOG(INFO, ",");
-		Serial.print(dht->getComfortRatio(cf));
+		//Serial.print(dht->getComfortRatio(cf));
 		LOG(INFO, ",");
 		switch(cf)
 		{
