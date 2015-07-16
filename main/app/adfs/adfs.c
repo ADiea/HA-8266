@@ -42,7 +42,7 @@ ErrCode fsInit()
 ErrCode fsShutdown()
 {
 	ErrCode ret = FS_E_OK;
-	uchar i;
+	uint8_t i;
 	
 	//close all opened files
 	for(i=0; i<MAX_POOL_FILES; i++)
@@ -126,7 +126,7 @@ FsFile* fopen(const char *filename, const char mode, char *err)
 			break;
 		}
 	
-		uchar i = 0;
+		uint8_t i = 0;
 		if(mode & MODE_WRITE)
 		{
 			for(i=0; i<MAX_POOL_FILES; i++)
@@ -231,7 +231,7 @@ FsFile* fopen(const char *filename, const char mode, char *err)
 
 }
 
-ErrCode formatFS(uchar *formatKey)
+ErrCode formatFS(uint8_t *formatKey)
 {
 	ErrCode err = FS_E_OK;
 	
@@ -262,9 +262,9 @@ ErrCode formatFS(uchar *formatKey)
 }
 
 //reads and advances file pointer
-uchar fread(FsFile *f, uchar *dst, uchar size, ErrCode *err)
+uint8_t fread(FsFile *f, uint8_t *dst, uint8_t size, ErrCode *err)
 {
-	uchar readBytes = 0;
+	uint8_t readBytes = 0;
 	unsigned short bytesAvailable;
 	
 	do
@@ -372,9 +372,9 @@ uchar fread(FsFile *f, uchar *dst, uchar size, ErrCode *err)
 
 
 //writes and advances file pointer; updates filesize
-uchar fwrite(FsFile *f, uchar *src, uchar size, ErrCode *err)
+uint8_t fwrite(FsFile *f, uint8_t *src, uint8_t size, ErrCode *err)
 {
-	uchar writeBytes = 0;
+	uint8_t writeBytes = 0;
 	unsigned short bytesAvailable;
 	
 	BlockAddr nextFreeBlock;
@@ -717,7 +717,7 @@ ErrCode fSetPtr(FsFile *fsFile, uint32_t pos)
 	uint32_t dif = pos - fsFile->filePtr.pos;
 	LOG(DBG, "FS >> setFilePtr: reqPos=%d curPos=%d dif=%d", pos, fsFile->filePtr.pos, dif);
 	
-	uchar done = 0;
+	uint8_t done = 0;
 
 	do
 	{

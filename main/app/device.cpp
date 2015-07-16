@@ -5,7 +5,7 @@ unsigned short gDevicesState = 0x0000;
 struct devCtl
 {
 	unsigned short dev;
-	uchar (*initFunc)(uchar);
+	uint8_t (*initFunc)(uint8_t);
 };
 
 devCtl gDevices[] =
@@ -23,10 +23,10 @@ devCtl gDevices[] =
 #define NUM_DEVICES (sizeof(gDevices)/sizeof(gDevices[0]))
 
 //TODO: test if GPIO pins correspond to HW layout
-void enableDev(unsigned short dev, uchar op)
+void enableDev(unsigned short dev, uint8_t op)
 {
-	uchar i = 0;
-	uchar retVal;
+	uint8_t i = 0;
+	uint8_t retVal;
 	do
 	{
 		if(op & DISABLE)

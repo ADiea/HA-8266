@@ -17,7 +17,6 @@
 TempAndHumidity gLastTempHumid;
 NtpClient *gNTPClient;
 HttpServer server;
-//FTPServer ftp;
 
 static inline unsigned get_ccount(void)
 {
@@ -131,26 +130,16 @@ void startWebServer()
 	server.setWebSocketBinaryHandler(wsBinaryReceived);
 	server.setWebSocketDisconnectionHandler(wsDisconnected);
 
-	//Serial.println("\r\n=== WEB SERVER STARTED ===");
-	//Serial.println(WifiStation.getIP());
-	//Serial.println("==============================\r\n");
+	debugf("\r\n=== WEB SERVER STARTED ===");
+	debugf(WifiStation.getIP());
+	debugf("==============================\r\n");
 }
-
-/*void startFTP()
-{
-	if (!fileExist("index.html"))
-		fileSetContent("index.html", "<h3>Please connect to FTP and upload files from folder 'web/build' (details in code)</h3>");
-
-	// Start FTP server
-	ftp.listen(21);
-	ftp.addUser("me", "123"); // FTP account
-}*/
 
 // Will be called when WiFi station was connected to AP
 void connectOk()
 {
-	//Serial.println("I'm CONNECTED\n");
-	//startFTP();
+	LOG(INFO, "I'm CONNECTED\n");
+
 	startWebServer();
 
 	gNTPClient = new NtpClient("pool.ntp.org", 10*60); //every 10 minutes
@@ -194,11 +183,38 @@ void initSystem()
 	enableDev(DEV_WIFI, ENABLE | CONFIG);
 }
 
+
+
 void startSystem()
 {
 
 #if DEBUG_BUILD
 	tmrHeartBeat.initializeUs(HEART_BEAT, heartbeat_cb).start();
+
+#define CASE(x) case x: \
+					LOG(INFO, #x); \
+					break;
+
+	rst_info* rstInfo = system_get_rst_info();
+	if(rstInfo)
+	{
+		switch(rstInfo->reason)
+		{
+		CASE(REASON_DEFAULT_RST)
+		CASE(REASON_WDT_RST) // hardware watch dog reset
+		// exception reset, GPIO status won’t change
+		CASE(REASON_EXCEPTION_RST)
+		// software watch dog reset, GPIO status won’t change
+		CASE(REASON_SOFT_WDT_RST)
+		// software restart ,system_restart , GPIO status won’t change
+		CASE(REASON_SOFT_RESTART)
+		CASE(REASON_DEEP_SLEEP_AWAKE)
+		default:
+			LOG(INFO, "Unk reset reason %d", rstInfo->reason);
+			break;
+		}
+	}
+
 	LOG(INFO, "Chip id=%ld\r\n", system_get_chip_id());
 	LOG(INFO, "Mem info:\r\n");
 	system_print_meminfo();
@@ -229,97 +245,18 @@ void startSystem()
 	tick2 = system_get_time();
 	tickdiff = tick2 - tick1;
 	LOG(INFO, "Tick diff 10us %lu\r\n", tickdiff);
+	*/
 
 	devSDCard_benchmark();
-	*/
 
 	LOG(INFO,"Time,H,T,readTime(us),H_idx_C,DP_Acc,DP_Acc(us),DP_AccFast," \
 			"DP_AccFast(us),DP_Fast,DP_Fast(us),DP_Fastest,DP_Fastest(us)," \
 			"ComfortRatio,ComfortText\n");
 
 	if (!fileExist("index.html"))
-	{
 		LOG(INFO,"NO index.html\n");
-
-		fileSetContent("index.html",
-				"<!DOCTYPE html>\n"
-				"\n"
-				"<meta charset=\"utf-8\" />\n"
-				"\n"
-				"<title>WebSocket Test</title>\n"
-				"\n"
-				"<script language=\"javascript\" type=\"text/javascript\">\n"
-				"\n"
-				"  var output;\n"
-				"\n"
-				"  function init()\n"
-				"  {\n"
-				"    output = document.getElementById(\"output\");\n"
-				"    testWebSocket();\n"
-				"  }\n"
-				"\n"
-				"  function testWebSocket()\n"
-				"  {\n"
-				"\tvar wsUri = \"ws://\" + location.host + \"/\";\n"
-				"    websocket = new WebSocket(wsUri);\n"
-				"    websocket.onopen = function(evt) { onOpen(evt) };\n"
-				"    websocket.onclose = function(evt) { onClose(evt) };\n"
-				"    websocket.onmessage = function(evt) { onMessage(evt) };\n"
-				"    websocket.onerror = function(evt) { onError(evt) };\n"
-				"  }\n"
-				"\n"
-				"  function onOpen(evt)\n"
-				"  {\n"
-				"    writeToScreen(\"CONNECTED\");\n"
-				"    doSend(\"Sming love WebSockets\");\n"
-				"  }\n"
-				"\n"
-				"  function onClose(evt)\n"
-				"  {\n"
-				"    writeToScreen(\"DISCONNECTED\");\n"
-				"  }\n"
-				"\n"
-				"  function onMessage(evt)\n"
-				"  {\n"
-				"    writeToScreen('<span style=\"color: blue;\">RESPONSE: ' + evt.data+'</span>');\n"
-				"    //websocket.close();\n"
-				"  }\n"
-				"\n"
-				"  function onError(evt)\n"
-				"  {\n"
-				"    writeToScreen('<span style=\"color: red;\">ERROR:</span> ' + evt.data);\n"
-				"  }\n"
-				"\n"
-				"  function doSend(message)\n"
-				"  {\n"
-				"    writeToScreen(\"SENT: \" + message); \n"
-				"    websocket.send(message);\n"
-				"  }\n"
-				"\n"
-				"  function writeToScreen(message)\n"
-				"  {\n"
-				"    var pre = document.createElement(\"p\");\n"
-				"    pre.style.wordWrap = \"break-word\";\n"
-				"    pre.innerHTML = message;\n"
-				"    output.appendChild(pre);\n"
-				"  }\n"
-				"  \n"
-				"  function doDisconnect()\n"
-				"  {\n"
-				"\tvar disconnect = document.getElementById(\"disconnect\");\n"
-				"\tdisconnect.disabled = true;\n"
-				"\twebsocket.close();\n"
-				"  }\n"
-				"\n"
-				"  window.addEventListener(\"load\", init, false);\n"
-				"\n"
-				"</script>\n"
-				"\n"
-				"<h2>WebSocket Test <input type=\"button\" id=\"disconnect\" onclick=\"doDisconnect()\" value=\"X\" title=\"Disconnect WS\"/></h2>\n"
-				"\n"
-				"<div id=\"output\"></div>\n");
-	}
-	else LOG(INFO,"SUCCESS index.html\n");
+	else 
+		LOG(INFO,"SUCCESS index.html\n");
 
 }
 
@@ -332,7 +269,7 @@ static void mainLoop()
 	LOG(INFO, ",");
 
 	tick1 = system_get_time();
-	uchar errTemp = devDHT22_read(gLastTempHumid);
+	uint8_t errTemp = devDHT22_read(gLastTempHumid);
 	tick2 = system_get_time();
 	if(DEV_ERR_OK != errTemp)
 	{

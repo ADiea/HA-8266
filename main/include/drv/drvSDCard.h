@@ -1,13 +1,10 @@
 #ifndef DRV_SDCARD
 #define DRV_SDCARD
 
-#include "types.h"
 #include "device.h"
-#include "fatfs/ff.h"
+#include <SmingCore/SmingCore.h>
 
-extern FATFS FatFs;		/* FatFs work area needed for each volume */
-
-uchar devSDCard_init(uchar operation);
+uint8_t devSDCard_init(uint8_t operation);
 void devSDCard_benchmark();
 
 #endif /*DRV_SDCARD*/

@@ -1,7 +1,7 @@
 #ifndef __DEVICE_H_
 #define __DEVICE_H_
 
-#include "types.h"
+
 #include "debug.h"
 
 
@@ -34,6 +34,6 @@
 
 #define isDevEnabled(dev) ((dev) & gDevicesState)
 
-void enableDev(unsigned short, uchar op);
+void enableDev(unsigned short, uint8_t op);
 
 #endif /*__DEVICE_H_*/

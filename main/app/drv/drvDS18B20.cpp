@@ -1,8 +1,8 @@
 #include "drv/drvDS18B20.h"
 
-uchar devDSTemp_init(uchar operation)
+uint8_t devDSTemp_init(uint8_t operation)
 {
-	uchar retVal = DEV_ERR_OK;
+	uint8_t retVal = DEV_ERR_OK;
 	do
 	{
 		if(operation & ENABLE)

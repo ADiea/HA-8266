@@ -1,10 +1,10 @@
 #ifndef DRV_UART
 #define DRV_UART
 
-#include "types.h"
+
 #include "user_config.h"
 #include "device.h"
 
-uchar devUART_init(uchar operation);
+uint8_t devUART_init(uint8_t operation);
 
 #endif /*DRV_UART*/

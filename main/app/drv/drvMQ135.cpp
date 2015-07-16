@@ -1,8 +1,8 @@
 #include "drv/drvMQ135.h"
 
-uchar devMQ135_init(uchar operation)
+uint8_t devMQ135_init(uint8_t operation)
 {
-	uchar retVal = DEV_ERR_OK;
+	uint8_t retVal = DEV_ERR_OK;
 	do
 	{
 		if(operation & ENABLE)

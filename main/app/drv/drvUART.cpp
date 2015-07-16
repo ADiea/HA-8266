@@ -2,9 +2,9 @@
 #include "debug.h"
 #include <SmingCore/SmingCore.h>
 
-uchar devUART_init(uchar operation)
+uint8_t devUART_init(uint8_t operation)
 {
-	uchar retVal = DEV_ERR_OK;
+	uint8_t retVal = DEV_ERR_OK;
 	do
 	{
 		if(operation & ENABLE)

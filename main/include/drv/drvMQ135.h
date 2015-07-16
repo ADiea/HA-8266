@@ -1,9 +1,9 @@
 #ifndef DRV_MQ135
 #define DRV_MQ135
 
-#include "types.h"
+
 #include "device.h"
 
-uchar devMQ135_init(uchar operation);
+uint8_t devMQ135_init(uint8_t operation);
 
 #endif /*DRV_MQ135*/

@@ -7,9 +7,9 @@ tColor COLOR_RED = {0x33, 0, 0};
 tColor COLOR_GREEN = {0, 0x33, 0};
 tColor COLOR_BLUE = {0, 0, 0x33};
 
-uchar devRGB_init(uchar operation)
+uint8_t devRGB_init(uint8_t operation)
 {
-	uchar retVal = DEV_ERR_OK;
+	uint8_t retVal = DEV_ERR_OK;
 	do
 	{
 		if(operation & ENABLE)

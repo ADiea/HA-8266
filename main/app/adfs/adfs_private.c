@@ -5,19 +5,19 @@ FsPageConfig gConfigPage;
 FsPage g_blockMapCachePage;
 BlockAddr g_blockMapCacheFirstBlock;
 PageAddr g_blockMapCachePageAddr;
-uchar g_blockMapCacheDirty;
+uint8_t g_blockMapCacheDirty;
 
 FilePoolEntry* getFreeFileSlot();
 ErrCode findFile(const char *fname, FileEntry *fentry);
 ErrCode findUnusedBlock(BlockAddr* freeBlock);
-ErrCode markBlockInMap(BlockAddr block, uchar blockStatus);
+ErrCode markBlockInMap(BlockAddr block, uint8_t blockStatus);
 
 //sectorSize is used together with the redundancylevel to compute the correct address
-ErrCode readRedundantPage(uchar maxRedundancyLevel, PageAddr pageOffset, PageAddr sectorSize, PageAddr pageAddr, 
+ErrCode readRedundantPage(uint8_t maxRedundancyLevel, PageAddr pageOffset, PageAddr sectorSize, PageAddr pageAddr, 
 							FsPage *page);
 
 //sectorSize is used together with the redundancylevel to compute the correct address
-ErrCode writeRedundantPage(uchar maxRedundancyLevel, PageAddr pageOffset, PageAddr sectorSize, PageAddr pageAddr, 
+ErrCode writeRedundantPage(uint8_t maxRedundancyLevel, PageAddr pageOffset, PageAddr sectorSize, PageAddr pageAddr, 
 							FsPage *page);							
 							
 
@@ -110,7 +110,7 @@ ErrCode writeCurrentFilePage(FsFile *fsFile)
 	return _err;
 }
 
-ErrCode markBlockInMap(BlockAddr block, uchar blockStatus)
+ErrCode markBlockInMap(BlockAddr block, uint8_t blockStatus)
 {
 	ErrCode ret = FS_E_OK;
 	PageAddr neededPageAddr = GET_BLOCK_META_PAGEADDR(block, 0);		
@@ -169,8 +169,8 @@ ErrCode findUnusedBlock(BlockAddr* freeBlock)
 	BlockAddr curBlock;
 	PageAddr neededPageAddr;
 	
-	uchar foundEmptyBlock = 0;
-	uchar i;
+	uint8_t foundEmptyBlock = 0;
+	uint8_t i;
 	
 	FsPage page;
 	
@@ -214,7 +214,7 @@ ErrCode findUnusedBlock(BlockAddr* freeBlock)
 			}
 		}
 		
-		uchar curBlockData = g_blockMapCachePage.raw[GET_BLOCK_META_PAGEOFFSET(curBlock)];
+		uint8_t curBlockData = g_blockMapCachePage.raw[GET_BLOCK_META_PAGEOFFSET(curBlock)];
 		
 		if(BLOCK_UNUSED == curBlockData)
 		{
@@ -263,9 +263,9 @@ ErrCode createFileEntry(const char *fname, BlockAddr blockAddr, FsFile *file)
 	uint32_t tablePage = 0;
 	FsPage page;
 
-	uchar foundFile = 0;
-	uchar fileIdx;
-	uchar i;
+	uint8_t foundFile = 0;
+	uint8_t fileIdx;
+	uint8_t i;
 	uint32_t offset;
 
 	for(; (tablePage < FILETABLE_SIZE) && (!foundFile); tablePage++)
@@ -297,11 +297,11 @@ ErrCode createFileEntry(const char *fname, BlockAddr blockAddr, FsFile *file)
 				}
 				page.raw[offset + MAX_FILENAME - 1] = 0; //terminate string
 				
-				memcpy(page.raw[offset + MAX_FILENAME ], (uchar*)&blockAddr, 2);
+				memcpy(page.raw[offset + MAX_FILENAME ], (uint8_t*)&blockAddr, 2);
 				
 				uint16_t fileId = _crc16(fname, strlen(fname));
 				
-				memcpy(page.raw[offset + MAX_FILENAME + 2], (uchar*)&fileId, 2);
+				memcpy(page.raw[offset + MAX_FILENAME + 2], (uint8_t*)&fileId, 2);
 				
 				//copy resulted fileentry into the file
 				memcpy(file->fileEntry, page.raw[GET_FILEENTRY_BYTE_ADDR(fileIdx)], FILEENTRY_SIZE);
@@ -371,9 +371,9 @@ ErrCode findFile(const char *fname, FileEntry *fentry)
 	FsPage page;
 	
 
-	uchar foundFile = 0;
+	uint8_t foundFile = 0;
 
-	uchar fileIdx;
+	uint8_t fileIdx;
 		
 	for(; (tablePage < FILETABLE_SIZE) && (!foundFile); tablePage++)
 	{
@@ -405,7 +405,7 @@ ErrCode findFile(const char *fname, FileEntry *fentry)
 
 FilePoolEntry* getFreeFileSlot()
 {
-	uchar i=0;
+	uint8_t i=0;
 	FilePoolEntry* ret = NULL;
 	
 	for(; i<MAX_POOL_FILES; i++)
@@ -419,7 +419,7 @@ FilePoolEntry* getFreeFileSlot()
 	return ret;
 }
 
-ErrCode writeRedundantPage(uchar maxRedundancyLevel, PageAddr pageOffset, PageAddr sectorSize, 
+ErrCode writeRedundantPage(uint8_t maxRedundancyLevel, PageAddr pageOffset, PageAddr sectorSize, 
 							PageAddr pageAddr, FsPage *page)
 {
 	if(!page)
@@ -428,8 +428,8 @@ ErrCode writeRedundantPage(uchar maxRedundancyLevel, PageAddr pageOffset, PageAd
 	}
 	
 	ErrCode ret = FS_E_OK;
-	uchar rLevel = 0;
-	uchar writePageOk = 0;
+	uint8_t rLevel = 0;
+	uint8_t writePageOk = 0;
 	PageAddr _pageAddr;
 	do
 	{
@@ -461,7 +461,7 @@ ErrCode writeRedundantPage(uchar maxRedundancyLevel, PageAddr pageOffset, PageAd
 	return ret;
 }
 
-ErrCode readRedundantPage(uchar maxRedundancyLevel, PageAddr pageOffset, PageAddr sectorSize, 
+ErrCode readRedundantPage(uint8_t maxRedundancyLevel, PageAddr pageOffset, PageAddr sectorSize, 
 							PageAddr pageAddr, FsPage *page)
 {
 	if(!page)
@@ -470,8 +470,8 @@ ErrCode readRedundantPage(uchar maxRedundancyLevel, PageAddr pageOffset, PageAdd
 	}
 	
 	ErrCode ret = FS_E_OK;
-	uchar rLevel = 0;
-	uchar readPageOk = 0;
+	uint8_t rLevel = 0;
+	uint8_t readPageOk = 0;
 	PageAddr _pageAddr;
 	do
 	{

@@ -181,7 +181,7 @@ typedef struct _fsFile
 	FsPointer filePtr;
 	FilePoolEntry *filePoolSlot;
 
-	uchar dirty;	
+	uint8_t dirty;	
 	uint32_t fileSize;
 	PageAddr fileEntryPageAddr;
 	uint16_t fileEntryPageOffset;

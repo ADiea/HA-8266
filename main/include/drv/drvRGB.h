@@ -1,17 +1,17 @@
 #ifndef DRV_RGB
 #define DRV_RGB
 
-#include "types.h"
+
 #include "device.h"
 
 typedef union _Color
 {
-	uchar buf[4]; //pad to 4 bytes
+	uint8_t buf[4]; //pad to 4 bytes
 	struct c
 	{
-		uchar r;
-		uchar g;
-		uchar b;
+		uint8_t r;
+		uint8_t g;
+		uint8_t b;
 	};
 } tColor;
 
@@ -19,7 +19,7 @@ extern tColor COLOR_RED;
 extern tColor COLOR_GREEN;
 extern tColor COLOR_BLUE;
 
-uchar devRGB_init(uchar operation);
+uint8_t devRGB_init(uint8_t operation);
 
 void devRGB_setColor(tColor c);
 
