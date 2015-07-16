@@ -236,7 +236,7 @@ void startSystem()
 	LOG(INFO,"Time,H,T,readTime(us),H_idx_C,DP_Acc,DP_Acc(us),DP_AccFast," \
 			"DP_AccFast(us),DP_Fast,DP_Fast(us),DP_Fastest,DP_Fastest(us)," \
 			"ComfortRatio,ComfortText\n");
-/*
+
 	if (!fileExist("index.html"))
 	{
 		LOG(INFO,"NO index.html\n");
@@ -319,7 +319,8 @@ void startSystem()
 				"\n"
 				"<div id=\"output\"></div>\n");
 	}
-*/
+	else LOG(INFO,"SUCCESS index.html\n");
+
 }
 
 static void mainLoop()
