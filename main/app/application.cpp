@@ -195,27 +195,27 @@ void startSystem()
 					LOG(INFO, #x); \
 					break;
 
+	LOG(INFO, "Reset: ");
 	rst_info* rstInfo = system_get_rst_info();
 	if(rstInfo)
 	{
 		switch(rstInfo->reason)
 		{
-		CASE(REASON_DEFAULT_RST)
-		CASE(REASON_WDT_RST) // hardware watch dog reset
-		// exception reset, GPIO status won’t change
-		CASE(REASON_EXCEPTION_RST)
-		// software watch dog reset, GPIO status won’t change
-		CASE(REASON_SOFT_WDT_RST)
-		// software restart ,system_restart , GPIO status won’t change
-		CASE(REASON_SOFT_RESTART)
-		CASE(REASON_DEEP_SLEEP_AWAKE)
-		default:
-			LOG(INFO, "Unk reset reason %d", rstInfo->reason);
-			break;
+			CASE(REASON_DEFAULT_RST)
+			CASE(REASON_WDT_RST) 		// hardware watch dog reset
+			CASE(REASON_EXCEPTION_RST)	// exception reset, GPIO status won’t change
+			CASE(REASON_SOFT_WDT_RST)	// software watch dog reset, GPIO status won’t change
+			CASE(REASON_SOFT_RESTART)	// software restart ,system_restart , GPIO status won’t change
+			CASE(REASON_DEEP_SLEEP_AWAKE)
+			default:
+				LOG(INFO, "UNKNOWN (%d)", rstInfo->reason);
+				break;
 		}
 	}
 
-	LOG(INFO, "Chip id=%ld\r\n", system_get_chip_id());
+	LOG(INFO, "\nChip id=%ld\r\n", system_get_chip_id());
+	LOG(INFO, "Flash id=%ld\r\n", spi_flash_get_id());
+
 	LOG(INFO, "Mem info:\r\n");
 	system_print_meminfo();
 
