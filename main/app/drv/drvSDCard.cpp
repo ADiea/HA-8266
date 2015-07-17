@@ -32,7 +32,7 @@ void devSDCard_benchmark()
 	}
 	else
 	{
-		LOG(INFO, "fopen FAIL %d", fRes);
+		LOG(INFO, "fopen FAIL %d \n", fRes);
 	}
 	t2 = system_get_time();
 	LOG(INFO, "Test end: %lu\n", t2 - t1);

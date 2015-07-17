@@ -131,7 +131,7 @@ void startWebServer()
 	server.setWebSocketDisconnectionHandler(wsDisconnected);
 
 	debugf("\r\n=== WEB SERVER STARTED ===");
-	debugf(WifiStation.getIP());
+	os_printf(WifiStation.getIP().toString().c_str());
 	debugf("==============================\r\n");
 }
 
