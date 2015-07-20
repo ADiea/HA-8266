@@ -105,17 +105,6 @@ uint32_t totalActiveSockets=0;
 			clients[i].sendString("We lost our friend :( Total: " + String(totalActiveSockets));
 	}
 
-void a(int x)
-{
-	for(int i=0;i<255;i++)
-	{
-		if(x%2)x++;
-		else
-			x--;
-	}
-
-}
-
 void startWebServer()
 {
 	////Serial.print(3);
@@ -246,8 +235,6 @@ void startSystem()
 	tickdiff = tick2 - tick1;
 	LOG(INFO, "Tick diff 10us %lu\r\n", tickdiff);
 	*/
-
-	devSDCard_benchmark();
 
 	LOG(INFO,"Time,H,T,readTime(us),H_idx_C,DP_Acc,DP_Acc(us),DP_AccFast," \
 			"DP_AccFast(us),DP_Fast,DP_Fast(us),DP_Fastest,DP_Fastest(us)," \
