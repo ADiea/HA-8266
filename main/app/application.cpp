@@ -13,6 +13,8 @@
 
 #define ONE_SECOND 1000000
 
+extern int m_printf(const char *fmt, ...);
+
 //Globals
 TempAndHumidity gLastTempHumid;
 NtpClient *gNTPClient;
@@ -208,7 +210,12 @@ void startSystem()
 	LOG(INFO, "Mem info:\r\n");
 	system_print_meminfo();
 
-	LOG(INFO, "pi=%f\n", 3.14f);
+	m_printf( "pi=%f\n", 3.14f);
+	m_printf( "pi=%d %f %c\n", 3, 3.14, '3');
+	m_printf( "etc %d %f %s %f %f\n", -99, -3.01040, "abc", 3.0/4, 8.0/9);
+
+	m_printf( "etc %3.0d %.3f %s %.5f %f\n", -99, -3.01040, "abc", 3.0/4, 8.0/9);
+
 #endif
 	tmrMainLoop.initializeUs(LOOP_TIME, mainLoop).start();
 

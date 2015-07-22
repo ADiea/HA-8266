@@ -1,3 +1,10 @@
+/*
+Modified by: (github.com/)ADiea
+Project: Sming for ESP8266 - https://github.com/anakod/Sming
+License: MIT
+Date: 15.07.2015
+Descr: Low-level SDCard functions
+*/
 /*------------------------------------------------------------------------/
 /  Foolproof MMCv3/SDv1/SDv2 (in SPI mode) control module
 /-------------------------------------------------------------------------/
@@ -25,269 +32,54 @@
     Application program needs to perform a f_mount() after media change.
 
 /-------------------------------------------------------------------------*/
-#include "drv/diskio.h"		/* Common include file for FatFs and disk I/O layer */
-#include "drv/drvSDCard.h"
-#include <SmingCore/SmingCore.h>
+#include "SDCard.h"
+#include "diskio.h"		/* Declarations of disk I/O functions */
 
-#define PIN_CARD_DO 5
-#define PIN_CARD_DI 4
-#define PIN_CARD_CK 15
-#define PIN_CARD_SS 12
+FATFS *pFatFs = NULL;		/* FatFs work area needed for each volume */
+SPISoft *SDCardSPI = NULL;
 
-FATFS FatFs;		/* FatFs work area needed for each volume */
-FIL Fil;
-
-#define SCK_SLOW_INIT 4
+#define SCK_SLOW_INIT 10
 #define SCK_NORMAL 0
 
-uchar gUsDelay = SCK_SLOW_INIT;
+void SDCard_begin()
+{
+	FIL file;
+
+	if(!SDCardSPI)
+	{
+		debugf("Error: SDCardSPI object not created.");
+		return;
+	}
+
+	SDCardSPI->begin();
+
+	/*this must be allocated for the whole program life ~512Bytes*/
+	pFatFs = new FATFS;
+	if(!pFatFs)
+	{
+		debugf("No heap for pFatFs");
+		return;
+	}
+
+	/* Give a work area to the default drive */
+	FRESULT mountRes = f_mount(pFatFs, "", 0);
+	if(FR_OK != mountRes)
+	{
+		debugf( "f_mount: FAIL %d\n", mountRes);
+	}
+
+	/* open dummy file to force card init */
+	if(FR_OK == f_open(&file, "dummy", FA_READ))
+		f_close(&file);
+}
 
 /*-------------------------------------------------------------------------*/
 /* Platform dependent macros and functions needed to be modified           */
 /*-------------------------------------------------------------------------*/
-
-#define DO_INIT()	do{pinMode(PIN_CARD_DO, INPUT);pullup(PIN_CARD_DO);}while(0)			/* Initialize port for MMC DO as input */
-#define DO			digitalRead(PIN_CARD_DO)	/* Test for MMC DO ('H':true, 'L':false) */
-
-#define DI_INIT()	pinMode(PIN_CARD_DI, OUTPUT)	/* Initialize port for MMC DI as output */
-#define DI_H()		digitalWrite(PIN_CARD_DI, HIGH)	/* Set MMC DI "high" */
-#define DI_L()		digitalWrite(PIN_CARD_DI, LOW)	/* Set MMC DI "low" */
-
-#define CK_INIT()	pinMode(PIN_CARD_CK, OUTPUT)	/* Initialize port for MMC SCLK as output */
-#define CK_H()		do{digitalWrite(PIN_CARD_CK, HIGH);delayMicroseconds(gUsDelay);}while(0)	/* Set MMC SCLK "high" */
-#define	CK_L()		do{digitalWrite(PIN_CARD_CK, LOW);delayMicroseconds(gUsDelay);}while(0)	/* Set MMC SCLK "low" */
-
-#define CS_INIT()	pinMode(PIN_CARD_SS, OUTPUT)	/* Initialize port for MMC CS as output */
-#define	CS_H()		digitalWrite(PIN_CARD_SS, HIGH)	/* Set MMC CS "high" */
-#define CS_L()		digitalWrite(PIN_CARD_SS, LOW)	/* Set MMC CS "low" */
-
-
-static
-void dly_us (UINT n)	/* Delay n microseconds (avr-gcc -Os) */
+static inline void dly_us (UINT n)	/* Delay n microseconds (avr-gcc -Os) */
 {
 	delayMicroseconds(n);
 }
-
-void devSDCard_benchmark()
-{
-	unsigned int bw;
-	uchar buf[1024];
-
-	unsigned int i;
-
-	for(i=0; i<1024; i++)
-		buf[i] = '0'+(i%10);
-	FRESULT fRes;
-	uint32_t t1, t2, td;
-
-	t1 = system_get_time();
-	LOG(INFO, "Write 1K in 1K increment\n");
-	fRes = f_open(&Fil, "b1k.txt", FA_WRITE | FA_CREATE_ALWAYS);
-	if (fRes == FR_OK)
-	{
-		f_write(&Fil, buf, 1024, &bw);	/* Write data to the file */
-
-		f_close(&Fil);								/* Close the file */
-
-		if (bw != 1024) /* Lights green LED if data written well */
-		{
-			LOG(INFO, "Write to file FAIL\n");
-		}
-	}
-	else
-	{
-		LOG(INFO, "fopen FAIL %d", fRes);
-	}
-	t2 = system_get_time();
-	LOG(INFO, "Test end: %lu\n", t2 - t1);
-
-	t1 = system_get_time();
-	LOG(INFO, "(2) Write 1K in 1K increment\n");
-	fRes = f_open(&Fil, "b1k.txt", FA_WRITE | FA_CREATE_ALWAYS);
-	if (fRes == FR_OK)
-	{
-		f_write(&Fil, buf, 1024, &bw);	/* Write data to the file */
-
-		f_close(&Fil);								/* Close the file */
-
-		if (bw != 1024) /* Lights green LED if data written well */
-		{
-			LOG(INFO, "Write to file FAIL\n");
-		}
-	}
-	else
-	{
-		LOG(INFO, "fopen FAIL %d", fRes);
-	}
-	t2 = system_get_time();
-	LOG(INFO, "Test end: %lu = ", t2 - t1); //Serial.print(1000000./(t2-t1)); LOG(INFO, "kBps\n");
-
-
-	t1 = system_get_time();
-	LOG(INFO, "Write 1K in 4 bytes increment\n");
-	fRes = f_open(&Fil, "b1k4.txt", FA_WRITE | FA_CREATE_ALWAYS);
-	if (fRes == FR_OK)
-	{
-		for(i=0; i<1024/4; i++)
-		{
-			f_write(&Fil, buf, 4, &bw);	/* Write data to the file */
-
-			if (bw != 4) /* Lights green LED if data written well */
-			{
-				LOG(INFO, "Write to file FAIL: %d\n", i);
-				break;
-			}
-		}
-
-		f_close(&Fil);								/* Close the file */
-	}
-	else
-	{
-		LOG(INFO, "fopen FAIL %d", fRes);
-	}
-	t2 = system_get_time();
-	LOG(INFO, "Test end: %lu = ", t2 - t1); //Serial.print(1000000./(t2-t1)); LOG(INFO, "kBps\n");
-
-	t1 = system_get_time();
-	LOG(INFO, "Write 1k in 64 bytes increment\n");
-	fRes = f_open(&Fil, "b1k64.txt", FA_WRITE | FA_CREATE_ALWAYS);
-	if (fRes == FR_OK)
-	{
-		for(i=0; i<1024/64; i++)
-		{
-			f_write(&Fil, buf, 64, &bw);	/* Write data to the file */
-
-			if (bw != 64) /* Lights green LED if data written well */
-			{
-				LOG(INFO, "Write to file FAIL: %d\n", i);
-				break;
-			}
-		}
-
-		f_close(&Fil); /* Close the file */
-	}
-	else
-	{
-		LOG(INFO, "fopen FAIL %d", fRes);
-	}
-	t2 = system_get_time();
-	LOG(INFO, "Test end: %lu = ", t2 - t1); //Serial.print(1000000./(t2-t1)); LOG(INFO, "kBps\n");
-
-	t1 = system_get_time();
-	LOG(INFO, "Write 8k in 256 bytes increment\n");
-	fRes = f_open(&Fil, "b8k128.txt", FA_WRITE | FA_CREATE_ALWAYS);
-	if (fRes == FR_OK)
-	{
-		for(i=0; i<32; i++)
-		{
-			f_write(&Fil, buf, 256, &bw);	/* Write data to the file */
-
-			if (bw != 256) /* Lights green LED if data written well */
-			{
-				LOG(INFO, "Write to file FAIL: %d\n", i);
-				break;
-			}
-		}
-
-		f_close(&Fil); /* Close the file */
-	}
-	else
-	{
-		LOG(INFO, "fopen FAIL %d", fRes);
-	}
-	t2 = system_get_time();
-	LOG(INFO, "Test end: %lu = ", t2 - t1); //Serial.print(8000000./(t2-t1)); LOG(INFO, "kBps\n");
-
-	t1 = system_get_time();
-	LOG(INFO, "Write 8k in 512 bytes increment\n");
-	fRes = f_open(&Fil, "b8k512.txt", FA_WRITE | FA_CREATE_ALWAYS);
-	if (fRes == FR_OK)
-	{
-		for(i=0; i<16; i++)
-		{
-			f_write(&Fil, buf, 512, &bw);	/* Write data to the file */
-
-
-			if (bw != 512) /* Lights green LED if data written well */
-			{
-				LOG(INFO, "Write to file FAIL: %d\n", i);
-				break;
-			}
-		}
-
-		f_close(&Fil); /* Close the file */
-
-	}
-	else
-	{
-		LOG(INFO, "fopen FAIL %d", fRes);
-	}
-	t2 = system_get_time();
-	LOG(INFO, "Test end: %lu = ", t2 - t1); //Serial.print(8000000./(t2-t1)); LOG(INFO, "kBps\n");
-#if 0
-	t1 = system_get_time();
-	LOG(INFO, "Write 32k in 1024 bytes increment\n");
-	fRes = f_open(&Fil, "b8k512.txt", FA_WRITE | FA_CREATE_ALWAYS);
-	if (fRes == FR_OK)
-	{
-		for(i=0; i<32; i++)
-		{
-			f_write(&Fil, buf, 1024, &bw);	/* Write data to the file */
-
-
-			if (bw != 1024) /* Lights green LED if data written well */
-			{
-				LOG(INFO, "Write to file FAIL: %d\n", i);
-				break;
-			}
-		}
-
-		f_close(&Fil); /* Close the file */
-
-	}
-	else
-	{
-		LOG(INFO, "fopen FAIL %d", fRes);
-	}
-	t2 = system_get_time();
-	LOG(INFO, "Test end: %lu = ", t2 - t1); //Serial.print(32000000./(t2-t1)); LOG(INFO, "kBps\n");
-#endif
-}
-
-uchar devSDCard_init(uchar operation)
-{
-	uchar retVal = DEV_ERR_OK;
-	do
-	{
-		if(operation & ENABLE)
-		{
-			//init GPIO, enable device
-			
-			//configure device
-			if(operation & CONFIG)
-			{
-				FRESULT mountRes = f_mount(&FatFs, "", 0);		/* Give a work area to the default drive */
-				if(FR_OK != mountRes)
-				{
-					LOG(INFO, "f_mount: FAIL %d\n", mountRes);
-				}
-				else
-				{
-					LOG(INFO, "f_mount: SUCCESS %d\n", mountRes);
-				}
-			}
-		}
-		else
-		{
-		//Therefore to make MMC/SDC release DO signal, the master device must send a byte after CS signal is deasserted.
-			//deinit GPIO
-		}
-	}
-	while(0);
-
-	return retVal;
-}
-
 
 /*--------------------------------------------------------------------------
 
@@ -326,81 +118,6 @@ static
 BYTE CardType;			/* b0:MMC, b1:SDv1, b2:SDv2, b3:Block addressing */
 
 
-
-/*-----------------------------------------------------------------------*/
-/* Transmit bytes to the card (bitbanging)                               */
-/*-----------------------------------------------------------------------*/
-
-static
-void xmit_mmc (
-	const BYTE* buff,	/* Data to be sent */
-	UINT bc				/* Number of bytes to send */
-)
-{
-	BYTE d;
-
-
-	do {
-		d = *buff++;	/* Get a byte to be sent */
-		if (d & 0x80) DI_H(); else DI_L();	/* bit7 */
-		CK_H(); CK_L();
-		if (d & 0x40) DI_H(); else DI_L();	/* bit6 */
-		CK_H(); CK_L();
-		if (d & 0x20) DI_H(); else DI_L();	/* bit5 */
-		CK_H(); CK_L();
-		if (d & 0x10) DI_H(); else DI_L();	/* bit4 */
-		CK_H(); CK_L();
-		if (d & 0x08) DI_H(); else DI_L();	/* bit3 */
-		CK_H(); CK_L();
-		if (d & 0x04) DI_H(); else DI_L();	/* bit2 */
-		CK_H(); CK_L();
-		if (d & 0x02) DI_H(); else DI_L();	/* bit1 */
-		CK_H(); CK_L();
-		if (d & 0x01) DI_H(); else DI_L();	/* bit0 */
-		CK_H(); CK_L();
-	} while (--bc);
-}
-
-
-
-/*-----------------------------------------------------------------------*/
-/* Receive bytes from the card (bitbanging)                              */
-/*-----------------------------------------------------------------------*/
-
-static
-void rcvr_mmc (
-	BYTE *buff,	/* Pointer to read buffer */
-	UINT bc		/* Number of bytes to receive */
-)
-{
-	BYTE r;
-
-
-	DI_H();	/* Send 0xFF */
-
-	do {
-		r = 0;	 if (DO) r++;	/* bit7 */
-		CK_H(); CK_L();
-		r <<= 1; if (DO) r++;	/* bit6 */
-		CK_H(); CK_L();
-		r <<= 1; if (DO) r++;	/* bit5 */
-		CK_H(); CK_L();
-		r <<= 1; if (DO) r++;	/* bit4 */
-		CK_H(); CK_L();
-		r <<= 1; if (DO) r++;	/* bit3 */
-		CK_H(); CK_L();
-		r <<= 1; if (DO) r++;	/* bit2 */
-		CK_H(); CK_L();
-		r <<= 1; if (DO) r++;	/* bit1 */
-		CK_H(); CK_L();
-		r <<= 1; if (DO) r++;	/* bit0 */
-		CK_H(); CK_L();
-		*buff++ = r;			/* Store a received byte */
-	} while (--bc);
-}
-
-
-
 /*-----------------------------------------------------------------------*/
 /* Wait for card ready                                                   */
 /*-----------------------------------------------------------------------*/
@@ -411,15 +128,12 @@ int wait_ready (void)	/* 1:OK, 0:Timeout */
 	BYTE d;
 	UINT tmr;
 
+	SDCardSPI->setMOSI(HIGH); /* Send 0xFF */
 
 	for (tmr = 5000; tmr; tmr--) {	/* Wait for ready in timeout of 500ms */
-		rcvr_mmc(&d, 1);
+		SDCardSPI->recv(&d, 1);
 		if (d == 0xFF)
-		{
-		//LOG(INFO, "SD wait:%d00us\n", tmr);
-		break;
-		}
-
+			break;
 
 		dly_us(100);
 	}
@@ -438,8 +152,9 @@ void deselect (void)
 {
 	BYTE d;
 
-	CS_H();				/* Set CS# high */
-	rcvr_mmc(&d, 1);	/* Dummy clock (force DO hi-z for multiple slave SPI) */
+	SDCardSPI->disable();	/* Set CS# high */
+	SDCardSPI->setMOSI(HIGH); /* Send 0xFF */
+	SDCardSPI->recv(&d, 1);	/* Dummy clock (force DO hi-z for multiple slave SPI) */
 }
 
 
@@ -453,11 +168,12 @@ int select (void)	/* 1:OK, 0:Timeout */
 {
 	BYTE d;
 
-	CS_L();				/* Set CS# low */
-	rcvr_mmc(&d, 1);	/* Dummy clock (force DO enabled) */
+	SDCardSPI->enable();	/* Set CS# low */
+	SDCardSPI->setMOSI(HIGH); /* Send 0xFF */
+	SDCardSPI->recv(&d, 1);	/* Dummy clock (force DO enabled) */
 	if (wait_ready()) return 1;	/* Wait for card ready */
 
-	LOG(INFO, "SDCard select() failed\n");
+	debugf( "SDCard select() failed\n");
 	deselect();
 	return 0;			/* Failed */
 }
@@ -477,16 +193,16 @@ int rcvr_datablock (	/* 1:OK, 0:Failed */
 	BYTE d[2];
 	UINT tmr;
 
-
+	SDCardSPI->setMOSI(HIGH); /* Send 0xFF */
 	for (tmr = 1000; tmr; tmr--) {	/* Wait for data packet in timeout of 100ms */
-		rcvr_mmc(d, 1);
+		SDCardSPI->recv(d, 1);
 		if (d[0] != 0xFF) break;
 		dly_us(100);
 	}
 	if (d[0] != 0xFE) return 0;		/* If not valid data token, return with error */
 
-	rcvr_mmc(buff, btr);			/* Receive the data block into buffer */
-	rcvr_mmc(d, 2);					/* Discard CRC */
+	SDCardSPI->recv(buff, btr);			/* Receive the data block into buffer */
+	SDCardSPI->recv(d, 2);					/* Discard CRC */
 
 	return 1;						/* Return with success */
 }
@@ -509,11 +225,12 @@ int xmit_datablock (	/* 1:OK, 0:Failed */
 	if (!wait_ready()) return 0;
 
 	d[0] = token;
-	xmit_mmc(d, 1);				/* Xmit a token */
+	SDCardSPI->send(d, 1);				/* Xmit a token */
 	if (token != 0xFD) {		/* Is it data token? */
-		xmit_mmc(buff, 512);	/* Xmit the 512 byte data block to MMC */
-		rcvr_mmc(d, 2);			/* Xmit dummy CRC (0xFF,0xFF) */
-		rcvr_mmc(d, 1);			/* Receive data response */
+		SDCardSPI->send(buff, 512);	/* Xmit the 512 byte data block to MMC */
+		SDCardSPI->setMOSI(HIGH); /* Send 0xFF */
+		SDCardSPI->recv(d, 2);			/* Xmit dummy CRC (0xFF,0xFF) */
+		SDCardSPI->recv(d, 1);			/* Receive data response */
 		if ((d[0] & 0x1F) != 0x05)	/* If not accepted, return with error */
 			return 0;
 	}
@@ -558,15 +275,15 @@ BYTE send_cmd (		/* Returns command response (bit7==1:Send failed)*/
 	if (cmd == CMD0) n = 0x95;		/* (valid CRC for CMD0(0)) */
 	if (cmd == CMD8) n = 0x87;		/* (valid CRC for CMD8(0x1AA)) */
 	buf[5] = n;
-	xmit_mmc(buf, 6);
-
+	SDCardSPI->send(buf, 6);
+	SDCardSPI->setMOSI(HIGH); /* Send 0xFF */
 	/* Receive command response */
-	if (cmd == CMD12) rcvr_mmc(&d, 1);	/* Skip a stuff byte when stop reading */
+	if (cmd == CMD12) SDCardSPI->recv(&d, 1);	/* Skip a stuff byte when stop reading */
 	n = 10;								/* Wait for a valid response in timeout of 10 attempts */
 	do
-		rcvr_mmc(&d, 1);
+		SDCardSPI->recv(&d, 1);
 	while ((d & 0x80) && --n);
-	//LOG(INFO, "SDcard send_cmd %d (%d try)\n", d, n);
+	//os_printf("SDcard send_cmd %d (%d try)\n", d, n);
 	return d;			/* Return with the response value */
 }
 
@@ -609,15 +326,13 @@ DSTATUS disk_initialize (
 
 	if (drv) return RES_NOTRDY;
 
-	gUsDelay = SCK_SLOW_INIT;
+	SDCardSPI->setDelay(SCK_SLOW_INIT);
 
 	dly_us(10000);			/* 10ms */
-	CS_INIT(); CS_H();		/* Initialize port pin tied to CS */
-	CK_INIT(); CK_L();		/* Initialize port pin tied to SCLK */
-	DI_INIT(); DI_H();				/* Initialize port pin tied to DI */
-	DO_INIT();				/* Initialize port pin tied to DO */
 
-	for (n = 10; n; n--) rcvr_mmc(buf, 1);	/* Apply 80 dummy clocks and the card gets ready to receive command */
+	SDCardSPI->setMOSI(HIGH); /* Send 0xFF */
+	for (n = 10; n; n--)
+		SDCardSPI->recv(buf, 1);	/* Apply 80 dummy clocks and the card gets ready to receive command */
 
 	ty = 0;
 
@@ -635,14 +350,16 @@ DSTATUS disk_initialize (
 	{
 		/* Enter Idle state */
 		if (send_cmd(CMD8, 0x1AA) == 1) {	/* SDv2? */
-			rcvr_mmc(buf, 4);							/* Get trailing return value of R7 resp */
+			SDCardSPI->setMOSI(HIGH); /* Send 0xFF */
+			SDCardSPI->recv(buf, 4);							/* Get trailing return value of R7 resp */
 			if (buf[2] == 0x01 && buf[3] == 0xAA) {		/* The card can work at vdd range of 2.7-3.6V */
 				for (tmr = 1000; tmr; tmr--) {			/* Wait for leaving idle state (ACMD41 with HCS bit) */
 					if (send_cmd(ACMD41, 1UL << 30) == 0) break;
 					dly_us(1000);
 				}
 				if (tmr && send_cmd(CMD58, 0) == 0) {	/* Check CCS bit in the OCR */
-					rcvr_mmc(buf, 4);
+					SDCardSPI->setMOSI(HIGH); /* Send 0xFF */
+					SDCardSPI->recv(buf, 4);
 					ty = (buf[0] & 0x40) ? CT_SD2 | CT_BLOCK : CT_SD2;	/* SDv2 */
 				}
 			}
@@ -665,20 +382,29 @@ DSTATUS disk_initialize (
 	}
 	else
 	{
-		LOG(INFO, "SD_! %x", retCmd);
+		debugf( "SDCard ERROR: %x", retCmd);
 	}
 	CardType = ty;
-	s = ty ? 0 : STA_NOINIT;
-	Stat = s;
+
+	if(ty == 0)
+	{
+		Stat = STA_NOINIT;
+		debugf("SDCard init FAIL\n", ty);
+	}
+	else
+	{
+		Stat = 0;
+		debugf("SDCard OK: TYPE %d\n", ty);
+	}
 
 	deselect();
-	LOG(INFO, "SD init TYPE %d STAT %d\n", ty, s);
 
-	gUsDelay = SCK_NORMAL;
+
+
+	SDCardSPI->setDelay(SCK_NORMAL);
 
 	return s;
 }
-
 
 
 /*-----------------------------------------------------------------------*/
