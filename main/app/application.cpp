@@ -109,7 +109,7 @@ uint32_t totalActiveSockets=0;
 
 void startWebServer()
 {
-	////Serial.print(3);
+/*	////Serial.print(3);
 	server.listen(80);
 	server.addPath("/", onIndex);
 	server.setDefaultHandler(onFile);
@@ -123,7 +123,7 @@ void startWebServer()
 
 	debugf("\r\n=== WEB SERVER STARTED ===");
 	os_printf(WifiStation.getIP().toString().c_str());
-	debugf("==============================\r\n");
+	debugf("==============================\r\n");*/
 }
 
 // Will be called when WiFi station was connected to AP
@@ -210,12 +210,16 @@ void startSystem()
 	LOG(INFO, "Mem info:\r\n");
 	system_print_meminfo();
 
-	m_printf( "pi=%f\n", 3.14f);
+	/*m_printf( "pi=%f\n", 3.14f);
 	m_printf( "pi=%d %f %c\n", 3, 3.14, '3');
 	m_printf( "etc %d %f %s %f %f\n", -99, -3.01040, "abc", 3.0/4, 8.0/9);
 
 	m_printf( "etc %3.0d %.3f %s %.5f %f\n", -99, -3.01040, "abc", 3.0/4, 8.0/9);
 
+	m_printf( "etc %3.0d %% %.3f %%%s %-+.5f %#*f %%%%\n", -99, -3.01040, "abc", 3.0/4, 8.0/9);
+
+	m_printf( "etc %3.0d % %.3f %j %s %-+.5f %#*f %z%k\n", -99, -3.01040, "abc", 3.0/4, 8.0/9);
+*/
 #endif
 	tmrMainLoop.initializeUs(LOOP_TIME, mainLoop).start();
 
