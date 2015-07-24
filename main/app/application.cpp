@@ -211,7 +211,7 @@ void startSystem()
 	system_print_meminfo();
 
 	m_printf( "pi=%f\n", 3.14f);
-	m_printf( "1.002=%f\n", 1.002);
+/*	m_printf( "1.002=%f\n", 1.002);
 	m_printf( "1.050250=%f\n", 1.050250);
 	m_printf( "pi=%d %f %c\n", 3, 3.14, '3');
 	m_printf( "etc %d %f %s %f %f\n", -99, -3.01040, "abc", 3.0/4, 8.0/9);
@@ -228,7 +228,7 @@ void startSystem()
 
 	 m_printf("Color %s, number1 %d, number2 %05d, hex %#x, float %5.2f, unsigned value %u, octal %o.\n",
 	        "red", 123456, 89, 0x00C0FFEE, 3.14159, 250, 06675);
-
+*/
 #endif
 	tmrMainLoop.initializeUs(LOOP_TIME, mainLoop).start();
 
