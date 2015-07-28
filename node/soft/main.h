@@ -4,6 +4,8 @@
 #include <util/delay.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <stdlib.h>
+#include <math.h>
 
 #include "uart.h"
 #include "radio.h"

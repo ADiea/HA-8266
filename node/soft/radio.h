@@ -48,17 +48,17 @@ void radio_init(void);
 void radio_setCommsSignature(uint16_t signature); // used to 'sign' packets with a predetermined signature - call before boot
 
  // switches to Tx mode and sends the package, then optionally receives response package
-bool sendPacketSimple(uint8_t length, const byte* data);
+bool radio_sendPacketSimple(uint8_t length, const byte* data);
 
 
-bool sendPacket(uint8_t length, const byte* data, bool waitResponse, uint32_t ackTimeout,
+bool radio_sendPacket(uint8_t length, const byte* data, bool waitResponse, uint32_t ackTimeout,
 		uint8_t *responseLength, byte* responseBuffer); // switches to Tx mode and sends the package, then optionally receives response package
 
 void radio_startListening(void); // switch to Rx mode (don't block)
 
-bool isPacketReceived(void); // check for the packet received flags
+bool radio_isPacketReceived(void); // check for the packet received flags
 
-bool waitForPacket(uint64_t waitMs); // switch to Rx mode and wait until timeout or 'valid' package to arrive
+bool radio_waitForPacket(uint64_t waitMs); // switch to Rx mode and wait until timeout or 'valid' package to arrive
 void radio_getPacketReceived(uint8_t* length, byte* readData); // read from FIFO
 
 void radio_readAll(void);
