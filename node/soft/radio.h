@@ -22,6 +22,8 @@
 
 #define DEBUG_SI4432 1
 
+typedef 
+
 typedef unsigned char byte;
 typedef unsigned char bool;
 
@@ -32,6 +34,8 @@ typedef unsigned char bool;
 #ifndef true
 #define true 1
 #endif
+
+
 
 /* Now, according to the this design, you must
  * 1- Create an instance
