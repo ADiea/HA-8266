@@ -1,29 +1,30 @@
 #include "radio.h"
 
-//TODO: define millis()
+//TODO: 
+//verify 0x75,76,77 -> freq select
+//verify  0x7a channel spet size: currently 1mhz
 
 #define MAX_TRANSMIT_TIMEOUT 200
-
-typedef _eBaudRates
-{
-	eBaud_38k4 = 0,
-	eBaud_115k2,
-	eBaud_230k4,
-	e_Baud_numBauds
-}
 
 #define BAUD_RATE_REGS 12
 typedef struct _baudRateCfg
 {
-	uint8_t baudRateConfig[BAUD_RATE_REGS];
+	uint8_t reg[BAUD_RATE_REGS];
 } baudRateCfg;
 
-baudRateCfg BaudRates[e_Baud_numBauds] = 
+baudRateCfg BaudRates[] = 
 {
-	//0x1C  0x20  0x21  0x22  0x23  0x24  0x25  0x6E  0x6F  0x70  0x71  0x72	
-	{ 0x02, 0x68, 0x01, 0x3A, 0x93, 0x04, 0xEE, 0x09, 0xD5, 0x0C, 0x23, 0x1F}, //38k4
-	{ 0x82, 0x68, 0x01, 0x3A, 0x93, 0x04, 0xEE, 0x1D, 0x7E, 0x0C, 0x23, 0x5C}, //115k2
-	{ 0x8B, 0x34, 0x02, 0x75, 0x25, 0x07, 0xFF, 0x3A, 0xFB, 0x0C, 0x23, 0xB8}, //230k4
+	//0x1C  0x20  0x21  0x22   0x23  0x24  0x25  0x6E  0x6F  0x70  0x71  0x72	
+	{{ 0x02, 0x68, 0x01, 0x3A, 0x93, 0x04, 0xEE, 0x09, 0xD5, 0x0C, 0x23, 0x1F}}, //38k4 -> 38k
+	{{ 0x82, 0x68, 0x01, 0x3A, 0x93, 0x04, 0xEE, 0x1D, 0x7E, 0x0C, 0x23, 0x5C}}, //115k2 -> 115k
+	{{ 0x8B, 0x34, 0x02, 0x75, 0x25, 0x07, 0xFF, 0x3A, 0xFB, 0x0C, 0x23, 0xB8}} //230k4 -> 230k
+
+/*
+calc by esp	=> veriify with integer baud rate values in excel file
+	{ 0x89, 0x3c, 0x20, 0x67, 0xc4, 0x00, 0x36, 0x09, 0xBA, 0x0C, 0x23, 0xF0}, //38k
+	{ 0x8A, 0x68, 0x01, 0x3A, 0x07, 0x01, 0xE5, 0x1D, 0x71, 0x0C, 0x23, 0xF0}, //115k
+	{ 0x8D, 0x34, 0x02, 0x74, 0x0E, 0x07, 0x8E, 0x3A, 0xE1, 0x0C, 0x23, 0xF0}, //230k
+*/
 };
 
 typedef enum _AntennaMode 
@@ -126,7 +127,7 @@ const uint16_t IFFilterTable[][2] = { { 322, 0x26 }, { 3355, 0x88 }, { 3618, 0x8
 		
 uint64_t _freqCarrier;
 uint8_t _freqChannel;
-uint16_t _kbps;
+eBaudRate _kbps;
 uint16_t _packageSign;
 
 uint8_t _intPin = 0;
@@ -145,7 +146,7 @@ void radio_init(void)
 {
 	_freqCarrier = 433000000;
 	_freqChannel = 0;
-	_kbps = 100;
+	_kbps = eBaud_38k4;
 	_packageSign = 0xDEAD;
 
 	radio_hardReset();
@@ -215,9 +216,9 @@ bool radio_sendPacket(uint8_t length, const byte* data, bool waitResponse, uint3
 
 	switchMode(TXMode | Ready);
 
-	uint64_t cntr = MAX_TRANSMIT_TIMEOUT;// enterMillis = millis();
+	uint64_t enterMillis = millis();
 
-	while (--cntr/*millis() - enterMillis < MAX_TRANSMIT_TIMEOUT*/) 
+	while (millis() - enterMillis < MAX_TRANSMIT_TIMEOUT) 
 	{
 
 		if ((_intPin != 0) /*&& (digitalRead(_intPin) != 0)*/) {
@@ -230,7 +231,7 @@ bool radio_sendPacket(uint8_t length, const byte* data, bool waitResponse, uint3
 		if (intStatus & 0x04) {
 			switchMode(Ready | TuneMode);
 #if DEBUG_SI4432
-			debugf("Package sent! -- %x ", intStatus);
+			debugf("Pkg sent--%x\n", intStatus);
 #endif
 			// package sent. now, return true if not to wait ack, or wait ack (wait for packet only for 'remaining' amount of time)
 			if (waitResponse) {
@@ -248,7 +249,7 @@ bool radio_sendPacket(uint8_t length, const byte* data, bool waitResponse, uint3
 
 	//timeout occured.
 #if DEBUG_SI4432
-	debugf("Timeout in Transit -- ");
+	debugf("TX timeout\n");
 #endif
 	switchMode(Ready);
 
@@ -264,8 +265,8 @@ bool radio_waitForPacket(uint64_t waitMs) {
 
 	radio_startListening();
 
-	uint64_t cntr = waitMs;//enterMillis = millis();
-	while (--cntr/*millis() - enterMillis < waitMs*/) {
+	uint64_t enterMillis = millis();
+	while (millis() - enterMillis < waitMs) {
 
 		if (!radio_isPacketReceived()) {
 			continue;
@@ -276,7 +277,7 @@ bool radio_waitForPacket(uint64_t waitMs) {
 	}
 	//timeout occured.
 
-	debugf("Timeout in receive-- ");
+	debugf("RX timeout\n");
 
 	switchMode(Ready);
 	radio_clearRxFIFO();
@@ -298,79 +299,14 @@ void radio_setChannel(byte channel)
 	ChangeRegister(REG_FREQCHANNEL, channel);
 }
 
+void radio_setBaudRateFast(eBaudRate baud)
+{
+	BurstWrite(REG_IF_FILTER_BW, &(BaudRates[baud].reg[0]), 1);
 
-void radio_setBaudRate(uint16_t kbps) {
-return;
-#if 0
-	// chip normally supports very low bps values, but they are cumbersome to implement - so I just didn't implement lower bps values
-	if ((kbps > 256) || (kbps < 1))
-		return;
-	_kbps = kbps;
-	
-	byte i;
+	BurstWrite(REG_CLOCK_RECOVERY_OVERSAMPLING, &(BaudRates[baud].reg[1]), 6);
 
-	byte freqDev = kbps <= 10 ? 15 : 150;		// 15khz / 150 khz
-	byte modulationValue = _kbps < 30 ? 0x4c : 0x0c;		// use FIFO Mode, GFSK, low baud mode on / off
-
-	byte modulationVals[] = { modulationValue, 0x23, (byte)(0.5f + (freqDev * 1000.0) / 625.0) }; // msb of the kpbs to 3rd bit of register
-	BurstWrite(REG_MODULATION_MODE1, modulationVals, 3);
-
-	// set data rate
-	uint16_t bpsRegVal = (uint16_t)(0.5 + ((kbps * (kbps < 30 ? 2097152 : 65536.0)) / 1000.0));
-	byte datarateVals[] = { (byte)(bpsRegVal >> 8), (byte)(bpsRegVal & 0xFF) };
-
-	BurstWrite(REG_TX_DATARATE1, datarateVals, 2);
-
-	//now set the timings
-	uint16_t minBandwidth = (2 * (uint32_t) freqDev) + kbps;
-#if DEBUG_SI4432
-	debugf("min Bandwidth value: %x ", minBandwidth);
-#endif
-	byte IFValue = 0xff;
-	//since the table is ordered (from low to high), just find the 'minimum bandwith which is greater than required'
-	for ( i = 0; i < 8; ++i) {
-		if (IFFilterTable[i][0] >= (minBandwidth * 10)) {
-			IFValue = IFFilterTable[i][1];
-			break;
-		}
-	}
-#if DEBUG_SI4432
-	debugf("Selected IF value: %x ", IFValue);
-#endif
-
-	ChangeRegister(REG_IF_FILTER_BW, IFValue);
-
-	byte dwn3_bypass = (IFValue & 0x80) ? 1 : 0; // if msb is set
-	byte ndec_exp = (IFValue >> 4) & 0x07; // only 3 bits
-
-	uint16_t rxOversampling = 0.5 + ((500.0 * (1 + 2 * dwn3_bypass)) / ((pow(2, ndec_exp - 3)) * (double ) kbps));
-
-	uint32_t ncOffset = ceil(((double) kbps * (pow(2, ndec_exp + 20))) / (500.0 * (1 + 2 * dwn3_bypass)));
-
-	uint16_t crGain = 2 + ((65535 * (int64_t) kbps) / ((int64_t) rxOversampling * freqDev));
-	byte crMultiplier = 0x00;
-	if (crGain > 0x7FF) {
-		crGain = 0x7FF;
-	}
-#if DEBUG_SI4432
-	debugf("dwn3_bypass value: %x ", dwn3_bypass);
-	debugf("ndec_exp value: %x ", ndec_exp);
-	debugf("rxOversampling value: %x ", rxOversampling);
-	debugf("ncOffset value: %x ", ncOffset);
-	debugf("crGain value: %x ", crGain);
-	debugf("crMultiplier value: %x ", crMultiplier);
-
-#endif
-
-	byte timingVals[] = { (byte)(rxOversampling & 0xFF),
-							(byte)(((rxOversampling & 0x0700) >> 3) | ((ncOffset >> 16) & 0x0F)),
-			(byte)((ncOffset >> 8) & 0xFF), (byte)(ncOffset & 0xFF), (byte)(((crGain & 0x0700) >> 8) | crMultiplier), (byte)(crGain & 0xFF) };
-
-	BurstWrite(REG_CLOCK_RECOVERY_OVERSAMPLING, timingVals, 6);
-#endif
+	BurstWrite(REG_TX_DATARATE1, &(BaudRates[baud].reg[7]), 5);
 }
-
-
 
 void radio_readAll() {
 
@@ -379,7 +315,7 @@ void radio_readAll() {
 	BurstRead(REG_DEV_TYPE, allValues, 0x7F);
 
 	for ( i = 0; i < 0x7f; ++i) {
-		debugf("REG(%x) : %x ", (int) REG_DEV_TYPE + i, (int) allValues[i]);
+		debugf("(%x)=%x\n", (int) REG_DEV_TYPE + i, (int) allValues[i]);
 	}
 
 }
@@ -464,13 +400,13 @@ bool radio_isPacketReceived() {
 
 	if (intStat2 & 0x40) { //interrupt occured, check it && read the Interrupt Status1 register for 'preamble '
 
-		debugf("HEY!! HEY!! Valid Preamble detected -- %x", intStat2);
+		debugf("Valid Preamb %x\n", intStat2);
 
 	}
 
 	if (intStat2 & 0x80) { //interrupt occured, check it && read the Interrupt Status1 register for 'preamble '
 
-		debugf("HEY!! HEY!! SYNC WORD detected -- %x", intStat2);
+		debugf("Valid sync %x\n", intStat2);
 
 	}
 #else
@@ -480,13 +416,13 @@ bool radio_isPacketReceived() {
 	if (intStat & 0x02) { //interrupt occured, check it && read the Interrupt Status1 register for 'valid packet'
 		switchMode(Ready | TuneMode); // if packet came, get out of Rx mode till the packet is read out. Keep PLL on for fast reaction
 #if DEBUG_SI4432
-				debugf("Packet detected -- %x", intStat);
+				debugf("Pkg detect %x\n", intStat);
 #endif
 		return true;
 	} else if (intStat & 0x01) { // packet crc error
 		switchMode(Ready); // get out of Rx mode till buffers are cleared
 #if DEBUG_SI4432
-		debugf("CRC Error in Packet detected!-- %x ", intStat);
+		debugf("CRC Error %x\n", intStat);
 #endif
 		radio_clearRxFIFO();
 		switchMode(RXMode | Ready); // get back to work
@@ -527,13 +463,18 @@ void static boot() {
 
 	ChangeRegister(REG_CHANNEL_STEPSIZE, 0x64); // each channel is of 1 Mhz interval
 
-	radio_setFrequency(_freqCarrier); // default freq
-	radio_setBaudRate(_kbps); // default baud rate is 100kpbs
+	//radio_setFrequency(_freqCarrier); // default freq
+	
+	//set frequency to 433Mhz
+	ChangeRegister(REG_FREQBAND, 0x53);
+	ChangeRegister(REG_FREQCARRIER_H, 0x0);
+	ChangeRegister(REG_FREQCARRIER_L, 0x0);
+
+	radio_setBaudRateFast(_kbps); // default baud rate is 100kpbs
 	radio_setChannel(_freqChannel); // default channel is 0
 	radio_setCommsSignature(_packageSign); // default signature
 
 	switchMode(Ready);
-
 }
 
 void static switchMode(byte mode) {
@@ -543,7 +484,7 @@ void static switchMode(byte mode) {
 #if DEBUG_SI4432
 	_delay_ms(1);
 	byte val = ReadRegister(REG_DEV_STATUS);
-	debugf("== DEV STATUS: %x ==", val);
+	debugf("DEV STAT:%x\n", val);
 
 #endif
 }
@@ -567,8 +508,10 @@ void static BurstWrite(Registers startReg, const byte value[], uint8_t length) {
 	spi_send(&regVal, 1);
 
 #if DEBUG_SI4432
+	#if DEBUG_SI4432_VERBOSE
 		debugf("Writing: %x | %x ... %x (%d bytes)", (regVal != 0xFF ? (regVal) & 0x7F : 0x7F),
 				value[0], value[length-1], length);
+	#endif
 #endif
 
 	spi_send(value, length);
@@ -587,8 +530,10 @@ void static BurstRead(Registers startReg, byte value[], uint8_t length) {
 	spi_recv(value, length);
 
 #if DEBUG_SI4432
+	#if DEBUG_SI4432_VERBOSE
 		debugf("Reading: %x  | %x..%x (%d bytes)", (regVal != 0x7F ? (regVal) & 0x7F : 0x7F),
 				value[0], value[length-1], length);
+	#endif		
 #endif
 	spi_disable();
 }

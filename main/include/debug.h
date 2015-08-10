@@ -13,7 +13,7 @@
 #if DEBUG_BUILD
 	#define VERBOSE_LEVEL DBG
 	
-	#define LOG(x, ...) do {if( x <=  VERBOSE_LEVEL) { os_printf(__VA_ARGS__); } }while(0)
+	#define LOG(x, ...) do {if( x <=  VERBOSE_LEVEL) { m_printf(__VA_ARGS__); } }while(0)
 #else
 	#define LOG(...)
 #endif	

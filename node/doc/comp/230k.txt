@@ -1,0 +1,253 @@
+REG(0) : 8
+
+REG(1) : 6
+
+REG(2) : 20
+
+REG(3) : 20
+
+REG(4) : 0
+
+REG(5) : 0
+
+REG(6) : 3
+
+REG(7) : 1
+
+REG(8) : 0
+
+REG(9) : 7f
+
+REG(a) : 6
+
+REG(b) : 0
+
+REG(c) : 0
+
+REG(d) : 0
+
+REG(e) : 0
+
+REG(f) : 0
+
+REG(10) : 0
+
+REG(11) : 0
+
+REG(12) : 20
+
+REG(13) : 0
+
+REG(14) : 3
+
+REG(15) : 0
+
+REG(16) : 1
+
+REG(17) : 0
+
+REG(18) : 0
+
+REG(19) : 1
+
+REG(1a) : 14
+
+REG(1b) : 0
+
+REG(1c) : 8d
+
+REG(1d) : 3c
+
+REG(1e) : 2
+
+REG(1f) : 3
+
+REG(20) : 34
+
+REG(21) : 2
+
+REG(22) : 74
+
+REG(23) : e
+
+REG(24) : 7
+
+REG(25) : 8e
+
+REG(26) : 0
+
+REG(27) : 1e
+
+REG(28) : 0
+
+REG(29) : 0
+
+REG(2a) : ff
+
+REG(2b) : 0
+
+REG(2c) : 18
+
+REG(2d) : bc
+
+REG(2e) : 26
+
+REG(2f) : 8
+
+REG(30) : ad
+
+REG(31) : 0
+
+REG(32) : c
+
+REG(33) : 22
+
+REG(34) : 8
+
+REG(35) : 3a
+
+REG(36) : 2d
+
+REG(37) : d4
+
+REG(38) : 0
+
+REG(39) : 0
+
+REG(3a) : de
+
+REG(3b) : ad
+
+REG(3c) : 0
+
+REG(3d) : 0
+
+REG(3e) : 0
+
+REG(3f) : de
+
+REG(40) : ad
+
+REG(41) : 0
+
+REG(42) : 0
+
+REG(43) : ff
+
+REG(44) : ff
+
+REG(45) : ff
+
+REG(46) : ff
+
+REG(47) : 0
+
+REG(48) : 0
+
+REG(49) : 0
+
+REG(4a) : 0
+
+REG(4b) : ff
+
+REG(4c) : 8
+
+REG(4d) : 8
+
+REG(4e) : 8
+
+REG(4f) : 10
+
+REG(50) : 0
+
+REG(51) : 0
+
+REG(52) : df
+
+REG(53) : 52
+
+REG(54) : 20
+
+REG(55) : 64
+
+REG(56) : 0
+
+REG(57) : 1
+
+REG(58) : 87
+
+REG(59) : 0
+
+REG(5a) : 1
+
+REG(5b) : 0
+
+REG(5c) : e
+
+REG(5d) : 0
+
+REG(5e) : 0
+
+REG(5f) : 0
+
+REG(60) : a0
+
+REG(61) : 0
+
+REG(62) : 24
+
+REG(63) : 0
+
+REG(64) : 0
+
+REG(65) : 82
+
+REG(66) : 42
+
+REG(67) : 1f
+
+REG(68) : 3
+
+REG(69) : 60
+
+REG(6a) : 9d
+
+REG(6b) : 0
+
+REG(6c) : 1
+
+REG(6d) : 1f
+
+REG(6e) : 3a
+
+REG(6f) : e1
+
+REG(70) : c
+
+REG(71) : 23
+
+REG(72) : f0
+
+REG(73) : 0
+
+REG(74) : 0
+
+REG(75) : 53
+
+REG(76) : 0
+
+REG(77) : 0
+
+REG(78) : 19
+
+REG(79) : 0
+
+REG(7a) : 64
+
+REG(7b) : 3
+
+REG(7c) : 37
+
+REG(7d) : 4
+
+REG(7e) : 37

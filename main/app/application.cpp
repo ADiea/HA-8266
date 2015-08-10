@@ -1,6 +1,9 @@
 #include <user_config.h>
 #include <SmingCore/SmingCore.h>
 
+//TODO: CHANGE static const char secret[] PROGMEM = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
+//TODO: make PR to remove spiffs_mount(); from appinit/user_main.cpp
+
 #include "debug.h"
 #include "device.h"
 
@@ -38,13 +41,12 @@ static void mainLoop(void);
 
 	static void heartbeat_cb(void)
 	{
-		return;
 		//Serial.print("Local Time    : ");
 		//Serial.print(SystemClock.getSystemTimeString());
 		//Serial.print(" UTC Time: ");
 		//Serial.print(SystemClock.getSystemTimeString(eTZ_UTC));
 
-		LOG(INFO, "\nFree heap size=%ld\r\n", system_get_free_heap_size());
+		LOG(INFO, "\nHeap: %ld\r\n", system_get_free_heap_size());
 
 		//LOG(INFO, "\r\n");
 	}
@@ -54,25 +56,12 @@ static void mainLoop(void);
 uint32_t totalActiveSockets=0;
 	void onIndex(HttpRequest &request, HttpResponse &response)
 	{
-		TemplateFileStream *tmpl = new TemplateFileStream("index.html");
-		auto &vars = tmpl->variables();
-		response.sendTemplate(tmpl); // this template object will be deleted automatically
-
+		response.forbidden();
 	}
 
 	void onFile(HttpRequest &request, HttpResponse &response)
 	{
-		String file = request.getPath();
-		if (file[0] == '/')
-			file = file.substring(1);
-
-		if (file[0] == '.')
-			response.forbidden();
-		else
-		{
-			response.setCache(86400, true); // It's important to use cache for better performance.
-			response.sendFile(file);
-		}
+		response.notFound();
 	}
 
 	void wsConnected(WebSocket& socket)
@@ -109,7 +98,7 @@ uint32_t totalActiveSockets=0;
 
 void startWebServer()
 {
-/*	////Serial.print(3);
+	////Serial.print(3);
 	server.listen(80);
 	server.addPath("/", onIndex);
 	server.setDefaultHandler(onFile);
@@ -121,15 +110,15 @@ void startWebServer()
 	server.setWebSocketBinaryHandler(wsBinaryReceived);
 	server.setWebSocketDisconnectionHandler(wsDisconnected);
 
-	debugf("\r\n=== WEB SERVER STARTED ===");
-	os_printf(WifiStation.getIP().toString().c_str());
-	debugf("==============================\r\n");*/
+	debugf("\r\n=== WEB SERVER STARTED ===\n %s ",
+			WifiStation.getIP().toString().c_str());
+
 }
 
 // Will be called when WiFi station was connected to AP
 void connectOk()
 {
-	LOG(INFO, "I'm CONNECTED\n");
+	LOG(INFO, "AP CONNECT\n");
 
 	startWebServer();
 
@@ -146,7 +135,7 @@ void connectOk()
 // Will be called when WiFi station timeout was reached
 void connectFail()
 {
-	debugf("I'm NOT CONNECTED!");
+	debugf("FAIL CONNECT");
 	WifiStation.waitConnection(connectOk, 10, connectFail); // Repeat and check again
 }
 
@@ -180,7 +169,7 @@ void startSystem()
 {
 
 #if DEBUG_BUILD
-	tmrHeartBeat.initializeUs(HEART_BEAT, heartbeat_cb).start();
+	//tmrHeartBeat.initializeUs(HEART_BEAT, heartbeat_cb).start();
 
 #define CASE(x) case x: \
 					LOG(INFO, #x); \
@@ -259,11 +248,6 @@ void startSystem()
 	LOG(INFO,"Time,H,T,readTime(us),H_idx_C,DP_Acc,DP_Acc(us),DP_AccFast," \
 			"DP_AccFast(us),DP_Fast,DP_Fast(us),DP_Fastest,DP_Fastest(us)," \
 			"ComfortRatio,ComfortText\n");
-
-	if (!fileExist("index.html"))
-		LOG(INFO,"NO index.html\n");
-	else 
-		LOG(INFO,"SUCCESS index.html\n");
 
 }
 
