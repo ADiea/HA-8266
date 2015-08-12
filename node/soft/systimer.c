@@ -6,7 +6,7 @@ void initSysTimer(void)
 {
 	gTimer = 0;
 	
-	TCCR0 = 1<<CS02;
+	TCCR0 = 1<<CS00;
 	TIMSK = 1<<TOIE0;//ena overflow interrupt
 
 }
@@ -17,7 +17,7 @@ volatile unsigned char fraction = 0;
 
 ISR(TIMER0_OVF_vect)
 {
-	//fcpu = 8Mhz prescaler = 1/256 => f=31250
+	//fcpu = 8Mhz prescaler1 =>1/256 => f=31250
 
 	++whole;
 

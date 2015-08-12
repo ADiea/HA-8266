@@ -1,22 +1,20 @@
 #include "main.h"
 
-#define BAUD 9600
+#define BAUD 38400
 #define BAUDVAL ((F_CPU)/(BAUD*16UL)-1)
-  
-#define BAUD 9600
-#define MYUBRR FOSC/16/BAUD-1
 
-#define MPRINTF_BUF_SIZE 64
+#define MPRINTF_BUF_SIZE 128
 
 #define SIGN    	(1<<1)	/* Unsigned/signed long */
 
 void initUart(void)
 {
 	DDRD |= 1<<1;
+	PORTD |= 1<<0; //pullup on rx
 	
-    UBRRH = (BAUDVAL>>8);
-    UBRRL = BAUDVAL;
-    UCSRB = (1<<TXEN)|(1<<RXEN);
+    UBRRH = 0;//(BAUDVAL>>8);
+    UBRRL = 207;//-> 2400 //BAUDVAL; 
+    UCSRB = (1<<TXEN);//|(1<<RXEN);
     UCSRC = (1<<URSEL)|(1<<UCSZ0)|(1<<UCSZ1);
 }
 
@@ -25,8 +23,6 @@ void printCh(char ch)
 	while (!( UCSRA & (1<<UDRE)));
 	UDR = ch;                  
 }
-
-
 
 int m_vsnprintf(char *buf, uint32_t maxLen, const char *fmt, va_list args);
 
@@ -58,7 +54,7 @@ int m_vsnprintf(char *buf, uint32_t maxLen, const char *fmt, va_list args)
 	const char *s;
 
 
-	const uint8_t overflowGuard = 24;
+	const uint8_t overflowGuard = 10;
 
 	char tempNum[24];
 
@@ -66,9 +62,9 @@ int m_vsnprintf(char *buf, uint32_t maxLen, const char *fmt, va_list args)
 	{
 		if(maxLen - (str - buf) < overflowGuard)
 		{
-			*str++ = '.';
-			*str++ = '.';
-			*str++ = '.';
+			*str++ = 'o';
+			*str++ = 'v';
+			*str++ = 'f';
 			break;
 		}
 
@@ -86,9 +82,6 @@ int m_vsnprintf(char *buf, uint32_t maxLen, const char *fmt, va_list args)
 		while ((*fmt >= '0' && *fmt <= '9') || '+' == *fmt
 				|| '-' == *fmt || '#' == *fmt || '*' == *fmt || '.' == *fmt)
 			fmt++;
-
-
-
 
 
 		// Default base

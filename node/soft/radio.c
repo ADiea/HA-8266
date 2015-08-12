@@ -289,7 +289,11 @@ void radio_getPacketReceived(uint8_t* length, byte* readData) {
 
 	*length = ReadRegister(REG_RECEIVED_LENGTH);
 
-	BurstRead(REG_FIFO, readData, *length);
+	if(!(*length) && *length <= 64)
+	{
+		BurstRead(REG_FIFO, readData, *length);
+	}
+	else *length = 0;
 
 	radio_clearRxFIFO(); // which will also clear the interrupts
 }
@@ -310,14 +314,22 @@ void radio_setBaudRateFast(eBaudRate baud)
 
 void radio_readAll() {
 
-	byte allValues[0x7F], i;
+	byte allValues[0x7F];
+	byte i;
 
 	BurstRead(REG_DEV_TYPE, allValues, 0x7F);
 
-	for ( i = 0; i < 0x7f; ++i) {
-		debugf("(%x)=%x\n", (int) REG_DEV_TYPE + i, (int) allValues[i]);
-	}
+	debugf("\n\nREGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F\r\n");
 
+	for ( i = 0; i < 0x7f; i+=16)
+	{
+		debugf("(%02x): %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x\n", i,
+				(int ) allValues[i+0], (int ) allValues[i+1], (int ) allValues[i+2], (int ) allValues[i+3],
+				(int ) allValues[i+4], (int ) allValues[i+5], (int ) allValues[i+6], (int ) allValues[i+7],
+				(int ) allValues[i+8], (int ) allValues[i+9], (int ) allValues[i+10], (int ) allValues[i+11],
+				(int ) allValues[i+12], (int ) allValues[i+13], (int ) allValues[i+14], (int ) allValues[i+15]
+				);
+	}
 }
 
 void radio_clearTxFIFO() {
@@ -414,12 +426,14 @@ bool radio_isPacketReceived() {
 #endif
 
 	if (intStat & 0x02) { //interrupt occured, check it && read the Interrupt Status1 register for 'valid packet'
+
 		switchMode(Ready | TuneMode); // if packet came, get out of Rx mode till the packet is read out. Keep PLL on for fast reaction
 #if DEBUG_SI4432
 				debugf("Pkg detect %x\n", intStat);
 #endif
 		return true;
 	} else if (intStat & 0x01) { // packet crc error
+
 		switchMode(Ready); // get out of Rx mode till buffers are cleared
 #if DEBUG_SI4432
 		debugf("CRC Error %x\n", intStat);
