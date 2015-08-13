@@ -13,7 +13,7 @@ void initUart(void)
 	PORTD |= 1<<0; //pullup on rx
 	
     UBRRH = 0;//(BAUDVAL>>8);
-    UBRRL = 207;//-> 2400 //BAUDVAL; 
+    UBRRL = 3;//-> 2400 //BAUDVAL; 
     UCSRB = (1<<TXEN);//|(1<<RXEN);
     UCSRC = (1<<URSEL)|(1<<UCSZ0)|(1<<UCSZ1);
 }
@@ -21,7 +21,11 @@ void initUart(void)
 void printCh(char ch)
 {
 	while (!( UCSRA & (1<<UDRE)));
-	UDR = ch;                  
+	UDR = ch;/*
+asm volatile("nop");
+asm volatile("nop");
+asm volatile("nop");
+asm volatile("nop");  */                
 }
 
 int m_vsnprintf(char *buf, uint32_t maxLen, const char *fmt, va_list args);

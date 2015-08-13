@@ -20,7 +20,7 @@
 
 #include "main.h"
 
-#define DEBUG_SI4432 0
+#define DEBUG_SI4432 1
 #define DEBUG_SI4432_VERBOSE 0
 
 typedef unsigned char byte;

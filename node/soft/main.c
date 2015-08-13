@@ -5,6 +5,16 @@
 *
 */
 
+/*
+//todo:
+
+node: pus quartz de la radio ca sursa; schimbat timeoutul in intreruperea de ceas -> rgb led?
+trimis led mai des. trimis secventa pachet; testat buton de schimbare culoare, scimbat culoare doar pe buton
+
+esp: refacut bucla de rx. vazut loop() cand se apeleaza
+printat RSSI
+
+*/
 #include "main.h"
 
 #define NUM_COLORS 4
