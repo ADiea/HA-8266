@@ -19,6 +19,8 @@ printat RSSI
 
 #define NUM_COLORS 4
 
+volatile unsigned long int pktSecv = 0;
+
 volatile tRGB gColorPallette[NUM_COLORS] = //g r b
 {
 	{0x00, 0x00, 0x00}, //black/off
@@ -47,40 +49,65 @@ void initHw()
 
 }
 
+void mcpy(char *d, char *s, unsigned int sz)
+{
+	for(; sz; --sz)
+	{
+		*d = *s;
+	}
+}
+
+unsigned int slen(char *s)
+{
+	unsigned int sz = 0;
+	while(*s) ++sz;
+	return sz;	
+}
+
 void sendColorIndex(uint8_t color)
 {
-	char* message;
+	char message[32], *s;
+
+	s = ultoa(++pktSecv, message, 10);
 	
-	switch(color)
+	while(*s)
+		++s;
+	
+	if(s - message < 32 - 9)
 	{
-		case 0:
-			message = "LED   OFF";
-			break;
-		case 1:
-			message = "LED GREEN";
-			break;
-		case 2:
-			message = "LED   RED";
-			break;			
-		case 3:
-			message = "LED  BLUE";
-			break;		
-		default:
-			message = "LED   ???";
-			break;
+		switch(color)
+		{
+			case 0:
+				mcpy(s, "LED   OFF", 9);
+				break;
+			case 1:
+				mcpy(s, "LED GREEN", 9);
+				break;
+			case 2:
+				mcpy(s, "LED   RED", 9);
+				break;			
+			case 3:
+				mcpy(s, "LED  BLUE", 9);
+				break;		
+			default:
+				mcpy(s, "LED   ???", 9);
+				break;
+		}
+		
+		s[9] = 0;
 	}
 	
-	if(!radio_sendPacketSimple(9, (unsigned char*)message))
+	if(!radio_sendPacketSimple(slen(message), (unsigned char*)message))
 	{
 		debugf("TxERR\n");
 	}
 	else
 	{
-		debugf("TxOK\n");
+		debugf("TxOK: [%s]\n", message);
 	}
 }
 
-#define CYCLE_PERIOD_MS 5000
+#define CYCLE_PERIOD_MS 1000
 
 int main(void)
 {
@@ -105,12 +132,9 @@ int main(void)
 		
 		if(millis() - curTime > CYCLE_PERIOD_MS)
 		{
-			debugf("CH_COL\n");
 			curTime = millis();
-			curColorIndex = (curColorIndex + 1) % NUM_COLORS;
-			ws2812_setleds((tRGB*)&gColorPallette[curColorIndex], 1);
-			
-			sendColorIndex(curColorIndex);
+			debugf("T");
+			//sendColorIndex(curColorIndex);
 		}
 		
 		if(radio_isPacketReceived())
@@ -164,14 +188,12 @@ int main(void)
 				debugf("ShortPress\n");
 				curColorIndex = (curColorIndex + 1) % NUM_COLORS;
 				ws2812_setleds((tRGB*)&gColorPallette[curColorIndex], 1);
-				sendColorIndex(curColorIndex);
 			break;
 			
 			case LongPress:
 				debugf("LongPress\n");
 			break;
 		}
-		
 		
 		_delay_ms(loopDelay);
 	}

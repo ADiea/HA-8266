@@ -42,6 +42,7 @@ typedef enum _eBaudRate
 	e_Baud_numBauds
 } eBaudRate;
 
+
 /* Now, according to the this design, you must
  * 1- Create an instance
  * 2- Call init()

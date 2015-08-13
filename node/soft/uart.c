@@ -13,7 +13,7 @@ void initUart(void)
 	PORTD |= 1<<0; //pullup on rx
 	
     UBRRH = 0;//(BAUDVAL>>8);
-    UBRRL = 3;//-> 2400 //BAUDVAL; 
+    UBRRL = 2;//3=115200pt8;//-> 2400 //BAUDVAL; 
     UCSRB = (1<<TXEN);//|(1<<RXEN);
     UCSRC = (1<<URSEL)|(1<<UCSZ0)|(1<<UCSZ1);
 }

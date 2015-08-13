@@ -17,15 +17,15 @@ volatile unsigned char fraction = 0;
 
 ISR(TIMER0_OVF_vect)
 {
-	//fcpu = 8Mhz prescaler1 =>1/256 => f=31250
+	//fcpu = 8Mhz prescaler1 =>1/256 => f=39062.5
 
 	++whole;
 
-	if(whole > 30)
+	if(whole > 38)
 	{
 		whole = 0;
 		++gTimer;
-		fraction = (fraction + 1) % 4;
+		fraction = (fraction + 1) % 16;
 		if (fraction == 0)
 			++gTimer;
 	}

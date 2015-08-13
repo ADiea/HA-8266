@@ -45,6 +45,8 @@ typedef enum _Registers
 	REG_STATE = 0x07,
 	REG_OPERATION_CONTROL = 0x08,
 
+	REG_MCU_OUT_CLK = 0x0A,
+
 	REG_GPIO0_CONF = 0x0B,
 	REG_GPIO1_CONF = 0x0C,
 	REG_GPIO2_CONF = 0x0D,
@@ -483,6 +485,19 @@ void static boot() {
 	ChangeRegister(REG_FREQBAND, 0x53);
 	ChangeRegister(REG_FREQCARRIER_H, 0x0);
 	ChangeRegister(REG_FREQCARRIER_L, 0x0);
+	
+	//set external clk speed to 10Mhz
+	/*
+	000: 30 MHz
+	001: 15 MHz
+	010: 10 MHz
+	011: 4 MHz
+	100: 3 MHz
+	101: 2 MHz
+	110: 1 MHz *default
+	*/
+	
+	ChangeRegister(REG_MCU_OUT_CLK, 0x03);
 
 	radio_setBaudRateFast(_kbps); // default baud rate is 100kpbs
 	radio_setChannel(_freqChannel); // default channel is 0
