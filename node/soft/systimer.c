@@ -21,11 +21,11 @@ ISR(TIMER0_OVF_vect)
 
 	++whole;
 
-	if(whole > 38)
+	if(whole > 30)
 	{
 		whole = 0;
 		++gTimer;
-		fraction = (fraction + 1) % 16;
+		fraction = (fraction + 1) % 4;
 		if (fraction == 0)
 			++gTimer;
 	}

@@ -15,7 +15,7 @@
 // Define I/O pin
 ///////////////////////////////////////////////////////////////////////
 
-#define ws2812_port C     // Data port 
-#define ws2812_pin  6     // Data out pin
+#define ws2812_port D     // Data port 
+#define ws2812_pin  4     // Data out pin
 
 #endif /* WS2812_CONFIG_H_ */

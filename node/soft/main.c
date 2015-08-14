@@ -7,9 +7,7 @@
 
 /*
 //todo:
-
-node: pus quartz de la radio ca sursa; schimbat timeoutul in intreruperea de ceas -> rgb led?
-trimis led mai des. trimis secventa pachet; testat buton de schimbare culoare, scimbat culoare doar pe buton
+delay with pin low for rgb led
 
 esp: refacut bucla de rx. vazut loop() cand se apeleaza
 printat RSSI
@@ -18,6 +16,9 @@ printat RSSI
 #include "main.h"
 
 #define NUM_COLORS 4
+
+typedef unsigned char u8;
+typedef unsigned short u16;
 
 volatile unsigned long int pktSecv = 0;
 
@@ -28,6 +29,7 @@ volatile tRGB gColorPallette[NUM_COLORS] = //g r b
 	{0x00, 0x20, 0x00}, //red
 	{0x00, 0x00, 0x20}	//blue
 };
+
 
 
 void initHw()
@@ -51,16 +53,16 @@ void initHw()
 
 void mcpy(char *d, char *s, unsigned int sz)
 {
-	for(; sz; --sz)
+	for(; sz > 0; --sz)
 	{
-		*d = *s;
+		*d++ = *s++;
 	}
 }
 
 unsigned int slen(char *s)
 {
 	unsigned int sz = 0;
-	while(*s) ++sz;
+	while(*(s++)) ++sz;
 	return sz;	
 }
 
@@ -69,7 +71,7 @@ void sendColorIndex(uint8_t color)
 	char message[32], *s;
 
 	s = ultoa(++pktSecv, message, 10);
-	
+
 	while(*s)
 		++s;
 	
@@ -78,24 +80,25 @@ void sendColorIndex(uint8_t color)
 		switch(color)
 		{
 			case 0:
-				mcpy(s, "LED   OFF", 9);
+				mcpy(s, "_LED   OFF", 10);
 				break;
 			case 1:
-				mcpy(s, "LED GREEN", 9);
+				mcpy(s, "_LED GREEN", 10);
 				break;
 			case 2:
-				mcpy(s, "LED   RED", 9);
+				mcpy(s, "_LED   RED", 10);
 				break;			
 			case 3:
-				mcpy(s, "LED  BLUE", 9);
+				mcpy(s, "_LED  BLUE", 10);
 				break;		
 			default:
-				mcpy(s, "LED   ???", 9);
+				mcpy(s, "_LED   ???", 10);
 				break;
 		}
 		
-		s[9] = 0;
+		s[10] = 0;
 	}
+	
 	
 	if(!radio_sendPacketSimple(slen(message), (unsigned char*)message))
 	{
@@ -103,11 +106,24 @@ void sendColorIndex(uint8_t color)
 	}
 	else
 	{
-		debugf("TxOK: [%s]\n", message);
+		debugf("TxOK: [ %s ]\n", message);
 	}
 }
 
 #define CYCLE_PERIOD_MS 1000
+
+extern void output_grb(u8 * ptr, u16 count);
+
+
+
+//palette[]
+
+	u8 off[] = {0x00, 0x00, 0x00}; //black/off
+	u8 green[] = {0x20, 0x00, 0x00}; //green
+	u8 red[] = {0xFF, 0xFF, 0xFF}; //red
+	u8 blue[] = {0x00, 0x00, 0x20};	//blue
+
+	u8 *palette[] = {off, green, red, blue};
 
 int main(void)
 {
@@ -123,18 +139,24 @@ int main(void)
 
 	initHw();
 	
+	DDRD |= 1<<4;
+	
 	debugf(" System Init OK\n");
 	
-	ws2812_setleds((tRGB*)&gColorPallette[curColorIndex], 1);
+	output_grb(red, 3);
+	
+	//ws2812_setleds((tRGB*)&gColorPallette[curColorIndex], 1);
+	
+	debugf(" Led color set\n");
 	
 	do
 	{	
 		
 		if(millis() - curTime > CYCLE_PERIOD_MS)
 		{
-			curTime = millis();
 			debugf("T");
-			//sendColorIndex(curColorIndex);
+			curTime = millis();
+			sendColorIndex(curColorIndex);
 		}
 		
 		if(radio_isPacketReceived())

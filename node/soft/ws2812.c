@@ -47,9 +47,9 @@ void ws2812_sendarray(uint8_t *data,uint16_t datlen)
 #define w_fixedtotal  8   
 
 // Insert NOPs to match the timing, if possible
-#define w_zerocycles    (((F_CPU/1000)*w_zeropulse          )/1000000)
-#define w_onecycles     (((F_CPU/1000)*w_onepulse    +500000)/1000000)
-#define w_totalcycles   (((F_CPU/1000)*w_totalperiod +500000)/1000000)
+#define w_zerocycles    3 //(((F_CPU/1000)*w_zeropulse          )/1000000)  //=2.8
+#define w_onecycles     7 //(((F_CPU/1000)*w_onepulse    +500000)/1000000) // = 7.7
+#define w_totalcycles   10 //(((F_CPU/1000)*w_totalperiod +500000)/1000000) // =10.5
 
 // w1 - nops between rising edge and falling edge - low
 #define w1 (w_zerocycles-w_fixedlow)
