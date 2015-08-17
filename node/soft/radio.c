@@ -18,13 +18,6 @@ baudRateCfg BaudRates[] =
 	{{ 0x02, 0x68, 0x01, 0x3A, 0x93, 0x04, 0xEE, 0x09, 0xD5, 0x0C, 0x23, 0x1F}}, //38k4 -> 38k
 	{{ 0x82, 0x68, 0x01, 0x3A, 0x93, 0x04, 0xEE, 0x1D, 0x7E, 0x0C, 0x23, 0x5C}}, //115k2 -> 115k
 	{{ 0x8B, 0x34, 0x02, 0x75, 0x25, 0x07, 0xFF, 0x3A, 0xFB, 0x0C, 0x23, 0xB8}} //230k4 -> 230k
-
-/*
-calc by esp	=> veriify with integer baud rate values in excel file
-	{ 0x89, 0x3c, 0x20, 0x67, 0xc4, 0x00, 0x36, 0x09, 0xBA, 0x0C, 0x23, 0xF0}, //38k
-	{ 0x8A, 0x68, 0x01, 0x3A, 0x07, 0x01, 0xE5, 0x1D, 0x71, 0x0C, 0x23, 0xF0}, //115k
-	{ 0x8D, 0x34, 0x02, 0x74, 0x0E, 0x07, 0x8E, 0x3A, 0xE1, 0x0C, 0x23, 0xF0}, //230k
-*/
 };
 
 typedef enum _AntennaMode 
@@ -122,12 +115,7 @@ typedef enum _Registers
 
 	REG_FIFO = 0x7F,
 } Registers;
-
-//values here are kept in khz x 10 format (for not to deal with decimals) - look at AN440 page 26 for whole table
-const uint16_t IFFilterTable[][2] = { { 322, 0x26 }, { 3355, 0x88 }, { 3618, 0x89 }, { 4202, 0x8A }, { 4684, 0x8B }, {
-		5188, 0x8C }, { 5770, 0x8D }, { 6207, 0x8E } };
 		
-uint64_t _freqCarrier;
 uint8_t _freqChannel;
 eBaudRate _kbps;
 uint16_t _packageSign;
@@ -146,7 +134,6 @@ static void BurstRead(Registers startReg, byte value[], uint8_t length);
 
 void radio_init(void)
 {
-	_freqCarrier = 433000000;
 	_freqChannel = 0;
 	_kbps = eBaud_38k4;
 	_packageSign = 0xDEAD;
@@ -160,32 +147,6 @@ bool radio_sendPacketSimple(uint8_t length, const byte* data)
 	return radio_sendPacket(length, data, false, 100, 0, 0);
 }
 
-
-void radio_setFrequency(unsigned long baseFrequencyMhz) {
-
-	if ((baseFrequencyMhz < 240) || (baseFrequencyMhz > 930))
-		return; // invalid frequency
-
-	_freqCarrier = baseFrequencyMhz;
-	byte highBand = 0;
-	if (baseFrequencyMhz >= 480) {
-		highBand = 1;
-	}
-
-	double fPart = (baseFrequencyMhz / (10 * (highBand + 1))) - 24;
-
-	uint8_t freqband = (uint8_t) fPart; // truncate the int
-
-	uint16_t freqcarrier = (fPart - freqband) * 64000;
-
-	// sideband is always on (0x40) :
-	byte vals[3] = { (byte)(0x40 | (highBand << 5) | (freqband & 0x3F)),
-					(byte)(freqcarrier >> 8),
-					(byte)(freqcarrier & 0xFF) };
-
-	BurstWrite(REG_FREQBAND, vals, 3);
-
-}
 
 void radio_setCommsSignature(uint16_t signature) {
 	_packageSign = signature;
@@ -320,7 +281,7 @@ void radio_readAll() {
 
 	BurstRead(REG_DEV_TYPE, allValues, 0x7F);
 
-	debugf("\n\nREGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F\r\n");
+	debugf("\n\nREGS  00 .. 0F\r\n");
 
 	for ( i = 0; i < 0x7f; i+=16)
 	{
@@ -478,24 +439,10 @@ void static boot() {
 
 	ChangeRegister(REG_CHANNEL_STEPSIZE, 0x64); // each channel is of 1 Mhz interval
 
-	//radio_setFrequency(_freqCarrier); // default freq
-	
 	//set frequency to 433Mhz
 	ChangeRegister(REG_FREQBAND, 0x53);
 	ChangeRegister(REG_FREQCARRIER_H, 0x0);
 	ChangeRegister(REG_FREQCARRIER_L, 0x0);
-
-/*
-	000: 30 MHz
-	001: 15 MHz
-	010: 10 MHz
-	011: 4 MHz
-	100: 3 MHz
-	101: 2 MHz
-	110: 1 MHz *default
-	//set external clk speed to 10Mhz
-	//ChangeRegister(REG_MCU_OUT_CLK, 0x03);
-*/	
 
 	//disable outpout clock, enable digital input with pullup. Decrease system noise
 	ChangeRegister(REG_GPIO2_CONF, 0x23);
@@ -510,12 +457,11 @@ void static boot() {
 void static switchMode(byte mode) {
 
 	ChangeRegister(REG_STATE, mode); // receive mode
-	//_delay_ms(20);
+
 #if DEBUG_SI4432
 	_delay_ms(1);
 	byte val = ReadRegister(REG_DEV_STATUS);
 	debugf("DEV STAT:%x\n", val);
-
 #endif
 }
 

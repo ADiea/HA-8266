@@ -147,7 +147,7 @@ int main(void)
 		
 		if(millis() - curTime > CYCLE_PERIOD_MS)
 		{
-			debugf("Relay: %d\n", relay_getLastPeriod());
+			debugf("Relay. num:%d switch:%d per:%d\n", relay_getNumCrosses(), relay_getNumSwitches(), relay_getLastPeriod());
 			curTime = millis();
 			sendColorIndex(curColorIndex);
 			

@@ -40,7 +40,7 @@ eKeyPress keyPress()
 	{
 		if(btnTimer > 0 && btnTimer < 150)
 		{
-			retVal = LongPress;
+			retVal = ShortPress;
 		}
 		btnTimer = 0;
 	}
