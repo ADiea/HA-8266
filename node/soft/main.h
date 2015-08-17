@@ -13,5 +13,7 @@
 #include "ws2812.h"
 #include "spi.h"
 #include "systimer.h"
+#include "led.h"
+#include "relay.h"
 
 #endif /*_MAIN__H*/

@@ -16,6 +16,7 @@ printat RSSI
 #include "main.h"
 
 #define NUM_COLORS 4
+#define CYCLE_PERIOD_MS 1000
 
 typedef unsigned char u8;
 typedef unsigned short u16;
@@ -47,8 +48,18 @@ void initHw()
 	radio_init();
 	radio_readAll();
 	
-	_delay_ms(1);
+	led_init();
+	
+	relay_init();
 
+	//enable and reset RBG led
+	DDRD |= 1<<4;
+	PORTD &= ~(1<<4);
+	_delay_ms(1);
+	
+	//enable pullups, just to be sure
+	SFIOR &= ~(1<<PUD);
+	
 }
 
 void mcpy(char *d, char *s, unsigned int sz)
@@ -110,20 +121,6 @@ void sendColorIndex(uint8_t color)
 	}
 }
 
-#define CYCLE_PERIOD_MS 1000
-
-extern void output_grb(u8 * ptr, u16 count);
-
-
-
-//palette[]
-
-	u8 off[] = {0x00, 0x00, 0x00}; //black/off
-	u8 green[] = {0x20, 0x00, 0x00}; //green
-	u8 red[] = {0xFF, 0xFF, 0xFF}; //red
-	u8 blue[] = {0x00, 0x00, 0x20};	//blue
-
-	u8 *palette[] = {off, green, red, blue};
 
 int main(void)
 {
@@ -133,30 +130,40 @@ int main(void)
 	uint8_t len = 0;
 	uint8_t i, match;
 	
+	volatile uint8_t a=0;
+	
 	const char *ping = "PING";
 	
 	unsigned long curTime = millis();
 
 	initHw();
 	
-	DDRD |= 1<<4;
-	
 	debugf(" System Init OK\n");
 	
-	output_grb(red, 3);
-	
-	//ws2812_setleds((tRGB*)&gColorPallette[curColorIndex], 1);
-	
-	debugf(" Led color set\n");
+	ws2812_setleds((tRGB*)&gColorPallette[curColorIndex], 1);
 	
 	do
 	{	
 		
 		if(millis() - curTime > CYCLE_PERIOD_MS)
 		{
-			debugf("T");
+			debugf("Relay: %d\n", relay_getLastPeriod());
 			curTime = millis();
 			sendColorIndex(curColorIndex);
+			
+			++a;
+			led_change();
+			
+			if(a%2)
+			{
+				ws2812_setleds((tRGB*)&gColorPallette[curColorIndex], 1);
+				
+			}
+			else
+			{
+				ws2812_setleds((tRGB*)&gColorPallette[0], 1);
+				
+			}
 		}
 		
 		if(radio_isPacketReceived())
@@ -209,7 +216,7 @@ int main(void)
 			case ShortPress:
 				debugf("ShortPress\n");
 				curColorIndex = (curColorIndex + 1) % NUM_COLORS;
-				ws2812_setleds((tRGB*)&gColorPallette[curColorIndex], 1);
+				//ws2812_setleds((tRGB*)&gColorPallette[curColorIndex], 1);
 			break;
 			
 			case LongPress:
