@@ -124,11 +124,13 @@ void sendColorIndex(uint8_t color)
 
 int main(void)
 {
-	uint8_t loopDelay = 100;
+	uint8_t loopDelay = 50;
 	uint8_t curColorIndex = 1;
 	uint8_t payLoad[64] = {0};
 	uint8_t len = 0;
 	uint8_t i, match;
+	
+	uint8_t dim = 0, dimDir = 1;
 	
 	volatile uint8_t a=0;
 	
@@ -145,9 +147,26 @@ int main(void)
 	do
 	{	
 		
+		if(dimDir)
+		{
+			if(dim < 255)
+				++dim;
+			else
+				dimDir = 0;
+		}
+		else
+		{
+			if(dim > 0)
+				--dim;
+			else
+				dimDir = 1;
+		}
+		relay_setDim(dim);
+		
 		if(millis() - curTime > CYCLE_PERIOD_MS)
 		{
-			debugf("Relay. num:%d switch:%d per:%d\n", relay_getNumCrosses(), relay_getNumSwitches(), relay_getLastPeriod());
+			debugf("Relay. num:%d switch:%d per:%d ignor:%d\n", 
+				relay_getNumCrosses(), relay_getNumSwitches(), relay_getLastPeriod(), relay_getIgnoredPulses);
 			curTime = millis();
 			sendColorIndex(curColorIndex);
 			

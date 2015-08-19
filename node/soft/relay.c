@@ -8,16 +8,25 @@ volatile uint16_t g_numCrosses = 0;
 
 volatile uint16_t g_numSwitches = 0;
 
+volatile uint16_t g_ignoredPulses = 0;
 
-volatile uint16_t g_delayActivation = 2*8*1000;
-#define TIME_KEEP_ON 400
-#define TIME_SAMPLE 40
+#define TIME_SEMILOOP 10000 //10ms
+
+#define TIME_GUARD 100
+
+volatile uint16_t g_delayActivation = TIME_SEMILOOP - TIME_GUARD;
+#define TIME_KEEP_ON 50
+#define TIME_SAMPLE 10
+
+
 
 #define RL_STATE_IDLE 0
 #define RL_STATE_SAMPLE 1
 #define RL_STATE_WAIT 2
 #define RL_STATE_ACTIVE 3
-
+#define RL_STATE_SAMPLE_N 4
+#define RL_STATE_WAIT_N 5
+#define RL_STATE_ACTIVE_N 6
 
 
 volatile uint8_t g_relayState = RL_STATE_IDLE;
@@ -37,7 +46,7 @@ void relay_init(void)
 
 void startTimer1(uint16_t cmpValue)
 {
-	TCCR1B |= 1<<CS10;
+	TCCR1B |= 1<<CS11;
 	TCNT1 = 0;
 	OCR1A = cmpValue;
 	TIMSK |= 1<<OCIE1A;
@@ -74,9 +83,33 @@ ISR(TIMER1_COMPA_vect )
 		
 		case RL_STATE_ACTIVE:
 			PORTB &= ~(1<<2);
-			
-			g_relayState = RL_STATE_IDLE;
+			g_relayState = RL_STATE_SAMPLE_N;
+			startTimer1(TIME_SEMILOOP - TIME_KEEP_ON - g_delayActivation);
 		break;
+		
+		case RL_STATE_SAMPLE_N:
+			//if(PIND & (1<<3))
+			//{
+				g_relayState = RL_STATE_WAIT_N;
+				startTimer1(g_delayActivation);
+			//}
+			//else
+			//{
+			//	g_relayState = RL_STATE_IDLE;
+			//}
+		break;
+		
+		case RL_STATE_WAIT_N:
+			PORTB |= (1<<2);
+			startTimer1(TIME_KEEP_ON);
+			++g_numSwitches;//more correct is in the next state
+			g_relayState = RL_STATE_ACTIVE_N;
+		break;
+		
+		case RL_STATE_ACTIVE_N:
+			PORTB &= ~(1<<2);
+			g_relayState = RL_STATE_IDLE;
+		break;		
 		
 		default:
 			g_relayState = RL_STATE_IDLE;
@@ -97,8 +130,24 @@ ISR(INT1_vect)
 		
 		g_relayState = RL_STATE_SAMPLE;
 		startTimer1(TIME_SAMPLE);
-		
 	}
+	else
+	{
+		++g_ignoredPulses;
+	}
+}
+
+void relay_setDim(uint8_t dim)
+{
+	if(dim > 64 && dim < 191)
+	{
+		if(dim - 64 < 191 - dim)
+			dim = 64;
+		else
+			dim = 191;
+	}
+	
+	g_delayActivation =  ((uint32_t)(dim * (TIME_SEMILOOP - TIME_GUARD))) >> 8;
 }
 
 //return ast period in multiple of 32 us
@@ -115,5 +164,10 @@ uint16_t relay_getNumCrosses(void)
 uint16_t relay_getNumSwitches(void)
 {
 	return g_numSwitches;
+}
+
+uint16_t relay_getIgnoredPulses(void)
+{
+	return g_ignoredPulses;
 }
 
