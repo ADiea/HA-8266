@@ -53,7 +53,7 @@ ISR(TIMER0_OVF_vect)
 {
 	//fcpu = 8Mhz prescaler1 =>1/256 => f=39062.5
 	
-	uint8_t i = 0;
+//	uint8_t i = 0;
 	
 	++g_32us;
 
@@ -66,7 +66,7 @@ ISR(TIMER0_OVF_vect)
 		fraction = (fraction + 1) % 4;
 		if (fraction == 0)
 			++gTimer;
-		
+/*		
 		//check callbacks
 		for( i=0; i < NUM_CALLBACKS; i++)
 		{
@@ -76,5 +76,6 @@ ISR(TIMER0_OVF_vect)
 				timerCallbacks[i].active = 0;
 			}
 		}
+*/		
 	}
 }
