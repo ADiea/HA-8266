@@ -2,7 +2,6 @@
 #define DRV_SDCARD
 
 #include "device.h"
-#include <SmingCore/SmingCore.h>
 
 uint8_t devSDCard_init(uint8_t operation);
 void devSDCard_benchmark();

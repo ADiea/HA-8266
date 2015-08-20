@@ -128,13 +128,9 @@ int main(void)
 	uint8_t curColorIndex = 1;
 	uint8_t payLoad[64] = {0};
 	uint8_t len = 0;
-	uint8_t i, match;
+	uint8_t i;
 	
-	uint8_t dim = 30, dimDir = 1, dim_hold=0;
-	
-	volatile uint8_t a=0;
-	
-	const char *ping = "PING";
+	uint8_t dim = 30, dim_target=0;
 	
 	unsigned long curTime = millis();
 
@@ -145,8 +141,8 @@ int main(void)
 	ws2812_setleds((tRGB*)&gColorPallette[curColorIndex], 1);
 	
 	//preheat
-	relay_setDim(dim);
-	_delay_ms(1000);
+	//relay_setDim(dim);
+	//_delay_ms(1000);
 	
 	
 	do
@@ -159,21 +155,13 @@ int main(void)
 
 		}*/
 		
-		if(dimDir)
+		if(dim < dim_target)
 		{
-			if(dim < 255)
-				++dim;
-			else
-				dimDir = 0;
+			++dim;
 		}
-		else
+		else if(dim > dim_target)
 		{
-			if(dim > 30)
-				--dim;
-			else
-			{
-				dimDir = 1;
-			}
+			--dim;
 		}
 		relay_setDim(dim);
 		
@@ -182,25 +170,11 @@ int main(void)
 			debugf("Relay. num:%d switch:%d per:%d ignor:%d dim:%d\n", 
 				relay_getNumCrosses(), relay_getNumSwitches(), 
 				relay_getLastPeriod(), relay_getIgnoredPulses, dim);
-			
 
-			
 			curTime = millis();
-			sendColorIndex(curColorIndex);
-			
-			++a;
+			//sendColorIndex(curColorIndex);
+
 			led_change();
-			
-			if(a%2)
-			{
-				ws2812_setleds((tRGB*)&gColorPallette[curColorIndex], 1);
-				
-			}
-			else
-			{
-				ws2812_setleds((tRGB*)&gColorPallette[0], 1);
-				
-			}
 		}
 		
 		if(radio_isPacketReceived())
@@ -216,32 +190,28 @@ int main(void)
 		{
 			debugf("ARX(%d): ", len);
 			
-			match = 1;
-
 			for ( i = 0; i < len; ++i) 
 			{	
-				if(i < 4)
-				{
-					if(ping[i] != payLoad[i])
-						match = 0;
-				}
-				else match = 0;
 				debugf("%c", (char) payLoad[i]);
 			}
 			
 			debugf("\n");
 			
-			if(match)
+			if( len == 3 && payLoad[0] == 'I' && payLoad[1] == ':' )
 			{
-				debugf("TX PONG ");
-				if(!radio_sendPacketSimple(2, (unsigned char*)"OK"))
-				{
-					debugf("ERR\n");
-				}
-				else
-				{
-					debugf("OK\n");
-				}
+				i = payLoad[2]; 
+				debugf("Ity:%u\n", i);
+				dim_target = i;
+			}
+			
+			debugf("REPLY: ");
+			if(!radio_sendPacketSimple(2, (unsigned char*)"OK"))
+			{
+				debugf("ERR\n");
+			}
+			else
+			{
+				debugf("OK\n");
 			}
 		}
 		

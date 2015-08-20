@@ -16,8 +16,6 @@
 
 #define ONE_SECOND 1000000
 
-extern int m_printf(const char *fmt, ...);
-
 //Globals
 TempAndHumidity gLastTempHumid;
 NtpClient *gNTPClient;
@@ -53,7 +51,7 @@ static void mainLoop(void);
 #endif /*DEBUG_BUILD*/
 
 
-uint32_t totalActiveSockets=0;
+	uint32_t totalActiveSockets=0;
 	void onIndex(HttpRequest &request, HttpResponse &response)
 	{
 		response.forbidden();
@@ -71,12 +69,83 @@ uint32_t totalActiveSockets=0;
 		// Notify everybody about new connection
 		WebSocketsList &clients = server.getActiveWebSockets();
 		for (int i = 0; i < clients.count(); i++)
-			clients[i].sendString("New friend arrived! Total: " + String(totalActiveSockets));
+			clients[i].sendString("New ws conn! Total: " + String(totalActiveSockets));
 	}
+
+
+
 
 	void wsMessageReceived(WebSocket& socket, const String& message)
 	{
-		//Serial.printf("WebSocket message received:\r\n%s\r\n", message.c_str());
+		char* msg =  (char*)message.c_str();
+
+		LOG(INFO, "WS message received:%s\n", msg);
+
+		int intensity = 0;
+
+		byte payLoad[64] = {0};
+		byte len = 0;
+		bool result;
+
+		byte pkgIntensity[] = "I:#";
+
+		if(strlen(msg) > 5 )
+		{
+			msg += 5;
+			while(*msg >= '0' && *msg <='9')
+			{
+				intensity = intensity *10 + (*msg++) - '0';
+			}
+
+			LOG(INFO, "WS intensity:%u\n", intensity);
+
+			/* radio send */
+			if(radio)
+			{
+				if(radio->busy)
+				{
+					LOG(INFO, "Radio busy\n");
+				}
+				else
+				{
+					radio->busy = 1;
+
+					pkgIntensity[2] = (byte)intensity;
+
+					result = radio->sendPacket(3,
+							pkgIntensity,
+							true,
+							RADIO_WAIT_ACK_MS,
+							&len,
+							payLoad);
+
+					radio->busy = 0;
+
+					if(!result)
+					{
+						LOG(INFO," ERR!");
+					}
+					else
+					{
+						LOG(INFO," SENT! SYNC RX (%d):", len);
+
+						for (byte i = 0; i < len; ++i)
+						{
+							LOG(INFO,"%c", ((char) payLoad[i]));
+						}
+
+						LOG(INFO,"\n");
+					}
+
+				}
+			}
+			else
+			{
+				LOG(INFO, "Radio not inited\n");
+			}
+
+		}
+
 		String response = "Echo: " + message;
 		socket.sendString(response);
 	}
@@ -93,7 +162,7 @@ uint32_t totalActiveSockets=0;
 		// Notify everybody about lost connection
 		WebSocketsList &clients = server.getActiveWebSockets();
 		for (int i = 0; i < clients.count(); i++)
-			clients[i].sendString("We lost our friend :( Total: " + String(totalActiveSockets));
+			clients[i].sendString("WS client disconnected Total: " + String(totalActiveSockets));
 	}
 
 void startWebServer()
@@ -145,7 +214,7 @@ void initSystem()
 
 	//setup SDCard and load custom system settings, then disable SDCard
 	enableDev(DEV_SDCARD, ENABLE | CONFIG);
-	enableDev(DEV_SDCARD, DISABLE);
+	//enableDev(DEV_SDCARD, DISABLE);
 
 	//DHT22 periodically enabled to read data
 	enableDev(DEV_DHT22, ENABLE | CONFIG);
@@ -157,7 +226,11 @@ void initSystem()
 
 	//enable and config Radio, then disable
 	enableDev(DEV_RADIO, ENABLE | CONFIG);
-	enableDev(DEV_RADIO, DISABLE);
+	//enableDev(DEV_RADIO, DISABLE);
+/*
+	//start listening for incoming packets
+	radio->startListening();
+*/
 
 	//setup Wifi
 	enableDev(DEV_WIFI, ENABLE | CONFIG);
@@ -199,25 +272,6 @@ void startSystem()
 	LOG(INFO, "Mem info:\r\n");
 	system_print_meminfo();
 
-	m_printf( "pi=%f\n", 3.14f);
-/*	m_printf( "1.002=%f\n", 1.002);
-	m_printf( "1.050250=%f\n", 1.050250);
-	m_printf( "pi=%d %f %c\n", 3, 3.14, '3');
-	m_printf( "etc %d %f %s %f %f\n", -99, -3.01040, "abc", 3.0/4, 8.0/9);
-
-	m_printf( "etc %3.0d %.3f %s %.5f %f\n", -99, -3.01040, "abc", 3.0/4, 8.0/9);
-
-	m_printf( "etc %3.0d %% %.3f %%%s %-+.5f %#*f %%%%\n", -99, -3.01040, "abc", 3.0/4, 8.0/9);
-
-	m_printf( "etc %3.0d % %.3f %j %s %-+.5f %#*f %z%k\n", -99, -3.01040, "abc", 3.0/4, 8.0/9);
-
-	int min_i =
-	m_printf("Int limits %d .. %d Uint limits 0 .. %u Long limits %ld .. %ld  \n",
-			INT_MIN, INT_MAX, UINT_MAX, LONG_MIN, LONG_MAX);
-
-	 m_printf("Color %s, number1 %d, number2 %05d, hex %#x, float %5.2f, unsigned value %u, octal %o.\n",
-	        "red", 123456, 89, 0x00C0FFEE, 3.14159, 250, 06675);
-*/
 #endif
 	tmrMainLoop.initializeUs(LOOP_TIME, mainLoop).start();
 

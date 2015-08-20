@@ -1,0 +1,622 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_mulsi3.o)
+                              out/relay.o (__mulsi3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm8.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_copy_data.o)
+                              out/main.o (__do_copy_data)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
+                              out/main.o (__do_clear_bss)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(ltoa.o)
+                              out/uart.o (ltoa)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(ultoa.o)
+                              out/main.o (ultoa)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(strrev.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(ltoa.o) (strrev)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_udivmodsi4.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(ltoa.o) (__udivmodsi4)
+
+Allocating common symbols
+Common symbol       size              file
+
+gTimer              0x4               out/systimer.o
+timerCallbacks      0x1c              out/systimer.o
+_kbps               0x2               out/radio.o
+_freqChannel        0x1               out/radio.o
+g_32us              0x4               out/systimer.o
+_packageSign        0x2               out/radio.o
+
+Discarded input sections
+
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm8.o
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm8.o
+ .text          0x00000000        0x0 out/main.o
+ .bss           0x00000000        0x0 out/main.o
+ .text.mcpy     0x00000000        0x0 out/main.o
+ .text.slen     0x00000000        0x0 out/main.o
+ .text.sendColorIndex
+                0x00000000        0x0 out/main.o
+ .bss.pktSecv   0x00000000        0x0 out/main.o
+ .text          0x00000000        0x0 out/radio.o
+ .bss           0x00000000        0x0 out/radio.o
+ .text.radio_softReset
+                0x00000000        0x0 out/radio.o
+ .text          0x00000000        0x0 out/key.o
+ .data          0x00000000        0x0 out/key.o
+ .bss           0x00000000        0x0 out/key.o
+ .text          0x00000000        0x0 out/ws2812.o
+ .data          0x00000000        0x0 out/ws2812.o
+ .bss           0x00000000        0x0 out/ws2812.o
+ .text.ws2812_sendarray
+                0x00000000        0x0 out/ws2812.o
+ .text          0x00000000        0x0 out/spi.o
+ .data          0x00000000        0x0 out/spi.o
+ .bss           0x00000000        0x0 out/spi.o
+ .text          0x00000000        0x0 out/uart.o
+ .data          0x00000000        0x0 out/uart.o
+ .bss           0x00000000        0x0 out/uart.o
+ .text.printCh  0x00000000        0x0 out/uart.o
+ .text          0x00000000        0x0 out/systimer.o
+ .data          0x00000000        0x0 out/systimer.o
+ .bss           0x00000000        0x0 out/systimer.o
+ .text.timer_addCallback
+                0x00000000        0x0 out/systimer.o
+ .text          0x00000000        0x0 out/led.o
+ .data          0x00000000        0x0 out/led.o
+ .bss           0x00000000        0x0 out/led.o
+ .text          0x00000000        0x0 out/relay.o
+ .data          0x00000000        0x0 out/relay.o
+ .bss           0x00000000        0x0 out/relay.o
+ .text.startTimer1
+                0x00000000        0x0 out/relay.o
+ .text.stopTimer1
+                0x00000000        0x0 out/relay.o
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_mulsi3.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_mulsi3.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_mulsi3.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_copy_data.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(ltoa.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(ltoa.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(ltoa.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(ultoa.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(ultoa.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(ultoa.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(strrev.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(strrev.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(strrev.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_udivmodsi4.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_udivmodsi4.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_udivmodsi4.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00002000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm8.o
+LOAD out/main.o
+LOAD out/radio.o
+LOAD out/key.o
+LOAD out/ws2812.o
+LOAD out/spi.o
+LOAD out/uart.o
+LOAD out/systimer.o
+LOAD out/led.o
+LOAD out/relay.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x1470
+ *(.vectors)
+ .vectors       0x00000000       0x26 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm8.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000026                . = ALIGN (0x2)
+                0x00000026                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000026        0x0 linker stubs
+ *(.trampolines*)
+                0x00000026                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000026                __ctors_start = .
+ *(.ctors)
+                0x00000026                __ctors_end = .
+                0x00000026                __dtors_start = .
+ *(.dtors)
+                0x00000026                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000026        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm8.o
+                0x00000026                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000026        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm8.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000032       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_copy_data.o)
+                0x00000032                __do_copy_data
+ .init4         0x00000048       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
+                0x00000048                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000058        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm8.o
+ *(.init9)
+ *(.text)
+ .text          0x0000005c        0x2 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm8.o
+                0x0000005c                __vector_1
+                0x0000005c                __vector_12
+                0x0000005c                __bad_interrupt
+                0x0000005c                __vector_3
+                0x0000005c                __vector_11
+                0x0000005c                __vector_13
+                0x0000005c                __vector_17
+                0x0000005c                __vector_7
+                0x0000005c                __vector_5
+                0x0000005c                __vector_4
+                0x0000005c                __vector_15
+                0x0000005c                __vector_8
+                0x0000005c                __vector_14
+                0x0000005c                __vector_10
+                0x0000005c                __vector_16
+                0x0000005c                __vector_18
+                0x0000005e                . = ALIGN (0x2)
+ *(.text.*)
+ .text.initHw   0x0000005e       0x26 out/main.o
+                0x0000005e                initHw
+ .text.main     0x00000084      0x284 out/main.o
+                0x00000084                main
+ .text.BurstRead
+                0x00000308       0x54 out/radio.o
+ .text.ReadRegister
+                0x0000035c       0x22 out/radio.o
+ .text.BurstWrite
+                0x0000037e       0x54 out/radio.o
+ .text.ChangeRegister
+                0x000003d2       0x1e out/radio.o
+ .text.switchMode
+                0x000003f0        0xa out/radio.o
+ .text.radio_clearFIFO
+                0x000003fa       0x12 out/radio.o
+                0x000003fa                radio_clearFIFO
+ .text.radio_clearRxFIFO
+                0x0000040c       0x12 out/radio.o
+                0x0000040c                radio_clearRxFIFO
+ .text.radio_isPacketReceived
+                0x0000041e       0x38 out/radio.o
+                0x0000041e                radio_isPacketReceived
+ .text.radio_getPacketReceived
+                0x00000456       0x32 out/radio.o
+                0x00000456                radio_getPacketReceived
+ .text.radio_startListening
+                0x00000488       0x24 out/radio.o
+                0x00000488                radio_startListening
+ .text.radio_clearTxFIFO
+                0x000004ac       0x12 out/radio.o
+                0x000004ac                radio_clearTxFIFO
+ .text.radio_setChannel
+                0x000004be        0xa out/radio.o
+                0x000004be                radio_setChannel
+ .text.radio_setCommsSignature
+                0x000004c8       0x30 out/radio.o
+                0x000004c8                radio_setCommsSignature
+ .text.radio_setBaudRateFast
+                0x000004f8       0x5e out/radio.o
+                0x000004f8                radio_setBaudRateFast
+ .text.boot     0x00000556       0xa8 out/radio.o
+ .text.radio_hardReset
+                0x000005fe       0x76 out/radio.o
+                0x000005fe                radio_hardReset
+ .text.radio_init
+                0x00000674       0x1c out/radio.o
+                0x00000674                radio_init
+ .text.radio_readAll
+                0x00000690      0x15c out/radio.o
+                0x00000690                radio_readAll
+ .text.radio_waitForPacket
+                0x000007ec      0x1e6 out/radio.o
+                0x000007ec                radio_waitForPacket
+ .text.radio_sendPacket
+                0x000009d2      0x22c out/radio.o
+                0x000009d2                radio_sendPacket
+ .text.radio_sendPacketSimple
+                0x00000bfe       0x2e out/radio.o
+                0x00000bfe                radio_sendPacketSimple
+ .text.initKey  0x00000c2c        0x6 out/key.o
+                0x00000c2c                initKey
+ .text.keyPress
+                0x00000c32       0x4e out/key.o
+                0x00000c32                keyPress
+ .text.ws2812_sendarray_mask
+                0x00000c80       0x38 out/ws2812.o
+                0x00000c80                ws2812_sendarray_mask
+ .text.ws2812_setleds_pin
+                0x00000cb8       0x1a out/ws2812.o
+                0x00000cb8                ws2812_setleds_pin
+ .text.ws2812_setleds
+                0x00000cd2        0x6 out/ws2812.o
+                0x00000cd2                ws2812_setleds
+ .text.spi_begin
+                0x00000cd8       0x16 out/spi.o
+                0x00000cd8                spi_begin
+ .text.spi_enable
+                0x00000cee        0x4 out/spi.o
+                0x00000cee                spi_enable
+ .text.spi_disable
+                0x00000cf2        0x4 out/spi.o
+                0x00000cf2                spi_disable
+ .text.spi_send
+                0x00000cf6       0x16 out/spi.o
+                0x00000cf6                spi_send
+ .text.spi_recv
+                0x00000d0c       0x1e out/spi.o
+                0x00000d0c                spi_recv
+ .text.initUart
+                0x00000d2a       0x14 out/uart.o
+                0x00000d2a                initUart
+ .text.m_vsnprintf
+                0x00000d3e      0x1fc out/uart.o
+                0x00000d3e                m_vsnprintf
+ .text.debugf   0x00000f3a       0x7a out/uart.o
+                0x00000f3a                debugf
+ .text.initSysTimer
+                0x00000fb4       0x38 out/systimer.o
+                0x00000fb4                initSysTimer
+ .text.__vector_9
+                0x00000fec       0xc4 out/systimer.o
+                0x00000fec                __vector_9
+ .text.led_init
+                0x000010b0        0x6 out/led.o
+                0x000010b0                led_init
+ .text.led_set  0x000010b6       0x10 out/led.o
+                0x000010b6                led_set
+ .text.led_change
+                0x000010c6       0x12 out/led.o
+                0x000010c6                led_change
+ .text.relay_init
+                0x000010d8       0x16 out/relay.o
+                0x000010d8                relay_init
+ .text.__vector_6
+                0x000010ee       0xfc out/relay.o
+                0x000010ee                __vector_6
+ .text.__vector_2
+                0x000011ea       0xce out/relay.o
+                0x000011ea                __vector_2
+ .text.relay_setDim
+                0x000012b8       0x38 out/relay.o
+                0x000012b8                relay_setDim
+ .text.relay_getLastPeriod
+                0x000012f0        0xc out/relay.o
+                0x000012f0                relay_getLastPeriod
+ .text.relay_getNumCrosses
+                0x000012fc        0xc out/relay.o
+                0x000012fc                relay_getNumCrosses
+ .text.relay_getNumSwitches
+                0x00001308        0xc out/relay.o
+                0x00001308                relay_getNumSwitches
+ .text.relay_getIgnoredPulses
+                0x00001314        0xc out/relay.o
+                0x00001314                relay_getIgnoredPulses
+ .text.libgcc   0x00001320       0x3e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_mulsi3.o)
+                0x00001320                __mulsi3
+ .text.avr-libc
+                0x0000135e       0x64 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(ltoa.o)
+                0x0000135e                ltoa
+ .text.avr-libc
+                0x000013c2       0x46 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(ultoa.o)
+                0x000013c2                ultoa
+ .text.avr-libc
+                0x00001408       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(strrev.o)
+                0x00001408                strrev
+ .text.libgcc   0x00001428       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_udivmodsi4.o)
+                0x00001428                __udivmodsi4
+                0x0000146c                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000146c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+                0x0000146c                exit
+                0x0000146c                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000146c        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00001470                _etext = .
+
+.data           0x00800060      0x184 load address 0x00001470
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060       0xcf out/main.o
+ .data          0x0080012f       0x81 out/radio.o
+ *(.data*)
+ .data.gColorPallette
+                0x008001b0        0xc out/main.o
+                0x008001b0                gColorPallette
+ .data.BaudRates
+                0x008001bc       0x24 out/radio.o
+                0x008001bc                BaudRates
+ .data.gLedState
+                0x008001e0        0x1 out/led.o
+                0x008001e0                gLedState
+ .data.g_delayActivation
+                0x008001e1        0x2 out/relay.o
+                0x008001e1                g_delayActivation
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x008001e4                . = ALIGN (0x2)
+ *fill*         0x008001e3        0x1 00
+                0x008001e4                _edata = .
+                0x008001e4                PROVIDE (__data_end, .)
+
+.bss            0x008001e4       0x3a
+                0x008001e4                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss._intPin   0x008001e4        0x1 out/radio.o
+                0x008001e4                _intPin
+ .bss.btnTimer.1577
+                0x008001e5        0x1 out/key.o
+ .bss.whole     0x008001e6        0x1 out/systimer.o
+                0x008001e6                whole
+ .bss.fraction  0x008001e7        0x1 out/systimer.o
+                0x008001e7                fraction
+ .bss.g_lastCrossTime
+                0x008001e8        0x4 out/relay.o
+                0x008001e8                g_lastCrossTime
+ .bss.g_lastPeriod
+                0x008001ec        0x2 out/relay.o
+                0x008001ec                g_lastPeriod
+ .bss.g_numCrosses
+                0x008001ee        0x2 out/relay.o
+                0x008001ee                g_numCrosses
+ .bss.g_numSwitches
+                0x008001f0        0x2 out/relay.o
+                0x008001f0                g_numSwitches
+ .bss.g_ignoredPulses
+                0x008001f2        0x2 out/relay.o
+                0x008001f2                g_ignoredPulses
+ .bss.g_relayState
+                0x008001f4        0x1 out/relay.o
+                0x008001f4                g_relayState
+ *(COMMON)
+ COMMON         0x008001f5        0x5 out/radio.o
+                0x008001f5                _kbps
+                0x008001f7                _freqChannel
+                0x008001f8                _packageSign
+ COMMON         0x008001fa       0x24 out/systimer.o
+                0x008001fa                gTimer
+                0x008001fe                timerCallbacks
+                0x0080021a                g_32us
+                0x0080021e                PROVIDE (__bss_end, .)
+                0x00001470                __data_load_start = LOADADDR (.data)
+                0x000015f4                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0080021e        0x0
+                0x0080021e                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x0080021e                PROVIDE (__noinit_end, .)
+                0x0080021e                _end = .
+                0x0080021e                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(out/main.elf elf32-avr)
+LOAD linker stubs
