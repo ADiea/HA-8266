@@ -139,15 +139,26 @@ ISR(INT1_vect)
 
 void relay_setDim(uint8_t dim)
 {
-	if(dim > 64 && dim < 191)
-	{
-		if(dim - 64 < 191 - dim)
-			dim = 64;
-		else
-			dim = 191;
-	}
+	if(dim > 240)
+		dim = 240;
 	
-	g_delayActivation =  ((uint32_t)(dim * (TIME_SEMILOOP - TIME_GUARD))) >> 8;
+/*	
+	if(dim > 100 && dim < 156)
+	{
+		if(dim -100 < 156 - dim)
+			dim = 100;
+		else
+			dim = 156;
+	}
+*/	
+
+dim = 255 - dim;
+	
+while(g_relayState != RL_STATE_IDLE);
+	
+	g_delayActivation =  (((uint32_t)dim * (TIME_SEMILOOP - TIME_GUARD))) >> 8;
+	
+	//debugf("\ndim=%u -> %u ", dim, g_delayActivation);
 }
 
 //return ast period in multiple of 32 us
