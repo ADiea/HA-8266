@@ -2,7 +2,7 @@
 <meta charset="utf-8" />
 <title>Light dimmer</title>
 <script language="javascript" type="text/javascript">
-    var wsUri = "ws://echo.websocket.org/";
+    var wsUri = "ws://192.168.0.103";
     var output;
 
     function init() {
@@ -28,7 +28,7 @@
 
     function onOpen(evt) {
         writeToScreen("CONNECTED");
-        doSend("WebSocket rocks");
+        doSend("INTY:" + 255);
     }
 	
 	function onIntensity() 

@@ -21,6 +21,8 @@ TempAndHumidity gLastTempHumid;
 NtpClient *gNTPClient;
 HttpServer server;
 
+uint8_t gRadioBusy = 0;
+
 static inline unsigned get_ccount(void)
 {
 	unsigned r;
@@ -54,12 +56,14 @@ static void mainLoop(void);
 	uint32_t totalActiveSockets=0;
 	void onIndex(HttpRequest &request, HttpResponse &response)
 	{
-		response.forbidden();
+		response.sendString("Welcome");
+		//response.forbidden();
 	}
 
 	void onFile(HttpRequest &request, HttpResponse &response)
 	{
-		response.notFound();
+		response.sendString("Welcome");
+		//response.notFound();
 	}
 
 	void wsConnected(WebSocket& socket)
@@ -80,7 +84,7 @@ static void mainLoop(void);
 		char* msg =  (char*)message.c_str();
 
 		LOG(INFO, "WS message received:%s\n", msg);
-
+#if 0
 		int intensity = 0;
 
 		byte payLoad[64] = {0};
@@ -102,13 +106,13 @@ static void mainLoop(void);
 			/* radio send */
 			if(radio)
 			{
-				if(radio->busy)
+				if(gRadioBusy)
 				{
 					LOG(INFO, "Radio busy\n");
 				}
 				else
 				{
-					radio->busy = 1;
+					gRadioBusy = 1;
 
 					pkgIntensity[2] = (byte)intensity;
 
@@ -119,9 +123,9 @@ static void mainLoop(void);
 							&len,
 							payLoad);
 
-					radio->busy = 0;
+					gRadioBusy = 0;
 
-					if(!result)
+					if(!result || len > 64)
 					{
 						LOG(INFO," ERR!");
 					}
@@ -145,7 +149,7 @@ static void mainLoop(void);
 			}
 
 		}
-
+#endif
 		String response = "Echo: " + message;
 		socket.sendString(response);
 	}
@@ -309,7 +313,7 @@ static void mainLoop()
 {
 	devRGB_setColor(COLOR_RED);
 	uint32_t tick1, tick2;
-
+/*
 	LOG(INFO, SystemClock.getSystemTimeString().c_str());
 	LOG(INFO, ",");
 
@@ -334,7 +338,7 @@ static void mainLoop()
 		devDHT22_comfortRatio();
 		LOG(INFO, "\n");
 	}
-
+*/
 	devRGB_setColor(COLOR_GREEN);
 	WDT.alive();
 }

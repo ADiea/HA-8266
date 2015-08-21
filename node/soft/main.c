@@ -130,7 +130,7 @@ int main(void)
 	uint8_t len = 0;
 	uint8_t i;
 	
-	uint8_t dim = 30, dim_target=0;
+	uint8_t dim = 190, dim_target=190;
 	
 	unsigned long curTime = millis();
 
@@ -222,7 +222,7 @@ int main(void)
 			
 			case ShortPress:
 				debugf("ShortPress\n");
-				curColorIndex = (curColorIndex + 1) % NUM_COLORS;
+				//curColorIndex = (curColorIndex + 1) % NUM_COLORS;
 				//ws2812_setleds((tRGB*)&gColorPallette[curColorIndex], 1);
 			break;
 			
