@@ -81,10 +81,10 @@ static void mainLoop(void);
 
 	void wsMessageReceived(WebSocket& socket, const String& message)
 	{
-		char* msg =  (char*)message.c_str();
+		const char* msg =  message.c_str();
 
 		LOG(INFO, "WS message received:%s\n", msg);
-#if 0
+
 		int intensity = 0;
 
 		byte payLoad[64] = {0};
@@ -95,13 +95,15 @@ static void mainLoop(void);
 
 		if(strlen(msg) > 5 )
 		{
-			msg += 5;
-			while(*msg >= '0' && *msg <='9')
+			len = 5;
+			while(msg[len] >= '0' && msg[len] <='9')
 			{
-				intensity = intensity *10 + (*msg++) - '0';
+				intensity = intensity *10 + msg[len] - '0';
+				++len;
 			}
 
 			LOG(INFO, "WS intensity:%u\n", intensity);
+
 
 			/* radio send */
 			if(radio)
@@ -149,7 +151,7 @@ static void mainLoop(void);
 			}
 
 		}
-#endif
+
 		String response = "Echo: " + message;
 		socket.sendString(response);
 	}

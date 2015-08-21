@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <meta charset="utf-8" />
 <title>Light dimmer</title>
+<style>
+#outputContainer {
+    float: left;
+    margin-left: 20px;
+    padding-left: 20px;
+    width: 350px;
+    //border-left: solid 1px #cccccc;
+}
+#output {
+    border: solid 1px #999999;
+    border-top-color: #CCCCCC;
+    border-left-color: #CCCCCC;
+    padding: 5px;
+    width: 100%;
+    height: 172px;
+    overflow-y: scroll;
+}
+</style>
 <script language="javascript" type="text/javascript">
-    var wsUri = "ws://192.168.0.103";
+    var wsUri = "ws://192.168.173.196";
     var output;
+	var connected = 0;
+	var messageToSend = "";
 
     function init() {
         output = document.getElementById("output");
@@ -28,7 +48,11 @@
 
     function onOpen(evt) {
         writeToScreen("CONNECTED");
-        doSend("INTY:" + 255);
+		connected = 1;
+		if(messageToSend)
+		{
+			doSend(messageToSend);
+		}
     }
 	
 	function onIntensity() 
@@ -43,12 +67,13 @@
 	}
 
     function onClose(evt) {
+		connected = 0;
         writeToScreen("DISCONNECTED");
     }
 
     function onMessage(evt) {
         writeToScreen('<span style="color: blue;">RESPONSE: ' + evt.data + '</span>');
-        websocket.close();
+        //websocket.close();
     }
 
     function onError(evt) {
@@ -56,8 +81,17 @@
     }
 
     function doSend(message) {
-        writeToScreen("SENT: " + message);
-        websocket.send(message);
+		if(!connected)
+		{
+			writeToScreen("RECONNECT");
+			messageToSend = message;
+			testWebSocket();
+		}
+		else
+		{
+			writeToScreen("SENT: " + message);
+			websocket.send(message);
+		}
     }
 
     function writeToScreen(message) {
@@ -66,14 +100,24 @@
         pre.innerHTML = message;
         output.appendChild(pre);
     }
+	
+	function clearLog()
+	{
+		output.innerHTML = "";
+	}
+	
     window.addEventListener("load", init, false);
 </script>
 
 <h2>Dimmer</h2>
 <div> 
+<div style="float: left;">
+	<input oninput="onIntensityMove()" onchange="onIntensity()" type="range" id="intensity" min="0" max="255" step="1" value="0"/>
+	<div id="intyVal">0</div>
+	<div style="background-color:#cccccc" onclick="clearLog()">Clear Log</div>
+</div>
+<div id="outputContainer">
+	<div id="output" ></div>
+</div>
 
-<input oninput="onIntensityMove()" onchange="onIntensity()" type="range" id="intensity" min="0" max="255" step="1" value="0"/>
-<div id="intyVal">0</div>
-
-<div id="output" style="border:1px;width:200px;background-color: #dddddd;"></div>
 </div>
