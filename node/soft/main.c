@@ -32,7 +32,6 @@ volatile tRGB gColorPallette[NUM_COLORS] = //g r b
 };
 
 
-
 void initHw()
 {
 	initSysTimer();
@@ -51,6 +50,8 @@ void initHw()
 	led_init();
 	
 	relay_init();
+	
+	light_init();
 
 	//enable and reset RBG led
 	DDRD |= 1<<4;
@@ -122,15 +123,13 @@ void sendColorIndex(uint8_t color)
 }
 
 
+
 int main(void)
 {
-	uint8_t loopDelay = 30;
-	uint8_t curColorIndex = 1;
+	const uint8_t loopDelay = 30;
 	uint8_t payLoad[64] = {0};
 	uint8_t len = 0;
 	uint8_t i;
-	
-	uint8_t dim = 190, dim_target=190;
 	
 	unsigned long curTime = millis();
 
@@ -138,42 +137,17 @@ int main(void)
 	
 	debugf(" System Init OK\n");
 	
-	ws2812_setleds((tRGB*)&gColorPallette[curColorIndex], 1);
-	
-	//preheat
-	//relay_setDim(dim);
-	//_delay_ms(1000);
-	
+	ws2812_setleds((tRGB*)&gColorPallette[1], 1);
+		
+	radio_startListening();
 	
 	do
 	{	
-		
-		/*++dim_hold;
-		if(dim_hold > 5)
-		{
-			dim_hold = 0;
-
-		}*/
-		
-		if(dim < dim_target)
-		{
-			++dim;
-		}
-		else if(dim > dim_target)
-		{
-			--dim;
-		}
-		relay_setDim(dim);
+		light_loop();
 		
 		if(millis() - curTime > CYCLE_PERIOD_MS)
 		{
-			debugf("Relay. num:%d switch:%d per:%d ignor:%d dim:%d\n", 
-				relay_getNumCrosses(), relay_getNumSwitches(), 
-				relay_getLastPeriod(), relay_getIgnoredPulses, dim);
-
 			curTime = millis();
-			//sendColorIndex(curColorIndex);
-
 			led_change();
 		}
 		
@@ -185,50 +159,21 @@ int main(void)
 		{
 			len = 0;
 		}
-		
+
 		if(len != 0)
 		{
 			debugf("ARX(%d): ", len);
-			
+
 			for ( i = 0; i < len; ++i) 
 			{	
-				debugf("%c", (char) payLoad[i]);
+				debugf("%x ", 0xFF & payLoad[i]);
 			}
-			
+
 			debugf("\n");
-			
-			if( len == 3 && payLoad[0] == 'I' && payLoad[1] == ':' )
-			{
-				i = payLoad[2]; 
-				debugf("Ity:%u\n", i);
-				dim_target = i;
-			}
-			
-			debugf("REPLY: ");
-			if(!radio_sendPacketSimple(2, (unsigned char*)"OK"))
-			{
-				debugf("ERR\n");
-			}
-			else
-			{
-				debugf("OK\n");
-			}
-		}
-		
-		switch(keyPress())
-		{
-			case NotPressed:
-			break;
-			
-			case ShortPress:
-				debugf("ShortPress\n");
-				//curColorIndex = (curColorIndex + 1) % NUM_COLORS;
-				//ws2812_setleds((tRGB*)&gColorPallette[curColorIndex], 1);
-			break;
-			
-			case LongPress:
-				debugf("LongPress\n");
-			break;
+
+			light_processPkg(payLoad, len);
+	
+			radio_startListening();
 		}
 		
 		_delay_ms(loopDelay);

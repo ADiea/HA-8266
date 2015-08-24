@@ -76,84 +76,156 @@ static void mainLoop(void);
 			clients[i].sendString("New ws conn! Total: " + String(totalActiveSockets));
 	}
 
+	bool parseWsPacket(const String& message)
+	{
+		const char* msg =  message.c_str();
 
+		static uint8_t sequence = 0;
+
+		byte pkg[64] = {0};
+		byte len = 0;
+		bool result = false;
+		bool retVal = false;
+
+		if(strncmp(msg, "INTY:", 5))
+		{
+			return false;
+		}
+
+		int intensity = 0;
+		int ontime_min = 0;
+		int ontime_sec = 0;
+		int dimspeed = 0;
+		int minValue = 0;
+		int manual = 0;
+
+		len = 5;
+		while(msg[len] >= '0' && msg[len] <='9')
+		{
+			intensity = intensity *10 + msg[len] - '0';
+			++len;
+		}
+		++len;
+		while(msg[len] >= '0' && msg[len] <='9')
+		{
+			ontime_min = ontime_min *10 + msg[len] - '0';
+			++len;
+		}
+		++len;
+		while(msg[len] >= '0' && msg[len] <='9')
+		{
+			ontime_sec = ontime_sec *10 + msg[len] - '0';
+			++len;
+		}
+		++len;
+		while(msg[len] >= '0' && msg[len] <='9')
+		{
+			dimspeed = dimspeed *10 + msg[len] - '0';
+			++len;
+		}
+		++len;
+		while(msg[len] >= '0' && msg[len] <='9')
+		{
+			minValue = minValue *10 + msg[len] - '0';
+			++len;
+		}
+		++len;
+		if(msg[len] == 't' || msg[len] == 'T')
+			manual = 1;
+		else
+			manual = 0;
+
+		LOG(INFO, "WS intensity:%u min:%u s:%u speed:%u manual:%u min:%u\n",
+				intensity, ontime_min, ontime_sec, dimspeed, manual, minValue);
+
+		/* radio send */
+		if(radio)
+		{
+			if(gRadioBusy)
+			{
+				LOG(INFO, "Radio busy\n");
+			}
+			else
+			{
+				gRadioBusy = 1;
+
+				#define DIMMER_ID 0x01
+				#define MY_ID 0xFF
+
+				/*PKG intensity
+				[address 1B]
+				[pgk_type==PKG_TYPE_INTENSITY 1B]
+				[intensity 1B]
+				[on duration(s)= min 4b + sec*4 4b 1B]
+				[flags 4b fadeSpeed 4b]
+				[minValue 1B]
+				[sequence 1B]
+				[checksum 1B]
+				*/
+				#define PKG_INTENSITY_LEN 0x08
+
+				#define PKG_TYPE_INVALID 0x00
+				#define PKG_TYPE_ACK 0x01
+				#define PKG_TYPE_INTENSITY 0x02
+
+				#define PKG_MANUAL_FLAG 0x80
+
+				pkg[0] = DIMMER_ID;
+				pkg[1] = PKG_TYPE_INTENSITY;
+				pkg[2] = intensity;
+				pkg[3] = ((ontime_min << 4) & 0xF0) | (0xF & (ontime_sec >> 2));
+				pkg[4] = dimspeed & 0xF;
+				if(manual)
+					pkg[4] |= PKG_MANUAL_FLAG;
+				pkg[5] = minValue;
+				pkg[6] = ++sequence;
+
+				pkg[7] = (pkg[0] + pkg[1] + pkg[2] + pkg[3] + pkg[4] + pkg[5]+ pkg[6]) & 0xFF;
+
+				result = radio->sendPacket(PKG_INTENSITY_LEN,
+						pkg,
+						true,
+						manual ? RADIO_WAIT_ACK_MS : 2 * RADIO_WAIT_ACK_MS,
+						&len,
+						pkg);
+
+				gRadioBusy = 0;
+
+				if(!result || len > 64)
+				{
+					LOG(INFO," ERR!");
+				}
+				else
+				{
+					LOG(INFO," SENT! SYNC RX (%d):", len);
+
+					for (byte i = 0; i < len; ++i)
+					{
+						LOG(INFO, "%x ", pkg[i]);
+					}
+
+					LOG(INFO,"\n");
+					retVal = true;
+				}
+			}
+		}
+		else
+		{
+			LOG(INFO, "Radio not inited\n");
+		}
+
+		return retVal;
+	}
 
 
 	void wsMessageReceived(WebSocket& socket, const String& message)
 	{
-		const char* msg =  message.c_str();
+		LOG(INFO, "WS message received:%s\n", message.c_str());
 
-		LOG(INFO, "WS message received:%s\n", msg);
-
-		int intensity = 0;
-
-		byte payLoad[64] = {0};
-		byte len = 0;
-		bool result;
-
-		byte pkgIntensity[] = "I:#";
-
-		if(strlen(msg) > 5 )
-		{
-			len = 5;
-			while(msg[len] >= '0' && msg[len] <='9')
-			{
-				intensity = intensity *10 + msg[len] - '0';
-				++len;
-			}
-
-			LOG(INFO, "WS intensity:%u\n", intensity);
-
-
-			/* radio send */
-			if(radio)
-			{
-				if(gRadioBusy)
-				{
-					LOG(INFO, "Radio busy\n");
-				}
-				else
-				{
-					gRadioBusy = 1;
-
-					pkgIntensity[2] = (byte)intensity;
-
-					result = radio->sendPacket(3,
-							pkgIntensity,
-							true,
-							RADIO_WAIT_ACK_MS,
-							&len,
-							payLoad);
-
-					gRadioBusy = 0;
-
-					if(!result || len > 64)
-					{
-						LOG(INFO," ERR!");
-					}
-					else
-					{
-						LOG(INFO," SENT! SYNC RX (%d):", len);
-
-						for (byte i = 0; i < len; ++i)
-						{
-							LOG(INFO,"%c", ((char) payLoad[i]));
-						}
-
-						LOG(INFO,"\n");
-					}
-
-				}
-			}
-			else
-			{
-				LOG(INFO, "Radio not inited\n");
-			}
-
-		}
-
-		String response = "Echo: " + message;
-		socket.sendString(response);
+		if(parseWsPacket(message))
+			socket.sendString("OK");
+		else
+			socket.sendString("ERROR");
 	}
 
 	void wsBinaryReceived(WebSocket& socket, uint8_t* data, size_t size)
@@ -233,10 +305,10 @@ void initSystem()
 	//enable and config Radio, then disable
 	enableDev(DEV_RADIO, ENABLE | CONFIG);
 	//enableDev(DEV_RADIO, DISABLE);
-/*
+
 	//start listening for incoming packets
-	radio->startListening();
-*/
+	if(radio)
+		radio->startListening();
 
 	//setup Wifi
 	enableDev(DEV_WIFI, ENABLE | CONFIG);
@@ -315,9 +387,47 @@ static void mainLoop()
 {
 	devRGB_setColor(COLOR_RED);
 	uint32_t tick1, tick2;
-/*
+
+	byte pkg[64] = {0};
+	byte len = 0;
+
 	LOG(INFO, SystemClock.getSystemTimeString().c_str());
 	LOG(INFO, ",");
+
+	if(radio && !gRadioBusy)
+	{
+		if(radio->isPacketReceived())
+		{
+			radio->getPacketReceived(&len, pkg);
+
+			LOG(INFO,"ASYNC RX (%d):", len);
+
+			for (byte i = 0; i < len; ++i)
+			{
+				LOG(INFO, "%x ", pkg[i]);
+			}
+
+			if(len == 5)
+			{
+				if(pkg[1] == 3)
+				{
+					WebSocketsList &clients = server.getActiveWebSockets();
+					if(pkg[3] == 0x01)
+					{
+						LOG(INFO,"MOVEMENT ON");
+						for (int i = 0; i < clients.count(); i++)
+							clients[i].sendString("MOVEMENT ON");
+					}
+					else if(pkg[3] == 0x02)
+					{
+						LOG(INFO,"MOVEMENT OFF");
+						for (int i = 0; i < clients.count(); i++)
+							clients[i].sendString("MOVEMENT OFF");
+					}
+				}
+			}
+		}
+	}
 
 	tick1 = system_get_time();
 	uint8_t errTemp = devDHT22_read(gLastTempHumid);
@@ -340,7 +450,7 @@ static void mainLoop()
 		devDHT22_comfortRatio();
 		LOG(INFO, "\n");
 	}
-*/
+
 	devRGB_setColor(COLOR_GREEN);
 	WDT.alive();
 }

@@ -14,6 +14,8 @@ volatile uint16_t g_ignoredPulses = 0;
 
 #define TIME_GUARD 100
 
+#define RELAY_OFF 0xFFFF
+
 volatile uint16_t g_delayActivation = TIME_SEMILOOP - TIME_GUARD;
 #define TIME_KEEP_ON 50
 #define TIME_SAMPLE 10
@@ -128,8 +130,15 @@ ISR(INT1_vect)
 		
 		++g_numCrosses;
 		
-		g_relayState = RL_STATE_SAMPLE;
-		startTimer1(TIME_SAMPLE);
+		if(g_delayActivation != RELAY_OFF)
+		{
+			g_relayState = RL_STATE_SAMPLE;
+			startTimer1(TIME_SAMPLE);
+		}
+		else
+		{
+			PORTB &= ~(1<<2); //force tyristor off
+		}
 	}
 	else
 	{
@@ -156,7 +165,7 @@ dim = 255 - dim;
 	
 while(g_relayState != RL_STATE_IDLE);
 	
-	g_delayActivation =  (((uint32_t)dim * (TIME_SEMILOOP - TIME_GUARD))) >> 8;
+	g_delayActivation =  (dim == 255) ? RELAY_OFF : ((((uint32_t)dim * (TIME_SEMILOOP - TIME_GUARD))) >> 8);
 	
 	//debugf("\ndim=%u -> %u ", dim, g_delayActivation);
 }

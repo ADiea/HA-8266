@@ -1,5 +1,7 @@
 #include "main.h"
 
+#define DEBUG_UART 1
+
 #define BAUD 38400
 #define BAUDVAL ((F_CPU)/(BAUD*16UL)-1)
 
@@ -32,6 +34,7 @@ int m_vsnprintf(char *buf, uint32_t maxLen, const char *fmt, va_list args);
 
 int debugf(const char *fmt, ...)
 {
+#if DEBUG_UART
 	char buf[MPRINTF_BUF_SIZE], *p;
 	va_list args;
 	int n = 0;
@@ -49,6 +52,9 @@ int debugf(const char *fmt, ...)
 	}
 
 	return n;
+#else
+	return 0;
+#endif	
 }
 
 int m_vsnprintf(char *buf, uint32_t maxLen, const char *fmt, va_list args)

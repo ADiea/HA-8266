@@ -158,7 +158,7 @@ void radio_setCommsSignature(uint16_t signature) {
 	ChangeRegister(REG_CHECK_HEADER2, (_packageSign & 0xFF)); // header (signature) byte 2 val for receive checks
 
 #if DEBUG_SI4432
-	debugf("Package signature is set!");
+	debugf("pkg sig set");
 #endif
 }
 
@@ -251,7 +251,7 @@ void radio_getPacketReceived(uint8_t* length, byte* readData) {
 
 	*length = ReadRegister(REG_RECEIVED_LENGTH);
 
-	if(!(*length) && *length <= 64)
+	if((*length) && *length <= 64)
 	{
 		BurstRead(REG_FIFO, readData, *length);
 	}
@@ -374,13 +374,13 @@ bool radio_isPacketReceived() {
 
 	if (intStat2 & 0x40) { //interrupt occured, check it && read the Interrupt Status1 register for 'preamble '
 
-		debugf("Valid Preamb %x\n", intStat2);
+		debugf("Preamb OK %x\n", intStat2);
 
 	}
 
 	if (intStat2 & 0x80) { //interrupt occured, check it && read the Interrupt Status1 register for 'preamble '
 
-		debugf("Valid sync %x\n", intStat2);
+		debugf("Sync OK %x\n", intStat2);
 
 	}
 #else
@@ -461,7 +461,7 @@ void static switchMode(byte mode) {
 #if DEBUG_SI4432
 	_delay_ms(1);
 	byte val = ReadRegister(REG_DEV_STATUS);
-	debugf("DEV STAT:%x\n", val);
+	debugf("R STAT:%x\n", val);
 #endif
 }
 

@@ -15,5 +15,6 @@
 #include "systimer.h"
 #include "led.h"
 #include "relay.h"
+#include "light.h"
 
 #endif /*_MAIN__H*/

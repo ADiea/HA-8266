@@ -20,12 +20,13 @@
 }
 </style>
 <script language="javascript" type="text/javascript">
-    var wsUri = "ws://192.168.173.196";
+    var wsUri = "ws://192.168.0.102";
     var output;
 	var connected = 0;
 	var messageToSend = "";
 
     function init() {
+		onUpdateControls();
         output = document.getElementById("output");
         testWebSocket();
     }
@@ -55,15 +56,31 @@
 		}
     }
 	
-	function onIntensity() 
+	function onSendCommand() 
 	{
-        var x = document.getElementById("intensity");
-		doSend("INTY:" + x.value);
+		var timeon = document.getElementById("ontime").value;
+		var min = Math.floor(timeon/60);
+		var sec = timeon - min*60;
+		
+		doSend("INTY:" + document.getElementById("intensity").value + ";" +
+						 min + ";" +
+						 sec + ";" +
+						 document.getElementById("speedfade").value + ";" +
+						 document.getElementById("minValue").value + ";" +
+						 document.getElementById("manualChange").checked );
     }
 	
-	function onIntensityMove() 
+	function onUpdateControls() 
 	{
+		var timeon = document.getElementById("ontime").value;
+		var min = Math.floor(timeon/60);
+		var sec = timeon - min*60;
+		
 		document.getElementById("intyVal").innerHTML = document.getElementById("intensity").value;
+		document.getElementById("timeonVal").innerHTML = timeon + " (" +min + ":" + sec + ")";
+		document.getElementById("speedfadeVal").innerHTML = document.getElementById("speedfade").value;
+		document.getElementById("minValueTxt").innerHTML = document.getElementById("minValue").value;
+		
 	}
 
     function onClose(evt) {
@@ -80,7 +97,10 @@
         writeToScreen('<span style="color: red;">ERROR:</span> ' + evt.data);
     }
 
-    function doSend(message) {
+    function doSend(message) 
+	{
+		writeToScreen("SEND:" + message);
+	
 		if(!connected)
 		{
 			writeToScreen("RECONNECT");
@@ -89,7 +109,7 @@
 		}
 		else
 		{
-			writeToScreen("SENT: " + message);
+			writeToScreen("SENT!");
 			websocket.send(message);
 		}
     }
@@ -112,8 +132,32 @@
 <h2>Dimmer</h2>
 <div> 
 <div style="float: left;">
-	<input oninput="onIntensityMove()" onchange="onIntensity()" type="range" id="intensity" min="0" max="255" step="1" value="0"/>
-	<div id="intyVal">0</div>
+
+	<div style="border: solid 1px #999999; margin:5px;">
+		<div style="float: left; margin-right:10px;"> Intensity</div> <div id="intyVal">0</div>
+		<div> <input oninput="onUpdateControls()" onchange="onSendCommand()" type="range" id="intensity" min="0" max="255" step="1" value="0"/> </div>
+	</div>
+	
+	<div style="border: solid 1px #999999; margin:5px;">
+		<div style="float: left; margin-right:10px;"> On Time (s)</div> <div id="timeonVal">4</div>
+		<div> <input oninput="onUpdateControls()" onchange="onSendCommand()" type="range" id="ontime" min="4" max="956" step="4" value="4"/> </div>
+	</div>
+
+	<div style="border: solid 1px #999999; margin:5px;">
+		<div style="float: left; margin-right:10px;"> Fade Speed</div> <div id="speedfadeVal">1</div>
+		<div> <input oninput="onUpdateControls()" onchange="onSendCommand()" type="range" id="speedfade" min="1" max="15" step="1" value="1"/> </div>
+	</div>		
+
+	<div style="border: solid 1px #999999; margin:5px;">
+		<div style="float: left; margin-right:10px;"> Min Value</div> <div id="minValueTxt">30</div>
+		<div> <input oninput="onUpdateControls()" onchange="onSendCommand()" type="range" id="minValue" min="1" max="255" step="1" value="30"/> </div>
+	</div>	
+	
+	<div style="border: solid 1px #999999; margin:5px;">
+		<div style="float: left; margin-right:10px;"> Manual</div>
+		<div> <input type="checkbox" id="manualChange" onchange="onSendCommand()"/> </div>
+	</div>		
+	
 	<div style="background-color:#cccccc" onclick="clearLog()">Clear Log</div>
 </div>
 <div id="outputContainer">

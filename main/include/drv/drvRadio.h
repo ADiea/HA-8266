@@ -5,7 +5,7 @@
 #include <SmingCore/SmingCore.h>
 #include <Libraries/si4432/si4432.h>
 
-#define RADIO_WAIT_ACK_MS 100
+#define RADIO_WAIT_ACK_MS 150
 
 uint8_t devRadio_init(uint8_t operation);
 
