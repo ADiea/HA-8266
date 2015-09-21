@@ -87,6 +87,21 @@ static void mainLoop(void);
 		bool result = false;
 		bool retVal = false;
 
+		/***
+
+		StaticJsonBuffer<200> jsonBuffer;
+
+		JsonObject& root = jsonBuffer.parseObject(msg);
+
+		if (!root.success())
+		{
+			LOG(ERR,"parseObject() failed");
+			return false
+			;
+		}
+
+		***/
+
 		if(strncmp(msg, "INTY:", 5))
 		{
 			return false;
@@ -221,6 +236,8 @@ static void mainLoop(void);
 	void wsMessageReceived(WebSocket& socket, const String& message)
 	{
 		LOG(INFO, "WS message received:%s\n", message.c_str());
+
+		socket.sendString("[\"user joined\",{\"username\":\""+system_get_free_heap_size()+ message +"\",\"numUsers\":32116}]");
 
 		if(parseWsPacket(message))
 			socket.sendString("OK");
@@ -391,8 +408,8 @@ static void mainLoop()
 	byte pkg[64] = {0};
 	byte len = 0;
 
-	LOG(INFO, SystemClock.getSystemTimeString().c_str());
-	LOG(INFO, ",");
+	//LOG(INFO, SystemClock.getSystemTimeString().c_str());
+	//LOG(INFO, ",");
 
 	if(radio && !gRadioBusy)
 	{
@@ -440,15 +457,15 @@ static void mainLoop()
 	{
 		//LOG(INFO, "%f H:%f T:%f\n", 3.14f, gLastTempHumid.humid, gLastTempHumid.temp);
 		//Serial.print(gLastTempHumid.humid);
-		LOG(INFO, ",");
+		//LOG(INFO, ",");
 
 		//Serial.print(gLastTempHumid.temp);
-		LOG(INFO, ",%lu", tick2 - tick1);
+		//LOG(INFO, ",%lu", tick2 - tick1);
 
-		devDHT22_heatIndex();
+		/*devDHT22_heatIndex();
 		devDHT22_dewPoint();
 		devDHT22_comfortRatio();
-		LOG(INFO, "\n");
+		LOG(INFO, "\n");*/
 	}
 
 	devRGB_setColor(COLOR_GREEN);
