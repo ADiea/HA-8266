@@ -6,6 +6,7 @@
 
 #include "debug.h"
 #include "device.h"
+#include "commWeb.h"
 
 /*
  The following 2 defines are present in wifipass.h
@@ -237,12 +238,9 @@ static void mainLoop(void);
 	{
 		LOG(INFO, "WS message received:%s\n", message.c_str());
 
-		socket.sendString("[\"user joined\",{\"username\":\""+system_get_free_heap_size()+ message +"\",\"numUsers\":32116}]");
+		//socket.sendString("[\"user joined\",{\"username\":\""+system_get_free_heap_size()+ message +"\",\"numUsers\":32116}]");
 
-		if(parseWsPacket(message))
-			socket.sendString("OK");
-		else
-			socket.sendString("ERROR");
+		cwReceivePacket(socket, message.c_str());
 	}
 
 	void wsBinaryReceived(WebSocket& socket, uint8_t* data, size_t size)

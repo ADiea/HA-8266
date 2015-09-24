@@ -4,8 +4,145 @@
 #include "commWeb.h"
 
 #define is_digit(c) ((c) >= '0' && (c) <= '9')
+#define PKG_BUF_SIZE 256
 
-bool skipInt(char **s, int *dest)
+static bool skipInt(char **s, int *dest);
+static bool skipFloat(char **s, float *dest);
+static bool skipString(char** s, char* dest, uint32_t destLen);
+
+char scrapPackage[PKG_BUF_SIZE];
+
+int cwMakePackage(const char *fmt, ...)
+{
+	char *p;
+	va_list args;
+	int n = 0;
+
+	va_start(args, fmt);
+	m_vsnprintf(scrapPackage, sizeof(scrapPackage), fmt, args);
+	va_end(args);
+hjhgfjh
+	p = buf;
+	while (*p)
+	{
+		cbc_printchar(*p);
+		n++;
+		p++;
+	}
+
+	return n;
+}
+
+bool respondWithError(WebSocket& socket, eCommWebErrorCodes err)
+{
+	socket.sendString();
+	//socket.sendString("[\"user joined\",{\"username\":\""+system_get_free_heap_size()+ message +"\",\"numUsers\":32116}]");
+
+
+}
+
+bool handle_cwErrorHandler(WebSocket& socket, char **pkt)
+{
+	LOG(ERR, "Invalid pktId RXed");
+}
+
+bool handle_cwGetLights(WebSocket& socket, char **pkt)
+{
+}
+
+bool handle_cwSetLightParams(WebSocket& socket, char **pkt)
+{
+}
+
+bool handle_cwGetTHs(WebSocket& socket, char **pkt)
+{
+}
+
+bool handle_cwSetTHParams(WebSocket& socket, char **pkt)
+{
+}
+
+bool handle_cwGetConfortStatus(WebSocket& socket, char **pkt)
+{
+}
+
+bool handle_cwGetRadioFMs(WebSocket& socket, char **pkt)
+{
+}
+
+bool handle_cwSetRadioFMParams(WebSocket& socket, char **pkt)
+{
+}
+
+bool handle_cwGetMovements(WebSocket& socket, char **pkt)
+{
+}
+
+bool handle_cwSetMovementParams(WebSocket& socket, char **pkt)
+{
+}
+
+
+
+bool (*gCWHandlers[cwMaxId])(WebSocket&, char**) =
+{
+	handle_cwErrorHandler,
+
+	handle_cwGetLights,
+	handle_cwErrorHandler,
+	handle_cwSetLightParams,
+	handle_cwErrorHandler,
+
+	handle_cwGetTHs,
+	handle_cwErrorHandler,
+	handle_cwSetTHParams,
+	handle_cwGetConfortStatus,
+	handle_cwErrorHandler,
+	handle_cwErrorHandler,
+
+	handle_cwGetRadioFMs,
+	handle_cwErrorHandler,
+	handle_cwSetRadioFMParams,
+
+	handle_cwGetMovements,
+	handle_cwErrorHandler,
+	handle_cwSetMovementParams,
+	handle_cwErrorHandler,
+
+};
+
+bool cwReceivePacket(WebSocket& socket, const char* pkt)
+{
+	bool retVal = false;
+
+	char *sPkt = (char*)pkt;
+
+	int pktId;
+
+	LOG(INFO, "Received Pkt ID: %d", pktId);
+
+	if (!skipInt(&sPkt, &pktId))
+	{
+		LOG(ERR, "cwReceivePacket: Cannot get Pkt ID");
+	}
+	else
+	{
+		if(pktId >=  cwMaxId)
+		{
+			LOG(ERR, "cwReceivePacket: Bad pkt ID rx: %d", pktId);
+		}
+		else
+		{
+			retVal = gCWHandlers[pktId](socket, &sPkt);
+		}
+	}
+
+	return retVal;
+}
+
+// static functions
+
+static bool skipInt(char **s, int *dest)
 {
 	int i = 0;
 	bool bSign = false;
@@ -37,13 +174,16 @@ bool skipInt(char **s, int *dest)
 	return true;
 }
 
-bool skipFloat(char **s, float *dest)
+static bool skipFloat(char **s, float *dest)
 {
-	int intPart = skipInt(s);
+	int intPart;
 
 	uint8_t level = 1, idx;
 
 	float f = 0, digit;
+
+	if(!skipInt(s, &intPart))
+		return false;
 
 	if(**s == '.')
 	{
@@ -89,12 +229,12 @@ bool skipFloat(char **s, float *dest)
 	return true;
 }
 
-bool skipString(char** s, char* dest, uint32_t destLen)
+static bool skipString(char** s, char* dest, uint32_t destLen)
 {
 	if(**s == ';')
 	{
 		LOG(ERR, "skipString: null string");
-		*dest = NULL;
+
 		return false;
 	}
 
@@ -118,93 +258,4 @@ bool skipString(char** s, char* dest, uint32_t destLen)
 	}
 
 	return true;
-}
-
-bool handle_cwErrorHandler(char *pkt)
-{
-	LOG(ERR, "Invalid pktId RXed");
-}
-
-bool handle_cwGetLights(char *pkt)
-{
-}
-
-bool handle_cwSetLightParams(char *pkt)
-{
-}
-
-bool handle_cwGetTHs(char *pkt)
-{
-}
-
-bool handle_cwSetTHParams(char *pkt)
-{
-}
-
-bool handle_cwGetConfortStatus(char *pkt)
-{
-}
-
-bool handle_cwGetRadioFMs(char *pkt)
-{
-}
-
-bool handle_cwSetRadioFMParams(char *pkt)
-{
-}
-
-bool handle_cwGetMovements(char *pkt)
-{
-}
-
-bool handle_cwSetMovementParams(char *pkt)
-{
-}
-
-
-
-bool (*gCWHandlers[cwMaxId])(char*) =
-{
-	handle_cwErrorHandler,
-
-	handle_cwGetLights,
-	handle_cwErrorHandler,
-	handle_cwSetLightParams,
-	handle_cwErrorHandler,
-
-	handle_cwGetTHs,
-	handle_cwErrorHandler,
-	handle_cwSetTHParams,
-	handle_cwGetConfortStatus,
-	handle_cwErrorHandler,
-	handle_cwErrorHandler,
-
-	handle_cwGetRadioFMs,
-	handle_cwErrorHandler,
-	handle_cwSetRadioFMParams,
-
-	handle_cwGetMovements,
-	handle_cwErrorHandler,
-	handle_cwSetMovementParams,
-	handle_cwErrorHandler,
-
-};
-
-bool cwReceivePacket(char* pkt)
-{
-	bool retVal = false;
-	uint32_t pktId;
-
-	LOG(INFO, "Received Pkt ID: %d", pktId);
-
-	if(pktId >=  cwMaxId)
-	{
-		LOG(ERR, "Bad pkt ID rx: %d", pktId);
-	}
-	else
-	{
-		retVal = gCWHandlers[gCWHandlers]();
-	}
-
-	return retVal;
 }

@@ -6,6 +6,7 @@
 enum eCommWebErrorCodes
 {
 	cwErrSuccess,
+	cwNotImplemented,
 	cwErrInvalidID,
 	cwErrDeviceDoesNotAnswer,
 	cwErrInvalidCommandParams,
@@ -43,6 +44,6 @@ enum eCommWebMsgTYpes
 
 };
 
-bool cwReceivePacket(char* pkt);
+bool cwReceivePacket(WebSocket& socket, const char* pkt);
 
 #endif
