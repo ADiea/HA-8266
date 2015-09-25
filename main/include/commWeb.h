@@ -7,7 +7,9 @@ enum eCommWebErrorCodes
 {
 	cwErrSuccess,
 	cwNotImplemented,
-	cwErrInvalidID,
+	cwErrInvalidPacketID,
+	cwErrFunctionNotImplemented,
+	cwErrInvalidDeviceID,
 	cwErrDeviceDoesNotAnswer,
 	cwErrInvalidCommandParams,
 };

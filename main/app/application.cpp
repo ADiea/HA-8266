@@ -33,38 +33,30 @@ static inline unsigned get_ccount(void)
 
 static void mainLoop(void);
 
-	Timer tmrMainLoop;
-#define LOOP_TIME (3*ONE_SECOND)
+Timer tmrMainLoop;
+#define LOOP_TIME (3 * ONE_SECOND)
 
 #if DEBUG_BUILD
-	#define HEART_BEAT (5*ONE_SECOND)
+	#define HEART_BEAT (60 * ONE_SECOND)
 	Timer tmrHeartBeat;
 
 	static void heartbeat_cb(void)
 	{
-		//Serial.print("Local Time    : ");
-		//Serial.print(SystemClock.getSystemTimeString());
-		//Serial.print(" UTC Time: ");
-		//Serial.print(SystemClock.getSystemTimeString(eTZ_UTC));
-
-		LOG(INFO, "\nHeap: %ld\r\n", system_get_free_heap_size());
-
-		//LOG(INFO, "\r\n");
+		LOG(INFO, "\n%s Heap: %ld\r\n",
+				SystemClock.getSystemTimeString().c_str(),
+				system_get_free_heap_size());
 	}
 #endif /*DEBUG_BUILD*/
-
 
 	uint32_t totalActiveSockets=0;
 	void onIndex(HttpRequest &request, HttpResponse &response)
 	{
-		response.sendString("Welcome");
-		//response.forbidden();
+		response.sendString("Bad Request");
 	}
 
 	void onFile(HttpRequest &request, HttpResponse &response)
 	{
-		response.sendString("Welcome");
-		//response.notFound();
+		response.sendString("Bad Request");
 	}
 
 	void wsConnected(WebSocket& socket)
@@ -238,8 +230,6 @@ static void mainLoop(void);
 	{
 		LOG(INFO, "WS message received:%s\n", message.c_str());
 
-		//socket.sendString("[\"user joined\",{\"username\":\""+system_get_free_heap_size()+ message +"\",\"numUsers\":32116}]");
-
 		cwReceivePacket(socket, message.c_str());
 	}
 
@@ -303,30 +293,7 @@ void connectFail()
 
 void initSystem()
 {
-	enableDev(DEV_UART, ENABLE | CONFIG);
-
-	//setup SDCard and load custom system settings, then disable SDCard
-	enableDev(DEV_SDCARD, ENABLE | CONFIG);
-	//enableDev(DEV_SDCARD, DISABLE);
-
-	//DHT22 periodically enabled to read data
-	enableDev(DEV_DHT22, ENABLE | CONFIG);
-
-	enableDev(DEV_MQ135, ENABLE | CONFIG);
-
-	//RGB periodically enabled to send data
-	enableDev(DEV_RGB, DISABLE);
-
-	//enable and config Radio, then disable
-	enableDev(DEV_RADIO, ENABLE | CONFIG);
-	//enableDev(DEV_RADIO, DISABLE);
-
-	//start listening for incoming packets
-	if(radio)
-		radio->startListening();
-
-	//setup Wifi
-	enableDev(DEV_WIFI, ENABLE | CONFIG);
+	initDevices();
 }
 
 
@@ -335,11 +302,11 @@ void startSystem()
 {
 
 #if DEBUG_BUILD
-	//tmrHeartBeat.initializeUs(HEART_BEAT, heartbeat_cb).start();
+	tmrHeartBeat.initializeUs(HEART_BEAT, heartbeat_cb).start();
 
-#define CASE(x) case x: \
-					LOG(INFO, #x); \
-					break;
+	#define CASE(x) case x: \
+		LOG(INFO, #x); \
+		break;
 
 	LOG(INFO, "Reset: ");
 	rst_info* rstInfo = system_get_rst_info();
@@ -406,7 +373,7 @@ static void mainLoop()
 	byte pkg[64] = {0};
 	byte len = 0;
 
-	//LOG(INFO, SystemClock.getSystemTimeString().c_str());
+	//
 	//LOG(INFO, ",");
 
 	if(radio && !gRadioBusy)

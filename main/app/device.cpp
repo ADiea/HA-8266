@@ -1,5 +1,9 @@
 #include "device.h"
 
+Vector<devLight> g_activeLights;
+Vector<devHeater> g_activeHeaters;
+Vector<devTempHumidSensor> g_activeTHs;
+
 unsigned short gDevicesState = 0x0000;
 
 struct devCtl
@@ -21,6 +25,42 @@ devCtl gDevices[] =
 };
 
 #define NUM_DEVICES (sizeof(gDevices)/sizeof(gDevices[0]))
+
+void initDevices()
+{
+	devTempHumidSensor localSensor;
+
+	enableDev(DEV_UART, ENABLE | CONFIG);
+
+
+	//setup SDCard and load custom system settings, then disable SDCard
+	enableDev(DEV_SDCARD, ENABLE | CONFIG);
+	//enableDev(DEV_SDCARD, DISABLE);
+
+
+	//DHT22 periodically enabled to read data
+	enableDev(DEV_DHT22, ENABLE | CONFIG);
+	g_activeTHs.addElement(localSensor);
+
+
+	enableDev(DEV_MQ135, ENABLE | CONFIG);
+
+
+	//RGB periodically enabled to send data
+	enableDev(DEV_RGB, DISABLE);
+
+
+	//enable and config Radio
+	enableDev(DEV_RADIO, ENABLE | CONFIG);
+
+	//start listening for incoming packets
+	if(radio)
+		radio->startListening();
+
+	//setup Wifi
+	enableDev(DEV_WIFI, ENABLE | CONFIG);
+
+}
 
 //TODO: test if GPIO pins correspond to HW layout
 void enableDev(unsigned short dev, uint8_t op)

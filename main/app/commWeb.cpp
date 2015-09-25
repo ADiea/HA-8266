@@ -12,77 +12,76 @@ static bool skipString(char** s, char* dest, uint32_t destLen);
 
 char scrapPackage[PKG_BUF_SIZE];
 
-int cwMakePackage(const char *fmt, ...)
+int snprintf(char* buf, uint32_t length, const char *fmt, ...)
 {
 	char *p;
 	va_list args;
 	int n = 0;
 
 	va_start(args, fmt);
-	m_vsnprintf(scrapPackage, sizeof(scrapPackage), fmt, args);
+	n = m_vsnprintf(buf, length, fmt, args);
 	va_end(args);
-hjhgfjh
-	p = buf;
-	while (*p)
-	{
-		cbc_printchar(*p);
-		n++;
-		p++;
-	}
 
 	return n;
 }
 
-bool respondWithError(WebSocket& socket, eCommWebErrorCodes err)
+bool reply_cwReplyToCommand(WebSocket& socket, eCommWebErrorCodes err)
 {
-	socket.sendString();
-	//socket.sendString("[\"user joined\",{\"username\":\""+system_get_free_heap_size()+ message +"\",\"numUsers\":32116}]");
-
-
+	int sizePkt = snprintf(scrapPackage, sizeof(scrapPackage), "%d;%d;", cwReplyToCommand, err);
+	socket.sendString(scrapPackage, sizePkt);
 }
 
 bool handle_cwErrorHandler(WebSocket& socket, char **pkt)
 {
 	LOG(ERR, "Invalid pktId RXed");
+	reply_cwReplyToCommand(socket, cwErrInvalidPacketID);
 }
 
 bool handle_cwGetLights(WebSocket& socket, char **pkt)
 {
+
+	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
 bool handle_cwSetLightParams(WebSocket& socket, char **pkt)
 {
+	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
 bool handle_cwGetTHs(WebSocket& socket, char **pkt)
 {
+	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
 bool handle_cwSetTHParams(WebSocket& socket, char **pkt)
 {
+	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
 bool handle_cwGetConfortStatus(WebSocket& socket, char **pkt)
 {
+	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
 bool handle_cwGetRadioFMs(WebSocket& socket, char **pkt)
 {
+	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
 bool handle_cwSetRadioFMParams(WebSocket& socket, char **pkt)
 {
+	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
 bool handle_cwGetMovements(WebSocket& socket, char **pkt)
 {
+	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
 bool handle_cwSetMovementParams(WebSocket& socket, char **pkt)
 {
+	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
-
-
 
 bool (*gCWHandlers[cwMaxId])(WebSocket&, char**) =
 {
