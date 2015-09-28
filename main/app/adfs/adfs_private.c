@@ -47,13 +47,13 @@ ErrCode readCurrentFilePage(FsFile *fsFile, unsigned short pageSize)
 							(FsPage*)(&(fsFile->filePtr.currentPageData)), pageSize);
 		if(FS_E_OK != _err)
 		{
-			LOG(ERR, "FS readCurrentFilePage: block 0x%x page 0x%x read fail: %d", fsFile->filePtr.currentBlock, fsFile->filePtr.currentPageAddr, _err);
+			LOG_E( "FS readCurrentFilePage: block 0x%x page 0x%x read fail: %d", fsFile->filePtr.currentBlock, fsFile->filePtr.currentPageAddr, _err);
 			break;
 		}
 		
 		if(!PAGE_VALID(fsFile->filePtr.currentPageData))
 		{
-			LOG(ERR, "FS readCurrentFilePage: block 0x%x page 0x%x INVALID", fsFile->filePtr.currentBlock, fsFile->filePtr.currentPageAddr);
+			LOG_E( "FS readCurrentFilePage: block 0x%x page 0x%x INVALID", fsFile->filePtr.currentBlock, fsFile->filePtr.currentPageAddr);
 			markBlockInMap(fsFile->filePtr.currentBlock, BLOCK_INVALID);
 			
 			if( 0 == fsFile->filePtr.currentPageAddr)
@@ -99,7 +99,7 @@ ErrCode writeCurrentFilePage(FsFile *fsFile)
 							
 		if(FS_E_OK != _err)
 		{
-			LOG(ERR, "FS writeCurrentFilePage: block 0x%x page 0x%x write fail: %d", fsFile->filePtr.currentBlock, fsFile->filePtr.currentPageAddr, _err);
+			LOG_E( "FS writeCurrentFilePage: block 0x%x page 0x%x write fail: %d", fsFile->filePtr.currentBlock, fsFile->filePtr.currentPageAddr, _err);
 			break;
 		}
 		
@@ -128,7 +128,7 @@ ErrCode markBlockInMap(BlockAddr block, uint8_t blockStatus)
 				
 				if(FS_E_OK != ret)
 				{
-					LOG(ERR, "FS %s: cannot write page [0x%x] corrupted: %d", _FUNCTION, _g_blockMapCachePageAddr, ret);
+					LOG_E( "FS %s: cannot write page [0x%x] corrupted: %d", _FUNCTION, _g_blockMapCachePageAddr, ret);
 					break;
 				}
 				
@@ -144,7 +144,7 @@ ErrCode markBlockInMap(BlockAddr block, uint8_t blockStatus)
 			
 			if(FS_E_OK != ret)
 			{
-				LOG(ERR, "FS %s: page [0x%x] corrupted: %d", _FUNCTION, neededPageAddr, ret);
+				LOG_E( "FS %s: page [0x%x] corrupted: %d", _FUNCTION, neededPageAddr, ret);
 				break;
 			}
 		}
@@ -193,7 +193,7 @@ ErrCode findUnusedBlock(BlockAddr* freeBlock)
 				
 				if(FS_E_OK != ret)
 				{
-					LOG(ERR, "FS findUnusedBlock: cannot write page [0x%x] corrupted: %d", g_blockMapCachePageAddr, ret);
+					LOG_E( "FS findUnusedBlock: cannot write page [0x%x] corrupted: %d", g_blockMapCachePageAddr, ret);
 					continue;
 				}
 				
@@ -209,7 +209,7 @@ ErrCode findUnusedBlock(BlockAddr* freeBlock)
 			
 			if(FS_E_OK != ret)
 			{
-				LOG(ERR, "FS findUnusedBlock: page [0x%x] corrupted: %d", neededPageAddr, ret);
+				LOG_E( "FS findUnusedBlock: page [0x%x] corrupted: %d", neededPageAddr, ret);
 				continue;
 			}
 		}
@@ -224,7 +224,7 @@ ErrCode findUnusedBlock(BlockAddr* freeBlock)
 			err = _readPartOfPage(GET_BLOCK_ADDR( curBlock ), &page, FS_PAGE);
 			if(FS_E_OK != err)
 			{
-				LOG(ERR, "FS %s: block 0x%x first page read fail: %d", _FUNCTION_, curBlock, err);
+				LOG_E( "FS %s: block 0x%x first page read fail: %d", _FUNCTION_, curBlock, err);
 				break;
 			}
 			
@@ -276,7 +276,7 @@ ErrCode createFileEntry(const char *fname, BlockAddr blockAddr, FsFile *file)
 		
 		if(FS_E_OK != retCode)
 		{
-			LOG(ERR, "FS %s FTable page [%x] read fail: %d", _FUNCTION_, tablePage, retCode);
+			LOG_E( "FS %s FTable page [%x] read fail: %d", _FUNCTION_, tablePage, retCode);
 			//carry on to next page
 			continue;
 		}
@@ -310,7 +310,7 @@ ErrCode createFileEntry(const char *fname, BlockAddr blockAddr, FsFile *file)
 				
 				if(FS_E_OK != retCode)
 				{
-					LOG(ERR, "FS %s FTable page [%x] write fail: %d", _FUNCTION_, tablePage, retCode);
+					LOG_E( "FS %s FTable page [%x] write fail: %d", _FUNCTION_, tablePage, retCode);
 				}
 				
 				f->fileEntryPageAddr = tablePage;
@@ -336,7 +336,7 @@ ErrCode invalidateFileEntry(PageAddr fEntryPage, uint16_t fEntryOffset)
 			
 		if(FS_E_OK != retCode)
 		{
-			LOG(ERR, "FS %s FTable page [%x] read fail: %d", _FUNCTION_, fEntryPage, retCode);
+			LOG_E( "FS %s FTable page [%x] read fail: %d", _FUNCTION_, fEntryPage, retCode);
 			break;
 		}
 			
@@ -347,7 +347,7 @@ ErrCode invalidateFileEntry(PageAddr fEntryPage, uint16_t fEntryOffset)
 					
 		if(FS_E_OK != retCode)
 		{
-			LOG(ERR, "FS %s FTable page [%x] write fail: %d", _FUNCTION_, fEntryPage, retCode);
+			LOG_E( "FS %s FTable page [%x] write fail: %d", _FUNCTION_, fEntryPage, retCode);
 			break;
 		}
 	}
@@ -384,7 +384,7 @@ ErrCode findFile(const char *fname, FileEntry *fentry)
 		
 		if(!retCode)
 		{
-			LOG(ERR, "FS FTable page [%x] read fail: %d", tablePage, retCode);
+			LOG_E( "FS FTable page [%x] read fail: %d", tablePage, retCode);
 			//carry on to next page
 			continue;
 		}
@@ -445,7 +445,7 @@ ErrCode writeRedundantPage(uint8_t maxRedundancyLevel, PageAddr pageOffset, Page
 		ret = _writePage(_pageAddr, page);
 		if(FS_E_OK != ret)
 		{
-			LOG(ERR, "Read page [%x] failed with %d", _pageAddr, ret);
+			LOG_E( "Read page [%x] failed with %d", _pageAddr, ret);
 			continue;
 		}
 
@@ -479,7 +479,7 @@ ErrCode readRedundantPage(uint8_t maxRedundancyLevel, PageAddr pageOffset, PageA
 		ret = _readPage(_pageAddr, page);
 		if(FS_E_OK != ret)
 		{
-			LOG(ERR, "Read page [%x] failed with %d", _pageAddr, ret);
+			LOG_E( "Read page [%x] failed with %d", _pageAddr, ret);
 			continue;
 		}
 		

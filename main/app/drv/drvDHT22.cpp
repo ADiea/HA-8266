@@ -63,7 +63,7 @@ float devDHT22_heatIndex()
 
 	if(dht)
 	{
-		LOG(INFO, ",");
+		LOG_I( ",");
 		//Serial.print(dht->getHeatIndex());
 	}
 	return 0;
@@ -75,21 +75,21 @@ float devDHT22_dewPoint()
 	{
 		uint32_t tick1, tick2;
 		tick1 = system_get_time();
-		LOG(INFO, ",");
+		LOG_I( ",");
 		//Serial.print(dht->getDewPoint(DEW_ACCURATE));
-		tick2 = system_get_time(); LOG(INFO, ",%lu", tick2 - tick1);tick1 = system_get_time();
+		tick2 = system_get_time(); LOG_I( ",%lu", tick2 - tick1);tick1 = system_get_time();
 
-		LOG(INFO, ",");
+		LOG_I( ",");
 		//Serial.print(dht->getDewPoint(DEW_ACCURATE_FAST));
-		tick2 = system_get_time(); LOG(INFO, ",%lu", tick2 - tick1);tick1 = system_get_time();
+		tick2 = system_get_time(); LOG_I( ",%lu", tick2 - tick1);tick1 = system_get_time();
 
-		LOG(INFO, ",");
+		LOG_I( ",");
 		//Serial.print(dht->getDewPoint(DEW_FAST));
-		tick2 = system_get_time(); LOG(INFO, ",%lu", tick2 - tick1);tick1 = system_get_time();
+		tick2 = system_get_time(); LOG_I( ",%lu", tick2 - tick1);tick1 = system_get_time();
 
-		LOG(INFO, ",");
+		LOG_I( ",");
 		//Serial.print(dht->getDewPoint(DEW_FASTEST));
-		tick2 = system_get_time(); LOG(INFO, ",%lu", tick2 - tick1);tick1 = system_get_time();
+		tick2 = system_get_time(); LOG_I( ",%lu", tick2 - tick1);tick1 = system_get_time();
 
 	}
 	return 0;
@@ -100,40 +100,40 @@ float devDHT22_comfortRatio()
 	ComfortState cf;
 	if(dht)
 	{
-		LOG(INFO, ",");
+		LOG_I( ",");
 		//Serial.print(dht->getComfortRatio(cf));
-		LOG(INFO, ",");
+		LOG_I( ",");
 		switch(cf)
 		{
 		case Comfort_OK:
-			LOG(INFO, "Comfort_OK");
+			LOG_I( "Comfort_OK");
 			break;
 		case Comfort_TooHot:
-			LOG(INFO, "Comfort_TooHot");
+			LOG_I( "Comfort_TooHot");
 			break;
 		case Comfort_TooCold:
-			LOG(INFO, "Comfort_TooCold");
+			LOG_I( "Comfort_TooCold");
 			break;
 		case Comfort_TooDry:
-			LOG(INFO, "Comfort_TooDry");
+			LOG_I( "Comfort_TooDry");
 			break;
 		case Comfort_TooHumid:
-			LOG(INFO, "Comfort_TooHumid");
+			LOG_I( "Comfort_TooHumid");
 			break;
 		case Comfort_HotAndHumid:
-			LOG(INFO, "Comfort_HotAndHumid");
+			LOG_I( "Comfort_HotAndHumid");
 			break;
 		case Comfort_HotAndDry:
-			LOG(INFO, "Comfort_HotAndDry");
+			LOG_I( "Comfort_HotAndDry");
 			break;
 		case Comfort_ColdAndHumid:
-			LOG(INFO, "Comfort_ColdAndHumid");
+			LOG_I( "Comfort_ColdAndHumid");
 			break;
 		case Comfort_ColdAndDry:
-			LOG(INFO, "Comfort_ColdAndDry");
+			LOG_I( "Comfort_ColdAndDry");
 			break;
 		default:
-			LOG(INFO, "Unknown:%d", cf);
+			LOG_I( "Unknown:%d", cf);
 			break;
 		}
 	}

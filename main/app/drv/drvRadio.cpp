@@ -44,7 +44,7 @@ uint8_t devRadio_init(uint8_t operation)
 						//dump the register configuration to console
 						radio->readAll();
 					}
-					else LOG(ERR, "Error not enough heap\n");
+					else LOG_E( "Error not enough heap\n");
 
 
 			}

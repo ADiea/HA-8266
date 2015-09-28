@@ -41,17 +41,24 @@
 void enableDev(unsigned short, uint8_t op);
 void initDevices();
 
-class CGenericDevice
+class CDeviceLight;
+class CDeviceTempHumid;
+class CDeviceHeater;
+
+extern Vector<CDeviceLight*> g_activeLights;
+extern Vector<CDeviceHeater*> g_activeHeaters;
+extern Vector<CDeviceTempHumid*> g_activeTHs;
+
+enum eHeaterTypes
 {
-public:
+	heater_gasHeater,
+	heater_electricHeater
+};
 
-	void requestUpdateState();
-
-	void triggerState(int reason, int state);
-
-	uint32_t m_ID;
-	String m_FriendlyName;
-	uint32_t m_LastUpdateTimestamp;
+enum eHeaterTurOnTriggers
+{
+	heatTrig_Manual 	= 0x01,
+	heatTrig_TempSensor = 0x02,
 };
 
 enum eTriggers
@@ -62,80 +69,239 @@ enum eTriggers
 	trigOnManual	= 0x08,
 };
 
-enum eClapClapState
+enum eLightState
 {
-	clapOff,
-	clapQuarterIntensity,
-	clapHalfIntensity,
-	clapFullIntensity,
+	lightOff,
+	lightCustomIntensity,
+	lightQuarterIntensity,
+	lightHalfIntensity,
+	lightFullIntensity,
+
+	lightLastState,
 };
 
-class devLight : public CGenericDevice
+class CGenericDevice
 {
 public:
-	int curIntensity = 0;
-	int minIntensity = 0;
-	int maxIntensity = 255;
-	int dimSpeed = 5;
+	CGenericDevice():m_ID(INVALID_DEVICE_ID), m_FriendlyName("notInit"),
+					 m_LastUpdateTimestamp(~0){};
 
-	uint32_t turnOnTriggers = trigClapClap | trigOnMovement;
+	bool isInit()
+		{return m_ID != INVALID_DEVICE_ID;}
 
-	uint32_t capabilities = trigClapClap | trigOnMovement | trigOnTimer | trigOnManual;
+	virtual void requestUpdateState() = 0;
+	virtual void triggerState(int reason, void* state) = 0;
 
-	eClapClapState clapState = clapOff;
-
-	int movement_keepOnTimeSeconds = 15;
-	uint32_t movement_lastMovementSecondsAgo = ~0;
+	virtual bool radioPktReceivedFromDevice(char* pktData, uint16_t pktLen) = 0;
 
 
-};
+	virtual ~CGenericDevice(){}
 
-enum eHeaterTypes
-{
-	heater_gasHeater,
-	heater_electricHeater
-};
-
-enum eHeaterTurOnTriggers
-{
-	heatTrig_Manual,
-	heatTrig_TempSensor,
+	uint32_t m_ID;
+	String m_FriendlyName;
+	uint32_t m_LastUpdateTimestamp;
 };
 
 
-struct devHeater
+struct tLightState
 {
-	eHeaterTypes type;
 
-	uint32_t linked_TempHumidSensorId = LOCAL_TEMPHUMID_SENSOR_ID;
+	tLightState(int minInt,
+				int maxInt = 255,
+				int dimSpd = 5,
+				uint32_t trigger = trigClapClap | trigOnMovement,
+				uint32_t capa = trigClapClap | trigOnMovement | trigOnTimer | trigOnManual,
+				int onTime = 15):
+			   curIntensity(minInt), minIntensity(minInt),
+			   maxIntensity(maxInt), dimSpeed(dimSpd),
+			   turnOnTriggers(trigger),
+			   capabilities(capa),
+			   lightState(lightOff), movement_keepOnTimeSeconds(onTime),
+			   movement_lastMovementTimestamp(~0){};
 
-	int gasLevel_lastReading;
-	int gasLevel_LowWarningThres;
-	int gasLevel_MedWarningThres;
-	int gasLevel_HighWarningThres;
+	tLightState(){tLightState(50);}
 
-	bool isOn = false;
-	bool isFault = false;
-
-	uint32_t lastUpdateTimestamp;
+	int curIntensity, minIntensity, maxIntensity,
+		dimSpeed, movement_keepOnTimeSeconds;
+	uint32_t turnOnTriggers, capabilities, movement_lastMovementTimestamp;
+	eLightState lightState;
 };
 
-
-struct devTempHumidSensor
+class CDeviceLight : public CGenericDevice
 {
-	int lastTemp;
-	int lastHumid;
+public:
 
-	int tempSetpoint;
+	CDeviceLight(){}
+
+	void initLight(uint32_t lightID, String& friendlyName, tLightState& state)
+	{
+		m_ID = lightID;
+		m_FriendlyName = friendlyName;
+		m_state = state;
+	}
+
+	virtual void requestUpdateState(){}
+	virtual void triggerState(int reason, void* state){}
+	virtual bool radioPktReceivedFromDevice(char* pktData, uint16_t pktLen){}
+
+	tLightState m_state;
+};
+
+struct tTempHumidState
+{
+	tTempHumidState(float setpoint):
+		lastTemp(-99),
+		lastHumid(-99),
+		tempSetpoint(setpoint),
+		bNeedHeating(false),
+		bNeedCooling(false)
+	{}
+
+	tTempHumidState()
+	{
+		tTempHumidState(22.0f);
+	}
+
+	float lastTemp, lastHumid, tempSetpoint;
+
+	bool bNeedHeating, bNeedCooling;
 
 	//confort related stuff
-
-	uint32_t lastUpdateTimestamp;
 };
 
-extern Vector<devLight> g_activeLights;
-extern Vector<devHeater> g_activeHeaters;
-extern Vector<devTempHumidSensor> g_activeTHs;
 
+
+class CDeviceTempHumid : public CGenericDevice
+{
+public:
+
+	CDeviceTempHumid(){}
+
+	void initTempHumid(uint32_t deviceID, String& friendlyName,
+					   tTempHumidState& state)
+	{
+		m_ID = deviceID;
+		m_FriendlyName = friendlyName;
+		m_state = state;
+	}
+
+	virtual void requestUpdateState(){}
+
+	//no implementation required for sensors
+	virtual void triggerState(int reason, void* state){};
+
+	virtual bool radioPktReceivedFromDevice(char* pktData, uint16_t pktLen){}
+
+	void addHeater(CDeviceHeater* heater)
+	{
+		m_heaters.addElement(heater);
+	}
+
+	Vector<CDeviceHeater*> m_heaters;
+
+	tTempHumidState m_state;
+};
+
+struct tHeaterState
+{
+	tHeaterState(int highWarn,
+				int lowWarn = 50,
+				int medWarn = 100,
+				int lastRead = 0):
+		gasLevel_lastReading(lastRead),
+		gasLevel_LowWarningThres(lowWarn),
+		gasLevel_MedWarningThres(medWarn),
+		gasLevel_HighWarningThres(highWarn),
+		isOn(false), isFault(false)
+	{}
+
+	tHeaterState()
+	{
+		tHeaterState(200);
+	}
+
+	int gasLevel_lastReading, gasLevel_LowWarningThres,
+		gasLevel_MedWarningThres, gasLevel_HighWarningThres;
+
+	bool isOn, isFault;
+};
+
+
+class CDeviceHeater : public CGenericDevice
+{
+public:
+
+	CDeviceHeater(){}
+
+	void initHeater(uint32_t heaterID, String& friendlyName, tHeaterState& state)
+	{
+		m_ID = heaterID;
+		m_FriendlyName = friendlyName;
+		m_state = state;
+	}
+
+	void addTHSensor(uint32_t tempHumidSensrID)
+	{
+		int i = 0;
+		CDeviceTempHumid* tempHumidSensr = NULL;
+
+		for(; i < g_activeTHs.count(); i++)
+		{
+			if(tempHumidSensrID == g_activeTHs[i]->m_ID)
+			{
+				tempHumidSensr = g_activeTHs[i];
+				break;
+			}
+		}
+
+		if(tempHumidSensr)
+		{
+			m_THSensors.addElement(tempHumidSensr);
+			tempHumidSensr->addHeater(this);
+		}
+		else
+		{
+			LOG_E("Null THSnsr ptr");
+		}
+	}
+
+	virtual void requestUpdateState()
+	{
+		//send state request from radio device
+	}
+
+	virtual void triggerState(int reason, void* state)
+	{
+		bool bHeaterRequestOn = false;
+		for(int i=0; i < m_THSensors.count(); i++)
+		{
+			if(m_THSensors[i]->m_state.bNeedHeating)
+			{
+				bHeaterRequestOn = true;
+				break;
+			}
+		}
+
+		if(bHeaterRequestOn)
+		{
+			LOG_I("TurnOn: heater %d", m_ID);
+			//send cmd to radio device
+		}
+		else
+		{
+			LOG_I("TurnOff: heater %d", m_ID);
+			//send cmd to radio device
+		}
+	}
+
+	virtual bool radioPktReceivedFromDevice(char* pktData, uint16_t pktLen)
+	{
+		//update state
+	}
+
+	Vector<CDeviceTempHumid*> m_THSensors;
+	eHeaterTypes type;
+	tHeaterState m_state;
+};
 
 #endif /*__DEVICE_H_*/

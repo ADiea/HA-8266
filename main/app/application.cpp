@@ -42,7 +42,7 @@ Timer tmrMainLoop;
 
 	static void heartbeat_cb(void)
 	{
-		LOG(INFO, "\n%s Heap: %ld\r\n",
+		LOG_I( "\n%s Heap: %ld\r\n",
 				SystemClock.getSystemTimeString().c_str(),
 				system_get_free_heap_size());
 	}
@@ -88,7 +88,7 @@ Timer tmrMainLoop;
 
 		if (!root.success())
 		{
-			LOG(ERR,"parseObject() failed");
+			LOG_E("parseObject() failed");
 			return false
 			;
 		}
@@ -143,7 +143,7 @@ Timer tmrMainLoop;
 		else
 			manual = 0;
 
-		LOG(INFO, "WS intensity:%u min:%u s:%u speed:%u manual:%u min:%u\n",
+		LOG_I( "WS intensity:%u min:%u s:%u speed:%u manual:%u min:%u\n",
 				intensity, ontime_min, ontime_sec, dimspeed, manual, minValue);
 
 		/* radio send */
@@ -151,7 +151,7 @@ Timer tmrMainLoop;
 		{
 			if(gRadioBusy)
 			{
-				LOG(INFO, "Radio busy\n");
+				LOG_I( "Radio busy\n");
 			}
 			else
 			{
@@ -201,25 +201,25 @@ Timer tmrMainLoop;
 
 				if(!result || len > 64)
 				{
-					LOG(INFO," ERR!");
+					LOG_I(" ERR!");
 				}
 				else
 				{
-					LOG(INFO," SENT! SYNC RX (%d):", len);
+					LOG_I(" SENT! SYNC RX (%d):", len);
 
 					for (byte i = 0; i < len; ++i)
 					{
-						LOG(INFO, "%x ", pkg[i]);
+						LOG_I( "%x ", pkg[i]);
 					}
 
-					LOG(INFO,"\n");
+					LOG_I("\n");
 					retVal = true;
 				}
 			}
 		}
 		else
 		{
-			LOG(INFO, "Radio not inited\n");
+			LOG_I( "Radio not inited\n");
 		}
 
 		return retVal;
@@ -228,7 +228,7 @@ Timer tmrMainLoop;
 
 	void wsMessageReceived(WebSocket& socket, const String& message)
 	{
-		LOG(INFO, "WS message received:%s\n", message.c_str());
+		LOG_I( "WS message received:%s\n", message.c_str());
 
 		cwReceivePacket(socket, message.c_str());
 	}
@@ -270,7 +270,7 @@ void startWebServer()
 // Will be called when WiFi station was connected to AP
 void connectOk()
 {
-	LOG(INFO, "AP CONNECT\n");
+	LOG_I( "AP CONNECT\n");
 
 	startWebServer();
 
@@ -305,10 +305,10 @@ void startSystem()
 	tmrHeartBeat.initializeUs(HEART_BEAT, heartbeat_cb).start();
 
 	#define CASE(x) case x: \
-		LOG(INFO, #x); \
+		LOG_I( #x); \
 		break;
 
-	LOG(INFO, "Reset: ");
+	LOG_I( "Reset: ");
 	rst_info* rstInfo = system_get_rst_info();
 	if(rstInfo)
 	{
@@ -321,15 +321,15 @@ void startSystem()
 			CASE(REASON_SOFT_RESTART)	// software restart ,system_restart , GPIO status won’t change
 			CASE(REASON_DEEP_SLEEP_AWAKE)
 			default:
-				LOG(INFO, "UNKNOWN (%d)", rstInfo->reason);
+				LOG_I( "UNKNOWN (%d)", rstInfo->reason);
 				break;
 		}
 	}
 
-	LOG(INFO, "\nChip id=%ld\r\n", system_get_chip_id());
-	LOG(INFO, "Flash id=%ld\r\n", spi_flash_get_id());
+	LOG_I( "\nChip id=%ld\r\n", system_get_chip_id());
+	LOG_I( "Flash id=%ld\r\n", spi_flash_get_id());
 
-	LOG(INFO, "Mem info:\r\n");
+	LOG_I( "Mem info:\r\n");
 	system_print_meminfo();
 
 #endif
@@ -344,22 +344,22 @@ void startSystem()
 	tick1 = get_ccount();
 	tick2 = get_ccount();
 	tickdiff = tick2 - tick1;
-	LOG(INFO, "Tick diff %lu\r\n", tickdiff);
+	LOG_I( "Tick diff %lu\r\n", tickdiff);
 
 	tick1 = get_ccount();
 	os_delay_us(1);
 	tick2 = get_ccount();
 	tickdiff2 = tick2 - tick1;
-	LOG(INFO, "Tick diff 1us %lu corrected %lu\r\n", tickdiff2, tickdiff2 - tickdiff);
+	LOG_I( "Tick diff 1us %lu corrected %lu\r\n", tickdiff2, tickdiff2 - tickdiff);
 
 	tick1 = system_get_time();
 	os_delay_us(10);
 	tick2 = system_get_time();
 	tickdiff = tick2 - tick1;
-	LOG(INFO, "Tick diff 10us %lu\r\n", tickdiff);
+	LOG_I( "Tick diff 10us %lu\r\n", tickdiff);
 	*/
 
-	LOG(INFO,"Time,H,T,readTime(us),H_idx_C,DP_Acc,DP_Acc(us),DP_AccFast," \
+	LOG_I("Time,H,T,readTime(us),H_idx_C,DP_Acc,DP_Acc(us),DP_AccFast," \
 			"DP_AccFast(us),DP_Fast,DP_Fast(us),DP_Fastest,DP_Fastest(us)," \
 			"ComfortRatio,ComfortText\n");
 
@@ -374,7 +374,7 @@ static void mainLoop()
 	byte len = 0;
 
 	//
-	//LOG(INFO, ",");
+	//LOG_I( ",");
 
 	if(radio && !gRadioBusy)
 	{
@@ -382,11 +382,11 @@ static void mainLoop()
 		{
 			radio->getPacketReceived(&len, pkg);
 
-			LOG(INFO,"ASYNC RX (%d):", len);
+			LOG_I("ASYNC RX (%d):", len);
 
 			for (byte i = 0; i < len; ++i)
 			{
-				LOG(INFO, "%x ", pkg[i]);
+				LOG_I( "%x ", pkg[i]);
 			}
 
 			if(len == 5)
@@ -396,13 +396,13 @@ static void mainLoop()
 					WebSocketsList &clients = server.getActiveWebSockets();
 					if(pkg[3] == 0x01)
 					{
-						LOG(INFO,"MOVEMENT ON");
+						LOG_I("MOVEMENT ON");
 						for (int i = 0; i < clients.count(); i++)
 							clients[i].sendString("MOVEMENT ON");
 					}
 					else if(pkg[3] == 0x02)
 					{
-						LOG(INFO,"MOVEMENT OFF");
+						LOG_I("MOVEMENT OFF");
 						for (int i = 0; i < clients.count(); i++)
 							clients[i].sendString("MOVEMENT OFF");
 					}
@@ -416,21 +416,21 @@ static void mainLoop()
 	tick2 = system_get_time();
 	if(DEV_ERR_OK != errTemp)
 	{
-		LOG(ERR, "DHT22 read FAIL:%d\n", errTemp);
+		LOG_E( "DHT22 read FAIL:%d\n", errTemp);
 	}
 	else
 	{
-		//LOG(INFO, "%f H:%f T:%f\n", 3.14f, gLastTempHumid.humid, gLastTempHumid.temp);
+		//LOG_I( "%f H:%f T:%f\n", 3.14f, gLastTempHumid.humid, gLastTempHumid.temp);
 		//Serial.print(gLastTempHumid.humid);
-		//LOG(INFO, ",");
+		//LOG_I( ",");
 
 		//Serial.print(gLastTempHumid.temp);
-		//LOG(INFO, ",%lu", tick2 - tick1);
+		//LOG_I( ",%lu", tick2 - tick1);
 
 		/*devDHT22_heatIndex();
 		devDHT22_dewPoint();
 		devDHT22_comfortRatio();
-		LOG(INFO, "\n");*/
+		LOG_I( "\n");*/
 	}
 
 	devRGB_setColor(COLOR_GREEN);
@@ -442,7 +442,7 @@ void init()
 {
 	initSystem();
 
-	LOG(INFO, "System start.\n");
+	LOG_E("System start.\n");
 
 	WDT.enable(false);
 

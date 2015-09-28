@@ -14,7 +14,7 @@ ErrCode fsInit()
 	
 	if(ERR_OK == retCode)
 	{
-		LOG(INFO, "FS Init: Version %d Blocks: %d", gConfigPage.d.ver, gConfigPage.d.numBlocks);
+		LOG_I( "FS Init: Version %d Blocks: %d", gConfigPage.d.ver, gConfigPage.d.numBlocks);
 	}
 	else
 	{
@@ -31,7 +31,7 @@ ErrCode fsInit()
 	
 	if(FS_E_OK != ret)
 	{
-		LOG(ERR, "FS fsInit: first blockmap page corrupted: %d", retCode);
+		LOG_E( "FS fsInit: first blockmap page corrupted: %d", retCode);
 		
 	}
 
@@ -62,7 +62,7 @@ ErrCode fsShutdown()
 		
 		if(FS_E_OK != ret)
 		{
-			LOG(ERR, "FS %s: cannot write page [0x%x] corrupted: %d", _FUNCTION_, g_blockMapCachePageAddr, ret);
+			LOG_E( "FS %s: cannot write page [0x%x] corrupted: %d", _FUNCTION_, g_blockMapCachePageAddr, ret);
 			continue;
 		}
 	}
@@ -79,7 +79,7 @@ ErrCode fclose(FsFile* f)
 	
 	if(FS_E_OK != ret)
 	{
-		LOG(ERR, "FS fsync failed with [%d]", ret);
+		LOG_E( "FS fsync failed with [%d]", ret);
 	}
 	
 	(f->filePoolSlot).locked = 0;
@@ -162,14 +162,14 @@ FsFile* fopen(const char *filename, const char mode, char *err)
 		*err = findFile(filename, &(retFile->fileEntry));
 		if(*err != FS_E_OK)
 		{
-			LOG(ERR, "FS findFile failed with [%d]", *err);
+			LOG_E( "FS findFile failed with [%d]", *err);
 			
 			if(mode & MODE_CREATE)
 			{
 				*err = fcreate(filename, fileSlot);
 				if(*err != FS_E_OK)
 				{
-					LOG(ERR, "FS fopen: fcreate failed [%d]", *err);
+					LOG_E( "FS fopen: fcreate failed [%d]", *err);
 					retFile = NULL;
 					fileSlot->locked = 0;
 					break;
@@ -198,11 +198,11 @@ FsFile* fopen(const char *filename, const char mode, char *err)
 			{
 				*err = FS_E_OK;
 				retFile->fileSize = retFile->filePtr.pos;
-				LOG(INFO, "FS fOpen: filesize: %d", retFile->fileSize);
+				LOG_I( "FS fOpen: filesize: %d", retFile->fileSize);
 			}
 			else
 			{				
-				LOG(ERR, "FS fOpen: set file ptr failed with %d", *err);
+				LOG_E( "FS fOpen: set file ptr failed with %d", *err);
 				//TODO: exit?
 			}
 		}
@@ -215,7 +215,7 @@ FsFile* fopen(const char *filename, const char mode, char *err)
 			*err = fSetPtr(retFile, newPosition);
 			if(FS_E_OK != *err)
 			{
-				LOG(ERR, "FS fOpen: set file ptr failed with %d", *err);
+				LOG_E( "FS fOpen: set file ptr failed with %d", *err);
 				//TODO exit?
 			}
 		}
@@ -225,7 +225,7 @@ FsFile* fopen(const char *filename, const char mode, char *err)
 
 	} while(0);
 	
-	LOG(DBG, "FS fopen: done");
+	LOG_D( "FS fopen: done");
 	
 	return retFile;
 
@@ -311,7 +311,7 @@ uint8_t fread(FsFile *f, uint8_t *dst, uint8_t size, ErrCode *err)
 					err = readCurrentFilePage(f, FS_PAGE);
 					if(FS_E_OK != err)
 					{
-						LOG(ERR, "FS fread: cannot read file page 0x%x: %d", f->filePtr.currentPageAddr, err);
+						LOG_E( "FS fread: cannot read file page 0x%x: %d", f->filePtr.currentPageAddr, err);
 						*err = FS_E_READFAILURE;
 						break;
 					}
@@ -329,7 +329,7 @@ uint8_t fread(FsFile *f, uint8_t *dst, uint8_t size, ErrCode *err)
 				{
 					if(0xFFFF == f->filePtr.nextBlock)
 					{
-						LOG(DBG, "FS fread: This was the last block");
+						LOG_D( "FS fread: This was the last block");
 						*err = FS_E_EOF;
 						break;					
 					}
@@ -343,7 +343,7 @@ uint8_t fread(FsFile *f, uint8_t *dst, uint8_t size, ErrCode *err)
 					err = readCurrentFilePage(f, FS_PAGE);
 					if(FS_E_OK != err)
 					{
-						LOG(ERR, "FS fread: cannot read first page of block 0x%x: %d", f->filePtr.currentBlock, err);
+						LOG_E( "FS fread: cannot read first page of block 0x%x: %d", f->filePtr.currentBlock, err);
 						*err = FS_E_READFAILURE;
 						break;
 					}
@@ -443,7 +443,7 @@ uint8_t fwrite(FsFile *f, uint8_t *src, uint8_t size, ErrCode *err)
 					err = readCurrentFilePage(f, FS_PAGE);
 					if(FS_E_OK != err)
 					{
-						LOG(ERR, "FS fread: cannot read file page 0x%x: %d", f->filePtr.currentPageAddr, err);
+						LOG_E( "FS fread: cannot read file page 0x%x: %d", f->filePtr.currentPageAddr, err);
 						*err = FS_E_READFAILURE;
 						break;
 					}
@@ -461,12 +461,12 @@ uint8_t fwrite(FsFile *f, uint8_t *src, uint8_t size, ErrCode *err)
 				{
 					if(0xFFFF == f->filePtr.nextBlock)
 					{
-						LOG(DBG, "FS fwrite: Last block reached, searching free block");
+						LOG_D( "FS fwrite: Last block reached, searching free block");
 						*err = findUnusedBlock(&nextFreeBlock);
 			
 						if(*err != FS_E_OK)
 						{
-							LOG(ERR, "FS %s: findUnusedBlock failed with [%d]", _FUNCTION_, *err);
+							LOG_E( "FS %s: findUnusedBlock failed with [%d]", _FUNCTION_, *err);
 							break;
 						}
 						
@@ -476,7 +476,7 @@ uint8_t fwrite(FsFile *f, uint8_t *src, uint8_t size, ErrCode *err)
 						err = readCurrentFilePage(f, FS_PAGE);
 						if(FS_E_OK != err)
 						{
-							LOG(ERR, "FS fread: (1)cannot read file page 0x%x: %d", f->filePtr.currentPageAddr, err);
+							LOG_E( "FS fread: (1)cannot read file page 0x%x: %d", f->filePtr.currentPageAddr, err);
 							*err = FS_E_READFAILURE;
 							break;
 						}
@@ -498,7 +498,7 @@ uint8_t fwrite(FsFile *f, uint8_t *src, uint8_t size, ErrCode *err)
 					err = readCurrentFilePage(f, FS_PAGE);
 					if(FS_E_OK != err)
 					{
-						LOG(ERR, "FS fread: cannot read first page of block 0x%x: %d", f->filePtr.currentBlock, err);
+						LOG_E( "FS fread: cannot read first page of block 0x%x: %d", f->filePtr.currentBlock, err);
 						*err = FS_E_READFAILURE;
 						break;
 					}
@@ -546,7 +546,7 @@ ErrCode fcreate(const char *filename, FilePoolEntry *fEntry)
 			
 		if(*err != FS_E_OK)
 		{
-			LOG(ERR, "FS %s: findUnusedBlock failed with [%d]", _FUNCTION_, *err);
+			LOG_E( "FS %s: findUnusedBlock failed with [%d]", _FUNCTION_, *err);
 			break;
 		}		
 				
@@ -563,7 +563,7 @@ ErrCode fcreate(const char *filename, FilePoolEntry *fEntry)
 		err = readCurrentFilePage(f, FS_PAGE);
 		if(FS_E_OK != err)
 		{
-			LOG(ERR, "FS %s (1) fread cannot read first file page: %d", _FUNCTION_, err);
+			LOG_E( "FS %s (1) fread cannot read first file page: %d", _FUNCTION_, err);
 			*err = FS_E_READFAILURE;
 			break;
 		}
@@ -576,7 +576,7 @@ ErrCode fcreate(const char *filename, FilePoolEntry *fEntry)
 		err = markBlockInMap(nextFreeBlock, BLOCK_INUSE);
 		if(FS_E_OK != err)
 		{
-			LOG(ERR, "FS %s markBlockInMap failed with %d", _FUNCTION_, err);
+			LOG_E( "FS %s markBlockInMap failed with %d", _FUNCTION_, err);
 		}
 				
 		//locate next free filetable entry = startBlock=0xffff
@@ -584,7 +584,7 @@ ErrCode fcreate(const char *filename, FilePoolEntry *fEntry)
 		err = createFileEntry(filename, nextFreeBlock, f);
 		if(FS_E_OK != err)
 		{
-			LOG(ERR, "FS %s createFileEntry failed with %d", _FUNCTION_, err);
+			LOG_E( "FS %s createFileEntry failed with %d", _FUNCTION_, err);
 		}
 	}
 	while(0);
@@ -614,7 +614,7 @@ ErrCode fdelete(FsFile *f)
 		ret = invalidateFileEntry(f->fileEntryPageAddr, f->fileEntryPageOffset);
 		if(FS_E_OK != ret)
 		{
-			LOG(ERR, "FS %s invalidateFileEntry failed with %d", _FUNCTION_, err);
+			LOG_E( "FS %s invalidateFileEntry failed with %d", _FUNCTION_, err);
 		}			
 		
 		//walk blocks mark unused in temporary cache -> persist to blockmap
@@ -626,7 +626,7 @@ ErrCode fdelete(FsFile *f)
 
 			if(FS_E_OK != ret)
 			{
-				LOG(ERR, "FS %s: block 0x%x page 0x0 read fail: %d", _FUNCTION_, currentBlock, _err);
+				LOG_E( "FS %s: block 0x%x page 0x0 read fail: %d", _FUNCTION_, currentBlock, _err);
 				break;
 			}
 
@@ -634,7 +634,7 @@ ErrCode fdelete(FsFile *f)
 			
 			if(!PAGE_VALID(page))
 			{
-				LOG(ERR, "FS %s: block 0x%x page 0x0 INVALID", _FUNCTION_, fsFile->filePtr.currentBlock);
+				LOG_E( "FS %s: block 0x%x page 0x0 INVALID", _FUNCTION_, fsFile->filePtr.currentBlock);
 				markBlockInMap(fsFile->filePtr.currentBlock, BLOCK_INVALID);
 			}
 			else
@@ -647,7 +647,7 @@ ErrCode fdelete(FsFile *f)
 
 				if(FS_E_OK != ret)
 				{
-					LOG(ERR, "FS %s: block 0x%x page 0x0 write fail: %d", _FUNCTION_, currentBlock, _err);
+					LOG_E( "FS %s: block 0x%x page 0x0 write fail: %d", _FUNCTION_, currentBlock, _err);
 					break;
 				}
 			}
@@ -696,8 +696,8 @@ ErrCode fSetPtr(FsFile *fsFile, uint32_t pos)
 		
 	if( pos < fsFile->filePtr.pos)
 	{
-		//LOG(DBG, "setFilePtr: ");
-		LOG(INFO, "setFilePtr: go backwards");
+		//LOG_D( "setFilePtr: ");
+		LOG_I( "setFilePtr: go backwards");
 		fsFile->filePtr.pos = 0;
 		fsFile->filePtr.currentBlock = fsFile->fileEntry.firstBlock;
 		fsFile->filePtr.currentPageAddr = 0;
@@ -715,7 +715,7 @@ ErrCode fSetPtr(FsFile *fsFile, uint32_t pos)
 	}
 	
 	uint32_t dif = pos - fsFile->filePtr.pos;
-	LOG(DBG, "FS >> setFilePtr: reqPos=%d curPos=%d dif=%d", pos, fsFile->filePtr.pos, dif);
+	LOG_D( "FS >> setFilePtr: reqPos=%d curPos=%d dif=%d", pos, fsFile->filePtr.pos, dif);
 	
 	uint8_t done = 0;
 
@@ -761,7 +761,7 @@ ErrCode fSetPtr(FsFile *fsFile, uint32_t pos)
 			
 			if(fsFile->filePtr.curBytePosInPage != fsFile->filePtr.pos % MAX_PAGE_DATABYTES)
 			{
-				LOG(ERR, "FS %s file ptr inconsistency: pos=%d curBytePosInPage=%d page=%d file=%d", 
+				LOG_E( "FS %s file ptr inconsistency: pos=%d curBytePosInPage=%d page=%d file=%d", 
 					_FUNCTION_, fsFile->filePtr.pos, fsFile->filePtr.curBytePosInPage, fsFile->filePtr.currentPageAddr,
 					);
 			}
@@ -816,7 +816,7 @@ ErrCode fSetPtr(FsFile *fsFile, uint32_t pos)
 		}
 	}while(!done);
 
-	LOG(DBG, "FS << setFilePtr: reqPos=%d curPos=%d dif=%d", pos, fsFile->filePtr.pos, dif);
+	LOG_D( "FS << setFilePtr: reqPos=%d curPos=%d dif=%d", pos, fsFile->filePtr.pos, dif);
 	
 	return _err;
 }

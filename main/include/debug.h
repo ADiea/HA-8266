@@ -12,10 +12,34 @@
 
 #if DEBUG_BUILD
 	#define VERBOSE_LEVEL DBG
-	
-	#define LOG(x, ...) do {if( x <=  VERBOSE_LEVEL) { os_printf(__VA_ARGS__); } }while(0)
+
+	#define LOG_E(fmt, ...)m_printf(fmt, ##__VA_ARGS__)
+//#define LOG_E(fmt, ...)m_printf("tag"##__FUNCTION__##fmt, ##__VA_ARGS__)
+
+	#if VERBOSE_LEVEL == DBG
+		#define LOG_W LOG_E
+		#define LOG_I LOG_E
+		#define LOG_D LOG_E
+	#elif VERBOSE_LEVEL == INFO
+		#define LOG_W LOG_E
+		#define LOG_I LOG_E
+		#define LOG_D
+	#elif VERBOSE_LEVEL == WARN
+		#define LOG_W LOG_E
+		#define LOG_I
+		#define LOG_D
+	#elif VERBOSE_LEVEL == ERR
+		#define LOG_W
+		#define LOG_I
+		#define LOG_D
+	#else
+		#error Set debug verbose level in debug.h
+	#endif
 #else
-	#define LOG(...)
-#endif	
+	#define LOG_E
+	#define LOG_W
+	#define LOG_I
+	#define LOG_D
+#endif
 
 #endif /*_DEBUG__H*/

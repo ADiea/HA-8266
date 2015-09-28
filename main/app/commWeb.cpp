@@ -28,12 +28,12 @@ int snprintf(char* buf, uint32_t length, const char *fmt, ...)
 bool reply_cwReplyToCommand(WebSocket& socket, eCommWebErrorCodes err)
 {
 	int sizePkt = snprintf(scrapPackage, sizeof(scrapPackage), "%d;%d;", cwReplyToCommand, err);
-	socket.sendString(scrapPackage, sizePkt);
+	socket.send((const char*)scrapPackage, sizePkt);
 }
 
 bool handle_cwErrorHandler(WebSocket& socket, char **pkt)
 {
-	LOG(ERR, "Invalid pktId RXed");
+	LOG_E( "Invalid pktId RXed");
 	reply_cwReplyToCommand(socket, cwErrInvalidPacketID);
 }
 
@@ -118,17 +118,17 @@ bool cwReceivePacket(WebSocket& socket, const char* pkt)
 
 	int pktId;
 
-	LOG(INFO, "Received Pkt ID: %d", pktId);
+	LOG_I( "Received Pkt ID: %d", pktId);
 
 	if (!skipInt(&sPkt, &pktId))
 	{
-		LOG(ERR, "cwReceivePacket: Cannot get Pkt ID");
+		LOG_E( "cwReceivePacket: Cannot get Pkt ID");
 	}
 	else
 	{
 		if(pktId >=  cwMaxId)
 		{
-			LOG(ERR, "cwReceivePacket: Bad pkt ID rx: %d", pktId);
+			LOG_E( "cwReceivePacket: Bad pkt ID rx: %d", pktId);
 		}
 		else
 		{
@@ -157,7 +157,7 @@ static bool skipInt(char **s, int *dest)
 
 	if(**s == '.')
 	{
-		LOG(ERR, "skipInt: Float no. detected");
+		LOG_E( "skipInt: Float no. detected");
 	}
 	else if(**s == ';')
 	{
@@ -165,7 +165,7 @@ static bool skipInt(char **s, int *dest)
 	}
 	else
 	{
-		LOG(ERR, "skipInt: bad terminal: %x", **s);
+		LOG_E( "skipInt: bad terminal: %x", **s);
 		return false;
 	}
 
@@ -208,20 +208,20 @@ static bool skipFloat(char **s, float *dest)
 		}
 		else
 		{
-			LOG(ERR, "skipFloat: bad terminal: %x", **s);
+			LOG_E( "skipFloat: bad terminal: %x", **s);
 			return false;
 		}
 
 	}
 	else if(**s == ';')
 	{
-		LOG(INFO, "skipFloat: no decimals");
+		LOG_I( "skipFloat: no decimals");
 		*dest =  float(intPart);
 		++(*s);
 	}
 	else
 	{
-		LOG(INFO, "skipFloat: unknown char: %x", **s);
+		LOG_I( "skipFloat: unknown char: %x", **s);
 		return false;
 	}
 
@@ -232,7 +232,7 @@ static bool skipString(char** s, char* dest, uint32_t destLen)
 {
 	if(**s == ';')
 	{
-		LOG(ERR, "skipString: null string");
+		LOG_E( "skipString: null string");
 
 		return false;
 	}
@@ -250,7 +250,7 @@ static bool skipString(char** s, char* dest, uint32_t destLen)
 
 		if(length >= destLen)
 		{
-			LOG(ERR, "skipString: StringTooLong");
+			LOG_E( "skipString: StringTooLong");
 			return false;
 		}
 		else ++length;

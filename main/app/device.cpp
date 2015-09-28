@@ -1,8 +1,8 @@
 #include "device.h"
 
-Vector<devLight> g_activeLights;
-Vector<devHeater> g_activeHeaters;
-Vector<devTempHumidSensor> g_activeTHs;
+ Vector<CDeviceLight*> g_activeLights;
+ Vector<CDeviceHeater*> g_activeHeaters;
+ Vector<CDeviceTempHumid*> g_activeTHs;
 
 unsigned short gDevicesState = 0x0000;
 
@@ -28,19 +28,27 @@ devCtl gDevices[] =
 
 void initDevices()
 {
-	devTempHumidSensor localSensor;
+	CDeviceTempHumid *localTHSensor = new CDeviceTempHumid();
+	if(!localTHSensor)
+	{
+		LOG_E("Fatal: no heap to init devices");
+		return;
+	}
 
 	enableDev(DEV_UART, ENABLE | CONFIG);
-
 
 	//setup SDCard and load custom system settings, then disable SDCard
 	enableDev(DEV_SDCARD, ENABLE | CONFIG);
 	//enableDev(DEV_SDCARD, DISABLE);
 
-
 	//DHT22 periodically enabled to read data
 	enableDev(DEV_DHT22, ENABLE | CONFIG);
-	g_activeTHs.addElement(localSensor);
+
+	tTempHumidState thState(22.1f);
+	String thName("IndoorTemp");
+	localTHSensor->initTempHumid(LOCAL_TEMPHUMID_SENSOR_ID, thName, thState);
+
+	g_activeTHs.addElement(localTHSensor);
 
 
 	enableDev(DEV_MQ135, ENABLE | CONFIG);
@@ -73,7 +81,7 @@ void enableDev(unsigned short dev, uint8_t op)
 		{
 			if(!isDevEnabled(dev))
 			{
-				LOG(INFO, "DEV %x is DIS\n", dev);
+				LOG_I( "DEV %x is DIS\n", dev);
 				break;
 			}
 		}
@@ -81,7 +89,7 @@ void enableDev(unsigned short dev, uint8_t op)
 		{
 			if(isDevEnabled(dev))
 			{
-				LOG(INFO, "DEV %x is ENA\n", dev);
+				LOG_I( "DEV %x is ENA\n", dev);
 				break;
 			}
 		}
@@ -93,7 +101,7 @@ void enableDev(unsigned short dev, uint8_t op)
 				retVal = gDevices[i].initFunc(op);
 				if(DEV_ERR_OK != retVal)
 				{
-					LOG(ERR, "DEV %x,%x FAIL: %d\n", dev, op, retVal);
+					LOG_E( "DEV %x,%x FAIL: %d\n", dev, op, retVal);
 				}
 				break;
 			}
@@ -101,7 +109,7 @@ void enableDev(unsigned short dev, uint8_t op)
 
 		if( NUM_DEVICES == i )
 		{
-			LOG(ERR, "DEV %x unknown\n", dev);
+			LOG_E( "DEV %x unknown\n", dev);
 			break;
 		}
 
