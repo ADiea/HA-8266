@@ -13,6 +13,8 @@
 #include "drv/drvDS18B20.h"
 
 #include "Wiring/WVector.h"
+#include <Libraries/DHT/DHT.h>
+
 
 #define LOCAL_TEMPHUMID_SENSOR_ID 0
 
@@ -78,6 +80,12 @@ enum eLightState
 	lightFullIntensity,
 
 	lightLastState,
+};
+
+enum eSensorLocation
+{
+	locLocal,
+	locRemote
 };
 
 class CGenericDevice
@@ -150,19 +158,21 @@ public:
 struct tTempHumidState
 {
 	tTempHumidState(float setpoint):
-		lastTemp(-99),
-		lastHumid(-99),
 		tempSetpoint(setpoint),
 		bNeedHeating(false),
 		bNeedCooling(false)
-	{}
+	{
+		lastTH.temp = -99;
+		lastTH.humid = -99;
+	}
 
 	tTempHumidState()
 	{
 		tTempHumidState(22.0f);
 	}
 
-	float lastTemp, lastHumid, tempSetpoint;
+	TempAndHumidity lastTH;
+	float tempSetpoint;
 
 	bool bNeedHeating, bNeedCooling;
 
@@ -178,11 +188,12 @@ public:
 	CDeviceTempHumid(){}
 
 	void initTempHumid(uint32_t deviceID, String& friendlyName,
-					   tTempHumidState& state)
+					   tTempHumidState& state, eSensorLocation location)
 	{
 		m_ID = deviceID;
 		m_FriendlyName = friendlyName;
 		m_state = state;
+		m_location = location;
 	}
 
 	virtual void requestUpdateState(){}
@@ -200,6 +211,8 @@ public:
 	Vector<CDeviceHeater*> m_heaters;
 
 	tTempHumidState m_state;
+
+	eSensorLocation m_location;
 };
 
 struct tHeaterState

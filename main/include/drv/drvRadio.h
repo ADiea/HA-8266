@@ -10,7 +10,9 @@
 uint8_t devRadio_init(uint8_t operation);
 
 
-extern Si4432 *radio;
+extern Si4432 *Radio;
+bool RadioSend(byte *pkg, uint8_t length);
+bool isRadioBusy();
 
 
 #endif /*DRV_RADIO*/

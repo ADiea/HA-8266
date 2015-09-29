@@ -22,8 +22,6 @@ TempAndHumidity gLastTempHumid;
 NtpClient *gNTPClient;
 HttpServer server;
 
-uint8_t gRadioBusy = 0;
-
 static inline unsigned get_ccount(void)
 {
 	unsigned r;
@@ -76,29 +74,10 @@ Timer tmrMainLoop;
 		static uint8_t sequence = 0;
 
 		byte pkg[64] = {0};
-		byte len = 0;
-		bool result = false;
+
 		bool retVal = false;
 
-		/***
 
-		StaticJsonBuffer<200> jsonBuffer;
-
-		JsonObject& root = jsonBuffer.parseObject(msg);
-
-		if (!root.success())
-		{
-			LOG_E("parseObject() failed");
-			return false
-			;
-		}
-
-		***/
-
-		if(strncmp(msg, "INTY:", 5))
-		{
-			return false;
-		}
 
 		int intensity = 0;
 		int ontime_min = 0;
@@ -107,121 +86,48 @@ Timer tmrMainLoop;
 		int minValue = 0;
 		int manual = 0;
 
-		len = 5;
-		while(msg[len] >= '0' && msg[len] <='9')
-		{
-			intensity = intensity *10 + msg[len] - '0';
-			++len;
-		}
-		++len;
-		while(msg[len] >= '0' && msg[len] <='9')
-		{
-			ontime_min = ontime_min *10 + msg[len] - '0';
-			++len;
-		}
-		++len;
-		while(msg[len] >= '0' && msg[len] <='9')
-		{
-			ontime_sec = ontime_sec *10 + msg[len] - '0';
-			++len;
-		}
-		++len;
-		while(msg[len] >= '0' && msg[len] <='9')
-		{
-			dimspeed = dimspeed *10 + msg[len] - '0';
-			++len;
-		}
-		++len;
-		while(msg[len] >= '0' && msg[len] <='9')
-		{
-			minValue = minValue *10 + msg[len] - '0';
-			++len;
-		}
-		++len;
-		if(msg[len] == 't' || msg[len] == 'T')
-			manual = 1;
-		else
-			manual = 0;
+		
 
 		LOG_I( "WS intensity:%u min:%u s:%u speed:%u manual:%u min:%u\n",
 				intensity, ontime_min, ontime_sec, dimspeed, manual, minValue);
 
-		/* radio send */
-		if(radio)
-		{
-			if(gRadioBusy)
-			{
-				LOG_I( "Radio busy\n");
-			}
-			else
-			{
-				gRadioBusy = 1;
+		
 
-				#define DIMMER_ID 0x01
-				#define MY_ID 0xFF
+		#define DIMMER_ID 0x01
+		#define MY_ID 0xFF
 
-				/*PKG intensity
-				[address 1B]
-				[pgk_type==PKG_TYPE_INTENSITY 1B]
-				[intensity 1B]
-				[on duration(s)= min 4b + sec*4 4b 1B]
-				[flags 4b fadeSpeed 4b]
-				[minValue 1B]
-				[sequence 1B]
-				[checksum 1B]
-				*/
-				#define PKG_INTENSITY_LEN 0x08
+		/*PKG intensity
+		[address 1B]
+		[pgk_type==PKG_TYPE_INTENSITY 1B]
+		[intensity 1B]
+		[on duration(s)= min 4b + sec*4 4b 1B]
+		[flags 4b fadeSpeed 4b]
+		[minValue 1B]
+		[sequence 1B]
+		[checksum 1B]
+		*/
+		#define PKG_INTENSITY_LEN 0x08
 
-				#define PKG_TYPE_INVALID 0x00
-				#define PKG_TYPE_ACK 0x01
-				#define PKG_TYPE_INTENSITY 0x02
+		#define PKG_TYPE_INVALID 0x00
+		#define PKG_TYPE_ACK 0x01
+		#define PKG_TYPE_INTENSITY 0x02
 
-				#define PKG_MANUAL_FLAG 0x80
+		#define PKG_MANUAL_FLAG 0x80
 
-				pkg[0] = DIMMER_ID;
-				pkg[1] = PKG_TYPE_INTENSITY;
-				pkg[2] = intensity;
-				pkg[3] = ((ontime_min << 4) & 0xF0) | (0xF & (ontime_sec >> 2));
-				pkg[4] = dimspeed & 0xF;
-				if(manual)
-					pkg[4] |= PKG_MANUAL_FLAG;
-				pkg[5] = minValue;
-				pkg[6] = ++sequence;
+		pkg[0] = DIMMER_ID;
+		pkg[1] = PKG_TYPE_INTENSITY;
+		pkg[2] = intensity;
+		pkg[3] = ((ontime_min << 4) & 0xF0) | (0xF & (ontime_sec >> 2));
+		pkg[4] = dimspeed & 0xF;
+		if(manual)
+			pkg[4] |= PKG_MANUAL_FLAG;
+		pkg[5] = minValue;
+		pkg[6] = ++sequence;
 
-				pkg[7] = (pkg[0] + pkg[1] + pkg[2] + pkg[3] + pkg[4] + pkg[5]+ pkg[6]) & 0xFF;
+		pkg[7] = (pkg[0] + pkg[1] + pkg[2] + pkg[3] + pkg[4] + pkg[5]+ pkg[6]) & 0xFF;
 
-				result = radio->sendPacket(PKG_INTENSITY_LEN,
-						pkg,
-						true,
-						manual ? RADIO_WAIT_ACK_MS : 2 * RADIO_WAIT_ACK_MS,
-						&len,
-						pkg);
-
-				gRadioBusy = 0;
-
-				if(!result || len > 64)
-				{
-					LOG_I(" ERR!");
-				}
-				else
-				{
-					LOG_I(" SENT! SYNC RX (%d):", len);
-
-					for (byte i = 0; i < len; ++i)
-					{
-						LOG_I( "%x ", pkg[i]);
-					}
-
-					LOG_I("\n");
-					retVal = true;
-				}
-			}
-		}
-		else
-		{
-			LOG_I( "Radio not inited\n");
-		}
-
+		retVal = RadioSend(pkg, PKG_INTENSITY_LEN);
+				
 		return retVal;
 	}
 
@@ -376,11 +282,11 @@ static void mainLoop()
 	//
 	//LOG_I( ",");
 
-	if(radio && !gRadioBusy)
+	if(Radio && !isRadioBusy())
 	{
-		if(radio->isPacketReceived())
+		if(Radio->isPacketReceived())
 		{
-			radio->getPacketReceived(&len, pkg);
+			Radio->getPacketReceived(&len, pkg);
 
 			LOG_I("ASYNC RX (%d):", len);
 

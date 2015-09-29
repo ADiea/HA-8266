@@ -46,7 +46,7 @@ void initDevices()
 
 	tTempHumidState thState(22.1f);
 	String thName("IndoorTemp");
-	localTHSensor->initTempHumid(LOCAL_TEMPHUMID_SENSOR_ID, thName, thState);
+	localTHSensor->initTempHumid(LOCAL_TEMPHUMID_SENSOR_ID, thName, thState, locLocal);
 
 	g_activeTHs.addElement(localTHSensor);
 
@@ -62,8 +62,8 @@ void initDevices()
 	enableDev(DEV_RADIO, ENABLE | CONFIG);
 
 	//start listening for incoming packets
-	if(radio)
-		radio->startListening();
+	if(Radio)
+		Radio->startListening();
 
 	//setup Wifi
 	enableDev(DEV_WIFI, ENABLE | CONFIG);
