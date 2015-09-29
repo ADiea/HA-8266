@@ -14,7 +14,7 @@
 
 #include "Wiring/WVector.h"
 #include <Libraries/DHT/DHT.h>
-
+#include <SmingCore/SmingCore.h>
 
 #define LOCAL_TEMPHUMID_SENSOR_ID 0
 
@@ -43,13 +43,25 @@
 void enableDev(unsigned short, uint8_t op);
 void initDevices();
 
+class CGenericDevice;
 class CDeviceLight;
 class CDeviceTempHumid;
 class CDeviceHeater;
 
-extern Vector<CDeviceLight*> g_activeLights;
-extern Vector<CDeviceHeater*> g_activeHeaters;
-extern Vector<CDeviceTempHumid*> g_activeTHs;
+extern Vector<CGenericDevice*> g_activeDevices;
+
+struct Watcher
+{
+	uint32_t id;
+	CGenericDevice *device;
+};
+
+enum eDeviceType
+{
+	devTypeLight,
+	devTypeTH,
+	devTypeHeater,
+};
 
 enum eHeaterTypes
 {
@@ -102,12 +114,47 @@ public:
 
 	virtual bool radioPktReceivedFromDevice(char* pktData, uint16_t pktLen) = 0;
 
+	CGenericDevice* findDevice(uint32_t deviceID)
+	{
+		int i = 0;
+		for(; i < g_activeDevices.count(); i++)
+		{
+			if(deviceID == g_activeDevices[i]->m_ID)
+			{
+				return g_activeDevices[i];
+			}
+		}
+		return NULL;
+	}
+
+	CGenericDevice* getDevice(Watcher& watcher)
+	{
+		if(watcher.device)
+			return watcher.device;
+
+		return findDevice(watcher.id);
+	}
+
+	void addWatcherDevice(uint32_t deviceID)
+	{
+		Watcher watcher;
+
+		watcher.id = deviceID;
+		watcher.device = findDevice(deviceID);
+
+		m_devWatchersList.addElement(watcher);
+	}
 
 	virtual ~CGenericDevice(){}
+
+	Vector<Watcher> m_devWatchersList;
 
 	uint32_t m_ID;
 	String m_FriendlyName;
 	uint32_t m_LastUpdateTimestamp;
+	eDeviceType m_deviceType;
+	int m_updateInterval;
+	Timer m_updateTimer;
 };
 
 
@@ -127,7 +174,10 @@ struct tLightState
 			   lightState(lightOff), movement_keepOnTimeSeconds(onTime),
 			   movement_lastMovementTimestamp(~0){};
 
-	tLightState(){tLightState(50);}
+	tLightState()
+	{
+		tLightState(50);
+	}
 
 	int curIntensity, minIntensity, maxIntensity,
 		dimSpeed, movement_keepOnTimeSeconds;
@@ -139,7 +189,10 @@ class CDeviceLight : public CGenericDevice
 {
 public:
 
-	CDeviceLight(){}
+	CDeviceLight()
+	{
+		m_deviceType = devTypeLight;
+	}
 
 	void initLight(uint32_t lightID, String& friendlyName, tLightState& state)
 	{
@@ -162,8 +215,8 @@ struct tTempHumidState
 		bNeedHeating(false),
 		bNeedCooling(false)
 	{
-		lastTH.temp = -99;
-		lastTH.humid = -99;
+		lastTH.temp = -99.0f;
+		lastTH.humid = -99.0f;
 	}
 
 	tTempHumidState()
@@ -185,34 +238,44 @@ class CDeviceTempHumid : public CGenericDevice
 {
 public:
 
-	CDeviceTempHumid(){}
+	CDeviceTempHumid()
+	{
+		m_deviceType = devTypeTH;
+	}
 
-	void initTempHumid(uint32_t deviceID, String& friendlyName,
-					   tTempHumidState& state, eSensorLocation location)
+	void initTempHumid(	uint32_t deviceID,
+						String& friendlyName,
+						tTempHumidState& state,
+						eSensorLocation location,
+						int updateInterval = 5000)
 	{
 		m_ID = deviceID;
 		m_FriendlyName = friendlyName;
 		m_state = state;
 		m_location = location;
+
+		m_updateInterval = updateInterval;
+
+		m_tempThreshold = 0.1;
+
+		m_updateTimer.initializeMs(m_updateInterval, TimerDelegate(&CDeviceTempHumid::onUpdateTimer, this)).start(false);
 	}
 
-	virtual void requestUpdateState(){}
+	void onUpdateTimer();
+
+	virtual void requestUpdateState();
 
 	//no implementation required for sensors
 	virtual void triggerState(int reason, void* state){};
 
 	virtual bool radioPktReceivedFromDevice(char* pktData, uint16_t pktLen){}
 
-	void addHeater(CDeviceHeater* heater)
-	{
-		m_heaters.addElement(heater);
-	}
-
-	Vector<CDeviceHeater*> m_heaters;
-
 	tTempHumidState m_state;
 
 	eSensorLocation m_location;
+
+	float m_tempThreshold;
+
 };
 
 struct tHeaterState
@@ -244,7 +307,10 @@ class CDeviceHeater : public CGenericDevice
 {
 public:
 
-	CDeviceHeater(){}
+	CDeviceHeater()
+	{
+		m_deviceType = devTypeHeater;
+	}
 
 	void initHeater(uint32_t heaterID, String& friendlyName, tHeaterState& state)
 	{
@@ -253,66 +319,20 @@ public:
 		m_state = state;
 	}
 
-	void addTHSensor(uint32_t tempHumidSensrID)
-	{
-		int i = 0;
-		CDeviceTempHumid* tempHumidSensr = NULL;
 
-		for(; i < g_activeTHs.count(); i++)
-		{
-			if(tempHumidSensrID == g_activeTHs[i]->m_ID)
-			{
-				tempHumidSensr = g_activeTHs[i];
-				break;
-			}
-		}
-
-		if(tempHumidSensr)
-		{
-			m_THSensors.addElement(tempHumidSensr);
-			tempHumidSensr->addHeater(this);
-		}
-		else
-		{
-			LOG_E("Null THSnsr ptr");
-		}
-	}
 
 	virtual void requestUpdateState()
 	{
 		//send state request from radio device
 	}
 
-	virtual void triggerState(int reason, void* state)
-	{
-		bool bHeaterRequestOn = false;
-		for(int i=0; i < m_THSensors.count(); i++)
-		{
-			if(m_THSensors[i]->m_state.bNeedHeating)
-			{
-				bHeaterRequestOn = true;
-				break;
-			}
-		}
-
-		if(bHeaterRequestOn)
-		{
-			LOG_I("TurnOn: heater %d", m_ID);
-			//send cmd to radio device
-		}
-		else
-		{
-			LOG_I("TurnOff: heater %d", m_ID);
-			//send cmd to radio device
-		}
-	}
+	virtual void triggerState(int reason, void* state);
 
 	virtual bool radioPktReceivedFromDevice(char* pktData, uint16_t pktLen)
 	{
 		//update state
 	}
 
-	Vector<CDeviceTempHumid*> m_THSensors;
 	eHeaterTypes type;
 	tHeaterState m_state;
 };

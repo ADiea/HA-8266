@@ -279,6 +279,8 @@ static void mainLoop()
 	byte pkg[64] = {0};
 	byte len = 0;
 
+	uint16_t i;
+
 	//
 	//LOG_I( ",");
 
@@ -290,11 +292,23 @@ static void mainLoop()
 
 			LOG_I("ASYNC RX (%d):", len);
 
-			for (byte i = 0; i < len; ++i)
+			for (i = 0; i < len; ++i)
 			{
 				LOG_I( "%x ", pkg[i]);
 			}
 
+			uint8_t senderID = pkg[0];
+
+			for(i=0; i < g_activeDevices.count(); ++i)
+			{
+				if(senderID == g_activeDevices[i]->m_ID)
+				{
+					g_activeDevices[i]->radioPktReceivedFromDevice((char*)pkg, len);
+				}
+			}
+
+
+/*
 			if(len == 5)
 			{
 				if(pkg[1] == 3)
@@ -314,32 +328,16 @@ static void mainLoop()
 					}
 				}
 			}
+*/
+			devRGB_setColor(COLOR_GREEN);
+		}
+		else
+		{
+			devRGB_setColor(COLOR_RED);
 		}
 	}
 
-	tick1 = system_get_time();
-	uint8_t errTemp = devDHT22_read(gLastTempHumid);
-	tick2 = system_get_time();
-	if(DEV_ERR_OK != errTemp)
-	{
-		LOG_E( "DHT22 read FAIL:%d\n", errTemp);
-	}
-	else
-	{
-		//LOG_I( "%f H:%f T:%f\n", 3.14f, gLastTempHumid.humid, gLastTempHumid.temp);
-		//Serial.print(gLastTempHumid.humid);
-		//LOG_I( ",");
 
-		//Serial.print(gLastTempHumid.temp);
-		//LOG_I( ",%lu", tick2 - tick1);
-
-		/*devDHT22_heatIndex();
-		devDHT22_dewPoint();
-		devDHT22_comfortRatio();
-		LOG_I( "\n");*/
-	}
-
-	devRGB_setColor(COLOR_GREEN);
 	WDT.alive();
 }
 

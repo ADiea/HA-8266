@@ -1,8 +1,7 @@
 #include "device.h"
+#include "util.h"
 
- Vector<CDeviceLight*> g_activeLights;
- Vector<CDeviceHeater*> g_activeHeaters;
- Vector<CDeviceTempHumid*> g_activeTHs;
+ Vector<CGenericDevice*> g_activeDevices;
 
 unsigned short gDevicesState = 0x0000;
 
@@ -26,14 +25,118 @@ devCtl gDevices[] =
 
 #define NUM_DEVICES (sizeof(gDevices)/sizeof(gDevices[0]))
 
+void loadSavedDevices()
+{
+	char devicesString[] = "3;1;0;IndoorTemp;22.1;0;1;1;2;1;Heater;200;50;100;1;0;0;2;LightHall;";
+
+	int numDevices, iDev = 0, devID, devType, numWatchers;;
+
+	#define MAX_FRIENDLY_NAME 64
+	char friendlyName[MAX_FRIENDLY_NAME];
+
+	if(!skipInt((char**)&devicesString, &numDevices))return;
+
+	while(iDev < numDevices)
+	{
+		LOG_I("Loading dev %d of %d", iDev + 1, numDevices);
+		if(!skipInt((char**)&devicesString, &devType))return;
+		if(!skipInt((char**)&devicesString, &devID))return;
+		if(!skipString((char**)&devicesString, (char*)friendlyName, MAX_FRIENDLY_NAME))return;
+
+		switch(devType)
+		{
+			case devTypeLight:
+			{
+				LOG_I("LIGHT device - not impl ID:%d", devID);
+
+			}
+			break;
+
+			case devTypeTH:
+			{
+				LOG_I("TH device ID:%d", devID);
+
+				int tempSetPoint = 22.0f;
+				if(!skipInt((char**)&devicesString, &tempSetPoint))return;
+
+				tTempHumidState state(tempSetPoint);
+				String name(friendlyName);
+
+				int isLocal = 0;
+				if(!skipInt((char**)&devicesString, &isLocal))return;
+
+				CDeviceTempHumid *device = new CDeviceTempHumid();
+				if(!device)
+				{
+					LOG_E("Fatal: heap");
+					return;
+				}
+
+				device->initTempHumid(devID, name, state, (eSensorLocation)isLocal);
+
+				if(!skipInt((char**)&devicesString, &numWatchers))return;
+
+				while(numWatchers--)
+				{
+					if(!skipInt((char**)&devicesString, &devID))return;
+					LOG_I("Add watcher ID:%d", devID);
+					device->addWatcherDevice(devID);
+				}
+
+				g_activeDevices.addElement(device);
+			}
+			break;
+
+			case devTypeHeater:
+			{
+				LOG_I("HEATER device ID:%d", devID);
+
+				int gasHighThres = 200;
+				int gasLowThres = 50;
+				int gasMedThres = 100;
+
+				if(!skipInt((char**)&devicesString, &gasHighThres))return;
+				if(!skipInt((char**)&devicesString, &gasLowThres))return;
+				if(!skipInt((char**)&devicesString, &gasMedThres))return;
+
+				tHeaterState state(gasHighThres, gasLowThres, gasMedThres);
+				String name(friendlyName);
+
+				CDeviceHeater *device = new CDeviceHeater();
+				if(!device)
+				{
+					LOG_E("Fatal: heap");
+					return;
+				}
+
+				device->initHeater(devID, name, state);
+
+				if(!skipInt((char**)&devicesString, &numWatchers))return;
+
+				while(numWatchers--)
+				{
+					if(!skipInt((char**)&devicesString, &devID))return;
+					LOG_I("Add watcher ID:%d", devID);
+					device->addWatcherDevice(devID);
+				}
+
+				g_activeDevices.addElement(device);
+			}
+			break;
+
+			default:
+				LOG_I("UNKN device:%d ID:%d", devType, devID);
+				break;
+		};
+	}
+
+	LOG_I("Done adding %d devices", numDevices);
+
+}
+
+
 void initDevices()
 {
-	CDeviceTempHumid *localTHSensor = new CDeviceTempHumid();
-	if(!localTHSensor)
-	{
-		LOG_E("Fatal: no heap to init devices");
-		return;
-	}
 
 	enableDev(DEV_UART, ENABLE | CONFIG);
 
@@ -44,19 +147,10 @@ void initDevices()
 	//DHT22 periodically enabled to read data
 	enableDev(DEV_DHT22, ENABLE | CONFIG);
 
-	tTempHumidState thState(22.1f);
-	String thName("IndoorTemp");
-	localTHSensor->initTempHumid(LOCAL_TEMPHUMID_SENSOR_ID, thName, thState, locLocal);
-
-	g_activeTHs.addElement(localTHSensor);
-
-
 	enableDev(DEV_MQ135, ENABLE | CONFIG);
-
 
 	//RGB periodically enabled to send data
 	enableDev(DEV_RGB, DISABLE);
-
 
 	//enable and config Radio
 	enableDev(DEV_RADIO, ENABLE | CONFIG);
@@ -68,8 +162,99 @@ void initDevices()
 	//setup Wifi
 	enableDev(DEV_WIFI, ENABLE | CONFIG);
 
+	loadSavedDevices();
 }
 
+
+/* DEVICES logic */
+
+void CDeviceTempHumid::onUpdateTimer()
+{
+	requestUpdateState();
+	m_updateTimer.initializeMs(m_updateInterval, TimerDelegate(&CDeviceTempHumid::onUpdateTimer, this)).start(false);
+}
+
+void CDeviceTempHumid::requestUpdateState()
+{
+	uint8_t errValue;
+	int i;
+	if(locLocal == m_location)
+	{
+		errValue = devDHT22_read(m_state.lastTH);
+
+		if(DEV_ERR_OK == errValue)
+		{
+			m_LastUpdateTimestamp = system_get_time();
+
+			LOG_I("H:%f T:%f\n", m_state.lastTH.humid, m_state.lastTH.temp);
+
+			/*devDHT22_heatIndex();
+			devDHT22_dewPoint();
+			devDHT22_comfortRatio();
+			LOG_I( "\n");*/
+
+			if(m_state.tempSetpoint > m_tempThreshold + m_state.lastTH.temp)
+			{
+				m_state.bNeedHeating = true;
+				m_state.bNeedCooling = false;
+			}
+			else if(m_state.tempSetpoint < m_tempThreshold - m_state.lastTH.temp)
+			{
+				m_state.bNeedHeating = false;
+				m_state.bNeedCooling = true;
+			}
+
+			if(m_state.bNeedHeating)
+			{
+				for(i=0; i < m_devWatchersList.count(); i++)
+				{
+					CGenericDevice* genDevice = getDevice(m_devWatchersList[i]);
+
+					if(genDevice)
+					{
+						genDevice->triggerState(0, NULL);
+					}
+				}
+			}
+		}
+		else
+		{
+			LOG_E( "DHT22 read FAIL:%d\n", errValue);
+		}
+	}
+	else //request by radio
+	{
+
+	}
+}
+
+void CDeviceHeater::triggerState(int reason, void* state)
+{
+	bool bHeaterRequestOn = false;
+	for(int i=0; i < m_devWatchersList.count(); i++)
+	{
+		CDeviceTempHumid* thDevice = (CDeviceTempHumid*)(getDevice(m_devWatchersList[i]));
+
+		if(thDevice && thDevice->m_state.bNeedHeating)
+		{
+			bHeaterRequestOn = true;
+			break;
+		}
+	}
+
+	if(bHeaterRequestOn)
+	{
+		LOG_I("TurnOn: heater %d", m_ID);
+		//send cmd to radio device
+	}
+	else
+	{
+		LOG_I("TurnOff: heater %d", m_ID);
+		//send cmd to radio device
+	}
+}
+
+/*generic local device logic */
 //TODO: test if GPIO pins correspond to HW layout
 void enableDev(unsigned short dev, uint8_t op)
 {
@@ -125,3 +310,6 @@ void enableDev(unsigned short dev, uint8_t op)
 	}
 	while(0);
 }
+
+
+
