@@ -27,43 +27,44 @@ devCtl gDevices[] =
 
 void loadSavedDevices()
 {
-	char devicesString[] = "3;1;0;IndoorTemp;22.1;0;1;1;2;1;Heater;200;50;100;1;0;0;2;LightHall;";
+	const char *devicesString = "3;1;0;IndoorTemp;29.2;0;1;1;2;1;Heater\\;;200;50;100;1;0;0;2;LightHall;";
 
-	int numDevices, iDev = 0, devID, devType, numWatchers;;
+	int numDevices, iDev = 0, devID, devType, numWatchers;
 
 	#define MAX_FRIENDLY_NAME 64
 	char friendlyName[MAX_FRIENDLY_NAME];
 
-	if(!skipInt((char**)&devicesString, &numDevices))return;
+	LOG_I("Loading saved devs\n");
+	if(!skipInt(&devicesString, &numDevices))return;
 
-	while(iDev < numDevices)
+	while(iDev++ < numDevices)
 	{
-		LOG_I("Loading dev %d of %d", iDev + 1, numDevices);
-		if(!skipInt((char**)&devicesString, &devType))return;
-		if(!skipInt((char**)&devicesString, &devID))return;
-		if(!skipString((char**)&devicesString, (char*)friendlyName, MAX_FRIENDLY_NAME))return;
+		LOG_I("Loading dev %d of %d", iDev, numDevices);
+		if(!skipInt(&devicesString, &devType))return;
+		if(!skipInt(&devicesString, &devID))return;
+		if(!skipString(&devicesString, (char*)friendlyName, MAX_FRIENDLY_NAME))return;
 
 		switch(devType)
 		{
 			case devTypeLight:
 			{
-				LOG_I("LIGHT device - not impl ID:%d", devID);
+				LOG_I("LIGHT device - not impl ID:%d NAME: %s", devID, friendlyName);
 
 			}
 			break;
 
 			case devTypeTH:
 			{
-				LOG_I("TH device ID:%d", devID);
+				LOG_I("TH device ID:%d NAME: %s", devID, friendlyName);
 
-				int tempSetPoint = 22.0f;
-				if(!skipInt((char**)&devicesString, &tempSetPoint))return;
+				float tempSetPoint = 22.5f;
+				if(!skipFloat(&devicesString, &tempSetPoint))return;
 
 				tTempHumidState state(tempSetPoint);
 				String name(friendlyName);
 
 				int isLocal = 0;
-				if(!skipInt((char**)&devicesString, &isLocal))return;
+				if(!skipInt(&devicesString, &isLocal))return;
 
 				CDeviceTempHumid *device = new CDeviceTempHumid();
 				if(!device)
@@ -74,11 +75,11 @@ void loadSavedDevices()
 
 				device->initTempHumid(devID, name, state, (eSensorLocation)isLocal);
 
-				if(!skipInt((char**)&devicesString, &numWatchers))return;
+				if(!skipInt(&devicesString, &numWatchers))return;
 
 				while(numWatchers--)
 				{
-					if(!skipInt((char**)&devicesString, &devID))return;
+					if(!skipInt(&devicesString, &devID))return;
 					LOG_I("Add watcher ID:%d", devID);
 					device->addWatcherDevice(devID);
 				}
@@ -89,15 +90,15 @@ void loadSavedDevices()
 
 			case devTypeHeater:
 			{
-				LOG_I("HEATER device ID:%d", devID);
+				LOG_I("HEATER device ID:%d NAME: %s", devID, friendlyName);
 
 				int gasHighThres = 200;
 				int gasLowThres = 50;
 				int gasMedThres = 100;
 
-				if(!skipInt((char**)&devicesString, &gasHighThres))return;
-				if(!skipInt((char**)&devicesString, &gasLowThres))return;
-				if(!skipInt((char**)&devicesString, &gasMedThres))return;
+				if(!skipInt(&devicesString, &gasHighThres))return;
+				if(!skipInt(&devicesString, &gasLowThres))return;
+				if(!skipInt(&devicesString, &gasMedThres))return;
 
 				tHeaterState state(gasHighThres, gasLowThres, gasMedThres);
 				String name(friendlyName);
@@ -111,11 +112,11 @@ void loadSavedDevices()
 
 				device->initHeater(devID, name, state);
 
-				if(!skipInt((char**)&devicesString, &numWatchers))return;
+				if(!skipInt(&devicesString, &numWatchers))return;
 
 				while(numWatchers--)
 				{
-					if(!skipInt((char**)&devicesString, &devID))return;
+					if(!skipInt(&devicesString, &devID))return;
 					LOG_I("Add watcher ID:%d", devID);
 					device->addWatcherDevice(devID);
 				}
@@ -137,7 +138,6 @@ void loadSavedDevices()
 
 void initDevices()
 {
-
 	enableDev(DEV_UART, ENABLE | CONFIG);
 
 	//setup SDCard and load custom system settings, then disable SDCard
@@ -186,7 +186,9 @@ void CDeviceTempHumid::requestUpdateState()
 		{
 			m_LastUpdateTimestamp = system_get_time();
 
-			LOG_I("H:%f T:%f\n", m_state.lastTH.humid, m_state.lastTH.temp);
+			LOG_I("%s H:%.2f T:%.2f SetPt:%.2f Time:%u", m_FriendlyName.c_str(),
+					m_state.lastTH.humid, m_state.lastTH.temp, m_state.tempSetpoint,
+					m_LastUpdateTimestamp);
 
 			/*devDHT22_heatIndex();
 			devDHT22_dewPoint();
@@ -198,7 +200,7 @@ void CDeviceTempHumid::requestUpdateState()
 				m_state.bNeedHeating = true;
 				m_state.bNeedCooling = false;
 			}
-			else if(m_state.tempSetpoint < m_tempThreshold - m_state.lastTH.temp)
+			else if(m_state.tempSetpoint < m_state.lastTH.temp - m_tempThreshold)
 			{
 				m_state.bNeedHeating = false;
 				m_state.bNeedCooling = true;
@@ -208,7 +210,7 @@ void CDeviceTempHumid::requestUpdateState()
 			{
 				for(i=0; i < m_devWatchersList.count(); i++)
 				{
-					CGenericDevice* genDevice = getDevice(m_devWatchersList[i]);
+					CDeviceHeater* genDevice = (CDeviceHeater*)getDevice(m_devWatchersList[i]);
 
 					if(genDevice)
 					{

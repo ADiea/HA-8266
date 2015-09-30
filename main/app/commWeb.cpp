@@ -19,59 +19,59 @@ bool reply_cwReplyToCommand(WebSocket& socket, eCommWebErrorCodes err)
 	socket.send((const char*)scrapPackage, sizePkt);
 }
 
-bool handle_cwErrorHandler(WebSocket& socket, char **pkt)
+bool handle_cwErrorHandler(WebSocket& socket, const char **pkt)
 {
 	LOG_E( "Invalid pktId RXed");
 	reply_cwReplyToCommand(socket, cwErrInvalidPacketID);
 }
 
-bool handle_cwGetLights(WebSocket& socket, char **pkt)
+bool handle_cwGetLights(WebSocket& socket, const char **pkt)
 {
 
 	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwSetLightParams(WebSocket& socket, char **pkt)
+bool handle_cwSetLightParams(WebSocket& socket, const char **pkt)
 {
 	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwGetTHs(WebSocket& socket, char **pkt)
+bool handle_cwGetTHs(WebSocket& socket, const char **pkt)
 {
 	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwSetTHParams(WebSocket& socket, char **pkt)
+bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
 {
 	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwGetConfortStatus(WebSocket& socket, char **pkt)
+bool handle_cwGetConfortStatus(WebSocket& socket, const char **pkt)
 {
 	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwGetRadioFMs(WebSocket& socket, char **pkt)
+bool handle_cwGetRadioFMs(WebSocket& socket, const char **pkt)
 {
 	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwSetRadioFMParams(WebSocket& socket, char **pkt)
+bool handle_cwSetRadioFMParams(WebSocket& socket, const char **pkt)
 {
 	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwGetMovements(WebSocket& socket, char **pkt)
+bool handle_cwGetMovements(WebSocket& socket, const char **pkt)
 {
 	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwSetMovementParams(WebSocket& socket, char **pkt)
+bool handle_cwSetMovementParams(WebSocket& socket, const char **pkt)
 {
 	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
-bool (*gCWHandlers[cwMaxId])(WebSocket&, char**) =
+bool (*gCWHandlers[cwMaxId])(WebSocket&, const char**) =
 {
 	handle_cwErrorHandler,
 
@@ -102,13 +102,11 @@ bool cwReceivePacket(WebSocket& socket, const char* pkt)
 {
 	bool retVal = false;
 
-	char *sPkt = (char*)pkt;
-
 	int pktId;
 
 	LOG_I( "Received Pkt ID: %d", pktId);
 
-	if (!skipInt(&sPkt, &pktId))
+	if (!skipInt(&pkt, &pktId))
 	{
 		LOG_E( "cwReceivePacket: Cannot get Pkt ID");
 	}
@@ -120,7 +118,7 @@ bool cwReceivePacket(WebSocket& socket, const char* pkt)
 		}
 		else
 		{
-			retVal = gCWHandlers[pktId](socket, &sPkt);
+			retVal = gCWHandlers[pktId](socket, &pkt);
 		}
 	}
 

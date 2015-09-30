@@ -17,9 +17,10 @@ int snprintf(char* buf, int length, const char *fmt, ...)
 	return n;
 }
 
-bool skipInt(char **s, int *dest)
+bool skipInt(const char **s, int *dest)
 {
 	int i = 0;
+	char c;
 	bool bSign = false;
 
 	if(**s == '-')
@@ -28,6 +29,8 @@ bool skipInt(char **s, int *dest)
 		++(*s);
 	}
 
+	//LOG_D( "skipInt: String is %s", *s);
+
 	while (is_digit(**s))
 		i = i * 10 + *((*s)++) - '0';
 
@@ -35,13 +38,17 @@ bool skipInt(char **s, int *dest)
 	{
 		LOG_E( "skipInt: Float no. detected");
 	}
-	else if(**s == ';')
+	else  if(**s == ';')
 	{
 		++(*s);
 	}
 	else
 	{
-		LOG_E( "skipInt: bad terminal: %x", **s);
+		c = **s;
+		while (';' != **s || 0 != **s)
+					(*s)++;
+
+		LOG_E( "skipInt: bad terminal: %x, str: %s", c, *s);
 		return false;
 	}
 
@@ -49,7 +56,7 @@ bool skipInt(char **s, int *dest)
 	return true;
 }
 
-bool skipFloat(char **s, float *dest)
+bool skipFloat(const char **s, float *dest)
 {
 	int intPart;
 
@@ -62,8 +69,8 @@ bool skipFloat(char **s, float *dest)
 
 	if(**s == '.')
 	{
-		f = 0;
-
+		f = intPart;
+		++(*s);
 		while (is_digit(**s))
 		{
 			digit = *((*s)++) - '0';
@@ -81,6 +88,8 @@ bool skipFloat(char **s, float *dest)
 		if(**s == ';')
 		{
 			++(*s);
+			*dest = f;
+			LOG_I("skipFloat: Parsed:%f", f);
 		}
 		else
 		{
@@ -104,18 +113,17 @@ bool skipFloat(char **s, float *dest)
 	return true;
 }
 
-bool skipString(char** s, char* dest, int destLen)
+bool skipString(const char** s, char* dest, int destLen)
 {
 	if(**s == ';')
 	{
 		LOG_E( "skipString: null string");
-
 		return false;
 	}
 
 	uint32_t length = 0;
 
-	while (**s != ';')
+	while ((**s != ';') && (**s != 0))
 	{
 		if(**s == '\\' && *(*s+1) == ';')
 		{
@@ -127,14 +135,21 @@ bool skipString(char** s, char* dest, int destLen)
 		if(length >= destLen)
 		{
 			LOG_E( "skipString: StringTooLong");
+			dest[destLen-1] = 0;
 			return false;
 		}
 		else ++length;
 	}
 
+	if(**s == ';')
+	{
+		++(*s);
+	}
+
 	if(length >= destLen)
 	{
 		LOG_E( "skipString: StringTooLong");
+		dest[destLen-1] = 0;
 		return false;
 	}
 	else dest[length] = 0;
