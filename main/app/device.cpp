@@ -1,6 +1,8 @@
 #include "device.h"
 #include "util.h"
 
+
+
  Vector<CGenericDevice*> g_activeDevices;
 
 unsigned short gDevicesState = 0x0000;
@@ -165,96 +167,6 @@ void initDevices()
 	loadSavedDevices();
 }
 
-
-/* DEVICES logic */
-
-void CDeviceTempHumid::onUpdateTimer()
-{
-	requestUpdateState();
-	m_updateTimer.initializeMs(m_updateInterval, TimerDelegate(&CDeviceTempHumid::onUpdateTimer, this)).start(false);
-}
-
-void CDeviceTempHumid::requestUpdateState()
-{
-	uint8_t errValue;
-	int i;
-	if(locLocal == m_location)
-	{
-		errValue = devDHT22_read(m_state.lastTH);
-
-		if(DEV_ERR_OK == errValue)
-		{
-			m_LastUpdateTimestamp = system_get_time();
-
-			LOG_I("%s H:%.2f T:%.2f SetPt:%.2f Time:%u", m_FriendlyName.c_str(),
-					m_state.lastTH.humid, m_state.lastTH.temp, m_state.tempSetpoint,
-					m_LastUpdateTimestamp);
-
-			/*devDHT22_heatIndex();
-			devDHT22_dewPoint();
-			devDHT22_comfortRatio();
-			LOG_I( "\n");*/
-
-			if(m_state.tempSetpoint > m_tempThreshold + m_state.lastTH.temp)
-			{
-				m_state.bNeedHeating = true;
-				m_state.bNeedCooling = false;
-			}
-			else if(m_state.tempSetpoint < m_state.lastTH.temp - m_tempThreshold)
-			{
-				m_state.bNeedHeating = false;
-				m_state.bNeedCooling = true;
-			}
-
-			if(m_state.bNeedHeating)
-			{
-				for(i=0; i < m_devWatchersList.count(); i++)
-				{
-					CDeviceHeater* genDevice = (CDeviceHeater*)getDevice(m_devWatchersList[i]);
-
-					if(genDevice)
-					{
-						genDevice->triggerState(0, NULL);
-					}
-				}
-			}
-		}
-		else
-		{
-			LOG_E( "DHT22 read FAIL:%d\n", errValue);
-		}
-	}
-	else //request by radio
-	{
-
-	}
-}
-
-void CDeviceHeater::triggerState(int reason, void* state)
-{
-	bool bHeaterRequestOn = false;
-	for(int i=0; i < m_devWatchersList.count(); i++)
-	{
-		CDeviceTempHumid* thDevice = (CDeviceTempHumid*)(getDevice(m_devWatchersList[i]));
-
-		if(thDevice && thDevice->m_state.bNeedHeating)
-		{
-			bHeaterRequestOn = true;
-			break;
-		}
-	}
-
-	if(bHeaterRequestOn)
-	{
-		LOG_I("TurnOn: heater %d", m_ID);
-		//send cmd to radio device
-	}
-	else
-	{
-		LOG_I("TurnOff: heater %d", m_ID);
-		//send cmd to radio device
-	}
-}
 
 /*generic local device logic */
 //TODO: test if GPIO pins correspond to HW layout
