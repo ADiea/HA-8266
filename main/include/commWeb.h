@@ -6,7 +6,7 @@
 enum eCommWebErrorCodes
 {
 	cwErrSuccess,
-	cwNotImplemented,
+	cwErrNotImplemented,
 	cwErrInvalidPacketID,
 	cwErrFunctionNotImplemented,
 	cwErrInvalidDeviceID,
@@ -38,6 +38,9 @@ enum eCommWebMsgTYpes
 	cwReplyMovements,
 	cwSetMovementParams,
 	cwNotifyMovementStatus,
+
+//	cwGetDevices,
+//	cwReplyDeviceList,
 
 	//plant sensors
 	//plantwatering
