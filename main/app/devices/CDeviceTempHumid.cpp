@@ -63,8 +63,38 @@ void CDeviceTempHumid::requestUpdateState()
 	}
 }
 
-bool CDeviceTempHumid::deserialize(const char *string)
+bool CDeviceTempHumid::deserialize(const char *devicesString)
 {
+	int devID, numWatchers;
+	#define MAX_FRIENDLY_NAME 64
+	char friendlyName[MAX_FRIENDLY_NAME];
+
+	if(!skipInt(&devicesString, &devID))return false;
+	if(!skipString(&devicesString, (char*)friendlyName, MAX_FRIENDLY_NAME))return false;
+
+	LOG_I("TH device ID:%d NAME: %s", devID, friendlyName);
+
+	float tempSetPoint = 22.5f;
+	if(!skipFloat(&devicesString, &tempSetPoint))return false;
+
+	tTempHumidState state(tempSetPoint);
+	String name(friendlyName);
+
+	int isLocal = 0;
+	if(!skipInt(&devicesString, &isLocal))return false;
+
+	initTempHumid((uint32_t)devID, name, state, (eSensorLocation)isLocal);
+
+	if(!skipInt(&devicesString, &numWatchers))return false;
+
+	while(numWatchers--)
+	{
+		if(!skipInt(&devicesString, &devID))return false;
+		LOG_I("Add watcher ID:%d", devID);
+		addWatcherDevice(devID);
+	}
+
+	return true;
 }
 
 uint32_t CDeviceTempHumid::serialize(char* buffer, uint32_t size)

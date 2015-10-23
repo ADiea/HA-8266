@@ -1,5 +1,5 @@
 #include "device.h"
-#include "util.h"
+
 
 
 
@@ -31,10 +31,7 @@ void loadSavedDevices()
 {
 	const char *devicesString = "3;1;0;IndoorTemp;29.2;0;1;1;2;1;Heater\\;;200;50;100;1;0;0;2;LightHall;";
 
-	int numDevices, iDev = 0, devID, devType, numWatchers;
-
-	#define MAX_FRIENDLY_NAME 64
-	char friendlyName[MAX_FRIENDLY_NAME];
+	int numDevices, iDev = 0, devType, numWatchers;
 
 	LOG_I("Loading saved devs\n");
 	if(!skipInt(&devicesString, &numDevices))return;
@@ -43,92 +40,72 @@ void loadSavedDevices()
 	{
 		LOG_I("Loading dev %d of %d", iDev, numDevices);
 		if(!skipInt(&devicesString, &devType))return;
-		if(!skipInt(&devicesString, &devID))return;
-		if(!skipString(&devicesString, (char*)friendlyName, MAX_FRIENDLY_NAME))return;
+
 
 		switch(devType)
 		{
 			case devTypeLight:
 			{
-				LOG_I("LIGHT device - not impl ID:%d NAME: %s", devID, friendlyName);
+				CDeviceLight *device = new CDeviceLight();
+				if(!device)
+				{
+					LOG_E("Fatal: heap(%d)", iDev);
+					return;
+				}
 
+				if( device->deserialize(devicesString))
+				{
+					g_activeDevices.addElement(device);
+				}
+				else
+				{
+					LOG_E("Fatal: deserial(%d)", iDev);
+				}
 			}
 			break;
 
 			case devTypeTH:
 			{
-				LOG_I("TH device ID:%d NAME: %s", devID, friendlyName);
-
-				float tempSetPoint = 22.5f;
-				if(!skipFloat(&devicesString, &tempSetPoint))return;
-
-				tTempHumidState state(tempSetPoint);
-				String name(friendlyName);
-
-				int isLocal = 0;
-				if(!skipInt(&devicesString, &isLocal))return;
-
 				CDeviceTempHumid *device = new CDeviceTempHumid();
 				if(!device)
 				{
-					LOG_E("Fatal: heap");
+					LOG_E("Fatal: heap(%d)", iDev);
 					return;
 				}
 
-				device->initTempHumid(devID, name, state, (eSensorLocation)isLocal);
-
-				if(!skipInt(&devicesString, &numWatchers))return;
-
-				while(numWatchers--)
+				if( device->deserialize(devicesString))
 				{
-					if(!skipInt(&devicesString, &devID))return;
-					LOG_I("Add watcher ID:%d", devID);
-					device->addWatcherDevice(devID);
+					g_activeDevices.addElement(device);
 				}
-
-				g_activeDevices.addElement(device);
+				else
+				{
+					LOG_E("Fatal: deserial(%d)", iDev);
+				}
 			}
 			break;
 
 			case devTypeHeater:
 			{
-				LOG_I("HEATER device ID:%d NAME: %s", devID, friendlyName);
-
-				int gasHighThres = 200;
-				int gasLowThres = 50;
-				int gasMedThres = 100;
-
-				if(!skipInt(&devicesString, &gasHighThres))return;
-				if(!skipInt(&devicesString, &gasLowThres))return;
-				if(!skipInt(&devicesString, &gasMedThres))return;
-
-				tHeaterState state(gasHighThres, gasLowThres, gasMedThres);
-				String name(friendlyName);
-
 				CDeviceHeater *device = new CDeviceHeater();
 				if(!device)
 				{
-					LOG_E("Fatal: heap");
+					LOG_E("Fatal: heap(%d)", iDev);
 					return;
 				}
 
-				device->initHeater(devID, name, state);
-
-				if(!skipInt(&devicesString, &numWatchers))return;
-
-				while(numWatchers--)
+				if( device->deserialize(devicesString))
 				{
-					if(!skipInt(&devicesString, &devID))return;
-					LOG_I("Add watcher ID:%d", devID);
-					device->addWatcherDevice(devID);
+					g_activeDevices.addElement(device);
 				}
-
-				g_activeDevices.addElement(device);
+				else
+				{
+					LOG_E("Fatal: deserial(%d)", iDev);
+				}
 			}
 			break;
 
 			default:
-				LOG_I("UNKN device:%d ID:%d", devType, devID);
+				LOG_I("UNKN device:%d", devType);
 				break;
 		};
 	}

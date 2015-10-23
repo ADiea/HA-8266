@@ -7,8 +7,7 @@
 #include "debug.h"
 #include "device.h"
 #include "commWeb.h"
-
-
+#include "webserver.h"
 
 /*
  The following 2 defines are present in wifipass.h
@@ -18,11 +17,6 @@
 #include "wifipass.h"
 
 #define ONE_SECOND 1000000
-
-//Globals
-TempAndHumidity gLastTempHumid;
-NtpClient *gNTPClient;
-HttpServer server;
 
 static inline unsigned get_ccount(void)
 {
@@ -48,163 +42,19 @@ Timer tmrMainLoop;
 	}
 #endif /*DEBUG_BUILD*/
 
-	uint32_t totalActiveSockets=0;
-	void onIndex(HttpRequest &request, HttpResponse &response)
-	{
-		response.sendString("Bad Request");
-	}
-
-	void onFile(HttpRequest &request, HttpResponse &response)
-	{
-		response.sendString("Bad Request");
-	}
-
-	void wsConnected(WebSocket& socket)
-	{
-		totalActiveSockets++;
-
-		// Notify everybody about new connection
-		WebSocketsList &clients = server.getActiveWebSockets();
-		for (int i = 0; i < clients.count(); i++)
-			clients[i].sendString("New ws conn! Total: " + String(totalActiveSockets));
-	}
-
-	bool parseWsPacket(const String& message)
-	{
-		const char* msg =  message.c_str();
-
-		static uint8_t sequence = 0;
-
-		byte pkg[64] = {0};
-
-		bool retVal = false;
-
-
-
-		int intensity = 0;
-		int ontime_min = 0;
-		int ontime_sec = 0;
-		int dimspeed = 0;
-		int minValue = 0;
-		int manual = 0;
-
-		
-
-		LOG_I( "WS intensity:%u min:%u s:%u speed:%u manual:%u min:%u\n",
-				intensity, ontime_min, ontime_sec, dimspeed, manual, minValue);
-
-		
-
-		#define DIMMER_ID 0x01
-		#define MY_ID 0xFF
-
-		/*PKG intensity
-		[address 1B]
-		[pgk_type==PKG_TYPE_INTENSITY 1B]
-		[intensity 1B]
-		[on duration(s)= min 4b + sec*4 4b 1B]
-		[flags 4b fadeSpeed 4b]
-		[minValue 1B]
-		[sequence 1B]
-		[checksum 1B]
-		*/
-		#define PKG_INTENSITY_LEN 0x08
-
-		#define PKG_TYPE_INVALID 0x00
-		#define PKG_TYPE_ACK 0x01
-		#define PKG_TYPE_INTENSITY 0x02
-
-		#define PKG_MANUAL_FLAG 0x80
-
-		pkg[0] = DIMMER_ID;
-		pkg[1] = PKG_TYPE_INTENSITY;
-		pkg[2] = intensity;
-		pkg[3] = ((ontime_min << 4) & 0xF0) | (0xF & (ontime_sec >> 2));
-		pkg[4] = dimspeed & 0xF;
-		if(manual)
-			pkg[4] |= PKG_MANUAL_FLAG;
-		pkg[5] = minValue;
-		pkg[6] = ++sequence;
-
-		pkg[7] = (pkg[0] + pkg[1] + pkg[2] + pkg[3] + pkg[4] + pkg[5]+ pkg[6]) & 0xFF;
-
-		retVal = RadioSend(pkg, PKG_INTENSITY_LEN);
-				
-		return retVal;
-	}
-
-
-	void wsMessageReceived(WebSocket& socket, const String& message)
-	{
-		LOG_I( "WS message received:%s\n", message.c_str());
-
-		cwReceivePacket(socket, message.c_str());
-	}
-
-	void wsBinaryReceived(WebSocket& socket, uint8_t* data, size_t size)
-	{
-		//Serial.printf("Websocket binary data recieved, size: %d\r\n", size);
-	}
-
-	void wsDisconnected(WebSocket& socket)
-	{
-		totalActiveSockets--;
-
-		// Notify everybody about lost connection
-		WebSocketsList &clients = server.getActiveWebSockets();
-		for (int i = 0; i < clients.count(); i++)
-			clients[i].sendString("WS client disconnected Total: " + String(totalActiveSockets));
-	}
-
-void startWebServer()
-{
-	////Serial.print(3);
-	server.listen(80);
-	server.addPath("/", onIndex);
-	server.setDefaultHandler(onFile);
-
-	// Web Sockets configuration
-	server.enableWebSockets(true);
-	server.setWebSocketConnectionHandler(wsConnected);
-	server.setWebSocketMessageHandler(wsMessageReceived);
-	server.setWebSocketBinaryHandler(wsBinaryReceived);
-	server.setWebSocketDisconnectionHandler(wsDisconnected);
-
-	debugf("\r\n=== WEB SERVER STARTED ===\n %s ",
-			WifiStation.getIP().toString().c_str());
-
-}
-
 // Will be called when WiFi station was connected to AP
 void connectOk()
 {
-	LOG_I( "AP CONNECT\n");
-
-	startWebServer();
-
-	gNTPClient = new NtpClient("pool.ntp.org", 10*60); //every 10 minutes
-	if(gNTPClient)
-	{
-		gNTPClient->setAutoQueryInterval(10*60);
-		gNTPClient->setAutoQuery(true);
-		gNTPClient->setAutoUpdateSystemClock(true);
-		gNTPClient->requestTime(); // Request to update time now.
-	}
+	LOG_I( "AP CONNECT");
+	startWebServers();
 }
 
 // Will be called when WiFi station timeout was reached
 void connectFail()
 {
-	debugf("FAIL CONNECT");
+	LOG_E("FAIL CONNECT");
 	WifiStation.waitConnection(connectOk, 10, connectFail); // Repeat and check again
 }
-
-void initSystem()
-{
-	initDevices();
-}
-
-
 
 void startSystem()
 {
@@ -267,10 +117,11 @@ void startSystem()
 	LOG_I( "Tick diff 10us %lu\r\n", tickdiff);
 	*/
 
+	/*
 	LOG_I("Time,H,T,readTime(us),H_idx_C,DP_Acc,DP_Acc(us),DP_AccFast," \
 			"DP_AccFast(us),DP_Fast,DP_Fast(us),DP_Fastest,DP_Fastest(us)," \
 			"ComfortRatio,ComfortText\n");
-
+	*/
 }
 
 static void mainLoop()
@@ -282,9 +133,6 @@ static void mainLoop()
 	byte len = 0;
 
 	uint16_t i;
-
-	//
-	//LOG_I( ",");
 
 	if(Radio && !isRadioBusy())
 	{
@@ -346,7 +194,7 @@ static void mainLoop()
 
 void init()
 {
-	initSystem();
+	initDevices();
 
 	LOG_E("System start.\n");
 

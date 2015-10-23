@@ -16,6 +16,8 @@
 #include <Libraries/DHT/DHT.h>
 #include <SmingCore/SmingCore.h>
 
+#include "util.h"
+
 #define LOCAL_TEMPHUMID_SENSOR_ID 0
 
 #define INVALID_DEVICE_ID 0xffffffff
