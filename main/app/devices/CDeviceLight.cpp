@@ -1,6 +1,6 @@
 #include "CDeviceLight.h"
 
-bool CDeviceLight::deserialize(const char *devicesString)
+bool CDeviceLight::deserialize(const char **devicesString)
 {
 	int devID;
 	#define MAX_FRIENDLY_NAME 64
@@ -8,8 +8,8 @@ bool CDeviceLight::deserialize(const char *devicesString)
 
 	tLightState lightState;
 
-	if(!skipInt(&devicesString, &devID))return false;
-	if(!skipString(&devicesString, (char*)friendlyName, MAX_FRIENDLY_NAME))return false;
+	if(!skipInt(devicesString, &devID))return false;
+	if(!skipString(devicesString, (char*)friendlyName, MAX_FRIENDLY_NAME))return false;
 
 	LOG_I("LIGHT device ID:%d NAME: %s", devID, friendlyName);
 

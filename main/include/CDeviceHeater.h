@@ -49,7 +49,7 @@ public:
 		m_state = state;
 	}
 
-	virtual bool deserialize(const char *string);
+	virtual bool deserialize(const char **string);
 	virtual uint32_t serialize(char* buffer, uint32_t size);
 
 	virtual void requestUpdateState()

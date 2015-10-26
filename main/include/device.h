@@ -76,7 +76,7 @@ public:
 
 	virtual bool radioPktReceivedFromDevice(char* pktData, uint16_t pktLen) = 0;
 
-	virtual bool deserialize(const char *string) = 0;
+	virtual bool deserialize(const char **string) = 0;
 	virtual uint32_t serialize(char* buffer, uint32_t size) = 0;
 
 	CGenericDevice* findDevice(uint32_t deviceID)

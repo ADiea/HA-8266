@@ -68,7 +68,7 @@ public:
 	virtual void triggerState(int reason, void* state){}
 	virtual bool radioPktReceivedFromDevice(char* pktData, uint16_t pktLen){}
 
-	virtual bool deserialize(const char *string);
+	virtual bool deserialize(const char **string);
 	virtual uint32_t serialize(char* buffer, uint32_t size);
 
 	tLightState m_state;

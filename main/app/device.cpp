@@ -46,14 +46,15 @@ void loadSavedDevices()
 		{
 			case devTypeLight:
 			{
+				LOG_I("LIGHT");
 				CDeviceLight *device = new CDeviceLight();
 				if(!device)
 				{
 					LOG_E("Fatal: heap(%d)", iDev);
 					return;
 				}
-
-				if( device->deserialize(devicesString))
+				LOG_I("deserialize");
+				if( device->deserialize(&devicesString))
 				{
 					g_activeDevices.addElement(device);
 				}
@@ -66,6 +67,7 @@ void loadSavedDevices()
 
 			case devTypeTH:
 			{
+				LOG_I("TH");
 				CDeviceTempHumid *device = new CDeviceTempHumid();
 				if(!device)
 				{
@@ -73,7 +75,7 @@ void loadSavedDevices()
 					return;
 				}
 
-				if( device->deserialize(devicesString))
+				if( device->deserialize(&devicesString))
 				{
 					g_activeDevices.addElement(device);
 				}
@@ -86,6 +88,7 @@ void loadSavedDevices()
 
 			case devTypeHeater:
 			{
+				LOG_I("HEATER");
 				CDeviceHeater *device = new CDeviceHeater();
 				if(!device)
 				{
@@ -93,7 +96,7 @@ void loadSavedDevices()
 					return;
 				}
 
-				if( device->deserialize(devicesString))
+				if( device->deserialize(&devicesString))
 				{
 					g_activeDevices.addElement(device);
 				}

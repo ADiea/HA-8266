@@ -59,7 +59,7 @@ public:
 		m_updateTimer.initializeMs(m_updateInterval, TimerDelegate(&CDeviceTempHumid::onUpdateTimer, this)).start(false);
 	}
 
-	virtual bool deserialize(const char *string);
+	virtual bool deserialize(const char **string);
 	virtual uint32_t serialize(char* buffer, uint32_t size);
 
 	void onUpdateTimer();

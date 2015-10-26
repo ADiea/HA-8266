@@ -38,7 +38,32 @@ bool handle_cwSetLightParams(WebSocket& socket, const char **pkt)
 
 bool handle_cwGetTHs(WebSocket& socket, const char **pkt)
 {
-	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
+	int i = 0, numDevs = 0, sizePkt = 0;
+	CDeviceTempHumid *th;
+
+	for(; i < g_activeDevices.count(); i++)
+	{
+		if(devTypeTH == g_activeDevices[i]->m_deviceType)
+		{
+			++numDevs;
+		}
+	}
+	sizePkt = snprintf(scrapPackage, sizeof(scrapPackage),
+				"%d;%d;", cwReplyTHs, numDevs);
+	//
+	for(i=0; i < g_activeDevices.count(); i++)
+	{
+		if(devTypeTH == g_activeDevices[i]->m_deviceType)
+		{
+			th = (CDeviceTempHumid*)g_activeDevices[i];
+			sizePkt += snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
+							"%d;%s;%f;%f;%d;", th->m_ID,
+							th->m_FriendlyName.c_str(),
+							th->m_state.tempSetpoint, th->m_state.lastTH.temp, 1);
+		}
+	}
+
+	socket.send((const char*)scrapPackage, sizePkt);
 }
 
 bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
@@ -104,14 +129,14 @@ bool cwReceivePacket(WebSocket& socket, const char* pkt)
 
 	int pktId;
 
-	LOG_I( "Received Pkt ID: %d", pktId);
-
 	if (!skipInt(&pkt, &pktId))
 	{
 		LOG_E( "cwReceivePacket: Cannot get Pkt ID");
 	}
 	else
 	{
+		LOG_I( "Received Pkt ID: %d", pktId);
+
 		if(pktId >=  cwMaxId)
 		{
 			LOG_E( "cwReceivePacket: Bad pkt ID rx: %d", pktId);
