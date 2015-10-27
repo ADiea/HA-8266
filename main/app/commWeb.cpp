@@ -57,9 +57,10 @@ bool handle_cwGetTHs(WebSocket& socket, const char **pkt)
 		{
 			th = (CDeviceTempHumid*)g_activeDevices[i];
 			sizePkt += snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
-							"%d;%s;%f;%f;%d;", th->m_ID,
+							"%d;%s;%f;%f;%d;%d;%d;%d;%f;%f;%f;", th->m_ID,
 							th->m_FriendlyName.c_str(),
-							th->m_state.tempSetpoint, th->m_state.lastTH.temp, 1);
+							th->m_state.tempSetpoint, th->m_state.lastTH.temp, 1, th->m_state.bEnabled, th->m_state.bIsHeating, th->m_state.bIsCooling,
+							th->m_state.tempSetpointMin, th->m_state.tempSetpointMax, th->m_state.lastTH.humid);
 		}
 	}
 
@@ -68,7 +69,46 @@ bool handle_cwGetTHs(WebSocket& socket, const char **pkt)
 
 bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
 {
-	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
+	int i = 0, numDevs = 0, sizePkt = 0;
+	CDeviceTempHumid *th;
+
+	int thID;
+	float setTemp;
+
+	eCommWebErrorCodes retCode = cwErrSuccess;
+
+	do
+	{
+
+		if(!skipInt(pkt, &thID))
+		{
+			retCode = cwErrInvalidDeviceID;
+			break;
+		}
+
+		for(i=0; i < g_activeDevices.count(); i++)
+		{
+			if(thID == g_activeDevices[i]->m_ID)
+			{
+				th = (CDeviceTempHumid*)g_activeDevices[i];
+
+				if(th && skipFloat(pkt, &setTemp))
+				{
+					th->m_state.tempSetpoint = setTemp;
+				}
+				else
+				{
+					retCode = cwErrInvalidCommandParams;
+				}
+
+				break;
+			}
+		}
+	}
+	while(false);
+
+
+	reply_cwReplyToCommand(socket, retCode);
 }
 
 bool handle_cwGetConfortStatus(WebSocket& socket, const char **pkt)

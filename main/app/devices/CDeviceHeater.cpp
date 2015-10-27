@@ -7,10 +7,20 @@ void CDeviceHeater::triggerState(int reason, void* state)
 	{
 		CDeviceTempHumid* thDevice = (CDeviceTempHumid*)(getDevice(m_devWatchersList[i]));
 
-		if(thDevice && thDevice->m_state.bNeedHeating)
+		if(thDevice)
 		{
-			bHeaterRequestOn = true;
-			break;
+			if(thDevice->m_state.bNeedHeating && )
+			{
+				//at least one th requests heating
+				bHeaterRequestOn = true;
+				//this th needs heating
+				thDevice->m_state.bIsHeating = true;
+			}
+			else
+			{
+				//this TH does not need heating
+				thDevice->m_state.bIsHeating = false;
+			}
 		}
 	}
 

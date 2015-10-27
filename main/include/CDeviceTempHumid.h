@@ -10,10 +10,15 @@ enum eSensorLocation
 
 struct tTempHumidState
 {
-	tTempHumidState(float setpoint):
+	tTempHumidState(float setpoint, float setpointMin, float setpointMax):
 		tempSetpoint(setpoint),
+		tempSetpointMin(setpointMin),
+		tempSetpointMax(setpointMax),
 		bNeedHeating(false),
-		bNeedCooling(false)
+		bNeedCooling(false),
+		bEnabled(true),
+		bIsHeating(false),
+		bIsCooling(false)
 	{
 		lastTH.temp = -99.0f;
 		lastTH.humid = -99.0f;
@@ -25,9 +30,13 @@ struct tTempHumidState
 	}
 
 	TempAndHumidity lastTH;
-	float tempSetpoint;
+	float tempSetpoint, tempSetpointMin, tempSetpointMax;
+
+	bool bEnabled;
 
 	bool bNeedHeating, bNeedCooling;
+
+	bool bIsHeating, bIsCooling;
 
 	//confort related stuff
 };

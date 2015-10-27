@@ -29,7 +29,7 @@ devCtl gDevices[] =
 
 void loadSavedDevices()
 {
-	const char *devicesString = "3;1;0;IndoorTemp;29.2;0;1;1;2;1;Heater\\;;200;50;100;1;0;0;2;LightHall;";
+	const char *devicesString = "3;1;0;IndoorTemp;29.2;16.0;26.5;0;1;1;1;2;1;Heater\\;;200;50;100;1;0;0;2;LightHall;";
 
 	int numDevices, iDev = 0, devType, numWatchers;
 

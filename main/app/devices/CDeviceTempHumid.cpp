@@ -39,7 +39,7 @@ void CDeviceTempHumid::requestUpdateState()
 				m_state.bNeedCooling = true;
 			}
 
-			if(m_state.bNeedHeating)
+			if(m_state.bNeedHeating && m_state.bEnabled)
 			{
 				for(i=0; i < m_devWatchersList.count(); i++)
 				{
@@ -80,8 +80,14 @@ bool CDeviceTempHumid::deserialize(const char **devicesString)
 	tTempHumidState state(tempSetPoint);
 	String name(friendlyName);
 
+	if(!skipFloat(devicesString, &(state.tempSetpointMin)))return false;
+
+	if(!skipFloat(devicesString, &(state.tempSetpointMax)))return false;
+
 	int isLocal = 0;
 	if(!skipInt(devicesString, &isLocal))return false;
+
+	if(!skipInt(devicesString, &(state.bEnabled)))return false;
 
 	initTempHumid((uint32_t)devID, name, state, (eSensorLocation)isLocal);
 
