@@ -11,7 +11,7 @@
 #define DBG 3
 
 #if DEBUG_BUILD
-	#define VERBOSE_LEVEL DBG
+	#define VERBOSE_LEVEL INFO
 
 	#define LOG_E(fmt, ...)m_printf(fmt"\n", ##__VA_ARGS__)
 //#define LOG_E(fmt, ...)m_printf("tag"##__FUNCTION__##fmt, ##__VA_ARGS__)

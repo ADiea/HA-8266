@@ -39,8 +39,8 @@ void CDeviceTempHumid::requestUpdateState()
 				m_state.bNeedCooling = true;
 			}
 
-			if(m_state.bNeedHeating && m_state.bEnabled)
-			{
+		//	if(m_state.bNeedHeating && m_state.bEnabled)
+		//	{
 				for(i=0; i < m_devWatchersList.count(); i++)
 				{
 					CDeviceHeater* genDevice = (CDeviceHeater*)getDevice(m_devWatchersList[i]);
@@ -50,11 +50,12 @@ void CDeviceTempHumid::requestUpdateState()
 						genDevice->triggerState(0, NULL);
 					}
 				}
-			}
+		//	}
+
 		}
 		else
 		{
-			LOG_E( "DHT22 read FAIL:%d\n", errValue);
+			LOG_E( "DHT22 read FAIL:%d (%d)\n", errValue, (int)devDHT22_getLastError());
 		}
 	}
 	else //request by radio
@@ -77,7 +78,7 @@ bool CDeviceTempHumid::deserialize(const char **devicesString)
 	float tempSetPoint = 22.5f;
 	if(!skipFloat(devicesString, &tempSetPoint))return false;
 
-	tTempHumidState state(tempSetPoint);
+	tTempHumidState state(tempSetPoint, 16.0f, 27.0f);
 	String name(friendlyName);
 
 	if(!skipFloat(devicesString, &(state.tempSetpointMin)))return false;
@@ -87,7 +88,10 @@ bool CDeviceTempHumid::deserialize(const char **devicesString)
 	int isLocal = 0;
 	if(!skipInt(devicesString, &isLocal))return false;
 
-	if(!skipInt(devicesString, &(state.bEnabled)))return false;
+	int iEnabled;
+	if(!skipInt(devicesString, &(iEnabled)))return false;
+
+	state.bEnabled = iEnabled;
 
 	initTempHumid((uint32_t)devID, name, state, (eSensorLocation)isLocal);
 

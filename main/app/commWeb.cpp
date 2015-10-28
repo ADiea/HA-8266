@@ -175,7 +175,7 @@ bool cwReceivePacket(WebSocket& socket, const char* pkt)
 	}
 	else
 	{
-		LOG_I( "Received Pkt ID: %d", pktId);
+		LOG_D( "Received Pkt ID: %d", pktId);
 
 		if(pktId >=  cwMaxId)
 		{

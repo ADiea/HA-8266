@@ -84,7 +84,7 @@ HttpServer gHttpServer;
 
 	void wsMessageReceived(WebSocket& socket, const String& message)
 	{
-		LOG_I( "WS message received:%s\n", message.c_str());
+		LOG_I( "WS RX:%s", message.c_str());
 
 		cwReceivePacket(socket, message.c_str());
 	}

@@ -36,7 +36,7 @@ bool skipInt(const char **s, int *dest)
 
 	if(**s == '.')
 	{
-		LOG_E( "skipInt: Float no. detected");
+		LOG_D( "skipInt: Float no. detected");
 	}
 	else  if(**s == ';')
 	{
@@ -89,7 +89,7 @@ bool skipFloat(const char **s, float *dest)
 		{
 			++(*s);
 			*dest = f;
-			LOG_I("skipFloat: Parsed:%f", f);
+			LOG_D("skipFloat: Parsed:%f", f);
 		}
 		else
 		{

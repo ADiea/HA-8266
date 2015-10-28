@@ -44,6 +44,14 @@ uint8_t devDHT22_init(uint8_t operation)
 	return retVal;
 }
 
+ErrorDHT devDHT22_getLastError()
+{
+	if(dht)
+		return dht->getLastError();
+	else
+		return errDHT_Other;
+}
+
 uint8_t devDHT22_read(TempAndHumidity& dest)
 {
 	if(dht)

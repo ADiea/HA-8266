@@ -9,7 +9,7 @@ void CDeviceHeater::triggerState(int reason, void* state)
 
 		if(thDevice)
 		{
-			if(thDevice->m_state.bNeedHeating && )
+			if(thDevice->m_state.bNeedHeating && thDevice->m_state.bEnabled)
 			{
 				//at least one th requests heating
 				bHeaterRequestOn = true;

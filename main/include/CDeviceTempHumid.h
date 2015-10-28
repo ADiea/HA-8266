@@ -26,7 +26,7 @@ struct tTempHumidState
 
 	tTempHumidState()
 	{
-		tTempHumidState(22.0f);
+		tTempHumidState(22.0f, 16.0f, 27.0f);
 	}
 
 	TempAndHumidity lastTH;
