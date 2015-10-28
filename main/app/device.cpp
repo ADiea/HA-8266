@@ -32,91 +32,11 @@ void loadSavedDevices()
 {
 
 	//0;2;LightHall;
-	const char *devicesString = "2;1;0;IndoorTemp;29.2;16.0;26.5;0;1;1;1;2;1;Heater\\;;200;50;100;1;0;";
-
-	int numDevices, iDev = 0, devType, numWatchers;
-
-	LOG_I("Loading saved devs\n");
-	if(!skipInt(&devicesString, &numDevices))return;
-
-	while(iDev++ < numDevices)
-	{
-		LOG_I("Loading dev %d of %d", iDev, numDevices);
-		if(!skipInt(&devicesString, &devType))return;
+	//const char *devicesString = "2;1;0;IndoorTemp;29.2;16.0;26.5;0;1;1;1;2;1;Heater\\;;200;50;100;1;0;";
 
 
-		switch(devType)
-		{
-			case devTypeLight:
-			{
-				LOG_I("LIGHT");
-				CDeviceLight *device = new CDeviceLight();
-				if(!device)
-				{
-					LOG_E("Fatal: heap(%d)", iDev);
-					return;
-				}
-				LOG_I("deserialize");
-				if( device->deserialize(&devicesString))
-				{
-					g_activeDevices.addElement(device);
-				}
-				else
-				{
-					LOG_E("Fatal: deserial(%d)", iDev);
-				}
-			}
-			break;
 
-			case devTypeTH:
-			{
-				LOG_I("TH");
-				CDeviceTempHumid *device = new CDeviceTempHumid();
-				if(!device)
-				{
-					LOG_E("Fatal: heap(%d)", iDev);
-					return;
-				}
 
-				if( device->deserialize(&devicesString))
-				{
-					g_activeDevices.addElement(device);
-				}
-				else
-				{
-					LOG_E("Fatal: deserial(%d)", iDev);
-				}
-			}
-			break;
-
-			case devTypeHeater:
-			{
-				LOG_I("HEATER");
-				CDeviceHeater *device = new CDeviceHeater();
-				if(!device)
-				{
-					LOG_E("Fatal: heap(%d)", iDev);
-					return;
-				}
-
-				if( device->deserialize(&devicesString))
-				{
-					g_activeDevices.addElement(device);
-				}
-				else
-				{
-					LOG_E("Fatal: deserial(%d)", iDev);
-				}
-			}
-			break;
-
-			default:
-				LOG_I("UNKN device:%d", devType);
-				break;
-		};
-	}
-
-	LOG_I("Done adding %d devices", numDevices);
 
 
 }
@@ -247,6 +167,7 @@ bool devicesLoadFromDisk()
 
 bool deviceWriteToDisk(CGenericDevice *dev)
 {
+	/*
 	FIL file;
 	FRESULT fRes;
 
@@ -272,122 +193,129 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 	{
 		Serial.printf("fopen FAIL: %d \n", (unsigned int)fRes);
 	}
+	*/
 }
 
 bool deviceReadFromDisk(char* path)
 {
 	FIL file;
 	FRESULT fRes;
-	uint32_t fSize;
+	FILINFO fno;
+	uint32_t fActualSize;
+	CGenericDevice *device = NULL;
 
-	char *devicesString;
+	bool bRet = false;
+	char *devicesString = NULL;
+	int devType;
 
-	fr = f_stat(fname, &fno);
-	if(fr != FR_OK)
-	{
-		LOG_I("devReadDisk err %d", (int)fRes);
-		break;
-	}
+	do{
+		fRes = f_stat(path, &fno);
+		if(fRes != FR_OK)
+		{
+			LOG_E("devReadDisk err %d", (int)fRes);
+			break;
+		}
 
-	if(fno.fsize > MAX_DEVICE_STRING)
+		devicesString = new char[fno.fsize + 1];
 
-	LOG_I("Loading dev %s", path);
+		if(!devicesString)
+		{
+			LOG_E("devReadDisk no heap");
+			break;
+		}
 
+		LOG_I("Loading dev %s, %d bytes", path, fno.fsize);
 
+		fRes = f_open(&file, path, FA_READ);
 
-	fRes = f_open(&file, path, FA_READ);
+		if (fRes != FR_OK)
+		{
+			LOG_E("devReadDisk fopen: %d", (int)fRes);
+			break;
+		}
 
-	if (fRes == FR_OK)
-	{
-		//read back file contents
-		char buffer[64];
-
-		f_read(&file, buffer, sizeof(buffer), &actual);
-		buffer[actual] = 0;
-
-		Serial.printf("Read: %s \n", buffer);
-
+		f_read(&file, devicesString, fno.fsize, &fActualSize);
 		f_close(&file);
-	}
-	else
-	{
-		LOG_E("fopen FAIL: %d \n", (int)fRes);
-	}
 
+		if(fActualSize != fno.fsize)
+		{
+			LOG_E("devReadDisk only read %d", fActualSize);
+			break;
+		}
 
-			if(!skipInt(&devicesString, &devType))return;
+		devicesString[fActualSize] = 0;
 
+		if(!skipInt((const char**)&devicesString, &devType))
+			break;
 
-			switch(devType)
+		switch(devType)
+		{
+			case devTypeLight:
 			{
-				case devTypeLight:
+				LOG_I("Type: LIGHT");
+				device = new CDeviceLight();
+				if(!device)
 				{
-					LOG_I("LIGHT");
-					CDeviceLight *device = new CDeviceLight();
-					if(!device)
-					{
-						LOG_E("Fatal: heap(%d)", iDev);
-						return;
-					}
-					LOG_I("deserialize");
-					if( device->deserialize(&devicesString))
-					{
-						g_activeDevices.addElement(device);
-					}
-					else
-					{
-						LOG_E("Fatal: deserial(%d)", iDev);
-					}
+					LOG_E("devReadDisk noheap");
 				}
-				break;
-
-				case devTypeTH:
+				else if( !device->deserialize((const char**)&devicesString))
 				{
-					LOG_I("TH");
-					CDeviceTempHumid *device = new CDeviceTempHumid();
-					if(!device)
-					{
-						LOG_E("Fatal: heap(%d)", iDev);
-						return;
-					}
-
-					if( device->deserialize(&devicesString))
-					{
-						g_activeDevices.addElement(device);
-					}
-					else
-					{
-						LOG_E("Fatal: deserial(%d)", iDev);
-					}
+					LOG_E("devReadDisk deserial");
+					delete device;
+					device = NULL;
 				}
-				break;
+			}
+			break;
 
-				case devTypeHeater:
+			case devTypeTH:
+			{
+				LOG_I("Type: TH");
+				CDeviceTempHumid *device = new CDeviceTempHumid();
+				if(!device)
 				{
-					LOG_I("HEATER");
-					CDeviceHeater *device = new CDeviceHeater();
-					if(!device)
-					{
-						LOG_E("Fatal: heap(%d)", iDev);
-						return;
-					}
-
-					if( device->deserialize(&devicesString))
-					{
-						g_activeDevices.addElement(device);
-					}
-					else
-					{
-						LOG_E("Fatal: deserial(%d)", iDev);
-					}
+					LOG_E("devReadDisk noheap");
 				}
+				else if( !device->deserialize((const char**)&devicesString))
+				{
+					LOG_E("devReadDisk deserial");
+					delete device;
+					device = NULL;
+				}
+			}
+			break;
+
+			case devTypeHeater:
+			{
+				LOG_I("Type:HEATER");
+				CDeviceHeater *device = new CDeviceHeater();
+				if(!device)
+				{
+					LOG_E("devReadDisk noheap");
+				}
+				else if( !device->deserialize((const char**)&devicesString))
+				{
+					LOG_E("devReadDisk deserial");
+					delete device;
+					device = NULL;
+				}
+			}
+			break;
+
+			default:
+				LOG_I("UNKN device:%d", devType);
 				break;
+		};
+	}
+	while(0);
 
-				default:
-					LOG_I("UNKN device:%d", devType);
-					break;
-			};
+	if(devicesString)
+		delete devicesString;
 
+	if(device)
+	{
+		g_activeDevices.addElement(device);
+		bRet = true;
+	}
 
-
+	return bRet;
 }
