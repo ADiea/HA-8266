@@ -109,5 +109,16 @@ bool CDeviceTempHumid::deserialize(const char **devicesString)
 
 uint32_t CDeviceTempHumid::serialize(char* buffer, uint32_t size)
 {
+	int i;
+	int sz = snprintf(buffer, size, "%d;%d;%s;%f;%f;%f;%d;%d;%d;", devTypeTH, m_ID, m_FriendlyName.c_str(),
+					m_state.tempSetpoint, m_state.tempSetpointMin, m_state.tempSetpointMax, (int)m_location,
+					m_state.bEnabled ? 1:0,
+					m_devWatchersList.count());
 
+	for(i = 0; i < m_devWatchersList.count(); i++)
+	{
+		sz += snprintf(buffer + sz, size - sz, "%d;", m_devWatchersList[i].id);
+	}
+
+	return sz;
 }

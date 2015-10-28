@@ -22,6 +22,8 @@
 
 #define INVALID_DEVICE_ID 0xffffffff
 
+#define DEV_PATH_ON_DISK "/dev/"
+
 #define DEV_RADIO   0x0001
 #define DEV_SDCARD  0x0002
 #define DEV_RGB     0x0004

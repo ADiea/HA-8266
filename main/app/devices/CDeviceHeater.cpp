@@ -74,5 +74,15 @@ bool CDeviceHeater::deserialize(const char **devicesString)
 
 uint32_t CDeviceHeater::serialize(char* buffer, uint32_t size)
 {
+	int i;
+	int sz = snprintf(buffer, size, "%d;%d;%s;%d;%d;%d;%d;", devTypeHeater, m_ID, m_FriendlyName.c_str(),
+					m_state.gasLevel_HighWarningThres, m_state.gasLevel_LowWarningThres, m_state.gasLevel_MedWarningThres,
+					m_devWatchersList.count());
 
+	for(i = 0; i < m_devWatchersList.count(); i++)
+	{
+		sz += snprintf(buffer + sz, size - sz, "%d;", m_devWatchersList[i].id);
+	}
+
+	return sz;
 }
