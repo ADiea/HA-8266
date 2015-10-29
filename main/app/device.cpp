@@ -159,7 +159,7 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 
 	uint32_t actual, size;
 
-#define MAXDEVSZ 4096
+	#define MAXDEVSZ 4096
 
 	char fname[128];
 	char *devBuffer = new char[MAXDEVSZ];
@@ -204,6 +204,8 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 	}
 	while(0);
 
+	if(devBuffer)
+		delete devBuffer;
 
 	return bRet;
 }
