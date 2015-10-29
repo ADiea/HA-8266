@@ -2,7 +2,7 @@
 
 bool devicesLoadFromDisk();
 bool deviceReadFromDisk(char* path);
-bool deviceWriteToDisk(CGenericDevice *dev);
+
 
  Vector<CGenericDevice*> g_activeDevices;
 
@@ -28,22 +28,10 @@ devCtl gDevices[] =
 
 #define NUM_DEVICES (sizeof(gDevices)/sizeof(gDevices[0]))
 
-void loadSavedDevices()
-{
-
-	//0;2;LightHall;
-	//const char *devicesString = "2;1;0;IndoorTemp;29.2;16.0;26.5;0;1;1;1;2;1;Heater\\;;200;50;100;1;0;";
-
-
-
-
-
-
-}
-
-
 void initDevices()
 {
+	int retry = 10;
+
 	enableDev(DEV_UART, ENABLE | CONFIG);
 
 	//setup SDCard and load custom system settings
@@ -68,9 +56,8 @@ void initDevices()
 	//setup Wifi
 	enableDev(DEV_WIFI, ENABLE | CONFIG);
 
-	//loadSavedDevices();
+	while(!devicesLoadFromDisk() && --retry);
 
-	devicesLoadFromDisk();
 }
 
 
@@ -150,50 +137,75 @@ bool devicesLoadFromDisk()
 			if (res != FR_OK || fno.fname[0] == 0) break;  /* Break on error or end of dir */
 			if (fno.fname[0] == '.') continue;             /* Ignore dot entry */
 
-			deviceReadFromDisk(fno.fname);
+			if(strstr(fno.fname, "DEV_") || strstr(fno.fname, "dev_"))
+				deviceReadFromDisk(fno.fname);
 		}
 		f_closedir(&dir);
+		bRet = true;
 	}
-
-	if(FR_OK != res)
+	else
 	{
 		LOG_E( "devicesLoadFromDisk: err %d", (int)res);
 	}
-	else bRet = true;
-
 
 	return bRet;
 }
 
 bool deviceWriteToDisk(CGenericDevice *dev)
 {
-	/*
+	bool bRet = false;
 	FIL file;
 	FRESULT fRes;
 
-	//2. Open file, write a few bytes, close reopen and read
-	//Serial.print("\n2. Open file \"test\" and write some data...\n");
-	fRes = f_open(&file, "test", FA_WRITE | FA_CREATE_ALWAYS);
+	uint32_t actual, size;
 
-	if (fRes == FR_OK)
+#define MAXDEVSZ 4096
+
+	char fname[128];
+	char *devBuffer = new char[MAXDEVSZ];
+
+	if(!dev || !devBuffer)
+		return false;
+
+	snprintf(fname, sizeof(fname), "DEV_%d", dev->m_ID);
+
+	fRes = f_open(&file, fname, FA_WRITE | FA_CREATE_ALWAYS);
+
+	do
 	{
-		//you can write directly
-		f_write(&file, "hello ", 5, &actual);
-
-		//or using printf for convenience
-		f_printf(&file, " has %d letters\r\n", actual);
-
-		if (actual != 5)
+		if (fRes != FR_OK)
 		{
-			Serial.printf("Only written %d bytes\n", actual);
+			LOG_E("devWriteDisk err %d", (int)fRes);
+			break;
+		}
+
+		size = dev->serialize(devBuffer, MAXDEVSZ);
+
+		if(size == MAXDEVSZ)
+		{
+			LOG_E("devWriteDisk NOSPACE %d\n", dev->m_ID);
+			f_close(&file);
+			break;
+		}
+
+		//you can write directly
+		f_write(&file, devBuffer, size, &actual);
+
+		if (actual != size)
+		{
+			LOG_E("devWriteDisk written %d bytes\n", actual);
+		}
+		else
+		{
+			LOG_E("devWriteDisk SAVED %d\n", dev->m_ID);
+			bRet = true;
 		}
 		f_close(&file);
 	}
-	else
-	{
-		Serial.printf("fopen FAIL: %d \n", (unsigned int)fRes);
-	}
-	*/
+	while(0);
+
+
+	return bRet;
 }
 
 bool deviceReadFromDisk(char* path)
@@ -205,7 +217,7 @@ bool deviceReadFromDisk(char* path)
 	CGenericDevice *device = NULL;
 
 	bool bRet = false;
-	char *devicesString = NULL;
+	char *devicesString = NULL, *originalDevString = NULL;
 	int devType;
 
 	do{
@@ -217,7 +229,7 @@ bool deviceReadFromDisk(char* path)
 		}
 
 		devicesString = new char[fno.fsize + 1];
-
+		originalDevString = devicesString;
 		if(!devicesString)
 		{
 			LOG_E("devReadDisk no heap");
@@ -242,6 +254,8 @@ bool deviceReadFromDisk(char* path)
 			LOG_E("devReadDisk only read %d", fActualSize);
 			break;
 		}
+
+		LOG_D("devReadDisk read %d:%s", fActualSize, devicesString);
 
 		devicesString[fActualSize] = 0;
 
@@ -270,7 +284,7 @@ bool deviceReadFromDisk(char* path)
 			case devTypeTH:
 			{
 				LOG_I("Type: TH");
-				CDeviceTempHumid *device = new CDeviceTempHumid();
+				device = new CDeviceTempHumid();
 				if(!device)
 				{
 					LOG_E("devReadDisk noheap");
@@ -287,7 +301,7 @@ bool deviceReadFromDisk(char* path)
 			case devTypeHeater:
 			{
 				LOG_I("Type:HEATER");
-				CDeviceHeater *device = new CDeviceHeater();
+				device = new CDeviceHeater();
 				if(!device)
 				{
 					LOG_E("devReadDisk noheap");
@@ -305,15 +319,16 @@ bool deviceReadFromDisk(char* path)
 				LOG_I("UNKN device:%d", devType);
 				break;
 		};
+
+		if(originalDevString)
+				delete[] originalDevString;
 	}
 	while(0);
-
-	if(devicesString)
-		delete devicesString;
 
 	if(device)
 	{
 		g_activeDevices.addElement(device);
+		LOG_E("Added device.");
 		bRet = true;
 	}
 

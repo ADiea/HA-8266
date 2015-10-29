@@ -22,7 +22,7 @@
 
 #define INVALID_DEVICE_ID 0xffffffff
 
-#define DEV_PATH_ON_DISK "/dev/"
+#define DEV_PATH_ON_DISK "/"
 
 #define DEV_RADIO   0x0001
 #define DEV_SDCARD  0x0002
@@ -127,5 +127,7 @@ public:
 #include "CDeviceHeater.h"
 #include "CDeviceLight.h"
 #include "CDeviceTempHumid.h"
+
+bool deviceWriteToDisk(CGenericDevice *dev);
 
 #endif /*__DEVICE_H_*/

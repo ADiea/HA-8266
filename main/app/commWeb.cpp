@@ -95,6 +95,8 @@ bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
 				if(th && skipFloat(pkt, &setTemp))
 				{
 					th->m_state.tempSetpoint = setTemp;
+
+					deviceWriteToDisk((CGenericDevice*)th);
 				}
 				else
 				{
