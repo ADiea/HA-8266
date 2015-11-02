@@ -23,8 +23,8 @@ enum eCommWebMsgTYpes
 	cwSetLightParams,
 	cwNotifyLightStatus,
 
-	cwGetTHs,
-	cwReplyTHs,
+	cwGetDevicesOfType,
+	cwReplyDevicesOfType,
 	cwSetTHParams,
 	cwGetConfortStatus,
 	cwReplyConfortStatus,
@@ -38,6 +38,9 @@ enum eCommWebMsgTYpes
 	cwReplyMovements,
 	cwSetMovementParams,
 	cwNotifyMovementStatus,
+
+
+	cwSetHeaterParams,
 
 //	cwGetDevices,
 //	cwReplyDeviceList,

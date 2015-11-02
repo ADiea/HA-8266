@@ -8,17 +8,26 @@ enum eHeaterTurOnTriggers
 	heatTrig_TempSensor = 0x02,
 };
 
+/*
+enum eHeaterRealState
+{
+	heatState_turningOn,
+	heatState_On,
+
+};
+*/
+
 struct tHeaterState
 {
-	tHeaterState(int highWarn,
-				int lowWarn = 50,
-				int medWarn = 100,
-				int lastRead = 0):
+	tHeaterState(uint16_t highWarn,
+			uint16_t lowWarn = 50,
+			uint16_t medWarn = 100,
+			uint16_t lastRead = 0):
 		gasLevel_lastReading(lastRead),
 		gasLevel_LowWarningThres(lowWarn),
 		gasLevel_MedWarningThres(medWarn),
 		gasLevel_HighWarningThres(highWarn),
-		isOn(false), isFault(false)
+		isOn(false), isFault(false), lastFault(HEATER_FAULT_NONE)
 	{}
 
 	tHeaterState()
@@ -26,10 +35,14 @@ struct tHeaterState
 		tHeaterState(200);
 	}
 
-	int gasLevel_lastReading, gasLevel_LowWarningThres,
+	uint16_t gasLevel_lastReading, gasLevel_LowWarningThres,
 		gasLevel_MedWarningThres, gasLevel_HighWarningThres;
 
+	byte lastFault;
+
 	bool isOn, isFault;
+
+
 };
 
 
@@ -59,10 +72,7 @@ public:
 
 	virtual void triggerState(int reason, void* state);
 
-	virtual bool radioPktReceivedFromDevice(char* pktData, uint16_t pktLen)
-	{
-		//update state
-	}
+	virtual bool radioPktReceivedFromDevice(char* pktData, uint16_t pktLen);
 
 	tHeaterState m_state;
 };

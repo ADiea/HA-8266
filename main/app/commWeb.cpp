@@ -36,31 +36,49 @@ bool handle_cwSetLightParams(WebSocket& socket, const char **pkt)
 	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwGetTHs(WebSocket& socket, const char **pkt)
+bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 {
 	int i = 0, numDevs = 0, sizePkt = 0;
 	CDeviceTempHumid *th;
+	CDeviceHeater *heat;
+
+	int devType;
+
+	if (!skipInt(pkt, &devType))
+	{
+		LOG_E( "handle_cwGetDevicesOfType: Cannot get Pkt Type");
+	}
 
 	for(; i < g_activeDevices.count(); i++)
 	{
-		if(devTypeTH == g_activeDevices[i]->m_deviceType)
+		if(devType == g_activeDevices[i]->m_deviceType)
 		{
 			++numDevs;
 		}
 	}
 	sizePkt = snprintf(scrapPackage, sizeof(scrapPackage),
-				"%d;%d;", cwReplyTHs, numDevs);
+				"%d;%d;%d;", cwReplyDevicesOfType, devType, numDevs);
 	//
 	for(i=0; i < g_activeDevices.count(); i++)
 	{
-		if(devTypeTH == g_activeDevices[i]->m_deviceType)
+		if(devTypeTH == devType && devTypeTH == g_activeDevices[i]->m_deviceType)
 		{
 			th = (CDeviceTempHumid*)g_activeDevices[i];
 			sizePkt += snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
-							"%d;%s;%f;%f;%d;%d;%d;%d;%f;%f;%f;", th->m_ID,
+							"%d;%s;%.1f;%.1f;%d;%d;%d;%d;%.1f;%.1f;%.1f;", th->m_ID,
 							th->m_FriendlyName.c_str(),
 							th->m_state.tempSetpoint, th->m_state.lastTH.temp, 1, th->m_state.bEnabled, th->m_state.bIsHeating, th->m_state.bIsCooling,
 							th->m_state.tempSetpointMin, th->m_state.tempSetpointMax, th->m_state.lastTH.humid);
+		}
+		else if(devTypeHeater == devType && devTypeHeater == g_activeDevices[i]->m_deviceType)
+		{
+			heat = (CDeviceHeater*)g_activeDevices[i];
+			sizePkt += snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
+							"%d;%s;%d;%d;%d;%d%d;%d;%d;", heat->m_ID,
+							heat->m_FriendlyName.c_str(),
+							heat->m_state.isOn?1:0, heat->m_state.isFault?1:0, heat->m_state.gasLevel_lastReading,
+							heat->m_state.gasLevel_LowWarningThres , heat->m_state.gasLevel_MedWarningThres ,
+							heat->m_state.gasLevel_HighWarningThres, heat->m_state.lastFault);
 		}
 	}
 
@@ -75,11 +93,12 @@ bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
 	int thID;
 	float setTemp;
 
+	char devName[MAX_FRIENDLY_NAME];
+
 	eCommWebErrorCodes retCode = cwErrSuccess;
 
 	do
 	{
-
 		if(!skipInt(pkt, &thID))
 		{
 			retCode = cwErrInvalidDeviceID;
@@ -92,10 +111,11 @@ bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
 			{
 				th = (CDeviceTempHumid*)g_activeDevices[i];
 
-				if(th && skipFloat(pkt, &setTemp))
+				if(th && skipFloat(pkt, &setTemp) &&
+						skipString(pkt, (char*)devName, MAX_FRIENDLY_NAME))
 				{
 					th->m_state.tempSetpoint = setTemp;
-
+					th->m_FriendlyName = devName;
 					deviceWriteToDisk((CGenericDevice*)th);
 				}
 				else
@@ -112,6 +132,54 @@ bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
 
 	reply_cwReplyToCommand(socket, retCode);
 }
+
+bool handle_cwSetHeaterParams(WebSocket& socket, const char **pkt)
+{
+	int i = 0, numDevs = 0, sizePkt = 0;
+	CDeviceHeater *heat;
+
+	char devName[MAX_FRIENDLY_NAME];
+
+	int heatID;
+	int lowT, medT, highT;
+
+	eCommWebErrorCodes retCode = cwErrSuccess;
+
+	do
+	{
+		if(!skipInt(pkt, &heatID))
+		{
+			retCode = cwErrInvalidDeviceID;
+			break;
+		}
+
+		for(i=0; i < g_activeDevices.count(); i++)
+		{
+			if(heatID == g_activeDevices[i]->m_ID)
+			{
+				heat = (CDeviceHeater*)g_activeDevices[i];
+
+				if(heat && skipString(pkt, (char*)devName, MAX_FRIENDLY_NAME))
+				{
+					heat->m_FriendlyName = devName;
+
+					deviceWriteToDisk((CGenericDevice*)heat);
+				}
+				else
+				{
+					retCode = cwErrInvalidCommandParams;
+				}
+
+				break;
+			}
+		}
+	}
+	while(false);
+
+
+	reply_cwReplyToCommand(socket, retCode);
+}
+//,
 
 bool handle_cwGetConfortStatus(WebSocket& socket, const char **pkt)
 {
@@ -147,7 +215,7 @@ bool (*gCWHandlers[cwMaxId])(WebSocket&, const char**) =
 	handle_cwSetLightParams,
 	handle_cwErrorHandler,
 
-	handle_cwGetTHs,
+	handle_cwGetDevicesOfType,
 	handle_cwErrorHandler,
 	handle_cwSetTHParams,
 	handle_cwGetConfortStatus,
@@ -162,6 +230,8 @@ bool (*gCWHandlers[cwMaxId])(WebSocket&, const char**) =
 	handle_cwErrorHandler,
 	handle_cwSetMovementParams,
 	handle_cwErrorHandler,
+
+	handle_cwSetHeaterParams,
 
 };
 

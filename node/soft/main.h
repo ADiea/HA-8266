@@ -16,5 +16,15 @@
 #include "led.h"
 #include "relay.h"
 #include "light.h"
+#include "heater.h"
+#include "../../protocol/radio_protocol.h"
+
+#define NODE_LIGHT 0
+#define NODE_THSENSOR 1
+#define NODE_HEATER 2
+
+#define NODETYPE NODE_HEATER
+
+#define MY_ID 0x01
 
 #endif /*_MAIN__H*/

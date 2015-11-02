@@ -48,10 +48,14 @@ void initHw()
 	radio_readAll();
 	
 	led_init();
-	
+
+#if NODETYPE == NODE_LIGHT		
 	relay_init();
 	
 	light_init();
+#elif NODETYPE == NODE_HEATER
+	heater_init();	
+#endif	
 
 	//enable and reset RBG led
 	DDRD |= 1<<4;
@@ -143,8 +147,12 @@ int main(void)
 	
 	do
 	{	
+#if NODETYPE == NODE_LIGHT	
 		light_loop();
-		
+#elif NODETYPE == NODE_HEATER
+		heater_loop();	
+#endif	
+	
 		if(millis() - curTime > CYCLE_PERIOD_MS)
 		{
 			curTime = millis();
@@ -170,9 +178,13 @@ int main(void)
 			}
 
 			debugf("\n");
-
+			
+#if NODETYPE == NODE_LIGHT	
 			light_processPkg(payLoad, len);
-	
+#elif NODETYPE == NODE_HEATER
+			heater_processPkg(payLoad, len);
+#endif	
+
 			radio_startListening();
 		}
 		

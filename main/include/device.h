@@ -42,6 +42,8 @@
 #define DEV_DEVIO_ERR 	2
 #define DEV_PARAM_ERR 	3
 
+#define MAX_FRIENDLY_NAME 64
+
 #define isDevEnabled(dev) ((dev) & gDevicesState)
 
 void enableDev(unsigned short, uint8_t op);

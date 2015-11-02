@@ -2,38 +2,7 @@
 
 #include<avr/eeprom.h>
 
-#define MY_ID 0x01
-#define GATEWAY_ID 0xFF
 
-/*PKG intensity
-0 [addressDest 1B]
-1 [pgk_type==PKG_TYPE_INTENSITY 1B]
-2 [intensity 1B]
-3 [on duration(s)= min 4b + sec*4 4b 1B]
-4 [flags 4b fadeSpeed 4b]
-5 [minValue 1B]
-6 [sequence 1B]
-7 [checksum 1B]
-*/
-#define PKG_INTENSITY_LEN 0x08
-#define PKG_MOVEMENT_LEN 0x05
-
-#define PKG_TYPE_INVALID 0x00
-#define PKG_TYPE_ACK 0x01
-#define PKG_TYPE_INTENSITY 0x02
-#define PKG_TYPE_MOVEMENT 0x03
-
-#define PKG_MANUAL_FLAG 0x80
-
-#define LIGHT_STATE_ON 0
-#define LIGHT_STATE_OFF 1
-#define LIGHT_STATE_MANUAL 2
-
-#define MOVEMENT_ON 0x01
-#define MOVEMENT_OFF 0x02
-
-#define CHECKSUM_MOVEMENT_ON (PKG_TYPE_MOVEMENT + GATEWAY_ID + MOVEMENT_ON)
-#define CHECKSUM_MOVEMENT_OFF (PKG_TYPE_MOVEMENT + GATEWAY_ID + MOVEMENT_OFF)
 
 typedef struct __attribute__((packed))_eepromData
 {
@@ -79,8 +48,8 @@ void light_init(void)
 	lastOnTime = millis();
 	
 	g_movementPkg[0] = GATEWAY_ID;
-	g_movementPkg[1] = PKG_TYPE_MOVEMENT;
-	g_movementPkg[2] = MY_ID;
+	g_movementPkg[1] = MY_ID;
+	g_movementPkg[2] = PKG_TYPE_MOVEMENT;
 	g_movementPkg[3] = MOVEMENT_OFF;
 }
 
@@ -117,7 +86,7 @@ void light_loop(void)
 		{
 			debugf("MOVEMENT ON\n");
 			g_movementPkg[3] = MOVEMENT_ON;
-			g_movementPkg[4] = (CHECKSUM_MOVEMENT_ON + g_movementPkg[1]) & 0xFF;
+			g_movementPkg[4] = (CHECKSUM_MOVEMENT_ON(MY_ID) + g_movementPkg[1]) & 0xFF;
 			radio_sendPacketSimple(PKG_MOVEMENT_LEN, g_movementPkg);
 			radio_startListening();
 		}
@@ -136,7 +105,7 @@ void light_loop(void)
 		{
 			debugf("MOVEMENT OFF\n");
 			g_movementPkg[3] = MOVEMENT_OFF;
-			g_movementPkg[4] = (CHECKSUM_MOVEMENT_OFF + g_movementPkg[1]) & 0xFF;
+			g_movementPkg[4] = (CHECKSUM_MOVEMENT_OFF(MY_ID) + g_movementPkg[1]) & 0xFF;
 			radio_sendPacketSimple(PKG_MOVEMENT_LEN, g_movementPkg);
 			radio_startListening();
 		}
@@ -202,11 +171,12 @@ void light_processPkg(uint8_t* pkg, uint8_t len)
 		debugf("RPL ");
 		
 		pkg[0] = GATEWAY_ID;
-		pkg[1] = PKG_TYPE_ACK;
-		pkg[2] = MY_ID;
+		pkg[1] = MY_ID;
+		pkg[2] = PKG_TYPE_ACK;		
 		pkg[3] = pkg[6]; //sequence
+		pkg[4] = pkg[0] + pkg[1] + pkg[2] + pkg[3];
 
-		if(!radio_sendPacketSimple(4, pkg))
+		if(!radio_sendPacketSimple(5, pkg))
 		{
 			debugf("ER\n");
 		}

@@ -59,7 +59,7 @@ HttpServer gHttpServer;
 		#define PKG_INTENSITY_LEN 0x08
 
 		#define PKG_TYPE_INVALID 0x00
-		#define PKG_TYPE_ACK 0x01
+
 		#define PKG_TYPE_INTENSITY 0x02
 
 		#define PKG_MANUAL_FLAG 0x80
@@ -76,7 +76,7 @@ HttpServer gHttpServer;
 
 		pkg[7] = (pkg[0] + pkg[1] + pkg[2] + pkg[3] + pkg[4] + pkg[5]+ pkg[6]) & 0xFF;
 
-		retVal = RadioSend(pkg, PKG_INTENSITY_LEN);
+		//retVal = RadioSend(pkg, PKG_INTENSITY_LEN);
 				
 		return retVal;
 	}

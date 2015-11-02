@@ -36,7 +36,7 @@ Timer tmrMainLoop;
 
 	static void heartbeat_cb(void)
 	{
-		LOG_I( "\n%s Heap: %ld\r\n",
+		LOG_I( "%s Heap: %ld",
 				SystemClock.getSystemTimeString().c_str(),
 				system_get_free_heap_size());
 	}
@@ -134,7 +134,7 @@ static void mainLoop()
 
 	uint16_t i;
 
-	if(Radio && !isRadioBusy())
+	if(Radio && getRadio(1))
 	{
 		if(Radio->isPacketReceived())
 		{
@@ -147,7 +147,7 @@ static void mainLoop()
 				LOG_I( "%x ", pkg[i]);
 			}
 
-			uint8_t senderID = pkg[0];
+			uint8_t senderID = pkg[1];
 
 			for(i=0; i < g_activeDevices.count(); ++i)
 			{
@@ -179,6 +179,7 @@ static void mainLoop()
 				}
 			}
 */
+			releaseRadio();
 			devRGB_setColor(COLOR_GREEN);
 		}
 		else
@@ -186,8 +187,6 @@ static void mainLoop()
 			devRGB_setColor(COLOR_RED);
 		}
 	}
-
-
 	WDT.alive();
 }
 

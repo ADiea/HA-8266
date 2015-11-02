@@ -3,7 +3,7 @@
 bool CDeviceLight::deserialize(const char **devicesString)
 {
 	int devID;
-	#define MAX_FRIENDLY_NAME 64
+
 	char friendlyName[MAX_FRIENDLY_NAME];
 
 	tLightState lightState;

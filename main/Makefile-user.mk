@@ -5,6 +5,9 @@
 #Add your source directories here separated by space
 MODULES = app app/drv app/fatfs app/devices
 
+#inc dirs
+EXTRA_INCDIR = ../protocol
+
 ## ESP_HOME sets the path where ESP tools and SDK are located.
 ## Windows:
 # ESP_HOME = c:/Espressif

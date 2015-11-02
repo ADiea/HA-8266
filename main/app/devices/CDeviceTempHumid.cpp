@@ -19,8 +19,13 @@ void CDeviceTempHumid::requestUpdateState()
 		{
 			m_LastUpdateTimestamp = system_get_time();
 
-			LOG_I("%s H:%.2f T:%.2f SetPt:%.2f Time:%u", m_FriendlyName.c_str(),
-					m_state.lastTH.humid, m_state.lastTH.temp, m_state.tempSetpoint,
+			m_state.fLastTemp_1m = m_state.fAverageTemp_1m->feed(m_state.lastTH.temp);
+			m_state.fLastTemp_8m = m_state.fAverageTemp_8m->feed(m_state.lastTH.temp);
+			m_state.fLastRH_1m = m_state.fAverageRH_1m->feed(m_state.lastTH.humid);
+
+			LOG_I("%s H:%.2f(%.1f) T:%.2f(%.1f %.1f) SetPt:%.2f Time:%u", m_FriendlyName.c_str(),
+					m_state.lastTH.humid, m_state.fLastRH_1m, m_state.lastTH.temp, m_state.fLastTemp_1m ,
+					m_state.fLastTemp_8m, m_state.tempSetpoint,
 					m_LastUpdateTimestamp);
 
 			/*devDHT22_heatIndex();
@@ -28,12 +33,12 @@ void CDeviceTempHumid::requestUpdateState()
 			devDHT22_comfortRatio();
 			LOG_I( "\n");*/
 
-			if(m_state.tempSetpoint > m_tempThreshold + m_state.lastTH.temp)
+			if(m_state.tempSetpoint > m_tempThreshold + m_state.fLastTemp_8m)
 			{
 				m_state.bNeedHeating = true;
 				m_state.bNeedCooling = false;
 			}
-			else if(m_state.tempSetpoint < m_state.lastTH.temp - m_tempThreshold)
+			else if(m_state.tempSetpoint < m_state.fLastTemp_1m - m_tempThreshold)
 			{
 				m_state.bNeedHeating = false;
 				m_state.bNeedCooling = true;
@@ -67,8 +72,10 @@ void CDeviceTempHumid::requestUpdateState()
 bool CDeviceTempHumid::deserialize(const char **devicesString)
 {
 	int devID, numWatchers;
-	#define MAX_FRIENDLY_NAME 64
+
 	char friendlyName[MAX_FRIENDLY_NAME];
+
+	LOG_I("TH device: %s", *devicesString);
 
 	if(!skipInt(devicesString, &devID))return false;
 	if(!skipString(devicesString, (char*)friendlyName, MAX_FRIENDLY_NAME))return false;
@@ -76,14 +83,16 @@ bool CDeviceTempHumid::deserialize(const char **devicesString)
 	LOG_I("TH device ID:%d NAME: %s", devID, friendlyName);
 
 	float tempSetPoint = 22.5f;
-	if(!skipFloat(devicesString, &tempSetPoint))return false;
+	if(!skipFloat(devicesString, &(m_state.tempSetpoint)))return false;
 
-	tTempHumidState state(tempSetPoint, 16.0f, 27.0f);
+	m_state.tempSetpointMin = 16;
+	m_state.tempSetpointMax = 27;
+
 	String name(friendlyName);
 
-	if(!skipFloat(devicesString, &(state.tempSetpointMin)))return false;
+	if(!skipFloat(devicesString, &(m_state.tempSetpointMin)))return false;
 
-	if(!skipFloat(devicesString, &(state.tempSetpointMax)))return false;
+	if(!skipFloat(devicesString, &(m_state.tempSetpointMax)))return false;
 
 	int isLocal = 0;
 	if(!skipInt(devicesString, &isLocal))return false;
@@ -91,9 +100,9 @@ bool CDeviceTempHumid::deserialize(const char **devicesString)
 	int iEnabled;
 	if(!skipInt(devicesString, &(iEnabled)))return false;
 
-	state.bEnabled = iEnabled;
+	m_state.bEnabled = iEnabled;
 
-	initTempHumid((uint32_t)devID, name, state, (eSensorLocation)isLocal);
+	initTempHumid((uint32_t)devID, name, /*state,*/ (eSensorLocation)isLocal);
 
 	if(!skipInt(devicesString, &numWatchers))return false;
 

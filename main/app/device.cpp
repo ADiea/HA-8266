@@ -128,24 +128,34 @@ bool devicesLoadFromDisk()
 	int i;
 	char *fn;   /* This function assumes non-Unicode configuration */
 
-	res = f_opendir(&dir, DEV_PATH_ON_DISK);                       /* Open the directory */
-	if (res == FR_OK)
+	if(getRadio(1000))
 	{
-		for (;;)
+		res = f_opendir(&dir, DEV_PATH_ON_DISK);                       /* Open the directory */
+		if (res == FR_OK)
 		{
-			res = f_readdir(&dir, &fno);                   /* Read a directory item */
-			if (res != FR_OK || fno.fname[0] == 0) break;  /* Break on error or end of dir */
-			if (fno.fname[0] == '.') continue;             /* Ignore dot entry */
+			for (;;)
+			{
+				res = f_readdir(&dir, &fno);                   /* Read a directory item */
+				if (res != FR_OK || fno.fname[0] == 0) break;  /* Break on error or end of dir */
+				if (fno.fname[0] == '.') continue;             /* Ignore dot entry */
 
-			if(strstr(fno.fname, "DEV_") || strstr(fno.fname, "dev_"))
-				deviceReadFromDisk(fno.fname);
+				if(strstr(fno.fname, "DEV_") || strstr(fno.fname, "dev_"))
+					deviceReadFromDisk(fno.fname);
+			}
+			f_closedir(&dir);
+			bRet = true;
 		}
-		f_closedir(&dir);
-		bRet = true;
+		else
+		{
+			LOG_E( "devicesLoadFromDisk: err %d", (int)res);
+		}
+
+		releaseRadio();
+
 	}
 	else
 	{
-		LOG_E( "devicesLoadFromDisk: err %d", (int)res);
+		LOG_E( "devicesLoadFromDisk: radio busy");
 	}
 
 	return bRet;
@@ -169,40 +179,50 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 
 	snprintf(fname, sizeof(fname), "DEV_%d", dev->m_ID);
 
-	fRes = f_open(&file, fname, FA_WRITE | FA_CREATE_ALWAYS);
-
-	do
+	if(getRadio(1000))
 	{
-		if (fRes != FR_OK)
-		{
-			LOG_E("devWriteDisk err %d", (int)fRes);
-			break;
-		}
+		fRes = f_open(&file, fname, FA_WRITE | FA_CREATE_ALWAYS);
 
-		size = dev->serialize(devBuffer, MAXDEVSZ);
-
-		if(size == MAXDEVSZ)
+		do
 		{
-			LOG_E("devWriteDisk NOSPACE %d\n", dev->m_ID);
+			if (fRes != FR_OK)
+			{
+				LOG_E("devWriteDisk err %d", (int)fRes);
+				break;
+			}
+
+			size = dev->serialize(devBuffer, MAXDEVSZ);
+
+			if(size == MAXDEVSZ)
+			{
+				LOG_E("devWriteDisk NOSPACE %d\n", dev->m_ID);
+				f_close(&file);
+				break;
+			}
+
+			//you can write directly
+			f_write(&file, devBuffer, size, &actual);
+
+			if (actual != size)
+			{
+				LOG_E("devWriteDisk written %d bytes\n", actual);
+			}
+			else
+			{
+				LOG_E("devWriteDisk SAVED %d\n", dev->m_ID);
+				bRet = true;
+			}
 			f_close(&file);
-			break;
 		}
+		while(0);
 
-		//you can write directly
-		f_write(&file, devBuffer, size, &actual);
+		releaseRadio();
 
-		if (actual != size)
-		{
-			LOG_E("devWriteDisk written %d bytes\n", actual);
-		}
-		else
-		{
-			LOG_E("devWriteDisk SAVED %d\n", dev->m_ID);
-			bRet = true;
-		}
-		f_close(&file);
 	}
-	while(0);
+	else
+	{
+		LOG_E( "devWriteDisk: radio busy");
+	}
 
 	if(devBuffer)
 		delete devBuffer;
@@ -287,6 +307,7 @@ bool deviceReadFromDisk(char* path)
 			{
 				LOG_I("Type: TH");
 				device = new CDeviceTempHumid();
+				LOG_I("__1");
 				if(!device)
 				{
 					LOG_E("devReadDisk noheap");
@@ -297,6 +318,7 @@ bool deviceReadFromDisk(char* path)
 					delete device;
 					device = NULL;
 				}
+				LOG_I("__2");
 			}
 			break;
 
@@ -321,7 +343,7 @@ bool deviceReadFromDisk(char* path)
 				LOG_I("UNKN device:%d", devType);
 				break;
 		};
-
+		LOG_I("__3");
 		if(originalDevString)
 				delete[] originalDevString;
 	}
@@ -329,6 +351,7 @@ bool deviceReadFromDisk(char* path)
 
 	if(device)
 	{
+		LOG_I("__4");
 		g_activeDevices.addElement(device);
 		LOG_E("Added device.");
 		bRet = true;
