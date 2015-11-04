@@ -69,15 +69,17 @@ void CDeviceHeater::triggerState(int reason, void* state)
 	if(doSendPkg)
 	{
 		pkg[0xb] += pkg[3];
-		if(RadioSend(pkg, PKG_HEATER_LEN, &outLength))
-		{
-			if(PKG_HEATER_STATUS_LEN == outLength &&
-				PKG_TYPE_HEATER_STATUS == pkg[2] &&
-			   (seq) == pkg[0xd])
+
+			if(RadioSend(pkg, PKG_HEATER_LEN, &outLength, 20))
 			{
-				radioPktReceivedFromDevice((char*)pkg, outLength);
+				if(PKG_HEATER_STATUS_LEN == outLength &&
+					PKG_TYPE_HEATER_STATUS == pkg[2] &&
+				   (seq) == pkg[0xd])
+				{
+					radioPktReceivedFromDevice((char*)pkg, outLength);
+				}
 			}
-		}
+
 	}
 }
 

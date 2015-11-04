@@ -66,6 +66,19 @@ void startSystem()
 		LOG_I( #x); \
 		break;
 
+	/*
+	 enum rst_reason {
+REANSON_DEFAULT_RST = 0, // normal startup by power on
+REANSON_WDT_RST = 1, // hardware watch dog reset
+REANSON_EXCEPTION_RST = 2,// exception reset, GPIO status won’t change
+REANSON_SOFT_WDT_RST = 3,// software watch dog reset, GPIO status won’t change
+REANSON_SOFT_RESTART = 4,// software restart ,system_restart , GPIO status won’t change
+REANSON_DEEP_SLEEP_AWAKE = 5, // wake up from deep-sleep
+};
+
+	 */
+
+
 	LOG_I( "Reset: ");
 	rst_info* rstInfo = system_get_rst_info();
 	if(rstInfo)
@@ -179,13 +192,15 @@ static void mainLoop()
 				}
 			}
 */
-			releaseRadio();
+
 			devRGB_setColor(COLOR_GREEN);
 		}
 		else
 		{
 			devRGB_setColor(COLOR_RED);
 		}
+
+		releaseRadio();
 	}
 	WDT.alive();
 }

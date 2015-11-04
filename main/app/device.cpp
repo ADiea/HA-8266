@@ -163,6 +163,8 @@ bool devicesLoadFromDisk()
 
 bool deviceWriteToDisk(CGenericDevice *dev)
 {
+	WDT.alive();
+
 	bool bRet = false;
 	FIL file;
 	FRESULT fRes;
@@ -232,6 +234,8 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 
 bool deviceReadFromDisk(char* path)
 {
+	WDT.alive();
+
 	FIL file;
 	FRESULT fRes;
 	FILINFO fno;
@@ -307,7 +311,6 @@ bool deviceReadFromDisk(char* path)
 			{
 				LOG_I("Type: TH");
 				device = new CDeviceTempHumid();
-				LOG_I("__1");
 				if(!device)
 				{
 					LOG_E("devReadDisk noheap");
@@ -318,7 +321,6 @@ bool deviceReadFromDisk(char* path)
 					delete device;
 					device = NULL;
 				}
-				LOG_I("__2");
 			}
 			break;
 
@@ -343,7 +345,6 @@ bool deviceReadFromDisk(char* path)
 				LOG_I("UNKN device:%d", devType);
 				break;
 		};
-		LOG_I("__3");
 		if(originalDevString)
 				delete[] originalDevString;
 	}
@@ -351,7 +352,6 @@ bool deviceReadFromDisk(char* path)
 
 	if(device)
 	{
-		LOG_I("__4");
 		g_activeDevices.addElement(device);
 		LOG_E("Added device.");
 		bRet = true;

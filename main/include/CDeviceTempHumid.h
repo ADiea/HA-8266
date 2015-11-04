@@ -15,69 +15,26 @@
 
 struct FilterMovingAve
 {
-	FilterMovingAve(uint8_t size, uint8_t mod, uint8_t div):fSize(size), fSize_mod(mod), fSize_div(div)
+	FilterMovingAve()
 	{
 		accumulator = 0;
 		nextIndex = 0;
-		filter = NULL;
-		LOG_I("fltr_0");
 	}
 	~FilterMovingAve()
 	{
-		LOG_I("fltr_~");
-		if(filter)
-			delete filter;
 	}
 
-	void init()
-	{
-		uint16_t i;
-		LOG_I("fltr_init_0, size:%u", fSize);
-
-		LOG_I( "%s Heap: %ld",
-				SystemClock.getSystemTimeString().c_str(),
-				system_get_free_heap_size());
-
-		//if(fSize != 128)
-		//filter = new int32_t(fSize);
-
-		LOG_I( "%s Heap: %ld",
-				SystemClock.getSystemTimeString().c_str(),
-				system_get_free_heap_size());
+	void init(int32_t *thefilter, uint16_t size, uint16_t mod, uint16_t div);
 
 
+	float feed(float sample);
 
-if(!filter)
-{
-	LOG_I("fltr_init_0,heap!");
-	}
-else
-		for(i=0;i<fSize;i++)
-		{
-			LOG_I("fltr_init_0, i:%u", i);
-			filter[i] = 0;
-		}
-
-		LOG_I("fltr_init_1");
-	}
-
-	float feed(float sample)
-	{
-		int32_t retVal = (int32_t) (sample * 10);
-		accumulator += retVal;
-		filter[nextIndex] = retVal;
-		nextIndex = (nextIndex + 1) & fSize_mod;
-		accumulator -= filter[nextIndex];
-
-		retVal = (accumulator >> fSize_div);
-
-		return (retVal/10 + 0.1f*(retVal%10));
-	}
 
 	int32_t accumulator;
 	uint16_t nextIndex;
-	uint16_t fSize, fSize_mod, fSize_div;
+	uint16_t fSize, fSize_mod, fSize_div, isInvalid;
 	int32_t *filter;
+
 };
 
 enum eSensorLocation
@@ -96,32 +53,27 @@ struct tTempHumidState
 		bNeedCooling(false),
 		bEnabled(true),
 		bIsHeating(false),
-		bIsCooling(false),
-		fAverageRH_1m(NULL),
-		fAverageTemp_1m(NULL),
-		fAverageTemp_8m(NULL)
+		bIsCooling(false)
 	{
-		LOG_I("thst_1");
 		lastTH.temp = -99.0f;
 		lastTH.humid = -99.0f;
 	}
 
-	tTempHumidState()
+	tTempHumidState():
+		tempSetpoint(22),
+		tempSetpointMin(16),
+		tempSetpointMax(27),
+		bNeedHeating(false),
+		bNeedCooling(false),
+		bEnabled(true),
+		bIsHeating(false),
+		bIsCooling(false)
 	{
-		LOG_I("thst_0");
-		tTempHumidState(22.0f, 16.0f, 27.0f);
 	}
 
 	~tTempHumidState()
 	{
-		if(fAverageRH_1m)
-			delete fAverageRH_1m;
 
-		if(fAverageTemp_1m)
-			delete fAverageTemp_1m;
-
-		if(fAverageTemp_8m)
-			delete fAverageTemp_8m;
 	}
 
 	TempAndHumidity lastTH;
@@ -136,7 +88,8 @@ struct tTempHumidState
 	float fLastTemp_1m, fLastTemp_8m;
 	float fLastRH_1m;
 
-	FilterMovingAve *fAverageRH_1m, *fAverageTemp_1m, *fAverageTemp_8m;
+	FilterMovingAve fAverageRH_1m, fAverageTemp_1m, fAverageTemp_8m;
+	int32_t filterRH[FILTER_1M_LENGTH], filterTemp1m[FILTER_1M_LENGTH], filterTemp8m[FILTER_8M_LENGTH];
 
 	//confort related stuff
 };
@@ -152,7 +105,6 @@ public:
 
 	void initTempHumid(	uint32_t deviceID,
 						String& friendlyName,
-						//tTempHumidState& state,
 						eSensorLocation location,
 						int updateInterval = SENSOR_TH_MEASURE_INTERVAL)
 	{
@@ -165,13 +117,9 @@ public:
 
 		m_tempThreshold = 0.1;
 
-		m_state.fAverageRH_1m = new FilterMovingAve(FILTER_1M_LENGTH, FILTER_1M_MOD, FILTER_1M_DIV);
-		m_state.fAverageTemp_1m = new FilterMovingAve(FILTER_1M_LENGTH, FILTER_1M_MOD, FILTER_1M_DIV);
-		m_state.fAverageTemp_8m = new FilterMovingAve(FILTER_8M_LENGTH, FILTER_8M_MOD, FILTER_8M_DIV);
-
-		m_state.fAverageRH_1m->init();
-		m_state.fAverageTemp_1m->init();
-		m_state.fAverageTemp_8m->init();
+		m_state.fAverageRH_1m.init(m_state.filterRH, FILTER_1M_LENGTH, FILTER_1M_MOD, FILTER_1M_DIV);
+		m_state.fAverageTemp_1m.init(m_state.filterTemp1m, FILTER_1M_LENGTH, FILTER_1M_MOD, FILTER_1M_DIV);
+		m_state.fAverageTemp_8m.init(m_state.filterTemp8m, FILTER_8M_LENGTH, FILTER_8M_MOD, FILTER_8M_DIV);
 
 		m_updateTimer.initializeMs(m_updateInterval, TimerDelegate(&CDeviceTempHumid::onUpdateTimer, this)).start(false);
 	}

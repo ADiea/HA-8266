@@ -39,6 +39,7 @@ bool getRadio(uint32_t waitMs)
 		if(!bRadioBusy)
 		{
 			bRadioBusy = true;
+			//LOG_I("Take RADIO");
 			return true;
 		}
 	}
@@ -54,6 +55,7 @@ bool _isRadioBusy()
 
 void releaseRadio()
 {
+	//LOG_I("Release RADIO");
 	bRadioBusy = false;
 }
 
@@ -70,21 +72,16 @@ bool RadioMakePacket(byte *pkgBuffer,
 }
 */
 
-bool RadioSend(byte *pkg, uint8_t length, uint8_t *outLen)
+bool RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitMs)
 {
 	bool result = false;
 	
 	if(Radio)
 	{
-		if(bRadioBusy)
+		if(getRadio(waitMs))
 		{
-			LOG_I( "Radio busy");
-		}
-		else
-		{
-			bRadioBusy = true;
 			result = Radio->sendPacket(length, pkg, true, RADIO_WAIT_ACK_MS, outLen, pkg);
-			bRadioBusy = false;
+			releaseRadio();
 
 			if(!result || *outLen > 64)
 			{
@@ -103,6 +100,10 @@ bool RadioSend(byte *pkg, uint8_t length, uint8_t *outLen)
 				LOG_I("\n");
 				result = true;
 			}
+		}
+		else
+		{
+			LOG_I( "Radio busy\n");
 		}
 	}
 	else
