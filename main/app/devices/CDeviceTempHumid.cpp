@@ -21,7 +21,7 @@ void FilterMovingAve::init(int32_t *thefilter, uint16_t size, uint16_t mod, uint
 	float  FilterMovingAve::feed(float sample)
 	{
 		int32_t retVal = (int32_t) (sample * 10);
-		LOG_I("Add %d -> %d", retVal, nextIndex);
+		//LOG_I("Add %d -> %d", retVal, nextIndex);
 		accumulator += retVal;
 		filter[nextIndex] = retVal;
 		nextIndex = (nextIndex + 1) & fSize_mod;
@@ -36,7 +36,7 @@ void FilterMovingAve::init(int32_t *thefilter, uint16_t size, uint16_t mod, uint
 
 		accumulator -= filter[nextIndex];
 
-		LOG_I("Remove %d, ret%d", nextIndex, retVal);
+		//LOG_I("Remove %d, ret%d", nextIndex, retVal);
 
 		return (retVal/10 + 0.1f*(retVal%10));
 	}
@@ -63,9 +63,9 @@ void CDeviceTempHumid::requestUpdateState()
 			m_state.fLastTemp_8m = m_state.fAverageTemp_8m.feed(m_state.lastTH.temp);
 			m_state.fLastRH_1m = m_state.fAverageRH_1m.feed(m_state.lastTH.humid);
 
-			LOG_I("%s H:%.2f(%.1f) T:%.2f(%.1f %.1f) SetPt:%.2f Time:%u", m_FriendlyName.c_str(),
+			LOG_I("%s H:%.2f(%.1f) T:%.2f(%.1f %.1f)/%.1f SetPt:%.2f Time:%u", m_FriendlyName.c_str(),
 					m_state.lastTH.humid, m_state.fLastRH_1m, m_state.lastTH.temp, m_state.fLastTemp_1m ,
-					m_state.fLastTemp_8m, m_state.tempSetpoint,
+					m_state.fLastTemp_8m, devDHT22_heatIndex(), m_state.tempSetpoint,
 					m_LastUpdateTimestamp);
 
 			/*devDHT22_heatIndex();

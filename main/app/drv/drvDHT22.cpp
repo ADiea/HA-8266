@@ -71,8 +71,7 @@ float devDHT22_heatIndex()
 
 	if(dht)
 	{
-		LOG_I( ",");
-		//Serial.print(dht->getHeatIndex());
+		return dht->getHeatIndex();
 	}
 	return 0;
 }
