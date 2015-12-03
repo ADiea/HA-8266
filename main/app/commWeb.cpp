@@ -15,7 +15,7 @@ char scrapPackage[PKG_BUF_SIZE];
 
 bool reply_cwReplyToCommand(WebSocket& socket, eCommWebErrorCodes err)
 {
-	int sizePkt = snprintf(scrapPackage, sizeof(scrapPackage), "%d;%d;", cwReplyToCommand, err);
+	int sizePkt = m_snprintf(scrapPackage, sizeof(scrapPackage), "%d;%d;", cwReplyToCommand, err);
 	socket.send((const char*)scrapPackage, sizePkt);
 }
 
@@ -56,7 +56,7 @@ bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 			++numDevs;
 		}
 	}
-	sizePkt = snprintf(scrapPackage, sizeof(scrapPackage),
+	sizePkt = m_snprintf(scrapPackage, sizeof(scrapPackage),
 				"%d;%d;%d;", cwReplyDevicesOfType, devType, numDevs);
 	//
 	for(i=0; i < g_activeDevices.count(); i++)
@@ -64,7 +64,7 @@ bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 		if(devTypeTH == devType && devTypeTH == g_activeDevices[i]->m_deviceType)
 		{
 			th = (CDeviceTempHumid*)g_activeDevices[i];
-			sizePkt += snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
+			sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
 							"%d;%s;%.1f;%.1f;%d;%d;%d;%d;%.1f;%.1f;%.1f;", th->m_ID,
 							th->m_FriendlyName.c_str(),
 							th->m_state.tempSetpoint, th->m_state.lastTH.temp, 1, th->m_state.bEnabled, th->m_state.bIsHeating, th->m_state.bIsCooling,
@@ -73,7 +73,7 @@ bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 		else if(devTypeHeater == devType && devTypeHeater == g_activeDevices[i]->m_deviceType)
 		{
 			heat = (CDeviceHeater*)g_activeDevices[i];
-			sizePkt += snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
+			sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
 							"%d;%s;%d;%d;%d;%d%d;%d;%d;", heat->m_ID,
 							heat->m_FriendlyName.c_str(),
 							heat->m_state.isOn?1:0, heat->m_state.isFault?1:0, heat->m_state.gasLevel_lastReading,

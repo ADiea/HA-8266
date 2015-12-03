@@ -3,20 +3,6 @@
 
 #include <stdarg.h>
 
-
-int snprintf(char* buf, int length, const char *fmt, ...)
-{
-	char *p;
-	va_list args;
-	int n = 0;
-
-	va_start(args, fmt);
-	n = m_vsnprintf(buf, length, fmt, args);
-	va_end(args);
-
-	return n;
-}
-
 bool skipInt(const char **s, int *dest)
 {
 	int i = 0;

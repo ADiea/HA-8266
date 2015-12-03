@@ -7,6 +7,4 @@ bool skipInt(const char **s, int *dest);
 bool skipFloat(const char **s, float *dest);
 bool skipString(const char** s, char* dest, int destLen);
 
-int snprintf(char* buf, int length, const char *fmt, ...);
-
 #endif

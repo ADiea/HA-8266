@@ -3,7 +3,7 @@
 ## Uncomment and change examples:
 
 #Add your source directories here separated by space
-MODULES = app app/drv app/fatfs app/devices
+MODULES = app/drv app/fatfs app/devices
 
 #inc dirs
 EXTRA_INCDIR = ../protocol

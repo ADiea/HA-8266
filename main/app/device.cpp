@@ -179,7 +179,7 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 	if(!dev || !devBuffer)
 		return false;
 
-	snprintf(fname, sizeof(fname), "DEV_%d", dev->m_ID);
+	m_snprintf(fname, sizeof(fname), "DEV_%d", dev->m_ID);
 
 	if(getRadio(1000))
 	{
