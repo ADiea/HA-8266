@@ -14,16 +14,16 @@ void initUart(void)
 	DDRD |= 1<<1;
 	PORTD |= 1<<0; //pullup on rx
 	
-    UBRRH = 0;//(BAUDVAL>>8);
-    UBRRL = 51;//3=115200pt8;//-> 2400 //BAUDVAL; 
-    UCSRB = (1<<TXEN);//|(1<<RXEN);
-    UCSRC = (1<<URSEL)|(1<<UCSZ0)|(1<<UCSZ1);
+    UBRR0H = 0;//(BAUDVAL>>8);
+    UBRR0L = 51;//3=115200pt8;//-> 2400 //BAUDVAL; 
+    UCSR0B = (1<<TXEN0);//|(1<<RXEN);
+    UCSR0C = (1<<UCSZ00)|(1<<UCSZ01);
 }
 
 void printCh(char ch)
 {
-	while (!( UCSRA & (1<<UDRE)));
-	UDR = ch;/*
+	while (!( UCSR0A & (1<<UDRE0)));
+	UDR0 = ch;/*
 asm volatile("nop");
 asm volatile("nop");
 asm volatile("nop");

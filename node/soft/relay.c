@@ -40,7 +40,7 @@ void relay_init(void)
 	
 	//int1 ena on falling edge
 	MCUCR |= 1<<ISC11;
-	GICR |= 1<<INT1;
+	EIMSK |= 1<<INT1;
 	
 	DDRB |= 1<<2;
 	PORTB &= ~(1<<2);
@@ -51,7 +51,7 @@ void startTimer1(uint16_t cmpValue)
 	TCCR1B |= 1<<CS11;
 	TCNT1 = 0;
 	OCR1A = cmpValue;
-	TIMSK |= 1<<OCIE1A;
+	TIMSK1 |= 1<<OCIE1A;
 }
 
 void stopTimer1(void)

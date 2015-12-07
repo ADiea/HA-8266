@@ -4,8 +4,8 @@ uint8_t gLedState = 1;
 
 void led_init(void)
 {
-	DDRB |= 1<<1;
-	PORTB |= (1<<1);
+	DDRC |= 1<<1;
+	PORTC |= (1<<1);
 }
 
 
@@ -15,11 +15,11 @@ void led_set(uint8_t state)
 	
 	if(state)
 	{
-		PORTB |= 1<<1;
+		PORTC |= 1<<1;
 	}
 	else
 	{
-		PORTB &= ~(1<<1);
+		PORTC &= ~(1<<1);
 	}
 }
 

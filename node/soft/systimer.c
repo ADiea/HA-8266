@@ -36,8 +36,8 @@ void initSysTimer(void)
 	gTimer = 0;
 	g_32us = 0;
 	
-	TCCR0 = 1<<CS00;
-	TIMSK = 1<<TOIE0;//ena overflow interrupt
+	TCCR0B = 1<<CS00;
+	TIMSK0 = 1<<TOIE0;//ena overflow interrupt
 
 	for( i=0; i < NUM_CALLBACKS; i++)
 	{

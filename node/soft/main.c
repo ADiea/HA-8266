@@ -58,12 +58,14 @@ void initHw()
 #endif	
 
 	//enable and reset RBG led
+/*	
 	DDRD |= 1<<4;
 	PORTD &= ~(1<<4);
 	_delay_ms(1);
+*/
 	
 	//enable pullups, just to be sure
-	SFIOR &= ~(1<<PUD);
+	MCUCR &= ~(1<<PUD);
 	
 }
 
@@ -141,7 +143,7 @@ int main(void)
 	
 	debugf(" System Init OK\n");
 	
-	ws2812_setleds((tRGB*)&gColorPallette[1], 1);
+	//ws2812_setleds((tRGB*)&gColorPallette[1], 1);
 		
 	radio_startListening();
 	
