@@ -1,0 +1,83 @@
+<html>
+<head>
+
+<script type="text/javascript">
+
+function process()
+{
+	var text = document.getElementById("input_ta");
+	
+	var textLines = text.value.split('\n');
+	var outPut = [];
+	
+	var foundBeginning = false;
+	var k=0;
+	
+	var outputOff = false;
+	
+	for(var i=0;i<textLines.length; i++)
+	{
+		if(!foundBeginning)
+		{
+			if(-1 != textLines[i].indexOf("0x40000000")) //Linker script and memory map
+			{
+				foundBeginning = true;
+			}
+		}
+		else
+		{
+		
+			if(textLines[i].charAt(1) == '.')
+			{
+				outputOff = false;
+			}
+				
+			if(-1 != textLines[i].indexOf("*fill*"))
+			{
+				continue;
+			}
+			if(-1 != textLines[i].indexOf("size before relaxing"))
+			{
+				continue;
+			}
+			
+			if(-1 != textLines[i].indexOf("ESP8266_SDK"))
+			{
+				outputOff = true;
+			}
+		
+			if(-1 != textLines[i].indexOf("OUTPUT(out/build/app.out elf32-xtensa-le)"))
+			{
+				break;
+			}
+	
+			if(!outputOff)
+				outPut.push(/*++k + " " +*/textLines[i]);
+			//else
+			//	outPut.push(++k + " --#####-- " +textLines[i]);
+		}
+	}
+
+	var out = document.getElementById("out_map");
+	
+	out.innerHTML = outPut.join("\n");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<textarea rows="50" cols="100" id="input_ta"></textarea>
+
+<input style="display:block" type="button" onclick="process()" value="Process"></input>
+
+<textarea rows="50" cols="100" id="out_map"></textarea>
+
+<!-- <pre id="out_map"></pre> -->
+
+</body>
+
+</html>
