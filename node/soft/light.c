@@ -2,8 +2,6 @@
 
 #include<avr/eeprom.h>
 
-
-
 typedef struct __attribute__((packed))_eepromData
 {
 	uint8_t dimMax, dimMin, speedDim, dataChecksum;

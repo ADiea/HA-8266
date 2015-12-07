@@ -2,7 +2,7 @@
 
 #define DEBUG_UART 1
 
-#define BAUD 38400
+#define BAUD 9600
 #define BAUDVAL ((F_CPU)/(BAUD*16UL)-1)
 
 #define MPRINTF_BUF_SIZE 128
@@ -14,20 +14,16 @@ void initUart(void)
 	DDRD |= 1<<1;
 	PORTD |= 1<<0; //pullup on rx
 	
-    UBRR0H = 0;//(BAUDVAL>>8);
-    UBRR0L = 51;//3=115200pt8;//-> 2400 //BAUDVAL; 
-    UCSR0B = (1<<TXEN0);//|(1<<RXEN);
+    UBRR0H = 0;           
+    UBRR0L = 51;// -> 9600    
+    UCSR0B = (1<<TXEN0);
     UCSR0C = (1<<UCSZ00)|(1<<UCSZ01);
 }
 
 void printCh(char ch)
 {
 	while (!( UCSR0A & (1<<UDRE0)));
-	UDR0 = ch;/*
-asm volatile("nop");
-asm volatile("nop");
-asm volatile("nop");
-asm volatile("nop");  */                
+	UDR0 = ch;            
 }
 
 int m_vsnprintf(char *buf, uint32_t maxLen, const char *fmt, va_list args);

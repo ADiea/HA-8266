@@ -39,7 +39,7 @@ void relay_init(void)
 	PORTD |= 1<<3;
 	
 	//int1 ena on falling edge
-	MCUCR |= 1<<ISC11;
+	EICRA |= 1<<ISC11;
 	EIMSK |= 1<<INT1;
 	
 	DDRB |= 1<<2;

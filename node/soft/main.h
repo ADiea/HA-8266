@@ -24,6 +24,7 @@
 #define NODE_HEATER 2
 
 #define NODETYPE NODE_HEATER
+#define HAS_RGBLED 0
 
 #define MY_ID 0x01
 

@@ -18,6 +18,8 @@ printat RSSI
 #define NUM_COLORS 4
 #define CYCLE_PERIOD_MS 1000
 
+#define LOOP_DELAY 30
+
 typedef unsigned char u8;
 typedef unsigned short u16;
 
@@ -57,16 +59,15 @@ void initHw()
 	heater_init();	
 #endif	
 
+#if HAS_RGBLED
 	//enable and reset RBG led
-/*	
 	DDRD |= 1<<4;
 	PORTD &= ~(1<<4);
 	_delay_ms(1);
-*/
+#endif
 	
 	//enable pullups, just to be sure
 	MCUCR &= ~(1<<PUD);
-	
 }
 
 void mcpy(char *d, char *s, unsigned int sz)
@@ -84,55 +85,8 @@ unsigned int slen(char *s)
 	return sz;	
 }
 
-void sendColorIndex(uint8_t color)
-{
-	char message[32], *s;
-
-	s = ultoa(++pktSecv, message, 10);
-
-	while(*s)
-		++s;
-	
-	if(s - message < 32 - 9)
-	{
-		switch(color)
-		{
-			case 0:
-				mcpy(s, "_LED   OFF", 10);
-				break;
-			case 1:
-				mcpy(s, "_LED GREEN", 10);
-				break;
-			case 2:
-				mcpy(s, "_LED   RED", 10);
-				break;			
-			case 3:
-				mcpy(s, "_LED  BLUE", 10);
-				break;		
-			default:
-				mcpy(s, "_LED   ???", 10);
-				break;
-		}
-		
-		s[10] = 0;
-	}
-	
-	
-	if(!radio_sendPacketSimple(slen(message), (unsigned char*)message))
-	{
-		debugf("TxERR\n");
-	}
-	else
-	{
-		debugf("TxOK: [ %s ]\n", message);
-	}
-}
-
-
-
 int main(void)
 {
-	const uint8_t loopDelay = 30;
 	uint8_t payLoad[64] = {0};
 	uint8_t len = 0;
 	uint8_t i;
@@ -142,9 +96,9 @@ int main(void)
 	initHw();
 	
 	debugf(" System Init OK\n");
-	
-	//ws2812_setleds((tRGB*)&gColorPallette[1], 1);
-		
+#if HAS_RGBLED	
+	ws2812_setleds((tRGB*)&gColorPallette[1], 1);
+#endif
 	radio_startListening();
 	
 	do
@@ -154,7 +108,7 @@ int main(void)
 #elif NODETYPE == NODE_HEATER
 		heater_loop();	
 #endif	
-	
+
 		if(millis() - curTime > CYCLE_PERIOD_MS)
 		{
 			curTime = millis();
@@ -178,7 +132,6 @@ int main(void)
 			{	
 				debugf("%x ", 0xFF & payLoad[i]);
 			}
-
 			debugf("\n");
 			
 #if NODETYPE == NODE_LIGHT	
@@ -186,12 +139,9 @@ int main(void)
 #elif NODETYPE == NODE_HEATER
 			heater_processPkg(payLoad, len);
 #endif	
-
 			radio_startListening();
 		}
-		
-		_delay_ms(loopDelay);
+		_delay_ms(LOOP_DELAY);
 	}
 	while(1);
-
 }

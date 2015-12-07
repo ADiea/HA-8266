@@ -46,7 +46,7 @@ void sendHeaterStatusPkg(uint8_t seq)
 {
 	uint8_t pkg[PKG_HEATER_STATUS_LEN];
 	
-	debugf("Heat..");
+	debugf("TX HEAT");
 	
 	pkg[0] = GATEWAY_ID;
 	pkg[1] = MY_ID;
@@ -113,7 +113,7 @@ void heater_processPkg(uint8_t* pkg, uint8_t len)
 		g_heaterMedGasThresh = ((uint16_t)pkg[7]) << 8 | pkg[6];
 		g_heaterHighGasThresh = ((uint16_t)pkg[9]) << 8 | pkg[8];
 		
-		debugf("HEAT: %u low:%u med:%u hi:%d\n", 
+		debugf("RX HEAT: %u low:%u med:%u hi:%d\n", 
 				pkg[3], g_heaterLowGasThresh, g_heaterMedGasThresh, g_heaterHighGasThresh);
 		
 		g_heaterFault = HEATER_FAULT_NONE;
