@@ -19,7 +19,7 @@ function process()
 	{
 		if(!foundBeginning)
 		{
-			if(-1 != textLines[i].indexOf("0x40000000")) //Linker script and memory map
+			if(-1 != textLines[i].indexOf(".dport0.rodata")) //Linker script and memory map
 			{
 				foundBeginning = true;
 			}
@@ -40,15 +40,27 @@ function process()
 			{
 				continue;
 			}
+			if(-1 != textLines[i].indexOf(" 0x0 ") || -1 != textLines[i].indexOf(" 0x4 ") )
+			{
+				continue;
+			}			
 			
 			if(-1 != textLines[i].indexOf("ESP8266_SDK"))
 			{
 				outputOff = true;
 			}
 		
-			if(-1 != textLines[i].indexOf("OUTPUT(out/build/app.out elf32-xtensa-le)"))
+			if(-1 != textLines[i].indexOf(" *(.gnu.linkonce.lit4.*)"))
 			{
 				break;
+			}
+			
+			if(0 == textLines[i].indexOf(" *") || 0 == textLines[i].indexOf(" ."))
+			{
+				if(-1 == textLines[i].substring(1).indexOf(" "))
+				{
+					continue;
+				}
 			}
 	
 			if(!outputOff)
@@ -58,9 +70,8 @@ function process()
 		}
 	}
 
-	var out = document.getElementById("out_map");
 	
-	out.innerHTML = outPut.join("\n");
+	text.value = outPut.join("\n");
 
 }
 
@@ -73,8 +84,6 @@ function process()
 <textarea rows="50" cols="100" id="input_ta"></textarea>
 
 <input style="display:block" type="button" onclick="process()" value="Process"></input>
-
-<textarea rows="50" cols="100" id="out_map"></textarea>
 
 <!-- <pre id="out_map"></pre> -->
 

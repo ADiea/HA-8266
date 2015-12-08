@@ -77,12 +77,10 @@
 #define LED_PIN  PINC
 #define LED      PINC1
 
-
 #define SIG1	0x1E
 #define SIG2	0x95
 #define SIG3	0x14
 #define PAGE_SIZE	0x40U	//32 words
-
 
 void putch(char);
 char getch(void);
@@ -106,12 +104,7 @@ struct flags_struct {
 } flags;
 
 uint8_t buff[256];
-//uint8_t address_high;
-
-uint8_t pagesz=0x80;
-
 uint8_t i;
-//uint8_t bootuart0=0,bootuart1=0;
 
 void (*app_start)(void) = 0x0000;
 
@@ -136,8 +129,6 @@ int main(void)
   UCSR0B = (1<<RXEN0)|(1<<TXEN0);  // enable Rx & Tx
   UCSR0C = (1<<UCSZ00)|(1<<UCSZ01);  // config USART; 8N1
   
-  
-
   /* set LED pin as output */
   sbi(LED_DDR,LED);
 	for (i = 0; i < 55; i++) {
@@ -382,27 +373,19 @@ int main(void)
 		else if(ch=='v') {
 		  byte_response(0x00);
 		}
-//    } else {
-//			time_count++;
-//			if (time_count>=MAX_TIME_COUNT) {
-//				app_start();
-//			}
-//		}
 	} /* end of forever loop */
 }
 
 void putch(char ch)
 {
-  /* m8 */
   while (!(UCSR0A & (1<<UDRE0)));
   outb(UDR0,ch);
 }
 
 char getch(void)
 {
-  /* m8 */
-	uint32_t count = 0;
-  while(!(UCSR0A & (1 << RXC0))) {
+   uint32_t count = 0;
+   while(!(UCSR0A & (1 << RXC0))) {
 		/* HACKME:: here is a good place to count times*/
 		count++;
 		if (count > MAX_TIME_COUNT)
@@ -415,10 +398,7 @@ void getNch(uint8_t count)
 {
   uint8_t i;
   for(i=0;i<count;i++) {
-    /* m8 */
-    //while(!(inb(UCSRA) & _BV(RXC)));
-    //inb(UDR);
-		getch(); // need to handle time out
+	getch(); // need to handle time out
   }
 }
 
