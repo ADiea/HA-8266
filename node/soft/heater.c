@@ -2,11 +2,11 @@
 
 uint16_t g_heaterLastGasReading = 0;
 
-uint16_t g_heaterLowGasThresh = 0;
+uint16_t g_heaterLowGasThresh = 1;
 
-uint16_t g_heaterMedGasThresh = 0;
+uint16_t g_heaterMedGasThresh = 1;
 
-uint16_t g_heaterHighGasThresh = 0;
+uint16_t g_heaterHighGasThresh = 1;
 
 uint8_t g_heaterStatus = HEATER_STATUS_OFF;
 

@@ -2,8 +2,6 @@ Archive member included because of file (symbol)
 
 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
                               f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328.o (exit)
-f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
-                              out/main.o (__do_copy_data)
 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
                               out/main.o (__do_clear_bss)
 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_byte_atmega328.o)
@@ -28,15 +26,10 @@ Discarded input sections
  .data          0x00000000        0x0 out/main.o
  .bss           0x00000000        0x0 out/main.o
  .text.putch    0x00000000        0x0 out/main.o
- .data.pagesz   0x00000000        0x0 out/main.o
  .text          0x00000000        0x0 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  .text.libgcc   0x00000000        0x0 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text          0x00000000        0x0 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .data          0x00000000        0x0 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .bss           0x00000000        0x0 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x00000000        0x0 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
  .text          0x00000000        0x0 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
  .data          0x00000000        0x0 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
  .bss           0x00000000        0x0 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
@@ -159,7 +152,7 @@ LOAD f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00007800      0x5c0
+.text           0x00007800      0x5c2
  *(.vectors)
  .vectors       0x00007800       0x68 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328.o
                 0x00007800                __vectors
@@ -197,10 +190,8 @@ LOAD f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x00007874       0x16 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
-                0x00007874                __do_copy_data
- .init4         0x0000788a       0x10 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
-                0x0000788a                __do_clear_bss
+ .init4         0x00007874       0x10 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00007874                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -211,62 +202,62 @@ LOAD f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000789a        0x8 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328.o
+ .init9         0x00007884        0x8 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328.o
  *(.init9)
  *(.text)
- .text          0x000078a2        0x4 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328.o
-                0x000078a2                __vector_22
-                0x000078a2                __vector_1
-                0x000078a2                __vector_24
-                0x000078a2                __vector_12
-                0x000078a2                __bad_interrupt
-                0x000078a2                __vector_6
-                0x000078a2                __vector_3
-                0x000078a2                __vector_23
-                0x000078a2                __vector_25
-                0x000078a2                __vector_11
-                0x000078a2                __vector_13
-                0x000078a2                __vector_17
-                0x000078a2                __vector_19
-                0x000078a2                __vector_7
-                0x000078a2                __vector_5
-                0x000078a2                __vector_4
-                0x000078a2                __vector_9
-                0x000078a2                __vector_2
-                0x000078a2                __vector_21
-                0x000078a2                __vector_15
-                0x000078a2                __vector_8
-                0x000078a2                __vector_14
-                0x000078a2                __vector_10
-                0x000078a2                __vector_16
-                0x000078a2                __vector_18
-                0x000078a2                __vector_20
-                0x000078a6                . = ALIGN (0x2)
+ .text          0x0000788c        0x4 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328.o
+                0x0000788c                __vector_22
+                0x0000788c                __vector_1
+                0x0000788c                __vector_24
+                0x0000788c                __vector_12
+                0x0000788c                __bad_interrupt
+                0x0000788c                __vector_6
+                0x0000788c                __vector_3
+                0x0000788c                __vector_23
+                0x0000788c                __vector_25
+                0x0000788c                __vector_11
+                0x0000788c                __vector_13
+                0x0000788c                __vector_17
+                0x0000788c                __vector_19
+                0x0000788c                __vector_7
+                0x0000788c                __vector_5
+                0x0000788c                __vector_4
+                0x0000788c                __vector_9
+                0x0000788c                __vector_2
+                0x0000788c                __vector_21
+                0x0000788c                __vector_15
+                0x0000788c                __vector_8
+                0x0000788c                __vector_14
+                0x0000788c                __vector_10
+                0x0000788c                __vector_16
+                0x0000788c                __vector_18
+                0x0000788c                __vector_20
+                0x00007890                . = ALIGN (0x2)
  *(.text.*)
- .text.getch    0x000078a6       0x4c out/main.o
-                0x000078a6                getch
- .text.getNch   0x000078f2       0x1a out/main.o
-                0x000078f2                getNch
+ .text.getch    0x00007890       0x4c out/main.o
+                0x00007890                getch
+ .text.getNch   0x000078dc       0x1a out/main.o
+                0x000078dc                getNch
  .text.byte_response
-                0x0000790c       0x38 out/main.o
-                0x0000790c                byte_response
+                0x000078f6       0x38 out/main.o
+                0x000078f6                byte_response
  .text.nothing_response
-                0x00007944       0x26 out/main.o
-                0x00007944                nothing_response
- .text.main     0x0000796a      0x426 out/main.o
-                0x0000796a                main
+                0x0000792e       0x26 out/main.o
+                0x0000792e                nothing_response
+ .text.main     0x00007954      0x43e out/main.o
+                0x00007954                main
  .text.avr-libc
-                0x00007d90       0x10 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_byte_atmega328.o)
-                0x00007d90                __eerd_byte_m328
+                0x00007d92       0x10 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_byte_atmega328.o)
+                0x00007d92                __eerd_byte_m328
  .text.avr-libc
-                0x00007da0       0x1c f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_byte_atmega328.o)
-                0x00007da2                __eewr_r18_m328
-                0x00007da0                __eewr_byte_m328
-                0x00007dbc                . = ALIGN (0x2)
+                0x00007da2       0x1c f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_byte_atmega328.o)
+                0x00007da4                __eewr_r18_m328
+                0x00007da2                __eewr_byte_m328
+                0x00007dbe                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00007dbc        0x0 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00007dbc                exit
-                0x00007dbc                _exit
+ .fini9         0x00007dbe        0x0 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00007dbe                exit
+                0x00007dbe                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -285,11 +276,11 @@ LOAD f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00007dbc        0x4 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00007dbe        0x4 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00007dc0                _etext = .
+                0x00007dc2                _etext = .
 
-.data           0x00800100        0x0 load address 0x00007dc0
+.data           0x00800100        0x0 load address 0x00007dc2
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -315,8 +306,8 @@ LOAD f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x00800206                i
                 0x00800207                flags
                 0x00800208                PROVIDE (__bss_end, .)
-                0x00007dc0                __data_load_start = LOADADDR (.data)
-                0x00007dc0                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00007dc2                __data_load_start = LOADADDR (.data)
+                0x00007dc2                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800208        0x0
                 0x00800208                PROVIDE (__noinit_start, .)

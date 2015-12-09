@@ -283,7 +283,7 @@ LOAD f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x1610
+.text           0x00000000     0x161c
  *(.vectors)
  .vectors       0x00000000       0x68 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328.o
                 0x00000000                __vectors
@@ -470,33 +470,33 @@ LOAD f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x0000116e       0xf0 out/relay.o
                 0x0000116e                __vector_2
  .text.heater_init
-                0x0000125e        0x6 out/heater.o
+                0x0000125e       0x12 out/heater.o
                 0x0000125e                heater_init
  .text.sendHeaterStatusPkg
-                0x00001264       0xfa out/heater.o
-                0x00001264                sendHeaterStatusPkg
+                0x00001270       0xfa out/heater.o
+                0x00001270                sendHeaterStatusPkg
  .text.heater_processPkg
-                0x0000135e      0x14c out/heater.o
-                0x0000135e                heater_processPkg
+                0x0000136a      0x14c out/heater.o
+                0x0000136a                heater_processPkg
  .text.heater_loop
-                0x000014aa       0x4c out/heater.o
-                0x000014aa                heater_loop
+                0x000014b6       0x4c out/heater.o
+                0x000014b6                heater_loop
  .text.avr-libc
-                0x000014f6       0x68 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ltoa.o)
-                0x000014f6                ltoa
+                0x00001502       0x68 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ltoa.o)
+                0x00001502                ltoa
  .text.avr-libc
-                0x0000155e       0x4a f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa.o)
-                0x0000155e                ultoa
+                0x0000156a       0x4a f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa.o)
+                0x0000156a                ultoa
  .text.avr-libc
-                0x000015a8       0x20 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
-                0x000015a8                strrev
- .text.libgcc   0x000015c8       0x44 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x000015c8                __udivmodsi4
-                0x0000160c                . = ALIGN (0x2)
+                0x000015b4       0x20 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                0x000015b4                strrev
+ .text.libgcc   0x000015d4       0x44 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x000015d4                __udivmodsi4
+                0x00001618                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000160c        0x0 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x0000160c                exit
-                0x0000160c                _exit
+ .fini9         0x00001618        0x0 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00001618                exit
+                0x00001618                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -515,11 +515,11 @@ LOAD f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000160c        0x4 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00001618        0x4 f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00001610                _etext = .
+                0x0000161c                _etext = .
 
-.data           0x00800100       0xfc load address 0x00001610
+.data           0x00800100      0x102 load address 0x0000161c
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100       0x21 out/main.o
@@ -535,59 +535,59 @@ LOAD f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .data.g_delayActivation
                 0x008001f8        0x2 out/relay.o
                 0x008001f8                g_delayActivation
+ .data.g_heaterLowGasThresh
+                0x008001fa        0x2 out/heater.o
+                0x008001fa                g_heaterLowGasThresh
+ .data.g_heaterMedGasThresh
+                0x008001fc        0x2 out/heater.o
+                0x008001fc                g_heaterMedGasThresh
+ .data.g_heaterHighGasThresh
+                0x008001fe        0x2 out/heater.o
+                0x008001fe                g_heaterHighGasThresh
  .data.g_heaterStatus
-                0x008001fa        0x1 out/heater.o
-                0x008001fa                g_heaterStatus
+                0x00800200        0x1 out/heater.o
+                0x00800200                g_heaterStatus
  .data.g_heaterFault
-                0x008001fb        0x1 out/heater.o
-                0x008001fb                g_heaterFault
+                0x00800201        0x1 out/heater.o
+                0x00800201                g_heaterFault
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x008001fc                . = ALIGN (0x2)
-                0x008001fc                _edata = .
-                0x008001fc                PROVIDE (__data_end, .)
+                0x00800202                . = ALIGN (0x2)
+                0x00800202                _edata = .
+                0x00800202                PROVIDE (__data_end, .)
 
-.bss            0x008001fc       0x43
-                0x008001fc                PROVIDE (__bss_start, .)
+.bss            0x00800202       0x3d
+                0x00800202                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss._intPin   0x008001fc        0x1 out/radio.o
-                0x008001fc                _intPin
- .bss.whole     0x008001fd        0x1 out/systimer.o
-                0x008001fd                whole
- .bss.fraction  0x008001fe        0x1 out/systimer.o
-                0x008001fe                fraction
+ .bss._intPin   0x00800202        0x1 out/radio.o
+                0x00800202                _intPin
+ .bss.whole     0x00800203        0x1 out/systimer.o
+                0x00800203                whole
+ .bss.fraction  0x00800204        0x1 out/systimer.o
+                0x00800204                fraction
  .bss.g_lastCrossTime
-                0x008001ff        0x4 out/relay.o
-                0x008001ff                g_lastCrossTime
+                0x00800205        0x4 out/relay.o
+                0x00800205                g_lastCrossTime
  .bss.g_lastPeriod
-                0x00800203        0x2 out/relay.o
-                0x00800203                g_lastPeriod
- .bss.g_numCrosses
-                0x00800205        0x2 out/relay.o
-                0x00800205                g_numCrosses
- .bss.g_numSwitches
-                0x00800207        0x2 out/relay.o
-                0x00800207                g_numSwitches
- .bss.g_ignoredPulses
                 0x00800209        0x2 out/relay.o
-                0x00800209                g_ignoredPulses
+                0x00800209                g_lastPeriod
+ .bss.g_numCrosses
+                0x0080020b        0x2 out/relay.o
+                0x0080020b                g_numCrosses
+ .bss.g_numSwitches
+                0x0080020d        0x2 out/relay.o
+                0x0080020d                g_numSwitches
+ .bss.g_ignoredPulses
+                0x0080020f        0x2 out/relay.o
+                0x0080020f                g_ignoredPulses
  .bss.g_relayState
-                0x0080020b        0x1 out/relay.o
-                0x0080020b                g_relayState
+                0x00800211        0x1 out/relay.o
+                0x00800211                g_relayState
  .bss.g_heaterLastGasReading
-                0x0080020c        0x2 out/heater.o
-                0x0080020c                g_heaterLastGasReading
- .bss.g_heaterLowGasThresh
-                0x0080020e        0x2 out/heater.o
-                0x0080020e                g_heaterLowGasThresh
- .bss.g_heaterMedGasThresh
-                0x00800210        0x2 out/heater.o
-                0x00800210                g_heaterMedGasThresh
- .bss.g_heaterHighGasThresh
                 0x00800212        0x2 out/heater.o
-                0x00800212                g_heaterHighGasThresh
+                0x00800212                g_heaterLastGasReading
  .bss.g_heaterPkgSequence
                 0x00800214        0x1 out/heater.o
                 0x00800214                g_heaterPkgSequence
@@ -604,8 +604,8 @@ LOAD f:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x0080021f                timerCallbacks
                 0x0080023b                g_32us
                 0x0080023f                PROVIDE (__bss_end, .)
-                0x00001610                __data_load_start = LOADADDR (.data)
-                0x0000170c                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000161c                __data_load_start = LOADADDR (.data)
+                0x0000171e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0080023f        0x0
                 0x0080023f                PROVIDE (__noinit_start, .)
