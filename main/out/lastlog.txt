@@ -1,0 +1,357 @@
+0x1 0x0 0x4 0x1 0x1 0x0 0x1 0x0 0x1 0x0 0x9 0x12
+
+
+
+
+timeout updating: 70 -> 65535
+
+Server timeout updating: 40 -> 90
+
+SDCard OK: TYPE 12
+
+
+libDHT: Detected DHT-22 compatible sensor.
+
+DEV 0x4 is DIS
+
+SPI is initialized now.
+
+== DEV STATUS: 0x20 ==
+
+Package signature is set!
+
+== DEV STATUS: 0x20 ==
+
+REGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+
+(0x 0): 0x 8 0x 6 0x20 0x20 0x 0 0x 0 0x 3 0x 1 0x 0 0x7f 0x 6 0x 0 0x 0 0x 0 0x 0 0x 0
+
+(0x10): 0x 0 0x 0 0x20 0x 0 0x 3 0x 0 0x 1 0x 0 0x 0 0x 1 0x14 0x 0 0x 2 0x3c 0x 2 0x 3
+
+(0x20): 0x68 0x 1 0x3a 0x93 0x 4 0xee 0x 0 0x1e 0x 0 0x 0 0xff 0x 0 0x18 0xbc 0x26 0x 8
+
+(0x30): 0xad 0x 0 0x c 0x22 0x 8 0x3a 0x2d 0xd4 0x 0 0x 0 0xde 0xad 0x 0 0x 0 0x 0 0xde
+
+(0x40): 0xad 0x 0 0x 0 0xff 0xff 0xff 0xff 0x 0 0x 0 0x 0 0x 0 0xff 0x 8 0x 8 0x 8 0x10
+
+(0x50): 0x 0 0x 0 0xdf 0x52 0x20 0x64 0x 0 0x 1 0x87 0x 0 0x 1 0x 0 0x e 0x 0 0x 0 0x 0
+
+(0x60): 0xa0 0x 0 0x24 0x 0 0x 0 0x82 0x42 0x1f 0x 3 0x60 0x9d 0x 0 0x 1 0x1f 0x 9 0xd5
+
+(0x70): 0x c 0x23 0x1f 0x 0 0x 0 0x53 0x 0 0x 0 0x19 0x 0 0x64 0x 3 0x37 0x 4 0x37 0x40
+
+== DEV STATUS: 0x21 ==
+
+Loading dev DEV_0, 45 bytes
+Type: TH
+TH device: 0;IndoorTemp;19.700000763;16.;26.5;0;1;1;1;
+TH device ID:0 NAME: IndoorTemp
+Add watcher ID:1
+Added device.
+Loading dev DEV_1, 26 bytes
+Type:HEATER
+HEATER device ID:1 NAME: Heater
+Add watcher ID:0
+Added device.
+System start.
+
+Reset:
+REASON_DEFAULT_RST
+
+Chip id=10502778
+
+
+Flash id=1261768
+
+
+Mem info:
+
+
+data  : 0x3ffe8000 ~ 0x3ffe85f5, len: 1525
+
+rodata: 0x3ffe8600 ~ 0x3ffeabbc, len: 9660
+
+bss   : 0x3ffeabc0 ~ 0x3fff4640, len: 39552
+
+heap  : 0x3fff4640 ~ 0x3fffc000, len: 31168
+
+Station configuration was updated to: TP-LINK_B4EB92
+
+mode : sta(18:fe:34:a0:42:7a)
+
+add if0
+
+f 0, scandone
+
+add 0
+
+aid 2
+
+pm open phy_2,type:2 0 0
+
+cnt
+
+
+
+connected with TP-LINK_B4EB92, channel 6
+
+dhcp client start...
+
+ip:192.168.0.103,mask:255.255.255.0,gw:192.168.0.1
+
+AP CONNECT
+'/' registered
+
+HTTP server STARTED 192.168.0.103
+NTP server STARTED
+UDP LocalPort: 4097
+
+UDP connect to 89.149.54.30:123
+
+UDP connect to 82.78.227.6:123
+
+rtc time init...
+
+time updated? 1
+
+IndoorTemp H:40.10(0.0) T:25.70(0.0 0.0)/26.0 SetPt:19.70 Time:4814370
+== DEV STATUS: 0x22 ==
+
+== DEV STATUS: 0x20 ==
+
+Package sent! -- 0x24
+
+== DEV STATUS: 0x21 ==
+
+Valid Preamble detected -- 0x52
+
+SYNC WORD detected -- 0x92
+
+== DEV STATUS: 0x0 ==
+
+Packet detected -- 0x26
+
+ SENT! SYNC RX (15):
+0x0
+0x1
+0x5
+0x1
+0x1
+0x0
+0x0
+0x1
+0x0
+0x1
+0x0
+0x1
+0x0
+0x0
+0xb
+
+
+Heater 1; on:1 fault:0 last:0
+Heater 1 THRESHOLDS differ!
+IndoorTemp H:41.60(0.0) T:25.60(0.0 0.0)/26.0 SetPt:19.70 Time:8964091
+IndoorTemp H:41.40(0.0) T:25.60(0.0 0.0)/26.0 SetPt:19.70 Time:12976104
+IndoorTemp H:41.30(0.0) T:25.50(0.0 0.0)/26.0 SetPt:19.70 Time:16988687
+IndoorTemp H:41.20(0.0) T:25.50(0.0 0.0)/26.0 SetPt:19.70 Time:21001155
+IndoorTemp H:41.10(0.0) T:25.50(0.0 0.0)/26.0 SetPt:19.70 Time:25013716
+IndoorTemp H:41.00(0.0) T:25.50(0.0 0.0)/26.0 SetPt:19.70 Time:29026212
+IndoorTemp H:41.00(0.0) T:25.40(0.0 0.0)/25.9 SetPt:19.70 Time:33038649
+IndoorTemp H:41.00(0.0) T:25.40(0.0 0.0)/25.9 SetPt:19.70 Time:37051066
+IndoorTemp H:41.10(0.0) T:25.40(0.0 0.0)/25.9 SetPt:19.70 Time:41063531
+IndoorTemp H:41.20(0.0) T:25.40(0.0 0.0)/25.9 SetPt:19.70 Time:45076002
+IndoorTemp H:41.20(0.0) T:25.30(0.0 0.0)/25.9 SetPt:19.70 Time:49088436
+IndoorTemp H:41.30(0.0) T:25.30(0.0 0.0)/25.9 SetPt:19.70 Time:53100967
+IndoorTemp H:41.40(0.0) T:25.30(0.0 0.0)/25.9 SetPt:19.70 Time:57113436
+10.12.2015 00:48:02 Heap: 25656
+IndoorTemp H:41.40(0.0) T:25.30(0.0 0.0)/25.9 SetPt:19.70 Time:61125909
+IndoorTemp H:41.40(41.1) T:25.30(25.4 0.0)/25.9 SetPt:19.70 Time:65138398
+IndoorTemp H:41.50(41.2) T:25.30(25.4 0.0)/25.9 SetPt:19.70 Time:69151180
+IndoorTemp H:41.50(41.2) T:25.30(25.3 0.0)/25.9 SetPt:19.70 Time:73163972
+IndoorTemp H:41.50(41.2) T:25.30(25.3 0.0)/25.9 SetPt:19.70 Time:77176733
+IndoorTemp H:41.50(41.2) T:25.30(25.3 0.0)/25.9 SetPt:19.70 Time:81189491
+IndoorTemp H:41.50(41.2) T:25.30(25.3 0.0)/25.9 SetPt:19.70 Time:85202247
+IndoorTemp H:41.70(41.3) T:25.20(25.3 0.0)/25.8 SetPt:19.70 Time:89214817
+IndoorTemp H:41.80(41.3) T:25.20(25.3 0.0)/25.8 SetPt:19.70 Time:93227449
+IndoorTemp H:41.80(41.4) T:25.20(25.3 0.0)/25.8 SetPt:19.70 Time:97240078
+IndoorTemp H:41.70(41.4) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:101252650
+IndoorTemp H:41.60(41.5) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:105265258
+IndoorTemp H:41.60(41.5) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:109277867
+IndoorTemp H:41.60(41.5) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:113290487
+IndoorTemp H:41.60(41.5) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:117303099
+10.12.2015 00:49:02 Heap: 25656
+IndoorTemp H:42.00(41.6) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:121315664
+IndoorTemp H:42.00(41.6) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:125328234
+IndoorTemp H:42.10(41.6) T:25.10(25.2 0.0)/25.8 SetPt:19.70 Time:129340888
+IndoorTemp H:42.00(41.7) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:133353440
+IndoorTemp H:42.00(41.7) T:25.10(25.2 0.0)/25.8 SetPt:19.70 Time:137365984
+IndoorTemp H:42.00(41.7) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:141378535
+IndoorTemp H:42.00(41.8) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:145391081
+IndoorTemp H:41.90(41.8) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:149403870
+IndoorTemp H:41.80(41.8) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:153416591
+IndoorTemp H:41.80(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:157429292
+IndoorTemp H:41.70(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:161441943
+IndoorTemp H:41.70(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:165454577
+IndoorTemp H:41.70(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:169467233
+IndoorTemp H:41.70(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:173479892
+IndoorTemp H:41.70(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:177492566
+10.12.2015 00:50:03 Heap: 25656
+IndoorTemp H:41.80(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:181505274
+IndoorTemp H:41.80(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:185517993
+IndoorTemp H:41.90(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:189530561
+IndoorTemp H:41.80(41.8) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:193543267
+IndoorTemp H:41.70(41.8) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:197555988
+IndoorTemp H:41.60(41.7) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:201568600
+IndoorTemp H:41.60(41.7) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:205581211
+IndoorTemp H:41.60(41.7) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:209593820
+IndoorTemp H:41.60(41.7) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:213606443
+IndoorTemp H:41.70(41.7) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:217619179
+IndoorTemp H:41.70(41.7) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:221631841
+IndoorTemp H:41.70(41.7) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:225644509
+IndoorTemp H:41.70(41.7) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:229657171
+IndoorTemp H:41.70(41.7) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:233669838
+IndoorTemp H:41.60(41.7) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:237682486
+10.12.2015 00:51:03 Heap: 25656
+IndoorTemp H:41.60(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:241695113
+IndoorTemp H:41.60(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:245707738
+IndoorTemp H:41.50(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:249720495
+IndoorTemp H:41.60(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:253733079
+IndoorTemp H:41.50(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:257745840
+IndoorTemp H:41.50(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:261758626
+IndoorTemp H:41.60(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:265771233
+IndoorTemp H:41.60(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:269783856
+IndoorTemp H:41.60(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:273796458
+IndoorTemp H:41.60(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:277809059
+IndoorTemp H:41.60(41.6) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:281821673
+IndoorTemp H:41.60(41.6) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:285834276
+IndoorTemp H:41.60(41.5) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:289846906
+IndoorTemp H:41.60(41.5) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:293859516
+IndoorTemp H:41.70(41.5) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:297872225
+10.12.2015 00:52:03 Heap: 25656
+IndoorTemp H:41.70(41.5) T:25.00(25.1 0.0)/25.7 SetPt:19.70 Time:301884874
+IndoorTemp H:41.70(41.6) T:25.00(25.1 0.0)/25.7 SetPt:19.70 Time:305897482
+IndoorTemp H:41.70(41.6) T:25.00(25.1 0.0)/25.7 SetPt:19.70 Time:309910083
+IndoorTemp H:41.80(41.6) T:25.00(25.1 0.0)/25.7 SetPt:19.70 Time:313922758
+IndoorTemp H:41.80(41.6) T:25.00(25.1 0.0)/25.7 SetPt:19.70 Time:317935418
+IndoorTemp H:41.80(41.6) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:321948092
+IndoorTemp H:41.80(41.6) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:325960769
+onAccept state: 0 K=0
+
+Free heap size=24520, K=0
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient  192.168.0.104, activeClients = 1
+
+
+
+onAccept state: 0 K=1
+
+Free heap size=24264, K=1
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient  192.168.0.104, activeClients = 2
+
+
+
+onAccept state: 0 K=2
+
+Free heap size=24056, K=2
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient  192.168.0.104, activeClients = 3
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Key === JB3UzLxK3lptA8nbMAKIUA==
+
+Sec-WebSocket-Version === 13
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Key === qyBtJeQIfPHgN4CGPtZoQQ==
+
+Sec-WebSocket-Version === 13
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Key === 5X7zOaik0iiGIH3IXnqeRg==
+
+Sec-WebSocket-Version === 13
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+IndoorTemp H:41.80(41.6) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:329973504
+IndoorTemp H:41.80(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:333986254
+IndoorTemp H:41.80(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:337998910
+IndoorTemp H:41.80(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:342011590
+IndoorTemp H:41.70(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:346024222
+IndoorTemp H:41.70(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:350036831
+IndoorTemp H:41.70(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:354049445
+IndoorTemp H:41.70(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:358062036
+10.12.2015 00:53:03 Heap: 20480
+IndoorTemp H:41.80(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:362074704
+IndoorTemp H:41.80(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:366087409
+IndoorTemp H:41.80(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:370100073
+IndoorTemp H:41.80(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:374112734
+IndoorTemp H:41.90(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:378125446
+IndoorTemp H:41.90(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:382138163
+IndoorTemp H:41.80(41.7) T:24.90(24.9 0.0)/25.7 SetPt:19.70 Time:386150790
+IndoorTemp H:41.80(41.7) T:25.00(24.9 0.0)/25.7 SetPt:19.70 Time:390163461
+IndoorTemp H:41.70(41.7) T:25.00(24.9 0.0)/25.7 SetPt:19.70 Time:394176079
+IndoorTemp H:41.70(41.7) T:24.90(24.9 0.0)/25.7 SetPt:19.70 Time:398188766
+IndoorTemp H:41.70(41.7) T:24.90(24.9 0.0)/25.7 SetPt:19.70 Time:402201434
+IndoorTemp H:41.60(41.7) T:24.90(24.9 0.0)/25.7 SetPt:19.70 Time:406214018
+IndoorTemp H:41.60(41.7) T:24.90(24.9 0.0)/25.7 SetPt:19.70 Time:410226590
+IndoorTemp H:41.60(41.7) T:24.90(24.9 0.0)/25.7 SetPt:19.70 Time:414239173

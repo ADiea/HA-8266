@@ -89,21 +89,34 @@ void sendHeaterStatusPkg(uint8_t seq)
 void heater_processPkg(uint8_t* pkg, uint8_t len)
 {
 	uint8_t seq;
+	uint8_t err = 0;
 	do
 	{
 		if(len != PKG_HEATER_LEN)
+		{
+			err = 1;
 			break;
+		}
 
 		if(pkg[0] != MY_ID)
+		{
+			err = 2;
 			break;
+		}
 			
-		if(pkg[1] != PKG_TYPE_HEATER)
+		if(pkg[2] != PKG_TYPE_HEATER)
+		{
+			err = 3;
 			break;
+		}
 		
 		if(((pkg[0] + pkg[1] + pkg[2] + pkg[3] + pkg[4] + 
 			 pkg[5] + pkg[6] + pkg[7] + pkg[8] + pkg[9] + 
 			 pkg[0xA]  ) & 0xFF ) != pkg[0xB])
+		{
+			err = 4;		
 			break;
+		}
 
 		seq = pkg[0xa];
 		
@@ -142,5 +155,10 @@ void heater_processPkg(uint8_t* pkg, uint8_t len)
 		sendHeaterStatusPkg(seq);
 
 	} while(0);
+	
+	if(err != 0)
+	{
+		debugf("RX HEAT ERR: %u\r\n", err);
+	}
 }
 
