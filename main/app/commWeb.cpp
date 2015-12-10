@@ -91,7 +91,7 @@ bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
 	CDeviceTempHumid *th;
 
 	int thID;
-	float setTemp;
+	float setTemp, minTemp, maxTemp;
 
 	char devName[MAX_FRIENDLY_NAME];
 
@@ -112,9 +112,14 @@ bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
 				th = (CDeviceTempHumid*)g_activeDevices[i];
 
 				if(th && skipFloat(pkt, &setTemp) &&
-						skipString(pkt, (char*)devName, MAX_FRIENDLY_NAME))
+						skipString(pkt, (char*)devName, MAX_FRIENDLY_NAME) &&
+						skipFloat(pkt, &minTemp) &&
+						skipFloat(pkt, &maxTemp) )
 				{
 					th->m_state.tempSetpoint = setTemp;
+					th->m_state.tempSetpointMin = minTemp;
+					th->m_state.tempSetpointMax = maxTemp;
+
 					th->m_FriendlyName = devName;
 					deviceWriteToDisk((CGenericDevice*)th);
 				}
