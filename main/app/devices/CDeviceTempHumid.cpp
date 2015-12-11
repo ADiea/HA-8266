@@ -51,7 +51,7 @@ void CDeviceTempHumid::requestUpdateState()
 {
 	uint8_t errValue;
 
-	float currentTemperature;
+	float fTurnOnTemp, fTurnOffTemp;
 	int i;
 	if(locLocal == m_location)
 	{
@@ -75,36 +75,42 @@ void CDeviceTempHumid::requestUpdateState()
 			devDHT22_comfortRatio();
 			LOG_I( "\n");*/
 
-			currentTemperature = m_state.fLastTemp_8m;
-			if(-0.1 < currentTemperature || currentTemperature < 0.1)
-				currentTemperature = m_state.fLastTemp_8m;
-			if(-0.1 < currentTemperature || currentTemperature < 0.1)
-				currentTemperature = m_state.lastTH.temp;
 
-			if(m_state.tempSetpoint > m_tempThreshold + currentTemperature)
+			fTurnOnTemp = m_state.fLastTemp_8m;
+
+			if(fTurnOnTemp < m_tempThreshold)
+				fTurnOnTemp = m_state.fLastTemp_1m;
+
+			if(fTurnOnTemp < m_tempThreshold)
+					fTurnOnTemp = m_state.lastTH.temp;
+
+			fTurnOffTemp = m_state.fLastTemp_1m;
+
+			if(fTurnOffTemp < m_tempThreshold)
+					fTurnOffTemp = m_state.lastTH.temp;
+
+
+			if(m_state.tempSetpoint > m_tempThreshold + fTurnOnTemp)
+
 			{
 				m_state.bNeedHeating = true;
 				m_state.bNeedCooling = false;
 			}
-			else if(m_state.tempSetpoint < currentTemperature - m_tempThreshold)
+			else if(m_state.tempSetpoint < fTurnOffTemp - m_tempThreshold)
 			{
 				m_state.bNeedHeating = false;
 				m_state.bNeedCooling = true;
 			}
 
-		//	if(m_state.bNeedHeating && m_state.bEnabled)
-		//	{
-				for(i=0; i < m_devWatchersList.count(); i++)
+			for(i=0; i < m_devWatchersList.count(); i++)
+			{
+				CDeviceHeater* genDevice = (CDeviceHeater*)getDevice(m_devWatchersList[i]);
+
+				if(genDevice)
 				{
-					CDeviceHeater* genDevice = (CDeviceHeater*)getDevice(m_devWatchersList[i]);
-
-					if(genDevice)
-					{
-						genDevice->triggerState(0, NULL);
-					}
+					genDevice->triggerState(0, NULL);
 				}
-		//	}
-
+			}
 		}
 		else
 		{

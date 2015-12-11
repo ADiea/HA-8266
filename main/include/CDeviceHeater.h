@@ -27,7 +27,7 @@ struct tHeaterState
 		gasLevel_LowWarningThres(lowWarn),
 		gasLevel_MedWarningThres(medWarn),
 		gasLevel_HighWarningThres(highWarn),
-		isOn(false), isFault(false), lastFault(HEATER_FAULT_NONE)
+		isOn(false), isFault(false), isStateSyncWithHardware(false), lastFault(HEATER_FAULT_NONE)
 	{}
 
 	tHeaterState()
@@ -40,7 +40,7 @@ struct tHeaterState
 
 	byte lastFault;
 
-	bool isOn, isFault;
+	bool isOn, isFault, isStateSyncWithHardware;
 
 
 };

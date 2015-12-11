@@ -48,7 +48,7 @@ void CDeviceHeater::triggerState(int reason, void* state)
 		}
 	}
 
-	if(doSendPkg)
+	if(doSendPkg || !m_state.isStateSyncWithHardware)
 	{
 		LOG_I("HEATER(%d) REQ: %s", m_ID, (pkg[3]==HEATER_REQ_OFF)?"OFF":"ON");
 
@@ -67,7 +67,7 @@ void CDeviceHeater::triggerState(int reason, void* state)
 
 		pkg[0xa] = seq;
 		pkg[0xb] = pkg[0] + pkg[1] + pkg[2] + pkg[3] + pkg[4] + pkg[5] +
-		pkg[6] + pkg[7] + pkg[8] + pkg[9] + pkg[0xa];
+					pkg[6] + pkg[7] + pkg[8] + pkg[9] + pkg[0xa];
 
 		if(RadioSend(pkg, PKG_HEATER_LEN, &outLength, 20))
 		{
@@ -146,6 +146,8 @@ bool CDeviceHeater::radioPktReceivedFromDevice(char* pkg, uint16_t pktLen)
 		{
 			LOG_E("Heater %d THRESHOLDS differ!", m_ID);
 		}
+
+		m_state.isStateSyncWithHardware = true;
 	}
 }
 

@@ -39,7 +39,7 @@ struct FilterMovingAve
 
 enum eSensorLocation
 {
-	locLocal,
+	locLocal = 0,
 	locRemote
 };
 
