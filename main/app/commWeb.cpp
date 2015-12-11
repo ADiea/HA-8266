@@ -65,16 +65,17 @@ bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 		{
 			th = (CDeviceTempHumid*)g_activeDevices[i];
 			sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
-							"%d;%s;%.1f;%.1f;%d;%d;%d;%d;%.1f;%.1f;%.1f;", th->m_ID,
+							"%d;%s;%.1f;%.1f;%d;%d;%d;%d;%.1f;%.1f;%.1f;%.1f;%.1f;", th->m_ID,
 							th->m_FriendlyName.c_str(),
 							th->m_state.tempSetpoint, th->m_state.lastTH.temp, 1, th->m_state.bEnabled, th->m_state.bIsHeating, th->m_state.bIsCooling,
-							th->m_state.tempSetpointMin, th->m_state.tempSetpointMax, th->m_state.lastTH.humid);
+							th->m_state.tempSetpointMin, th->m_state.tempSetpointMax, th->m_state.lastTH.humid,
+							th->m_state.fLastTemp_1m, th->m_state.fLastTemp_8m);
 		}
 		else if(devTypeHeater == devType && devTypeHeater == g_activeDevices[i]->m_deviceType)
 		{
 			heat = (CDeviceHeater*)g_activeDevices[i];
 			sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
-							"%d;%s;%d;%d;%d;%d%d;%d;%d;", heat->m_ID,
+							"%d;%s;%d;%d;%d;%d;%d;%d;%d;", heat->m_ID,
 							heat->m_FriendlyName.c_str(),
 							heat->m_state.isOn?1:0, heat->m_state.isFault?1:0, heat->m_state.gasLevel_lastReading,
 							heat->m_state.gasLevel_LowWarningThres , heat->m_state.gasLevel_MedWarningThres ,

@@ -1,7 +1,7794 @@
-0x1 0x0 0x4 0x1 0x1 0x0 0x1 0x0 0x1 0x0 0x9 0x12
+scandone
+
+state: 0 -> 2 (b0)
+
+state: 2 -> 3 (0)
+
+state: 3 -> 5 (10)
+
+add 0
+
+aid 2
+
+cnt
 
 
 
+connected with TP-LINK_B4EB92, channel 6
+
+dhcp client start...
+
+ip:192.168.0.103,mask:255.255.255.0,gw:192.168.0.1
+
+AP CONNECT
+'/' registered
+
+HTTP server STARTED 192.168.0.103
+NTP server STARTED
+UDP LocalPort: 4097
+
+UDP connect to 78.96.7.8:123
+
+rtc time init...
+
+time updated? 1
+
+UDP connect to 82.78.227.6:123
+
+time updated? 1
+
+Dormitor H:41.10(0.0) T:24.00(0.0 0.0)/25.3 SetPt:14.20 Time:33173189
+Dormitor H:41.10(0.0) T:24.00(0.0 0.0)/25.3 SetPt:14.20 Time:37185462
+Dormitor H:41.00(0.0) T:24.00(0.0 0.0)/25.3 SetPt:14.20 Time:41197577
+pm open,type:2 0
+
+Dormitor H:41.10(0.0) T:24.00(0.0 0.0)/25.3 SetPt:14.20 Time:45209740
+Dormitor H:41.20(0.0) T:24.00(0.0 0.0)/25.3 SetPt:14.20 Time:49222042
+Dormitor H:41.30(0.0) T:24.00(0.0 0.0)/25.3 SetPt:14.20 Time:53234348
+Valid Preamble detected -- 0x52
+
+Dormitor H:41.20(0.0) T:24.00(0.0 0.0)/25.3 SetPt:14.20 Time:57246668
+Dormitor H:41.30(0.0) T:24.00(0.0 0.0)/25.3 SetPt:14.20 Time:61258998
+Dormitor H:41.30(0.0) T:24.00(0.0 0.0)/25.3 SetPt:14.20 Time:65271330
+Dormitor H:41.20(0.0) T:24.00(0.0 0.0)/25.3 SetPt:14.20 Time:69283613
+Dormitor H:41.30(0.0) T:24.00(0.0 0.0)/25.3 SetPt:14.20 Time:73295940
+Dormitor H:41.30(0.0) T:24.00(0.0 0.0)/25.3 SetPt:14.20 Time:77308289
+Dormitor H:41.40(0.0) T:24.00(0.0 0.0)/25.3 SetPt:14.20 Time:81320662
+Dormitor H:41.40(0.0) T:24.00(0.0 0.0)/25.3 SetPt:14.20 Time:85333049
+11.12.2015 00:46:54 Heap: 38328
+Dormitor H:41.30(0.0) T:24.00(0.0 0.0)/25.3 SetPt:14.20 Time:89345391
+Dormitor H:41.30(41.2) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:93357764
+Dormitor H:41.30(41.2) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:97370336
+Dormitor H:41.30(41.2) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:101382866
+Dormitor H:41.30(41.2) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:105395481
+Dormitor H:41.30(41.2) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:109408098
+Dormitor H:41.30(41.3) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:113420716
+Dormitor H:41.40(41.3) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:117433421
+Dormitor H:41.40(41.3) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:121446090
+Dormitor H:41.30(41.3) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:125458716
+Dormitor H:41.20(41.3) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:129471290
+Dormitor H:41.10(41.3) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:133483866
+Dormitor H:41.10(41.2) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:137496438
+Dormitor H:41.00(41.2) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:141509056
+Dormitor H:41.00(41.2) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:145521608
+11.12.2015 00:47:54 Heap: 38328
+Dormitor H:41.00(41.2) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:149534189
+Dormitor H:41.00(41.2) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:153546791
+Dormitor H:41.00(41.1) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:157559359
+Dormitor H:41.10(41.1) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:161571967
+Dormitor H:41.00(41.1) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:165584539
+Dormitor H:41.00(41.1) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:169597105
+Dormitor H:41.00(41.1) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:173609679
+Dormitor H:41.00(41.1) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:177622255
+Dormitor H:41.00(41.0) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:181634865
+Dormitor H:41.10(41.0) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:185647529
+Dormitor H:41.00(41.0) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:189660104
+Dormitor H:40.90(41.0) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:193672631
+Dormitor H:40.90(41.0) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:197685154
+Dormitor H:40.90(40.9) T:24.00(24.0 0.0)/25.3 SetPt:14.20 Time:201697723
+onAccept state: 0 K=0
+
+Free heap size=37960, K=0
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === mugZ2JFBlKzt6VkVF5g8nA==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+TCP sent: 152
+
+onReadyToSendData: 2
+
+TCP received: (null)
+
+WS remove connection item
+
+WS Close
+
+TCP connection closing
+
+-TCP connection
+
+~TCP connection
+
+onAccept state: 0 K=0
+
+Free heap size=37960, K=0
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+onAccept state: 0 K=1
+
+Free heap size=37464, K=1
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === G+OjIk12S2V7M/a1PU2WXQ==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+onAccept state: 0 K=2
+
+Free heap size=34512, K=2
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === Ar0+ysV+4twYefodZdJiaQ==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+TCP sent: 175
+
+onReadyToSendData: 2
+
+onAccept state: 0 K=3
+
+Free heap size=33216, K=3
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+onAccept state: 0 K=4
+
+Free heap size=32712, K=4
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === TYr+uHAMNLLVGBfaEc7M7Q==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+TCP sent: 175
+
+onReadyToSendData: 2
+
+TCP sent: 23
+
+onReadyToSendData: 2
+
+TCP sent: 152
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:205710377
+11.12.2015 00:48:55 Heap: 33328
+Dormitor H:41.00(40.9) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:209722977
+TCP received: (null)
+
+TCP connection closing
+
+-TCP connection
+
+~TCP connection
+
+TCP received: (null)
+
+TCP connection closing
+
+-TCP connection
+
+~TCP connection
+
+Dormitor H:41.00(40.9) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:213735574
+onAccept state: 0 K=3
+
+Free heap size=33960, K=3
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+onAccept state: 0 K=4
+
+Free heap size=33432, K=4
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+Dormitor H:41.00(40.9) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:217748195
+TCP received: (null)
+
+TCP connection closing
+
+-TCP connection
+
+~TCP connection
+
+Dormitor H:41.10(41.0) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:221760924
+Dormitor H:41.00(40.9) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:225773553
+onAccept state: 0 K=4
+
+Free heap size=33432, K=4
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === BQ0c7wAcfTow28TQmEUzHg==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+TCP sent: 23
+
+onReadyToSendData: 2
+
+TCP sent: 23
+
+onReadyToSendData: 2
+
+TCP sent: 23
+
+onReadyToSendData: 2
+
+TCP sent: 152
+
+onReadyToSendData: 2
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === aIrKjMYYAcUVDD8YIHL4SQ==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+TCP sent: 152
+
+onReadyToSendData: 2
+
+TCP received: (null)
+
+WS remove connection item
+
+WS Close
+
+TCP connection closing
+
+-TCP connection
+
+~TCP connection
+
+TCP sent: 56
+
+onReadyToSendData: 2
+
+TCP sent: 56
+
+onReadyToSendData: 2
+
+TCP sent: 56
+
+onReadyToSendData: 2
+
+TCP sent: 56
+
+onReadyToSendData: 2
+
+onAccept state: 0 K=4
+
+Free heap size=32568, K=4
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === 6muEobQ0ST1FxC2eOVbQCg==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+TCP sent: 23
+
+onReadyToSendData: 2
+
+TCP sent: 23
+
+onReadyToSendData: 2
+
+TCP sent: 23
+
+onReadyToSendData: 2
+
+TCP sent: 23
+
+onReadyToSendData: 2
+
+TCP sent: 152
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:229786192
+Dormitor H:40.80(40.9) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:233798785
+Dormitor H:40.80(40.9) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:237811365
+Dormitor H:40.80(40.9) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:241823929
+Dormitor H:41.00(40.9) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:245836562
+Dormitor H:41.10(40.9) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:249849247
+Dormitor H:41.10(40.9) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:253861969
+Dormitor H:41.00(40.9) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:257874603
+Dormitor H:40.80(40.9) T:24.10(24.0 0.0)/25.4 SetPt:14.20 Time:261887160
+Dormitor H:40.80(40.9) T:24.10(24.1 0.0)/25.4 SetPt:14.20 Time:265899713
+11.12.2015 00:49:55 Heap: 31560
+Dormitor H:40.70(40.9) T:24.10(24.1 0.0)/25.4 SetPt:14.20 Time:269912372
+Dormitor H:40.70(40.9) T:24.10(24.1 0.0)/25.4 SetPt:14.20 Time:273925055
+Dormitor H:40.70(40.9) T:24.10(24.1 0.0)/25.4 SetPt:14.20 Time:277937712
+Dormitor H:40.80(40.8) T:24.10(24.1 0.0)/25.4 SetPt:14.20 Time:281950260
+Dormitor H:40.80(40.8) T:24.10(24.1 0.0)/25.4 SetPt:14.20 Time:285962825
+Dormitor H:40.80(40.8) T:24.10(24.1 0.0)/25.4 SetPt:14.20 Time:289975360
+Dormitor H:40.80(40.8) T:24.20(24.1 0.0)/25.4 SetPt:14.20 Time:293987938
+Dormitor H:40.80(40.8) T:24.20(24.1 0.0)/25.4 SetPt:14.20 Time:298000546
+Dormitor H:40.80(40.8) T:24.10(24.1 0.0)/25.4 SetPt:14.20 Time:302013362
+WS remove connection item
+
+WS Close
+
+TCP connection closing
+
+TCP received: 8 bytes
+
+~TCP connection
+
+-TCP connection
+
+WS remove connection item
+
+WS Close
+
+TCP connection closing
+
+TCP received: 8 bytes
+
+~TCP connection
+
+WS remove connection item
+
+WS Close
+
+TCP connection closing
+
+TCP received: 8 bytes
+
+~TCP connection
+
+WS remove connection item
+
+WS Close
+
+TCP connection closing
+
+TCP received: 8 bytes
+
+~TCP connection
+
+WS remove connection item
+
+WS Close
+
+TCP connection closing
+
+TCP received: 8 bytes
+
+~TCP connection
+
+-TCP connection
+
+-TCP connection
+
+-TCP connection
+
+-TCP connection
+
+Dormitor H:40.80(40.8) T:24.10(24.1 0.0)/25.4 SetPt:14.20 Time:306025940
+onAccept state: 0 K=0
+
+Free heap size=37032, K=0
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === yIsit6uPfsCq2HgnPqOdEQ==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+TCP sent: 152
+
+onReadyToSendData: 2
+
+onAccept state: 0 K=1
+
+Free heap size=35720, K=1
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === W0B46US/w0fAEVnHCSJDJA==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+onAccept state: 0 K=2
+
+Free heap size=31128, K=2
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === 2SIEqUSkbGgVryCreeJiuA==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+TCP sent: 46
+
+onReadyToSendData: 2
+
+TCP sent: 175
+
+onReadyToSendData: 2
+
+TCP sent: 152
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.8) T:24.10(24.1 0.0)/25.4 SetPt:14.20 Time:310038547
+Dormitor H:40.90(40.8) T:24.20(24.1 0.0)/25.4 SetPt:14.20 Time:314051193
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.8) T:24.10(24.1 0.0)/25.4 SetPt:14.20 Time:318063740
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.20 Time:322076376
+Dormitor H:40.70(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.20 Time:326089038
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+11.12.2015 00:50:54 Heap: 33384
+Dormitor H:40.80(40.7) T:24.10(24.1 0.0)/25.4 SetPt:14.20 Time:330101632
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.20 Time:334114274
+WS: 7;0;14.1;Dormitor;13.0;28.0;
+
+WS RX:7;0;14.1;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 67
+
+onReadyToSendData: 2
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:338126919
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.8) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:342139547
+Dormitor H:40.70(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:346152216
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:350164861
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:354177539
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:358190219
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:362202902
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:366215540
+Dormitor H:40.70(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:370228146
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:374240766
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 61
+
+onReadyToSendData: 2
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:378253441
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:382266131
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:386278675
+11.12.2015 00:51:54 Heap: 33384
+Dormitor H:40.50(40.7) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:390291188
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.7) T:24.20(24.2 0.0)/25.4 SetPt:14.10 Time:394303779
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.40(40.6) T:24.20(24.2 0.0)/25.4 SetPt:14.10 Time:398316406
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.40(40.6) T:24.20(24.2 0.0)/25.4 SetPt:14.10 Time:402329043
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+Dormitor H:40.50(40.6) T:24.20(24.2 0.0)/25.4 SetPt:14.10 Time:406341637
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.6) T:24.10(24.1 0.0)/25.3 SetPt:14.10 Time:410354193
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.6) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:414366784
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:418379369
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.10 Time:422391987
+WS: 7;0;14.0;Dormitor;13.0;28.0;
+
+WS RX:7;0;14.0;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 67
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.5) T:24.10(24.1 0.0)/25.3 SetPt:14.00 Time:426404656
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.00 Time:430417165
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.00 Time:434429762
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.00 Time:438442339
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+Dormitor H:40.60(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.00 Time:442454970
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.00 Time:446467605
+11.12.2015 00:52:55 Heap: 34304
+Dormitor H:40.60(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.00 Time:450480150
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.00 Time:454492760
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.00 Time:458505418
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.00 Time:462518097
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.00 Time:466530781
+Dormitor H:40.70(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.00 Time:470543449
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+WS remove connection item
+
+WS Close
+
+TCP connection closing
+
+TCP received: 8 bytes
+
+~TCP connection
+
+WS remove connection item
+
+WS Close
+
+TCP connection closing
+
+TCP received: 8 bytes
+
+~TCP connection
+
+WS remove connection item
+
+WS Close
+
+TCP connection closing
+
+TCP received: 8 bytes
+
+~TCP connection
+
+-TCP connection
+
+-TCP connection
+
+-TCP connection
+
+Dormitor H:40.60(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.00 Time:474556099
+onAccept state: 0 K=0
+
+Free heap size=37384, K=0
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === UK1Hf1+WNP7v6VEmOhYOVQ==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+onAccept state: 0 K=1
+
+Free heap size=34424, K=1
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === mil15mN5B6Bi3tutw77iPA==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+TCP sent: 175
+
+onReadyToSendData: 2
+
+onAccept state: 0 K=2
+
+Free heap size=33112, K=2
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === sYj+dQ9j2GMtKJpxjSQetA==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+TCP sent: 175
+
+onReadyToSendData: 2
+
+TCP sent: 23
+
+onReadyToSendData: 2
+
+TCP sent: 152
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.00 Time:478568715
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.00 Time:482581316
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.5) T:24.20(24.1 0.0)/25.4 SetPt:14.00 Time:486593906
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+Dormitor H:40.50(40.5) T:24.20(24.2 0.0)/25.4 SetPt:14.00 Time:490611038
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.2 0.0)/25.4 SetPt:14.00 Time:494623552
+WS: 7;0;15.0;Dormitor;13.0;28.0;
+
+WS RX:7;0;15.0;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 67
+
+onReadyToSendData: 2
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.2 0.0)/25.4 SetPt:15.00 Time:498636191
+WS: 7;0;18.0;Dormitor;13.0;28.0;
+
+WS RX:7;0;18.0;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 67
+
+onReadyToSendData: 2
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.40(40.5) T:24.20(24.2 0.0)/25.4 SetPt:18.00 Time:502648818
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.30(40.5) T:24.10(24.1 0.0)/25.3 SetPt:18.00 Time:506661443
+11.12.2015 00:53:55 Heap: 33736
+WS: 7;0;21.0;Dormitor;13.0;28.0;
+
+WS RX:7;0;21.0;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 67
+
+onReadyToSendData: 2
+
+Dormitor H:40.30(40.5) T:24.20(24.1 0.0)/25.4 SetPt:21.00 Time:510674075
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.5) T:24.20(24.1 0.0)/25.4 SetPt:21.00 Time:514686599
+WS: 7;0;24.5;Dormitor;13.0;28.0;
+
+WS RX:7;0;24.5;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 67
+
+onReadyToSendData: 2
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.10(24.1 0.0)/25.3 SetPt:24.50 Time:518699202
+HEATER(1) REQ: ON
+== DEV STATUS: 0x22 ==
+
+== DEV STATUS: 0x20 ==
+
+Package sent! -- 0x24
+
+== DEV STATUS: 0x21 ==
+
+Valid Preamble detected -- 0x52
+
+SYNC WORD detected -- 0x92
+
+== DEV STATUS: 0x0 ==
+
+Packet detected -- 0x26
+
+ SENT! SYNC RX (15):
+0x0
+0x1
+0x5
+0x1
+0x1
+0x0
+0x0
+0x1
+0x0
+0x1
+0x0
+0x1
+0x0
+0x79
+0x84
+
+
+Heater 1; on:1 fault:0 last:0
+Heater 1 THRESHOLDS differ!
+WS: 7;0;25.0;Dormitor;13.0;28.0;
+
+WS RX:7;0;25.0;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 67
+
+onReadyToSendData: 2
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.1 0.0)/25.4 SetPt:25.00 Time:522870988
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.1 0.0)/25.4 SetPt:25.00 Time:526883619
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.5) T:24.20(24.1 0.0)/25.4 SetPt:25.00 Time:530896562
+Dormitor H:40.70(40.5) T:24.20(24.1 0.0)/25.4 SetPt:25.00 Time:534909227
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 97
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.5) T:24.10(24.1 0.0)/25.4 SetPt:25.00 Time:538921923
+WS: 7;0;26.0;Dormitor;13.0;28.0;
+
+WS RX:7;0;26.0;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 67
+
+onReadyToSendData: 2
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.1 24.1)/25.4 SetPt:26.00 Time:542934550
+WS: 7;0;24.0;Dormitor;13.0;28.0;
+
+WS RX:7;0;24.0;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 68
+
+onReadyToSendData: 2
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.1 24.1)/25.4 SetPt:24.00 Time:546947269
+HEATER(1) REQ: OFF
+== DEV STATUS: 0x22 ==
+
+== DEV STATUS: 0x20 ==
+
+Package sent! -- 0x26
+
+== DEV STATUS: 0x21 ==
+
+Valid Preamble detected -- 0x52
+
+SYNC WORD detected -- 0x92
+
+== DEV STATUS: 0x0 ==
+
+Packet detected -- 0x26
+
+ SENT! SYNC RX (15):
+0x0
+0x1
+0x5
+0x2
+0x1
+0x0
+0x0
+0x1
+0x0
+0x1
+0x0
+0x1
+0x0
+0x80
+0x8c
+
+
+Heater 1; on:0 fault:0 last:0
+Heater 1 THRESHOLDS differ!
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.5) T:24.20(24.1 24.1)/25.4 SetPt:24.00 Time:551125889
+Dormitor H:40.70(40.5) T:24.20(24.1 24.1)/25.4 SetPt:24.00 Time:555138651
+WS: 7;0;24.5;Dormitor;13.0;28.0;
+
+WS RX:7;0;24.5;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 68
+
+onReadyToSendData: 2
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.5) T:24.20(24.1 24.1)/25.4 SetPt:24.50 Time:559151435
+HEATER(1) REQ: ON
+== DEV STATUS: 0x22 ==
+
+== DEV STATUS: 0x20 ==
+
+Package sent! -- 0x26
+
+== DEV STATUS: 0x21 ==
+
+Valid Preamble detected -- 0x52
+
+SYNC WORD detected -- 0x92
+
+== DEV STATUS: 0x0 ==
+
+Packet detected -- 0x26
+
+ SENT! SYNC RX (15):
+0x0
+0x1
+0x5
+0x1
+0x1
+0x0
+0x0
+0x1
+0x0
+0x1
+0x0
+0x1
+0x0
+0x83
+0x8e
+
+
+Heater 1; on:1 fault:0 last:0
+Heater 1 THRESHOLDS differ!
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.1 24.1)/25.4 SetPt:24.50 Time:563324997
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.1 24.1)/25.4 SetPt:24.50 Time:567337721
+11.12.2015 00:54:55 Heap: 33736
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.6) T:24.20(24.1 24.1)/25.4 SetPt:24.50 Time:571350453
+Dormitor H:40.50(40.6) T:24.20(24.1 24.1)/25.4 SetPt:24.50 Time:575363128
+ERROR: ASSERT: wsParseInputFrame 131
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 20 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.6) T:24.20(24.1 24.1)/25.4 SetPt:24.50 Time:579375811
+WS: 7;0;24.0;Dormitor;13.0;28.0;
+
+WS RX:7;0;24.0;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 68
+
+onReadyToSendData: 2
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.6) T:24.20(24.1 24.1)/25.4 SetPt:24.00 Time:583388545
+HEATER(1) REQ: OFF
+== DEV STATUS: 0x22 ==
+
+== DEV STATUS: 0x20 ==
+
+Package sent! -- 0x26
+
+== DEV STATUS: 0x21 ==
+
+Valid Preamble detected -- 0x52
+
+SYNC WORD detected -- 0x92
+
+== DEV STATUS: 0x0 ==
+
+Packet detected -- 0x26
+
+ SENT! SYNC RX (15):
+0x0
+0x1
+0x5
+0x2
+0x1
+0x0
+0x0
+0x1
+0x0
+0x1
+0x0
+0x1
+0x0
+0x89
+0x95
+
+
+Heater 1; on:0 fault:0 last:0
+Heater 1 THRESHOLDS differ!
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.6) T:24.20(24.1 24.1)/25.4 SetPt:24.00 Time:587535082
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.6) T:24.20(24.1 24.1)/25.4 SetPt:24.00 Time:591547815
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.6) T:24.20(24.1 24.1)/25.4 SetPt:24.00 Time:595560548
+Dormitor H:40.60(40.6) T:24.20(24.1 24.1)/25.4 SetPt:24.00 Time:599573187
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.6) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:603585878
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.6) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:607598564
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:611611237
+WS: 7;0;24.5;Dormitor;13.0;28.0;
+
+WS RX:7;0;24.5;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 68
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.50 Time:615624024
+HEATER(1) REQ: ON
+== DEV STATUS: 0x22 ==
+
+== DEV STATUS: 0x20 ==
+
+Package sent! -- 0x26
+
+== DEV STATUS: 0x21 ==
+
+Valid Preamble detected -- 0x52
+
+SYNC WORD detected -- 0x92
+
+== DEV STATUS: 0x0 ==
+
+Packet detected -- 0x26
+
+ SENT! SYNC RX (15):
+0x0
+0x1
+0x5
+0x1
+0x1
+0x0
+0x0
+0x1
+0x0
+0x1
+0x0
+0x1
+0x0
+0x91
+0x9c
+
+
+Heater 1; on:1 fault:0 last:0
+Heater 1 THRESHOLDS differ!
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.50 Time:619794343
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.40(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.50 Time:623807351
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.30(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.50 Time:627820086
+11.12.2015 00:55:56 Heap: 34304
+WS: 7;0;24.0;Dormitor;13.0;28.0;
+
+WS RX:7;0;24.0;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 68
+
+onReadyToSendData: 2
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:631832769
+HEATER(1) REQ: OFF
+== DEV STATUS: 0x22 ==
+
+== DEV STATUS: 0x20 ==
+
+Package sent! -- 0x26
+
+== DEV STATUS: 0x21 ==
+
+Valid Preamble detected -- 0x52
+
+SYNC WORD detected -- 0x92
+
+== DEV STATUS: 0x0 ==
+
+Packet detected -- 0x26
+
+ SENT! SYNC RX (15):
+0x0
+0x1
+0x5
+0x2
+0x1
+0x0
+0x0
+0x1
+0x0
+0x1
+0x0
+0x1
+0x0
+0x95
+0xa1
+
+
+Heater 1; on:0 fault:0 last:0
+Heater 1 THRESHOLDS differ!
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.50(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:635997024
+UDP connect to 89.149.54.30:123
+
+time updated? 1
+
+Dormitor H:40.50(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:640009692
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:644022436
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:648035163
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:652047901
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:656060935
+Dormitor H:40.70(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:660073695
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:664086482
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:668099262
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:672111982
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:676124716
+Dormitor H:40.50(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:680137399
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:684150137
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.60(40.5) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:688162866
+11.12.2015 00:56:54 Heap: 34304
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.6) T:24.20(24.2 24.1)/25.4 SetPt:24.00 Time:692175646
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.6) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:696188431
+Dormitor H:40.90(40.6) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:700201194
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.90(40.6) T:24.20(24.1 24.1)/25.4 SetPt:24.00 Time:704213885
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.90(40.6) T:24.20(24.1 24.1)/25.4 SetPt:24.00 Time:708226628
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.7) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:712239314
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.7) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:716251954
+Dormitor H:40.80(40.7) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:720264623
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.7) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:724277270
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.7) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:728289959
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.7) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:732302640
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.90(40.7) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:736315415
+Dormitor H:40.90(40.7) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:740328172
+WS: 7;0;24.5;Dormitor;13.0;28.0;
+
+WS RX:7;0;24.5;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 68
+
+onReadyToSendData: 2
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.8) T:24.10(24.1 24.1)/25.4 SetPt:24.50 Time:744340863
+HEATER(1) REQ: ON
+== DEV STATUS: 0x22 ==
+
+== DEV STATUS: 0x20 ==
+
+Package sent! -- 0x26
+
+== DEV STATUS: 0x21 ==
+
+Valid Preamble detected -- 0x52
+
+SYNC WORD detected -- 0x92
+
+== DEV STATUS: 0x0 ==
+
+Packet detected -- 0x26
+
+ SENT! SYNC RX (15):
+0x0
+0x1
+0x5
+0x1
+0x1
+0x0
+0x0
+0x1
+0x0
+0x1
+0x0
+0x1
+0x0
+0xb1
+0xbc
+
+
+Heater 1; on:1 fault:0 last:0
+Heater 1 THRESHOLDS differ!
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:41.10(40.8) T:24.10(24.1 24.1)/25.4 SetPt:24.50 Time:748514139
+11.12.2015 00:57:54 Heap: 34304
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:41.10(40.8) T:24.10(24.1 24.1)/25.4 SetPt:24.50 Time:752526961
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.8) T:24.10(24.1 24.1)/25.4 SetPt:24.50 Time:756539709
+WS: 7;0;24.0;Dormitor;13.0;28.0;
+
+WS RX:7;0;24.0;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+Dormitor H:40.90(40.9) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:760564059
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 68
+
+onReadyToSendData: 2
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.8) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:764576653
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.8) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:768589344
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.8) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:772602130
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.8) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:776614903
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.8) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:780627692
+Dormitor H:40.70(40.8) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:784640383
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.70(40.8) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:788653143
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:40.90(40.8) T:24.10(24.1 24.1)/25.4 SetPt:24.00 Time:792665927
+WS: 7;0;23.5;Dormitor;13.0;28.0;
+
+WS RX:7;0;23.5;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 68
+
+onReadyToSendData: 2
+
+Dormitor H:40.90(40.8) T:24.10(24.1 24.1)/25.4 SetPt:23.50 Time:796678707
+HEATER(1) REQ: OFF
+== DEV STATUS: 0x22 ==
+
+== DEV STATUS: 0x20 ==
+
+Package sent! -- 0x26
+
+== DEV STATUS: 0x21 ==
+
+Valid Preamble detected -- 0x52
+
+SYNC WORD detected -- 0x92
+
+== DEV STATUS: 0x0 ==
+
+Packet detected -- 0x26
+
+ SENT! SYNC RX (15):
+0x0
+0x1
+0x5
+0x2
+0x1
+0x0
+0x0
+0x1
+0x0
+0x1
+0x0
+0x1
+0x0
+0xbe
+0xca
+
+
+Heater 1; on:0 fault:0 last:0
+Heater 1 THRESHOLDS differ!
+TCP sent: 36
+
+onReadyToSendData: 2
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.8) T:24.10(24.1 24.1)/25.4 SetPt:23.50 Time:800847698
+Dormitor H:41.10(40.8) T:24.10(24.1 24.1)/25.4 SetPt:23.50 Time:804860506
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.8) T:24.10(24.1 24.1)/25.4 SetPt:23.50 Time:808873199
+11.12.2015 00:58:54 Heap: 34304
+Dormitor H:40.90(40.8) T:24.00(24.0 24.1)/25.3 SetPt:23.50 Time:812885893
+Dormitor H:41.00(40.8) T:24.10(24.0 24.1)/25.4 SetPt:23.50 Time:816898623
+Dormitor H:41.00(40.8) T:24.10(24.0 24.1)/25.4 SetPt:23.50 Time:820911300
+Dormitor H:40.80(40.8) T:24.00(24.0 24.1)/25.3 SetPt:23.50 Time:824923890
+Dormitor H:40.80(40.8) T:24.00(24.0 24.1)/25.3 SetPt:23.50 Time:828936479
+Dormitor H:41.00(40.8) T:24.00(24.0 24.1)/25.3 SetPt:23.50 Time:832949202
+Dormitor H:41.10(40.8) T:24.00(24.0 24.1)/25.3 SetPt:23.50 Time:836961887
+Dormitor H:41.10(40.9) T:24.00(24.0 24.1)/25.3 SetPt:23.50 Time:840974578
+Dormitor H:41.10(40.9) T:24.00(24.0 24.1)/25.3 SetPt:23.50 Time:844987367
+WS: 7;0;24.0;Dormitor;13.0;28.0;
+
+WS RX:7;0;24.0;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 6
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:24.00(24.0 24.1)/25.3 SetPt:24.00 Time:849000064
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:24.00(24.0 24.1)/25.3 SetPt:24.00 Time:853012803
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:24.00(24.0 24.1)/25.3 SetPt:24.00 Time:857025543
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:24.00(24.0 24.1)/25.3 SetPt:24.00 Time:861038286
+Dormitor H:41.00(40.9) T:24.00(24.0 24.1)/25.3 SetPt:24.00 Time:865051019
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:24.00(24.0 24.1)/25.3 SetPt:24.00 Time:869063723
+11.12.2015 00:59:55 Heap: 34048
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:40.90(40.9) T:24.00(24.0 24.1)/25.3 SetPt:24.00 Time:873076412
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.90(40.9) T:24.00(24.0 24.1)/25.3 SetPt:24.00 Time:877089124
+WS: 7;0;24.5;Dormitor;13.0;28.0;
+
+WS RX:7;0;24.5;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 6
+
+onReadyToSendData: 2
+
+Dormitor H:40.90(40.9) T:24.00(24.0 24.1)/25.3 SetPt:24.50 Time:881101825
+HEATER(1) REQ: ON
+== DEV STATUS: 0x22 ==
+
+== DEV STATUS: 0x20 ==
+
+Package sent! -- 0x26
+
+== DEV STATUS: 0x21 ==
+
+Valid Preamble detected -- 0x52
+
+SYNC WORD detected -- 0x92
+
+== DEV STATUS: 0x0 ==
+
+Packet detected -- 0x26
+
+ SENT! SYNC RX (15):
+0x0
+0x1
+0x5
+0x1
+0x1
+0x0
+0x0
+0x1
+0x0
+0x1
+0x0
+0x1
+0x0
+0xd3
+0xde
+
+
+Heater 1; on:1 fault:0 last:0
+Heater 1 THRESHOLDS differ!
+Dormitor H:40.80(40.9) T:24.00(24.0 24.1)/25.3 SetPt:24.50 Time:885254293
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:40.90(40.9) T:24.00(24.0 24.1)/25.3 SetPt:24.50 Time:889266949
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.80(40.9) T:24.00(24.0 24.1)/25.3 SetPt:24.50 Time:893279563
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:40.90(40.9) T:24.00(24.0 24.1)/25.3 SetPt:24.50 Time:897292260
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.90(40.9) T:24.00(24.0 24.1)/25.3 SetPt:24.50 Time:901305225
+Dormitor H:41.00(40.9) T:24.00(24.0 24.1)/25.3 SetPt:24.50 Time:905317951
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:23.90(23.9 24.1)/25.3 SetPt:24.50 Time:909330751
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:24.00(23.9 24.1)/25.3 SetPt:24.50 Time:913343494
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 40 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:24.00(23.9 24.1)/25.3 SetPt:24.50 Time:917356236
+WS: 7;0;25.0;Dormitor;13.0;28.0;
+
+WS RX:7;0;25.0;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 6
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:24.00(23.9 24.1)/25.3 SetPt:25.00 Time:921368971
+Dormitor H:41.00(40.9) T:24.00(23.9 24.1)/25.3 SetPt:25.00 Time:925381682
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+11.12.2015 01:00:54 Heap: 34032
+Dormitor H:41.00(40.9) T:24.00(23.9 24.1)/25.3 SetPt:25.00 Time:929394374
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:24.00(23.9 24.1)/25.3 SetPt:25.00 Time:933407105
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:24.00(23.9 24.1)/25.3 SetPt:25.00 Time:937419839
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:24.00(23.9 24.1)/25.3 SetPt:25.00 Time:941432530
+Dormitor H:40.90(40.9) T:23.90(23.9 24.1)/25.3 SetPt:25.00 Time:945445343
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:40.90(40.9) T:24.00(23.9 24.1)/25.3 SetPt:25.00 Time:949457989
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.90(40.9) T:23.90(23.9 24.1)/25.3 SetPt:25.00 Time:953470812
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:40.90(40.9) T:23.90(23.9 24.1)/25.3 SetPt:25.00 Time:957483641
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:40.90(40.9) T:24.00(23.9 24.1)/25.3 SetPt:25.00 Time:961496335
+Dormitor H:40.90(40.9) T:23.90(23.9 24.1)/25.3 SetPt:25.00 Time:965509172
+WS: 7;0;25.0;Dormitor;13.0;28.0;
+
+WS RX:7;0;25.0;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 6
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:24.00(23.9 24.1)/25.3 SetPt:25.00 Time:969521891
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:24.00(23.9 24.1)/25.3 SetPt:25.00 Time:973534619
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:23.90(23.9 24.1)/25.3 SetPt:25.00 Time:977547444
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.00(40.9) T:23.90(23.9 24.1)/25.3 SetPt:25.00 Time:981560267
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+Dormitor H:41.00(40.9) T:23.90(23.9 24.1)/25.3 SetPt:25.00 Time:985573086
+TCP sent: 36
+
+onReadyToSendData: 2
+
+11.12.2015 01:01:54 Heap: 34032
+Dormitor H:41.00(40.9) T:23.90(23.9 24.1)/25.3 SetPt:25.00 Time:989585855
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.10(40.9) T:23.90(23.9 24.0)/25.3 SetPt:25.00 Time:993598782
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 20 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.10(40.9) T:23.90(23.9 24.0)/25.3 SetPt:25.00 Time:997611703
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.10(40.9) T:23.90(23.9 24.0)/25.3 SetPt:25.00 Time:1001624629
+Dormitor H:41.20(40.9) T:23.90(23.9 24.0)/25.3 SetPt:25.00 Time:1005637550
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.20(41.0) T:23.90(23.9 24.0)/25.3 SetPt:25.00 Time:1009650450
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.30(41.0) T:23.90(23.9 24.0)/25.3 SetPt:25.00 Time:1013663445
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.30(41.0) T:23.90(23.9 24.0)/25.3 SetPt:25.00 Time:1017676450
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.20(41.0) T:23.80(23.9 24.0)/25.3 SetPt:25.00 Time:1021689372
+WS: 7;0;23.5;Dormitor;13.0;28.0;
+
+WS RX:7;0;23.5;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 6
+
+onReadyToSendData: 2
+
+Dormitor H:41.20(41.1) T:23.80(23.9 24.0)/25.3 SetPt:23.50 Time:1025704192
+HEATER(1) REQ: OFF
+== DEV STATUS: 0x22 ==
+
+== DEV STATUS: 0x20 ==
+
+Package sent! -- 0x26
+
+== DEV STATUS: 0x21 ==
+
+Valid Preamble detected -- 0x52
+
+SYNC WORD detected -- 0x92
+
+== DEV STATUS: 0x0 ==
+
+Packet detected -- 0x26
+
+ SENT! SYNC RX (15):
+0x0
+0x1
+0x5
+0x2
+0x1
+0x0
+0x0
+0x1
+0x0
+0x1
+0x0
+0x1
+0x0
+0xf7
+0x3
+
+
+Heater 1; on:0 fault:0 last:0
+Heater 1 THRESHOLDS differ!
+Dormitor H:41.30(41.1) T:23.80(23.8 24.0)/25.3 SetPt:23.50 Time:1029861148
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.30(41.1) T:23.80(23.8 24.0)/25.3 SetPt:23.50 Time:1033874037
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.30(41.1) T:23.80(23.8 24.0)/25.3 SetPt:23.50 Time:1037886949
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.40(41.1) T:23.80(23.8 24.0)/25.3 SetPt:23.50 Time:1041899922
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.40(41.2) T:23.80(23.8 24.0)/25.3 SetPt:23.50 Time:1045912883
+11.12.2015 01:02:54 Heap: 34032
+Dormitor H:41.40(41.2) T:23.80(23.8 24.0)/25.3 SetPt:23.50 Time:1049925841
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.40(41.2) T:23.80(23.8 24.0)/25.3 SetPt:23.50 Time:1053938791
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.40(41.2) T:23.80(23.8 24.0)/25.3 SetPt:23.50 Time:1057951762
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.50(41.3) T:23.80(23.8 24.0)/25.3 SetPt:23.50 Time:1061964783
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 64 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.50(41.3) T:23.70(23.8 24.0)/25.2 SetPt:23.50 Time:1065977805
+Dormitor H:41.50(41.3) T:23.70(23.8 24.0)/25.2 SetPt:23.50 Time:1069990791
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.50(41.3) T:23.70(23.7 24.0)/25.2 SetPt:23.50 Time:1074003808
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.50(41.3) T:23.70(23.7 24.0)/25.2 SetPt:23.50 Time:1078016825
+WS: 7;0;23.0;Dormitor;13.0;28.0;
+
+WS RX:7;0;23.0;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 6
+
+onReadyToSendData: 2
+
+Dormitor H:41.50(41.3) T:23.70(23.7 24.0)/25.2 SetPt:23.00 Time:1082029843
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.50(41.4) T:23.70(23.7 24.0)/25.2 SetPt:23.00 Time:1086042869
+Dormitor H:41.60(41.4) T:23.70(23.7 24.0)/25.2 SetPt:23.00 Time:1090055680
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.60(41.4) T:23.70(23.7 24.0)/25.2 SetPt:23.00 Time:1094068476
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.50(41.4) T:23.60(23.7 24.0)/25.2 SetPt:23.00 Time:1098081402
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.60(41.4) T:23.70(23.7 24.0)/25.2 SetPt:23.00 Time:1102095120
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.50(41.4) T:23.60(23.7 24.0)/25.2 SetPt:23.00 Time:1106108057
+11.12.2015 01:03:55 Heap: 34040
+Dormitor H:41.60(41.5) T:23.70(23.7 24.0)/25.2 SetPt:23.00 Time:1110120874
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.50(41.5) T:23.60(23.7 23.9)/25.2 SetPt:23.00 Time:1114133787
+WS: 7;0;23.0;Dormitor;13.0;28.0;
+
+WS RX:7;0;23.0;Dormitor;13.0;28.0;
+devWriteDisk SAVED 0
+
+TCP received: 34 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 6
+
+onReadyToSendData: 2
+
+Dormitor H:41.60(41.5) T:23.60(23.6 23.9)/25.2 SetPt:23.00 Time:1118146573
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.60(41.5) T:23.60(23.6 23.9)/25.2 SetPt:23.00 Time:1122159346
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.60(41.5) T:23.60(23.6 23.9)/25.2 SetPt:23.00 Time:1126172141
+Dormitor H:41.60(41.5) T:23.60(23.6 23.9)/25.2 SetPt:23.00 Time:1130184915
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.60(41.5) T:23.60(23.6 23.9)/25.2 SetPt:23.00 Time:1134197661
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.60(41.5) T:23.60(23.6 23.9)/25.2 SetPt:23.00 Time:1138210441
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.70(41.5) T:23.60(23.6 23.9)/25.2 SetPt:23.00 Time:1142223275
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.70(41.5) T:23.60(23.6 23.9)/25.2 SetPt:23.00 Time:1146236108
+Dormitor H:41.70(41.6) T:23.60(23.6 23.9)/25.2 SetPt:23.00 Time:1150248933
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.70(41.6) T:23.60(23.6 23.9)/25.2 SetPt:23.00 Time:1154261687
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.80(41.6) T:23.60(23.6 23.9)/25.2 SetPt:23.00 Time:1158274554
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.80(41.6) T:23.50(23.6 23.9)/25.2 SetPt:23.00 Time:1162287435
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.80(41.6) T:23.50(23.5 23.9)/25.2 SetPt:23.00 Time:1166300289
+11.12.2015 01:04:54 Heap: 34048
+Dormitor H:41.80(41.6) T:23.60(23.5 23.9)/25.2 SetPt:23.00 Time:1170313167
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.80(41.6) T:23.50(23.5 23.9)/25.2 SetPt:23.00 Time:1174326032
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.70(41.6) T:23.50(23.5 23.9)/25.2 SetPt:23.00 Time:1178338904
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.70(41.7) T:23.50(23.5 23.9)/25.2 SetPt:23.00 Time:1182351780
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.80(41.7) T:23.50(23.5 23.9)/25.2 SetPt:23.00 Time:1186364654
+Dormitor H:41.80(41.7) T:23.50(23.5 23.9)/25.2 SetPt:23.00 Time:1190377528
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.80(41.7) T:23.50(23.5 23.8)/25.2 SetPt:23.00 Time:1194390361
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.80(41.7) T:23.50(23.5 23.8)/25.2 SetPt:23.00 Time:1198403235
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.90(41.7) T:23.50(23.5 23.8)/25.2 SetPt:23.00 Time:1202416204
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.90(41.7) T:23.50(23.5 23.8)/25.2 SetPt:23.00 Time:1206429161
+Dormitor H:41.80(41.7) T:23.50(23.5 23.8)/25.2 SetPt:23.00 Time:1210441986
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.90(41.8) T:23.50(23.5 23.8)/25.2 SetPt:23.00 Time:1214454930
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.90(41.8) T:23.40(23.5 23.8)/25.2 SetPt:23.00 Time:1218467803
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.90(41.8) T:23.40(23.4 23.8)/25.2 SetPt:23.00 Time:1222480684
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 20 bytes
+
+onReadyToSendData: 1
+
+Dormitor H:41.90(41.8) T:23.40(23.4 23.8)/25.2 SetPt:23.00 Time:1226493557
+TCP sent: 36
+
+onReadyToSendData: 2
+
+11.12.2015 01:05:55 Heap: 34112
+Dormitor H:42.00(41.8) T:23.50(23.4 23.8)/25.2 SetPt:23.00 Time:1230506360
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+UDP connect to 78.96.7.25:123
+
+time updated? 1
+
+Dormitor H:41.90(41.8) T:23.40(23.4 23.8)/25.2 SetPt:23.00 Time:1234519245
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.90(41.8) T:23.40(23.4 23.8)/25.2 SetPt:23.00 Time:1238532142
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.8) T:23.40(23.4 23.8)/25.2 SetPt:23.00 Time:1242545016
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.8) T:23.40(23.4 23.8)/25.2 SetPt:23.00 Time:1246557894
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+Dormitor H:42.10(41.9) T:23.50(23.4 23.8)/25.2 SetPt:23.00 Time:1250570773
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.40(23.4 23.8)/25.2 SetPt:23.00 Time:1254583592
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.40(23.4 23.8)/25.2 SetPt:23.00 Time:1258596448
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.40(23.4 23.8)/25.2 SetPt:23.00 Time:1262609321
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.40(23.4 23.8)/25.2 SetPt:23.00 Time:1266622202
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+Dormitor H:42.00(41.9) T:23.40(23.4 23.7)/25.2 SetPt:23.00 Time:1270635073
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.40(23.4 23.7)/25.2 SetPt:23.00 Time:1274647899
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.40(23.4 23.7)/25.2 SetPt:23.00 Time:1278660761
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.40(23.4 23.7)/25.2 SetPt:23.00 Time:1282673643
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.40(23.4 23.7)/25.2 SetPt:23.00 Time:1286686522
+11.12.2015 01:06:55 Heap: 34040
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.40(23.4 23.7)/25.2 SetPt:23.00 Time:1290699405
+Dormitor H:42.00(41.9) T:23.40(23.4 23.7)/25.2 SetPt:23.00 Time:1294712206
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.90(41.9) T:23.40(23.4 23.7)/25.2 SetPt:23.00 Time:1298725046
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:41.90(41.9) T:23.40(23.4 23.7)/25.2 SetPt:23.00 Time:1302737919
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:41.90(41.9) T:23.30(23.4 23.7)/25.2 SetPt:23.00 Time:1306750796
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.40(23.4 23.7)/25.2 SetPt:23.00 Time:1310763675
+Dormitor H:42.00(41.9) T:23.30(23.3 23.7)/25.2 SetPt:23.00 Time:1314776449
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.40(23.3 23.7)/25.2 SetPt:23.00 Time:1318789318
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.30(23.3 23.7)/25.2 SetPt:23.00 Time:1322802146
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.30(23.3 23.7)/25.2 SetPt:23.00 Time:1326814976
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.30(23.3 23.7)/25.2 SetPt:23.00 Time:1330827806
+Dormitor H:42.00(41.9) T:23.30(23.3 23.7)/25.2 SetPt:23.00 Time:1334840586
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.30(23.3 23.7)/25.2 SetPt:23.00 Time:1338853448
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.30(23.3 23.6)/25.2 SetPt:23.00 Time:1342866285
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.00(41.9) T:23.30(23.3 23.6)/25.2 SetPt:23.00 Time:1346879119
+11.12.2015 01:07:54 Heap: 34048
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.10(41.9) T:23.30(23.3 23.6)/25.2 SetPt:23.00 Time:1350892051
+Dormitor H:42.10(41.9) T:23.30(23.3 23.6)/25.2 SetPt:23.00 Time:1354904963
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.10(42.0) T:23.30(23.3 23.6)/25.2 SetPt:23.00 Time:1358917856
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 40 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.10(42.0) T:23.30(23.3 23.6)/25.2 SetPt:23.00 Time:1362930777
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.20(42.0) T:23.30(23.3 23.6)/25.2 SetPt:23.00 Time:1366943559
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.20(42.0) T:23.30(23.3 23.6)/25.2 SetPt:23.00 Time:1370956320
+Dormitor H:42.20(42.0) T:23.20(23.3 23.6)/25.1 SetPt:23.00 Time:1374969108
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.40(42.0) T:23.30(23.3 23.6)/25.2 SetPt:23.00 Time:1378981896
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.80(42.1) T:23.30(23.2 23.6)/25.2 SetPt:23.00 Time:1382994766
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.1) T:23.20(23.2 23.6)/25.1 SetPt:23.00 Time:1387007589
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.2) T:23.20(23.2 23.6)/25.1 SetPt:23.00 Time:1391020365
+Dormitor H:42.40(42.2) T:23.20(23.2 23.6)/25.1 SetPt:23.00 Time:1395033076
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.40(42.2) T:23.20(23.2 23.6)/25.1 SetPt:23.00 Time:1399045782
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.2) T:23.20(23.2 23.6)/25.1 SetPt:23.00 Time:1403058563
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.3) T:23.20(23.2 23.6)/25.1 SetPt:23.00 Time:1407071335
+11.12.2015 01:08:54 Heap: 34048
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.3) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1411084115
+Dormitor H:42.40(42.3) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1415096836
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.40(42.3) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1419109555
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.4) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1423122331
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.4) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1427135160
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.80(42.4) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1431147998
+Dormitor H:42.70(42.5) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1435160812
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.5) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1439173608
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.5) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1443186439
+Dormitor H:42.60(42.5) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1447199253
+Dormitor H:42.70(42.5) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1451212033
+Dormitor H:42.70(42.5) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1455224824
+Dormitor H:42.80(42.6) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1459237594
+Dormitor H:42.70(42.6) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1463250381
+Dormitor H:42.60(42.6) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1467263162
+11.12.2015 01:09:54 Heap: 34304
+Dormitor H:42.60(42.6) T:23.20(23.2 23.5)/25.1 SetPt:23.00 Time:1471275943
+Dormitor H:42.60(42.6) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1475288704
+Dormitor H:42.60(42.6) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1479301476
+Dormitor H:42.50(42.6) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1483314217
+Dormitor H:42.50(42.6) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1487326924
+Dormitor H:42.50(42.6) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1491339645
+Dormitor H:42.50(42.6) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1495352375
+Dormitor H:42.50(42.6) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1499365096
+Dormitor H:42.50(42.6) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1503377859
+Dormitor H:42.50(42.5) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1507390587
+Dormitor H:42.50(42.5) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1511403310
+Dormitor H:42.50(42.5) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1515416040
+Dormitor H:42.50(42.5) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1519428772
+Dormitor H:42.50(42.5) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1523441492
+Dormitor H:42.50(42.5) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1527454262
+11.12.2015 01:10:54 Heap: 34304
+Dormitor H:42.60(42.5) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1531467050
+Dormitor H:42.60(42.5) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1535479842
+Dormitor H:42.60(42.5) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1539492622
+Dormitor H:42.70(42.5) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1543505403
+Dormitor H:42.70(42.5) T:23.20(23.2 23.4)/25.1 SetPt:23.00 Time:1547518193
+Dormitor H:42.60(42.5) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1551530962
+Dormitor H:42.60(42.5) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1555543743
+Dormitor H:42.60(42.5) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1559556522
+Dormitor H:42.80(42.5) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1563569289
+Dormitor H:42.80(42.6) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1567582102
+Dormitor H:42.70(42.6) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1571594887
+Dormitor H:42.60(42.6) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1575607659
+Dormitor H:42.50(42.6) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1579620396
+Dormitor H:42.60(42.6) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1583633179
+Dormitor H:42.60(42.6) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1587645989
+11.12.2015 01:11:54 Heap: 34304
+Dormitor H:42.60(42.6) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1591658777
+Dormitor H:42.60(42.6) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1595671580
+Dormitor H:42.60(42.6) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1599684354
+Dormitor H:42.40(42.6) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1603697027
+Dormitor H:42.40(42.6) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1607709714
+Dormitor H:42.50(42.5) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1611722481
+Dormitor H:42.30(42.5) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1615735204
+Dormitor H:42.30(42.5) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1619747939
+Dormitor H:42.40(42.5) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1623760623
+Dormitor H:42.50(42.5) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1627773349
+Dormitor H:42.50(42.5) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1631787162
+Dormitor H:42.60(42.5) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1635799976
+Dormitor H:42.70(42.5) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1639812751
+Dormitor H:42.70(42.5) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1643825535
+Dormitor H:42.70(42.5) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1647838316
+11.12.2015 01:12:54 Heap: 34304
+Dormitor H:42.60(42.5) T:23.20(23.2 23.3)/25.1 SetPt:23.00 Time:1651851098
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1655863904
+Dormitor H:42.40(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1659876593
+Dormitor H:42.30(42.4) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1663889324
+Dormitor H:42.40(42.4) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1667901999
+Dormitor H:42.50(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1671914731
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1675927511
+Dormitor H:42.70(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1679940286
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1683953070
+Dormitor H:42.50(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1687965806
+onAccept state: 0 K=3
+
+Free heap size=33960, K=3
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === XfZnnj/HnhhvoC4EKqXVcQ==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+onAccept state: 0 K=4
+
+Free heap size=26128, K=4
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+TCP sent: 23
+
+onReadyToSendData: 2
+
+TCP sent: 152
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1691978553
+TCP received: (null)
+
+TCP connection closing
+
+-TCP connection
+
+~TCP connection
+
+Dormitor H:42.50(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1695991339
+onAccept state: 0 K=4
+
+Free heap size=29360, K=4
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === wW5rNgHgHjxkbyEsxQJ2Mw==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+TCP sent: 152
+
+onReadyToSendData: 2
+
+TCP sent: 23
+
+onReadyToSendData: 2
+
+TCP sent: 23
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1700004139
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1704016933
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1708029706
+11.12.2015 01:13:54 Heap: 25128
+Dormitor H:42.50(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1712042466
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1716055243
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1720068067
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1724080894
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1728093709
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1732106511
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1736119342
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1740132123
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1744144898
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1748157685
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1752170460
+Dormitor H:42.50(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1756183157
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1760195911
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1764208733
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1768221566
+11.12.2015 01:14:54 Heap: 25128
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1772234368
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1776247123
+ERROR: ASSERT: wsParseInputFrame 131
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 1460 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+WS error reading frame: 0xf1
+
+TCP received: 1116 bytes
+
+onReadyToSendData: 1
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1780259932
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1784272718
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1788285529
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1792298362
+Dormitor H:42.60(42.5) T:23.20(23.2 23.2)/25.1 SetPt:23.00 Time:1796311065
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.10(23.1 23.2)/25.1 SetPt:23.00 Time:1800323936
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.20(23.1 23.2)/25.1 SetPt:23.00 Time:1804336748
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.20(23.1 23.2)/25.1 SetPt:23.00 Time:1808349513
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.20(23.1 23.2)/25.1 SetPt:23.00 Time:1812362333
+Dormitor H:42.60(42.5) T:23.20(23.1 23.2)/25.1 SetPt:23.00 Time:1816375141
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.20(23.1 23.2)/25.1 SetPt:23.00 Time:1820387910
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.10(23.1 23.2)/25.1 SetPt:23.00 Time:1824400771
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+Dormitor H:42.50(42.5) T:23.20(23.1 23.2)/25.1 SetPt:23.00 Time:1828413546
+11.12.2015 01:15:55 Heap: 21896
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+UDP connect to 93.190.144.3:123
+
+time updated? 1
+
+Dormitor H:42.50(42.5) T:23.20(23.1 23.2)/25.1 SetPt:23.00 Time:1832426329
+Dormitor H:42.50(42.5) T:23.20(23.1 23.2)/25.1 SetPt:23.00 Time:1836439014
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.10(23.1 23.2)/25.1 SetPt:23.00 Time:1840451855
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.10(23.1 23.2)/25.1 SetPt:23.00 Time:1844464682
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.10(23.1 23.2)/25.1 SetPt:23.00 Time:1848477558
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.10(23.1 23.2)/25.1 SetPt:23.00 Time:1852490424
+Dormitor H:42.60(42.5) T:23.10(23.1 23.2)/25.1 SetPt:23.00 Time:1856503274
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.10(23.1 23.2)/25.1 SetPt:23.00 Time:1860516149
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1864529017
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1868541880
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.20(23.1 23.1)/25.1 SetPt:23.00 Time:1872554646
+Dormitor H:42.40(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1876567399
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.40(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1880580139
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1884593011
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1888605878
+11.12.2015 01:16:54 Heap: 25128
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.40(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1892618647
+Dormitor H:42.40(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1896631411
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.40(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1900644151
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.40(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1904656933
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.30(42.4) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1908669945
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.40(42.4) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1912682714
+Dormitor H:42.40(42.4) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1916695471
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.4) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1920708296
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.4) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1924721168
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.4) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1928735169
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.4) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1932748127
+Dormitor H:42.70(42.4) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1936761071
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.80(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1940773908
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.90(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1944786879
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:43.00(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1948799855
+11.12.2015 01:17:54 Heap: 25128
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:43.00(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1952812805
+Dormitor H:42.80(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1956825663
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+Dormitor H:42.80(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1960838498
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1964851436
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1968864301
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.7) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1972877270
+Dormitor H:42.70(42.7) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1976890217
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.7) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1980903051
+ERROR: ASSERT: wsParseInputFrame 131
+
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 20 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+Dormitor H:42.40(42.7) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1984915824
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.40(42.7) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1988928611
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.40(42.7) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1992941374
+Dormitor H:42.40(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:1996954125
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2000966953
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2004979818
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2008992697
+11.12.2015 01:18:54 Heap: 25128
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2013006588
+Dormitor H:42.60(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2017019451
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+Dormitor H:42.70(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2021032386
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2025045351
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2029058331
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 62
+
+onReadyToSendData: 2
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 36
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2033071300
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2037084258
+Dormitor H:42.70(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2041097135
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2045110066
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2049123042
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2053136009
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2057153467
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2061166260
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2065179128
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2069191996
+11.12.2015 01:19:54 Heap: 25128
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2073204867
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2077217755
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2081230549
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2085243454
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2089256418
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2093269361
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2097282321
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2101295266
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2105308194
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2109321055
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2113333937
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2117347692
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2121360637
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2125373573
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+11.12.2015 01:20:54 Heap: 25128
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2129386809
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2133399783
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2137412750
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2141425646
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2145438580
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2149451540
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2153464407
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2157477277
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2161490126
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2165502952
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2169515816
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2173528686
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2177541548
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2181554390
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2185567221
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+11.12.2015 01:21:54 Heap: 25128
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2189580087
+WS remove connection item
+
+WS Close
+
+TCP connection closing
+
+TCP received: 8 bytes
+
+~TCP connection
+
+WS remove connection item
+
+WS Close
+
+TCP connection closing
+
+TCP received: 8 bytes
+
+~TCP connection
+
+WS remove connection item
+
+WS Close
+
+TCP connection closing
+
+TCP received: 8 bytes
+
+~TCP connection
+
+-TCP connection
+
+-TCP connection
+
+-TCP connection
+
+onAccept state: 0 K=2
+
+Free heap size=18520, K=2
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === lFa1g5s637Ha8Z7u6Ri95w==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+onAccept state: 0 K=3
+
+Free heap size=12320, K=3
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === S32PtEabfoSTqDRfXvBRNQ==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+TCP sent: 175
+
+onReadyToSendData: 2
+
+onAccept state: 0 K=4
+
+Free heap size=7720, K=4
+
++TCP connection
+
+timeout updating: 70 -> 90
+
+TcpServer onClient: 192.168.0.101
+
+
+
+path=/
+
+Host === 192.168.0.103
+
+Sec-WebSocket-Version === 13
+
+Sec-WebSocket-Key === JNOplgGejnURHAC4xkvW4A==
+
+Upgrade === websocket
+
+parsed
+
+Request: GET, nodata
+
+TCP received: 484 bytes
+
+onReadyToSendData: 1
+
+E:M 1584
+
+E:M 1584
+
+E:M 1584
+
+E:M 1584
+
+response sendHeader
+
+Switched to WebSocket Protocol
+
+timeout updating: 90 -> 65535
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2193592987
+TCP sent: 152
+
+onReadyToSendData: 2
+
+TCP sent: 152
+
+onReadyToSendData: 2
+
+Dormitor H:42.50(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2197605836
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2201618677
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2205631556
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.60(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2209644429
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.5) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2213657384
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:221767034                                    0
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:222168329                                    9
+WS: 5;1;
+
+WS RX:5;1;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+WS: 5;2;
+
+WS RX:5;2;
+TCP received: 10 bytes
+
+onReadyToSendData: 1
+
+TCP sent: 98
+
+onReadyToSendData: 2
+
+Dormitor H:42.70(42.6) T:23.10(23.1 23.1)/25.1 SetPt:23.00 Time:2225696258
+WS: 7;0;22.5;Dormitor;13.0;28.0;
+
+WS RX:7;0;22.5;Dormitor;13.0;28.0;
+E:M 4104
+
+Fatal exception 29(StoreProhibitedCause):
+
+epc1=0x402399b6, epc2=0x00000000, epc3=0x00000000, excvaddr=0x00000000, depc=0x0                             0000000
+
+
+
+ ets Jan  8 2013,rst cause:1, boot mode:(1,7)
+
+
+
+
+
+ ets Jan  8 2013,rst cause:4, boot mode:(1,7)
+
+
+
+wdt reset
+
+rlrll¦¦|¦l¦|
+¦
+l¦
+b|¦¦¦¦r¦bl
+b¦¦nn¦lnn¦¦¦
+bpp¦lrlrlrll¦¦|¦l¦|
+¦
+l¦
+b|¦¦¦¦r¦bl
+b¦¦nn¦lnn¦¦¦
+bp¦lrlrlp¦n¦
+¦
+l
+b
+n¦|¦¦
+¦
+b¦¦nn¦l¦¦l`¦nnl¦l`nr¦¦¦n
+ll``¦n
+¦¦b¦nl¦
+¦¦nn¦
+¦lp¦n¦
+r¦¦¦¦¦
+b
+n¦|l
+¦p
+¦¦nn¦l¦
+l`¦nn
+¦lnr¦¦¦n
+¦`p¦n¦
+r¦¦¦¦¦
+¦¦
+b
+n¦|l?
+b¦¦nn¦
+¦l`¦nn
+l`nr¦¦¦n
+rll`r¦¦n
+rll`rl+TCP connection
+
+timeout updating: 70 -> 65535
+
+Server timeout updating: 40 -> 90
+
+SDCard OK: TYPE 12
+
+
+libDHT: Detected DHT-22 compatible sensor.
+
+DEV 0x4 is DIS
+
+SPI is initialized now.
+
+== DEV STATUS: 0x20 ==
+
+Package signature is set!
+
+== DEV STATUS: 0x20 ==
+
+REGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+
+(0x 0): 0x 8 0x 6 0x20 0x20 0x 0 0x 0 0x 3 0x 1 0x 0 0x7f 0x 6 0x 0 0x 0 0x 0 0x                              0 0x 0
+
+(0x10): 0x 0 0x 0 0x20 0x 0 0x 3 0x 0 0x 1 0x 0 0x 0 0x 1 0x14 0x 0 0x 2 0x3c 0x                              2 0x 3
+
+(0x20): 0x68 0x 1 0x3a 0x93 0x 4 0xee 0x 0 0x1e 0x 0 0x 0 0xff 0x 0 0x18 0xbc 0x                             26 0x 8
+
+(0x30): 0xad 0x 0 0x c 0x22 0x 8 0x3a 0x2d 0xd4 0x 0 0x 0 0xde 0xad 0x 0 0x 0 0x                              0 0xde
+
+(0x40): 0xad 0x 0 0x 0 0xff 0xff 0xff 0xff 0x 0 0x 0 0x 0 0x 0 0xff 0x 8 0x 8 0x                              8 0x10
+
+(0x50): 0x 0 0x 0 0xdf 0x52 0x20 0x64 0x 0 0x 1 0x87 0x 0 0x 1 0x 0 0x e 0x 0 0x                              0 0x 0
+
+(0x60): 0xa0 0x 0 0x24 0x 0 0x 0 0x82 0x42 0x1f 0x 3 0x60 0x9d 0x 0 0x 1 0x1f 0x                              9 0xd5
+
+(0x70): 0x c 0x23 0x1f 0x 0 0x 0 0x53 0x 0 0x 0 0x19 0x 0 0x64 0x 3 0x37 0x 4 0x                             37 0x40
+
+== DEV STATUS: 0x21 ==
+
+Loading dev DEV_0, 0 bytes
+rll¦¦|¦l¦|
+¦
+l¦
+b|¦¦¦¦r¦bl
+b¦¦nn¦lnn¦¦¦
+bp¦lrlrlp¦n¦
+¦
+l
+b
+n¦|¦¦
+¦
+b¦¦nn¦l¦¦l`¦nnl¦l`nr¦¦¦n
+ll``¦n
+¦¦b¦nl¦
+¦¦nn¦
+¦lp¦n¦
+r¦¦¦¦¦
+b
+n¦|l
+¦p
+¦¦nn¦l¦
+l`rll¦¦|¦l¦|
+¦
+l¦
+b|¦¦¦¦r¦bl
+b¦¦nn¦lnn¦¦¦
+bp¦lrlrlp¦n¦
+¦
+l
+b
+n¦|¦¦
+¦
+b¦¦nn¦l¦¦l`¦nnl¦l`nr¦¦¦n
+ll``¦n
+¦¦b¦nl¦
+¦¦nn¦
+¦lp¦n¦
+r¦¦¦¦¦
+b
+n¦|l
+¦p
+¦¦nn¦l¦
+l`¦nn
+¦lnr¦¦¦n
+¦`p¦n¦
+r¦¦¦¦¦
+¦¦
+b
+n¦|l?
+b¦¦nn¦
+¦l`¦nn
+l`nr¦¦¦n
+rll`r¦¦n
+rll`rl+TCP connection
+
+timeout updating: 70 -> 65535
+
+Server timeout updating: 40 -> 90
+
+rll¦¦|¦l¦|
+¦
+l¦
+b|¦¦¦¦r¦bl
+b¦¦nn¦lnn¦¦¦
+bp¦lrlrlp¦n¦
+¦
+l
+b
+n¦|¦¦
+¦
+b¦¦nn¦l¦¦l`¦nnl¦l`nr¦¦¦n
+ll``¦n
+¦¦b¦nl¦
+¦¦nn¦
+¦lp¦n¦
+r¦¦¦¦¦
+b
+n¦|l
+¦p
+¦¦nn¦l¦
+l`¦nn
+¦lnr¦¦¦n
+¦`p¦n¦
+r¦¦¦¦¦
+¦¦
+b
+n¦|l?
+b¦¦nn¦
+¦l`¦nn
+l`nr¦¦¦n
+rll`r¦¦n
+rll`rl+TCP connection
+
+timeout updating: 70 -> 65535
+
+Server timeout updating: 40 -> 90
+
+SDCard OK: TYPE 12
+
+
+libDHT: Detected DHT-22 compatible sensor.
+
+DEV 0x4 is DIS
+
+SPI is initialized now.
+
+== DEV STATUS: 0x20 ==
+
+Package signature is set!
+
+== DEV STATUS: 0x20 ==
+
+REGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+
+(0x 0): 0x 8 0x 6 0x20 0x20 0x 0 0x 0 0x 3 0x 1 0x 0 0x7f 0x 6 0x 0 0x 0 0x 0 0x                              0 0x 0
+
+(0x10): 0x 0 0x 0 0x20 0x 0 0x 3 0x 0 0x 1 0x 0 0x 0 0x 1 0x14 0x 0 0x 2 0x3c 0x                              2 0x 3
+
+(0x20): 0x68 0x 1 0x3a 0x93 0x 4 0xee 0x 0 0x1e 0x 0 0x 0 0xff 0x 0 0x18 0xbc 0x                             26 0x 8
+
+(0x30): 0xad 0x 0 0x c 0x22 0x 8 0x3a 0x2d 0xd4 0x 0 0x 0 0xde 0xad 0x 0 0x 0 0x                              0 0xde
+
+(0x40): 0xad 0x 0 0x 0 0xff 0xff 0xff 0xff 0x 0 0x 0 0x 0 0x 0 0xff 0x 8 0x 8 0x                              8 0x10
+
+(0x50): 0x 0 0x 0 0xdf 0x52 0x20 0x64 0x 0 0x 1 0x87 0x 0 0x 1 0x 0 0x e 0x 0 0x                              0 0x 0
+
+(0x60): 0xa0 0x 0 0x24 0x 0 0x 0 0x82 0x42 0x1f 0x 3 0x60 0x9d 0x 0 0x 1 0x1f 0x                              9 0xd5
+
+(0x70): 0x c 0x23 0x1f 0x 0 0x 0 0x53 0x 0 0x 0 0x19 0x 0 0x64 0x 3 0x37 0x 4 0x                             37 0x40
+
+== DEV STATUS: 0x21 ==
+
+Loading dev DEV_0, 0 bytes
+
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+
+
+load 0x40100000, len 23820, room 16
+
+tail 12
+
+chksum 0x89
+
+ho 0 tail 12 room 4
+
+load 0x3ffe8000, len 1072, room 12
+
+tail 4
+
+chksum 0xaa
+
+load 0x3ffe8430, len 9748, room 4
+
+tail 0
+
+chksum 0x39
+
+csum 0x39
+
+rl¦¦rl¦¦¦¦¦+TCP connection
+
+timeout updating: 70 -> 65535
+
+Server timeout updating: 40 -> 90
+
+SDCard OK: TYPE 12
+
+
+libDHT: Detected DHT-22 compatible sensor.
+
+DEV 0x4 is DIS
+
+SPI is initialized now.
+
+== DEV STATUS: 0x20 ==
+
+Package signature is set!
+
+== DEV STATUS: 0x20 ==
+
+REGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+
+(0x 0): 0x 8 0x 6 0x20 0x20 0x 0 0x 0 0x 3 0x 1 0x 0 0x7f 0x 6 0x 0 0x 0 0x 0 0x                              0 0x 0
+
+(0x10): 0x 0 0x 0 0x20 0x 0 0x 3 0x 0 0x 1 0x 0 0x 0 0x 1 0x14 0x 0 0x 2 0x3c 0x                              2 0x 3
+
+(0x20): 0x68 0x 1 0x3a 0x93 0x 4 0xee 0x 0 0x1e 0x 0 0x 0 0xff 0x 0 0x18 0xbc 0x                             26 0x 8
+
+(0x30): 0xad 0x 0 0x c 0x22 0x 8 0x3a 0x2d 0xd4 0x 0 0x 0 0xde 0xad 0x 0 0x 0 0x                              0 0xde
+
+(0x40): 0xad 0x 0 0x 0 0xff 0xff 0xff 0xff 0x 0 0x 0 0x 0 0x 0 0xff 0x 8 0x 8 0x                              8 0x10
+
+(0x50): 0x 0 0x 0 0xdf 0x52 0x20 0x64 0x 0 0x 1 0x87 0x 0 0x 1 0x 0 0x e 0x 0 0x                              0 0x 0
+
+(0x60): 0xa0 0x 0 0x24 0x 0 0x 0 0x82 0x42 0x1f 0x 3 0x60 0x9d 0x 0 0x 1 0x1f 0x                              9 0xd5
+
+(0x70): 0x c 0x23 0x1f 0x 0 0x 0 0x53 0x 0 0x 0 0x19 0x 0 0x64 0x 3 0x37 0x 4 0x                             37 0x40
+
+== DEV STATUS: 0x21 ==
+
+Loading dev DEV_0, 0 bytes
+
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+
+
+load 0x40100000, len 23820, room 16
+
+tail 12
+
+chksum 0x89
+
+ho 0 tail 12 room 4
+
+load 0x3ffe8000, len 1072, room 12
+
+tail 4
+
+chksum 0xaa
+
+load 0x3ffe8430, len 9748, room 4
+
+tail 0
+
+chksum 0x39
+
+csum 0x39
+
+rl¦¦rl¦¦¦¦¦+TCP connection
+
+timeout updating: 70 -> 65535
+
+Server timeout updating: 40 -> 90
+
+SDCard OK: TYPE 12
+
+
+libDHT: Detected DHT-22 compatible sensor.
+
+DEV 0x4 is DIS
+
+SPI is initialized now.
+
+== DEV STATUS: 0x20 ==
+
+Package signature is set!
+
+== DEV STATUS: 0x20 ==
+
+REGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+
+(0x 0): 0x 8 0x 6 0x20 0x20 0x 0 0x 0 0x 3 0x 1 0x 0 0x7f 0x 6 0x 0 0x 0 0x 0 0x                              0 0x 0
+
+(0x10): 0x 0 0x 0 0x20 0x 0 0x 3 0x 0 0x 1 0x 0 0x 0 0x 1 0x14 0x 0 0x 2 0x3c 0x                              2 0x 3
+
+(0x20): 0x68 0x 1 0x3a 0x93 0x 4 0xee 0x 0 0x1e 0x 0 0x 0 0xff 0x 0 0x18 0xbc 0x                             26 0x 8
+
+(0x30): 0xad 0x 0 0x c 0x22 0x 8 0x3a 0x2d 0xd4 0x 0 0x 0 0xde 0xad 0x 0 0x 0 0x                              0 0xde
+
+(0x40): 0xad 0x 0 0x 0 0xff 0xff 0xff 0xff 0x 0 0x 0 0x 0 0x 0 0xff 0x 8 0x 8 0x                              8 0x10
+
+(0x50): 0x 0 0x 0 0xdf 0x52 0x20 0x64 0x 0 0x 1 0x87 0x 0 0x 1 0x 0 0x e 0x 0 0x                              0 0x 0
+
+(0x60): 0xa0 0x 0 0x24 0x 0 0x 0 0x82 0x42 0x1f 0x 3 0x60 0x9d 0x 0 0x 1 0x1f 0x                              9 0xd5
+
+(0x70): 0x c 0x23 0x1f 0x 0 0x 0 0x53 0x 0 0x 0 0x19 0x 0 0x64 0x 3 0x37 0x 4 0x                             37 0x40
+
+== DEV STATUS: 0x21 ==
+
+Loading dev DEV_0, 0 bytes
+
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+
+
+load 0x40100000, len 23820, room 16
+
+tail 12
+
+chksum 0x89
+
+ho 0 tail 12 room 4
+
+load 0x3ffe8000, len 1072, room 12
+
+tail 4
+
+chksum 0xaa
+
+load 0x3ffe8430, len 9748, room 4
+
+tail 0
+
+chksum 0x39
+
+csum 0x39
+
+rl¦¦rl¦¦¦¦¦+TCP connection
+
+timeout updating: 70 -> 65535
+
+Server timeout updating: 40 -> 90
+
+SDCard OK: TYPE 12
+
+
+libDHT: Detected DHT-22 compatible sensor.
+
+DEV 0x4 is DIS
+
+SPI is initialized now.
+
+== DEV STATUS: 0x20 ==
+
+Package signature is set!
+
+== DEV STATUS: 0x20 ==
+
+REGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+
+(0x 0): 0x 8 0x 6 0x20 0x20 0x 0 0x 0 0x 3 0x 1 0x 0 0x7f 0x 6 0x 0 0x 0 0x 0 0x                              0 0x 0
+
+(0x10): 0x 0 0x 0 0x20 0x 0 0x 3 0x 0 0x 1 0x 0 0x 0 0x 1 0x14 0x 0 0x 2 0x3c 0x                              2 0x 3
+
+(0x20): 0x68 0x 1 0x3a 0x93 0x 4 0xee 0x 0 0x1e 0x 0 0x 0 0xff 0x 0 0x18 0xbc 0x                             26 0x 8
+
+(0x30): 0xad 0x 0 0x c 0x22 0x 8 0x3a 0x2d 0xd4 0x 0 0x 0 0xde 0xad 0x 0 0x 0 0x                              0 0xde
+
+(0x40): 0xad 0x 0 0x 0 0xff 0xff 0xff 0xff 0x 0 0x 0 0x 0 0x 0 0xff 0x 8 0x 8 0x                              8 0x10
+
+(0x50): 0x 0 0x 0 0xdf 0x52 0x20 0x64 0x 0 0x 1 0x87 0x 0 0x 1 0x 0 0x e 0x 0 0x                              0 0x 0
+
+(0x60): 0xa0 0x 0 0x24 0x 0 0x 0 0x82 0x42 0x1f 0x 3 0x60 0x9d 0x 0 0x 1 0x1f 0x                              9 0xd5
+
+(0x70): 0x c 0x23 0x1f 0x 0 0x 0 0x53 0x 0 0x 0 0x19 0x 0 0x64 0x 3 0x37 0x 4 0x                             37 0x40
+
+== DEV STATUS: 0x21 ==
+
+Loading dev DEV_0, 0 bytes
+
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+
+
+load 0x40100000, len 23820, room 16
+
+tail 12
+
+chksum 0x89
+
+ho 0 tail 12 room 4
+
+load 0x3ffe8000, len 1072, room 12
+
+tail 4
+
+chksum 0xaa
+
+load 0x3ffe8430, len 9748, room 4
+
+tail 0
+
+chksum 0x39
+
+csum 0x39
+
+rl¦¦rl¦¦¦¦¦+TCP connection
+
+timeout updating: 70 -> 65535
+
+Server timeout updating: 40 -> 90
+
+SDCard OK: TYPE 12
+
+
+libDHT: Detected DHT-22 compatible sensor.
+
+DEV 0x4 is DIS
+
+SPI is initialized now.
+
+== DEV STATUS: 0x20 ==
+
+Package signature is set!
+
+== DEV STATUS: 0x20 ==
+
+REGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+
+(0x 0): 0x 8 0x 6 0x20 0x20 0x 0 0x 0 0x 3 0x 1 0x 0 0x7f 0x 6 0x 0 0x 0 0x 0 0x                              0 0x 0
+
+(0x10): 0x 0 0x 0 0x20 0x 0 0x 3 0x 0 0x 1 0x 0 0x 0 0x 1 0x14 0x 0 0x 2 0x3c 0x                              2 0x 3
+
+(0x20): 0x68 0x 1 0x3a 0x93 0x 4 0xee 0x 0 0x1e 0x 0 0x 0 0xff 0x 0 0x18 0xbc 0x                             26 0x 8
+
+(0x30): 0xad 0x 0 0x c 0x22 0x 8 0x3a 0x2d 0xd4 0x 0 0x 0 0xde 0xad 0x 0 0x 0 0x                              0 0xde
+
+(0x40): 0xad 0x 0 0x 0 0xff 0xff 0xff 0xff 0x 0 0x 0 0x 0 0x 0 0xff 0x 8 0x 8 0x                              8 0x10
+
+(0x50): 0x 0 0x 0 0xdf 0x52 0x20 0x64 0x 0 0x 1 0x87 0x 0 0x 1 0x 0 0x e 0x 0 0x                              0 0x 0
+
+(0x60): 0xa0 0x 0 0x24 0x 0 0x 0 0x82 0x42 0x1f 0x 3 0x60 0x9d 0x 0 0x 1 0x1f 0x                              9 0xd5
+
+(0x70): 0x c 0x23 0x1f 0x 0 0x 0 0x53 0x 0 0x 0 0x19 0x 0 0x64 0x 3 0x37 0x 4 0x                             37 0x40
+
+== DEV STATUS: 0x21 ==
+
+Loading dev DEV_0, 0 bytes
+
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+
+
+load 0x40100000, len 23820, room 16
+
+tail 12
+
+chksum 0x89
+
+ho 0 tail 12 room 4
+
+load 0x3ffe8000, len 1072, room 12
+
+tail 4
+
+chksum 0xaa
+
+load 0x3ffe8430, len 9748, room 4
+
+tail 0
+
+chksum 0x39
+
+csum 0x39
+
+rl¦¦rl¦¦¦¦¦+TCP connection
 
 timeout updating: 70 -> 65535
 
@@ -42,316 +7829,144 @@ REGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 
 == DEV STATUS: 0x21 ==
 
-Loading dev DEV_0, 45 bytes
-Type: TH
-TH device: 0;IndoorTemp;19.700000763;16.;26.5;0;1;1;1;
-TH device ID:0 NAME: IndoorTemp
-Add watcher ID:1
-Added device.
-Loading dev DEV_1, 26 bytes
-Type:HEATER
-HEATER device ID:1 NAME: Heater
-Add watcher ID:0
-Added device.
-System start.
-
-Reset:
-REASON_DEFAULT_RST
-
-Chip id=10502778
+Loading dev DEV_0, 0 bytes
 
 
-Flash id=1261768
-
-
-Mem info:
-
-
-data  : 0x3ffe8000 ~ 0x3ffe85f5, len: 1525
-
-rodata: 0x3ffe8600 ~ 0x3ffeabbc, len: 9660
-
-bss   : 0x3ffeabc0 ~ 0x3fff4640, len: 39552
-
-heap  : 0x3fff4640 ~ 0x3fffc000, len: 31168
-
-Station configuration was updated to: TP-LINK_B4EB92
-
-mode : sta(18:fe:34:a0:42:7a)
-
-add if0
-
-f 0, scandone
-
-add 0
-
-aid 2
-
-pm open phy_2,type:2 0 0
-
-cnt
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
 
 
 
-connected with TP-LINK_B4EB92, channel 6
+load 0x40100000, len 23820, room 16
 
-dhcp client start...
+tail 12
 
-ip:192.168.0.103,mask:255.255.255.0,gw:192.168.0.1
+chksum 0x89
 
-AP CONNECT
-'/' registered
+ho 0 tail 12 room 4
 
-HTTP server STARTED 192.168.0.103
-NTP server STARTED
-UDP LocalPort: 4097
+load 0x3ffe8000, len 1072, room 12
 
-UDP connect to 89.149.54.30:123
+tail 4
 
-UDP connect to 82.78.227.6:123
+chksum 0xaa
 
-rtc time init...
+load 0x3ffe8430, len 9748, room 4
 
-time updated? 1
+tail 0
 
-IndoorTemp H:40.10(0.0) T:25.70(0.0 0.0)/26.0 SetPt:19.70 Time:4814370
-== DEV STATUS: 0x22 ==
+chksum 0x39
+
+csum 0x39
+
+rl¦¦rl¦¦¦¦¦+TCP connection
+
+timeout updating: 70 -> 65535
+
+Server timeout updating: 40 -> 90
+
+SDCard OK: TYPE 12
+
+
+libDHT: Detected DHT-22 compatible sensor.
+
+DEV 0x4 is DIS
+
+SPI is initialized now.
 
 == DEV STATUS: 0x20 ==
 
-Package sent! -- 0x24
+Package signature is set!
+
+== DEV STATUS: 0x20 ==
+
+REGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+
+(0x 0): 0x 8 0x 6 0x20 0x20 0x 0 0x 0 0x 3 0x 1 0x 0 0x7f 0x 6 0x 0 0x 0 0x 0 0x 0 0x 0
+
+(0x10): 0x 0 0x 0 0x20 0x 0 0x 3 0x 0 0x 1 0x 0 0x 0 0x 1 0x14 0x 0 0x 2 0x3c 0x 2 0x 3
+
+(0x20): 0x68 0x 1 0x3a 0x93 0x 4 0xee 0x 0 0x1e 0x 0 0x 0 0xff 0x 0 0x18 0xbc 0x26 0x 8
+
+(0x30): 0xad 0x 0 0x c 0x22 0x 8 0x3a 0x2d 0xd4 0x 0 0x 0 0xde 0xad 0x 0 0x 0 0x 0 0xde
+
+(0x40): 0xad 0x 0 0x 0 0xff 0xff 0xff 0xff 0x 0 0x 0 0x 0 0x 0 0xff 0x 8 0x 8 0x 8 0x10
+
+(0x50): 0x 0 0x 0 0xdf 0x52 0x20 0x64 0x 0 0x 1 0x87 0x 0 0x 1 0x 0 0x e 0x 0 0x 0 0x 0
+
+(0x60): 0xa0 0x 0 0x24 0x 0 0x 0 0x82 0x42 0x1f 0x 3 0x60 0x9d 0x 0 0x 1 0x1f 0x 9 0xd5
+
+(0x70): 0x c 0x23 0x1f 0x 0 0x 0 0x53 0x 0 0x 0 0x19 0x 0 0x64 0x 3 0x37 0x 4 0x37 0x40
 
 == DEV STATUS: 0x21 ==
 
-Valid Preamble detected -- 0x52
-
-SYNC WORD detected -- 0x92
-
-== DEV STATUS: 0x0 ==
-
-Packet detected -- 0x26
-
- SENT! SYNC RX (15):
-0x0
-0x1
-0x5
-0x1
-0x1
-0x0
-0x0
-0x1
-0x0
-0x1
-0x0
-0x1
-0x0
-0x0
-0xb
+Loading dev DEV_0, 0 bytes
 
 
-Heater 1; on:1 fault:0 last:0
-Heater 1 THRESHOLDS differ!
-IndoorTemp H:41.60(0.0) T:25.60(0.0 0.0)/26.0 SetPt:19.70 Time:8964091
-IndoorTemp H:41.40(0.0) T:25.60(0.0 0.0)/26.0 SetPt:19.70 Time:12976104
-IndoorTemp H:41.30(0.0) T:25.50(0.0 0.0)/26.0 SetPt:19.70 Time:16988687
-IndoorTemp H:41.20(0.0) T:25.50(0.0 0.0)/26.0 SetPt:19.70 Time:21001155
-IndoorTemp H:41.10(0.0) T:25.50(0.0 0.0)/26.0 SetPt:19.70 Time:25013716
-IndoorTemp H:41.00(0.0) T:25.50(0.0 0.0)/26.0 SetPt:19.70 Time:29026212
-IndoorTemp H:41.00(0.0) T:25.40(0.0 0.0)/25.9 SetPt:19.70 Time:33038649
-IndoorTemp H:41.00(0.0) T:25.40(0.0 0.0)/25.9 SetPt:19.70 Time:37051066
-IndoorTemp H:41.10(0.0) T:25.40(0.0 0.0)/25.9 SetPt:19.70 Time:41063531
-IndoorTemp H:41.20(0.0) T:25.40(0.0 0.0)/25.9 SetPt:19.70 Time:45076002
-IndoorTemp H:41.20(0.0) T:25.30(0.0 0.0)/25.9 SetPt:19.70 Time:49088436
-IndoorTemp H:41.30(0.0) T:25.30(0.0 0.0)/25.9 SetPt:19.70 Time:53100967
-IndoorTemp H:41.40(0.0) T:25.30(0.0 0.0)/25.9 SetPt:19.70 Time:57113436
-10.12.2015 00:48:02 Heap: 25656
-IndoorTemp H:41.40(0.0) T:25.30(0.0 0.0)/25.9 SetPt:19.70 Time:61125909
-IndoorTemp H:41.40(41.1) T:25.30(25.4 0.0)/25.9 SetPt:19.70 Time:65138398
-IndoorTemp H:41.50(41.2) T:25.30(25.4 0.0)/25.9 SetPt:19.70 Time:69151180
-IndoorTemp H:41.50(41.2) T:25.30(25.3 0.0)/25.9 SetPt:19.70 Time:73163972
-IndoorTemp H:41.50(41.2) T:25.30(25.3 0.0)/25.9 SetPt:19.70 Time:77176733
-IndoorTemp H:41.50(41.2) T:25.30(25.3 0.0)/25.9 SetPt:19.70 Time:81189491
-IndoorTemp H:41.50(41.2) T:25.30(25.3 0.0)/25.9 SetPt:19.70 Time:85202247
-IndoorTemp H:41.70(41.3) T:25.20(25.3 0.0)/25.8 SetPt:19.70 Time:89214817
-IndoorTemp H:41.80(41.3) T:25.20(25.3 0.0)/25.8 SetPt:19.70 Time:93227449
-IndoorTemp H:41.80(41.4) T:25.20(25.3 0.0)/25.8 SetPt:19.70 Time:97240078
-IndoorTemp H:41.70(41.4) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:101252650
-IndoorTemp H:41.60(41.5) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:105265258
-IndoorTemp H:41.60(41.5) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:109277867
-IndoorTemp H:41.60(41.5) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:113290487
-IndoorTemp H:41.60(41.5) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:117303099
-10.12.2015 00:49:02 Heap: 25656
-IndoorTemp H:42.00(41.6) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:121315664
-IndoorTemp H:42.00(41.6) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:125328234
-IndoorTemp H:42.10(41.6) T:25.10(25.2 0.0)/25.8 SetPt:19.70 Time:129340888
-IndoorTemp H:42.00(41.7) T:25.20(25.2 0.0)/25.8 SetPt:19.70 Time:133353440
-IndoorTemp H:42.00(41.7) T:25.10(25.2 0.0)/25.8 SetPt:19.70 Time:137365984
-IndoorTemp H:42.00(41.7) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:141378535
-IndoorTemp H:42.00(41.8) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:145391081
-IndoorTemp H:41.90(41.8) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:149403870
-IndoorTemp H:41.80(41.8) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:153416591
-IndoorTemp H:41.80(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:157429292
-IndoorTemp H:41.70(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:161441943
-IndoorTemp H:41.70(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:165454577
-IndoorTemp H:41.70(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:169467233
-IndoorTemp H:41.70(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:173479892
-IndoorTemp H:41.70(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:177492566
-10.12.2015 00:50:03 Heap: 25656
-IndoorTemp H:41.80(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:181505274
-IndoorTemp H:41.80(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:185517993
-IndoorTemp H:41.90(41.8) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:189530561
-IndoorTemp H:41.80(41.8) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:193543267
-IndoorTemp H:41.70(41.8) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:197555988
-IndoorTemp H:41.60(41.7) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:201568600
-IndoorTemp H:41.60(41.7) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:205581211
-IndoorTemp H:41.60(41.7) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:209593820
-IndoorTemp H:41.60(41.7) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:213606443
-IndoorTemp H:41.70(41.7) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:217619179
-IndoorTemp H:41.70(41.7) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:221631841
-IndoorTemp H:41.70(41.7) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:225644509
-IndoorTemp H:41.70(41.7) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:229657171
-IndoorTemp H:41.70(41.7) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:233669838
-IndoorTemp H:41.60(41.7) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:237682486
-10.12.2015 00:51:03 Heap: 25656
-IndoorTemp H:41.60(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:241695113
-IndoorTemp H:41.60(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:245707738
-IndoorTemp H:41.50(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:249720495
-IndoorTemp H:41.60(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:253733079
-IndoorTemp H:41.50(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:257745840
-IndoorTemp H:41.50(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:261758626
-IndoorTemp H:41.60(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:265771233
-IndoorTemp H:41.60(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:269783856
-IndoorTemp H:41.60(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:273796458
-IndoorTemp H:41.60(41.6) T:25.20(25.1 0.0)/25.8 SetPt:19.70 Time:277809059
-IndoorTemp H:41.60(41.6) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:281821673
-IndoorTemp H:41.60(41.6) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:285834276
-IndoorTemp H:41.60(41.5) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:289846906
-IndoorTemp H:41.60(41.5) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:293859516
-IndoorTemp H:41.70(41.5) T:25.10(25.1 0.0)/25.8 SetPt:19.70 Time:297872225
-10.12.2015 00:52:03 Heap: 25656
-IndoorTemp H:41.70(41.5) T:25.00(25.1 0.0)/25.7 SetPt:19.70 Time:301884874
-IndoorTemp H:41.70(41.6) T:25.00(25.1 0.0)/25.7 SetPt:19.70 Time:305897482
-IndoorTemp H:41.70(41.6) T:25.00(25.1 0.0)/25.7 SetPt:19.70 Time:309910083
-IndoorTemp H:41.80(41.6) T:25.00(25.1 0.0)/25.7 SetPt:19.70 Time:313922758
-IndoorTemp H:41.80(41.6) T:25.00(25.1 0.0)/25.7 SetPt:19.70 Time:317935418
-IndoorTemp H:41.80(41.6) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:321948092
-IndoorTemp H:41.80(41.6) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:325960769
-onAccept state: 0 K=0
-
-Free heap size=24520, K=0
-
-+TCP connection
-
-timeout updating: 70 -> 90
-
-TcpServer onClient  192.168.0.104, activeClients = 1
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
 
 
 
-onAccept state: 0 K=1
+load 0x40100000, len 23820, room 16
 
-Free heap size=24264, K=1
+tail 12
 
-+TCP connection
+chksum 0x89
 
-timeout updating: 70 -> 90
+ho 0 tail 12 room 4
 
-TcpServer onClient  192.168.0.104, activeClients = 2
+load 0x3ffe8000, len 1072, room 12
+
+tail 4
+
+chksum 0xaa
+
+load 0x3ffe8430, len 9748, room 4
+
+tail 0
+
+chksum 0x39
+
+csum 0x39
+
+rl¦¦rl¦¦¦¦¦+TCP connection
+
+timeout updating: 70 -> 65535
+
+Server timeout updating: 40 -> 90
+
+SDCard OK: TYPE 12
 
 
+libDHT: Detected DHT-22 compatible sensor.
 
-onAccept state: 0 K=2
+DEV 0x4 is DIS
 
-Free heap size=24056, K=2
+SPI is initialized now.
 
-+TCP connection
+== DEV STATUS: 0x20 ==
 
-timeout updating: 70 -> 90
+Package signature is set!
 
-TcpServer onClient  192.168.0.104, activeClients = 3
+== DEV STATUS: 0x20 ==
 
+REGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 
+(0x 0): 0x 8 0x 6 0x20 0x20 0x 0 0x 0 0x 3 0x 1 0x 0 0x7f 0x 6 0x 0 0x 0 0x 0 0x 0 0x 0
 
-path=/
+(0x10): 0x 0 0x 0 0x20 0x 0 0x 3 0x 0 0x 1 0x 0 0x 0 0x 1 0x14 0x 0 0x 2 0x3c 0x 2 0x 3
 
-Host === 192.168.0.103
+(0x20): 0x68 0x 1 0x3a 0x93 0x 4 0xee 0x 0 0x1e 0x 0 0x 0 0xff 0x 0 0x18 0xbc 0x26 0x 8
 
-Sec-WebSocket-Key === JB3UzLxK3lptA8nbMAKIUA==
+(0x30): 0xad 0x 0 0x c 0x22 0x 8 0x3a 0x2d 0xd4 0x 0 0x 0 0xde 0xad 0x 0 0x 0 0x 0 0xde
 
-Sec-WebSocket-Version === 13
+(0x40): 0xad 0x 0 0x 0 0xff 0xff 0xff 0xff 0x 0 0x 0 0x 0 0x 0 0xff 0x 8 0x 8 0x 8 0x10
 
-Upgrade === websocket
+(0x50): 0x 0 0x 0 0xdf 0x52 0x20 0x64 0x 0 0x 1 0x87 0x 0 0x 1 0x 0 0x e 0x 0 0x 0 0x 0
 
-parsed
+(0x60): 0xa0 0x 0 0x24 0x 0 0x 0 0x82 0x42 0x1f 0x 3 0x60 0x9d 0x 0 0x 1 0x1f 0x 9 0xd5
 
-Request: GET, nodata
+(0x70): 0x c 0x23 0x1f 0x 0 0x 0 0x53 0x 0 0x 0 0x19 0x 0 0x64 0x 3 0x37 0x 4 0x37 0x40
 
-response sendHeader
+== DEV STATUS: 0x21 ==
 
-Switched to WebSocket Protocol
-
-timeout updating: 90 -> 65535
-
-path=/
-
-Host === 192.168.0.103
-
-Sec-WebSocket-Key === qyBtJeQIfPHgN4CGPtZoQQ==
-
-Sec-WebSocket-Version === 13
-
-Upgrade === websocket
-
-parsed
-
-Request: GET, nodata
-
-response sendHeader
-
-Switched to WebSocket Protocol
-
-timeout updating: 90 -> 65535
-
-path=/
-
-Host === 192.168.0.103
-
-Sec-WebSocket-Key === 5X7zOaik0iiGIH3IXnqeRg==
-
-Sec-WebSocket-Version === 13
-
-Upgrade === websocket
-
-parsed
-
-Request: GET, nodata
-
-response sendHeader
-
-Switched to WebSocket Protocol
-
-timeout updating: 90 -> 65535
-
-IndoorTemp H:41.80(41.6) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:329973504
-IndoorTemp H:41.80(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:333986254
-IndoorTemp H:41.80(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:337998910
-IndoorTemp H:41.80(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:342011590
-IndoorTemp H:41.70(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:346024222
-IndoorTemp H:41.70(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:350036831
-IndoorTemp H:41.70(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:354049445
-IndoorTemp H:41.70(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:358062036
-10.12.2015 00:53:03 Heap: 20480
-IndoorTemp H:41.80(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:362074704
-IndoorTemp H:41.80(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:366087409
-IndoorTemp H:41.80(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:370100073
-IndoorTemp H:41.80(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:374112734
-IndoorTemp H:41.90(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:378125446
-IndoorTemp H:41.90(41.7) T:25.00(25.0 0.0)/25.7 SetPt:19.70 Time:382138163
-IndoorTemp H:41.80(41.7) T:24.90(24.9 0.0)/25.7 SetPt:19.70 Time:386150790
-IndoorTemp H:41.80(41.7) T:25.00(24.9 0.0)/25.7 SetPt:19.70 Time:390163461
-IndoorTemp H:41.70(41.7) T:25.00(24.9 0.0)/25.7 SetPt:19.70 Time:394176079
-IndoorTemp H:41.70(41.7) T:24.90(24.9 0.0)/25.7 SetPt:19.70 Time:398188766
-IndoorTemp H:41.70(41.7) T:24.90(24.9 0.0)/25.7 SetPt:19.70 Time:402201434
-IndoorTemp H:41.60(41.7) T:24.90(24.9 0.0)/25.7 SetPt:19.70 Time:406214018
-IndoorTemp H:41.60(41.7) T:24.90(24.9 0.0)/25.7 SetPt:19.70 Time:410226590
-IndoorTemp H:41.60(41.7) T:24.90(24.9 0.0)/25.7 SetPt:19.70 Time:414239173
+Loading dev DEV_0, 0 bytes

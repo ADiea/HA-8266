@@ -183,16 +183,8 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 
 	if(getRadio(1000))
 	{
-		fRes = f_open(&file, fname, FA_WRITE | FA_CREATE_ALWAYS);
-
 		do
 		{
-			if (fRes != FR_OK)
-			{
-				LOG_E("devWriteDisk err %d", (int)fRes);
-				break;
-			}
-
 			size = dev->serialize(devBuffer, MAXDEVSZ);
 
 			if(size == MAXDEVSZ)
@@ -202,12 +194,19 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 				break;
 			}
 
-			//you can write directly
+			fRes = f_open(&file, fname, FA_WRITE | FA_CREATE_ALWAYS);
+
+			if (fRes != FR_OK)
+			{
+				LOG_E("devWriteDisk err %d", (int)fRes);
+				break;
+			}
+
 			f_write(&file, devBuffer, size, &actual);
 
 			if (actual != size)
 			{
-				LOG_E("devWriteDisk written %d bytes\n", actual);
+				LOG_E("devWriteDisk written %d of %d bytes\n", actual, size);
 			}
 			else
 			{
@@ -259,6 +258,12 @@ bool deviceReadFromDisk(char* path)
 		if(!devicesString)
 		{
 			LOG_E("devReadDisk no heap");
+			break;
+		}
+
+		if(fno.fsize == 0)
+		{
+			LOG_E("File %s has 0 bytes", path);
 			break;
 		}
 

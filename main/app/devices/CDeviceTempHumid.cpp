@@ -50,6 +50,8 @@ void CDeviceTempHumid::onUpdateTimer()
 void CDeviceTempHumid::requestUpdateState()
 {
 	uint8_t errValue;
+
+	float currentTemperature;
 	int i;
 	if(locLocal == m_location)
 	{
@@ -73,12 +75,18 @@ void CDeviceTempHumid::requestUpdateState()
 			devDHT22_comfortRatio();
 			LOG_I( "\n");*/
 
-			if(m_state.tempSetpoint > m_tempThreshold + m_state.fLastTemp_8m)
+			currentTemperature = m_state.fLastTemp_8m;
+			if(-0.1 < currentTemperature || currentTemperature < 0.1)
+				currentTemperature = m_state.fLastTemp_8m;
+			if(-0.1 < currentTemperature || currentTemperature < 0.1)
+				currentTemperature = m_state.lastTH.temp;
+
+			if(m_state.tempSetpoint > m_tempThreshold + currentTemperature)
 			{
 				m_state.bNeedHeating = true;
 				m_state.bNeedCooling = false;
 			}
-			else if(m_state.tempSetpoint < m_state.fLastTemp_1m - m_tempThreshold)
+			else if(m_state.tempSetpoint < currentTemperature - m_tempThreshold)
 			{
 				m_state.bNeedHeating = false;
 				m_state.bNeedCooling = true;
