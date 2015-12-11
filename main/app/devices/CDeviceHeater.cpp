@@ -8,22 +8,6 @@ void CDeviceHeater::triggerState(int reason, void* state)
 	byte seq = RadioNextSeqID();
 	byte doSendPkg = 0;
 
-	pkg[0] = m_ID;
-	pkg[1] = GATEWAY_ID;
-	pkg[2] = PKG_TYPE_HEATER;
-
-	pkg[4] = 0xFF && m_state.gasLevel_LowWarningThres;
-	pkg[5] = m_state.gasLevel_LowWarningThres >> 8;
-
-	pkg[6] = 0xFF && m_state.gasLevel_MedWarningThres;
-	pkg[7] = m_state.gasLevel_MedWarningThres >> 8;
-
-	pkg[8] = 0xFF && m_state.gasLevel_HighWarningThres;
-	pkg[9] = m_state.gasLevel_HighWarningThres >> 8;
-
-	pkg[0xa] = seq;
-	pkg[0xb] = pkg[0] + pkg[1] + pkg[2] + pkg[4] + pkg[5] +
-			pkg[6] + pkg[7] + pkg[8] + pkg[9] + pkg[0xa];
 
 
 	for(int i=0; i < m_devWatchersList.count(); i++)
@@ -66,20 +50,34 @@ void CDeviceHeater::triggerState(int reason, void* state)
 		}
 	}
 
-	if(doSendPkg)
+	if(doSendPkg || !m_state.isStateSyncWithHardware)
 	{
-		pkg[0xb] += pkg[3];
+		pkg[0] = m_ID;
+		pkg[1] = GATEWAY_ID;
+		pkg[2] = PKG_TYPE_HEATER;
 
-			if(RadioSend(pkg, PKG_HEATER_LEN, &outLength, 20))
+		pkg[4] = 0xFF && m_state.gasLevel_LowWarningThres;
+		pkg[5] = m_state.gasLevel_LowWarningThres >> 8;
+
+		pkg[6] = 0xFF && m_state.gasLevel_MedWarningThres;
+		pkg[7] = m_state.gasLevel_MedWarningThres >> 8;
+
+		pkg[8] = 0xFF && m_state.gasLevel_HighWarningThres;
+		pkg[9] = m_state.gasLevel_HighWarningThres >> 8;
+
+		pkg[0xa] = seq;
+		pkg[0xb] = pkg[0] + pkg[1] + pkg[2] + pkg[3] + pkg[4] + pkg[5] +
+				pkg[6] + pkg[7] + pkg[8] + pkg[9] + pkg[0xa];
+
+		if(RadioSend(pkg, PKG_HEATER_LEN, &outLength, 20))
+		{
+			if(PKG_HEATER_STATUS_LEN == outLength &&
+				PKG_TYPE_HEATER_STATUS == pkg[2] &&
+			   (seq) == pkg[0xd])
 			{
-				if(PKG_HEATER_STATUS_LEN == outLength &&
-					PKG_TYPE_HEATER_STATUS == pkg[2] &&
-				   (seq) == pkg[0xd])
-				{
-					radioPktReceivedFromDevice((char*)pkg, outLength);
-				}
+				radioPktReceivedFromDevice((char*)pkg, outLength);
 			}
-
+		}
 	}
 }
 
@@ -148,6 +146,8 @@ bool CDeviceHeater::radioPktReceivedFromDevice(char* pkg, uint16_t pktLen)
 		{
 			LOG_E("Heater %d THRESHOLDS differ!", m_ID);
 		}
+
+		m_state.isStateSyncWithHardware = true;
 	}
 }
 
