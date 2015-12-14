@@ -91,7 +91,6 @@ void CDeviceTempHumid::requestUpdateState()
 
 
 			if(m_state.tempSetpoint > m_tempThreshold + fTurnOnTemp)
-
 			{
 				m_state.bNeedHeating = true;
 				m_state.bNeedCooling = false;

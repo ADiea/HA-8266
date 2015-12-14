@@ -31,7 +31,19 @@ void CDeviceHeater::triggerState(int reason, void* state)
 		}
 	}
 
-	if(bHeaterRequestOn)
+	if(!m_state.isStateSyncWithHardware)
+	{
+		if(m_state.isOn)
+		{
+			pkg[3] = HEATER_REQ_ON;
+		}
+		else
+		{
+			pkg[3] = HEATER_REQ_OFF;
+		}
+		doSendPkg = 1;
+	}
+	else  if(bHeaterRequestOn)
 	{
 		if(!m_state.isOn)
 		{
@@ -48,7 +60,7 @@ void CDeviceHeater::triggerState(int reason, void* state)
 		}
 	}
 
-	if(doSendPkg || !m_state.isStateSyncWithHardware)
+	if(doSendPkg)
 	{
 		LOG_I("HEATER(%d) REQ: %s", m_ID, (pkg[3]==HEATER_REQ_OFF)?"OFF":"ON");
 
