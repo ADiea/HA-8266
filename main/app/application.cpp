@@ -18,6 +18,8 @@
 
 #define ONE_SECOND 1000000
 
+
+
 static inline unsigned get_ccount(void)
 {
 	unsigned r;
@@ -146,6 +148,8 @@ static void mainLoop()
 	byte len = 0;
 
 	uint16_t i;
+
+	wsPruneConnections();
 
 	if(Radio && getRadio(1))
 	{

@@ -1,90 +1,91 @@
 #include "webServer.h"
 #include "device.h"
 
+#define WEBSOCK_USERSLOTS 10
+
+#define ALIVE_INIT_STATE 0
+#define ALIVE_TEST_STATE 1
+#define ALIVE_OK_STATE 2
+
+struct WebSockUserData
+{
+	WebSockUserData():isInvalid(true), aliveState(ALIVE_INIT_STATE)
+	{}
+
+	void dataArrived()
+	{
+		LOG_I("WS Data arrived!");
+		aliveState = ALIVE_OK_STATE;
+	}
+
+	bool isAlive()
+	{
+		if(aliveState == ALIVE_INIT_STATE)
+		{
+			aliveState = ALIVE_TEST_STATE;
+			return true;
+		}
+		else if(aliveState == ALIVE_TEST_STATE)
+		{
+			return false;
+		}
+		return true;
+	}
+
+	bool isInvalid;
+	uint32 aliveState;
+};
+
+WebSockUserData g_sockDataPool[WEBSOCK_USERSLOTS];
 
 NtpClient *gNTPClient;
 HttpServer gHttpServer;
 
-	uint32_t totalActiveSockets=0;
+	uint32 totalActiveSockets=0;
 	void onRequest(HttpRequest &request, HttpResponse &response)
 	{
 		response.sendString("Bad Request");
 	}
 
-
 	void wsConnected(WebSocket& socket)
 	{
-		totalActiveSockets++;
+		uint32 i = 0, freeSlot = 0;
+		for(;i<WEBSOCK_USERSLOTS;i++)
+		{
+			if(g_sockDataPool[i].isInvalid)
+			{
+				g_sockDataPool[i].isInvalid = false;
+				g_sockDataPool[i].aliveState = ALIVE_INIT_STATE;
+				freeSlot = 1;
+				break;
+			}
+		}
 
-		// Notify everybody about new connection
-		WebSocketsList &clients = gHttpServer.getActiveWebSockets();
-		for (int i = 0; i < clients.count(); i++)
-			clients[i].sendString("New ws conn! Total: " + String(totalActiveSockets));
+		if(freeSlot)
+		{
+			socket.setUserData((void*)(&g_sockDataPool[i]));
+
+			totalActiveSockets++;
+
+			// Notify everybody about new connection
+			WebSocketsList &clients = gHttpServer.getActiveWebSockets();
+			for (int i = 0; i < clients.count(); i++)
+				clients[i].sendString("New ws conn! Total: " + String(totalActiveSockets));
+
+		}
+		else
+		{
+			LOG_I( "WS Cannot accept new conn.\n");
+		}
 	}
-
-	bool parseWsPacket(const String& message)
-	{
-		const char* msg =  message.c_str();
-
-		static uint8_t sequence = 0;
-
-		byte pkg[64] = {0};
-
-		bool retVal = false;
-
-		int intensity = 0;
-		int ontime_min = 0;
-		int ontime_sec = 0;
-		int dimspeed = 0;
-		int minValue = 0;
-		int manual = 0;
-
-
-		LOG_I( "WS intensity:%u min:%u s:%u speed:%u manual:%u min:%u\n",
-				intensity, ontime_min, ontime_sec, dimspeed, manual, minValue);
-
-		#define DIMMER_ID 0x01
-		#define MY_ID 0xFF
-
-		/*PKG intensity
-		[address 1B]
-		[pgk_type==PKG_TYPE_INTENSITY 1B]
-		[intensity 1B]
-		[on duration(s)= min 4b + sec*4 4b 1B]
-		[flags 4b fadeSpeed 4b]
-		[minValue 1B]
-		[sequence 1B]
-		[checksum 1B]
-		*/
-		#define PKG_INTENSITY_LEN 0x08
-
-		#define PKG_TYPE_INVALID 0x00
-
-		#define PKG_TYPE_INTENSITY 0x02
-
-		#define PKG_MANUAL_FLAG 0x80
-
-		pkg[0] = DIMMER_ID;
-		pkg[1] = PKG_TYPE_INTENSITY;
-		pkg[2] = intensity;
-		pkg[3] = ((ontime_min << 4) & 0xF0) | (0xF & (ontime_sec >> 2));
-		pkg[4] = dimspeed & 0xF;
-		if(manual)
-			pkg[4] |= PKG_MANUAL_FLAG;
-		pkg[5] = minValue;
-		pkg[6] = ++sequence;
-
-		pkg[7] = (pkg[0] + pkg[1] + pkg[2] + pkg[3] + pkg[4] + pkg[5]+ pkg[6]) & 0xFF;
-
-		//retVal = RadioSend(pkg, PKG_INTENSITY_LEN);
-				
-		return retVal;
-	}
-
 
 	void wsMessageReceived(WebSocket& socket, const String& message)
 	{
 		LOG_I( "WS RX:%s", message.c_str());
+
+		WebSockUserData *pData = (WebSockUserData*) socket.getUserData();
+		if(pData)
+			pData->dataArrived();
 
 		cwReceivePacket(socket, message.c_str());
 	}
@@ -96,6 +97,10 @@ HttpServer gHttpServer;
 
 	void wsDisconnected(WebSocket& socket)
 	{
+		WebSockUserData *pData = (WebSockUserData*) socket.getUserData();
+		if(pData)
+			pData->isInvalid = true;
+
 		totalActiveSockets--;
 
 		// Notify everybody about lost connection
@@ -104,10 +109,26 @@ HttpServer gHttpServer;
 			clients[i].sendString("WS client disconnected Total: " + String(totalActiveSockets));
 	}
 
+	void wsPruneConnections()
+	{
+		WebSockUserData *pData;
+		WebSocketsList &clients = gHttpServer.getActiveWebSockets();
+		for (int i = 0; i < clients.count(); i++)
+		{
+			pData = (WebSockUserData*) clients[i].getUserData();
+			if(pData && !pData->isAlive())
+			{
+				clients[i].disconnect();
+				pData->isInvalid = true;
+			}
+		}
+	}
+
 	void startWebServers()
 	{
 		////Serial.print(3);
 		gHttpServer.listen(80);
+		//gHttpServer.setTimeOut(5);
 		gHttpServer.addPath("/", onRequest);
 		gHttpServer.setDefaultHandler(onRequest);
 	

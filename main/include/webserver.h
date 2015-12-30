@@ -11,5 +11,6 @@ extern NtpClient *gNTPClient;
 extern HttpServer gHttpServer;
 
 void startWebServers();
+void wsPruneConnections();
 
 #endif
