@@ -32,6 +32,7 @@ struct WebSockUserData
 		return true;
 	}
 
+	WebSocket *webSock;
 	bool isInvalid;
 	uint32 aliveState;
 };
@@ -56,6 +57,7 @@ HttpServer gHttpServer;
 			{
 				g_sockDataPool[i].isInvalid = false;
 				g_sockDataPool[i].aliveState = ALIVE_INIT_STATE;
+				g_sockDataPool[i].webSock = &socket;
 				freeSlot = 1;
 				break;
 			}
@@ -63,8 +65,6 @@ HttpServer gHttpServer;
 
 		if(freeSlot)
 		{
-			socket.setUserData((void*)(&g_sockDataPool[i]));
-
 			totalActiveSockets++;
 
 			// Notify everybody about new connection
@@ -83,9 +83,18 @@ HttpServer gHttpServer;
 	{
 		LOG_I( "WS RX:%s", message.c_str());
 
-		WebSockUserData *pData = (WebSockUserData*) socket.getUserData();
-		if(pData)
-			pData->dataArrived();
+		uint32 i = 0;
+		for(;i<WEBSOCK_USERSLOTS;i++)
+		{
+			if(!g_sockDataPool[i].isInvalid)
+			{
+				if(g_sockDataPool[i].webSock == &socket)
+				{
+					g_sockDataPool[i].dataArrived();
+					break;
+				}
+			}
+		}
 
 		cwReceivePacket(socket, message.c_str());
 	}
@@ -97,9 +106,18 @@ HttpServer gHttpServer;
 
 	void wsDisconnected(WebSocket& socket)
 	{
-		WebSockUserData *pData = (WebSockUserData*) socket.getUserData();
-		if(pData)
-			pData->isInvalid = true;
+		uint32 i = 0;
+		for(;i<WEBSOCK_USERSLOTS;i++)
+		{
+			if(!g_sockDataPool[i].isInvalid)
+			{
+				if(g_sockDataPool[i].webSock == &socket)
+				{
+					g_sockDataPool[i].isInvalid = true;
+					break;
+				}
+			}
+		}
 
 		totalActiveSockets--;
 
@@ -112,14 +130,24 @@ HttpServer gHttpServer;
 	void wsPruneConnections()
 	{
 		WebSockUserData *pData;
+		uint32 i = 0, s = 0;
 		WebSocketsList &clients = gHttpServer.getActiveWebSockets();
-		for (int i = 0; i < clients.count(); i++)
+		for (s = 0; s < clients.count(); s++)
 		{
-			pData = (WebSockUserData*) clients[i].getUserData();
-			if(pData && !pData->isAlive())
+			for(i = 0; i < WEBSOCK_USERSLOTS; i++)
 			{
-				clients[i].disconnect();
-				pData->isInvalid = true;
+				if(!g_sockDataPool[i].isInvalid)
+				{
+					if(g_sockDataPool[i].webSock == &(clients[s]))
+					{
+						if(!g_sockDataPool[i].isAlive())
+						{
+							clients[s].close();
+							g_sockDataPool[i].isInvalid = true;
+						}
+						break;
+					}
+				}
 			}
 		}
 	}
