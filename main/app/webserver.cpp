@@ -138,6 +138,7 @@ HttpServer gHttpServer;
 			{
 				if(!g_sockDataPool[i].isInvalid)
 				{
+					//todo: will comparison always work?
 					if(g_sockDataPool[i].webSock == &(clients[s]))
 					{
 						if(!g_sockDataPool[i].isAlive())

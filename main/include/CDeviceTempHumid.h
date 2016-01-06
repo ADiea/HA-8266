@@ -43,6 +43,12 @@ enum eSensorLocation
 	locRemote
 };
 
+struct autoPilotSlot
+{
+	uint8_t startHour, startMinute, endHour, endMinute;
+	float setTemp;
+};
+
 struct tTempHumidState
 {
 	tTempHumidState(float setpoint, float setpointMin, float setpointMax):
@@ -141,6 +147,11 @@ public:
 	eSensorLocation m_location;
 
 	float m_tempThreshold;
+
+	Vector<autoPilotSlot> autoPrograms[7];
+
+	uint32_t autopilotIndex;
+	uint8_t autopilotDay;
 
 };
 

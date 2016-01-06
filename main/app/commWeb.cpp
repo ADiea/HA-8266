@@ -38,7 +38,7 @@ bool handle_cwSetLightParams(WebSocket& socket, const char **pkt)
 
 bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 {
-	int i = 0, numDevs = 0, sizePkt = 0;
+	int i = 0, numDevs = 0, sizePkt = 0, j, len, k;
 	CDeviceTempHumid *th;
 	CDeviceHeater *heat;
 
@@ -65,11 +65,28 @@ bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 		{
 			th = (CDeviceTempHumid*)g_activeDevices[i];
 			sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
-							"%d;%s;%.1f;%.1f;%d;%d;%d;%d;%.1f;%.1f;%.1f;%.1f;%.1f;", th->m_ID,
+							"%d;%s;%.1f;%.1f;%d;%d;%d;%d;%.1f;%.1f;%.1f;%.1f;%.1f;%d;%d;", th->m_ID,
 							th->m_FriendlyName.c_str(),
 							th->m_state.tempSetpoint, th->m_state.lastTH.temp, 1, th->m_state.bEnabled, th->m_state.bIsHeating, th->m_state.bIsCooling,
 							th->m_state.tempSetpointMin, th->m_state.tempSetpointMax, th->m_state.lastTH.humid,
-							th->m_state.fLastTemp_1m, th->m_state.fLastTemp_8m);
+							th->m_state.fLastTemp_1m, th->m_state.fLastTemp_8m, th->autopilotDay, th->autopilotIndex);
+
+			for(j=0; j<7; j++)
+			{
+				len = th->autoPrograms[j].count();
+				sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
+						"%d;", len);
+				for(k = 0; k < len; k++)
+				{
+					sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
+											"%.1f;%d;%d;%d;%d;",
+											th->autoPrograms[j][k].setTemp,
+											th->autoPrograms[j][k].startHour,
+											th->autoPrograms[j][k].startMinute,
+											th->autoPrograms[j][k].endHour,
+											th->autoPrograms[j][k].endMinute);
+				}
+			}
 		}
 		else if(devTypeHeater == devType && devTypeHeater == g_activeDevices[i]->m_deviceType)
 		{
@@ -88,7 +105,7 @@ bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 
 bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
 {
-	int i = 0, numDevs = 0, sizePkt = 0;
+	int i = 0, numDevs = 0, sizePkt = 0, j, k, len;
 	CDeviceTempHumid *th;
 
 	int thID;
@@ -122,6 +139,29 @@ bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
 					th->m_state.tempSetpointMax = maxTemp;
 
 					th->m_FriendlyName = devName;
+
+					for(j=0; j<7; j++)
+					{
+						if(!skipInt(pkt, &len))
+						{
+
+						}
+
+						len = th->autoPrograms[j].count();
+						sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
+								"%d;", len);
+						for(k = 0; k < len; k++)
+						{
+							sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
+													"%.1f;%d;%d;%d;%d;",
+													th->autoPrograms[j][k].setTemp,
+													th->autoPrograms[j][k].startHour,
+													th->autoPrograms[j][k].startMinute,
+													th->autoPrograms[j][k].endHour,
+													th->autoPrograms[j][k].endMinute);
+						}
+					}
+
 					deviceWriteToDisk((CGenericDevice*)th);
 				}
 				else

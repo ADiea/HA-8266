@@ -12,6 +12,7 @@ enum eCommWebErrorCodes
 	cwErrInvalidDeviceID,
 	cwErrDeviceDoesNotAnswer,
 	cwErrInvalidCommandParams,
+	cwErrProtocolError
 };
 
 enum eCommWebMsgTYpes
