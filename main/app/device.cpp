@@ -179,6 +179,14 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 	if(!dev || !devBuffer)
 		return false;
 
+	unsigned long now = millis();
+
+	if( now - dev->m_LastWriteToDiskTimestamp < MIN_TIME_WRITE_TO_DISK)
+	{
+		LOG_E("devWriteDisk HOLD UPDATE for %d\n", dev->m_ID);
+		return false;
+	}
+
 	m_snprintf(fname, sizeof(fname), "DEV_%d", dev->m_ID);
 
 	if(getRadio(1000))
@@ -213,7 +221,9 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 				LOG_E("devWriteDisk SAVED %d\n", dev->m_ID);
 				bRet = true;
 			}
+
 			f_close(&file);
+			dev->m_LastWriteToDiskTimestamp = now;
 		}
 		while(0);
 

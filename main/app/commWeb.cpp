@@ -4,18 +4,13 @@
 #include "commWeb.h"
 #include "util.h"
 
-
 #define PKG_BUF_SIZE 256
-
-
 
 char scrapPackage[PKG_BUF_SIZE];
 
-
-
-bool reply_cwReplyToCommand(WebSocket& socket, eCommWebErrorCodes err)
+bool reply_cwReplyToCommand(WebSocket& socket, eCommWebErrorCodes err, int lastCmdType = 0, int sequence = 0)
 {
-	int sizePkt = m_snprintf(scrapPackage, sizeof(scrapPackage), "%d;%d;", cwReplyToCommand, err);
+	int sizePkt = m_snprintf(scrapPackage, sizeof(scrapPackage), "%d;%d;%d;%d;", cwReplyToCommand, err, lastCmdType, sequence);
 	socket.send((const char*)scrapPackage, sizePkt);
 }
 
@@ -69,22 +64,22 @@ bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 							th->m_FriendlyName.c_str(),
 							th->m_state.tempSetpoint, th->m_state.lastTH.temp, 1, th->m_state.bEnabled, th->m_state.bIsHeating, th->m_state.bIsCooling,
 							th->m_state.tempSetpointMin, th->m_state.tempSetpointMax, th->m_state.lastTH.humid,
-							th->m_state.fLastTemp_1m, th->m_state.fLastTemp_8m, th->autopilotDay, th->autopilotIndex);
+							th->m_state.fLastTemp_1m, th->m_state.fLastTemp_8m, th->m_autopilotDay, th->m_autopilotIndex);
 
 			for(j=0; j<7; j++)
 			{
-				len = th->autoPrograms[j].count();
+				len = th->m_autoPrograms[j].count();
 				sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
 						"%d;", len);
 				for(k = 0; k < len; k++)
 				{
 					sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
 											"%.1f;%d;%d;%d;%d;",
-											th->autoPrograms[j][k].setTemp,
-											th->autoPrograms[j][k].startHour,
-											th->autoPrograms[j][k].startMinute,
-											th->autoPrograms[j][k].endHour,
-											th->autoPrograms[j][k].endMinute);
+											th->m_autoPrograms[j][k].setTemp,
+											th->m_autoPrograms[j][k].startHour,
+											th->m_autoPrograms[j][k].startMinute/5,
+											th->m_autoPrograms[j][k].endHour,
+											th->m_autoPrograms[j][k].endMinute/5);
 				}
 			}
 		}
@@ -105,8 +100,9 @@ bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 
 bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
 {
-	int i = 0, numDevs = 0, sizePkt = 0, j, k, len;
+	int i = 0, numDevs = 0, sizePkt = 0, j, k, len, sequence = 0;
 	CDeviceTempHumid *th;
+	autoPilotSlot programSlot;
 
 	int thID;
 	float setTemp, minTemp, maxTemp;
@@ -125,6 +121,11 @@ bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
 
 		for(i=0; i < g_activeDevices.count(); i++)
 		{
+			if(retCode != cwErrSuccess)
+			{
+				break;
+			}
+
 			if(thID == g_activeDevices[i]->m_ID)
 			{
 				th = (CDeviceTempHumid*)g_activeDevices[i];
@@ -142,41 +143,55 @@ bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
 
 					for(j=0; j<7; j++)
 					{
-						if(!skipInt(pkt, &len))
+						if(retCode != cwErrSuccess)
 						{
-
+							break;
 						}
 
-						len = th->autoPrograms[j].count();
-						sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
-								"%d;", len);
+						if(!skipInt(pkt, &len))
+						{
+							retCode = cwErrInvalidCommandParams;
+							break;
+						}
+
+						th->m_autoPrograms[j].clear();
+
 						for(k = 0; k < len; k++)
 						{
-							sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
-													"%.1f;%d;%d;%d;%d;",
-													th->autoPrograms[j][k].setTemp,
-													th->autoPrograms[j][k].startHour,
-													th->autoPrograms[j][k].startMinute,
-													th->autoPrograms[j][k].endHour,
-													th->autoPrograms[j][k].endMinute);
+							if(!skipFloat(pkt, &(programSlot.setTemp)) ||
+							   !skipInt(pkt, &(programSlot.startHour)) ||
+							   !skipInt(pkt, &(programSlot.startMinute)) ||
+							   !skipInt(pkt, &(programSlot.endHour)) ||
+							   !skipInt(pkt, &(programSlot.endMinute)))
+							{
+								retCode = cwErrInvalidCommandParams;
+								break;
+							}
+							programSlot.startMinute *= 5;
+							programSlot.endMinute *= 5;
+							th->m_autoPrograms[j].addElement(programSlot);
 						}
 					}
 
-					deviceWriteToDisk((CGenericDevice*)th);
+					if(!skipInt(pkt, &sequence))
+						retCode = cwErrInvalidCommandParams;
+
+					if(retCode != cwErrSuccess)
+						break;
+					else
+						deviceWriteToDisk((CGenericDevice*)th);
 				}
 				else
 				{
 					retCode = cwErrInvalidCommandParams;
 				}
-
 				break;
 			}
 		}
 	}
 	while(false);
 
-
-	reply_cwReplyToCommand(socket, retCode);
+	reply_cwReplyToCommand(socket, retCode, cwSetTHParams, sequence);
 }
 
 bool handle_cwSetHeaterParams(WebSocket& socket, const char **pkt)

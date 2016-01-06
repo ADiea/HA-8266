@@ -59,7 +59,7 @@ void CDeviceTempHumid::requestUpdateState()
 
 		if(DEV_ERR_OK == errValue)
 		{
-			m_LastUpdateTimestamp = system_get_time();
+			m_LastUpdateTimestamp = system_get_time() / 1000;
 
 			m_state.fLastTemp_1m = m_state.fAverageTemp_1m.feed(m_state.lastTH.temp);
 			m_state.fLastTemp_8m = m_state.fAverageTemp_8m.feed(m_state.lastTH.temp);
@@ -165,12 +165,25 @@ bool CDeviceTempHumid::deserialize(const char **devicesString)
 		LOG_I("Add watcher ID:%d", devID);
 		addWatcherDevice(devID);
 	}
+
+//	set autopilot day autopilot index
+
+	if(!skipInt(devicesString, &))
+	{
+
+	}
+	else
+	{
+
+	}
+
+
 	return true;
 }
 
 uint32_t CDeviceTempHumid::serialize(char* buffer, uint32_t size)
 {
-	int i;
+	int i, j, k, len;
 	int sz = m_snprintf(buffer, size, "%d;%d;%s;%f;%f;%f;%d;%d;%d;", devTypeTH, m_ID, m_FriendlyName.c_str(),
 					m_state.tempSetpoint, m_state.tempSetpointMin, m_state.tempSetpointMax, (int)m_location,
 					m_state.bEnabled ? 1:0,
@@ -179,6 +192,24 @@ uint32_t CDeviceTempHumid::serialize(char* buffer, uint32_t size)
 	for(i = 0; i < m_devWatchersList.count(); i++)
 	{
 		sz += m_snprintf(buffer + sz, size - sz, "%d;", m_devWatchersList[i].id);
+	}
+
+	//sz += m_snprintf(buffer + sz, size - sz, "%d;%d;", m_autopilotDay, m_autopilotIndex);
+
+	for(j=0; j<7; j++)
+	{
+		len = m_autoPrograms[j].count();
+		sz += m_snprintf(buffer+sz, size-sz, "%d;", len);
+		for(k = 0; k < len; k++)
+		{
+			sz += m_snprintf(buffer+sz, size-sz,
+									"%.1f;%d;%d;%d;%d;",
+									m_autoPrograms[j][k].setTemp,
+									m_autoPrograms[j][k].startHour,
+									m_autoPrograms[j][k].startMinute,
+									m_autoPrograms[j][k].endHour,
+									m_autoPrograms[j][k].endMinute);
+		}
 	}
 
 	return sz;

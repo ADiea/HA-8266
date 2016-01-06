@@ -44,6 +44,8 @@
 
 #define MAX_FRIENDLY_NAME 64
 
+#define MIN_TIME_WRITE_TO_DISK 5000 //5s
+
 #define isDevEnabled(dev) ((dev) & gDevicesState)
 
 void enableDev(unsigned short, uint8_t op);
@@ -120,7 +122,8 @@ public:
 
 	uint32_t m_ID;
 	String m_FriendlyName;
-	uint32_t m_LastUpdateTimestamp;
+	unsigned long m_LastUpdateTimestamp;
+	unsigned long m_LastWriteToDiskTimestamp;
 	eDeviceType m_deviceType;
 	int m_updateInterval;
 	Timer m_updateTimer;

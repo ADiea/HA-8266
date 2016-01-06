@@ -45,7 +45,7 @@ enum eSensorLocation
 
 struct autoPilotSlot
 {
-	uint8_t startHour, startMinute, endHour, endMinute;
+	int startHour, startMinute, endHour, endMinute;
 	float setTemp;
 };
 
@@ -148,10 +148,10 @@ public:
 
 	float m_tempThreshold;
 
-	Vector<autoPilotSlot> autoPrograms[7];
+	Vector<autoPilotSlot> m_autoPrograms[7];
 
-	uint32_t autopilotIndex;
-	uint8_t autopilotDay;
+	uint32_t m_autopilotIndex;
+	uint8_t m_autopilotDay;
 
 };
 
