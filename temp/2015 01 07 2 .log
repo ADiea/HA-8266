@@ -1,0 +1,120 @@
+SPI is initialized now.
+
+== DEV STATUS: 20 ==
+
+Package signature is set!
+
+== DEV STATUS: 20 ==
+
+REGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+
+(00): 08 06 20 20 00 00 03 01 00 7f 06 00 00 00 00 00
+
+(10): 00 00 20 00 03 00 01 00 00 01 14 00 02 3c 02 03
+
+(20): 68 01 3a 93 04 ee 00 1e 00 00 ff 00 18 bc 26 08
+
+(30): ad 00 0c 22 08 3a 2d d4 00 00 de ad 00 00 00 de
+
+(40): ad 00 00 ff ff ff ff 00 00 00 00 ff 08 08 08 10
+
+(50): 00 00 df 52 20 64 00 01 87 00 01 00 0e 00 00 00
+
+(60): a0 00 24 00 00 82 42 1f 03 60 9d 00 01 1f 09 d5
+
+(70): 0c 23 1f 00 00 53 00 00 19 00 64 03 37 04 37 40
+
+== DEV STATUS: 21 ==
+
+Loading dev DEV_0, 33 bytes
+Type: TH
+TH device: 0;Dormitor;23.;15.;27.;0;1;1;1;
+TH device ID:0 NAME: Dormitor
+Add watcher ID:1
+Added device.
+Loading dev DEV_1, 26 bytes
+Type:HEATER
+HEATER device ID:1 NAME: Heater
+Add watcher ID:0
+Added device.
+System start.
+
+Reset:
+REASON_DEFAULT_RST
+
+Chip id=10502778
+
+
+Flash id=1261768
+
+
+Mem info:
+
+
+data  : 0x3ffe8000 ~ 0x3ffe842d, len: 1069
+
+rodata: 0x3ffe8430 ~ 0x3ffeaadc, len: 9900
+
+bss   : 0x3ffeaae0 ~ 0x3fff1758, len: 27768
+
+heap  : 0x3fff1758 ~ 0x3fffc000, len: 43176
+
+Station configuration was updated to: TP-LINK_B4EB92
+
+mode : sta(18:fe:34:a0:42:7a)
+
+add if0
+
+f r0, scandone
+
+state: 0 -> 2 (b0)
+
+state: 2 -> 3 (0)
+
+state: 3 -> 5 (10)
+
+add 0
+
+aid 3
+
+cnt
+
+
+
+connected with TP-LINK_B4EB92, channel 6
+
+dhcp client start...
+
+ip:192.168.0.101,mask:255.255.255.0,gw:192.168.0.1
+
+AP CONNECT
+'/' registered
+
+HTTP server STARTED 192.168.0.101
+NTP server STARTED
+UDP LocalPort: 4097
+
+UDP connect to 94.53.216.197:123
+
+rtc time init...
+
+time updated? 1
+
+UDP connect to 94.53.216.197:123
+
+time updated? 1
+
+Dormitor H:37.00(0.0) T:21.30(0.0 0.0)/24.9 SetPt:23.00 Time:26096
+***ABORT***
+
+ ets Jan  8 2013,rst cause:1, boot mode:(1,7)
+
+
+
+
+
+ ets Jan  8 2013,rst cause:4, boot mode:(1,7)
+
+
+
+wdt reset

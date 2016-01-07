@@ -150,8 +150,8 @@ public:
 
 	Vector<autoPilotSlot> m_autoPrograms[7];
 
-	uint32_t m_autopilotIndex;
-	uint8_t m_autopilotDay;
+	int m_autopilotIndex;
+	int m_autopilotDay;
 
 };
 

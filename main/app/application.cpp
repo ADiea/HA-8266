@@ -219,6 +219,7 @@ void init()
 	startSystem();
 
 	// set timezone hourly difference to UTC
+	//TODO: send from mobile phone & store on disk
 	SystemClock.setTimeZone(3);
 
 	WifiStation.enable(true);

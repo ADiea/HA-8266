@@ -89,6 +89,39 @@ void CDeviceTempHumid::requestUpdateState()
 			if(fTurnOffTemp < m_tempThreshold)
 					fTurnOffTemp = m_state.lastTH.temp;
 
+			//Determine if autopilot program should be changed
+			int newAutopilotIndex, newAutopilotDay, h, m;
+			DateTime now = SystemClock.now(eTZ_Local);
+
+			newAutopilotDay = now.DayofWeek- 1;
+			if(newAutopilotDay < 0) newAutopilotDay = 7;
+
+			h = now.Hour;
+			m = now.Minute + h*60;
+
+			for(i=0; i< m_autoPrograms[newAutopilotDay].count(); i++)
+			{
+				if(m >= m_autoPrograms[newAutopilotDay][i].startHour * 60 +
+						m_autoPrograms[newAutopilotDay][i].startMinute)
+				{
+					if(m <= m_autoPrograms[newAutopilotDay][i].endHour * 60 +
+							m_autoPrograms[newAutopilotDay][i].endMinute)
+					{
+						newAutopilotIndex = i;
+						break;
+					}
+				}
+			}
+
+			if(m_autopilotDay != newAutopilotDay || m_autopilotIndex != newAutopilotIndex)
+			{
+				m_autopilotDay == newAutopilotDay;
+				m_autopilotIndex == newAutopilotIndex;
+
+				m_state.tempSetpoint = m_autoPrograms[newAutopilotDay][newAutopilotIndex].setTemp;
+
+				LOG_I( "TH(%d) CHANGE autopilot idx=%d temp=%f\n", m_ID, m_autopilotIndex, m_state.tempSetpoint);
+			}
 
 			if(m_state.tempSetpoint > m_tempThreshold + fTurnOnTemp)
 			{
@@ -166,17 +199,42 @@ bool CDeviceTempHumid::deserialize(const char **devicesString)
 		addWatcherDevice(devID);
 	}
 
-//	set autopilot day autopilot index
+	int j, k, len;
+	autoPilotSlot programSlot;
 
-	if(!skipInt(devicesString, &))
+	m_autopilotIndex = -1;
+	m_autopilotDay = -1;
+
+	if(strlen(*devicesString) > 0)
 	{
+		for(j=0; j<7; j++)
+		{
+			if(!skipInt(devicesString, &len))
+				return false;
 
+			m_autoPrograms[j].clear();
+
+			for(k = 0; k < len; k++)
+			{
+				if(!skipFloat(devicesString, &(programSlot.setTemp)) ||
+				   !skipInt(devicesString, &(programSlot.startHour)) ||
+				   !skipInt(devicesString, &(programSlot.startMinute)) ||
+				   !skipInt(devicesString, &(programSlot.endHour)) ||
+				   !skipInt(devicesString, &(programSlot.endMinute)))
+				{
+					return false;
+				}
+				m_autoPrograms[j].addElement(programSlot);
+			}
+		}
 	}
-	else
+	else //set defaults
 	{
-
+		for(j=0; j<7; j++)
+		{
+			m_autoPrograms[j].clear();
+		}
 	}
-
 
 	return true;
 }
@@ -194,8 +252,6 @@ uint32_t CDeviceTempHumid::serialize(char* buffer, uint32_t size)
 		sz += m_snprintf(buffer + sz, size - sz, "%d;", m_devWatchersList[i].id);
 	}
 
-	//sz += m_snprintf(buffer + sz, size - sz, "%d;%d;", m_autopilotDay, m_autopilotIndex);
-
 	for(j=0; j<7; j++)
 	{
 		len = m_autoPrograms[j].count();
@@ -203,14 +259,13 @@ uint32_t CDeviceTempHumid::serialize(char* buffer, uint32_t size)
 		for(k = 0; k < len; k++)
 		{
 			sz += m_snprintf(buffer+sz, size-sz,
-									"%.1f;%d;%d;%d;%d;",
-									m_autoPrograms[j][k].setTemp,
-									m_autoPrograms[j][k].startHour,
-									m_autoPrograms[j][k].startMinute,
-									m_autoPrograms[j][k].endHour,
-									m_autoPrograms[j][k].endMinute);
+								"%.1f;%d;%d;%d;%d;",
+								m_autoPrograms[j][k].setTemp,
+								m_autoPrograms[j][k].startHour,
+								m_autoPrograms[j][k].startMinute,
+								m_autoPrograms[j][k].endHour,
+								m_autoPrograms[j][k].endMinute);
 		}
 	}
-
 	return sz;
 }
