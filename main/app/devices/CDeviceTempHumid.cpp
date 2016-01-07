@@ -65,16 +65,10 @@ void CDeviceTempHumid::requestUpdateState()
 			m_state.fLastTemp_8m = m_state.fAverageTemp_8m.feed(m_state.lastTH.temp);
 			m_state.fLastRH_1m = m_state.fAverageRH_1m.feed(m_state.lastTH.humid);
 
-			LOG_I("%s H:%.2f(%.1f) T:%.2f(%.1f %.1f)/%.1f SetPt:%.2f Time:%u", m_FriendlyName.c_str(),
-					m_state.lastTH.humid, m_state.fLastRH_1m, m_state.lastTH.temp, m_state.fLastTemp_1m ,
-					m_state.fLastTemp_8m, devDHT22_heatIndex(), m_state.tempSetpoint,
-					m_LastUpdateTimestamp);
-
 			/*devDHT22_heatIndex();
 			devDHT22_dewPoint();
 			devDHT22_comfortRatio();
 			LOG_I( "\n");*/
-
 
 			fTurnOnTemp = m_state.fLastTemp_8m;
 
@@ -90,7 +84,7 @@ void CDeviceTempHumid::requestUpdateState()
 					fTurnOffTemp = m_state.lastTH.temp;
 
 			//Determine if autopilot program should be changed
-			int newAutopilotIndex, newAutopilotDay, h, m;
+			int newAutopilotIndex = -1, newAutopilotDay = -1, h, m;
 			DateTime now = SystemClock.now(eTZ_Local);
 
 			newAutopilotDay = now.DayofWeek- 1;
@@ -113,15 +107,21 @@ void CDeviceTempHumid::requestUpdateState()
 				}
 			}
 
-			if(m_autopilotDay != newAutopilotDay || m_autopilotIndex != newAutopilotIndex)
+			if((m_autopilotDay != newAutopilotDay || m_autopilotIndex != newAutopilotIndex) &&
+					newAutopilotIndex >= 0)
 			{
-				m_autopilotDay == newAutopilotDay;
-				m_autopilotIndex == newAutopilotIndex;
+				m_autopilotDay = newAutopilotDay;
+				m_autopilotIndex = newAutopilotIndex;
 
 				m_state.tempSetpoint = m_autoPrograms[newAutopilotDay][newAutopilotIndex].setTemp;
 
 				LOG_I( "TH(%d) CHANGE autopilot idx=%d temp=%f\n", m_ID, m_autopilotIndex, m_state.tempSetpoint);
 			}
+
+			LOG_I("%2d:%2d %s H:%.2f(%.1f) T:%.2f(%.1f %.1f)/%.1f SetPt:%.2f Time:%u", now.Hour, now.Minute, m_FriendlyName.c_str(),
+					m_state.lastTH.humid, m_state.fLastRH_1m, m_state.lastTH.temp, m_state.fLastTemp_1m ,
+					m_state.fLastTemp_8m, devDHT22_heatIndex(), m_state.tempSetpoint,
+					m_LastUpdateTimestamp);
 
 			if(m_state.tempSetpoint > m_tempThreshold + fTurnOnTemp)
 			{
