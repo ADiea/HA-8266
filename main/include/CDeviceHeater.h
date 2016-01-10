@@ -27,7 +27,8 @@ struct tHeaterState
 		gasLevel_LowWarningThres(lowWarn),
 		gasLevel_MedWarningThres(medWarn),
 		gasLevel_HighWarningThres(highWarn),
-		isOn(false), isFault(false), isStateSyncWithHardware(false), lastFault(HEATER_FAULT_NONE)
+		isOn(false), isFault(false), isStateSyncWithHardware(false), lastFault(HEATER_FAULT_NONE),
+		onMinutesToday(0), currentDayInMonth(-1), timestampOn(0)
 	{}
 
 	tHeaterState()
@@ -42,7 +43,9 @@ struct tHeaterState
 
 	bool isOn, isFault, isStateSyncWithHardware;
 
-
+	int onMinutesToday;
+	int currentDayInMonth;
+	unsigned long timestampOn;
 };
 
 

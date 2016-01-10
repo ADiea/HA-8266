@@ -34,6 +34,7 @@ bool handle_cwSetLightParams(WebSocket& socket, const char **pkt)
 bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 {
 	int i = 0, numDevs = 0, sizePkt = 0, j, len, k;
+	unsigned long min = 0;
 	CDeviceTempHumid *th;
 	CDeviceHeater *heat;
 
@@ -86,12 +87,22 @@ bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 		else if(devTypeHeater == devType && devTypeHeater == g_activeDevices[i]->m_deviceType)
 		{
 			heat = (CDeviceHeater*)g_activeDevices[i];
+
+			if(heat->m_state.isOn)
+			{
+				min = ((unsigned long)SystemClock.now(eTZ_Local).toUnixTime() -
+									heat->m_state.timestampOn) / 60;
+				if(min == 0) min = 1;
+			}
+
+			min += heat->m_state.onMinutesToday;
+
 			sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
-							"%d;%s;%d;%d;%d;%d;%d;%d;%d;", heat->m_ID,
+							"%d;%s;%d;%d;%d;%d;%d;%d;%d;%d;", heat->m_ID,
 							heat->m_FriendlyName.c_str(),
 							heat->m_state.isOn?1:0, heat->m_state.isFault?1:0, heat->m_state.gasLevel_lastReading,
 							heat->m_state.gasLevel_LowWarningThres , heat->m_state.gasLevel_MedWarningThres ,
-							heat->m_state.gasLevel_HighWarningThres, heat->m_state.lastFault);
+							heat->m_state.gasLevel_HighWarningThres, heat->m_state.lastFault, min);
 		}
 	}
 

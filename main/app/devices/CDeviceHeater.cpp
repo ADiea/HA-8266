@@ -7,6 +7,7 @@ void CDeviceHeater::triggerState(int reason, void* state)
 	byte outLength;
 	byte seq = RadioNextSeqID();
 	byte doSendPkg = 0;
+	int dayInMo = SystemClock.now().Day;
 
 	for(int i=0; i < m_devWatchersList.count(); i++)
 	{
@@ -58,6 +59,13 @@ void CDeviceHeater::triggerState(int reason, void* state)
 			pkg[3] = HEATER_REQ_OFF;
 			doSendPkg = 1;
 		}
+	}
+
+	if(m_state.currentDayInMonth < 0 || (m_state.currentDayInMonth != dayInMo))
+	{
+		m_state.currentDayInMonth = dayInMo;
+		m_state.timestampOn = (unsigned long)SystemClock.now(eTZ_Local).toUnixTime();
+		m_state.onMinutesToday = 0;
 	}
 
 	if(doSendPkg)
@@ -139,6 +147,19 @@ bool CDeviceHeater::radioPktReceivedFromDevice(char* pkg, uint16_t pktLen)
 		PKG_TYPE_HEATER_STATUS == pkg[2] &&
 	   checkRadioChecksum((byte*)pkg, PKG_HEATER_STATUS_LEN))
 	{
+		if(!m_state.isOn && (pkg[3] & HEATER_STATUS_ON))//turning on
+		{
+			m_state.timestampOn = (unsigned long)SystemClock.now(eTZ_Local).toUnixTime();
+		}
+		else if(m_state.isOn && !(pkg[3] & HEATER_STATUS_ON)) //turning off
+		{
+			unsigned long min = ((unsigned long)SystemClock.now(eTZ_Local).toUnixTime() -
+								m_state.timestampOn) / 60;
+			if(min == 0) min = 1;
+
+			m_state.onMinutesToday += min;
+		}
+
 		m_state.isOn = pkg[3] & HEATER_STATUS_ON;
 		m_state.isFault = pkg[3] & HEATER_STATUS_FAULT;
 		m_state.lastFault = pkg[4];

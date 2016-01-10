@@ -88,7 +88,7 @@ void CDeviceTempHumid::requestUpdateState()
 			DateTime now = SystemClock.now(eTZ_Local);
 
 			newAutopilotDay = now.DayofWeek- 1;
-			if(newAutopilotDay < 0) newAutopilotDay = 7;
+			if(newAutopilotDay < 0) newAutopilotDay = 6;
 
 			h = now.Hour;
 			m = now.Minute + h*60;
