@@ -3,10 +3,10 @@
 ## Uncomment and change examples:
 
 #Add your source directories here separated by space
-MODULES = app/drv app/fatfs app/devices
+MODULES = app app/drv app/fatfs app/devices
 
 #inc dirs
-EXTRA_INCDIR = ../protocol
+EXTRA_INCDIR = include ../protocol
 
 ## ESP_HOME sets the path where ESP tools and SDK are located.
 ## Windows:

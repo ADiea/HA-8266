@@ -208,7 +208,7 @@ static void mainLoop()
 }
 
 
-void init()
+extern void init()
 {
 	initDevices();
 
