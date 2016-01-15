@@ -1,0 +1,134 @@
+<html>
+<head>
+
+<script type="text/javascript">
+
+function process()
+{
+	var text = document.getElementById("input_ta");
+	
+	var textLines = text.value.split('\n');
+	var outPut = [];
+	
+	var foundBeginning = true;
+	var k=0;
+	
+	var outputOff = false;
+	
+	for(var i=0;i<textLines.length; i++)
+	{
+
+		if(-1 != textLines[i].indexOf("find_entry: found matching entry"))
+		{
+			continue;
+		}
+
+		if(-1 != textLines[i].indexOf("etharp_send_ip: sending packet"))
+		{
+			continue;
+		}
+
+		if(-1 != textLines[i].indexOf("etharp_arp_input: ARP request was not for us"))
+		{
+			continue;
+		}
+
+		if(-1 != textLines[i].indexOf("etharp_arp_input: incoming ARP request"))
+		{
+			continue;
+		}		
+
+		if(-1 != textLines[i].indexOf("etharp_ip_input: updating ETHARP table"))
+		{
+			continue;
+		}	
+		
+		
+		
+		if(-1 != textLines[i].indexOf("dhcp_coarse_tmr()"))
+		{
+			continue;
+		}
+
+		if(-1 != textLines[i].indexOf("TCP received:"))
+		{
+			continue;
+		}
+
+		if(-1 != textLines[i].indexOf("onReadyToSendData"))
+		{
+			continue;
+		}
+
+		if(-1 != textLines[i].indexOf("tcp_slowtmr: processing active pcb"))
+		{
+			continue;
+		}		
+
+		if(-1 != textLines[i].indexOf("tcp_slowtmr: polling application"))
+		{
+			continue;
+		}	
+		
+		if(-1 != textLines[i].indexOf("etharp_timer"))
+		{
+			continue;
+		}	
+	
+		if(-1 != textLines[i].indexOf("find_entry: found empty entry"))
+		{
+			continue;
+		}		
+
+		if(-1 != textLines[i].indexOf("update_arp_entry: updating stable entry"))
+		{
+			continue;
+		}	
+		
+		if(-1 != textLines[i].indexOf("ethernet_input"))
+		{
+			continue;
+		}
+		
+		if(-1 != textLines[i].indexOf("WS RX:"))
+		{
+			continue;
+		}		
+
+		if(-1 != textLines[i].indexOf("WS Data arrived!"))
+		{
+			continue;
+		}	
+
+/*ARP*/
+		if(-1 != textLines[i].indexOf("update_arp_entry"))
+		{
+			continue;
+		}		
+/**/
+
+		if(!outputOff)
+			outPut.push(/*++k + " " +*/textLines[i]);
+
+	}
+
+	
+	text.value = outPut.join("\n");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<textarea rows="50" cols="100" id="input_ta"></textarea>
+
+<input style="display:block" type="button" onclick="process()" value="Process"></input>
+
+<!-- <pre id="out_map"></pre> -->
+
+</body>
+
+</html>

@@ -94,7 +94,7 @@ bool RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitMs)
 
 				for (byte i = 0; i < *outLen; ++i)
 				{
-					LOG_I( "%x ", pkg[i]);
+					m_printf( "%x ", pkg[i]);
 				}
 
 				LOG_I("\n");

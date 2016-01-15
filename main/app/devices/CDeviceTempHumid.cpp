@@ -118,7 +118,7 @@ void CDeviceTempHumid::requestUpdateState()
 				LOG_I( "TH(%d) CHANGE autopilot idx=%d temp=%f\n", m_ID, m_autopilotIndex, m_state.tempSetpoint);
 			}
 
-			LOG_I("%2d:%2d %s H:%.2f(%.1f) T:%.2f(%.1f %.1f)/%.1f SetPt:%.2f Time:%u", now.Hour, now.Minute, m_FriendlyName.c_str(),
+			LOG_I("%02d:%02d:%02d %s H:%.2f(%.1f) T:%.2f(%.1f %.1f)/%.1f SetPt:%.2f Time:%u", now.Hour, now.Minute, now.Second, m_FriendlyName.c_str(),
 					m_state.lastTH.humid, m_state.fLastRH_1m, m_state.lastTH.temp, m_state.fLastTemp_1m ,
 					m_state.fLastTemp_8m, devDHT22_heatIndex(), m_state.tempSetpoint,
 					m_LastUpdateTimestamp);

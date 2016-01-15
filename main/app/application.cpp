@@ -207,9 +207,23 @@ static void mainLoop()
 	WDT.alive();
 }
 
+static void initNetwork()
+{
+	LOG_I("initNetwork() OLD: TCP_WND=%d TCP_MAXRTX=%d TCP_SYNMAXRTX=%d",
+		 TCP_WND, TCP_MAXRTX, TCP_SYNMAXRTX);
+
+	  TCP_WND = (4 * TCP_MSS);
+	  TCP_MAXRTX = 5;
+	  TCP_SYNMAXRTX = 3;
+
+	LOG_I("initNetwork() NEW: TCP_WND=%d TCP_MAXRTX=%d TCP_SYNMAXRTX=%d",
+			 TCP_WND, TCP_MAXRTX, TCP_SYNMAXRTX);
+}
 
 extern void init()
 {
+	initNetwork();
+
 	initDevices();
 
 	LOG_E("System start.\n");

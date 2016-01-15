@@ -1,7 +1,7 @@
 #include "webServer.h"
 #include "device.h"
 
-#define WEBSOCK_USERSLOTS 10
+#define WEBSOCK_USERSLOTS 15
 
 #define ALIVE_INIT_STATE 0
 #define ALIVE_TEST_STATE 1
@@ -14,8 +14,8 @@ struct WebSockUserData
 
 	void dataArrived()
 	{
-		LOG_I("WS Data arrived!");
 		aliveState = ALIVE_OK_STATE;
+		lastDataTime = millis();
 	}
 
 	bool isAlive()
@@ -29,12 +29,20 @@ struct WebSockUserData
 		{
 			return false;
 		}
+
+		if(millis() - lastDataTime > 1*60*1000)
+		{
+			LOG_I("WS: close inactive connection");
+			return false;
+		}
+
 		return true;
 	}
 
 	WebSocket *webSock;
 	bool isInvalid;
 	uint32 aliveState;
+	unsigned long lastDataTime;
 };
 
 WebSockUserData g_sockDataPool[WEBSOCK_USERSLOTS];
@@ -71,7 +79,6 @@ HttpServer gHttpServer;
 			WebSocketsList &clients = gHttpServer.getActiveWebSockets();
 			for (int i = 0; i < clients.count(); i++)
 				clients[i].sendString("New ws conn! Total: " + String(totalActiveSockets));
-
 		}
 		else
 		{
@@ -81,8 +88,6 @@ HttpServer gHttpServer;
 
 	void wsMessageReceived(WebSocket& socket, const String& message)
 	{
-		LOG_I( "WS RX:%s", message.c_str());
-
 		uint32 i = 0;
 		for(;i<WEBSOCK_USERSLOTS;i++)
 		{
@@ -178,6 +183,6 @@ HttpServer gHttpServer;
 			gNTPClient->setAutoUpdateSystemClock(true);
 			gNTPClient->requestTime(); // Request to update time now.
 
-			LOG_I("NTP server STARTED");
+			LOG_I("NTP client STARTED");
 		}
 	}
