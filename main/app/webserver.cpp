@@ -18,7 +18,7 @@ struct WebSockUserData
 		lastDataTime = millis();
 	}
 
-	bool isAlive()
+	bool isAlive(uint32_t timeout)
 	{
 		if(aliveState == ALIVE_INIT_STATE)
 		{
@@ -30,7 +30,7 @@ struct WebSockUserData
 			return false;
 		}
 
-		if(millis() - lastDataTime > 1*60*1000)
+		if(millis() - lastDataTime > timeout*1000)
 		{
 			LOG_I("WS: close inactive connection %x (%d)", webSock, millis() - lastDataTime);
 			return false;
@@ -76,9 +76,9 @@ HttpServer gHttpServer;
 			totalActiveSockets++;
 
 			// Notify everybody about new connection
-			WebSocketsList &clients = gHttpServer.getActiveWebSockets();
-			for (int i = 0; i < clients.count(); i++)
-				clients[i].sendString("New ws conn! Total: " + String(totalActiveSockets));
+			//WebSocketsList &clients = gHttpServer.getActiveWebSockets();
+			//for (int i = 0; i < clients.count(); i++)
+			//	clients[i].sendString("New ws conn! Total: " + String(totalActiveSockets));
 		}
 		else
 		{
@@ -127,9 +127,22 @@ HttpServer gHttpServer;
 		totalActiveSockets--;
 
 		// Notify everybody about lost connection
+		//WebSocketsList &clients = gHttpServer.getActiveWebSockets();
+		//for (int i = 0; i < clients.count(); i++)
+		//	clients[i].sendString("WS client disconnected Total: " + String(totalActiveSockets));
+	}
+
+	void wsSendAllExcept(WebSocket& socket, const char* msg, size_t size)
+	{
+		uint32 s;
 		WebSocketsList &clients = gHttpServer.getActiveWebSockets();
-		for (int i = 0; i < clients.count(); i++)
-			clients[i].sendString("WS client disconnected Total: " + String(totalActiveSockets));
+		for (s = 0; s < clients.count(); s++)
+		{
+			if(&socket != &(clients[s]))
+			{
+				clients[s].send(msg, size);
+			}
+		}
 	}
 
 	void wsPruneConnections()
@@ -146,7 +159,7 @@ HttpServer gHttpServer;
 					//todo: will comparison always work?
 					if(g_sockDataPool[i].webSock == &(clients[s]))
 					{
-						if(!g_sockDataPool[i].isAlive())
+						if(!g_sockDataPool[i].isAlive((10*60)/clients.count()))
 						{
 							clients[s].close();
 							g_sockDataPool[i].isInvalid = true;

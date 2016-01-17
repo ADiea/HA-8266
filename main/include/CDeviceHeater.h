@@ -58,11 +58,10 @@ public:
 		m_deviceType = devTypeHeater;
 	}
 
-	void initHeater(uint32_t heaterID, String& friendlyName, tHeaterState& state)
+	virtual bool initDevice()
 	{
-		m_ID = heaterID;
-		m_FriendlyName = friendlyName;
-		m_state = state;
+		m_updateTimer.initializeMs(5000, TimerDelegate(&CDeviceHeater::onUpdateTimer, this)).start(false);
+		return true;
 	}
 
 	virtual bool deserialize(const char **string);
@@ -72,6 +71,8 @@ public:
 	{
 		//send state request from radio device
 	}
+
+	void onUpdateTimer();
 
 	virtual void triggerState(int reason, void* state);
 

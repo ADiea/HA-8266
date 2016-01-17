@@ -1,0 +1,576 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2016.02.01 08:48:04 =~=~=~=~=~=~=~=~=~=~=~=
+scandone
+state: 0 -> 2 (b0)
+state: 2 -> 3 (0)
+state: 3 -> 5 (10)
+add 0
+aid 3
+cnt 
+
+connected with TP-LINK_B4EB92, channel 6
+dhcp client start...
+dhcp_start(netif=3fff7650) ew0
+dhcp_start(): starting new DHCP client
+dhcp_start(): allocated dhcpdhcp_start(): starting DHCP configuration
+dhcp_discover()
+dhcp_create_msg(): transaction id xid(abcd0001)
+dhcp_discover: making request
+dhcp_discover: realloc()ing
+dhcp_discover: sendto(DISCOVER, IP_ADDR_BROADCAST, DHCP_SERVER_PORT)
+etharp_send_ip: sending packet 3fff7a20
+dhcp_discover: deleting()ing
+dhcp_discover: SELECTING
+dhcp_discover(): set request timeout 2000 msecs
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found empty entry 0
+find_entry: no empty entry found and not allowed to recycle
+etharp_arp_input: incoming ARP request
+etharp_arp_input: we are unconfigured, ARP request ignored.
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+dhcp_fine_tmr(): request timeout
+dhcp_timeout()
+dhcp_timeout(): restarting discovery
+dhcp_discover()
+dhcp_create_msg(): transaction id xid(abcd0001)
+dhcp_discover: making request
+dhcp_discover: realloc()ing
+dhcp_discover: sendto(DISCOVER, IP_ADDR_BROADCAST, DHCP_SERVER_PORT)
+etharp_send_ip: sending packet 3fff7a20
+dhcp_discover: deleting()ing
+dhcp_discover: SELECTING
+dhcp_discover(): set request timeout 4000 msecs
+ethernet_input: dest:18:fe:34:a0:42:7a, src:e8:de:27:b4:eb:92, type:800
+dhcp_recv(pbuf = 3fff6a38) from DHCP server 192.168.0.1 port 67
+pbuf->len = 548
+pbuf->tot_len = 548
+searching DHCP_OPTION_MESSAGE_TYPE
+DHCP_OFFER received in DHCP_SELECTING state
+dhcp_handle_offer(netif=3fff7650) ew0
+dhcp_handle_offer(): server 0x0100a8c0
+dhcp_handle_offer(): offer for 0x6800a8c0
+dhcp_select(netif=3fff7650) ew0
+dhcp_create_msg(): transaction id xid(abcd0001)
+etharp_send_ip: sending packet 3fff7a20
+dhcp_select: REQUESTING
+dhcp_select(): set request timeout 2000 msecs
+ethernet_input: dest:18:fe:34:a0:42:7a, src:e8:de:27:b4:eb:92, type:800
+dhcp_recv(pbuf = 3fff6a38) from DHCP server 192.168.0.1 port 67
+pbuf->len = 548
+pbuf->tot_len = 548
+searching DHCP_OPTION_MESSAGE_TYPE
+DHCP_ACK received
+dhcp_check(netif=3fff7650) ew
+find_entry: found empty entry 0
+find_entry: selecting empty entry 0
+etharp_request: sending ARP request.
+etharp_raw: sending raw ARP packet.
+dhcp_check(): set request timeout 500 msecs
+rtc time init...
+TH(0) CHANGE autopilot idx=0 temp=25.5
+
+ 0: 0:23 Dormitor H:42.00(0.0) T:21.40(0.0 0.0)/25.0 SetPt:25.50 Time:31940
+TH(0) BROADCAST to 0 clients
+
+deviceAppendLog ftell 0 fsize 142394
+deviceAppendLog ftell 142393 
+deviceAppendLog ftell 20 fsize 20
+TH(0) saved to log: 23;0;1;21.399999619;
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found empty entry 1
+find_entry: no empty entry found and not allowed to recycle
+etharp_arp_input: incoming ARP request
+etharp_arp_input: we are unconfigured, ARP request ignored.
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+dhcp_fine_tmr(): request timeout
+dhcp_timeout()
+dhcp_timeout(): CHECKING, ARP request timed out
+dhcp_check(netif=3fff7650) ew
+find_entry: found matching entry 0
+etharp_request: sending ARP request.
+etharp_raw: sending raw ARP packet.
+dhcp_check(): set request timeout 500 msecs
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+etharp_timer
+dhcp_fine_tmr(): request timeout
+dhcp_timeout()
+dhcp_timeout(): CHECKING, ARP request timed out
+dhcp_bind(netif=3fff7650) ew0
+dhcp_bind(): t1 renewal timer 3600 secs
+dhcp_bind(): set request timeout 3600000 msecs
+dhcp_bind(): t2 rebind timer 7200 secs
+dhcp_bind(): set request timeout 7200000 msecs
+dhcp_bind(): IP: 0x6800a8c0
+netif_set_ipaddr: netif address being changed
+netif: IP address of interface ew set to 192.168.0.104
+dhcp_bind(): SN: 0x00ffffff
+netif: netmask of interface ew set to 255.255.255.0
+dhcp_bind(): GW: 0x0100a8c0
+netif: GW address of interface ew set to 192.168.0.1
+etharp_request: sending ARP request.
+etharp_raw: sending raw ARP packet.
+ip:192.168.0.104,mask:255.255.255.0,gw:192.168.0.1
+AP CONNECT
+tcp_bind: bind to port 80
+'/' registered
+HTTP server STARTED 192.168.0.104
+find_entry: found empty entry 1
+find_entry: selecting empty entry 1
+etharp_request: sending ARP request.
+etharp_raw: sending raw ARP packet.
+etharp_query: queued packet 3fff7ad8 on ARP entry 1
+find_entry: found matching entry 1
+etharp_request: sending ARP request.
+etharp_raw: sending raw ARP packet.
+etharp_query: dropped previously queued packet 3fff7ad8 for ARP entry 1
+etharp_query: queued packet 3fff7ad8 on ARP entry 1
+NTP client STARTED
+ethernet_input: dest:18:fe:34:a0:42:7a, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_send_ip: sending packet 3fff7dc8
+etharp_arp_input: incoming ARP reply
+dhcp_arp_reply()
+ethernet_input: dest:18:fe:34:a0:42:7a, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP reply
+dhcp_arp_reply()
+etharp_send_ip: sending packet 3fff7ad8
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:18:fe:34:a0:42:7a, src:e8:de:27:b4:eb:92, type:800
+UDP LocalPort: 4097
+UDP connect to 91.216.151.59:123
+etharp_send_ip: sending packet 3fff7ce8
+ethernet_input: dest:18:fe:34:a0:42:7a, src:e8:de:27:b4:eb:92, type:800
+time updated? 1
+etharp_send_ip: sending packet 3fff7ad8
+ethernet_input: dest:18:fe:34:a0:42:7a, src:e8:de:27:b4:eb:92, type:800
+UDP connect to 91.207.120.6:123
+etharp_send_ip: sending packet 3fff7ce8
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+TH(0) CHANGE autopilot idx=0 temp=18.
+
+ 8:51:44 Dormitor H:43.30(0.0) T:21.30(0.0 0.0)/25.0 SetPt:18.00 Time:36042
+HEATER(1) REQ: OFF
+TX timeout
+TH(0) BROADCAST to 0 clients
+
+deviceAppendLog ftell 0 fsize 20
+deviceAppendLog ftell 19 
+deviceAppendLog ftell 28 fsize 28
+TH(0) saved to log: 1454316704;0;1;21.299999237;
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+etharp_timer
+etharp_timer: expired pending entry 0.
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection request 2064 -> 80.
+find_entry: found empty entry 0
+find_entry: selecting empty entry 0
+etharp_request: sending ARP request.
+etharp_raw: sending raw ARP packet.
+etharp_query: queued packet 3fff7b90 on ARP entry 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:806
+update_arp_entry: 192.168.0.101 - 00:21:6b:1d:34:28
+find_entry: found matching entry 0
+update_arp_entry: updating stable entry 0
+etharp_send_ip: sending packet 3fff7c80
+etharp_arp_input: incoming ARP reply
+dhcp_arp_reply()
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection established 2064 -> 80.
+onAccept state: 0 K=0
+Free heap size=17472, K=0
++TCP connection
+timeout updating: 70 -> 90
+TcpServer onClient: 192.168.0.101
+
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 484 bytes, wnd 5840 (0).
+path=/
+Host === 192.168.0.104
+Sec-WebSocket-Version === 13
+Sec-WebSocket-Key === J6c+eDR3JW/zeAET82SPag==
+Upgrade === websocket
+parsed
+Request: GET, nodata
+TCP received: 484 bytes
+onReadyToSendData: 1
+response sendHeader
+Switched to WebSocket Protocol
+timeout updating: 90 -> 65535
+etharp_send_ip: sending packet 3fff8018
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 129
+onReadyToSendData: 2
+tcp_recved: recveived 11 bytes, wnd 5840 (0).
+WS 3fff7b90: 19;1;
+********** Lwip Active PCB states:
+
+LWIP_DEBUG: Port 80 | 2064 flg:41 tmr:0002 ESTABLISHED
+
+********** Lwip Listen PCB states:
+
+LWIP_DEBUG: Port 80 | 0 flg:8c tmr:53626557 LISTEN
+
+********** Lwip TIME-WAIT PCB states:
+
+LWIP_DEBUG: none
+
+TCP received: 11 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff8018
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 10
+onReadyToSendData: 2
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+pm open,type:2 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ 8:51:48 Dormitor H:43.30(0.0) T:21.40(0.0 0.0)/25.0 SetPt:18.00 Time:40307
+HEATER(1) REQ: OFF
+TX timeout
+deviceAppendLog ftell 0 fsize 28
+deviceAppendLog ftell 27 
+deviceAppendLog ftell 28 fsize 28
+TH(0) saved to log: 1454316708;0;1;21.399999619;
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+etharp_timer
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ 8:51:52 Dormitor H:43.30(0.0) T:21.40(0.0 0.0)/25.0 SetPt:18.00 Time:44571
+HEATER(1) REQ: OFF
+TX timeout
+deviceAppendLog ftell 0 fsize 28
+deviceAppendLog ftell 27 
+deviceAppendLog ftell 28 fsize 28
+TH(0) saved to log: 1454316712;0;1;21.399999619;
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 212 bytes, wnd 5840 (0).
+WS 3fff7b90: 22;0;0;Dormitor;22.5;15.0;27.0;0;1;0;1;18.0;0;0;23;11;1;27.0;9;11;10;11;0;1;25.5;0;0;23;11;1;20.0;0;0;21;10;4;27.0;0;0;8;0;18.0;8;0;8;10;18.0;8;10;9;11;27.0;9;11;23;11;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;2;
+found dev
+
+TH device: 0;Dormitor;22.5;15.0;27.0;0;1;0;1;18.0;0;0;23;11;1;27.0;9;11;10;11;0;1;25.5;0;0;23;11;1;20.0;0;0;21;10;4;27.0;0;0;8;0;18.0;8;0;8;10;18.0;8;10;9;11;27.0;9;11;23;11;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;2;
+TH device ID:0 NAME: Dormitor
+deserialized
+
+devWriteDisk SAVED 0
+
+TCP received: 212 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff80f0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 11
+onReadyToSendData: 2
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ 8:51:56 Dormitor H:43.40(0.0) T:21.40(0.0 0.0)/25.0 SetPt:22.50 Time:48835
+deviceAppendLog ftell 0 fsize 28
+deviceAppendLog ftell 27 
+deviceAppendLog ftell 28 fsize 28
+TH(0) saved to log: 1454316716;0;1;21.399999619;
+tcp_slowtmr: processing active pcb 0
+etharp_timer
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ 8:52: 0 Dormitor H:43.40(0.0) T:21.40(0.0 0.0)/25.0 SetPt:22.50 Time:52899
+deviceAppendLog ftell 0 fsize 28
+deviceAppendLog ftell 27 
+deviceAppendLog ftell 28 fsize 28
+TH(0) saved to log: 1454316720;0;1;21.399999619;
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 29 bytes, wnd 5840 (0).
+WS 3fff7b90: 23;0;1454284568;1;50;3;
+cwGetGenericDeviceLogs1 24;
+deviceReadLog read 28
+deviceReadLog last; ;15.0;27.0;0;1;1;1;1;18.0;0;0;23;11;1;27.0;9;11;10;11;0;1;25.5;0;0;23;11;1;20.0;0;0;21;10;4;27.0;0;0;8;0;18.0;8;0;8;10;18.0;8;10;9;11;27.0;9;11;23;11;0;0;0;0;0;21.4;43.3;0.0;0.0;0.0;0.0;
+deviceReadLog Entry 1 TS 24 skip 1
+deviceReadLog end
+cwGetGenericDeviceLogs 14;
+TCP received: 29 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff8018
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 5
+onReadyToSendData: 2
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+etharp_send_ip: sending packet 3fff8018
+ethernet_input: dest:18:fe:34:a0:42:7a, src:e8:de:27:b4:eb:92, type:800
+UDP connect to 91.216.151.59:123
+etharp_send_ip: sending packet 3fff8228
+ethernet_input: dest:18:fe:34:a0:42:7a, src:e8:de:27:b4:eb:92, type:800
+time updated? 1
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 29 bytes, wnd 5840 (0).
+WS 3fff7b90: 23;0;1454284568;1;50;4;
+cwGetGenericDeviceLogs1 24;
+deviceReadLog read 28
+deviceReadLog last; ;
+deviceReadLog Entry 1 TS 24 skip 1
+deviceReadLog end
+cwGetGenericDeviceLogs 
+TCP received: 29 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff8018
+etharp_timer
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 5
+onReadyToSendData: 2
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ 8:52: 4 Dormitor H:43.40(0.0) T:21.40(0.0 0.0)/25.0 SetPt:22.50 Time:56962
+deviceAppendLog ftell 0 fsize 28
+deviceAppendLog ftell 27 
+deviceAppendLog ftell 28 fsize 28
+TH(0) saved to log: 1454316724;0;1;21.399999619;
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 12 bytes, wnd 5840 (0).
+WS 3fff7b90: 5;1;5;
+TCP received: 12 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff8018
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 12 bytes, wnd 5840 (0).
+WS 3fff7b90: 5;2;6;
+TCP received: 12 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff8648
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 273
+onReadyToSendData: 2
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 29 bytes, wnd 5840 (0).
+WS 3fff7b90: 23;0;1454284568;1;50;7;
+cwGetGenericDeviceLogs1 24;
+deviceReadLog read 28
+deviceReadLog last; ;50;1;0;59;52;12347;51;24238611;
+deviceReadLog Entry 1 TS 24 skip 1
+deviceReadLog end
+cwGetGenericDeviceLogs 54;
+TCP received: 29 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff8018
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 5
+onReadyToSendData: 2
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+etharp_timer
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ 8:52: 8 Dormitor H:43.40(0.0) T:21.40(0.0 0.0)/25.0 SetPt:22.50 Time:61026
+deviceAppendLog ftell 0 fsize 28
+deviceAppendLog ftell 27 
+deviceAppendLog ftell 28 fsize 28
+TH(0) saved to log: 1454316728;0;1;21.399999619;
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_arp_input: incoming ARP request
+etharp_arp_input: ARP request was not for us.
+tc

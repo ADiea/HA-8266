@@ -3,6 +3,8 @@
 
 #include <SmingCore/SmingCore.h>
 
+class CGenericDevice;
+
 enum eCommWebErrorCodes
 {
 	cwErrSuccess,
@@ -12,7 +14,8 @@ enum eCommWebErrorCodes
 	cwErrInvalidDeviceID,
 	cwErrDeviceDoesNotAnswer,
 	cwErrInvalidCommandParams,
-	cwErrProtocolError
+	cwErrProtocolError,
+	cwErrUnknown
 };
 
 enum eCommWebMsgTYpes
@@ -45,6 +48,10 @@ enum eCommWebMsgTYpes
 	cwPrintDebugInformation,
 
 	cwSpecialCommand,
+	cwNotifyGenericDeviceStatus,
+	cwSetGenericDeviceParams,
+	cwGetGenericDeviceLogs,
+	cwReplyGenericDeviceLogs,
 
 //	cwGetDevices,
 //	cwReplyDeviceList,
@@ -57,5 +64,8 @@ enum eCommWebMsgTYpes
 };
 
 bool cwReceivePacket(WebSocket& socket, const char* pkt);
+
+bool broadcastDeviceInfo(WebSocketsList &clients, CGenericDevice *device,
+						WebSocket *exceptSock = NULL);
 
 #endif

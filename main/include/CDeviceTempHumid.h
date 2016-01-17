@@ -92,11 +92,13 @@ struct tTempHumidState
 	bool bIsHeating, bIsCooling;
 
 	float fLastTemp_1m, fLastTemp_8m;
-	float fLastRH_1m;
+	float fLastRH_1m, fLastRH_8m;
 
 	FilterMovingAve fAverageRH_1m, fAverageTemp_1m, fAverageTemp_8m;
 	int32_t filterRH[FILTER_1M_LENGTH], filterTemp1m[FILTER_1M_LENGTH], filterTemp8m[FILTER_8M_LENGTH];
 
+	int m_autopilotIndex;
+	int m_autopilotDay;
 	//confort related stuff
 };
 
@@ -109,17 +111,9 @@ public:
 		m_deviceType = devTypeTH;
 	}
 
-	void initTempHumid(	uint32_t deviceID,
-						String& friendlyName,
-						eSensorLocation location,
-						int updateInterval = SENSOR_TH_MEASURE_INTERVAL)
+	virtual bool initDevice()
 	{
-		m_ID = deviceID;
-		m_FriendlyName = friendlyName;
-		//m_state = state;
-		m_location = location;
-
-		m_updateInterval = updateInterval;
+		m_updateInterval = SENSOR_TH_MEASURE_INTERVAL;
 
 		m_tempThreshold = 0.1;
 
@@ -128,6 +122,7 @@ public:
 		m_state.fAverageTemp_8m.init(m_state.filterTemp8m, FILTER_8M_LENGTH, FILTER_8M_MOD, FILTER_8M_DIV);
 
 		m_updateTimer.initializeMs(m_updateInterval, TimerDelegate(&CDeviceTempHumid::onUpdateTimer, this)).start(false);
+		return true;
 	}
 
 	virtual bool deserialize(const char **string);
@@ -149,9 +144,6 @@ public:
 	float m_tempThreshold;
 
 	Vector<autoPilotSlot> m_autoPrograms[7];
-
-	int m_autopilotIndex;
-	int m_autopilotDay;
 
 };
 

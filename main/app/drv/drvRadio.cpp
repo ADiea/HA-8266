@@ -87,12 +87,14 @@ bool RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitMs)
 
 			if(!result || *outLen > 64)
 			{
-				LOG_I("Radio send err.");
+				//LOG_I("Radio send err.");
 				result = false;
 
 				gRadioSendFaults++;
 				if(gRadioSendFaults > 3)
 				{
+					gRadioSendFaults = 0;
+
 					//initialise radio with default settings
 					Radio->init();
 
@@ -145,28 +147,29 @@ uint8_t devRadio_init(uint8_t operation)
 			{
 				pRadioSPI = new SPISoft(PIN_RADIO_DO, PIN_RADIO_DI, PIN_RADIO_CK, PIN_RADIO_SS);
 
-					if(pRadioSPI)
-					{
-						Radio = new Si4432(pRadioSPI);
-					}
+				if(pRadioSPI)
+				{
+					Radio = new Si4432(pRadioSPI);
+				}
 
-					if(Radio)
-					{
-						delay(100);
+				if(Radio)
+				{
+					delay(100);
 
-						//initialise radio with default settings
-						Radio->init();
+					//initialise radio with default settings
+					Radio->init();
 
-						//explicitly set baudrate and channel
-						Radio->setBaudRateFast(eBaud_38k4);
-						Radio->setChannel(0);
+					//explicitly set baudrate and channel
+					Radio->setBaudRateFast(eBaud_38k4);
+					Radio->setChannel(0);
 
-						//dump the register configuration to console
-						Radio->readAll();
-					}
-					else LOG_E("Error not enough heap\n");
-
-
+					//dump the register configuration to console
+					Radio->readAll();
+				}
+				else
+				{
+					LOG_E("Error not enough heap\n");
+				}
 			}
 		}
 		else

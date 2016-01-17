@@ -18,6 +18,7 @@ typedef union _Color
 extern tColor COLOR_RED;
 extern tColor COLOR_GREEN;
 extern tColor COLOR_BLUE;
+extern tColor COLOR_OFF;
 
 uint8_t devRGB_init(uint8_t operation);
 

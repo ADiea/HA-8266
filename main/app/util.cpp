@@ -31,7 +31,7 @@ bool skipInt(const char **s, int *dest)
 	else
 	{
 		c = **s;
-		while (';' != **s || 0 != **s)
+		while (';' != **s && 0 != **s)
 					(*s)++;
 
 		LOG_E( "skipInt: bad terminal: %x, str: %s", c, *s);
@@ -67,7 +67,6 @@ bool skipFloat(const char **s, float *dest)
 			}
 
 			f += digit;
-
 			level++;
 		}
 
@@ -82,7 +81,6 @@ bool skipFloat(const char **s, float *dest)
 			LOG_E( "skipFloat: bad terminal: %x", **s);
 			return false;
 		}
-
 	}
 	else if(**s == ';')
 	{

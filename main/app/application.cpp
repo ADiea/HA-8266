@@ -139,15 +139,25 @@ REANSON_DEEP_SLEEP_AWAKE = 5, // wake up from deep-sleep
 
 static void mainLoop()
 {
-	devRGB_setColor(COLOR_RED);
+	static uint32_t loopCount = 0;
 	uint32_t tick1, tick2;
-
 	byte pkg[64] = {0};
 	byte len = 0;
-
 	uint16_t i;
 
+	if(loopCount % 2)
+		devRGB_setColor(COLOR_BLUE);
+	else
+		devRGB_setColor(COLOR_OFF);
+
 	wsPruneConnections();
+
+	if (system_get_free_heap_size() < 6500 &&
+		gHttpServer.getActiveWebSockets().count() == 0)
+	{
+		debugf("LOW HEAP: %d\r\n", system_get_free_heap_size());
+		system_restart();
+	}
 
 	if(Radio && getRadio(1))
 	{
@@ -195,16 +205,13 @@ static void mainLoop()
 			}
 */
 
-			devRGB_setColor(COLOR_GREEN);
-		}
-		else
-		{
-			devRGB_setColor(COLOR_RED);
+			//devRGB_setColor(COLOR_GREEN);
 		}
 
 		releaseRadio();
 	}
 	WDT.alive();
+	++loopCount;
 }
 
 static void initNetwork()

@@ -101,42 +101,6 @@ void CDeviceHeater::triggerState(int reason, void* state)
 	}
 }
 
-bool CDeviceHeater::deserialize(const char **devicesString)
-{
-	int devID, numWatchers;
-
-	char friendlyName[MAX_FRIENDLY_NAME];
-
-	if(!skipInt(devicesString, &devID))return false;
-	if(!skipString(devicesString, (char*)friendlyName, MAX_FRIENDLY_NAME))return false;
-
-	LOG_I("HEATER device ID:%d NAME: %s", devID, friendlyName);
-
-	int gasHighThres = 200;
-	int gasLowThres = 50;
-	int gasMedThres = 100;
-
-	if(!skipInt(devicesString, &gasHighThres))return false;
-	if(!skipInt(devicesString, &gasLowThres))return false;
-	if(!skipInt(devicesString, &gasMedThres))return false;
-
-	tHeaterState state(gasHighThres, gasLowThres, gasMedThres);
-	String name(friendlyName);
-
-	initHeater((uint32_t)devID, name, state);
-
-	if(!skipInt(devicesString, &numWatchers))return false;
-
-	while(numWatchers--)
-	{
-		if(!skipInt(devicesString, &devID))return false;
-		LOG_I("Add watcher ID:%d", devID);
-		addWatcherDevice(devID);
-	}
-
-	return true;
-}
-
 bool CDeviceHeater::radioPktReceivedFromDevice(char* pkg, uint16_t pktLen)
 {
 	uint16_t lowTh, medTh, highTh;
@@ -184,17 +148,92 @@ bool CDeviceHeater::radioPktReceivedFromDevice(char* pkg, uint16_t pktLen)
 	}
 }
 
+bool CDeviceHeater::deserialize(const char **devicesString)
+{
+	int devID, numWatchers;
+
+	char friendlyName[MAX_FRIENDLY_NAME];
+
+	if(!skipInt(devicesString, &devID))return false;
+	m_ID = devID;
+
+	if(!skipString(devicesString, (char*)friendlyName, MAX_FRIENDLY_NAME))return false;
+	m_FriendlyName = friendlyName;
+
+	LOG_I("HEATER device ID:%d NAME: %s", devID, friendlyName);
+
+	if(!skipInt(devicesString, &devID))return false;
+	m_state.gasLevel_HighWarningThres = devID;
+	if(!skipInt(devicesString, &devID))return false;
+	m_state.gasLevel_MedWarningThres = devID;
+	if(!skipInt(devicesString, &devID))return false;
+	m_state.gasLevel_LowWarningThres = devID;
+
+	if(!skipInt(devicesString, &numWatchers))return false;
+
+	while(numWatchers--)
+	{
+		if(!skipInt(devicesString, &devID))return false;
+		LOG_I("Add watcher ID:%d", devID);
+		addWatcherDevice(devID);
+	}
+
+	if(strlen(*devicesString) > 0)
+	{
+		if(!skipInt(devicesString, &devID))return false; //dev on dummy
+		if(!skipInt(devicesString, &devID))return false; //is fault dummy
+		if(!skipInt(devicesString, &devID))return false; //last reading dummy
+		if(!skipInt(devicesString, &devID))return false; //last fault dummy
+		if(!skipInt(devicesString, &devID))return false; //minutes on today dummy
+	}
+
+	return true;
+}
+
+void CDeviceHeater::onUpdateTimer()
+{
+	if(!isSavedToDisk)
+	{
+		isSavedToDisk  = deviceWriteToDisk(this);
+	}
+
+	m_updateTimer.initializeMs(5000, TimerDelegate(&CDeviceHeater::onUpdateTimer, this)).start(false);
+}
+
 uint32_t CDeviceHeater::serialize(char* buffer, uint32_t size)
 {
 	int i;
-	int sz = m_snprintf(buffer, size, "%d;%d;%s;%d;%d;%d;%d;", devTypeHeater, m_ID, m_FriendlyName.c_str(),
-					m_state.gasLevel_HighWarningThres, m_state.gasLevel_LowWarningThres, m_state.gasLevel_MedWarningThres,
+	unsigned long min = 0;
+
+	int sz = m_snprintf(buffer, size, "%d;%d;%s;%d;%d;%d;%d;",
+					devTypeHeater,
+					m_ID, m_FriendlyName.c_str(),
+					m_state.gasLevel_HighWarningThres,
+					m_state.gasLevel_MedWarningThres,
+					m_state.gasLevel_LowWarningThres,
 					m_devWatchersList.count());
 
 	for(i = 0; i < m_devWatchersList.count(); i++)
 	{
 		sz += m_snprintf(buffer + sz, size - sz, "%d;", m_devWatchersList[i].id);
 	}
+
+	if(m_state.isOn)
+	{
+		min = ((unsigned long)SystemClock.now(eTZ_Local).toUnixTime() -
+							m_state.timestampOn) / 60;
+		if(min == 0) min = 1;
+	}
+
+	min += m_state.onMinutesToday;
+
+	sz += m_snprintf(buffer + sz, size - sz,
+					"%d;%d;%d;%d;%d;",
+					m_state.isOn?1:0,
+					m_state.isFault?1:0,
+					m_state.gasLevel_lastReading,
+					m_state.lastFault,
+					min);
 
 	return sz;
 }

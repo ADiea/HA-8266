@@ -1,5 +1,5 @@
 #include "CDeviceTempHumid.h"
-
+#include "webserver.h"
 
 void FilterMovingAve::init(int32_t *thefilter, uint16_t size, uint16_t mod, uint16_t div)
 {
@@ -18,31 +18,36 @@ void FilterMovingAve::init(int32_t *thefilter, uint16_t size, uint16_t mod, uint
 	}
 }
 
-	float  FilterMovingAve::feed(float sample)
+float  FilterMovingAve::feed(float sample)
+{
+	int32_t retVal = (int32_t) (sample * 10);
+	//LOG_I("Add %d -> %d", retVal, nextIndex);
+	accumulator += retVal;
+	filter[nextIndex] = retVal;
+	nextIndex = (nextIndex + 1) & fSize_mod;
+
+	if(isInvalid)
 	{
-		int32_t retVal = (int32_t) (sample * 10);
-		//LOG_I("Add %d -> %d", retVal, nextIndex);
-		accumulator += retVal;
-		filter[nextIndex] = retVal;
-		nextIndex = (nextIndex + 1) & fSize_mod;
-
-		if(isInvalid)
-		{
-			--isInvalid;
-			return 0;
-		}
-
-		retVal = (accumulator >> fSize_div);
-
-		accumulator -= filter[nextIndex];
-
-		//LOG_I("Remove %d, ret%d", nextIndex, retVal);
-
-		return (retVal/10 + 0.1f*(retVal%10));
+		--isInvalid;
+		return 0;
 	}
+
+	retVal = (accumulator >> fSize_div);
+
+	accumulator -= filter[nextIndex];
+
+	//LOG_I("Remove %d, ret%d", nextIndex, retVal);
+
+	return (retVal/10 + 0.1f*(retVal%10));
+}
 
 void CDeviceTempHumid::onUpdateTimer()
 {
+	if(!isSavedToDisk)
+	{
+		isSavedToDisk  = deviceWriteToDisk(this);
+	}
+
 	requestUpdateState();
 	m_updateTimer.initializeMs(m_updateInterval, TimerDelegate(&CDeviceTempHumid::onUpdateTimer, this)).start(false);
 }
@@ -59,11 +64,14 @@ void CDeviceTempHumid::requestUpdateState()
 
 		if(DEV_ERR_OK == errValue)
 		{
+			tTempHumidState oldState = m_state;
+
 			m_LastUpdateTimestamp = system_get_time() / 1000;
 
 			m_state.fLastTemp_1m = m_state.fAverageTemp_1m.feed(m_state.lastTH.temp);
 			m_state.fLastTemp_8m = m_state.fAverageTemp_8m.feed(m_state.lastTH.temp);
 			m_state.fLastRH_1m = m_state.fAverageRH_1m.feed(m_state.lastTH.humid);
+			m_state.fLastRH_8m = 0;
 
 			/*devDHT22_heatIndex();
 			devDHT22_dewPoint();
@@ -107,15 +115,15 @@ void CDeviceTempHumid::requestUpdateState()
 				}
 			}
 
-			if((m_autopilotDay != newAutopilotDay || m_autopilotIndex != newAutopilotIndex) &&
+			if((m_state.m_autopilotDay != newAutopilotDay || m_state.m_autopilotIndex != newAutopilotIndex) &&
 					newAutopilotIndex >= 0)
 			{
-				m_autopilotDay = newAutopilotDay;
-				m_autopilotIndex = newAutopilotIndex;
+				m_state.m_autopilotDay = newAutopilotDay;
+				m_state.m_autopilotIndex = newAutopilotIndex;
 
 				m_state.tempSetpoint = m_autoPrograms[newAutopilotDay][newAutopilotIndex].setTemp;
 
-				LOG_I( "TH(%d) CHANGE autopilot idx=%d temp=%f\n", m_ID, m_autopilotIndex, m_state.tempSetpoint);
+				LOG_I( "TH(%d) CHANGE autopilot idx=%d temp=%f\n", m_ID, m_state.m_autopilotIndex, m_state.tempSetpoint);
 			}
 
 			LOG_I("%02d:%02d:%02d %s H:%.2f(%.1f) T:%.2f(%.1f %.1f)/%.1f SetPt:%.2f Time:%u", now.Hour, now.Minute, now.Second, m_FriendlyName.c_str(),
@@ -143,6 +151,24 @@ void CDeviceTempHumid::requestUpdateState()
 					genDevice->triggerState(0, NULL);
 				}
 			}
+
+			if(	oldState.lastTH.humid != m_state.lastTH.humid ||
+				oldState.lastTH.temp != m_state.lastTH.temp ||
+				oldState.fLastRH_1m != m_state.fLastRH_1m ||
+				oldState.fLastTemp_1m != m_state.fLastTemp_1m ||
+				oldState.fLastTemp_8m != m_state.fLastTemp_8m ||
+				oldState.m_autopilotDay != m_state.m_autopilotDay ||
+				oldState.m_autopilotIndex != m_state.m_autopilotIndex )
+			{
+				LOG_I( "TH(%d) BROADCAST to %d clients\n", m_ID, gHttpServer.getActiveWebSockets().count());
+				broadcastDeviceInfo(gHttpServer.getActiveWebSockets(), (CGenericDevice*)this);
+			}
+
+			//todo: move to logger callback
+			char logEntry[64];
+			m_snprintf(logEntry, sizeof(logEntry), "%u;0;1;%f;", (unsigned int)now.toUnixTime(), m_state.lastTH.temp);
+			if(deviceAppendLogEntry(m_ID, logEntry))
+				LOG_I( "TH(%d) saved to log: %s", m_ID, logEntry);
 		}
 		else
 		{
@@ -157,24 +183,22 @@ void CDeviceTempHumid::requestUpdateState()
 
 bool CDeviceTempHumid::deserialize(const char **devicesString)
 {
-	int devID, numWatchers;
-
+	int numWatchers, devID;
+	float dummyFloat;
 	char friendlyName[MAX_FRIENDLY_NAME];
 
 	LOG_I("TH device: %s", *devicesString);
 
 	if(!skipInt(devicesString, &devID))return false;
+	m_ID = devID;
+
 	if(!skipString(devicesString, (char*)friendlyName, MAX_FRIENDLY_NAME))return false;
 
-	LOG_I("TH device ID:%d NAME: %s", devID, friendlyName);
+	LOG_I("TH device ID:%d NAME: %s", m_ID, friendlyName);
 
-	float tempSetPoint = 22.5f;
 	if(!skipFloat(devicesString, &(m_state.tempSetpoint)))return false;
 
-	m_state.tempSetpointMin = 16;
-	m_state.tempSetpointMax = 27;
-
-	String name(friendlyName);
+	m_FriendlyName = friendlyName;
 
 	if(!skipFloat(devicesString, &(m_state.tempSetpointMin)))return false;
 
@@ -183,12 +207,11 @@ bool CDeviceTempHumid::deserialize(const char **devicesString)
 	int isLocal = 0;
 	if(!skipInt(devicesString, &isLocal))return false;
 
-	int iEnabled;
-	if(!skipInt(devicesString, &(iEnabled)))return false;
+	m_location = (eSensorLocation)isLocal;
 
-	m_state.bEnabled = iEnabled;
-
-	initTempHumid((uint32_t)devID, name, /*state,*/ (eSensorLocation)isLocal);
+	int isEnabled;
+	if(!skipInt(devicesString, &isEnabled))return false;
+	m_state.bEnabled = isEnabled;
 
 	if(!skipInt(devicesString, &numWatchers))return false;
 
@@ -201,9 +224,6 @@ bool CDeviceTempHumid::deserialize(const char **devicesString)
 
 	int j, k, len;
 	autoPilotSlot programSlot;
-
-	m_autopilotIndex = -1;
-	m_autopilotDay = -1;
 
 	if(strlen(*devicesString) > 0)
 	{
@@ -236,13 +256,42 @@ bool CDeviceTempHumid::deserialize(const char **devicesString)
 		}
 	}
 
+	if(strlen(*devicesString) > 0) /*web will not send this*/
+	{
+		if(!skipInt(devicesString, &m_state.m_autopilotIndex))
+			return false;
+		if(!skipInt(devicesString, &m_state.m_autopilotDay))
+			return false;
+		if(!skipInt(devicesString, &isEnabled)) //dummy is heating
+			return false;
+		if(!skipInt(devicesString, &isEnabled)) //dummy is cooling
+			return false;
+		if(!skipFloat(devicesString, &dummyFloat)) //dummy cur temp
+			return false;
+		if(!skipFloat(devicesString, &dummyFloat)) //dummy cur humid
+			return false;
+		if(!skipFloat(devicesString, &dummyFloat)) //dummy cur temp 1min
+			return false;
+		if(!skipFloat(devicesString, &dummyFloat)) //dummy cur temp 8m
+			return false;
+		if(!skipFloat(devicesString, &dummyFloat)) //dummy cur humid 1m
+			return false;
+		if(!skipFloat(devicesString, &dummyFloat)) //dummy cur humid 8m
+			return false;
+	}
+	else
+	{
+		m_state.m_autopilotIndex = -1;
+		m_state.m_autopilotDay = -1;
+	}
+
 	return true;
 }
 
 uint32_t CDeviceTempHumid::serialize(char* buffer, uint32_t size)
 {
 	int i, j, k, len;
-	int sz = m_snprintf(buffer, size, "%d;%d;%s;%f;%f;%f;%d;%d;%d;", devTypeTH, m_ID, m_FriendlyName.c_str(),
+	int sz = m_snprintf(buffer, size, "%d;%d;%s;%.1f;%.1f;%.1f;%d;%d;%d;", devTypeTH, m_ID, m_FriendlyName.c_str(),
 					m_state.tempSetpoint, m_state.tempSetpointMin, m_state.tempSetpointMax, (int)m_location,
 					m_state.bEnabled ? 1:0,
 					m_devWatchersList.count());
@@ -267,5 +316,18 @@ uint32_t CDeviceTempHumid::serialize(char* buffer, uint32_t size)
 								m_autoPrograms[j][k].endMinute);
 		}
 	}
+
+	sz += m_snprintf(buffer+sz, size-sz, "%d;%d;%d;%d;%.1f;%.1f;%.1f;%.1f;%.1f;%.1f;",
+					m_state.m_autopilotIndex,
+					m_state.m_autopilotDay,
+					m_state.bIsHeating?1:0,
+					m_state.bIsCooling?1:0,
+					m_state.lastTH.temp,
+					m_state.lastTH.humid,
+					m_state.fLastTemp_1m,
+					m_state.fLastTemp_8m,
+					m_state.fLastRH_1m,
+					m_state.fLastRH_8m);
+
 	return sz;
 }

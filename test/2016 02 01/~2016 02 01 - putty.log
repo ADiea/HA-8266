@@ -1,0 +1,668 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2016.02.01 02:51:03 =~=~=~=~=~=~=~=~=~=~=~=
+scandone
+state: 0 -> 2 (b0)
+state: 2 -> 3 (0)
+state: 3 -> 5 (10)
+add 0
+aid 3
+cnt 
+
+connected with TP-LINK_B4EB92, channel 6
+dhcp client start...
+dhcp_start(netif=3fff7650) ew0
+dhcp_start(): starting new DHCP client
+dhcp_start(): allocated dhcpdhcp_start(): starting DHCP configuration
+dhcp_discover()
+dhcp_create_msg(): transaction id xid(abcd0001)
+dhcp_discover: making request
+dhcp_discover: realloc()ing
+dhcp_discover: sendto(DISCOVER, IP_ADDR_BROADCAST, DHCP_SERVER_PORT)
+etharp_send_ip: sending packet 3fff7a20
+dhcp_discover: deleting()ing
+dhcp_discover: SELECTING
+dhcp_discover(): set request timeout 2000 msecs
+ethernet_input: dest:18:fe:34:a0:42:7a, src:e8:de:27:b4:eb:92, type:800
+dhcp_recv(pbuf = 3fff6a38) from DHCP server 192.168.0.1 port 67
+pbuf->len = 548
+pbuf->tot_len = 548
+searching DHCP_OPTION_MESSAGE_TYPE
+DHCP_OFFER received in DHCP_SELECTING state
+dhcp_handle_offer(netif=3fff7650) ew0
+dhcp_handle_offer(): server 0x0100a8c0
+dhcp_handle_offer(): offer for 0x6800a8c0
+dhcp_select(netif=3fff7650) ew0
+dhcp_create_msg(): transaction id xid(abcd0001)
+etharp_send_ip: sending packet 3fff7a20
+dhcp_select: REQUESTING
+dhcp_select(): set request timeout 2000 msecs
+ethernet_input: dest:18:fe:34:a0:42:7a, src:e8:de:27:b4:eb:92, type:800
+dhcp_recv(pbuf = 3fff6a38) from DHCP server 192.168.0.1 port 67
+pbuf->len = 548
+pbuf->tot_len = 548
+searching DHCP_OPTION_MESSAGE_TYPE
+DHCP_ACK received
+dhcp_check(netif=3fff7650) ew
+find_entry: found empty entry 0
+find_entry: selecting empty entry 0
+etharp_request: sending ARP request.
+etharp_raw: sending raw ARP packet.
+dhcp_check(): set request timeout 500 msecs
+dhcp_fine_tmr(): request timeout
+dhcp_timeout()
+dhcp_timeout(): CHECKING, ARP request timed out
+dhcp_check(netif=3fff7650) ew
+find_entry: found matching entry 0
+etharp_request: sending ARP request.
+etharp_raw: sending raw ARP packet.
+dhcp_check(): set request timeout 500 msecs
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+dhcp_fine_tmr(): request timeout
+dhcp_timeout()
+dhcp_timeout(): CHECKING, ARP request timed out
+dhcp_bind(netif=3fff7650) ew0
+dhcp_bind(): t1 renewal timer 3600 secs
+dhcp_bind(): set request timeout 3600000 msecs
+dhcp_bind(): t2 rebind timer 7200 secs
+dhcp_bind(): set request timeout 7200000 msecs
+dhcp_bind(): IP: 0x6800a8c0
+netif_set_ipaddr: netif address being changed
+netif: IP address of interface ew set to 192.168.0.104
+dhcp_bind(): SN: 0x00ffffff
+netif: netmask of interface ew set to 255.255.255.0
+dhcp_bind(): GW: 0x0100a8c0
+netif: GW address of interface ew set to 192.168.0.1
+etharp_request: sending ARP request.
+etharp_raw: sending raw ARP packet.
+ip:192.168.0.104,mask:255.255.255.0,gw:192.168.0.1
+etharp_send_ip: sending packet 3fff7788
+AP CONNECT
+tcp_bind: bind to port 80
+'/' registered
+HTTP server STARTED 192.168.0.104
+find_entry: found empty entry 1
+find_entry: selecting empty entry 1
+etharp_request: sending ARP request.
+etharp_raw: sending raw ARP packet.
+etharp_query: queued packet 3fff7a60 on ARP entry 1
+find_entry: found matching entry 1
+etharp_request: sending ARP request.
+etharp_raw: sending raw ARP packet.
+etharp_query: dropped previously queued packet 3fff7a60 for ARP entry 1
+etharp_query: queued packet 3fff7a60 on ARP entry 1
+NTP client STARTED
+ethernet_input: dest:18:fe:34:a0:42:7a, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 192.168.0.1 - e8:de:27:b4:eb:92
+find_entry: found matching entry 1
+update_arp_entry: updating stable entry 1
+etharp_send_ip: sending packet 3fff7d50
+etharp_arp_input: incoming ARP reply
+dhcp_arp_reply()
+ethernet_input: dest:18:fe:34:a0:42:7a, src:e8:de:27:b4:eb:92, type:806
+update_arp_entry: 19tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection request 1682 -> 80.
+etharp_send_ip: sending packet 3fff82c8
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection request 1676 -> 80.
+etharp_send_ip: sending packet 3fff8400
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection established 1682 -> 80.
+onAccept state: 0 K=2
+Free heap size=15304, K=2
++TCP connection
+timeout updating: 70 -> 90
+TcpServer onClient: 192.168.0.101
+
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 484 bytes, wnd 5840 (0).
+path=/
+Host === 192.168.0.104
+Sec-WebSocket-Version === 13
+Sec-WebSocket-Key === qYyzyGaWPFuRVVtAzpSUeQ==
+Upgrade === websocket
+parsed
+Request: GET, nodata
+TCP received: 484 bytes
+onReadyToSendData: 1
+response sendHeader
+Switched to WebSocket Protocol
+timeout updating: 90 -> 65535
+etharp_send_ip: sending packet 3fff88c0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection established 1676 -> 80.
+onAccept state: 0 K=3
+Free heap size=12616, K=3
++TCP connection
+timeout updating: 70 -> 90
+TcpServer onClient: 192.168.0.101
+
+etharp_timer
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 484 bytes, wnd 5840 (0).
+path=/
+Host === 192.168.0.104
+Sec-WebSocket-Version === 13
+Sec-WebSocket-Key === taYeHCxzG7gVa5IVjvw2zQ==
+Upgrade === websocket
+parsed
+Request: GET, nodata
+TCP received: 484 bytes
+onReadyToSendData: 1
+response sendHeader
+Switched to WebSocket Protocol
+timeout updating: 90 -> 65535
+etharp_send_ip: sending packet 3fff92e8
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 129
+onReadyToSendData: 2
+TCP received: (null)
+WS remove connection item
+WS Close
+TCP connection closing
+~TCP connection
+-TCP connection
+tcp_close: closing in State: CLOSE_WAIT
+~TCP connection
+3fff8480 already freed
+etharp_send_ip: sending packet 3fff82c8
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 129
+onReadyToSendData: 2
+TCP received: (null)
+WS remove connection item
+WS Close
+TCP connection closing
+~TCP connection
+-TCP connection
+tcp_close: closing in State: CLOSE_WAIT
+~TCP connection
+3fff8ef0 already freed
+etharp_send_ip: sending packet 3fff8400
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection closed: LAST_ACK 1682 -> 80.
+tcp_pcb_purge
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection closed: LAST_ACK 1676 -> 80.
+tcp_pcb_purge
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection request 1683 -> 80.
+etharp_send_ip: sending packet 3fff82c8
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection request 1677 -> 80.
+etharp_send_ip: sending packet 3fff8400
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection established 1683 -> 80.
+onAccept state: 0 K=2
+Free heap size=15304, K=2
++TCP connection
+timeout updating: 70 -> 90
+TcpServer onClient: 192.168.0.101
+
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection established 1677 -> 80.
+onAccept state: 0 K=3
+Free heap size=15160, K=3
++TCP connection
+timeout updating: 70 -> 90
+TcpServer onClient: 192.168.0.101
+
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection request 1678 -> 80.
+etharp_send_ip: sending packet 3fff8400
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection established 1678 -> 80.
+onAccept state: 0 K=4
+Free heap size=14648, K=4
++TCP connection
+timeout updating: 70 -> 90
+TcpServer onClient: 192.168.0.101
+
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 484 bytes, wnd 5840 (0).
+path=/
+Host === 192.168.0.104
+Sec-WebSocket-Version === 13
+Sec-WebSocket-Key === pyMEooBYblRTIcWBTW413g==
+Upgrade === websocket
+parsed
+Request: GET, nodata
+TCP received: 484 bytes
+onReadyToSendData: 1
+response sendHeader
+Switched to WebSocket Protocol
+timeout updating: 90 -> 65535
+etharp_send_ip: sending packet 3fff8b38
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 129
+onReadyToSendData: 2
+TCP received: (null)
+WS remove connection item
+WS Close
+TCP connection closing
+~TCP connection
+-TCP connection
+tcp_close: closing in State: CLOSE_WAIT
+~TCP connection
+3fff8710 already freed
+etharp_send_ip: sending packet 3fff8400
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection closed: LAST_ACK 1678 -> 80.
+tcp_pcb_purge
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection request 1679 -> 80.
+etharp_send_ip: sending packet 3fff8400
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection established 1679 -> 80.
+onAccept state: 0 K=4
+Free heap size=14648, K=4
++TCP connection
+timeout updating: 70 -> 90
+TcpServer onClient: 192.168.0.101
+
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+tcp_slowtmr: processing active pcb 4
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+tcp_slowtmr: processing active pcb 4
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+tcp_slowtmr: processing active pcb 4
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+tcp_slowtmr: processing active pcb 4
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+tcp_slowtmr: processing active pcb 4
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+tcp_slowtmr: processing active pcb 4
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+tcp_slowtmr: processing active pcb 4
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+tcp_slowtmr: processing active pcb 4
+ 2:55:48 Dormitor H:41.50(0.0) T:22.40(0.0 0.0)/25.0 SetPt:22.00 Time:32352
+HEATER(1) REQ: OFF
+TX timeout
+deviceAppendLog ftell 0 fsize 5366
+deviceAppendLog ftell 5365 
+deviceAppendLog ftell 5393 fsize 5393
+TH(0) saved to log: 1454295348;0;1;22.399999619;
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+tcp_slowtmr: processing active pcb 4
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+tcp_slowtmr: processing active pcb 4
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP received: (null)
+TCP connection closing
+~TCP connection
+-TCP connection
+tcp_close: closing in State: CLOSE_WAIT
+etharp_send_ip: sending packet 3fff7bd8
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection closed: LAST_ACK 1681 -> 80.
+tcp_pcb_purge
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 14 bytes, wnd 5840 (0).
+WS 3fff7d50: 5;1;141;
+TCP received: 14 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff8840
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 14 bytes, wnd 5840 (0).
+WS 3fff7d50: 5;2;142;
+TCP received: 14 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff8e70
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 266
+onReadyToSendData: 2
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 2
+tcp_slowtmr: processing active pcb 3
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+etharp_timer
+etharp_timer: expired pending entry 0.
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP received: (null)
+TCP connection closing
+~TCP connection
+-TCP connection
+tcp_close: closing in State: CLOSE_WAIT
+~TCP connection
+3fff8480 already freed
+etharp_send_ip: sending packet 3fff7aa0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP received: (null)
+TCP connection closing
+~TCP connection
+-TCP connection
+tcp_close: closing in State: CLOSE_WAIT
+~TCP connection
+3fff82c8 already freed
+etharp_send_ip: sending packet 3fff7bd8
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection closed: LAST_ACK 1683 -> 80.
+tcp_pcb_purge
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection closed: LAST_ACK 1677 -> 80.
+tcp_pcb_purge
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 1
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP received: (null)
+TCP connection closing
+~TCP connection
+-TCP connection
+tcp_close: closing in State: CLOSE_WAIT
+~TCP connection
+3fff8710 already freed
+etharp_send_ip: sending packet 3fff7aa0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP connection closed: LAST_ACK 1679 -> 80.
+tcp_pcb_purge
+tcp_slowtmr: processing active pcb 0
+pm open,type:2 0
+tcp_slowtmr: processing active pcb 0
+ 2:55:52 Dormitor H:41.60(0.0) T:22.50(0.0 0.0)/25.0 SetPt:22.00 Time:36588
+HEATER(1) REQ: OFF
+TX timeout
+deviceAppendLog ftell 0 fsize 5393
+deviceAppendLog ftell 5392 
+deviceAppendLog ftell 5412 fsize 5412
+TH(0) saved to log: 1454295352;0;1;22.5;
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+etharp_timer
+tcp_slowtmr: processing active pcb 0
+ 2:55:56 Dormitor H:41.60(0.0) T:22.50(0.0 0.0)/25.0 SetPt:22.00 Time:40823
+HEATER(1) REQ: OFF
+TX timeout
+REGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+(00): 08 06 20 20 00 00 03 01 00 7f 06 00 00 00 00 00
+(10): 00 00 20 00 03 00 01 00 00 01 14 00 02 3c 02 03
+(20): 68 01 3a 93 04 ee 00 1e 00 00 ff 00 18 bc 26 08
+(30): ad 00 0c 22 08 3a 2d d4 00 00 de ad 00 00 00 de
+(40): ad 00 00 ff ff ff ff 00 00 00 00 ff 08 08 08 10
+(50): 00 00 df 52 20 64 00 01 87 00 01 00 0e 00 00 00
+(60): a0 00 24 00 00 82 42 1f 03 60 9d 00 01 1f 09 d5
+(70): 0c 23 1f 00 00 53 00 00 19 00 64 03 37 04 37 40
+deviceAppendLog ftell 0 fsize 5412
+deviceAppendLog ftell 5411 
+deviceAppendLog ftell 5431 fsize 5431
+TH(0) saved to log: 1454295356;0;1;22.5;
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 31 bytes, wnd 5840 (0).
+WS 3fff7d50: 23;0;1454284568;1;50;143;
+cwGetGenericDeviceLogs1 24;
+deviceReadLog read 127
+deviceReadLog last; ;0;18.0;8;0;8;10;18.0;8;10;9;11;27.0;9;11;23;11;0;0;0;0;0;22.4;41.5;0.0;0.0;0.0;0.0;
+deviceReadLog Entry 1 TS 24 skip 1
+deviceReadLog end
+cwGetGenericDeviceLogs 04;
+TCP received: 31 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff8210
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 5
+onReadyToSendData: 2
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ 2:56: 1 Dormitor H:41.60(0.0) T:22.50(0.0 0.0)/25.0 SetPt:22.00 Time:45066
+HEATER(1) REQ: OFF
+ SENT! SYNC RX (15):
+0 1 5 2 1 0 0 1 0 1 0 1 0 4 10 
+
+Heater 1; on:0 fault:0 last:0
+Heater 1 THRESHOLDS differ!
+deviceAppendLog ftell 0 fsize 5431
+deviceAppendLog ftell 5430 
+deviceAppendLog ftell 5450 fsize 5450
+TH(0) saved to log: 1454295361;0;1;22.5;
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+etharp_timer
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ 2:56: 5 Dormitor H:41.50(0.0) T:22.40(0.0 0.0)/25.0 SetPt:22.00 Time:49239
+deviceAppendLog ftell 0 fsize 5450
+deviceAppendLog ftell 5449 
+deviceAppendLog ftell 5477 fsize 5477
+TH(0) saved to log: 1454295365;0;1;22.399999619;
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+etharp_timer
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ 2:56: 9 Dormitor H:41.50(0.0) T:22.40(0.0 0.0)/25.0 SetPt:22.00 Time:53274
+deviceAppendLog ftell 0 fsize 5477
+deviceAppendLog ftell 5476 
+deviceAppendLog ftell 5504 fsize 5504
+TH(0) saved to log: 1454295369;0;1;22.399999619;
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 14 bytes, wnd 5840 (0).
+WS 3fff7d50: 5;1;144;
+TCP received: 14 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff8210
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 14 bytes, wnd 5840 (0).
+WS 3fff7d50: 5;2;145;
+TCP received: 14 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff8840
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 259
+onReadyToSendData: 2
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 31 bytes, wnd 5840 (0).
+WS 3fff7d50: 23;0;1454284568;1;50;146;
+cwGetGenericDeviceLogs1 24;
+deviceReadLog read 127
+deviceReadLog last; ;0;18.0;8;0;8;10;18.0;8;10;9;11;27.0;9;11;23;11;0;0;0;0;0;22.4;41.5;0.0;0.0;0.0;0.0;
+deviceReadLog Entry 1 TS 24 skip 1
+deviceReadLog end
+cwGetGenericDeviceLogs 04;
+TCP received: 31 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff8210
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 5
+onReadyToSendData: 2
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ 2:56:13 Dormitor H:41.60(0.0) T:22.50(0.0 0.0)/25.0 SetPt:22.00 Time:57309
+deviceAppendLog ftell 0 fsize 5504
+deviceAppendLog ftell 5503 
+deviceAppendLog ftell 5523 fsize 5523
+TH(0) saved to log: 1454295373;0;1;22.5;
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+etharp_timer
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ 2:56:17 Dormitor H:41.60(0.0) T:22.40(0.0 0.0)/25.0 SetPt:22.00 Time:61344
+deviceAppendLog ftell 0 fsize 5523
+deviceAppendLog ftell 5522 
+deviceAppendLog ftell 5550 fsize 5550
+TH(0) saved to log: 1454295377;0;1;22.399999619;
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+etharp_timer
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ 2:56:21 Dormitor H:41.60(0.0) T:22.40(0.0 0.0)/25.0 SetPt:22.00 Time:65379
+deviceAppendLog ftell 0 fsize 5550
+deviceAppendLog ftell 5549 
+deviceAppendLog ftell 5577 fsize 5577
+TH(0) saved to log: 1454295381;0;1;22.399999619;
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0

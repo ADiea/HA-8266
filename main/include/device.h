@@ -75,7 +75,7 @@ class CGenericDevice
 {
 public:
 	CGenericDevice():m_ID(INVALID_DEVICE_ID), m_FriendlyName("notInit"),
-					 m_LastUpdateTimestamp(~0){};
+					 m_LastUpdateTimestamp(~0), isSavedToDisk(true){};
 
 	bool isInit()
 		{return m_ID != INVALID_DEVICE_ID;}
@@ -87,6 +87,11 @@ public:
 
 	virtual bool deserialize(const char **string) = 0;
 	virtual uint32_t serialize(char* buffer, uint32_t size) = 0;
+
+	virtual bool initDevice()
+	{
+		return true;
+	}
 
 	CGenericDevice* findDevice(uint32_t deviceID)
 	{
@@ -130,6 +135,7 @@ public:
 	eDeviceType m_deviceType;
 	int m_updateInterval;
 	Timer m_updateTimer;
+	bool isSavedToDisk;
 };
 
 #include "CDeviceHeater.h"
@@ -137,5 +143,9 @@ public:
 #include "CDeviceTempHumid.h"
 
 bool deviceWriteToDisk(CGenericDevice *dev);
+
+uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
+					char* buf, uint32_t size, int numEntries);
+bool deviceAppendLogEntry(uint32_t id, char* logEntry);
 
 #endif /*__DEVICE_H_*/
