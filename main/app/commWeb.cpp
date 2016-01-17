@@ -1,17 +1,13 @@
-
 #include "debug.h"
 #include "device.h"
 #include "commWeb.h"
 #include "util.h"
 
-#define PKG_BUF_SIZE 256
-
-char scrapPackage[PKG_BUF_SIZE];
 
 bool reply_cwReplyToCommand(WebSocket& socket, eCommWebErrorCodes err, int lastCmdType = 0, int sequence = 0)
 {
-	int sizePkt = m_snprintf(scrapPackage, sizeof(scrapPackage), "%d;%d;%d;%d;", cwReplyToCommand, err, lastCmdType, sequence);
-	socket.send((const char*)scrapPackage, sizePkt);
+	int sizePkt = m_snprintf(g_devScrapBuffer, sizeof(g_devScrapBuffer), "%d;%d;%d;%d;", cwReplyToCommand, err, lastCmdType, sequence);
+	socket.send((const char*)g_devScrapBuffer, sizePkt);
 }
 
 bool handle_cwErrorHandler(WebSocket& socket, const char **pkt)
@@ -22,7 +18,6 @@ bool handle_cwErrorHandler(WebSocket& socket, const char **pkt)
 
 bool handle_cwGetLights(WebSocket& socket, const char **pkt)
 {
-
 	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
 
@@ -52,7 +47,7 @@ bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 			++numDevs;
 		}
 	}
-	sizePkt = m_snprintf(scrapPackage, sizeof(scrapPackage),
+	sizePkt = m_snprintf(g_devScrapBuffer, sizeof(g_devScrapBuffer),
 				"%d;%d;%d;", cwReplyDevicesOfType, devType, numDevs);
 	//
 	for(i=0; i < g_activeDevices.count(); i++)
@@ -60,21 +55,25 @@ bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 		if(devTypeTH == devType && devTypeTH == g_activeDevices[i]->m_deviceType)
 		{
 			th = (CDeviceTempHumid*)g_activeDevices[i];
-			sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
-							"%d;%s;%.1f;%.1f;%d;%d;%d;%d;%.1f;%.1f;%.1f;%.1f;%.1f;%d;%d;", th->m_ID,
+			sizePkt += m_snprintf(g_devScrapBuffer + sizePkt, sizeof(g_devScrapBuffer) - sizePkt,
+							"%d;%s;%.1f;%.1f;%d;%d;%d;%d;%.1f;%.1f;%.1f;%.1f;%.1f;%d;%d;",
+							th->m_ID,
 							th->m_FriendlyName.c_str(),
-							th->m_state.tempSetpoint, th->m_state.lastTH.temp, 1, th->m_state.bEnabled, th->m_state.bIsHeating, th->m_state.bIsCooling,
+							th->m_state.tempSetpoint, th->m_state.lastTH.temp,
+							1,
+							th->m_state.bEnabled,
+							th->m_state.bIsHeating, th->m_state.bIsCooling,
 							th->m_state.tempSetpointMin, th->m_state.tempSetpointMax, th->m_state.lastTH.humid,
 							th->m_state.fLastTemp_1m, th->m_state.fLastTemp_8m, th->m_autopilotDay, th->m_autopilotIndex);
 
 			for(j=0; j<7; j++)
 			{
 				len = th->m_autoPrograms[j].count();
-				sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
+				sizePkt += m_snprintf(g_devScrapBuffer + sizePkt, sizeof(g_devScrapBuffer) - sizePkt,
 						"%d;", len);
 				for(k = 0; k < len; k++)
 				{
-					sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
+					sizePkt += m_snprintf(g_devScrapBuffer + sizePkt, sizeof(g_devScrapBuffer) - sizePkt,
 											"%.1f;%d;%d;%d;%d;",
 											th->m_autoPrograms[j][k].setTemp,
 											th->m_autoPrograms[j][k].startHour,
@@ -97,7 +96,7 @@ bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 
 			min += heat->m_state.onMinutesToday;
 
-			sizePkt += m_snprintf(scrapPackage + sizePkt, sizeof(scrapPackage) - sizePkt,
+			sizePkt += m_snprintf(g_devScrapBuffer + sizePkt, sizeof(g_devScrapBuffer) - sizePkt,
 							"%d;%s;%d;%d;%d;%d;%d;%d;%d;%d;", heat->m_ID,
 							heat->m_FriendlyName.c_str(),
 							heat->m_state.isOn?1:0, heat->m_state.isFault?1:0, heat->m_state.gasLevel_lastReading,
@@ -106,7 +105,7 @@ bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 		}
 	}
 
-	socket.send((const char*)scrapPackage, sizePkt);
+	socket.send((const char*)g_devScrapBuffer, sizePkt);
 }
 
 bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
@@ -251,7 +250,6 @@ bool handle_cwSetHeaterParams(WebSocket& socket, const char **pkt)
 
 	reply_cwReplyToCommand(socket, retCode);
 }
-//,
 
 bool handle_cwGetConfortStatus(WebSocket& socket, const char **pkt)
 {
@@ -277,6 +275,55 @@ bool handle_cwSetMovementParams(WebSocket& socket, const char **pkt)
 {
 	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
 }
+
+bool handle_cwPrintDebugInformation(WebSocket& socket, const char **pkt)
+{
+	int debugCommand = 0;
+	eCommWebErrorCodes retCode = cwErrSuccess;
+	do
+	{
+		if(!skipInt(pkt, &debugCommand))
+		{
+			retCode = cwErrInvalidCommandParams;
+			break;
+		}
+
+		switch(debugCommand)
+		{
+		case 0:
+			LOG_I("DBG: heap %d", system_get_free_heap_size());
+			break;
+
+		case 1:
+			NetUtils::debugPrintTcpList();
+			break;
+
+		}
+
+	}while(false);
+
+	reply_cwReplyToCommand(socket, retCode);
+}
+
+/*
+ *
+ * radio reinit after multiple failures
+radio debug scos
+
+soft radio sa ceara confirmarea la 10 secunde si sa clipeasca mai rapid ledul daca nu e ok
+1 blink every 5s - all ok
+2 blink every 5s comm error; dupa 10 comm error sa isi faca si mcu rese la radio; dupa 20 failures sa isi dea reset(?)
+
+esp8266 reboot if stack < 5KB and tcp conn is attempted 3 times
+reboot command*/
+
+bool handle_cwSpecialCommand(WebSocket& socket, const char **pkt)
+{
+	reply_cwReplyToCommand(socket, cwErrSuccess);
+	LOG_I("DBG: RESTART");
+	system_restart();
+}
+
 
 bool (*gCWHandlers[cwMaxId])(WebSocket&, const char**) =
 {
@@ -304,6 +351,10 @@ bool (*gCWHandlers[cwMaxId])(WebSocket&, const char**) =
 	handle_cwErrorHandler,
 
 	handle_cwSetHeaterParams,
+
+	handle_cwPrintDebugInformation,
+
+	handle_cwSpecialCommand,
 
 };
 

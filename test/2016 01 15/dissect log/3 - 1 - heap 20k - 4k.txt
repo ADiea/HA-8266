@@ -1,0 +1,681 @@
+16.01.2016 17:40:08 Heap: 20968
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:40:99:9b, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:c4:18:da, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:77:a2:37, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:f8:16:54:98:c3:5d, type:800
+tcp_slowtmr: processing active pcb 0
+17:40: 9 Dormitor H:42.10(42.0) T:23.50(23.5 0.0)/25.2 SetPt:20.50 Time:121611
+tcp_slowtmr: processing active pcb 0
+etharp_timer
+ethernet_input: dest:33:33:ff:40:99:9b, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:c4:18:da, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:77:a2:37, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:f8:16:54:98:c3:5d, type:800
+ethernet_input: dest:33:33:ff:01:f4:4c, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:6c:dd:14, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:ff:ff:ff:ff:ff:ff, src:f8:16:54:98:c3:5d, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:77:a2:37, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:01:f4:4c, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:6c:dd:14, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:01:f4:4c, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:6c:dd:14, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:77:a2:37, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;1;28371;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6ea0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;2;28372;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff74d0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 225
+onReadyToSendData: 2
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:77:a2:37, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:01:f4:4c, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:6c:dd:14, src:f8:16:54:98:c3:5d, type:86dd
+17:40:13 Dormitor H:42.10(42.0) T:23.50(23.5 0.0)/25.2 SetPt:20.50 Time:125631
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:77:a2:37, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:01:f4:4c, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:40:99:9b, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:c4:18:da, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:01:f4:4c, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:6c:dd:14, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:40:99:9b, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:c4:18:da, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+etharp_timer
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:40:99:9b, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:c4:18:da, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:09:13:7b, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:09:13:7b, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+17:40:17 Dormitor H:42.10(42.0) T:23.60(23.5 0.0)/25.2 SetPt:20.50 Time:129650
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;1;28373;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6ea0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;2;28374;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff74d0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 225
+onReadyToSendData: 2
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:09:13:7b, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:77:a2:37, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:77:a2:37, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:6c:dd:14, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:01:f4:4c, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:09:13:7b, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:77:a2:37, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:6c:dd:14, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:01:f4:4c, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:09:13:7b, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:6c:dd:14, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:01:f4:4c, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+dhcp_coarse_tmr()
+etharp_timer
+17:40:21 Dormitor H:42.00(42.0) T:23.50(23.5 0.0)/25.2 SetPt:20.50 Time:133669
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;1;28375;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6ea0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;2;28376;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff74d0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 225
+onReadyToSendData: 2
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:09:13:7b, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 162 bytes, wnd 5840 (0).
+WS 3fff6a18: 7;0;21.0;Dormitor;15.0;27.0;1;18.0;0;0;23;11;1;27.0;9;11;10;11;0;1;25.5;0;0;23;11;1;20.0;0;0;21;10;3;27.0;0;0;8;10;18.0;8;10;9;11;27.0;9;11;23;11;0;28377;
+devWriteDisk SAVED 0
+
+TCP received: 162 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6f48
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 162 bytes, wnd 5840 (0).
+WS 3fff6a18: 7;0;21.5;Dormitor;15.0;27.0;1;18.0;0;0;23;11;1;27.0;9;11;10;11;0;1;25.5;0;0;23;11;1;20.0;0;0;21;10;3;27.0;0;0;8;10;18.0;8;10;9;11;27.0;9;11;23;11;0;28378;
+devWriteDisk HOLD UPDATE for 0
+
+TCP received: 162 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff8580
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 28
+onReadyToSendData: 2
+17:40:25 Dormitor H:42.00(42.0) T:23.60(23.5 0.0)/25.2 SetPt:21.50 Time:137688
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 162 bytes, wnd 5840 (0).
+WS 3fff6a18: 7;0;22.0;Dormitor;15.0;27.0;1;18.0;0;0;23;11;1;27.0;9;11;10;11;0;1;25.5;0;0;23;11;1;20.0;0;0;21;10;3;27.0;0;0;8;10;18.0;8;10;9;11;27.0;9;11;23;11;0;28379;
+devWriteDisk HOLD UPDATE for 0
+
+TCP received: 162 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6f48
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 14
+onReadyToSendData: 2
+tcp_recved: recveived 162 bytes, wnd 5840 (0).
+WS 3fff6a18: 7;0;22.5;Dormitor;15.0;27.0;1;18.0;0;0;23;11;1;27.0;9;11;10;11;0;1;25.5;0;0;23;11;1;20.0;0;0;21;10;3;27.0;0;0;8;10;18.0;8;10;9;11;27.0;9;11;23;11;0;28380;
+devWriteDisk HOLD UPDATE for 0
+
+TCP received: 162 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6f48
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 14
+onReadyToSendData: 2
+tcp_recved: recveived 162 bytes, wnd 5840 (0).
+WS 3fff6a18: 7;0;23.0;Dormitor;15.0;27.0;1;18.0;0;0;23;11;1;27.0;9;11;10;11;0;1;25.5;0;0;23;11;1;20.0;0;0;21;10;3;27.0;0;0;8;10;18.0;8;10;9;11;27.0;9;11;23;11;0;28381;
+devWriteDisk HOLD UPDATE for 0
+
+TCP received: 162 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6f48
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 14
+onReadyToSendData: 2
+tcp_recved: recveived 162 bytes, wnd 5840 (0).
+WS 3fff6a18: 7;0;23.5;Dormitor;15.0;27.0;1;18.0;0;0;23;11;1;27.0;9;11;10;11;0;1;25.5;0;0;23;11;1;20.0;0;0;21;10;3;27.0;0;0;8;10;18.0;8;10;9;11;27.0;9;11;23;11;0;28382;
+E:M 4104
+devWriteDisk HOLD UPDATE for 0
+
+TCP received: 162 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6f48
+ethernet_input: dest:33:33:ff:09:13:7b, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 14
+onReadyToSendData: 2
+tcp_recved: recveived 162 bytes, wnd 5840 (0).
+WS 3fff6a18: 7;0;24.0;Dormitor;15.0;27.0;1;18.0;0;0;23;11;1;27.0;9;11;10;11;0;1;25.5;0;0;23;11;1;20.0;0;0;21;10;3;27.0;0;0;8;10;18.0;8;10;9;11;27.0;9;11;23;11;0;28383;
+E:M 4104
+devWriteDisk HOLD UPDATE for 0
+
+TCP received: 162 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6f48
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 14
+onReadyToSendData: 2
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:09:13:7b, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+etharp_timer
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;1;28384;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6ea0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;2;28385;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fffb598
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 225
+onReadyToSendData: 2
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+17:40:29 Dormitor H:42.00(42.0) T:23.60(23.5 0.0)/25.2 SetPt:24.00 Time:141707
+HEATER(1) REQ: ON
+== DEV STATUS: 22 ==
+== DEV STATUS: 20 ==
+Package sent! -- 26 
+== DEV STATUS: 21 ==
+Valid Preamble detected -- 52
+SYNC WORD detected -- 92
+== DEV STATUS: 0 ==
+Packet detected -- 26
+ SENT! SYNC RX (15):
+0 1 5 1 1 0 0 1 0 1 0 1 0 22 2d 
+
+Heater 1; on:1 fault:0 last:0
+Heater 1 THRESHOLDS differ!
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;1;28386;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6ea0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;2;28387;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fffb598
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 225
+onReadyToSendData: 2
+tcp_slowtmr: processing active pcb 0
+etharp_timer
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+17:40:33 Dormitor H:42.10(42.0) T:23.50(23.5 0.0)/25.2 SetPt:24.00 Time:145861
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:3c:bb:51, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:59:ca:e6, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+17:40:37 Dormitor H:42.10(42.0) T:23.50(23.5 0.0)/25.2 SetPt:24.00 Time:149881
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;1;28388;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6ea0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;2;28389;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fffb598
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 225
+onReadyToSendData: 2
+ethernet_input: dest:33:33:ff:3c:bb:51, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:59:ca:e6, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+etharp_timer
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:3c:bb:51, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:59:ca:e6, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:02:dd:ff, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:02:dd:ff, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:3c:bb:51, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:59:ca:e6, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:02:dd:ff, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:3c:bb:51, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:59:ca:e6, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+17:40:41 Dormitor H:42.20(42.0) T:23.60(23.5 0.0)/25.2 SetPt:24.00 Time:153900
+ethernet_input: dest:33:33:ff:3c:bb:51, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:59:ca:e6, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:02:dd:ff, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;1;28390;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6ea0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;2;28391;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fffb598
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 225
+onReadyToSendData: 2
+ethernet_input: dest:33:33:ff:02:dd:ff, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:02:dd:ff, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+etharp_timer
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:00:00:fb, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+17:40:45 Dormitor H:42.10(42.0) T:23.60(23.5 0.0)/25.2 SetPt:24.00 Time:157919
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:ff:ff:fe, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:3c:bb:51, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:59:ca:e6, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:3c:bb:51, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:59:ca:e6, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;1;28392;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6ea0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;2;28393;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fffb598
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 225
+onReadyToSendData: 2
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:3c:bb:51, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:02:dd:ff, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:02:dd:ff, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+17:40:49 Dormitor H:42.10(42.0) T:23.50(23.5 0.0)/25.2 SetPt:24.00 Time:161939
+ethernet_input: dest:33:33:ff:02:dd:ff, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+etharp_timer
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;1;28394;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6ea0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;2;28395;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fffb598
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 225
+onReadyToSendData: 2
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+17:40:53 Dormitor H:42.10(42.0) T:23.50(23.5 0.0)/25.2 SetPt:24.00 Time:165958
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+etharp_timer
+ethernet_input: dest:33:33:ff:e3:63:23, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:e3:63:23, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+17:40:57 Dormitor H:42.10(42.0) T:23.60(23.5 0.0)/25.2 SetPt:24.00 Time:169977
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;1;28396;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6ea0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;2;28397;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fffb598
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 225
+onReadyToSendData: 2
+ethernet_input: dest:33:33:ff:e3:63:23, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:00:01:00:02, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:a6:86:7b, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:a6:86:7b, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:00:01:00:02, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:e3:63:23, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:a6:86:7b, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:ff:e3:63:23, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:e3:63:23, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:33:33:00:01:00:02, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:a6:86:7b, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+17:41: 1 Dormitor H:42.00(42.0) T:23.60(23.5 0.0)/25.2 SetPt:24.00 Time:173996
+tcp_slowtmr: processing active pcb 0
+etharp_timer
+ethernet_input: dest:33:33:ff:a6:86:7b, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;1;28398;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6ea0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;2;28399;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fffb598
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 225
+onReadyToSendData: 2
+ethernet_input: dest:33:33:ff:a6:86:7b, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:00:01:00:02, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:e3:63:23, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+17:41: 5 Dormitor H:42.00(42.0) T:23.60(23.5 0.0)/25.2 SetPt:24.00 Time:178015
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+ethernet_input: dest:33:33:ff:e3:63:23, src:f8:16:54:98:c3:5d, type:86dd
+ethernet_input: dest:01:00:5e:7f:ff:fa, src:e8:de:27:b4:eb:92, type:800
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:e3:63:23, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:33:33:ff:a6:86:7b, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+etharp_timer
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;1;28400;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fff6ea0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+tcp_recved: recveived 16 bytes, wnd 5840 (0).
+WS 3fff6a18: 5;2;28401;
+TCP received: 16 bytes
+onReadyToSendData: 1
+etharp_send_ip: sending packet 3fffb598
+tcp_slowtmr: processing active pcb 0
+ethernet_input: dest:18:fe:34:a0:42:7a, src:00:21:6b:1d:34:28, type:800
+TCP sent: 225
+onReadyToSendData: 2
+ethernet_input: dest:33:33:ff:a6:86:7b, src:f8:16:54:98:c3:5d, type:86dd
+tcp_slowtmr: processing active pcb 0
+16.01.2016 17:41:08 Heap: 4552

@@ -40,8 +40,11 @@ enum eCommWebMsgTYpes
 	cwSetMovementParams,
 	cwNotifyMovementStatus,
 
-
 	cwSetHeaterParams,
+
+	cwPrintDebugInformation,
+
+	cwSpecialCommand,
 
 //	cwGetDevices,
 //	cwReplyDeviceList,

@@ -3,6 +3,7 @@
 bool devicesLoadFromDisk();
 bool deviceReadFromDisk(char* path);
 
+char g_devScrapBuffer[MAXDEVSZ];
 
  Vector<CGenericDevice*> g_activeDevices;
 
@@ -174,9 +175,9 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 
 
 	char fname[128];
-	char *devBuffer = new char[MAXDEVSZ];
 
-	if(!dev || !devBuffer)
+
+	if(!dev )
 		return false;
 
 	unsigned long now = millis();
@@ -193,7 +194,7 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 	{
 		do
 		{
-			size = dev->serialize(devBuffer, MAXDEVSZ);
+			size = dev->serialize(g_devScrapBuffer, MAXDEVSZ);
 
 			if(size == MAXDEVSZ)
 			{
@@ -210,7 +211,7 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 				break;
 			}
 
-			f_write(&file, devBuffer, size, &actual);
+			f_write(&file, g_devScrapBuffer, size, &actual);
 
 			if (actual != size)
 			{
@@ -234,9 +235,6 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 	{
 		LOG_E( "devWriteDisk: radio busy");
 	}
-
-	if(devBuffer)
-		delete devBuffer;
 
 	return bRet;
 }

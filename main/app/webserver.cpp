@@ -32,7 +32,7 @@ struct WebSockUserData
 
 		if(millis() - lastDataTime > 1*60*1000)
 		{
-			LOG_I("WS: close inactive connection");
+			LOG_I("WS: close inactive connection %x (%d)", webSock, millis() - lastDataTime);
 			return false;
 		}
 

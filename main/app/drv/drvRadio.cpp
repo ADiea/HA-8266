@@ -14,6 +14,8 @@ SPISoft *pRadioSPI = NULL;
 bool bRadioBusy = false;
 bool bRadioHalt = false;
 
+uint8_t gRadioSendFaults = 0;
+
 uint8_t g_SeqID = 0;
 
 uint8_t RadioNextSeqID()
@@ -87,9 +89,24 @@ bool RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitMs)
 			{
 				LOG_I("Radio send err.");
 				result = false;
+
+				gRadioSendFaults++;
+				if(gRadioSendFaults > 3)
+				{
+					//initialise radio with default settings
+					Radio->init();
+
+					//explicitly set baudrate and channel
+					Radio->setBaudRateFast(eBaud_38k4);
+					Radio->setChannel(0);
+
+					//dump the register configuration to console
+					Radio->readAll();
+				}
 			}
 			else
 			{
+				gRadioSendFaults = 0;
 				LOG_I(" SENT! SYNC RX (%d):", *outLen);
 
 				for (byte i = 0; i < *outLen; ++i)

@@ -14,6 +14,8 @@ uint8_t devUART_init(uint8_t operation)
 			//configure device
 			if(operation & CONFIG)
 			{
+				uart_div_modify(0, UART_CLK_FREQ / (921600));
+
 				// Configure the UART
 				//Serial.begin(SERIAL_BAUD_RATE);
 				//Serial.commandProcessing(false);
