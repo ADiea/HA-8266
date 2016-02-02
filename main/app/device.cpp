@@ -481,19 +481,20 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 
 			f_read(&file, path + remainingBytes, 128 - remainingBytes - 1, &fActualSize);
 
-			LOG_I("deviceReadLog read %d:%s", (int)fActualSize, path + remainingBytes);
+			LOG_I("deviceReadLog read %d:%s", (int)fActualSize, path);
 
 			foundSemicolon = false;
 			bufPtr = path + remainingBytes + fActualSize;
 			while(!foundSemicolon && bufPtr > path)
 			{
-				if(*(--bufPtr) ==';' )
+				if(*bufPtr ==';' )
 				{
-					LOG_I("deviceReadLog last; %s", bufPtr);
+					LOG_I("deviceReadLog last; %s pos %d", bufPtr, bufPtr - path);
 					foundSemicolon = true;
 					savedChar = *(bufPtr + 1);
 					*(bufPtr + 1) = 0;
-				}
+					bufPtr += 2;
+				}else --bufPtr;
 			}
 
 			if(foundSemicolon)
@@ -504,13 +505,14 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 					if(eLogStaCountParamFloat == logState)
 					{
 						if (!skipFloat((const char**)&startPtr, &ftoken))
-							return entriesRead;
+							return sizeWritten;
 					}
 					else
 					{
 						if(!skipInt((const char**)&startPtr, &token))
-							return entriesRead;
+							return sizeWritten;
 					}
+
 					logLastState = logState;
 					switch(logState)
 					{
@@ -532,7 +534,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 							paramTotalInt = token;
 							//LOG_I("deviceReadLog eLogStaWaitParamNumberInt");
 
-							logState = eLogStaWaitParamNumberInt;
+							logState = eLogStaWaitParamNumberFloat;
 						}
 						break;
 						case eLogStaWaitParamNumberFloat:
@@ -554,7 +556,12 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 							//LOG_I("deviceReadLog eLogStaCountParamInt");
 							++paramNoInt;
 							if(paramNoInt == paramTotalInt)
-								logState = eLogStaCountParamFloat;
+							{
+								if(paramTotalFloat > 0)
+									logState = eLogStaCountParamFloat;
+								else
+									logState = elogStaWaitTimestamp;
+							}
 							break;
 						}
 						case eLogStaCountParamFloat:
@@ -583,10 +590,13 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 					}
 				}while(strlen(startPtr) && numEntries > 0 && (size - sizeWritten > OVF_GUARD));
 
-				path[0] = savedChar;
 				remainingBytes = 0;
-				while(*(++bufPtr) != 0)
-					path[++remainingBytes] = *bufPtr;
+				if(savedChar)
+				{
+					path[0] = savedChar;
+					while(*(bufPtr) != 0)
+					path[++remainingBytes] = *(bufPtr++);
+				}
 			}
 			else
 			{
