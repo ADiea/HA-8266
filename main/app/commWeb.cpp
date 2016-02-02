@@ -166,7 +166,7 @@ bool handle_cwSetMovementParams(WebSocket& socket, const char **pkt)
 
 bool handle_cwGetGenericDeviceLogs(WebSocket& socket, const char **pkt)
 {
-	int sizePkt = 0, devId, fromTime, decimation, numEntries;
+	int sizePkt = 0, devId, fromTime, decimation, numEntries, i;
 
 	if (!skipInt(pkt, &devId) ||
 		!skipInt(pkt, &fromTime) ||
@@ -178,14 +178,22 @@ bool handle_cwGetGenericDeviceLogs(WebSocket& socket, const char **pkt)
 	}
 	else
 	{
-		sizePkt = m_snprintf(g_devScrapBuffer, sizeof(g_devScrapBuffer),
-					"%d;", cwReplyGenericDeviceLogs);
-		LOG_I("cwGetGenericDeviceLogs1 %s", g_devScrapBuffer);
-		sizePkt += deviceReadLog(devId, fromTime, decimation,
-				 (char*)(g_devScrapBuffer + sizePkt), sizeof(g_devScrapBuffer - sizePkt), numEntries);
+		for(i=0; i < g_activeDevices.count(); i++)
+		{
+			if(devId == g_activeDevices[i]->m_ID)
+			{
+				sizePkt = m_snprintf(g_devScrapBuffer, sizeof(g_devScrapBuffer),
+							"%d;%d;%d;", cwReplyGenericDeviceLogs,
+							g_activeDevices[i]->m_deviceType, devId);
+				LOG_I("cwGetGenericDeviceLogs1 %s", g_devScrapBuffer);
+				sizePkt += deviceReadLog(devId, fromTime, decimation,
+						 (char*)(g_devScrapBuffer + sizePkt), sizeof(g_devScrapBuffer) - sizePkt, numEntries);
 
-		LOG_I("cwGetGenericDeviceLogs %s", g_devScrapBuffer);
-		socket.send((const char*)g_devScrapBuffer, sizePkt);
+				LOG_I("cwGetGenericDeviceLogs %s", g_devScrapBuffer);
+				socket.send((const char*)g_devScrapBuffer, sizePkt);
+				break;
+			}
+		}
 	}
 }
 

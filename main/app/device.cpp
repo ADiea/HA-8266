@@ -390,7 +390,7 @@ bool deviceAppendLogEntry(uint32_t id, char* logEntry)
 
 			if(f_size(&file) > 0)
 			{
-				f_lseek(&file, f_size(&file)-1);
+				f_lseek(&file, f_size(&file));
 			}
 
 			LOG_E("deviceAppendLog ftell %d ", f_tell(&file));
@@ -453,7 +453,8 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 		eLogStaCountParamFloat,
 	};
 
-	ParseLogState logState = elogStaWaitTimestamp;
+	ParseLogState logState = elogStaWaitTimestamp,
+			logLastState = elogStaWaitTimestamp;
 	int paramNoInt = 0, paramTotalInt = 0, paramNoFloat = 0, paramTotalFloat = 0;
 
 	bool skipCurEntry = true;
@@ -480,11 +481,11 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 
 			f_read(&file, path + remainingBytes, 128 - remainingBytes - 1, &fActualSize);
 
-			LOG_I("deviceReadLog read %d", (int)fActualSize);
+			LOG_I("deviceReadLog read %d:%s", (int)fActualSize, path + remainingBytes);
 
 			foundSemicolon = false;
-			bufPtr = g_devScrapBuffer + fActualSize;
-			while(!foundSemicolon && bufPtr > g_devScrapBuffer)
+			bufPtr = path + remainingBytes + fActualSize;
+			while(!foundSemicolon && bufPtr > path)
 			{
 				if(*(--bufPtr) ==';' )
 				{
@@ -497,7 +498,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 
 			if(foundSemicolon)
 			{
-				startPtr = g_devScrapBuffer;
+				startPtr = path;
 				do
 				{
 					if(eLogStaCountParamFloat == logState)
@@ -510,7 +511,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 						if(!skipInt((const char**)&startPtr, &token))
 							return entriesRead;
 					}
-
+					logLastState = logState;
 					switch(logState)
 					{
 						case elogStaWaitTimestamp:
@@ -568,10 +569,11 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 
 					if(!skipCurEntry)
 					{
-						if(eLogStaCountParamFloat == logState)
+						if(eLogStaCountParamFloat == logState ||
+								eLogStaCountParamFloat == logLastState)
 						{
 							sizeWritten += m_snprintf(buf + sizeWritten, size - sizeWritten,
-											"%f;", ftoken);
+											"%.1f;", ftoken);
 						}
 						else
 						{
@@ -581,10 +583,10 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 					}
 				}while(strlen(startPtr) && numEntries > 0 && (size - sizeWritten > OVF_GUARD));
 
-				g_devScrapBuffer[0] = savedChar;
+				path[0] = savedChar;
 				remainingBytes = 0;
 				while(*(++bufPtr) != 0)
-					g_devScrapBuffer[++remainingBytes] = *bufPtr;
+					path[++remainingBytes] = *bufPtr;
 			}
 			else
 			{
