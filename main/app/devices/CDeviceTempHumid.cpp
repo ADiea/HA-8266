@@ -93,7 +93,7 @@ void CDeviceTempHumid::requestUpdateState()
 
 			//Determine if autopilot program should be changed
 			int newAutopilotIndex = -1, newAutopilotDay = -1, h, m;
-			DateTime now = SystemClock.now(eTZ_Local);
+			DateTime now = SystemClock.now(eTZ_UTC);
 
 			newAutopilotDay = now.DayofWeek- 1;
 			if(newAutopilotDay < 0) newAutopilotDay = 6;

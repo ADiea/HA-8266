@@ -358,6 +358,43 @@ bool deviceReadFromDisk(char* path)
 	return bRet;
 }
 
+bool deviceDeleteLog(uint32_t id)
+{
+	WDT.alive();
+
+	bool bRet = false;
+	FIL file;
+	FRESULT fRes;
+
+	char fname[128];
+
+	m_snprintf(fname, sizeof(fname), "LOG_%d", id);
+
+	if(getRadio(1000))
+	{
+		do
+		{
+			fRes = f_open(&file, fname, FA_WRITE | FA_CREATE_ALWAYS);
+			if (fRes != FR_OK)
+			{
+				LOG_E("deviceDeleteLog err %d", (int)fRes);
+				break;
+			}
+			bRet = true;
+			f_close(&file);
+		}
+		while(0);
+		releaseRadio();
+	}
+	else
+	{
+		LOG_E( "deviceDeleteLog: radio busy");
+	}
+
+	return bRet;
+}
+
+
 bool deviceAppendLogEntry(uint32_t id, char* logEntry)
 {
 	WDT.alive();
@@ -396,8 +433,8 @@ bool deviceAppendLogEntry(uint32_t id, char* logEntry)
 			LOG_E("deviceAppendLog ftell %d ", f_tell(&file));
 
 			///
-			f_close(&file);
-			fRes = f_open(&file, fname, FA_WRITE | FA_CREATE_ALWAYS);
+			//f_close(&file);
+			//fRes = f_open(&file, fname, FA_WRITE | FA_CREATE_ALWAYS);
 			///
 
 			f_write(&file, logEntry, size, &actual);
@@ -441,7 +478,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 	char *bufPtr, *startPtr;
 	int remainingBytes = 0;
 	char savedChar;
-	uint32_t entriesRead = 0;
+	uint32_t entriesRead = 0, entriesWritten = 0;
 	uint32_t sizeWritten = 0, fActualSize;
 
 	enum ParseLogState
@@ -454,7 +491,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 	};
 
 	ParseLogState logState = elogStaWaitTimestamp,
-			logLastState = elogStaWaitTimestamp;
+			logNextState = elogStaWaitTimestamp;
 	int paramNoInt = 0, paramTotalInt = 0, paramNoFloat = 0, paramTotalFloat = 0;
 
 	bool skipCurEntry = true;
@@ -481,6 +518,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 
 			f_read(&file, path + remainingBytes, 128 - remainingBytes - 1, &fActualSize);
 
+			path[remainingBytes+fActualSize] = 0;
 			LOG_I("deviceReadLog read %d:%s", (int)fActualSize, path);
 
 			foundSemicolon = false;
@@ -513,19 +551,23 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 							return sizeWritten;
 					}
 
-					logLastState = logState;
+
 					switch(logState)
 					{
 						case elogStaWaitTimestamp:
 						{
-							if((entriesRead++ % decimation == 0) && token > fromTime)
+							if((entriesRead++ % decimation == 0) && token > fromTime
+									&& numEntries > entriesWritten)
+							{
 								skipCurEntry = false;
+								entriesWritten++;
+							}
 							else
 								skipCurEntry = true;
 
 							LOG_I("deviceReadLog Entry %d TS %u skip %d", entriesRead, token, skipCurEntry);
 
-							logState = eLogStaWaitParamNumberInt;
+							logNextState = eLogStaWaitParamNumberInt;
 							break;
 						}
 						case eLogStaWaitParamNumberInt:
@@ -534,7 +576,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 							paramTotalInt = token;
 							//LOG_I("deviceReadLog eLogStaWaitParamNumberInt");
 
-							logState = eLogStaWaitParamNumberFloat;
+							logNextState = eLogStaWaitParamNumberFloat;
 						}
 						break;
 						case eLogStaWaitParamNumberFloat:
@@ -544,11 +586,11 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 							paramTotalFloat = token;
 
 							if(paramTotalInt > 0)
-								logState = eLogStaCountParamInt;
+								logNextState = eLogStaCountParamInt;
 							else if(paramTotalFloat > 0)
-								logState = eLogStaCountParamFloat;
+								logNextState = eLogStaCountParamFloat;
 							else
-								logState = elogStaWaitTimestamp;
+								logNextState = elogStaWaitTimestamp;
 							break;
 						}
 						case eLogStaCountParamInt:
@@ -558,9 +600,9 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 							if(paramNoInt == paramTotalInt)
 							{
 								if(paramTotalFloat > 0)
-									logState = eLogStaCountParamFloat;
+									logNextState = eLogStaCountParamFloat;
 								else
-									logState = elogStaWaitTimestamp;
+									logNextState = elogStaWaitTimestamp;
 							}
 							break;
 						}
@@ -569,15 +611,14 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 							//LOG_I("deviceReadLog eLogStaCountParamFloat");
 							++paramNoFloat;
 							if(paramNoFloat == paramTotalFloat)
-								logState = elogStaWaitTimestamp;
+								logNextState = elogStaWaitTimestamp;
 							break;
 						}
 					};
 
 					if(!skipCurEntry)
 					{
-						if(eLogStaCountParamFloat == logState ||
-								eLogStaCountParamFloat == logLastState)
+						if(eLogStaCountParamFloat == logState)
 						{
 							sizeWritten += m_snprintf(buf + sizeWritten, size - sizeWritten,
 											"%.1f;", ftoken);
@@ -588,7 +629,9 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 											"%d;", token);
 						}
 					}
-				}while(strlen(startPtr) && numEntries > 0 && (size - sizeWritten > OVF_GUARD));
+
+					logState = logNextState;
+				}while(strlen(startPtr) && (size - sizeWritten > OVF_GUARD));
 
 				remainingBytes = 0;
 				if(savedChar)
@@ -602,7 +645,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 			{
 				break;
 			}
-		}while(fActualSize > 0 && numEntries > 0 && (size - sizeWritten > OVF_GUARD));
+		}while(fActualSize > 0 && numEntries > entriesWritten && (size - sizeWritten > OVF_GUARD));
 
 		f_close(&file);
 	}

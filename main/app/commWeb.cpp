@@ -239,9 +239,34 @@ soft radio sa ceara confirmarea la 10 secunde si sa clipeasca mai rapid ledul da
 
 bool handle_cwSpecialCommand(WebSocket& socket, const char **pkt)
 {
-	reply_cwReplyToCommand(socket, cwErrSuccess);
-	LOG_I("DBG: RESTART");
-	system_restart();
+	int debugCommand = 0;
+	eCommWebErrorCodes retCode = cwErrSuccess;
+	do
+	{
+		if(!skipInt(pkt, &debugCommand))
+		{
+			retCode = cwErrInvalidCommandParams;
+			break;
+		}
+		switch(debugCommand)
+		{
+		case 0:
+			LOG_I("DBG: RESTART");
+			system_restart();
+			break;
+
+		case 1:
+			if(!skipInt(pkt, &debugCommand))
+			{
+				retCode = cwErrInvalidCommandParams;
+				break;
+			}
+			deviceDeleteLog(debugCommand);
+			break;
+		}
+	}while(false);
+	reply_cwReplyToCommand(socket, retCode);
+
 }
 
 
