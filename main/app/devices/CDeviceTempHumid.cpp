@@ -55,6 +55,7 @@ void CDeviceTempHumid::onUpdateTimer()
 void CDeviceTempHumid::requestUpdateState()
 {
 	uint8_t errValue;
+	char logEntry[64];
 
 	float fTurnOnTemp, fTurnOffTemp;
 	int i;
@@ -164,11 +165,22 @@ void CDeviceTempHumid::requestUpdateState()
 				broadcastDeviceInfo(gHttpServer.getActiveWebSockets(), (CGenericDevice*)this);
 			}
 
-			//todo: move to logger callback
-			char logEntry[64];
-			m_snprintf(logEntry, sizeof(logEntry), "%u;0;1;%.1f;", (unsigned int)now.toUnixTime(), m_state.lastTH.temp);
-			if(deviceAppendLogEntry(m_ID, logEntry))
-				LOG_I( "TH(%d) saved to log: %s", m_ID, logEntry);
+
+			if(m_lastLogTimestamp < m_LastUpdateTimestamp)
+			{
+				m_lastLogTimestamp = m_LastUpdateTimestamp + ONE_MINUTE;
+
+				m_snprintf(logEntry, sizeof(logEntry), "|%u;1;3;%d;%.1f;%.1f;%.1f;",
+							(unsigned int)now.toUnixTime(),
+							m_state.bIsHeating?1:0,
+							m_state.fLastTemp_1m,
+							m_state.fLastTemp_8m,
+							m_state.fLastRH_1m);
+				if(deviceAppendLogEntry(m_ID, logEntry))
+					LOG_I( "TH(%d) saved to log: %s", m_ID, logEntry);
+			}
+
+
 		}
 		else
 		{

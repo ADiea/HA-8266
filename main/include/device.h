@@ -48,6 +48,7 @@
 extern char g_devScrapBuffer[MAXDEVSZ];
 
 #define MIN_TIME_WRITE_TO_DISK 5000 //5s
+#define ONE_MINUTE 60000 //5s
 
 #define isDevEnabled(dev) ((dev) & gDevicesState)
 
@@ -75,7 +76,7 @@ class CGenericDevice
 {
 public:
 	CGenericDevice():m_ID(INVALID_DEVICE_ID), m_FriendlyName("notInit"),
-					 m_LastUpdateTimestamp(~0), isSavedToDisk(true){};
+					 m_LastUpdateTimestamp(~0), isSavedToDisk(true), m_lastLogTimestamp(0){};
 
 	bool isInit()
 		{return m_ID != INVALID_DEVICE_ID;}
@@ -136,6 +137,7 @@ public:
 	int m_updateInterval;
 	Timer m_updateTimer;
 	bool isSavedToDisk;
+	uint32_t m_lastLogTimestamp;
 };
 
 #include "CDeviceHeater.h"
@@ -146,7 +148,7 @@ bool deviceWriteToDisk(CGenericDevice *dev);
 
 uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 					char* buf, uint32_t size, int numEntries);
-bool deviceAppendLogEntry(uint32_t id, char* logEntry);
+bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry);
 bool deviceDeleteLog(uint32_t id);
 
 #endif /*__DEVICE_H_*/

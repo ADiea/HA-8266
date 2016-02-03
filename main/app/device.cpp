@@ -395,7 +395,7 @@ bool deviceDeleteLog(uint32_t id)
 }
 
 
-bool deviceAppendLogEntry(uint32_t id, char* logEntry)
+bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry)
 {
 	WDT.alive();
 
@@ -407,7 +407,7 @@ bool deviceAppendLogEntry(uint32_t id, char* logEntry)
 
 	char fname[128];
 
-	m_snprintf(fname, sizeof(fname), "LOG_%d", id);
+	m_snprintf(fname, sizeof(fname), "LOG_%d_%x", id, timestamp >> 13);
 
 	if(getRadio(1000))
 	{
@@ -463,6 +463,101 @@ bool deviceAppendLogEntry(uint32_t id, char* logEntry)
 	return bRet;
 }
 
+//////////////
+uint32_t deviceReadLogGetFileOffset(uint32_t id, unsigned long fromTime)
+{
+	WDT.alive();
+
+	FIL file;
+	FRESULT fRes;
+
+	uint32_t retOffset = 0;
+
+	bool foundPipe;
+	char *bufPtr, *startPtr;
+	int remainingBytes = 0;
+
+	uint32_t entriesRead = 0, entriesWritten = 0;
+	uint32_t sizeWritten = 0, fActualSize;
+
+	bool skipCurEntry = true;
+
+	int token;
+	float ftoken;
+	char path[128];
+
+	int intervalLow = 0, intervalHigh;
+
+	do{
+
+		m_snprintf(path, sizeof(path), "LOG_%d_%x", id, fromTime >> 13);
+
+		fRes = f_open(&file, path, FA_READ);
+
+		if (fRes != FR_OK)
+		{
+			LOG_E("deviceReadLog fopen: %d", (int)fRes);
+			break;
+		}
+
+		intervalHigh = f_size(&file);
+
+		do
+		{
+			WDT.alive();
+
+			f_lseek(&file, (intervalHigh - intervalLow)/2);
+
+			f_read(&file, path, 127, &fActualSize);
+
+			path[fActualSize] = 0;
+			bufPtr = path;
+			LOG_I("deviceReadLogGetFileOffset read %d:%s [%d %d]", (int)fActualSize, path, intervalLow, intervalHigh);
+
+			foundPipe = false;
+
+			while(*bufPtr != 0)
+			{
+				if(*bufPtr =='|' )
+				{
+					foundPipe = true;
+					break;
+				}else bufPtr++;
+			}
+
+			if(foundPipe)
+			{
+				bufPtr++;
+
+				if (!skipInt((const char**)&bufPtr, &token))
+							return retOffset;
+
+				if(token > fromTime)
+				{
+					retOffset = intervalLow;
+					intervalHigh = (intervalHigh - intervalLow)/2;
+				}
+				else
+				{
+					retOffset = (intervalHigh - intervalLow)/2;
+					intervalLow = (intervalHigh - intervalLow)/2;
+				}
+
+			}
+			else
+			{
+				break;
+			}
+		}while(fActualSize > 0  && intervalHigh - intervalLow > 100);
+
+		f_close(&file);
+	}
+	while(0);
+
+	LOG_I("deviceReadLogGetFileOffset end");
+	return retOffset;
+}
+///////////////////
 
 uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 					char* buf, uint32_t size, int numEntries)
@@ -502,7 +597,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 
 	do{
 
-		m_snprintf(path, sizeof(path), "LOG_%d", id);
+		m_snprintf(path, sizeof(path), "LOG_%d_%x", id, fromTime >> 13);
 
 		fRes = f_open(&file, path, FA_READ);
 
@@ -540,6 +635,11 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 				startPtr = path;
 				do
 				{
+					if(elogStaWaitTimestamp == logState)
+					{
+						startPtr++; //skip the '|'
+					}
+
 					if(eLogStaCountParamFloat == logState)
 					{
 						if (!skipFloat((const char**)&startPtr, &ftoken))

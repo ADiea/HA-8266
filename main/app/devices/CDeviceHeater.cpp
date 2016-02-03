@@ -197,6 +197,8 @@ void CDeviceHeater::onUpdateTimer()
 		isSavedToDisk  = deviceWriteToDisk(this);
 	}
 
+
+
 	m_updateTimer.initializeMs(5000, TimerDelegate(&CDeviceHeater::onUpdateTimer, this)).start(false);
 }
 
