@@ -166,7 +166,9 @@ bool handle_cwSetMovementParams(WebSocket& socket, const char **pkt)
 
 bool handle_cwGetGenericDeviceLogs(WebSocket& socket, const char **pkt)
 {
-	int sizePkt = 0, devId, fromTime, decimation, numEntries, i;
+	int sizePkt = 0, devId, fromTime, decimation, numEntries, i, entriesWritten = 0;
+
+	bool printHeader = true;
 
 	if (!skipInt(pkt, &devId) ||
 		!skipInt(pkt, &fromTime) ||
@@ -185,11 +187,18 @@ bool handle_cwGetGenericDeviceLogs(WebSocket& socket, const char **pkt)
 				sizePkt = m_snprintf(g_devScrapBuffer, sizeof(g_devScrapBuffer),
 							"%d;%d;%d;", cwReplyGenericDeviceLogs,
 							g_activeDevices[i]->m_deviceType, devId);
-				//LOG_I("cwGetGenericDeviceLogs1 %s", g_devScrapBuffer);
-				sizePkt += deviceReadLog(devId, fromTime, decimation,
-						 (char*)(g_devScrapBuffer + sizePkt), sizeof(g_devScrapBuffer) - sizePkt, numEntries, true);
 
-				LOG_I("cwGetGenericDeviceLogs2 %s", g_devScrapBuffer);
+				do
+				{
+					sizePkt += deviceReadLog(devId, fromTime, decimation,
+											 (char*)(g_devScrapBuffer + sizePkt), sizeof(g_devScrapBuffer) - sizePkt,
+											 numEntries - entriesWritten, printHeader, entriesWritten);
+
+					fromTime = (fromTime/8192 + 1)*8192;
+				}
+				while( numEntries > entriesWritten && SystemClock.now(eTZ_UTC).toUnixTime() > fromTime);
+
+				LOG_I("cwGetGenericDeviceLogs %s", g_devScrapBuffer);
 				socket.send((const char*)g_devScrapBuffer, sizePkt);
 				break;
 			}

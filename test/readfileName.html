@@ -1,0 +1,58 @@
+<html>
+<head>
+
+<script type="text/javascript">
+
+function process()
+{
+	var text = document.getElementById("input_ta");
+	
+	var textLines = text.value.split('\n');
+	var outPut = [];
+	var out;
+
+	for(var i=0;i<textLines.length; i++)
+	{
+		if(textLines[i].charAt(0) == 'L')
+		{
+			out = textLines[i] + ' - Log ';
+		
+			out += 'id: ' + textLines[i].substring(1,2);
+			
+			var datebase = parseInt(textLines[i].substring(2), 16);
+			var finalDate = datebase * 8192;
+			var date = new Date(finalDate * 1000);
+			out += ' date_base: ' + datebase + ' tstamp: ' + finalDate + ' Date: ' + 
+			date.getFullYear() + '/' + ('0'+(date.getMonth()+1)).substr(-2) + '/' + ('0'+date.getDate()).substr(-2) + ' ' + 
+			('0' + date.getHours()).substr(-2) + ':' + ('0' + date.getMinutes()).substr(-2);
+		}
+		else
+		{
+			var datebase = parseInt(textLines[i]);
+			var date = new Date(datebase * 1000);
+			out = 'Date: ' + 
+			date.getFullYear() + '/' + ('0'+(date.getMonth()+1)).substr(-2) + '/' + ('0'+date.getDate()).substr(-2) + ' ' + 
+			('0' + date.getHours()).substr(-2) + ':' + ('0' + date.getMinutes()).substr(-2);
+		}
+		outPut.push(out);
+	}
+
+	document.getElementById("output_ta").value = outPut.join("\n");
+}
+
+</script>
+
+</head>
+
+<body>
+
+<textarea style="display:inline;" rows="20" cols="10" id="input_ta"></textarea> 
+<textarea style="display:inline;" rows="20" cols="100" id="output_ta"></textarea>
+
+<input style="display:block" type="button" onclick="process()" value="Process"></input>
+
+<!-- <pre id="out_map"></pre> -->
+
+</body>
+
+</html>
