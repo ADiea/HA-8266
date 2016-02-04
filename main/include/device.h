@@ -147,8 +147,8 @@ public:
 bool deviceWriteToDisk(CGenericDevice *dev);
 
 uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
-					char* buf, uint32_t size, int numEntries);
-bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry);
+					char* buf, uint32_t size, int numEntries, bool printHeader);
+bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry, eDeviceType devType);
 bool deviceDeleteLog(uint32_t id);
 
 #endif /*__DEVICE_H_*/

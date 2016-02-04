@@ -170,15 +170,16 @@ void CDeviceTempHumid::requestUpdateState()
 			{
 				m_lastLogTimestamp = m_LastUpdateTimestamp + ONE_MINUTE;
 
-				m_snprintf(logEntry, sizeof(logEntry), "|%u;1;3;%d;%.1f;%.1f;%.1f;",
+				m_snprintf(logEntry, sizeof(logEntry), "|%u;%d;%.1f;%.1f;%.1f;",
 							(unsigned int)now.toUnixTime(),
-							m_state.bIsHeating?1:0,
+							m_state.bIsHeating?10:0,
 							m_state.fLastTemp_1m,
 							m_state.fLastTemp_8m,
 							m_state.fLastRH_1m);
-				if(deviceAppendLogEntry(m_ID, logEntry))
+				if(deviceAppendLogEntry(m_ID, now.toUnixTime(), logEntry, devTypeTH))
 					LOG_I( "TH(%d) saved to log: %s", m_ID, logEntry);
-			}
+			}else
+				LOG_I( "TH(%d) not logging: log:%u cur:%u", m_ID, m_lastLogTimestamp, m_LastUpdateTimestamp);
 
 
 		}

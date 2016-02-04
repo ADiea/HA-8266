@@ -185,9 +185,9 @@ bool handle_cwGetGenericDeviceLogs(WebSocket& socket, const char **pkt)
 				sizePkt = m_snprintf(g_devScrapBuffer, sizeof(g_devScrapBuffer),
 							"%d;%d;%d;", cwReplyGenericDeviceLogs,
 							g_activeDevices[i]->m_deviceType, devId);
-				LOG_I("cwGetGenericDeviceLogs1 %s", g_devScrapBuffer);
+				//LOG_I("cwGetGenericDeviceLogs1 %s", g_devScrapBuffer);
 				sizePkt += deviceReadLog(devId, fromTime, decimation,
-						 (char*)(g_devScrapBuffer + sizePkt), sizeof(g_devScrapBuffer) - sizePkt, numEntries);
+						 (char*)(g_devScrapBuffer + sizePkt), sizeof(g_devScrapBuffer) - sizePkt, numEntries, true);
 
 				LOG_I("cwGetGenericDeviceLogs2 %s", g_devScrapBuffer);
 				socket.send((const char*)g_devScrapBuffer, sizePkt);

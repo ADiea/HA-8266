@@ -395,7 +395,7 @@ bool deviceDeleteLog(uint32_t id)
 }
 
 
-bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry)
+bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry, eDeviceType devType)
 {
 	WDT.alive();
 
@@ -407,7 +407,7 @@ bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry)
 
 	char fname[128];
 
-	m_snprintf(fname, sizeof(fname), "LOG_%d_%x", id, timestamp >> 13);
+	m_snprintf(fname, sizeof(fname), "L%x%x", id, timestamp >> 13);
 
 	if(getRadio(1000))
 	{
@@ -419,15 +419,31 @@ bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry)
 
 			if (fRes != FR_OK)
 			{
-				LOG_E("deviceAppendLog err %d", (int)fRes);
+				LOG_E("deviceAppendLog err %d %s", (int)fRes, fname);
 				break;
 			}
+			else LOG_I("deviceAppendLog fopen %s", fname);
 
 			LOG_E("deviceAppendLog ftell %d fsize %d", f_tell(&file), f_size(&file));
 
 			if(f_size(&file) > 0)
 			{
 				f_lseek(&file, f_size(&file));
+			}
+			else
+			{
+				switch(devType)
+				{
+					case devTypeLight:
+						//
+						break;
+					case devTypeTH:
+						m_snprintf(fname, sizeof(fname), "4;HeaterOn;Temp_1m;Temp_8m;RH_1m;1;3;");
+						f_write(&file, fname, strlen(fname), &actual);
+						break;
+					case devTypeHeater:
+						break;
+				}
 			}
 
 			LOG_E("deviceAppendLog ftell %d ", f_tell(&file));
@@ -471,34 +487,30 @@ uint32_t deviceReadLogGetFileOffset(uint32_t id, unsigned long fromTime)
 	FIL file;
 	FRESULT fRes;
 
-	uint32_t retOffset = 0;
+	uint32_t retOffset = 0, intervalLow = 0, intervalHigh;
 
 	bool foundPipe;
-	char *bufPtr, *startPtr;
-	int remainingBytes = 0;
-
-	uint32_t entriesRead = 0, entriesWritten = 0;
-	uint32_t sizeWritten = 0, fActualSize;
-
-	bool skipCurEntry = true;
+	char *bufPtr;
+	uint32_t fActualSize;
 
 	int token;
-	float ftoken;
+
 	char path[128];
 
-	int intervalLow = 0, intervalHigh;
+	uint32_t posPipe;
 
 	do{
 
-		m_snprintf(path, sizeof(path), "LOG_%d_%x", id, fromTime >> 13);
+		m_snprintf(path, sizeof(path), "L%x%x", id, fromTime >> 13);
 
 		fRes = f_open(&file, path, FA_READ);
 
 		if (fRes != FR_OK)
 		{
-			LOG_E("deviceReadLog fopen: %d", (int)fRes);
+			LOG_E("deviceReadLogGetFOffset fopen: %d %s", (int)fRes, path);
 			break;
 		}
+
 
 		intervalHigh = f_size(&file);
 
@@ -521,6 +533,7 @@ uint32_t deviceReadLogGetFileOffset(uint32_t id, unsigned long fromTime)
 				if(*bufPtr =='|' )
 				{
 					foundPipe = true;
+					posPipe = (intervalHigh - intervalLow)/2 + (bufPtr - path);
 					break;
 				}else bufPtr++;
 			}
@@ -534,15 +547,17 @@ uint32_t deviceReadLogGetFileOffset(uint32_t id, unsigned long fromTime)
 
 				if(token > fromTime)
 				{
-					retOffset = intervalLow;
+					//retOffset = intervalLow;
 					intervalHigh = (intervalHigh - intervalLow)/2;
+
+					LOG_I("deviceReadLogGetFileOffset %d > %d [%d %d]", token, fromTime, intervalLow, intervalHigh);
 				}
 				else
 				{
-					retOffset = (intervalHigh - intervalLow)/2;
-					intervalLow = (intervalHigh - intervalLow)/2;
+					retOffset = posPipe;
+					intervalLow = (intervalHigh - intervalLow)/2 + intervalLow;
+					LOG_I("deviceReadLogGetFileOffset %d < %d [%d %d] offset %d", token, fromTime, intervalLow, intervalHigh, retOffset);
 				}
-
 			}
 			else
 			{
@@ -560,7 +575,7 @@ uint32_t deviceReadLogGetFileOffset(uint32_t id, unsigned long fromTime)
 ///////////////////
 
 uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
-					char* buf, uint32_t size, int numEntries)
+					char* buf, uint32_t size, int numEntries, bool printHeader)
 {
 	WDT.alive();
 
@@ -579,8 +594,6 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 	enum ParseLogState
 	{
 		elogStaWaitTimestamp,
-		eLogStaWaitParamNumberInt,
-		eLogStaWaitParamNumberFloat,
 		eLogStaCountParamInt,
 		eLogStaCountParamFloat,
 	};
@@ -593,163 +606,213 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 
 	int token;
 	float ftoken;
-	char path[128];
+	char path[128], name[64];
 
-	do{
+	uint32_t fOffset=0;
 
-		m_snprintf(path, sizeof(path), "LOG_%d_%x", id, fromTime >> 13);
+	if (SystemClock.now(eTZ_UTC).toUnixTime() < fromTime)
+		return 0;
 
-		fRes = f_open(&file, path, FA_READ);
+	if(getRadio(1000))
+	{
+		do{
 
-		if (fRes != FR_OK)
-		{
-			LOG_E("deviceReadLog fopen: %d", (int)fRes);
-			break;
-		}
+			fOffset = deviceReadLogGetFileOffset(id, fromTime);
 
-		do
-		{
-			WDT.alive();
+			m_snprintf(path, sizeof(path), "L%x%x", id, fromTime >> 13);
 
-			f_read(&file, path + remainingBytes, 128 - remainingBytes - 1, &fActualSize);
+			fRes = f_open(&file, path, FA_READ);
 
-			path[remainingBytes+fActualSize] = 0;
-			LOG_I("deviceReadLog read %d:%s", (int)fActualSize, path);
-
-			foundSemicolon = false;
-			bufPtr = path + remainingBytes + fActualSize;
-			while(!foundSemicolon && bufPtr > path)
+			if (fRes != FR_OK)
 			{
-				if(*bufPtr ==';' )
-				{
-					LOG_I("deviceReadLog last; %s pos %d", bufPtr, bufPtr - path);
-					foundSemicolon = true;
-					savedChar = *(bufPtr + 1);
-					*(bufPtr + 1) = 0;
-					bufPtr += 2;
-				}else --bufPtr;
+				LOG_E("deviceReadLog fopen: %d %s", (int)fRes, path);
+				break;
+			}
+			else LOG_I("deviceReadLog fopen %s", path);
+
+			f_read(&file, path, 127, &fActualSize);
+			startPtr = path;
+
+			if(!skipInt((const char**)&startPtr, &token))
+				return sizeWritten;
+
+			if(printHeader)
+				sizeWritten += m_snprintf(buf + sizeWritten, size - sizeWritten, "%d;", token);
+
+			while(token--)
+			{
+				if(!skipString((const char**)&startPtr, (char*)name, sizeof(name)))
+					return sizeWritten;
+				if(printHeader)
+					sizeWritten += m_snprintf(buf + sizeWritten, size - sizeWritten, "%s;", name);
 			}
 
-			if(foundSemicolon)
+			if(!skipInt((const char**)&startPtr, &token))
+				return sizeWritten;
+			paramTotalInt = token;
+			if(printHeader)
+					sizeWritten += m_snprintf(buf + sizeWritten, size - sizeWritten, "%d;", token);
+
+			if(!skipInt((const char**)&startPtr, &token))
+				return sizeWritten;
+			paramTotalFloat = token;
+			if(printHeader)
+					sizeWritten += m_snprintf(buf + sizeWritten, size - sizeWritten, "%d;", token);
+
+			LOG_I("deviceReadLog start out:%s path:%s i:%d f:%d off:%d offcur:%d", buf, path, paramTotalInt, paramTotalFloat, fOffset, startPtr - path);
+
+			if(printHeader)
+				printHeader = false; //printed header, don't [rint for others
+
+			if(fOffset > 0)
+				f_lseek(&file, fOffset);
+			else
+				f_lseek(&file, (startPtr - path));
+
+			do
 			{
-				startPtr = path;
-				do
+				WDT.alive();
+
+				f_read(&file, path + remainingBytes, 128 - remainingBytes - 1, &fActualSize);
+
+				path[remainingBytes+fActualSize] = 0;
+				LOG_I("deviceReadLog read %d:%s", (int)fActualSize, path);
+
+				foundSemicolon = false;
+				bufPtr = path + remainingBytes + fActualSize;
+				while(!foundSemicolon && bufPtr > path)
 				{
-					if(elogStaWaitTimestamp == logState)
+					if(*bufPtr ==';' )
 					{
-						startPtr++; //skip the '|'
-					}
+						LOG_I("deviceReadLog last; %s pos %d", bufPtr, bufPtr - path);
+						foundSemicolon = true;
+						savedChar = *(bufPtr + 1);
+						*(bufPtr + 1) = 0;
+						bufPtr += 2;
+					}else --bufPtr;
+				}
 
-					if(eLogStaCountParamFloat == logState)
+				if(foundSemicolon)
+				{
+					startPtr = path;
+					do
 					{
-						if (!skipFloat((const char**)&startPtr, &ftoken))
-							return sizeWritten;
-					}
-					else
-					{
-						if(!skipInt((const char**)&startPtr, &token))
-							return sizeWritten;
-					}
-
-
-					switch(logState)
-					{
-						case elogStaWaitTimestamp:
+						if(elogStaWaitTimestamp == logState)
 						{
-							if((entriesRead++ % decimation == 0) && token > fromTime
-									&& numEntries > entriesWritten)
-							{
-								skipCurEntry = false;
-								entriesWritten++;
-							}
-							else
-								skipCurEntry = true;
-
-							LOG_I("deviceReadLog Entry %d TS %u skip %d", entriesRead, token, skipCurEntry);
-
-							logNextState = eLogStaWaitParamNumberInt;
-							break;
+							startPtr++; //skip the '|'
 						}
-						case eLogStaWaitParamNumberInt:
-						{
-							paramNoInt = 0;
-							paramTotalInt = token;
-							//LOG_I("deviceReadLog eLogStaWaitParamNumberInt");
 
-							logNextState = eLogStaWaitParamNumberFloat;
-						}
-						break;
-						case eLogStaWaitParamNumberFloat:
-						{
-							//LOG_I("deviceReadLog eLogStaWaitParamNumberFloat");
-							paramNoFloat = 0;
-							paramTotalFloat = token;
-
-							if(paramTotalInt > 0)
-								logNextState = eLogStaCountParamInt;
-							else if(paramTotalFloat > 0)
-								logNextState = eLogStaCountParamFloat;
-							else
-								logNextState = elogStaWaitTimestamp;
-							break;
-						}
-						case eLogStaCountParamInt:
-						{
-							//LOG_I("deviceReadLog eLogStaCountParamInt");
-							++paramNoInt;
-							if(paramNoInt == paramTotalInt)
-							{
-								if(paramTotalFloat > 0)
-									logNextState = eLogStaCountParamFloat;
-								else
-									logNextState = elogStaWaitTimestamp;
-							}
-							break;
-						}
-						case eLogStaCountParamFloat:
-						{
-							//LOG_I("deviceReadLog eLogStaCountParamFloat");
-							++paramNoFloat;
-							if(paramNoFloat == paramTotalFloat)
-								logNextState = elogStaWaitTimestamp;
-							break;
-						}
-					};
-
-					if(!skipCurEntry)
-					{
 						if(eLogStaCountParamFloat == logState)
 						{
-							sizeWritten += m_snprintf(buf + sizeWritten, size - sizeWritten,
-											"%.1f;", ftoken);
+							if (!skipFloat((const char**)&startPtr, &ftoken))
+								return sizeWritten;
 						}
 						else
 						{
-							sizeWritten += m_snprintf(buf + sizeWritten, size - sizeWritten,
-											"%d;", token);
+							if(!skipInt((const char**)&startPtr, &token))
+								return sizeWritten;
 						}
+
+						switch(logState)
+						{
+							case elogStaWaitTimestamp:
+							{
+								if((entriesRead++ % decimation == 0) && token > fromTime
+										&& numEntries > entriesWritten)
+								{
+									skipCurEntry = false;
+									entriesWritten++;
+								}
+								else
+									skipCurEntry = true;
+
+								//if(!skipCurEntry)
+								LOG_I("deviceReadLog Entry %d(%d) TS %u  TSReq %u decim:%d skip %d entries %d/%d",
+										entriesWritten, entriesRead, token, fromTime, decimation, skipCurEntry,
+										entriesWritten, numEntries);
+
+								paramNoInt = 0;
+								paramNoFloat = 0;
+
+								if(paramTotalInt > 0)
+									logNextState = eLogStaCountParamInt;
+								else if(paramTotalFloat > 0)
+									logNextState = eLogStaCountParamFloat;
+								else
+									logNextState = elogStaWaitTimestamp;
+
+								break;
+							}
+							case eLogStaCountParamInt:
+							{
+								//LOG_I("deviceReadLog eLogStaCountParamInt");
+								++paramNoInt;
+								if(paramNoInt == paramTotalInt)
+								{
+									if(paramTotalFloat > 0)
+										logNextState = eLogStaCountParamFloat;
+									else
+										logNextState = elogStaWaitTimestamp;
+								}
+								break;
+							}
+							case eLogStaCountParamFloat:
+							{
+								//LOG_I("deviceReadLog eLogStaCountParamFloat");
+								++paramNoFloat;
+								if(paramNoFloat == paramTotalFloat)
+									logNextState = elogStaWaitTimestamp;
+								break;
+							}
+						};
+
+						if(!skipCurEntry)
+						{
+							if(eLogStaCountParamFloat == logState)
+							{
+								sizeWritten += m_snprintf(buf + sizeWritten, size - sizeWritten,
+												"%.1f;", ftoken);
+							}
+							else
+							{
+								sizeWritten += m_snprintf(buf + sizeWritten, size - sizeWritten,
+												"%d;", token);
+							}
+						}
+
+						logState = logNextState;
+					}while(strlen(startPtr)>1 && (size - sizeWritten > OVF_GUARD));
+
+					remainingBytes = 0;
+					if(savedChar)
+					{
+						path[0] = savedChar;
+						while(*(bufPtr) != 0)
+							path[++remainingBytes] = *(bufPtr++);
+						++remainingBytes;
 					}
-
-					logState = logNextState;
-				}while(strlen(startPtr) && (size - sizeWritten > OVF_GUARD));
-
-				remainingBytes = 0;
-				if(savedChar)
-				{
-					path[0] = savedChar;
-					while(*(bufPtr) != 0)
-					path[++remainingBytes] = *(bufPtr++);
 				}
-			}
-			else
-			{
-				break;
-			}
-		}while(fActualSize > 0 && numEntries > entriesWritten && (size - sizeWritten > OVF_GUARD));
+				else
+				{
+					break;
+				}
+			}while(fActualSize > 0 && numEntries > entriesWritten && (size - sizeWritten > OVF_GUARD));
 
-		f_close(&file);
+			f_close(&file);
+
+		}
+		while(0);
+		releaseRadio();
+
+		LOG_I("deviceReadLog ending %d %d %u %u", numEntries, entriesWritten, fromTime, (fromTime/8192 + 1)*8192);
+		if(numEntries > entriesWritten)
+			sizeWritten += deviceReadLog( id, (fromTime/8192 + 1)*8192,  decimation,
+					buf+sizeWritten,  size-sizeWritten, numEntries - entriesWritten, !printHeader);
 	}
-	while(0);
+	else
+	{
+		LOG_E( "deviceReadLog: radio busy");
+	}
 	LOG_I("deviceReadLog end");
 	return sizeWritten;
 }
