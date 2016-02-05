@@ -166,9 +166,9 @@ void CDeviceTempHumid::requestUpdateState()
 			}
 
 
-			if(m_lastLogTimestamp < m_LastUpdateTimestamp)
+			if(m_LastUpdateTimestamp - m_lastLogTimestamp > ONE_MINUTE)
 			{
-				m_lastLogTimestamp = m_LastUpdateTimestamp + ONE_MINUTE;
+				m_lastLogTimestamp = m_LastUpdateTimestamp ;
 
 				m_snprintf(logEntry, sizeof(logEntry), "|%u;%d;%.1f;%.1f;%.1f;",
 							(unsigned int)now.toUnixTime(),
