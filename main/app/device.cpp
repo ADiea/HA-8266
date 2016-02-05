@@ -575,7 +575,7 @@ uint32_t deviceReadLogGetFileOffset(uint32_t id, unsigned long fromTime)
 ///////////////////
 
 uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
-					char* buf, uint32_t size, int numEntries, bool &printHeader, int &entriesWritten)
+					char* buf, uint32_t size, int numEntries, bool &printHeader, int &entriesWritten, uint32_t &entriesRead)
 {
 	WDT.alive();
 
@@ -588,7 +588,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 	char *bufPtr, *startPtr;
 	int remainingBytes = 0;
 	char savedChar;
-	uint32_t entriesRead = 0;
+
 	uint32_t sizeWritten = 0, fActualSize;
 
 	enum ParseLogState

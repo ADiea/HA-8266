@@ -166,7 +166,7 @@ bool handle_cwSetMovementParams(WebSocket& socket, const char **pkt)
 
 bool handle_cwGetGenericDeviceLogs(WebSocket& socket, const char **pkt)
 {
-	int sizePkt = 0, devId, fromTime, decimation, numEntries, i, entriesWritten = 0;
+	int sizePkt = 0, devId, fromTime, decimation, numEntries, i, entriesWritten = 0, entriesRead = 0;
 
 	bool printHeader = true;
 
@@ -192,7 +192,7 @@ bool handle_cwGetGenericDeviceLogs(WebSocket& socket, const char **pkt)
 				{
 					sizePkt += deviceReadLog(devId, fromTime, decimation,
 											 (char*)(g_devScrapBuffer + sizePkt), sizeof(g_devScrapBuffer) - sizePkt,
-											 numEntries - entriesWritten, printHeader, entriesWritten);
+											 numEntries - entriesWritten, printHeader, entriesWritten, entriesRead);
 
 					fromTime = (fromTime/8192 + 1)*8192;
 				}
