@@ -16,7 +16,7 @@ printat RSSI
 #include "main.h"
 
 #define NUM_COLORS 4
-#define CYCLE_PERIOD_MS 1000
+uint16_t g_LedStateInterval = 1000;
 
 #define LOOP_DELAY 30
 
@@ -109,7 +109,7 @@ int main(void)
 		heater_loop();	
 #endif	
 
-		if(millis() - curTime > CYCLE_PERIOD_MS)
+		if(millis() - curTime > g_LedStateInterval)
 		{
 			curTime = millis();
 			led_change();

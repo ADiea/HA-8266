@@ -16,13 +16,32 @@ uint8_t g_heaterPkgSequence = 0;
 
 uint8_t g_heaterWarningLoopCounter=0;
 
+uint32_t g_lastHeaterDataTimestamp = 0;
+uint8_t g_numFailedRetries = 0;
+
+uint32_t g_lastHeaterReadGasLevel = 0;
+
+void (*app_start)(void) = 0x0000;
+
 void sendHeaterStatusPkg(uint8_t seq);
+void sendHeaterRequestPkg(uint8_t seq);
 
 void heater_init(void)
 {
 	//heater relay output
 	DDRB |= 1<<2;
+	 //turn heater off
 	PORTB &= ~(1<<2);
+	
+	//MQ9 snsor heat
+	DDRB |= 1<<1;
+	 //turn snsor on
+	PORTB |= (1<<1);
+	
+	//ADC
+	ADMUX = 0;//channel 0
+	ADCSRA = 1<<ADEN | 1<<ADPS2 | 1<<ADPS1; //prescaler 64=> 125KHz
+	DIDR0 = 1<<ADC0D; //disable digital logic for pin 0
 }
 
 void heater_loop()
@@ -39,7 +58,72 @@ void heater_loop()
 		
 		sendHeaterStatusPkg(g_heaterPkgSequence++);
 	}
+	
+	if(millis() - g_lastHeaterDataTimestamp > 1000)
+	{
+		g_lastHeaterDataTimestamp = millis();
+		g_numFailedRetries++;
+		
+		if(g_numFailedRetries > 75)
+		{
+			debugf("Radio LOST;RESET\n");
+			app_start();
+		}
+		
+		if(g_numFailedRetries > 30)
+		{
+			if(g_numFailedRetries % 3 == 0)
+			{
+				debugf("Radio LOST:%d\n", (g_numFailedRetries-30)/3);
+				sendHeaterRequestPkg(g_heaterPkgSequence++);
+			}
+			g_LedStateInterval = 1000 >> 1;
+		}
+	}
+	
+	if(millis() - g_lastHeaterReadGasLevel > 250)
+	{
+		g_lastHeaterReadGasLevel = millis();
+		
+		ADCSRA |= 1<<ADSC;
+		
+		while(ADCSRA & 1<<ADSC);
+		
+		g_heaterLastGasReading = (uint16_t)ADCH<<8 | ADCL;
+		
+		debugf("ADC:%d\n", g_heaterLastGasReading);
+	
+	}
+	
+}
 
+void sendHeaterRequestPkg(uint8_t seq)
+{
+	uint8_t pkg[PKG_HEATER_REQUEST_LEN];
+	
+	debugf("RQ HEAT");
+	
+	pkg[0] = GATEWAY_ID;
+	pkg[1] = MY_ID;
+	pkg[2] = PKG_TYPE_HEATER_REQUEST;		
+	pkg[3] = 0;
+	pkg[0x4] = seq;
+	
+	pkg[0x5] = 0;
+	
+	for(seq=0; seq<PKG_HEATER_REQUEST_LEN - 1; seq++)
+		pkg[0x5] += pkg[seq];
+
+	if(!radio_sendPacketSimple(PKG_HEATER_REQUEST_LEN, pkg))
+	{
+		debugf("ER\n");
+	}
+	else
+	{
+		debugf("OK\n");
+	}
+	
+	radio_startListening();
 }
 
 void sendHeaterStatusPkg(uint8_t seq)
@@ -54,16 +138,16 @@ void sendHeaterStatusPkg(uint8_t seq)
 	pkg[3] = g_heaterStatus;
 	pkg[4] = g_heaterFault;
 	
-	pkg[5] = 0xFF && g_heaterLastGasReading;
+	pkg[5] = 0xFF & g_heaterLastGasReading;
 	pkg[6] = g_heaterLastGasReading >> 8;
 	
-	pkg[7] = 0xFF && g_heaterLowGasThresh;
+	pkg[7] = 0xFF & g_heaterLowGasThresh;
 	pkg[8] = g_heaterLowGasThresh >> 8;
 	
-	pkg[9] = 0xFF && g_heaterMedGasThresh;
+	pkg[9] = 0xFF & g_heaterMedGasThresh;
 	pkg[0xa] = g_heaterMedGasThresh >> 8;
 	
-	pkg[0xb] = 0xFF && g_heaterHighGasThresh;
+	pkg[0xb] = 0xFF & g_heaterHighGasThresh;
 	pkg[0xc] = g_heaterHighGasThresh >> 8;
 	
 	pkg[0xd] = seq;
@@ -122,9 +206,9 @@ void heater_processPkg(uint8_t* pkg, uint8_t len)
 		
 		g_heaterStatus &= ~(HEATER_STATUS_ON  | HEATER_STATUS_OFF | HEATER_STATUS_FAULT);
 		
-		g_heaterLowGasThresh = ((uint16_t)pkg[5]) << 8 | pkg[4];
-		g_heaterMedGasThresh = ((uint16_t)pkg[7]) << 8 | pkg[6];
-		g_heaterHighGasThresh = ((uint16_t)pkg[9]) << 8 | pkg[8];
+		g_heaterLowGasThresh = ((uint16_t)pkg[5] << 8) | pkg[4];
+		g_heaterMedGasThresh = ((uint16_t)pkg[7] << 8) | pkg[6];
+		g_heaterHighGasThresh = ((uint16_t)pkg[9] << 8) | pkg[8];
 		
 		debugf("RX HEAT: %u low:%u med:%u hi:%d\n", 
 				pkg[3], g_heaterLowGasThresh, g_heaterMedGasThresh, g_heaterHighGasThresh);
@@ -159,6 +243,12 @@ void heater_processPkg(uint8_t* pkg, uint8_t len)
 	if(err != 0)
 	{
 		debugf("RX HEAT ERR: %u\r\n", err);
+	}
+	else
+	{
+		g_lastHeaterDataTimestamp = millis();
+		g_numFailedRetries = 0;
+		g_LedStateInterval = 1000;
 	}
 }
 

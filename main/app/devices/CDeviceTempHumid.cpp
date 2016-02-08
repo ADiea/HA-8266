@@ -166,7 +166,9 @@ void CDeviceTempHumid::requestUpdateState()
 			}
 
 
-			if(m_LastUpdateTimestamp - m_lastLogTimestamp > ONE_MINUTE)
+			if(m_LastUpdateTimestamp - m_lastLogTimestamp > ONE_MINUTE &&
+					m_state.fLastTemp_1m > 0 && m_state.fLastTemp_8m > 0 &&
+					m_state.fLastRH_1m > 0)
 			{
 				m_lastLogTimestamp = m_LastUpdateTimestamp ;
 

@@ -28,4 +28,6 @@
 
 #define MY_ID 0x01
 
+extern uint16_t g_LedStateInterval;
+
 #endif /*_MAIN__H*/

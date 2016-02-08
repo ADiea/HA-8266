@@ -8,6 +8,7 @@
 #define PKG_HEATER_LEN 0x0c
 #define PKG_ACK_LEN 0x06
 #define PKG_HEATER_STATUS_LEN 0x0f
+#define PKG_HEATER_REQUEST_LEN 0x06
 
 
 #define PKG_TYPE_INVALID 0x00
@@ -16,6 +17,7 @@
 #define PKG_TYPE_MOVEMENT 0x03
 #define PKG_TYPE_HEATER 0x04
 #define PKG_TYPE_HEATER_STATUS 0x05
+#define PKG_TYPE_HEATER_REQUEST 0x06
 
 #define HEATER_FAULT_NONE 0x1
 #define HEATER_FAULT_GAS_HIGH 0x2
@@ -71,6 +73,16 @@ PKG heater
 9 [highThresh HI 1B]
 A [sequence 1B]
 B [checksum 1B]
+*/
+
+/*
+PKG_TYPE_HEATER_REQUEST
+0 [addressDest 1B]
+1 [addressSrc 1B]
+2 [pgk_type==PKG_TYPE_HEATER_REQUEST 1B]
+3 [reserved]
+4 [sequence 1B]
+5 [checksum 1B]
 */
 
 /*PKG intensity

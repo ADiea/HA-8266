@@ -159,7 +159,7 @@ static void mainLoop()
 		system_restart();
 	}
 
-	if(Radio && getRadio(1))
+	if(Radio && getRadio(5))
 	{
 		if(Radio->isPacketReceived())
 		{
@@ -169,7 +169,7 @@ static void mainLoop()
 
 			for (i = 0; i < len; ++i)
 			{
-				LOG_I( "%x ", pkg[i]);
+				m_printf( "%x ", pkg[i]);
 			}
 
 			uint8_t senderID = pkg[1];
@@ -207,9 +207,10 @@ static void mainLoop()
 
 			//devRGB_setColor(COLOR_GREEN);
 		}
-
+		Radio->startListening();
 		releaseRadio();
 	}
+	else LOG_I("MainLoop: no radio");
 	WDT.alive();
 	++loopCount;
 }

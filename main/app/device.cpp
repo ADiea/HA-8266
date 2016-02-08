@@ -746,6 +746,12 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 					{
 						case elogStaWaitTimestamp:
 						{
+							/*if((int)entriesRead / decimation > 0)
+							{
+								int skip = (int)entriesRead / decimation;
+
+							}*/
+
 							if((entriesRead++ % decimation == 0) && token > fromTime
 									&& numEntries > entriesWritten)
 							{
@@ -755,7 +761,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 							else
 								skipCurEntry = true;
 
-							//if(!skipCurEntry)
+							if(!skipCurEntry)
 							LOG_I("deviceReadLog Entry %d(%d) TS %u skip:%d",
 									entriesWritten, entriesRead, token, skipCurEntry);
 

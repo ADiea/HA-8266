@@ -78,6 +78,8 @@ public:
 
 	virtual bool radioPktReceivedFromDevice(char* pktData, uint16_t pktLen);
 
+	bool sendHeaterStatus(byte status);
+
 	tHeaterState m_state;
 };
 
