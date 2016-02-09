@@ -21,6 +21,34 @@ uint8_t g_numFailedRetries = 0;
 
 uint32_t g_lastHeaterReadGasLevel = 0;
 
+#define GAS_SENSOR_SIZE 4
+uint16_t g_gasBuffer[GAS_SENSOR_SIZE] = {0};
+uint8_t g_gasBufferIdx = 0;
+uint8_t g_gasSensorFilledBuff=0;
+
+uint16_t feedGasBuffer(uint16_t sample)
+{
+	uint32_t acc=0;
+	uint8_t i;
+	
+	if(!g_gasSensorFilledBuff && g_gasBufferIdx == GAS_SENSOR_SIZE - 1)
+	{
+		g_gasSensorFilledBuff = 1;
+	}
+	
+	g_gasBuffer[(g_gasBufferIdx++)%GAS_SENSOR_SIZE] = sample;
+	
+	if(g_gasSensorFilledBuff)
+	{
+		for(i=0;i<GAS_SENSOR_SIZE;i++)
+		{
+			acc += g_gasBuffer[i];
+		}
+		return acc / GAS_SENSOR_SIZE;
+	}
+	else return sample;	
+}
+
 void (*app_start)(void) = 0x0000;
 
 void sendHeaterStatusPkg(uint8_t seq);
@@ -49,6 +77,7 @@ void heater_loop()
 	//read ADC / feed moving average filter etc
 	// => g_heaterLastGasReading
 
+	uint16_t adcValue;
 	
 	if(millis() - g_lastHeaterDataTimestamp > 1000)
 	{
@@ -80,23 +109,23 @@ void heater_loop()
 		
 		while(ADCSRA & 1<<ADSC);
 
-		g_heaterLastGasReading = ADCL;
-		g_heaterLastGasReading |= ((uint16_t)ADCH)<<8;
+		adcValue = ADCL;
+		adcValue |= ((uint16_t)ADCH)<<8;
 		
-		//debugf("ADC %d\n", g_heaterLastGasReading);
+		g_heaterLastGasReading = feedGasBuffer(adcValue);
+	
+		debugf("ADC adc:%d mean:%d\n", adcValue, g_heaterLastGasReading);
 		
 		if((g_heaterLastGasReading >= g_heaterMedGasThresh) && 
 		((g_heaterStatus & HEATER_STATUS_ON) || !(g_heaterWarningLoopCounter++)))
 		{
 			g_heaterStatus = HEATER_STATUS_FAULT | HEATER_STATUS_OFF;
 			g_heaterFault = HEATER_FAULT_GAS_HIGH;
-			PORTB &= ~(1<<2); //turn heater off
+			PORTB &= ~(1<<2); //turn heater off // todo: maintain heater state, ignore changes
 			
 			sendHeaterStatusPkg(g_heaterPkgSequence++);
 		}
-	
 	}
-	
 }
 
 void sendHeaterRequestPkg(uint8_t seq)
