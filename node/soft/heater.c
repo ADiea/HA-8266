@@ -1,6 +1,6 @@
 #include "heater.h"
 
-uint16_t g_heaterLastGasReading = 0;
+volatile uint16_t g_heaterLastGasReading = 0;
 
 uint16_t g_heaterLowGasThresh = 1;
 
@@ -40,7 +40,7 @@ void heater_init(void)
 	
 	//ADC
 	ADMUX = 0;//channel 0
-	ADCSRA = 1<<ADEN | 1<<ADPS2 | 1<<ADPS1; //prescaler 64=> 125KHz
+	ADCSRA = 1<<ADEN | 1<<ADSC | 1<<ADPS2 | 1<<ADPS1; //prescaler 64=> 125KHz
 	DIDR0 = 1<<ADC0D; //disable digital logic for pin 0
 }
 
@@ -49,15 +49,6 @@ void heater_loop()
 	//read ADC / feed moving average filter etc
 	// => g_heaterLastGasReading
 
-	if((g_heaterLastGasReading >= g_heaterMedGasThresh) && 
-		((g_heaterStatus & HEATER_STATUS_ON) || !(g_heaterWarningLoopCounter++)))
-	{
-		g_heaterStatus = HEATER_STATUS_FAULT | HEATER_STATUS_OFF;
-		g_heaterFault = HEATER_FAULT_GAS_HIGH;
-		PORTB &= ~(1<<2); //turn heater off
-		
-		sendHeaterStatusPkg(g_heaterPkgSequence++);
-	}
 	
 	if(millis() - g_lastHeaterDataTimestamp > 1000)
 	{
@@ -88,10 +79,21 @@ void heater_loop()
 		ADCSRA |= 1<<ADSC;
 		
 		while(ADCSRA & 1<<ADSC);
+
+		g_heaterLastGasReading = ADCL;
+		g_heaterLastGasReading |= ((uint16_t)ADCH)<<8;
 		
-		g_heaterLastGasReading = (uint16_t)ADCH<<8 | ADCL;
+		//debugf("ADC %d\n", g_heaterLastGasReading);
 		
-		debugf("ADC:%d\n", g_heaterLastGasReading);
+		if((g_heaterLastGasReading >= g_heaterMedGasThresh) && 
+		((g_heaterStatus & HEATER_STATUS_ON) || !(g_heaterWarningLoopCounter++)))
+		{
+			g_heaterStatus = HEATER_STATUS_FAULT | HEATER_STATUS_OFF;
+			g_heaterFault = HEATER_FAULT_GAS_HIGH;
+			PORTB &= ~(1<<2); //turn heater off
+			
+			sendHeaterStatusPkg(g_heaterPkgSequence++);
+		}
 	
 	}
 	
