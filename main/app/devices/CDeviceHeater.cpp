@@ -117,6 +117,13 @@ void CDeviceHeater::triggerState(int reason, void* state)
 		m_state.onMinutesToday = 0;
 	}
 
+	if(system_get_time() / 1000 - m_LastUpdateTimestamp > 10000)
+	{
+		LOG_I("HEATER(%d) Force radio send", m_ID);
+		doSendPkg = 1;
+		m_LastUpdateTimestamp = system_get_time() / 1000;
+	}
+
 	LOG_I("HEATER(%d) trigState send:%d reqHear:%d isSync:%d state:%d",
 			m_ID, doSendPkg, bHeaterRequestOn, m_state.isStateSyncWithHardware, m_state.isOn);
 
@@ -180,6 +187,7 @@ bool CDeviceHeater::radioPktReceivedFromDevice(char* pkg, uint16_t pktLen)
 		}
 
 		m_state.isStateSyncWithHardware = true;
+		m_LastUpdateTimestamp = system_get_time() / 1000;
 	}
 }
 
