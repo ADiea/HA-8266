@@ -28,7 +28,7 @@ static inline unsigned get_ccount(void)
 static void mainLoop(void);
 
 Timer tmrMainLoop;
-#define LOOP_TIME (3 * ONE_SECOND)
+#define LOOP_TIME (1 * ONE_SECOND)
 
 #if DEBUG_BUILD
 	#define HEART_BEAT (60 * ONE_SECOND)

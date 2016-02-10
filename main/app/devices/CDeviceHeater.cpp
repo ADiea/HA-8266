@@ -117,6 +117,9 @@ void CDeviceHeater::triggerState(int reason, void* state)
 		m_state.onMinutesToday = 0;
 	}
 
+	LOG_I("HEATER(%d) trigState send:%d reqHear:%d isSync:%d state:%d",
+			m_ID, doSendPkg, bHeaterRequestOn, m_state.isStateSyncWithHardware, m_state.isOn);
+
 	if(doSendPkg)
 	{
 		sendHeaterStatus(status);

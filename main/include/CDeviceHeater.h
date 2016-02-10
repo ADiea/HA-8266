@@ -61,6 +61,10 @@ public:
 	virtual bool initDevice()
 	{
 		m_updateTimer.initializeMs(5000, TimerDelegate(&CDeviceHeater::onUpdateTimer, this)).start(false);
+		m_state.isOn = false;
+		m_state.isFault = false;
+		m_state.isStateSyncWithHardware = false;
+
 		return true;
 	}
 

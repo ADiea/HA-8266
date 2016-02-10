@@ -127,11 +127,6 @@ void CDeviceTempHumid::requestUpdateState()
 				LOG_I( "TH(%d) CHANGE autopilot idx=%d temp=%f\n", m_ID, m_state.m_autopilotIndex, m_state.tempSetpoint);
 			}
 
-			LOG_I("%02d:%02d:%02d %s H:%.2f(%.1f) T:%.2f(%.1f %.1f)/%.1f SetPt:%.2f Time:%u", now.Hour, now.Minute, now.Second, m_FriendlyName.c_str(),
-					m_state.lastTH.humid, m_state.fLastRH_1m, m_state.lastTH.temp, m_state.fLastTemp_1m ,
-					m_state.fLastTemp_8m, devDHT22_heatIndex(), m_state.tempSetpoint,
-					m_LastUpdateTimestamp);
-
 			if(m_state.tempSetpoint > m_tempThreshold + fTurnOnTemp)
 			{
 				m_state.bNeedHeating = true;
@@ -142,6 +137,11 @@ void CDeviceTempHumid::requestUpdateState()
 				m_state.bNeedHeating = false;
 				m_state.bNeedCooling = true;
 			}
+
+			LOG_I("%02d:%02d:%02d %s H:%.2f(%.1f) T:%.2f(%.1f %.1f)/%.1f SetPt:%.2f needHeat:%d", now.Hour, now.Minute, now.Second, m_FriendlyName.c_str(),
+					m_state.lastTH.humid, m_state.fLastRH_1m, m_state.lastTH.temp, m_state.fLastTemp_1m ,
+					m_state.fLastTemp_8m, devDHT22_heatIndex(), m_state.tempSetpoint,
+					m_state.bNeedHeating);
 
 			for(i=0; i < m_devWatchersList.count(); i++)
 			{
@@ -180,10 +180,8 @@ void CDeviceTempHumid::requestUpdateState()
 							m_state.fLastRH_1m);
 				if(deviceAppendLogEntry(m_ID, now.toUnixTime(), logEntry, devTypeTH))
 					LOG_I( "TH(%d) saved to log: %s", m_ID, logEntry);
-			}else
-				LOG_I( "TH(%d) not logging: log:%u cur:%u", m_ID, m_lastLogTimestamp, m_LastUpdateTimestamp);
-
-
+			}
+			else LOG_D( "TH(%d) not logging: log:%u cur:%u", m_ID, m_lastLogTimestamp, m_LastUpdateTimestamp);
 		}
 		else
 		{
