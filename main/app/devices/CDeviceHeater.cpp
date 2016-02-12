@@ -38,8 +38,8 @@ bool CDeviceHeater::sendHeaterStatus(byte status)
 			   (seq) == pkg[0xd])
 			{
 				bRet = true;
-				break;
 				radioPktReceivedFromDevice((char*)pkg, outLength);
+				break;
 			}
 		}
 		LOG_I("HEATER(%d) TX FAIL:%d", m_ID, retry + 1);
@@ -121,6 +121,7 @@ void CDeviceHeater::triggerState(int reason, void* state)
 	{
 		LOG_I("HEATER(%d) Force radio send", m_ID);
 		doSendPkg = 1;
+		status = m_state.isOn ? HEATER_REQ_ON : HEATER_REQ_OFF;
 		m_LastUpdateTimestamp = system_get_time() / 1000;
 	}
 

@@ -14,8 +14,6 @@ uint8_t g_heaterFault = HEATER_FAULT_NONE;
 
 uint8_t g_heaterPkgSequence = 0;
 
-uint8_t g_heaterWarningLoopCounter=0;
-
 uint32_t g_lastHeaterDataTimestamp = 0;
 uint8_t g_numFailedRetries = 0;
 
@@ -97,7 +95,7 @@ void heater_loop()
 				debugf("Radio LOST:%d\n", (g_numFailedRetries-30)/3);
 				sendHeaterRequestPkg(g_heaterPkgSequence++);
 			}
-			g_LedStateInterval = 1000 >> 1;
+			g_LedStateInterval = 200;
 		}
 	}
 	
@@ -116,8 +114,8 @@ void heater_loop()
 	
 		//debugf("ADC adc:%d mean:%d\n", adcValue, g_heaterLastGasReading);
 		
-		if((g_heaterLastGasReading >= g_heaterMedGasThresh) && 
-		((g_heaterStatus & HEATER_STATUS_ON) || !(g_heaterWarningLoopCounter++)))
+		if(g_heaterLastGasReading >= g_heaterMedGasThresh && 
+			(g_heaterStatus & HEATER_STATUS_ON))
 		{
 			g_heaterStatus = HEATER_STATUS_FAULT | HEATER_STATUS_OFF;
 			g_heaterFault = HEATER_FAULT_GAS_HIGH;

@@ -36,7 +36,7 @@ PKG HEATER STATUS
 0 [addressDest 1B]
 1 [addressSrc 1B]
 2 [pgk_type==PKG_TYPE_HEATER_STATUS 1B]
-3 [heater status 1=On 0=Off 2=Fault 1B]
+3 [heater status 1=On 2=Off 4=Fault 1B]
 4 [fault code 1B]
 5 [last gas reading LO 1B]
 6 [last gas reading HI 1B]
@@ -49,6 +49,7 @@ C [highThresh HI 1B]
 D [sequence 1B]
 E [checksum 1B]
 */
+
 
 /*
 PKG ACK
@@ -74,6 +75,7 @@ PKG heater
 A [sequence 1B]
 B [checksum 1B]
 */
+
 
 /*
 PKG_TYPE_HEATER_REQUEST
