@@ -69,6 +69,9 @@ void CDeviceTempHumid::requestUpdateState()
 
 			m_LastUpdateTimestamp = system_get_time() / 1000;
 
+			//todo: hack for current sensor
+			m_state.lastTH.temp -= 3;
+
 			m_state.fLastTemp_1m = m_state.fAverageTemp_1m.feed(m_state.lastTH.temp);
 			m_state.fLastTemp_8m = m_state.fAverageTemp_8m.feed(m_state.lastTH.temp);
 			m_state.fLastRH_1m = m_state.fAverageRH_1m.feed(m_state.lastTH.humid);
@@ -95,12 +98,13 @@ void CDeviceTempHumid::requestUpdateState()
 			//Determine if autopilot program should be changed
 			int newAutopilotIndex = -1, newAutopilotDay = -1, h, m;
 			DateTime now = SystemClock.now(eTZ_UTC);
+			DateTime now_local = SystemClock.now(eTZ_Local);
 
-			newAutopilotDay = now.DayofWeek- 1;
+			newAutopilotDay = now_local.DayofWeek- 1;
 			if(newAutopilotDay < 0) newAutopilotDay = 6;
 
-			h = now.Hour;
-			m = now.Minute + h*60;
+			h = now_local.Hour;
+			m = now_local.Minute + h*60;
 
 			for(i=0; i< m_autoPrograms[newAutopilotDay].count(); i++)
 			{
@@ -174,7 +178,7 @@ void CDeviceTempHumid::requestUpdateState()
 
 				m_snprintf(logEntry, sizeof(logEntry), "|%u;%d;%.1f;%.1f;%.1f;",
 							(unsigned int)now.toUnixTime(),
-							m_state.bIsHeating?10:0,
+							m_state.bIsHeating?(int)m_state.fLastTemp_8m:(int)(m_state.fLastTemp_8m-1),
 							m_state.fLastTemp_1m,
 							m_state.fLastTemp_8m,
 							m_state.fLastRH_1m);

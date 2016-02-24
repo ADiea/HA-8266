@@ -53,7 +53,8 @@ void CDeviceHeater::triggerState(int reason, void* state)
 {
 	bool bHeaterRequestOn = false;
 
-	byte doSendPkg = 0, status;
+	byte doSendPkg = 0,
+		 status = (m_state.isOn)?HEATER_REQ_ON:HEATER_REQ_OFF;
 	int dayInMo = SystemClock.now().Day;
 
 	byte retry=0;
@@ -81,19 +82,7 @@ void CDeviceHeater::triggerState(int reason, void* state)
 		}
 	}
 
-	if(!m_state.isStateSyncWithHardware)
-	{
-		if(m_state.isOn)
-		{
-			status = HEATER_REQ_ON;
-		}
-		else
-		{
-			status = HEATER_REQ_OFF;
-		}
-		doSendPkg = 1;
-	}
-	else  if(bHeaterRequestOn)
+	if(bHeaterRequestOn)
 	{
 		if(!m_state.isOn)
 		{
@@ -110,6 +99,19 @@ void CDeviceHeater::triggerState(int reason, void* state)
 		}
 	}
 
+	if(!doSendPkg && !m_state.isStateSyncWithHardware)
+	{
+		if(m_state.isOn)
+		{
+			status = HEATER_REQ_ON;
+		}
+		else
+		{
+			status = HEATER_REQ_OFF;
+		}
+		doSendPkg = 1;
+	}
+
 	if(m_state.currentDayInMonth < 0 || (m_state.currentDayInMonth != dayInMo))
 	{
 		m_state.currentDayInMonth = dayInMo;
@@ -121,11 +123,10 @@ void CDeviceHeater::triggerState(int reason, void* state)
 	{
 		LOG_I("HEATER(%d) Force radio send", m_ID);
 		doSendPkg = 1;
-		status = m_state.isOn ? HEATER_REQ_ON : HEATER_REQ_OFF;
 		m_LastUpdateTimestamp = system_get_time() / 1000;
 	}
 
-	LOG_I("HEATER(%d) trigState send:%d reqHear:%d isSync:%d state:%d",
+	LOG_I("HEATER(%d) trigState send:%d reqHeat:%d isSync:%d state:%d",
 			m_ID, doSendPkg, bHeaterRequestOn, m_state.isStateSyncWithHardware, m_state.isOn);
 
 	if(doSendPkg)
