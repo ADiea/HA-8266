@@ -145,11 +145,12 @@ static void mainLoop()
 	byte len = 0;
 	uint16_t i;
 
+	/*
 	if(loopCount % 2)
 		devRGB_setColor(COLOR_BLUE);
 	else
 		devRGB_setColor(COLOR_OFF);
-
+*/
 	wsPruneConnections();
 
 	if (system_get_free_heap_size() < 6500 &&
