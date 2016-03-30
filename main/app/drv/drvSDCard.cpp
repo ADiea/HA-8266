@@ -22,8 +22,8 @@ uint8_t devSDCard_init(uint8_t operation)
 			//configure device
 			if(operation & CONFIG)
 			{
-				SDCardSPI = new SPISoft(PIN_CARD_DO, PIN_CARD_DI, PIN_CARD_CK, PIN_CARD_SS);
-				SDCard_begin();
+				SDCardSPI = new SPISoft(PIN_CARD_DO, PIN_CARD_DI, PIN_CARD_CK, PIN_CARD_SS, 10);
+				SDCard_begin(PIN_CARD_SS);
 			}
 		}
 		else

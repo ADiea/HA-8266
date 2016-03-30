@@ -145,7 +145,7 @@ uint8_t devRadio_init(uint8_t operation)
 			//configure device
 			if(operation & CONFIG)
 			{
-				pRadioSPI = new SPISoft(PIN_RADIO_DO, PIN_RADIO_DI, PIN_RADIO_CK, PIN_RADIO_SS);
+				pRadioSPI = new SPISoft(PIN_RADIO_DO, PIN_RADIO_DI, PIN_RADIO_CK, PIN_RADIO_SS, 0);
 
 				if(pRadioSPI)
 				{
