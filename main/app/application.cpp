@@ -8,6 +8,7 @@
 #include "device.h"
 #include "commWeb.h"
 #include "webserver.h"
+#include "webclient.h"
 
 /*
  The following 2 defines are present in wifipass.h
@@ -47,6 +48,7 @@ void connectOk()
 {
 	LOG_I( "AP CONNECT");
 	startWebServers();
+	wsCliStart();
 }
 
 // Will be called when WiFi station timeout was reached

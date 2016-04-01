@@ -78,7 +78,7 @@ bool skipFloat(const char **s, float *dest)
 		}
 		else
 		{
-			LOG_E( "skipFloat: bad terminal: %x", **s);
+			LOG_E( "skipFloat: int:%d, bad terminal: %x", intPart, **s);
 			return false;
 		}
 	}
@@ -90,7 +90,7 @@ bool skipFloat(const char **s, float *dest)
 	}
 	else
 	{
-		LOG_I( "skipFloat: unknown char: %x", **s);
+		LOG_I( "skipFloat: int:%d, unknown char: %x", intPart, **s);
 		return false;
 	}
 
