@@ -76,7 +76,7 @@ bool RadioMakePacket(byte *pkgBuffer,
 
 bool RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitMs)
 {
-	bool result = false;
+	eRadioError result = err_RadioNotInit;
 	
 	if(Radio)
 	{
@@ -85,14 +85,16 @@ bool RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitMs)
 			result = Radio->sendPacket(length, pkg, true, RADIO_WAIT_ACK_MS, outLen, pkg);
 			releaseRadio();
 
-			if(!result || *outLen > 64)
+			if(result != err_NoError || *outLen > 64)
 			{
-				//LOG_I("Radio send err.");
-				result = false;
+				if(result == err_TXTimeout)
+				{
+					gRadioSendFaults++;
+				}
 
-				gRadioSendFaults++;
 				if(gRadioSendFaults > 3)
 				{
+					LOG_E("RADIO FAIL, REINIT");
 					gRadioSendFaults = 0;
 
 					//initialise radio with default settings
@@ -102,13 +104,17 @@ bool RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitMs)
 					Radio->setBaudRateFast(eBaud_38k4);
 					Radio->setChannel(0);
 
+#if DEBUG_SI4432
 					//dump the register configuration to console
 					Radio->readAll();
+#endif
 				}
 			}
 			else
 			{
 				gRadioSendFaults = 0;
+				result = err_NoError;
+#if DEBUG_SI4432
 				LOG_I(" SENT! SYNC RX (%d):", *outLen);
 
 				for (byte i = 0; i < *outLen; ++i)
@@ -117,12 +123,13 @@ bool RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitMs)
 				}
 
 				LOG_I("\n");
-				result = true;
+#endif
 			}
 		}
 		else
 		{
 			LOG_I( "Radio busy\n");
+			result = err_RadioBusy;
 		}
 	}
 	else

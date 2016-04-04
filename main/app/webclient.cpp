@@ -50,6 +50,7 @@ void wsCliSendMessage(String msg)
 
 void wsCliStart()
 {
+	LOG_I("wsCliStart()");
     wsClient.setOnReceiveCallback(wsMessageReceived);
     wsClient.setOnDisconnectedCallback(wsDisconnected);
     wsClient.setOnConnectedCallback(wsConnected);
