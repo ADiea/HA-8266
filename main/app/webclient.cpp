@@ -5,11 +5,14 @@ WebsocketClient wsClient;
 String ws_Url =  "ws://echo.websocket.org"; //"ws://192.168.1.2:8080/";
 void wsDisconnected(bool success);
 
-wsMode g_wsCliMode;
+WebWsProtocol_State g_wsCliConnStatus;
+Timer gTmrStayConnected;
+
+bool g_bConnectionNeeded = true;
+
 
 void wsConnected(wsMode Mode)
 {
-	g_wsCliMode = Mode;
 	if (Mode == ws_Connected)
 	{
 		LOG_I("Connection with server successful");
@@ -32,7 +35,7 @@ void wsDisconnected(bool success)
 {
 	if (success == true)
 	{
-		LOG_I("Websocket Client Disconnected Normally. End of program ..");
+		LOG_I("WSCli disc by request");
 	}
 	else
 	{
@@ -42,10 +45,19 @@ void wsDisconnected(bool success)
 }
 
 
-void wsCliSendMessage(String msg)
+bool wsCliSendMessage(String msg)
 {
 	LOG_I("wsCliSendMessage: %s", msg);
-	wsClient.sendMessage(msg);
+	if(wsClient.getWSMode() != ws_Disconnected)
+	{
+		wsClient.sendMessage(msg);
+	}
+	else
+	{
+		wsCliConnect(false);
+		return false;
+	}
+	return true;
 }
 
 void wsCliStart()
@@ -54,5 +66,26 @@ void wsCliStart()
     wsClient.setOnReceiveCallback(wsMessageReceived);
     wsClient.setOnDisconnectedCallback(wsDisconnected);
     wsClient.setOnConnectedCallback(wsConnected);
+	wsCliConnect(true);
+}
+
+void wsCliConnect(bool bResetConnectionTimer)
+{
+	if(!bResetConnectionTimer)
+	{
+		gTmrStayConnected.initializeUs(5 * 60 * 1000000, mainLoop).start();
+	}
+	
 	wsClient.connect(ws_Url);
+}
+
+void wsCliOnTimerStayConnected()
+{
+	if (wsClient.getWSMode() != ws_Disconnected &&
+		!g_bConnectionNeeded)
+	{
+		wsClient.disconnect();
+		g_wsCliConnStatus = wsState_inval;
+	}
+
 }
