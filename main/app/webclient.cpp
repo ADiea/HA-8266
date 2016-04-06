@@ -10,6 +10,8 @@ Timer gTmrStayConnected;
 
 bool g_bConnectionNeeded = true;
 
+void wsCliConnect(bool bResetConnectionTimer);
+void wsCliOnTimerStayConnected();
 
 void wsConnected(wsMode Mode)
 {
@@ -47,7 +49,7 @@ void wsDisconnected(bool success)
 
 bool wsCliSendMessage(String msg)
 {
-	LOG_I("wsCliSendMessage: %s", msg);
+	LOG_I("wsCliSendMessage: %s", msg.c_str());
 	if(wsClient.getWSMode() != ws_Disconnected)
 	{
 		wsClient.sendMessage(msg);
@@ -73,7 +75,7 @@ void wsCliConnect(bool bResetConnectionTimer)
 {
 	if(!bResetConnectionTimer)
 	{
-		gTmrStayConnected.initializeUs(5 * 60 * 1000000, mainLoop).start();
+		gTmrStayConnected.initializeUs(5 * 60 * 1000000, wsCliOnTimerStayConnected).start();
 	}
 	
 	wsClient.connect(ws_Url);
@@ -84,8 +86,13 @@ void wsCliOnTimerStayConnected()
 	if (wsClient.getWSMode() != ws_Disconnected &&
 		!g_bConnectionNeeded)
 	{
+		LOG_I("wsCliOnTimerStayConnected() disconnecting");
 		wsClient.disconnect();
 		g_wsCliConnStatus = wsState_inval;
+	}
+	else
+	{
+		LOG_I("wsCliOnTimerStayConnected() connection needed");
 	}
 
 }
