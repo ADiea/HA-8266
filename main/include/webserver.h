@@ -13,6 +13,4 @@ extern HttpServer gHttpServer;
 void startWebServers();
 void wsPruneConnections();
 
-void wsSendAllExcept(WebSocket& socket, const char* msg, size_t size);
-
 #endif

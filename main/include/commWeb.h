@@ -2,6 +2,7 @@
 #define COMM_WEB_H
 
 #include <SmingCore/SmingCore.h>
+#include <netpeer.h>
 
 class CGenericDevice;
 
@@ -18,7 +19,7 @@ enum eCommWebErrorCodes
 	cwErrUnknown
 };
 
-enum eCommWebMsgTYpes
+enum eCommWebMsgTypes
 {
 	cwReplyToCommand = 0,
 
@@ -63,9 +64,9 @@ enum eCommWebMsgTYpes
 
 };
 
-bool cwReceivePacket(WebSocket& socket, const char* pkt);
+bool cwReceivePacket(CAbstractPeer& peer, const char* pkt);
 
-bool broadcastDeviceInfo(WebSocketsList &clients, CGenericDevice *device,
-						WebSocket *exceptSock = NULL);
+bool broadcastDeviceInfo(ConnectedPeerList &clients, CGenericDevice *device,
+						CAbstractPeer* exceptPeer = NULL);
 
 #endif

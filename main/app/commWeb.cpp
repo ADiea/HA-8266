@@ -4,8 +4,8 @@
 #include "util.h"
 #include "webserver.h"
 
-bool broadcastDeviceInfo(WebSocketsList &clients, CGenericDevice *device,
-						WebSocket *exceptSock /* = NULL*/)
+bool broadcastDeviceInfo(ConnectedPeerList &clients, CGenericDevice *device,
+						CAbstractPeer* exceptPeer/* = NULL*/)
 {
 	if(!device) return false;
 	size_t sizePkt = m_snprintf(g_devScrapBuffer, sizeof(g_devScrapBuffer),
@@ -16,34 +16,34 @@ bool broadcastDeviceInfo(WebSocketsList &clients, CGenericDevice *device,
 
 	for (int i = 0; i < clients.count(); i++)
 	{
-		if(exceptSock != &(clients[i]))
-			clients[i].send((const char*)g_devScrapBuffer, sizePkt);
+		if(exceptPeer != &(clients[i]))
+			clients[i].sendToPeer((const char*)g_devScrapBuffer, sizePkt);
 	}
 }
 
-bool reply_cwReplyToCommand(WebSocket& socket, eCommWebErrorCodes err, int lastCmdType = 0, int sequence = 0)
+bool reply_cwReplyToCommand(CAbstractPeer& peer, eCommWebErrorCodes err, int lastCmdType = 0, int sequence = 0)
 {
 	int sizePkt = m_snprintf(g_devScrapBuffer, sizeof(g_devScrapBuffer), "%d;%d;%d;%d;", cwReplyToCommand, err, lastCmdType, sequence);
-	socket.send((const char*)g_devScrapBuffer, sizePkt);
+	peer.sendToPeer((const char*)g_devScrapBuffer, sizePkt);
 }
 
-bool handle_cwErrorHandler(WebSocket& socket, const char **pkt)
+bool handle_cwErrorHandler(CAbstractPeer& peer, const char **pkt)
 {
 	LOG_E( "Invalid pktId RXed");
-	reply_cwReplyToCommand(socket, cwErrInvalidPacketID);
+	reply_cwReplyToCommand(peer, cwErrInvalidPacketID);
 }
 
-bool handle_cwGetLights(WebSocket& socket, const char **pkt)
+bool handle_cwGetLights(CAbstractPeer& peer, const char **pkt)
 {
-	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
+	reply_cwReplyToCommand(peer, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwSetLightParams(WebSocket& socket, const char **pkt)
+bool handle_cwSetLightParams(CAbstractPeer& peer, const char **pkt)
 {
-	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
+	reply_cwReplyToCommand(peer, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
+bool handle_cwGetDevicesOfType(CAbstractPeer& peer, const char **pkt)
 {
 	int i = 0, numDevs = 0, sizePkt = 0, j, len, k, devType;
 
@@ -71,20 +71,20 @@ bool handle_cwGetDevicesOfType(WebSocket& socket, const char **pkt)
 		}
 	}
 
-	socket.send((const char*)g_devScrapBuffer, sizePkt);
+	peer.sendToPeer((const char*)g_devScrapBuffer, sizePkt);
 }
 
-bool handle_cwSetTHParams(WebSocket& socket, const char **pkt)
+bool handle_cwSetTHParams(CAbstractPeer& peer, const char **pkt)
 {
-	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
+	reply_cwReplyToCommand(peer, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwSetHeaterParams(WebSocket& socket, const char **pkt)
+bool handle_cwSetHeaterParams(CAbstractPeer& peer, const char **pkt)
 {
-	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
+	reply_cwReplyToCommand(peer, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwSetGenericDeviceParams(WebSocket& socket, const char **pkt)
+bool handle_cwSetGenericDeviceParams(CAbstractPeer& peer, const char **pkt)
 {
 	int i = 0, sequence = 0;
 	int devID;
@@ -125,46 +125,45 @@ bool handle_cwSetGenericDeviceParams(WebSocket& socket, const char **pkt)
 	}
 	while(false);
 
-	reply_cwReplyToCommand(socket, retCode, cwSetGenericDeviceParams, sequence);
+	reply_cwReplyToCommand(peer, retCode, cwSetGenericDeviceParams, sequence);
 
 	if(retCode == cwErrSuccess)
 	{
-		broadcastDeviceInfo(gHttpServer.getActiveWebSockets(),
-							g_activeDevices[i], &socket);
+		broadcastDeviceInfo(gConnectedPeers, g_activeDevices[i], &peer);
 	}
 }
 
-bool handle_cwNotifyGenericDeviceStatus(WebSocket& socket, const char **pkt)
+bool handle_cwNotifyGenericDeviceStatus(CAbstractPeer& peer, const char **pkt)
 {
-	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
+	reply_cwReplyToCommand(peer, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwGetConfortStatus(WebSocket& socket, const char **pkt)
+bool handle_cwGetConfortStatus(CAbstractPeer& peer, const char **pkt)
 {
-	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
+	reply_cwReplyToCommand(peer, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwGetRadioFMs(WebSocket& socket, const char **pkt)
+bool handle_cwGetRadioFMs(CAbstractPeer& peer, const char **pkt)
 {
-	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
+	reply_cwReplyToCommand(peer, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwSetRadioFMParams(WebSocket& socket, const char **pkt)
+bool handle_cwSetRadioFMParams(CAbstractPeer& peer, const char **pkt)
 {
-	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
+	reply_cwReplyToCommand(peer, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwGetMovements(WebSocket& socket, const char **pkt)
+bool handle_cwGetMovements(CAbstractPeer& peer, const char **pkt)
 {
-	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
+	reply_cwReplyToCommand(peer, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwSetMovementParams(WebSocket& socket, const char **pkt)
+bool handle_cwSetMovementParams(CAbstractPeer& peer, const char **pkt)
 {
-	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
+	reply_cwReplyToCommand(peer, cwErrFunctionNotImplemented);
 }
 
-bool handle_cwGetGenericDeviceLogs(WebSocket& socket, const char **pkt)
+bool handle_cwGetGenericDeviceLogs(CAbstractPeer& peer, const char **pkt)
 {
 	int sizePkt = 0, devId, fromTime, decimation, numEntries, i, entriesWritten = 0;
 	uint32_t entriesRead = 0;
@@ -200,20 +199,20 @@ bool handle_cwGetGenericDeviceLogs(WebSocket& socket, const char **pkt)
 				while( numEntries > entriesWritten && SystemClock.now(eTZ_UTC).toUnixTime() > fromTime);
 
 				LOG_I("cwGetGenericDeviceLogs %s", g_devScrapBuffer);
-				socket.send((const char*)g_devScrapBuffer, sizePkt);
+				peer.sendToPeer((const char*)g_devScrapBuffer, sizePkt);
 				break;
 			}
 		}
 	}
 }
 
-bool handle_cwReplyGenericDeviceLogs(WebSocket& socket, const char **pkt)
+bool handle_cwReplyGenericDeviceLogs(CAbstractPeer& peer, const char **pkt)
 {
-	reply_cwReplyToCommand(socket, cwErrFunctionNotImplemented);
+	reply_cwReplyToCommand(peer, cwErrFunctionNotImplemented);
 }
 
 
-bool handle_cwPrintDebugInformation(WebSocket& socket, const char **pkt)
+bool handle_cwPrintDebugInformation(CAbstractPeer& peer, const char **pkt)
 {
 	int debugCommand = 0;
 	eCommWebErrorCodes retCode = cwErrSuccess;
@@ -236,7 +235,7 @@ bool handle_cwPrintDebugInformation(WebSocket& socket, const char **pkt)
 			break;
 		}
 	}while(false);
-	reply_cwReplyToCommand(socket, retCode);
+	reply_cwReplyToCommand(peer, retCode);
 }
 
 /*
@@ -247,7 +246,7 @@ soft radio sa ceara confirmarea la 10 secunde si sa clipeasca mai rapid ledul da
 
 */
 
-bool handle_cwSpecialCommand(WebSocket& socket, const char **pkt)
+bool handle_cwSpecialCommand(CAbstractPeer& peer, const char **pkt)
 {
 	int debugCommand = 0;
 	eCommWebErrorCodes retCode = cwErrSuccess;
@@ -275,12 +274,12 @@ bool handle_cwSpecialCommand(WebSocket& socket, const char **pkt)
 			break;
 		}
 	}while(false);
-	reply_cwReplyToCommand(socket, retCode);
+	reply_cwReplyToCommand(peer, retCode);
 
 }
 
 
-bool (*gCWHandlers[cwMaxId])(WebSocket&, const char**) =
+bool (*gCWHandlers[cwMaxId])(CAbstractPeer& peer, const char**) =
 {
 	handle_cwErrorHandler,
 
@@ -319,7 +318,7 @@ bool (*gCWHandlers[cwMaxId])(WebSocket&, const char**) =
 
 };
 
-bool cwReceivePacket(WebSocket& socket, const char* pkt)
+bool cwReceivePacket(CAbstractPeer& peer, const char* pkt)
 {
 	bool retVal = false;
 
@@ -339,7 +338,7 @@ bool cwReceivePacket(WebSocket& socket, const char* pkt)
 		}
 		else
 		{
-			retVal = gCWHandlers[pktId](socket, &pkt);
+			retVal = gCWHandlers[pktId](peer, &pkt);
 		}
 	}
 
