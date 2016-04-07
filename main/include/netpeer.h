@@ -14,6 +14,8 @@ typedef Vector<CAbstractPeer*> ConnectedPeerList;
 
 extern ConnectedPeerList gConnectedPeers;
 
+CAbstractPeer* findPeer(uint32_t id);
+
 enum ePeerTypes
 {
 	ePeerLAN = 0, 
@@ -23,14 +25,22 @@ enum ePeerTypes
 class CAbstractPeer
 {
 public:
-	CAbstractPeer(ePeerTypes type, uint32_t _id):peerType(type), id(_id) {};
+	CAbstractPeer(ePeerTypes type, uint32_t _id):peerType(type), id(_id)
+		{lastRXTimestamp = system_get_time() / 1024;}
 	
 	virtual void onReceiveFromPeer(String& message) = 0;
 	virtual void sendToPeer(const char* msg, uint32_t size) = 0;
+
+	bool isConnectionAlive();
+	ePeerTypes getType(){return peerType;}
+
 private:
+	virtual ~CAbstractPeer();
+
+	uint32_t lastRXTimestamp;
 	uint32_t id;
 	ePeerTypes peerType;
-	virtual ~CAbstractPeer();
+
 };
 
 class CWebPeer : public CAbstractPeer

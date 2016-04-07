@@ -20,9 +20,9 @@ enum WebWsProtocol_Ops
 	wsOP_msgSpecial=4,
 	wsOP_positiveAck=5,
 	wsOP_negativeAck=6,
-	wsOP_nop=7,
-	wsOP_remotePeerConnect=8,
-	wsOP_remotePeerDisconnect=9,
+	//wsOP_nop=7,
+	//wsOP_remotePeerConnect=8,
+	//wsOP_remotePeerDisconnect=9,
 };
 
 enum WebWsProtocol_SubOps 
