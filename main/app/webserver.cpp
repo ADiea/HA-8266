@@ -80,7 +80,7 @@
 					return;
 				}
 				
-				gConnectedPeers.addElement(*pNewPeer);
+				gConnectedPeers.addElement(pNewPeer);
 				
 				g_sockDataPool[i].isInvalid = false;
 				g_sockDataPool[i].connectedPeer = pNewPeer;
@@ -117,7 +117,7 @@
 
 		if(bFound && g_sockDataPool[i].connectedPeer)
 		{
-			g_sockDataPool[i].connectedPeer->onReceiveFromPeer(message);
+			g_sockDataPool[i].connectedPeer->onReceiveFromPeer(message.c_str());
 		}
 	}
 
@@ -145,15 +145,24 @@
 	void wsPruneConnections()
 	{
 		WebSockUserData *pData;
-		uint32 i = 0;
-		for(i = 0; i < WEBSOCK_USERSLOTS; i++)
+		uint32 i = 0, s = 0;
+		WebSocketsList &clients = gHttpServer.getActiveWebSockets();
+		for (s = 0; s < clients.count(); s++)
 		{
-			if(!g_sockDataPool[i].isInvalid)
+			for(i = 0; i < WEBSOCK_USERSLOTS; i++)
 			{
-				if(!g_sockDataPool[i].isAlive((10*60)/clients.count()))
+				if(!g_sockDataPool[i].isInvalid)
 				{
-					clients[s].close();
-					g_sockDataPool[i].invalidate();
+					//todo: will comparison always work?
+					if(g_sockDataPool[i].webSock == &(clients[s]))
+					{
+						if(!g_sockDataPool[i].isAlive((10*60)/clients.count()))
+						{
+							clients[s].close();
+							g_sockDataPool[i].invalidate();
+						}
+						break;
+					}
 				}
 			}
 		}

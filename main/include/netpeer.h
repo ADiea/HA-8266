@@ -6,7 +6,7 @@
 #include <SmingCore/Network/WebsocketClient.h>
 
 #include "debug.h"
-#include "commWeb.h"
+
 
 class CAbstractPeer;
 
@@ -28,14 +28,15 @@ public:
 	CAbstractPeer(ePeerTypes type, uint32_t _id):peerType(type), id(_id)
 		{lastRXTimestamp = system_get_time() / 1024;}
 	
-	virtual void onReceiveFromPeer(String& message) = 0;
+	virtual void onReceiveFromPeer(const char* message) = 0;
 	virtual void sendToPeer(const char* msg, uint32_t size) = 0;
 
 	bool isConnectionAlive();
 	ePeerTypes getType(){return peerType;}
+	uint32_t getId(){return id;}
 
-private:
-	virtual ~CAbstractPeer();
+	virtual ~CAbstractPeer(){}
+protected:
 
 	uint32_t lastRXTimestamp;
 	uint32_t id;
@@ -48,10 +49,10 @@ class CWebPeer : public CAbstractPeer
 public:
 	CWebPeer(uint32_t _id):CAbstractPeer(ePeerWEB, _id){};
 	
-	virtual void onReceiveFromPeer(String& message);
+	virtual void onReceiveFromPeer(const char* message);
 	virtual void sendToPeer(const char* msg, uint32_t size);
 	
-	virtual ~CWebPeer();
+	virtual ~CWebPeer(){}
 };
 
 class CLanPeer : public CAbstractPeer
@@ -59,10 +60,10 @@ class CLanPeer : public CAbstractPeer
 public:
 	CLanPeer(uint32_t _id):CAbstractPeer(ePeerLAN, _id), pSocket(NULL){};
 	
-	virtual void onReceiveFromPeer(String& message);
+	virtual void onReceiveFromPeer(const char* message);
 	virtual void sendToPeer(const char* msg, uint32_t size);
 	
-	virtual ~CLanPeer();
+	virtual ~CLanPeer(){}
 	
 private:
 	WebSocket *pSocket;

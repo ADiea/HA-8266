@@ -166,7 +166,7 @@ void CDeviceTempHumid::requestUpdateState()
 				oldState.m_autopilotIndex != m_state.m_autopilotIndex )
 			{
 				LOG_I( "TH(%d) BROADCAST to %d clients\n", m_ID, gHttpServer.getActiveWebSockets().count());
-				broadcastDeviceInfo(gHttpServer.getActiveWebSockets(), (CGenericDevice*)this);
+				broadcastDeviceInfo(gConnectedPeers, (CGenericDevice*)this);
 			}
 
 

@@ -1,12 +1,23 @@
 #include "webclient.h"
+#include "commWeb.h"
+#include "util.h"
+#include "device.h"
+
 
 WebsocketClient wsClient;
 
-String ws_Url =  "ws://homea.herokuapp.com";
+String ws_Url =  "ws://homea.herokuapp.com/";
 void wsDisconnected(bool success);
 
 WebWsProtocol_State g_wsCliConnStatus;
 Timer gTmrStayConnected;
+Timer gTmrReconnect;
+Timer gTmrKeepAlive;
+
+#define TMR_CHECK_CONN (1 * 60 * 1000000)
+#define TMR_RECONN_ERR (5 * 1000000)
+#define TMR_RECON_LATER (10 * 1000000)
+#define TMR_PING (2 * 1000000)
 
 #define MY_NODE_ID 122
 
@@ -45,28 +56,46 @@ void terminateString(char* msg)
 
 void wsCliOnTimerStayConnected();
 
+void wsCliReconnect()
+{
+	wsClient.connect(ws_Url);
+}
+
+void wsCliPing()
+{
+	if(g_wsCliConnStatus == wsState_conn)
+	{
+		wsClient.sendPing();
+	}
+}
+
 void wsConnected(wsMode Mode)
 {
 	if (Mode == ws_Connected)
 	{
-		LOG_I("Connection with server successful");
+		LOG_I("wscli: Connection with server successful");
 
 		m_snprintf(g_devScrapBuffer, sizeof(g_devScrapBuffer),
-							"{op:%d}", wsOP_cliHello);
+							"{\"op\":%d}", wsOP_cliHello);
 
 		wsCliSendMessage(String(g_devScrapBuffer));
+
+		g_wsCliConnStatus = wsState_new;
+		gTmrStayConnected.initializeUs(TMR_CHECK_CONN, wsCliOnTimerStayConnected).start();
 	}
 	else
 	{
-		LOG_I("Connection with server not successful");
-		wsClient.connect(ws_Url);
+		LOG_I("wscli: Connection with server not successful");
+		//wsClient.connect(ws_Url);
+		gTmrReconnect.stop();
+		gTmrReconnect.initializeUs(TMR_RECONN_ERR, wsCliReconnect).start(false);
 	}
 }
 void wsMessageReceived(String message)
 {
-    LOG_I("WebSocket message received: %s", message.c_str());
+    LOG_I("wscli:WebSocket message received: %s", message.c_str());
 
-    message.getBytes(g_devScrapBuffer, sizeof(g_devScrapBuffer));
+    message.getBytes((unsigned char*)g_devScrapBuffer, sizeof(g_devScrapBuffer));
 
     CAbstractPeer* pRemoteClient = NULL;
     uint32_t index;
@@ -76,95 +105,114 @@ void wsMessageReceived(String message)
     char *payloadMsg;
 
     //unpack
-    index = message.indexOf(String("op:"));
+    index = message.indexOf(String("\"op\":"));
     if(index < 0)
     {
     	return;
     }
 
-    op = extractInt(g_devScrapBuffer + index + 3);
-    LOG_I("WebSockCli RX Op is:%d", op);
+    op = extractInt(g_devScrapBuffer + index + 5);
+    LOG_I("wscli:WebSockCli RX Op is:%d", op);
 
     switch(op)
     {
     	case wsOP_servHello:
-    		m_snprintf(g_devScrapBuffer, sizeof(g_devScrapBuffer),
-    							"{op:%d,type:%d,id:%d}",
-    							wsOP_cliLogin, wsValue_homeBase, MY_NODE_ID);
+    			LOG_I("wscli:WebSockCli State is %d SrvHello, login", g_wsCliConnStatus, op);
+    			g_wsCliConnStatus = wsState_hello;
+				m_snprintf(g_devScrapBuffer, sizeof(g_devScrapBuffer),
+									"{\"op\":%d,\"type\":%d,\"id\":%d}",
+									wsOP_cliLogin, wsValue_homeBase, MY_NODE_ID);
 
-    		wsCliSendMessage(String(g_devScrapBuffer));
+				wsCliSendMessage(String(g_devScrapBuffer));
+
     		break;
-	//wsOP_cliLogin=2,
+
     	case wsOP_msgRelay:
 
-    	    index = message.indexOf(String("id:"));
+    	    index = message.indexOf(String("\"from\":"));
     	    if(index < 0)
     	    {
     	    	return;
     	    }
 
-    	    peerId = extractInt(g_devScrapBuffer + index + 3);
-    	    LOG_I("WebSockCli RX peer id:%d", peerId);
+    	    peerId = extractInt(g_devScrapBuffer + index + 7);
+    	    LOG_I("wscli:WebSockCli RX peer id:%d", peerId);
 
     		pRemoteClient = findPeer(peerId);
     		if(!pRemoteClient)
     		{
-    			pRemoteClient = new CWebPeer(id);
+    			LOG_I("wscli:WebSockCli RX new peer");
+    			pRemoteClient = new CWebPeer(peerId);
 				if(!pRemoteClient)
 				{
-					LOG_E( "wsOP_msgRelay: No heap for peer\n");
+					LOG_E( "wscli:wsOP_msgRelay: No heap for peer\n");
 					//reply nack?
 					return;
 				}
-
-				gConnectedPeers.addElement(*pRemoteClient);
+				gConnectedPeers.addElement(pRemoteClient);
     		}
 
     		//extract message
-    	    index = message.indexOf(String("msg:\""));
+    	    index = message.indexOf(String("\"msg\":\""));
     	    if(index < 0)
     	    {
     	    	return;
     	    }
 
-    	    peerId = terminateString(g_devScrapBuffer + index + 5);
-    	    LOG_I("WebSockCli RX peer msg:%s", g_devScrapBuffer + index + 5);
+    	    terminateString(g_devScrapBuffer + index + 7);
+
+    	    LOG_I("wscli:WebSockCli RX peer msg:%s", g_devScrapBuffer + index + 7);
 
     		//receive message
-    		pRemoteClient->onReceiveFromPeer(String(g_devScrapBuffer + index + 5));
+    		pRemoteClient->onReceiveFromPeer((const char*)g_devScrapBuffer + index + 7);
 
     		break;
     	case wsOP_msgSpecial:
     		break;
     	case wsOP_positiveAck:
+    		if(g_wsCliConnStatus == wsState_hello)
+    		{
+    			LOG_I("wscli:WebSockCli logged in", g_wsCliConnStatus, op);
+    			g_wsCliConnStatus = wsState_conn;
+    		}
     		break;
     	case wsOP_negativeAck:
+    		if(g_wsCliConnStatus == wsState_hello)
+    		{
+    			LOG_I("wscli:WebSockCli server reject login", g_wsCliConnStatus, op);
+    		}
     		break;
-
     };
-
 }
 
 void wsDisconnected(bool success)
 {
+	gTmrStayConnected.stop();
+	gTmrReconnect.stop();
+
 	if (success == true)
 	{
-		LOG_I("WSCli disc by request");
+		LOG_I("wscli:WsCli disc by request");
+		gTmrReconnect.initializeUs(TMR_RECON_LATER, wsCliReconnect).start(false);
 	}
 	else
 	{
-		LOG_I("Websocket Client Disconnected. Reconnecting ..");
-		wsClient.connect(ws_Url);
+		LOG_I("wscli:WsCli Disconnected. Reconnecting ..");
+		gTmrReconnect.initializeUs(TMR_RECONN_ERR, wsCliReconnect).start(false);
 	}
 }
 
-
 bool wsCliSendMessage(String msg)
 {
-	LOG_I("wsCliSendMessage: %s", msg.c_str());
+	return wsCliSendMessage(msg.c_str(), msg.length());
+}
+
+bool wsCliSendMessage(const char* msg, uint32_t size)
+{
+	//LOG_I("wscli:wsCliSendMessage: %s", msg.c_str());
 	if(wsClient.getWSMode() != ws_Disconnected)
 	{
-		wsClient.sendMessage(msg);
+		wsClient.sendMessage(msg, size);
 	}
 	else
 	{
@@ -176,12 +224,13 @@ bool wsCliSendMessage(String msg)
 
 void wsCliStart()
 {
-	LOG_I("wsCliStart()");
+	LOG_I("wscli:wsCliStart()");
     wsClient.setOnReceiveCallback(wsMessageReceived);
     wsClient.setOnDisconnectedCallback(wsDisconnected);
     wsClient.setOnConnectedCallback(wsConnected);
     wsClient.connect(ws_Url);
-	gTmrStayConnected.initializeUs(1 * 60 * 1000000, wsCliOnTimerStayConnected).start();
+
+	gTmrKeepAlive.initializeUs(TMR_PING, wsCliPing).start();
 }
 
 void wsCliOnTimerStayConnected()
@@ -189,9 +238,9 @@ void wsCliOnTimerStayConnected()
 	uint32_t i=0;
 	bool bConnectionNeeded = false;
 	
-	if(wsClient.getWSMode() == ws_Disconnected)
+	if(g_wsCliConnStatus != wsState_conn)
 	{
-		wsClient.connect(ws_Url);
+		wsClient.disconnect();
 	}
 	else
 	{
@@ -213,13 +262,13 @@ void wsCliOnTimerStayConnected()
 
 		if (!bConnectionNeeded)
 		{
-			LOG_I("wsCliOnTimerStayConnected() disconnecting");
+			LOG_I("wscli:wsCliOnTimerStayConnected() disconnecting");
 			wsClient.disconnect();
 			g_wsCliConnStatus = wsState_inval;
 		}
 		else
 		{
-			LOG_I("wsCliOnTimerStayConnected() connection needed");
+			LOG_I("wscli:wsCliOnTimerStayConnected() connection needed");
 		}
 	} //endif(wsClient.getWSMode() != ws_Disconnected)
 }

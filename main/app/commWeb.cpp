@@ -3,6 +3,7 @@
 #include "commWeb.h"
 #include "util.h"
 #include "webserver.h"
+#include "netpeer.h"
 
 bool broadcastDeviceInfo(ConnectedPeerList &clients, CGenericDevice *device,
 						CAbstractPeer* exceptPeer/* = NULL*/)
@@ -16,8 +17,8 @@ bool broadcastDeviceInfo(ConnectedPeerList &clients, CGenericDevice *device,
 
 	for (int i = 0; i < clients.count(); i++)
 	{
-		if(exceptPeer != &(clients[i]))
-			clients[i].sendToPeer((const char*)g_devScrapBuffer, sizePkt);
+		if(exceptPeer != clients[i])
+			clients[i]->sendToPeer((const char*)g_devScrapBuffer, sizePkt);
 	}
 }
 
