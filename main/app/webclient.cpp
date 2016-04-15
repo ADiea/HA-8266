@@ -4,9 +4,61 @@
 #include "device.h"
 
 
+/* Debug SSL functions */
+void displaySessionId(SSL *ssl)
+{
+    int i;
+    const uint8_t *session_id = ssl_get_session_id(ssl);
+    int sess_id_size = ssl_get_session_id_size(ssl);
+
+    if (sess_id_size > 0)
+    {
+        debugf("-----BEGIN SSL SESSION PARAMETERS-----");
+        for (i = 0; i < sess_id_size; i++)
+        {
+        	m_printf("%02x", session_id[i]);
+        }
+
+        debugf("\n-----END SSL SESSION PARAMETERS-----");
+    }
+}
+
+/**
+ * Display what cipher we are using
+ */
+void displayCipher(SSL *ssl)
+{
+	m_printf("CIPHER is ");
+    switch (ssl_get_cipher_id(ssl))
+    {
+        case SSL_AES128_SHA:
+        	m_printf("AES128-SHA");
+            break;
+
+        case SSL_AES256_SHA:
+        	m_printf("AES256-SHA");
+            break;
+
+        case SSL_RC4_128_SHA:
+        	m_printf("RC4-SHA");
+            break;
+
+        case SSL_RC4_128_MD5:
+        	m_printf("RC4-MD5");
+            break;
+
+        default:
+        	m_printf("Unknown - %d", ssl_get_cipher_id(ssl));
+            break;
+    }
+
+    m_printf("\n");
+}
+
+
 WebsocketClient wsClient;
 
-String ws_Url =  "ws://homea.herokuapp.com/";
+String ws_Url =  "wss://homea.herokuapp.com/";
 void wsDisconnected(bool success);
 
 WebWsProtocol_State g_wsCliConnStatus;
@@ -94,6 +146,23 @@ void wsConnected(wsMode Mode)
 void wsMessageReceived(String message)
 {
     LOG_I("wscli:WebSocket message received: %s", message.c_str());
+
+
+    /****/
+    //LOG_I("Got response code: %d", client.getResponseCode());
+    //LOG_I("Got content starting with: %s", client.getResponseString().substring(0, 50).c_str());
+    //LOG_I("Success: %d", success);
+
+	SSL* ssl = wsClient.getSsl();
+	if (ssl) {
+		const char *common_name = ssl_get_cert_dn(ssl,SSL_X509_CERT_COMMON_NAME);
+		if (common_name) {
+			LOG_I("Common Name:\t%s\n", common_name);
+		}
+		displayCipher(ssl);
+		displaySessionId(ssl);
+	}
+    /******/
 
     message.getBytes((unsigned char*)g_devScrapBuffer, sizeof(g_devScrapBuffer));
 
@@ -228,6 +297,7 @@ void wsCliStart()
     wsClient.setOnReceiveCallback(wsMessageReceived);
     wsClient.setOnDisconnectedCallback(wsDisconnected);
     wsClient.setOnConnectedCallback(wsConnected);
+    wsClient.addSslOptions(SSL_SERVER_VERIFY_LATER);
     wsClient.connect(ws_Url);
 
 	gTmrKeepAlive.initializeUs(TMR_PING, wsCliPing).start();
