@@ -1,0 +1,2052 @@
+MEM: Alo SRCH: [160]=1 [256]=2248 - xist 256(+9)=> 3fff79bc
+
+libDHT: Detected DHT-22 compatible sensor.
+
+DEV 4 is DIS
+
+MEM: Alo SRCH: [160]=1 [265]=2239 - xist 265(+6)=> 3fff7a04
+
+MEM: Alo SRCH: [160]=1 [271]=2233 - xist 271(+5)=> 3fff7a34
+
+REGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+
+(00): 08 06 20 20 00 00 03 01 00 7f 06 00 00 00 00 00
+
+(10): 00 00 20 00 03 00 01 00 00 01 14 00 02 3c 02 03
+
+(20): 68 01 3a 93 04 ee 00 1e 00 00 ff 00 18 bc 26 08
+
+(30): ad 00 0c 22 08 3a 2d d4 00 00 de ad 00 00 00 de
+
+(40): ad 00 00 ff ff ff ff 00 00 00 00 ff 08 08 08 10
+
+(50): 00 00 df 52 20 64 00 01 87 00 01 00 0e 00 00 00
+
+(60): a0 00 24 00 00 82 42 1f 03 60 9d 00 01 1f 09 d5
+
+(70): 0c 23 1f 00 00 53 00 00 19 00 64 03 37 04 37 40
+
+MEM: Alo SRCH: [160]=1 [276]=2228 - xist 276(+21)=> 3fff7a5c
+
+Loading dev DEV_0, 159 bytes
+Type: TH
+MEM: Alo SRCH: [160]=1 [297]=2207 - xist 297(+128)=> 3fff7b04
+
+MEM: Alo SRCH: [160]=1 [425]=2079 - xist 425(+6)=> 3fff7f04
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [160]=1 [431]=2073 - xist 431(+2)=> 3fff7f34
+
+MEM: Alo SRCH: [160]=1 [433]=2071 - xist 433(+6)=> 3fff7f44
+
+MEM: Alo SRCH: [160]=1 [439]=2065 - xist 439(+6)=> 3fff7f74
+
+MEM: Alo SRCH: [160]=1 [445]=2059 - xist 445(+6)=> 3fff7fa4
+
+MEM: Alo SRCH: [160]=1 [451]=2053 - xist 451(+6)=> 3fff7fd4
+
+MEM: Alo SRCH: [160]=1 [457]=2047 - xist 457(+6)=> 3fff8004
+
+MEM: Alo SRCH: [160]=1 [463]=2041 - xist 463(+6)=> 3fff8034
+
+MEM: Alo SRCH: [160]=1 [469]=2035 - xist 469(+6)=> 3fff8064
+
+TH device: 0;Dormitor;21.5;15.0;27.0;0;1;1;1;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;0;0;0;0;0;0;0;19.2;62.0;19.1;0.0;62.1;0.0;
+TH device ID:0 NAME: Dormitor
+realloc same sz 2 =>nop
+
+Add watcher ID:1
+MEM: Alo SRCH: [160]=1 [475]=2029 - xist 475(+2)=> 3fff8094
+
+MEM: Alo SRCH: [160]=1 [477]=2027 - xist 477(+3)=> 3fff80a4
+
+MEM: Alo SRCH: [160]=1 [480]=2024 - xist 480(+3)=> 3fff80bc
+
+MEM: Alo SRCH: [160]=1 [483]=2021 - xist 483(+3)=> 3fff80d4
+
+MEM: Alo SRCH: [160]=1 [486]=2018 - xist 486(+3)=> 3fff80ec
+
+MEM: Alo SRCH: [160]=1 [489]=2015 - xist 489(+3)=> 3fff8104
+
+MEM: Alo SRCH: [160]=1 [492]=2012 - xist 492(+3)=> 3fff811c
+
+MEM: Free 276 3fff7a5c- Add head free list
+
+MEM: Alo SRCH: [276]=21 [160]=1 [495]=2009 - XACT 160(+1)=> 3fff76bc
+
+Added device.
+MEM: Alo SRCH: [276]=21 [495]=2009 - xist 276(+7)=> 3fff7a5c
+
+Loading dev DEV_1, 44 bytes
+Type:HEATER
+MEM: Alo SRCH: [283]=14 [495]=2009 - xist 495(+18)=> 3fff8134
+
+MEM: Alo SRCH: [283]=14 [513]=1991 - xist 283(+6)=> 3fff7a94
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [289]=8 [513]=1991 - xist 289(+2)=> 3fff7ac4
+
+realloc same sz 2 =>nop
+
+HEATER device ID:1 NAME: Centrala
+Add watcher ID:0
+MEM: Alo SRCH: [291]=6 [513]=1991 - xist 291(+2)=> 3fff7ad4
+
+MEM: Alo SRCH: [293]=4 [513]=1991 - xist 293(+3)=> 3fff7ae4
+
+MEM: Free 276 3fff7a5c- Add head free list
+
+MEM: Alo SRCH: [276]=7 [296]=1 [513]=1991 - XACT 296(+1)=> 3fff7afc
+
+Added device.
+MEM: Alo SRCH: [276]=7 [513]=1991 - xist 276(+1)=> 3fff7a5c
+
+Reset:
+REASON_DEFAULT_RST
+
+Chip id=10502778
+
+
+Flash id=1261768
+
+
+Mem info:
+
+
+MEM: Alo SRCH: [277]=6 [513]=1991 - xist 277(+5)=> 3fff7a64
+
+data  : 0x3ffe8000 ~ 0x3ffe843a, len: 1082
+
+MEM: Free 277 3fff7a64- Add head free list
+
+MEM: Alo SRCH: [277]=6 [513]=1991 - xist 277(+5)=> 3fff7a64
+
+rodata: 0x3ffe8440 ~ 0x3ffef0a4, len: 27748
+
+MEM: Free 277 3fff7a64- Add head free list
+
+MEM: Alo SRCH: [277]=6 [513]=1991 - xist 277(+5)=> 3fff7a64
+
+bss   : 0x3ffef0a8 ~ 0x3fff71b8, len: 33040
+
+MEM: Free 277 3fff7a64- Add head free list
+
+MEM: Alo SRCH: [277]=6 [513]=1991 - xist 277(+5)=> 3fff7a64
+
+heap  : 0x3fff71b8 ~ 0x3fffc000, len: 20040
+
+MEM: Free 277 3fff7a64- Add head free list
+
+
+hlog_param:{"heap_start":0x3fff71b8, "heap_end":0x3fffc000}
+realloc NULL => malloc
+
+MEM: Alo SRCH: [277]=6 [513]=1991 - xist 277(+3)=> 3fff7a64
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [280]=3 [513]=1991 - XACT 280(+3)=> 3fff7a7c
+
+MEM: Alo SRCH: [513]=1991 - xist 513(+145)=> 3fff81c4
+
+MEM: Free 513 3fff81c4- Add head free list
+
+Station configuration was updated to: TP-LINK_B4EB92
+
+MEM: Free 280 3fff7a7c- Add head free list
+
+MEM: Free 277 3fff7a64- Add head free list
+
+MEM: Alo SRCH: [277]=6 [513]=1991 - xist 277(+2)=> 3fff7a64
+
+MEM: Alo SRCH: [279]=4 [513]=1991 - xist 279(+2)=> 3fff7a74
+
+MEM: Alo SRCH: [281]=2 [513]=1991 - xist 513(+7)=> 3fff81c4
+
+MEM: Alo SRCH: [281]=2 [520]=1984 - XACT 281(+2)=> 3fff7a84
+
+mode : MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Alo SRCH: [281]=2 [520]=1984 - XACT 281(+2)=> 3fff7a84
+
+
+
+hl{m,36,0,3fff71c4}
+
+hl{m,16,0,3fff71ec}
+
+hl{m,16,0,3fff7204}
+
+hl{m,16,0,3fff721c}
+
+hl{m,16,0,3fff7234}
+
+hl{m,16,0,3fff724c}
+
+hl{m,16,0,3fff7264}
+
+hl{m,32,0,3fff727c}
+
+hl{z,756,0,3fff72a4}
+
+hl{z,212,0,3fff759c}
+
+hl{f,3fff759c,0}
+
+hl{f,3fff72a4,0}
+
+hl{m,49,0,3fff72a4}
+
+hl{f,3fff72a4,0}
+
+hl{m,29,0,3fff72a4}
+
+hl{f,3fff72a4,0}
+
+hl{z,28,0,3fff72a4}
+
+hl{f,3fff72a4,0}
+
+hl{m,172,0,3fff733c}
+
+hl{m,172,0,3fff74c4}
+
+hl{m,33,0,3fff7a64}
+
+hl{f,3fff7a64,0}
+
+hl{m,33,0,3fff7a64}
+
+hl{f,3fff7a64,0}
+
+hl{m,33,0,3fff7a64}
+
+hl{f,3fff7a64,0}
+
+hl{m,33,0,3fff7a64}
+
+hl{f,3fff7a64,0}
+
+hl{m,1156,0,3fff81c4}
+
+hl{f,3fff81c4,0}
+
+hl{m,9,0,3fff7a84}
+
+hl{f,3fff7a84,0}
+
+staMEM: Free 281 3fff7a84- Add head free list
+
+MEM: Alo SRCH: [281]=2 [520]=1984 - xist 520(+5)=> 3fff81fc
+
+(18:fe:34:a0:42:7a)MEM: Free 520 3fff81fc- Add head free list
+
+MEM: Alo SRCH: [520]=1984 [281]=2 - xist 520(+85)=> 3fff81fc
+
+MEM: Alo SRCH: [605]=1899 [281]=2 - xist 605(+35)=> 3fff84a4
+
+MEM: Alo SRCH: [640]=1864 [281]=2 - XACT 281(+2)=> 3fff7a84
+
+
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Alo SRCH: [281]=2 [640]=1864 - xist 640(+9)=> 3fff85bc
+
+MEM: Free 24 3fff727c- Add head free list
+
+MEM: Alo SRCH: [24]=5 [281]=2 [649]=1855 - XACT 24(+5)=> 3fff727c
+
+MEM: Alo SRCH: [281]=2 [649]=1855 - xist 649(+11)=> 3fff8604
+
+MEM: Alo SRCH: [281]=2 [660]=1844 - xist 660(+3)=> 3fff865c
+
+MEM: Alo SRCH: [281]=2 [663]=1841 - xist 663(+3)=> 3fff8674
+
+add if0
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Alo SRCH: [663]=1841 [281]=2 - XACT 281(+2)=> 3fff7a84
+
+f r0, MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Alo SRCH: [281]=2 [663]=1841 - xist 663(+6)=> 3fff8674
+
+MEM: Alo SRCH: [281]=2 [669]=1835 - XACT 281(+2)=> 3fff7a84
+
+MEM: Alo SRCH: [669]=1835 - xist 669(+4)=> 3fff86a4
+
+MEM: Alo SRCH: [673]=1831 - xist 673(+10)=> 3fff86c4
+
+MEM: Free 158 3fff76ac- Add head free list
+
+MEM: Free 159 3fff76b4- Assim down next block
+
+MEM: Free 276 3fff7a5c- Add head free list
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Free 669 3fff86a4- Add head free list
+
+MEM: Free 673 3fff86c4- Assim down next block
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 21 3fff7264- Add head free list
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [21]=3 [663]=1841 [281]=2 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [21]=3 [663]=1841 [281]=2 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+
+
+hl{m,5,0,3fff7a84}
+
+hl{f,3fff7a84,0}
+
+hl{m,33,0,3fff81fc}
+
+hl{f,3fff81fc,0}
+
+hl{z,672,0,3fff81fc}
+
+hl{z,272,0,3fff84a4}
+
+hl{m,5,0,3fff7a84}
+
+hl{f,3fff7a84,0}
+
+hl{m,68,0,3fff85bc}
+
+hl{f,3fff727c,0}
+
+hl{m,32,0,3fff727c}
+ [15]=3 [21]=3 [663]=1841 [281]=2 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [21]=3 [663]=1841 [281]=2 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff724c,0}
+
+hl{m,16,0,3fff724c}
+
+hl{f,3fff721c,0}
+
+hl{m,16,0,3fff721c}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff721c,0}
+
+hl{m,16,0,3fff721c}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [21]=3 [663]=1841 [281]=2 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Alo SRCH: [21]=3 [663]=1841 [281]=2 [276]=1 [158]=2 - xist 663(+6)=> 3fff8674
+
+MEM: Alo SRCH: [21]=3 [669]=1835 [281]=2 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+MEM: Alo SRCH: [21]=3 [669]=1835 [276]=1 [158]=2 - xist 669(+4)=> 3fff86a4
+
+MEM: Alo SRCH: [21]=3 [673]=1831 [276]=1 [158]=2 - xist 673(+10)=> 3fff86c4
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Free 669 3fff86a4- Add head free list
+
+MEM: Free 673 3fff86c4- Assim down next block
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 18 3fff724c- Add head free list
+
+MEM: Alo SRCH: [18]=6 [663]=1841 [281]=2 [276]=1 [158]=2 - xist 18(+3)=> 3fff724c
+
+MEM: Free 12 3fff721c- Add head free list
+
+MEM: Alo SRCH: [12]=3 [21]=3 [663]=1841 [281]=2 [276]=1 [158]=2 - XACT 12(+3)=> 3fff721c
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [21]=3 [663]=1841 [281]=2 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Alo SRCH: [21]=3 [663]=1841 [281]=2 [276]=1 [158]=2 - xist 663(+6)=> 3fff8674
+
+MEM: Alo SRCH: [21]=3 [669]=1835 [281]=2 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+MEM: Alo SRCH: [21]=3 [669]=1835 [276]=1 [158]=2 - xist 669(+4)=> 3fff86a4
+
+MEM: Alo SRCH: [21]=3 [673]=1831 [276]=1 [158]=2 - xist 673(+10)=> 3fff86c4
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Free 669 3fff86a4- Add head free list
+
+MEM: Free 673 3fff86c4- Assim down next block
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Alo SRCH: [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - xist 663(+6)=> 3fff8674
+
+MEM: Alo SRCH: [669]=1835 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+MEM: Alo SRCH: [669]=1835 [21]=3 [276]=1 [158]=2 - xist 669(+4)=> 3fff86a4
+
+MEM: Alo SRCH: [673]=1831 [21]=3 [276]=1 [158]=2 - xist 673(+10)=> 3fff86c4
+
+
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{m,44,0,3fff8674}
+
+hl{m,12,0,3fff7a84}
+
+hl{z,28,0,3fff86a4}
+
+hl{m,76,0,3fff86c4}
+
+hl{f,3fff7a84,0}
+
+hl{f,3fff86a4,0}
+
+hl{f,3fff86c4,0}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff724c,0}
+
+hl{m,16,0,3fff724c}
+
+hl{f,3fff721c,0}
+
+hl{m,16,0,3fff721c}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{m,44,0,3fff8674}
+
+hl{m,12,0,3fff7a84}
+
+hl{z,28,0,3fff86a4}
+
+hl{m,76,0,3fff86c4}
+
+hl{f,3fff7a84,0}
+
+hl{f,3fff86a4,0}
+
+hl{f,3fff86c4,0}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{m,44,0,3fff8674}
+
+hl{m,12,0,3fff7a84}
+
+hl{z,28,0,3fff86a4}
+
+hl{m,76,0,3fff86c4}
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Free 669 3fff86a4- Add head free list
+
+MEM: Free 673 3fff86c4- Assim down next block
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Alo SRCH: [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - xist 663(+6)=> 3fff8674
+
+MEM: Alo SRCH: [669]=1835 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+MEM: Alo SRCH: [669]=1835 [21]=3 [276]=1 [158]=2 - xist 669(+4)=> 3fff86a4
+
+MEM: Alo SRCH: [673]=1831 [21]=3 [276]=1 [158]=2 - xist 673(+10)=> 3fff86c4
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Free 669 3fff86a4- Add head free list
+
+MEM: Free 673 3fff86c4- Assim down next block
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Alo SRCH: [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - xist 663(+6)=> 3fff8674
+
+MEM: Alo SRCH: [669]=1835 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+MEM: Alo SRCH: [669]=1835 [21]=3 [276]=1 [158]=2 - xist 669(+4)=> 3fff86a4
+
+MEM: Alo SRCH: [673]=1831 [21]=3 [276]=1 [158]=2 - xist 673(+10)=> 3fff86c4
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Free 669 3fff86a4- Add head free list
+
+MEM: Free 673 3fff86c4- Assim down next block
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 12 3fff721c- Add head free list
+
+MEM: Alo SRCH: [12]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 12(+3)=> 3fff721c
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Alo SRCH: [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - xist 663(+6)=> 3fff8674
+
+MEM: Alo SRCH: [669]=1835 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+MEM: Alo SRCH: [669]=1835 [21]=3 [276]=1 [158]=2 - xist 669(+4)=> 3fff86a4
+
+
+
+hl{f,3fff7a84,0}
+
+hl{f,3fff86a4,0}
+
+hl{f,3fff86c4,0}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{m,44,0,3fff8674}
+
+hl{m,12,0,3fff7a84}
+
+hl{z,28,0,3fff86a4}
+
+hl{m,76,0,3fff86c4}
+
+hl{f,3fff7a84,0}
+
+hl{f,3fff86a4,0}
+
+hl{f,3fff86c4,0}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{m,44,0,3fff8674}
+
+hl{m,12,0,3fff7a84}
+
+hl{z,28,0,3fff86a4}
+
+hl{m,76,0,3fff86c4}
+
+hl{f,3fff7a84,0}
+
+hl{f,3fff86a4,0}
+
+hl{f,3fff86c4,0}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff721c,0}
+
+hl{m,16,0,3fff721c}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{m,44,0,3fff8674}
+
+hl{m,12,0,3fff7a84}
+
+MEM: Alo SRCH: [673]=1831 [21]=3 [276]=1 [158]=2 - xist 673(+10)=> 3fff86c4
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Free 669 3fff86a4- Add head free list
+
+MEM: Free 673 3fff86c4- Assim down next block
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Alo SRCH: [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - xist 663(+6)=> 3fff8674
+
+MEM: Alo SRCH: [669]=1835 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+MEM: Alo SRCH: [669]=1835 [21]=3 [276]=1 [158]=2 - xist 669(+4)=> 3fff86a4
+
+MEM: Alo SRCH: [673]=1831 [21]=3 [276]=1 [158]=2 - xist 673(+10)=> 3fff86c4
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Free 669 3fff86a4- Add head free list
+
+MEM: Free 673 3fff86c4- Assim down next block
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Alo SRCH: [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - xist 663(+6)=> 3fff8674
+
+MEM: Alo SRCH: [669]=1835 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+MEM: Alo SRCH: [669]=1835 [21]=3 [276]=1 [158]=2 - xist 669(+4)=> 3fff86a4
+
+MEM: Alo SRCH: [673]=1831 [21]=3 [276]=1 [158]=2 - xist 673(+10)=> 3fff86c4
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Free 669 3fff86a4- Add head free list
+
+MEM: Free 673 3fff86c4- Assim down next block
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 18 3fff724c- Add head free list
+
+MEM: Alo SRCH: [18]=6 [663]=1841 [281]=2 [276]=1 [158]=2 - xist 18(+3)=> 3fff724c
+
+MEM: Free 12 3fff721c- Add head free list
+
+MEM: Alo SRCH: [12]=3 [21]=3 [663]=1841 [281]=2 [276]=1 [158]=2 - XACT 12(+3)=> 3fff721c
+
+
+
+hl{z,28,0,3fff86a4}
+
+hl{m,76,0,3fff86c4}
+
+hl{f,3fff7a84,0}
+
+hl{f,3fff86a4,0}
+
+hl{f,3fff86c4,0}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{m,44,0,3fff8674}
+
+hl{m,12,0,3fff7a84}
+
+hl{z,28,0,3fff86a4}
+
+hl{m,76,0,3fff86c4}
+
+hl{f,3fff7a84,0}
+
+hl{f,3fff86a4,0}
+
+hl{f,3fff86c4,0}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{m,44,0,3fff8674}
+
+hl{m,12,0,3fff7a84}
+
+hl{z,28,0,3fff86a4}
+
+hl{m,76,0,3fff86c4}
+
+hl{f,3fff7a84,0}
+
+hl{f,3fff86a4,0}
+
+hl{f,3fff86c4,0}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff724c,0}
+
+hl{m,16,0,3fff724c}
+
+hl{f,3fff721c,0}
+
+hl{m,16,0,3fff721c}
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [21]=3 [663]=1841 [281]=2 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Alo SRCH: [21]=3 [663]=1841 [281]=2 [276]=1 [158]=2 - xist 663(+6)=> 3fff8674
+
+MEM: Alo SRCH: [21]=3 [669]=1835 [281]=2 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+MEM: Alo SRCH: [21]=3 [669]=1835 [276]=1 [158]=2 - xist 669(+4)=> 3fff86a4
+
+MEM: Alo SRCH: [21]=3 [673]=1831 [276]=1 [158]=2 - xist 673(+10)=> 3fff86c4
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Free 669 3fff86a4- Add head free list
+
+MEM: Free 673 3fff86c4- Assim down next block
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Alo SRCH: [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - xist 663(+6)=> 3fff8674
+
+MEM: Alo SRCH: [669]=1835 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+MEM: Alo SRCH: [669]=1835 [21]=3 [276]=1 [158]=2 - xist 669(+4)=> 3fff86a4
+
+MEM: Alo SRCH: [673]=1831 [21]=3 [276]=1 [158]=2 - xist 673(+10)=> 3fff86c4
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Free 669 3fff86a4- Add head free list
+
+MEM: Free 673 3fff86c4- Assim down next block
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Alo SRCH: [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - xist 663(+6)=> 3fff8674
+
+MEM: Alo SRCH: [669]=1835 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+MEM: Alo SRCH: [669]=1835 [21]=3 [276]=1 [158]=2 - xist 669(+4)=> 3fff86a4
+
+MEM: Alo SRCH: [673]=1831 [21]=3 [276]=1 [158]=2 - xist 673(+10)=> 3fff86c4
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Free 669 3fff86a4- Add head free list
+
+MEM: Free 673 3fff86c4- Assim down next block
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{m,44,0,3fff8674}
+
+hl{m,12,0,3fff7a84}
+
+hl{z,28,0,3fff86a4}
+
+hl{m,76,0,3fff86c4}
+
+hl{f,3fff7a84,0}
+
+hl{f,3fff86a4,0}
+
+hl{f,3fff86c4,0}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{m,44,0,3fff8674}
+
+hl{m,12,0,3fff7a84}
+
+hl{z,28,0,3fff86a4}
+
+hl{m,76,0,3fff86c4}
+
+hl{f,3fff7a84,0}
+
+hl{f,3fff86a4,0}
+
+hl{f,3fff86c4,0}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{m,44,0,3fff8674}
+
+hl{m,12,0,3fff7a84}
+
+hl{z,28,0,3fff86a4}
+
+hl{m,76,0,3fff86c4}
+
+hl{f,3fff7a84,0}
+
+hl{f,3fff86a4,0}
+
+hl{f,3fff86c4,0}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Alo SRCH: [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - xist 663(+6)=> 3fff8674
+
+MEM: Alo SRCH: [669]=1835 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+MEM: Alo SRCH: [669]=1835 [21]=3 [276]=1 [158]=2 - xist 669(+4)=> 3fff86a4
+
+MEM: Alo SRCH: [673]=1831 [21]=3 [276]=1 [158]=2 - xist 673(+10)=> 3fff86c4
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Free 669 3fff86a4- Add head free list
+
+MEM: Free 673 3fff86c4- Assim down next block
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 12 3fff721c- Add head free list
+
+MEM: Alo SRCH: [12]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 12(+3)=> 3fff721c
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Alo SRCH: [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - xist 663(+6)=> 3fff8674
+
+MEM: Alo SRCH: [669]=1835 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+MEM: Alo SRCH: [669]=1835 [21]=3 [276]=1 [158]=2 - xist 669(+4)=> 3fff86a4
+
+MEM: Alo SRCH: [673]=1831 [21]=3 [276]=1 [158]=2 - xist 673(+10)=> 3fff86c4
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Free 669 3fff86a4- Add head free list
+
+MEM: Free 673 3fff86c4- Assim down next block
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Alo SRCH: [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 21(+3)=> 3fff7264
+
+scandone
+
+MEM: Free 21 3fff7264- Add head free list
+
+MEM: Alo SRCH: [21]=3 [663]=1841 [281]=2 [276]=1 [158]=2 - xist 663(+4)=> 3fff8674
+
+state: 0 -> 2 (b0)
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Alo SRCH: [663]=1841 [21]=3 [281]=2 [276]=1 [158]=2 - xist 663(+4)=> 3fff8674
+
+state: 2 -> 3 (0)
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Alo SRCH: [663]=1841 [21]=3 [281]=2 [276]=1 [158]=2 - xist 663(+6)=> 3fff8674
+
+
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{m,44,0,3fff8674}
+
+hl{m,12,0,3fff7a84}
+
+hl{z,28,0,3fff86a4}
+
+hl{m,76,0,3fff86c4}
+
+hl{f,3fff7a84,0}
+
+hl{f,3fff86a4,0}
+
+hl{f,3fff86c4,0}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff721c,0}
+
+hl{m,16,0,3fff721c}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{m,44,0,3fff8674}
+
+hl{m,12,0,3fff7a84}
+
+hl{z,28,0,3fff86a4}
+
+hl{m,76,0,3fff86c4}
+
+hl{f,3fff7a84,0}
+
+hl{f,3fff86a4,0}
+
+hl{f,3fff86c4,0}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+h_l{m,13,0,3fff7264}
+
+hl{f,3fff7264,0}
+
+hl{m,25,0,3fff8674}
+
+hl{f,3fff8674,0}
+
+hl{m,25,0,3fff8674}
+
+hl{f,3fff8674,0}
+
+MEM: Alo SRCH: [669]=1835 [21]=3 [281]=2 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+MEM: Alo SRCH: [669]=1835 [21]=3 [276]=1 [158]=2 - xist 669(+4)=> 3fff86a4
+
+MEM: Alo SRCH: [673]=1831 [21]=3 [276]=1 [158]=2 - xist 673(+27)=> 3fff86c4
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Free 669 3fff86a4- Add head free list
+
+MEM: Free 673 3fff86c4- Assim down next block
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Alo SRCH: [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - xist 663(+4)=> 3fff8674
+
+state: 3 -> 5 (10)
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Alo SRCH: [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+add 0
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Alo SRCH: [281]=2 [663]=1841 [21]=3 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+aid 3
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Alo SRCH: [281]=2 [663]=1841 [21]=3 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+cnt
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Alo SRCH: [281]=2 [663]=1841 [21]=3 [276]=1 [158]=2 - xist 663(+40)=> 3fff8674
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Alo SRCH: [663]=1841 [281]=2 [21]=3 [276]=1 [158]=2 - xist 663(+40)=> 3fff8674
+
+MEM: Alo SRCH: [703]=1801 [281]=2 [21]=3 [276]=1 [158]=2 - xist 703(+21)=> 3fff87b4
+
+MEM: Alo SRCH: [724]=1780 [281]=2 [21]=3 [276]=1 [158]=2 - xist 724(+21)=> 3fff885c
+
+MEM: Alo SRCH: [745]=1759 [281]=2 [21]=3 [276]=1 [158]=2 - xist 745(+5)=> 3fff8904
+
+
+
+connected with TP-LINK_B4EB92, channel 6
+
+MEM: Free 745 3fff8904- Add head free list
+
+MEM: Alo SRCH: [745]=1759 [281]=2 [21]=3 [276]=1 [158]=2 - xist 745(+4)=> 3fff8904
+
+dhcp client start...
+
+MEM: Free 745 3fff8904- Add head free list
+
+MEM: Alo SRCH: [745]=1759 [281]=2 [21]=3 [276]=1 [158]=2 - xist 745(+8)=> 3fff8904
+
+MEM: Alo SRCH: [753]=1751 [281]=2 [21]=3 [276]=1 [158]=2 - xist 753(+5)=> 3fff8944
+
+MEM: Alo SRCH: [758]=1746 [281]=2 [21]=3 [276]=1 [158]=2 - xist 758(+53)=> 3fff896c
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 758 3fff896c- Add head free list
+
+MEM: Alo SRCH: [758]=1746 [663]=40 [281]=2 [21]=3 [276]=1 [158]=2 - XACT 21(+3)=> 3fff7264
+
+MEM: Alo SRCH: [758]=1746 [663]=40 [281]=2 [276]=1 [158]=2 - xist 758(+53)=> 3fff896c
+
+
+
+hl{m,44,0,3fff8674}
+
+hl{m,12,0,3fff7a84}
+
+hl{z,28,0,3fff86a4}
+
+hl{m,208,0,3fff86c4}
+
+hl{f,3fff7a84,0}
+
+hl{f,3fff86a4,0}
+
+hl{f,3fff86c4,0}
+
+hl{f,3fff8674,0}
+
+hl{m,25,0,3fff8674}
+
+hl{f,3fff8674,0}
+
+hl{m,9,0,3fff7a84}
+
+hl{f,3fff7a84,0}
+
+hl{m,9,0,3fff7a84}
+
+hl{f,3fff7a84,0}
+
+hl{m,9,0,3fff7a84}
+
+hl{f,3fff7a84,0}
+
+hl{m,312,0,3fff8674}
+
+hl{f,3fff8674,0}
+
+hl{m,312,0,3fff8674}
+
+hl{m,160,0,3fff87b4}
+
+hl{m,160,0,3fff885c}
+
+hl{m,33,0,3fff8904}
+
+hl{f,3fff8904,0}
+
+hl{m,25,0,3fff8904}
+
+hl{f,3fff8904,0}
+
+hl{m,60,0,3fff8904}
+
+hl{m,36,0,3fff8944}
+
+hl{m,420,0,3fff896c}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff896c,0}
+
+hl{m,20,0,3fff7264}
+
+hl{m,420,0,3fff896c}
+
+MEM: Free 21 3fff7264- Add head free list
+
+MEM: Free 758 3fff896c- Add head free list
+
+MEM: Alo SRCH: [758]=1746 [21]=3 [663]=40 [281]=2 [276]=1 [158]=2 - XACT 21(+3)=> 3fff7264
+
+MEM: Alo SRCH: [758]=1746 [663]=40 [281]=2 [276]=1 [158]=2 - xist 663(+13)=> 3fff8674
+
+MEM: Free 21 3fff7264- Add head free list
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=40 [21]=3 [758]=1746 [281]=2 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=40 [21]=3 [758]=1746 [281]=2 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 6 3fff71ec- Add head free list
+
+MEM: Alo SRCH: [6]=3 [663]=40 [21]=3 [758]=1746 [281]=2 [276]=1 [158]=2 - XACT 6(+3)=> 3fff71ec
+
+MEM: Free 18 3fff724c- Add head free list
+
+MEM: Alo SRCH: [18]=6 [663]=40 [758]=1746 [281]=2 [276]=1 [158]=2 - xist 18(+3)=> 3fff724c
+
+MEM: Free 12 3fff721c- Add head free list
+
+MEM: Alo SRCH: [12]=3 [21]=3 [663]=40 [758]=1746 [281]=2 [276]=1 [158]=2 - xist 663(+13)=> 3fff8674
+
+MEM: Alo SRCH: [12]=3 [21]=3 [676]=27 [758]=1746 [281]=2 [276]=1 [158]=2 - XACT 12(+3)=> 3fff721c
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [21]=3 [676]=27 [758]=1746 [281]=2 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 663 3fff8674- Add head free list
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=40 [21]=3 [758]=1746 [281]=2 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=40 [21]=3 [758]=1746 [281]=2 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [663]=40 [21]=3 [758]=1746 [281]=2 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+rtc time init...
+
+ 0: 0:23 Dormitor H:52.40(0.0) T:21.20(0.0 0.0)/25.5 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+RX timeout
+
+HEATER(1) TX FAIL:1
+RX timeout
+
+HEATER(1) TX FAIL:2
+RX timeout
+
+HEATER(1) TX FAIL:3
+RX timeout
+
+HEATER(1) TX FAIL:4
+RX timeout
+
+HEATER(1) TX FAIL:5
+TH(0) BROADCAST to 0 clients
+
+MEM: Alo SRCH: [663]=40 [21]=3 [758]=1746 [281]=2 [276]=1 [158]=2 - XACT 21(+3)=> 3fff7264
+
+MEM: Free 492 3fff811c- Add head free list
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [492]=3 [663]=40 [758]=1746 [281]=2 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 12 3fff721c- Add head free list
+
+MEM: Alo SRCH: [12]=3 [492]=3 [663]=40 [758]=1746 [281]=2 [276]=1 [158]=2 - xist 663(+13)=> 3fff8674
+
+MEM: Alo SRCH: [12]=3 [492]=3 [676]=27 [758]=1746 [281]=2 [276]=1 [158]=2 - xist 676(+7)=> 3fff86dc
+
+ip:192.168.0.102,mask:255.255.255.0,gw:192.168.0.1MEM: Free 676 3fff86dc- Add head free list
+
+MEM: Alo SRCH: [676]=27 [12]=3 [492]=3 [758]=1746 [281]=2 [276]=1 [158]=2 - XACT 281(+2)=> 3fff7a84
+
+
+
+hl{f,3fff7264,0}
+
+hl{f,3fff896c,0}
+
+hl{m,20,0,3fff7264}
+
+hl{m,100,0,3fff8674}
+
+hl{f,3fff7264,0}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff71ec,0}
+
+hl{m,16,0,3fff71ec}
+
+hl{f,3fff724c,0}
+
+hl{m,16,0,3fff724c}
+
+hl{f,3fff721c,0}
+
+hl{m,100,0,3fff8674}
+
+hl{m,16,0,3fff721c}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff8674,0}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff721c,0}
+
+hl{m,100,0,3fff8674}
+
+hl{m,49,0,3fff86dc}
+
+hl{f,3fff86dc,0}
+
+
+
+MEM: Free 281 3fff7a84- Add head free list
+
+MEM: Alo SRCH: [281]=2 [676]=27 [12]=3 [492]=3 [758]=1746 [276]=1 [158]=2 - XACT 12(+3)=> 3fff721c
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [281]=2 [676]=27 [492]=3 [758]=1746 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [281]=2 [676]=27 [492]=3 [758]=1746 [276]=1 [158]=2 - xist 676(+16)=> 3fff86dc
+
+MEM: Alo SRCH: [15]=3 [281]=2 [692]=11 [492]=3 [758]=1746 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [281]=2 [692]=11 [492]=3 [758]=1746 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [281]=2 [692]=11 [492]=3 [758]=1746 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [281]=2 [692]=11 [492]=3 [758]=1746 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 18 3fff724c- Add head free list
+
+MEM: Alo SRCH: [18]=3 [281]=2 [692]=11 [492]=3 [758]=1746 [276]=1 [158]=2 - XACT 18(+3)=> 3fff724c
+
+MEM: Free 12 3fff721c- Add head free list
+
+MEM: Alo SRCH: [12]=3 [281]=2 [692]=11 [492]=3 [758]=1746 [276]=1 [158]=2 - XACT 12(+3)=> 3fff721c
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [281]=2 [692]=11 [492]=3 [758]=1746 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [281]=2 [692]=11 [492]=3 [758]=1746 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [281]=2 [692]=11 [492]=3 [758]=1746 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [281]=2 [692]=11 [492]=3 [758]=1746 [276]=1 [158]=2 - XACT 15(+3)=> 3fff7234
+
+MEM: Free 279 3fff7a74- Add head free list
+
+MEM: Free 513 3fff81c4- Add head free list
+
+AP CONNECT
+MEM: Alo SRCH: [513]=7 [279]=4 [692]=11 [492]=3 [758]=1746 [276]=1 [158]=2 - xist 513(+5)=> 3fff81c4
+
+MEM: Free 97 3fff74c4- Add head free list
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [97]=22 [518]=2 [279]=4 [692]=11 [492]=3 [758]=1746 [276]=1 [158]=2 - XACT 276(+1)=> 3fff7a5c
+
+MEM: Alo SRCH: [97]=22 [518]=2 [279]=4 [692]=11 [492]=3 [758]=1746 [158]=2 - XACT 518(+2)=> 3fff81ec
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [97]=22 [279]=4 [692]=11 [492]=3 [758]=1746 [158]=2 - xist 158(+1)=> 3fff76ac
+
+MEM: Free 158 3fff76ac- Add head free list
+
+'/' registered
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [158]=2 [97]=22 [279]=4 [692]=11 [492]=3 [758]=1746 - xist 158(+1)=> 3fff76ac
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [159]=1 [97]=22 [279]=4 [692]=11 [492]=3 [758]=1746 - XACT 159(+1)=> 3fff76b4
+
+MEM: Free 159 3fff76b4- Add head free list
+
+MEM: Alo SRCH: [159]=1 [97]=22 [279]=4 [692]=11 [492]=3 [758]=1746 - XACT 159(+1)=> 3fff76b4
+
+MEM: Alo SRCH: [97]=22 [279]=4 [692]=11 [492]=3 [758]=1746 - xist 492(+1)=> 3fff811c
+
+MEM: Alo SRCH: [97]=22896]=1608 - XACT 276(+1)=> 3fff7a5c
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [787]=49 [861]=5 [158]=1 [702]=1 [896]=1608 - XACT 158(+1)=> 3fff76ac
+
+realloc same sz 1 =>nop
+
+MEM: Free 158 3fff76ac- Add head free list
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [158]=1 [787]=49 [861]=5 [702]=1 [896]=1608 - XACT 158(+1)=> 3fff76ac
+
+realloc same sz 1 =>nop
+
+MEM: Free 109 3fff7524- Add head free list
+
+MEM: free NULL -> nop
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [109]=1 [787]=49 [861]=5 [702]=1 [896]=1608 - XACT 109(+1)=> 3fff7524
+
+realloc 1 -> 3, new, copy, free
+
+MEM: Alo SRCH: [787]=49 [861]=5 [702]=1 [896]=1608 - xist 861(+3)=> 3fff8ca4
+
+MEM: Free 109 3fff7524- Add head free list
+
+MEM: Free 118 3fff756c- Add head free list
+
+MEM: free NULL -> nop
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [118]=1 [109]=1 [787]=49 [864]=2 [702]=1 [896]=1608 - XACT 118(+1)=> 3fff756c
+
+realloc same sz 1 =>nop
+
+MEM: Free 694 3fff876c- Add head free list
+
+MEM: free NULL -> nop
+
+MEM: Free 86 3fff746c- Add head free list
+
+MEM: Free 87 3fff7474- Assim down next block
+
+MEM: Free 88 3fff747c- Assim down next block
+
+MEM: Free 89 3fff7484- Assim down next block
+
+MEM: free NULL -> nop
+
+MEM: free NULL -> nop
+
+MEM: free NULL -> nop
+
+MEM: free NULL -> nop
+
+MEM: Free 857 3fff8c84- Add head free list
+
+realloc() assim down sz 4 - fits!
+
+realloc 5 -> 4, shrink + free
+
+MEM: Free 90 3fff748b9c- Add head free list
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [828]=8 [787]=3 [47]=1 [897]=1607 [694]=1 [109]=1 [702]=1 - XACT 787(+3)=> 3fff8a54
+
+MEM: Free 787 3fff8a54- Add head free list
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [787]=3 [828]=8 [47]=1 [897]=1607 [694]=1 [109]=1 [702]=1 - xist 787(+2)=> 3fff8a54
+
+MEM: Free 787 3fff8a54- Add head free list
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [787]=3 [828]=8 [47]=1 [897]=1607 [694]=1 [109]=1 [702]=1 - XACT 787(+3)=> 3fff8a54
+
+MEM: Free 787 3fff8a54- Add head free list
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [787]=3 [828]=8 [47]=1 [897]=1607 [694]=1 [109]=1 [702]=1 - XACT 47(+1)=> 3fff7334
+
+MEM: Free 47 3fff7334- Add head free list
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [47]=1 [787]=3 [828]=8 [897]=1607 [694]=1 [109]=1 [702]=1 - XACT 787(+3)=> 3fff8a54
+
+MEM: Free 787 3fff8a54- Add head free list
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [787]=3 [47]=1 [828]=8 [897]=1607 [694]=1 [109]=1 [702]=1 - xist 828(+4)=> 3fff8b9c
+
+realloc 120 -> 273
+
+realloc 1625 -> 35, shrink + free
+
+MEM: Free 914 3fff8e4c- Add head free list
+
+MEM: Free 828 3fff8b9c- Add head free list
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [828]=8 [914]=1590 [787]=3 [47]=1 [694]=1 [109]=1 [702]=1 - XACT 47(+1)=> 3fff7334
+
+MEM: Free 47 3fff7334- Add head free list
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [47]=1 [828]=8 [914]=1590 [787]=3 [694]=1 [109]=1 [702]=1 - xist 828(+4)=> 3fff8b9c
+
+MEM: Free 828 3fff8b9c- Add head free list
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [828]=8 [47]=1 [914]=1590 [787]=3 [694]=1 [109]=1 [702]=1 - xist 787(+2)=> 3fff8a54
+
+MEM: Free 787 3fff8a54- Add head free list
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [787]=3 [828]=8 [47]=1 [914]=1590 [694]=3fff7ae4
+
+MEM: Free 293 3fff7ae4- Add head free list
+
+MEM: Free 806 3fff8aec- Assim down next block
+
+MEM: Alo SRCH: [293]=3 [793]=31 [866]=13 [663]=29 [277]=2 [853]=4 [90]=2 [47]=1 [828]=21 [914]=1590 [694]=1 [109]=1 [702]=1 - XACT 293(+3)=> 3fff7ae4
+
+MEM: Free 293 3fff7ae4- Add head free list
+
+MEM: Alo SRCH: [293]=3 [793]=31 [866]=13 [663]=29 [277]=2 [853]=4 [90]=2 [47]=1 [828]=21 [914]=1590 [694]=1 [109]=1 [702]=1 - XACT 293(+3)=> 3fff7ae4
+
+MEM: Free 293 3fff7ae4- Add head free list
+
+MEM: Alo SRCH: [293]=3 [793]=31 [866]=13 [663]=29 [277]=2 [853]=4 [90]=2 [47]=1 [828]=21 [914]=1590 [694]=1 [109]=1 [702]=1 - XACT 293(+3)=> 3fff7ae4
+
+MEM: Alo SRCH: [793]=31 [866]=13 [663]=29 [277]=2 [853]=4 [90]=2 [47]=1 [828]=21 [914]=1590 [694]=1 [109]=1 [702]=1 - xist 914(+65)=> 3fff8e4c
+
+DNS record found: homea.herokuapp.com = 46.137.90.245
+
+MEM: Alo SRCH: [793]=31 [866]=13 [663]=29 [277]=2 [853]=4 [90]=2 [47]=1 [828]=21 [979]=1525 [694]=1 [109]=1 [702]=1 - xist 828(+15)=> 3fff8b9c
+
+MEM: Alo SRCH: [793]=31 [866]=13 [663]=29 [277]=2 [853]=4 [90]=2 [47]=1 [843]=6 [979]=1525 [694]=1 [109]=1 [702]=1 - XACT 853(+4)=> 3fff8c64
+
+MEM: Alo SRCH: [793]=31 [866]=13 [663]=29 [277]=2 [90]=2 [47]=1 [843]=6 [979]=1525 [694]=1 [109]=1 [702]=1 - xist 843(+3)=> 3fff8c14
+
+TcpConnection::connect result:, 0
+
+MEM: Free 864 3fff8cbc- Add head free list
+
+MEM: Free 293 3fff7ae4- Add head free list
+
+MEM: Free 914 3fff8e4c- Add head free list
+
+
+
+h_l{f,3fff8a54,0}
+
+hl{m,384,0,3fff8a54}
+
+hl{m,100,0,3fff8ccc}
+
+hl{m,128,0,3fff8d34}
+
+h_l{f,3fff8c44,0}
+
+hl{f,3fff8a54,0}
+
+hl{m,384,0,3fff8dbc}
+
+hl{m,100,0,3fff8a84}
+
+hl{m,136,0,3fff8aec}
+
+hl{f,3fff8d34,0}
+
+hl{f,3fff8dbc,0}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{f,3fff8674,0}
+
+h_l{f,3fff86dc,0}
+
+h_l{f,3fff8bdc,0}
+
+hl{f,3fff8ccc,0}
+
+hl{f,3fff8a84,0}
+
+hl{m,20,0,3fff7ae4}
+
+hl{f,3fff7ae4,0}
+
+hl{f,3fff8aec,0}
+
+hl{m,20,0,3fff7ae4}
+
+hl{f,3fff7ae4,0}
+
+hl{m,20,0,3fff7ae4}
+
+hl{f,3fff7ae4,0}
+
+hl{m,20,0,3fff7ae4}
+
+hl{z,515,0,3fff8e4c}
+
+hl{m,116,0,3fff8b9c}
+
+hl{m,24,0,3fff8c64}
+
+hl{m,16,0,3fff8c14}
+
+hl{f,3fff7ae4,0}
+
+hl{f,3fff8e4c,0}
+
+MEM: Free 12 3fff721c- Add head free list
+
+MEM: Alo SRCH: [12]=3 [914]=1590 [293]=3 [864]=15 [793]=31 [663]=29 [277]=2 [90]=2 [47]=1 [846]=3 [694]=1 [109]=1 [702]=1 - XACT 12(+3)=> 3fff721c
+
+MEM: Free 15 3fff7234- Add head free list
+
+MEM: Alo SRCH: [15]=3 [914]=1590 [293]=3 [864]=15 [793]=31 [663]=29 [277]=2 [90]=2 [47]=1 [846]=3 [694]=1 [109]=1 [702]=1 - XACT 15(+3)=> 3fff7234
+
+MEM: Alo SRCH: [914]=1590 [293]=3 [864]=15 [793]=31 [663]=29 [277]=2 [90]=2 [47]=1 [846]=3 [694]=1 [109]=1 [702]=1 - XACT 293(+3)=> 3fff7ae4
+
+MEM: Free 828 3fff8b9c- Add head free list
+
+MEM: Free 853 3fff8c64- Add head free list
+
+OnConnected
+
+staticOnConnected: useSSL: 1, Error: 0
+
+SSL: Show debug data ...
+
+SSL: Starting connection...
+
+SSL: Switching to 160 MHz
+
+SSL: handshake start (32704 ms)
+
+MEM: Alo SRCH: [853]=4 [828]=15 [914]=1590 [864]=15 [793]=31 [663]=29 [277]=2 [90]=2 [47]=1 [846]=3 [694]=1 [109]=1 [702]=1 - xist 828(+6)=> 3fff8b9c
+
+MEM: Alo SRCH: [853]=4 [834]=9 [914]=1590 [864]=15 [793]=31 [663]=29 [277]=2 [90]=2 [47]=1 [846]=3 [694]=1 [109]=1 [702]=1 - XACT 47(+1)=> 3fff7334
+
+MEM: Alo SRCH: [853]=4 [834]=9 [914]=1590 [864]=15 [793]=31 [663]=29 [277]=2 [90]=2 [846]=3 [694]=1 [109]=1 [702]=1 - xist 663(+23)=> 3fff8674
+
+MEM: Alo SRCH: [853]=4 [834]=9 [914]=1590 [864]=15 [7MEM: Alo SRCH: [834]=12 [2136]=368 [864]=15 [793]=31 [686]=6 [277]=2 [90]=2 [694]=1 [109]=1 [702]=1 - xist 686(+3)=> 3fff872c
+
+MEM: Free 1939 3fffae54- Add head free list
+
+MEM: Free 853 3fff8c64- Add head free list
+
+TCP sent: 52
+
+MEM: Free 686 3fff872c- Add head free list
+
+MEM: Alo SRCH: [686]=6 [853]=4 [1939]=565 [834]=12 [864]=15 [793]=31 [277]=2 [90]=2 [694]=1 [109]=1 [702]=1 - xist 853(+3)=> 3fff8c64
+
+MEM: Alo SRCH: [686]=6 [856]=1 [1939]=565 [834]=12 [864]=15 [793]=31 [277]=2 [90]=2 [694]=1 [109]=1 [702]=1 - xist 1939(+184)=> 3fffae54
+
+MEM: Free 1939 3fffae54- Add head free list
+
+SSL: received 5 bytes
+axl_ssl_read: Read bytes: 0
+
+
+MEM: Alo SRCH: [1939]=565 [686]=6 [856]=1 [834]=12 [864]=15 [793]=31 [277]=2 [90]=2 [694]=1 [109]=1 [702]=1 - xist 1939(+184)=> 3fffae54
+
+MEM: Free 1939 3fffae54- Add head free list
+
+SSL: received 74 bytes
+State:  receiving Server Hello (2)
+
+please start sntp first !
+
+MEM: Alo SRCH: [1939]=565 [686]=6 [856]=1 [834]=12 [864]=15 [793]=31 [277]=2 [90]=2 [694]=1 [109]=1 [702]=1 - xist 834(+11)=> 3fff8bcc
+
+axl_ssl_read: Read bytes: 0
+
+
+MEM: Alo SRCH: [1939]=565 [686]=6 [856]=1 [845]=1 [864]=15 [793]=31 [277]=2 [90]=2 [694]=1 [109]=1 [702]=1 - xist 1939(+184)=> 3fffae54
+
+MEM: Free 1939 3fffae54- Add head free list
+
+SSL: received 5 bytes
+axl_ssl_read: Read bytes: 0
+
+
+MEM: Alo SRCH: [1939]=565 [686]=6 [856]=1 [845]=1 [864]=15 [793]=31 [277]=2 [90]=2 [694]=1 [109]=1 [702]=1 - xist 1939(+184)=> 3fffae54
+
+MEM: Free 1939 3fffae54- Add head free list
+
+SSL: received 1376 bytes
+axl_ssl_read: Read bytes: 0
+
+
+MEM: Free 853 3fff8c64- Add head free list
+
+MEM: Alo SRCH: [853]=4 [1939]=565 [686]=6 [845]=1 [864]=15 [793]=31 [277]=2 [90]=2 [694]=1 [109]=1 [702]=1 - XACT 864(+15)=> 3fff8cbc
+
+MEM: Alo SRCH: [853]=4 [1939]=565 [686]=6 [845]=1 [793]=31 [277]=2 [90]=2 [694]=1 [109]=1 [702]=1 - xist 853(+3)=> 3fff8c64
+
+MEM: Alo SRCH: [856]=1 [1939]=565 [686]=6 [845]=1 [793]=31 [277]=2 [90]=2 [694]=1 [109]=1 [702]=1 - xist 1939(+153)=> 3fffae54
+
+MEM: Free 1939 3fffae54- Add head free list
+
+SSL: received 1210 bytes
+State:  receiving Certificate (11)
+
+MEM: Alo SRCH: [1939]=565 [856]=1 [686]=6 [845]=1 [793]=31 [277]=2 [90]=2 [694]=1 [109]=1 [702]=1 - xist 793(+8)=> 3fff8a84
+
+MEM: Alo SRCH: [1939]=565 [856]=1 [686]=6 [845]=1 [801]=23 [277]=2 [90]=2 [694]=1 [109]=1 [702]=1 - XACT 856(+1)=> 3fff8c7c
+
+MEM: Free 856 3fff8c7c- Add head free list
+
+free 10102, left 4832
+
+MEM: Alo SRCH: [856]=1 [1939]=565 [686]=6 [845]=1 [801]=23 [277]=2 [90]=2 [694]=1 [109]=1 [702]=1 - xist 686(+3)=> 3fff872c
+
+
+
+h_l{f,3fff721c,0}
+
+hl{m,16,0,3fff721c}
+
+hl{f,3fff7234,0}
+
+hl{m,16,0,3fff7234}
+
+hl{m,20,0,3fff7ae4}
+
+hl{f,3fff8b9c,0}
+
+hl{f,3fff8c64,0}
+
+hl{m,40,0,3fff8b9c}
+
+hl{m,4,0,3fff7334}
+
+hl{m,180,0,3fff8674}
+
+hl{m,6864,0,3fff8e4c}
+
+h_l{m,316,0,3fffa9c7c}
+
+hl{m,68,0,3fff8b24}
+
+hl{m,16,0,3fffaf5c}
+
+hl{m,8,0,3fff8b6c}
+
+hl{m,40,0,3fffaf74}
+
+hl{m,16,0,3fffafa4}
+
+hl{m,256,0,3fffafbc}
+
+hl{m,16,0,3fffb0c4}
+
+hl{m,260,0,3fffb0dc}
+
+hl{m,16,0,3fffb1e4}
+
+hl{m,8,0,3fff7a64}
+
+h_l{r,516,0,3fffb1fc}
+
+hl{m,16,0,3fffb404}
+
+hl{m,264,0,3fffb41c}
+
+hl{m,16,0,3fffb52c}
+
+hl{m,260,0,3fffb544}
+
+h_l{r,1032,0,3fffb64c}
+
+hl{m,16,0,3fffb1fc}
+
+hl{m,260,0,3fffb214}
+
+h_l{f,3fffae54,0}
+
+MEM: Free 856 3fff8c7c- Add head free list
+
+free 10102, left 2016
+
+MEM: Alo SRCH: [856]=1 [1939]=33 [2092]=29 [277]=2 [2324]=180 [845]=1 [90]=2 [694]=1 [109]=1 [702]=1 - xist 2092(+3)=> 3fffb31c
+
+realloc NULL => malloc
+
+MEM: Alo SRCH: [856]=1 [1939]=33 [2095]=26 [277]=2 [2324]=180 [845]=1 [90]=2 [694]=1 [109]=1 [702]=1 - XACT 277(+2)=> 3fff7a64
+
+MEM: Alo SRCH: [856]=1 [1939]=33 [2095]=26 [2324]=180 [845]=1 [90]=2 [694]=1 [109]=1 [702]=1 - xist 2095(+3)=> 3fffb334
+
+realloc same sz 2 =>nop
+
+MEM: Alo SRCH: [856]=1 [1939]=33 [2098]=23 [2324]=180 [845]=1 [90]=2 [694]=1 [109]=1 [702]=1 - xist 2098(+3)=> 3fffb34c
+
+MEM: Alo SRCH: [856]=1 [1939]=33 [2101]=20 [2324]=180 [845]=1 [90]=2 [694]=1 [109]=1 [702]=1 - XACT 1939(+33)=> 3fffae54
+
+MEM: Alo SRCH: [856]=1 [2101]=20 [2324]=180 [845]=1 [90]=2 [694]=1 [109]=1 [702]=1 - xist 2101(+8)=> 3fffb364
+
+MEM: Alo SRCH: [856]=1 [2109]=12 [2324]=180 [845]=1 [90]=2 [694]=1 [109]=1 [702]=1 - XACT 856(+1)=
+
+***RESET***
+
+
+
+Soft WDT reset
+
+
+
+ctx: sys
+
+sp: 3ffff9e0 end: 3fffffb0 offset: 01b0
+
+
+
+>>>stack>>>
+
+3ffffb90:  3fffbbc4 00000081 3fffbe94 4025162f
+
+3ffffba0:  3fffbbc4 3fffbe94 0000007f 40252429
+
+3ffffbb0:  3fffbbc4 00000001 3ffffd28 40251698
+
+3ffffbc0:  3fffbabc 00000100 00000100 3fffbc24
+
+3ffffbd0:  3fffb390 00000100 3fffbbc4 4025369c
+
+3ffffbe0:  3fffbabc 3fff8c7c 00000003 40253db4
+
+3ffffbf0:  000000b4 3fff93b6 00000027 3fffb364
+
+3ffffc00:  00000000 3fff93b6 3ffffd28 402541f2
+
+3ffffc10:  3fff8c7c 3fffbabc 00000000 40254160
+
+3ffffc20:  00000100 00000026 00000003 40253fd0
+
+3ffffc30:  40250c26 0000003c 3fff93b6 00000a13
+
+3ffffc40:  00000004 3fffb364 3fff93b6 40248d6d
+
+3ffffc50:  000002c6 33666666 00001800 00000000
+
+3ffffc60:  00000000 00000000 00002200 00000000
+
+3ffffc70:  4000050c 3fffc278 40104160 3fffc200
+
+3ffffc80:  4eff5705 9d24ed85 c32bfba6 75a8ac2d
+
+3ffffc90:  16ef7d79 27b2ebc2 9d0b07ea aa85d301
+
+3ffffca0:  a3202841 594328d2 81e3aaf6 ec7b3b77
+
+3ffffcb0:  f5698cca 29685e47 2638c51a 18f18a6a
+
+3ffffcc0:  ea60564d 00000000 00000000 00000000
+
+3ffffcd0:  00000000 00000000 00000000 00000000
+
+3ffffce0:  00000000 00000000 00000000 00000000
+
+3ffffcf0:  00000000 00000000 00000000 00000000
+
+3ffffd00:  00000000 00000000 00000000 b05a0000
+
+3ffffd10:  4f0ab601 93f4d120 9b392b3f d33d1024
+
+3ffffd20:  04acd60a 000004b5 00000254 000003a1
+
+3ffffd30:  00000000 3fff8abc 000002c6 3fff7a68
+
+3ffffd40:  0000000c 00000004 51b6d1d7 4e6d72c8
+
+3ffffd50:  40229e9d 00186a00 617dc90b 00000a13
+
+3ffffd60:  3fff8abc 3fff8674 00000565 40247375
+
+3ffffd70:  3fff8e51 00000a1a 00ba0011 000004b5
+
+3ffffd80:  efb560dd 9e21fea9 a4fef642 00000a1a
+
+3ffffd90:  0000000b 3fff8e51 3fff8674 40248485
+
+3ffffda0:  aad4dca9 49a6a5e3 b9aa28af efc863b3
+
+3ffffdb0:  7d6dd159 b9a502a8 cfc35542 7b6a6f3c
+
+3ffffdc0:  b8985f6e 52db2300 b53db288 402509ba
+
+3ffffdd0:  00000a1a 3fff986b 3fff9857 3fffa97c
+
+3ffffde0:  3fff8674 00000a1a 3fff8e51 00000a1a
+
+3ffffdf0:  0000000b 3fff8e51 3fff8674 40247fc4
+
+3ffffe00:  00000014 3fff733c 000000ff 00000006
+
+3ffffe10:  00000000 000015f0 00000000 3ffe9eb9
+
+3ffffe20:  00000a1a 3ffffe70 00000010 000000ff
+
+3ffffe30:  00000000 3ffffea0 3ffffea0 3fff8c64
+
+3ffffe40:  3fff7574 3fff8674 00000000 402480a2
+
+3ffffe50:  00000004 00000008 00000010 00000000
+
+3ffffe60:  00000000 00000000 00000000 40250a72
+
+3ffffe70:  00000000 00000006 3fff7340 00000001
+
+3ffffe80:  3fff8c64 3fff8674 3ffffeb0 40244278
+
+3ffffe90:  4024ebe4 600011f0 3fff733c 3fff8c64
+
+3ffffea0:  3fff733c 3fff6334 3fff50ac 4024be8b
+
+3ffffeb0:  00000000 3fff50c4 3fff733c 4021e3c1
+
+3ffffec0:  3fff8c64 3fff70cc 3fff70d4 00000001
+
+3ffffed0:  00000014 00000004 00000090 00000018
+
+3ffffee0:  3fff50b0 3fff733c 3fff50ac 4021ef2c
+
+3ffffef0:  00000000 00000014 3fff8c64 40104e8c
+
+3fffff00:  00000000 00000024 00000002 3fff70d0
+
+3fffff10:  3fff0486 3fff70d4 3fff8c64 4021d7f9
+
+3fffff20:  002c4a88 3fff85bc 3fff85bc 3fff4498
+
+3fffff30:  00000000 3fff8c64 0000001c 3fff864c
+
+3fffff40:  3fff8c64 3fff85bc 3fff0478 4021b481
+
+3fffff50:  00000001 00000521 401028cc 3ffef788
+
+3fffff60:  3fff3284 40102ce9 00000000 60000600
+
+3fffff70:  4020fb04 3ffef2c0 3ffef29c 4020fae5
+
+3fffff80:  4020fb2a 3fffdab0 00000000 3fff864c
+
+3fffff90:  3fffdc80 00000000 3fff8c64 4021360b
+
+3fffffa0:  40000f49 3fffdab0 ffffff01 55aa55aa
+
+<<<stack<<<
+
+MEM: Alo SRCH: [2120]=1 [845]=1 [694]=1 [109]=1 [702]=1 - NO alloc sz     4
+
+MEM: Alo SRCH: [2120]=1 [845]=1 [694]=1 [109]=1 [702]=1 - NO alloc sz     4
+
+MEM: Alo SRCH: [2120]=1 [845]=1 [694]=1 [109]=1 [702]=1 - NO alloc sz     4
+
+MEM: Alo SRCH: [2120]=1 [845]=1 [694]=1 [109]=1 [702]=1 - NO alloc sz     4
+
+MEM: Alo SRCH: [2120]=1 [845]=1 [694]=1 [109]=1 [702]=1 - NO alloc sz     4
+
+MEM: Alo SRCH: [2120]=1 [845]=1 [694]=1 [109]=1 [702]=1 - NO alloc sz     4
+
+MEM: Alo SRCH: [2120]=1 [845]=1 [694]=1 [109]=1 [702]=1 - NO alloc sz     4
+
+MEM: Alo SRCH: [2120]=1 [845]=1 [694]=1 [109]=1 [702]=1 - NO alloc sz     4
+
+MEM: Alo SRCH: [2120]=1 [845]=1 [694]=1 [109]=1 [702]=1 - NO alloc sz     4
+
+MEM: Alo SRCH: [2120]=1 [845]=1 [694]=1 [109]=1 [702]=1 - NO alloc sz     4
+
+MEM: Alo SRCH: [2120]=1 [845]=1 [694]=1 [109]=1 [702]=1 - NO alloc sz     4
+
+MEM: Alo SRCH: [2120]=1 [845]=1 [694]=1 [109]=1 [702]=1 - NO alloc sz     4
+
+MEM: Alo SRCH: [2120]=1 [845]=1 [694]=1 [109]=1 [702]=1 - NO alloc sz     4
+
+¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦

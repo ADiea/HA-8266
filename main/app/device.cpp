@@ -1,5 +1,7 @@
 #include "device.h"
 
+
+
 bool devicesLoadFromDisk();
 bool deviceReadFromDisk(char* path);
 

@@ -1,0 +1,6188 @@
+Looking at block    160 size      1
+
+Looking at block    256 size   2216
+
+Allocating      9 blocks starting at    256 - existing
+
+libDHT: Detected DHT-22 compatible sensor.
+
+DEV 4 is DIS
+
+Looking at block    160 size      1
+
+Looking at block    265 size   2207
+
+Allocating      6 blocks starting at    265 - existing
+
+Looking at block    160 size      1
+
+Looking at block    271 size   2201
+
+Allocating      5 blocks starting at    271 - existing
+
+REGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+
+(00): 08 06 20 20 00 00 03 01 00 7f 06 00 00 00 00 00
+
+(10): 00 00 20 00 03 00 01 00 00 01 14 00 02 3c 02 03
+
+(20): 68 01 3a 93 04 ee 00 1e 00 00 ff 00 18 bc 26 08
+
+(30): ad 00 0c 22 08 3a 2d d4 00 00 de ad 00 00 00 de
+
+(40): ad 00 00 ff ff ff ff 00 00 00 00 ff 08 08 08 10
+
+(50): 00 00 df 52 20 64 00 01 87 00 01 00 0e 00 00 00
+
+(60): a0 00 24 00 00 82 42 1f 03 60 9d 00 01 1f 09 d5
+
+(70): 0c 23 1f 00 00 53 00 00 19 00 64 03 37 04 37 40
+
+Looking at block    160 size      1
+
+Looking at block    276 size   2196
+
+Allocating     21 blocks starting at    276 - existing
+
+Loading dev DEV_0, 159 bytes
+Type: TH
+Looking at block    160 size      1
+
+Looking at block    297 size   2175
+
+Allocating    128 blocks starting at    297 - existing
+
+Looking at block    160 size      1
+
+Looking at block    425 size   2047
+
+Allocating      6 blocks starting at    425 - existing
+
+realloc the NULL pointer - call malloc()
+
+Looking at block    160 size      1
+
+Looking at block    431 size   2041
+
+Allocating      2 blocks starting at    431 - existing
+
+Looking at block    160 size      1
+
+Looking at block    433 size   2039
+
+Allocating      6 blocks starting at    433 - existing
+
+Looking at block    160 size      1
+
+Looking at block    439 size   2033
+
+Allocating      6 blocks starting at    439 - existing
+
+Looking at block    160 size      1
+
+Looking at block    445 size   2027
+
+Allocating      6 blocks starting at    445 - existing
+
+Looking at block    160 size      1
+
+Looking at block    451 size   2021
+
+Allocating      6 blocks starting at    451 - existing
+
+Looking at block    160 size      1
+
+Looking at block    457 size   2015
+
+Allocating      6 blocks starting at    457 - existing
+
+Looking at block    160 size      1
+
+Looking at block    463 size   2009
+
+Allocating      6 blocks starting at    463 - existing
+
+Looking at block    160 size      1
+
+Looking at block    469 size   2003
+
+Allocating      6 blocks starting at    469 - existing
+
+TH device: 0;Dormitor;21.5;15.0;27.0;0;1;1;1;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;0;0;0;0;0;0;0;19.2;62.0;19.1;0.0;62.1;0.0;
+TH device ID:0 NAME: Dormitor
+realloc the same size block - 2, do nothing
+
+Add watcher ID:1
+Looking at block    160 size      1
+
+Looking at block    475 size   1997
+
+Allocating      2 blocks starting at    475 - existing
+
+Looking at block    160 size      1
+
+Looking at block    477 size   1995
+
+Allocating      3 blocks starting at    477 - existing
+
+Looking at block    160 size      1
+
+Looking at block    480 size   1992
+
+Allocating      3 blocks starting at    480 - existing
+
+Looking at block    160 size      1
+
+Looking at block    483 size   1989
+
+Allocating      3 blocks starting at    483 - existing
+
+Looking at block    160 size      1
+
+Looking at block    486 size   1986
+
+Allocating      3 blocks starting at    486 - existing
+
+Looking at block    160 size      1
+
+Looking at block    489 size   1983
+
+Allocating      3 blocks starting at    489 - existing
+
+Looking at block    160 size      1
+
+Looking at block    492 size   1980
+
+Allocating      3 blocks starting at    492 - existing
+
+Freeing block    276
+
+Just add to head of free list
+
+Looking at block    276 size     21
+
+Looking at block    160 size      1
+
+Looking at block    495 size   1977
+
+Allocating      1 blocks starting at    160 - exact
+
+Added device.
+Looking at block    276 size     21
+
+Looking at block    495 size   1977
+
+Allocating      7 blocks starting at    276 - existing
+
+Loading dev DEV_1, 44 bytes
+Type:HEATER
+Looking at block    283 size     14
+
+Looking at block    495 size   1977
+
+Allocating     18 blocks starting at    495 - existing
+
+Looking at block    283 size     14
+
+Looking at block    513 size   1959
+
+Allocating      6 blocks starting at    283 - existing
+
+realloc the NULL pointer - call malloc()
+
+Looking at block    289 size      8
+
+Looking at block    513 size   1959
+
+Allocating      2 blocks starting at    289 - existing
+
+realloc the same size block - 2, do nothing
+
+HEATER device ID:1 NAME: Centrala
+Add watcher ID:0
+Looking at block    291 size      6
+
+Looking at block    513 size   1959
+
+Allocating      2 blocks starting at    291 - existing
+
+Looking at block    293 size      4
+
+Looking at block    513 size   1959
+
+Allocating      3 blocks starting at    293 - existing
+
+Freeing block    276
+
+Just add to head of free list
+
+Looking at block    276 size      7
+
+Looking at block    296 size      1
+
+Looking at block    513 size   1959
+
+Allocating      1 blocks starting at    296 - exact
+
+Added device.
+Looking at block    276 size      7
+
+Looking at block    513 size   1959
+
+Allocating      1 blocks starting at    276 - existing
+
+Reset:
+REASON_DEFAULT_RST
+
+Chip id=10502778
+
+
+Flash id=1261768
+
+
+Mem info:
+
+
+Looking at block    277 size      6
+
+Looking at block    513 size   1959
+
+Allocating      5 blocks starting at    277 - existing
+
+data  : 0x3ffe8000 ~ 0x3ffe843a, len: 1082
+
+Freeing block    277
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    277 size      6
+
+Looking at block    513 size   1959
+
+Allocating      5 blocks starting at    277 - existing
+
+rodata: 0x3ffe8440 ~ 0x3ffef1a4, len: 28004
+
+Freeing block    277
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    277 size      6
+
+Looking at block    513 size   1959
+
+Allocating      5 blocks starting at    277 - existing
+
+bss   : 0x3ffef1a8 ~ 0x3fff72b8, len: 33040
+
+Freeing block    277
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    277 size      6
+
+Looking at block    513 size   1959
+
+Allocating      5 blocks starting at    277 - existing
+
+heap  : 0x3fff72b8 ~ 0x3fffc000, len: 19784
+
+Freeing block    277
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+hlog_param:{"heap_start":0x3fff72b8, "heap_end":0x3fffc000}
+realloc the NULL pointer - call malloc()
+
+Looking at block    277 size      6
+
+Looking at block    513 size   1959
+
+Allocating      3 blocks starting at    277 - existing
+
+realloc the NULL pointer - call malloc()
+
+Looking at block    280 size      3
+
+Looking at block    513 size   1959
+
+Allocating      3 blocks starting at    280 - exact
+
+Looking at block    513 size   1959
+
+Allocating    145 blocks starting at    513 - existing
+
+
+
+hl{m,36,0,3fff72c4}
+
+hl{m,16,0,3fff72ec}
+
+hl{m,16,0,3fff7304}
+
+hl{m,16,0,3fff731c}
+
+hl{m,16,0,3fff7334}
+
+hl{m,16,0,3fff734c}
+
+hl{m,16,0,3fff7364}
+
+hl{m,32,0,3fff737c}
+
+hl{z,756,0,3fff73a4}
+
+hl{z,212,0,3fff769c}
+
+hl{f,3fff769c,0}
+
+hl{f,3fff73a4,0}
+
+hl{m,49,0,3fff73a4}
+
+hl{f,3fff73a4,0}
+
+hl{m,29,0,3fff73a4}
+
+hl{f,3fff73a4,0}
+
+hl{z,28,0,3fff73a4}
+
+hl{f,3fff73a4,0}
+
+hl{m,172,0,3fff743c}
+
+hl{m,172,0,3fff75c4}
+
+hl{m,33,0,3fff7b64}
+
+hl{f,3fff7b64,0}
+
+hl{m,33,0,3fff7b64}
+
+hl{f,3fff7b64,0}
+
+hl{m,33,0,3fff7b64}
+
+hl{f,3fff7b64,0}
+
+hl{m,33,0,3fff7b64}
+
+hl{f,3fff7b64,0}
+
+
+
+hl{m,1156,0,3fff82c4}
+
+Freeing block    513
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Station configuration was updated to: TP-LINK_B4EB92
+
+Freeing block    280
+
+Just add to head of free list
+
+Freeing block    277
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    277 size      6
+
+Looking at block    513 size   1959
+
+Allocating      2 blocks starting at    277 - existing
+
+Looking at block    279 size      4
+
+Looking at block    513 size   1959
+
+Allocating      2 blocks starting at    279 - existing
+
+Looking at block    281 size      2
+
+Looking at block    513 size   1959
+
+Allocating      7 blocks starting at    513 - existing
+
+Looking at block    281 size      2
+
+Looking at block    520 size   1952
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{f,3fff82c4,0}
+
+mode :
+
+hl{m,9,0,3fff7b84}
+
+Freeing block    281
+
+Just add to head of free list
+
+Looking at block    281 size      2
+
+Looking at block    520 size   1952
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{f,3fff7b84,0}
+
+sta
+
+hl{m,5,0,3fff7b84}
+
+Freeing block    281
+
+Just add to head of free list
+
+Looking at block    281 size      2
+
+Looking at block    520 size   1952
+
+Allocating      5 blocks starting at    520 - existing
+
+
+
+hl{f,3fff7b84,0}
+
+(18:fe:34:a0:42:7a)
+
+hl{m,33,0,3fff82fc}
+
+Freeing block    520
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    520 size   1952
+
+Looking at block    281 size      2
+
+Allocating     85 blocks starting at    520 - existing
+
+
+
+hl{f,3fff82fc,0}
+
+Looking at block    605 size   1867
+
+Looking at block    281 size      2
+
+Allocating     35 blocks starting at    605 - existing
+
+
+
+hl{z,672,0,3fff82fc}
+
+Looking at block    640 size   1832
+
+Looking at block    281 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{z,272,0,3fff85a4}
+
+
+
+
+
+hl{m,5,0,3fff7b84}
+
+Freeing block    281
+
+Just add to head of free list
+
+Looking at block    281 size      2
+
+Looking at block    640 size   1832
+
+Allocating      9 blocks starting at    640 - existing
+
+
+
+hl{f,3fff7b84,0}
+
+
+
+hl{m,68,0,3fff86bc}
+
+Freeing blize      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     18
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block     18 size      6
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     18 - existing
+
+
+
+hl{f,3fff734c,0}
+
+
+
+hl{m,16,0,3fff734c}
+
+Freeing block     12
+
+Just add to head of free list
+
+Looking at block     12 size      3
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     12 - exact
+
+
+
+hl{f,3fff731c,0}
+
+
+
+hl{m,16,0,3fff731c}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block  58 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     18
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block     18 size      6
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     18 - existing
+
+
+
+hl{f,3fff734c,0}
+
+
+
+hl{m,16,0,3fff734c}
+
+Freeing block     12
+
+Just add to head of free list
+
+Looking at block     12 size      3
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     12 - exact
+
+
+
+hl{f,3fff731c,0}
+
+
+
+hl{m,16,0,3fff731c}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334 to head of free list
+
+Looking at block     15 size      3
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     18
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block     18 size      6
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    683 size   1789
+
+Allocating      3 blocks starting at     18 - existing
+
+
+
+hl{f,3fff734c,0}
+
+
+
+hl{m,16,0,3fff734c}
+
+Freeing block     12
+
+Just add to head of free list
+
+Looking at block     12 size      3
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Looking at block    6
+
+hl{f,3fff8774,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      6 blocks starting at    663 - existing
+
+
+
+hl{m,16,0,3fff7334}
+
+Looking at block    669 size   1803
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{m,44,0,3fff8774}
+
+Looking at block    669 size   1803
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    669 - existing
+
+
+
+hl{m,12,0,3fff7b84}
+
+Looking at block    673 size   1799
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     10 blocks starting at    673 - existing
+
+
+
+hl{z,28,0,3fff87a4}
+
+
+
+hl{m,76,0,3fff87c4}
+
+Freeing block    281
+
+Just add to head of free list
+
+
+
+hl{f,3fff7b84,0}
+
+Freeing block    669
+
+Just add to head of free list
+
+
+
+hl{f,3fff87a4,0}
+
+Freeing block    673
+
+Assimilate up to next block, which is FREE
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff87c4,0}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8774,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      6 blocks starting at    663 - existing
+
+
+
+hl{m,16,0,3fff7334}
+
+Looking at block    669 size   1803
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{m,44,0,3fff8774}
+
+Looking at block    669 size   1803
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    669 - existing
+
+
+
+hl{m,12,0,3fff7b84}
+
+Looking at block    673 size   1799
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     10 blocks starting at    673 - existing
+
+
+
+hl{z,28,0,3fff87a4}
+
+
+
+hl{m,76,0,3fff87c4}
+
+Freeing block    281
+
+Just add to head of free list
+
+
+
+hl{f,3fff7b84,0}
+
+Freeing block    669
+
+Just add to head of free list
+
+
+
+hl{f,3fff87a4,0}
+
+Freeing block    673
+
+Assimilate up to next block, which is FREE
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff87c4,0}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8774,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     12
+
+Just add to head of free list
+
+Looking at block     12 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     12 - exact
+
+
+
+hl{f,3fff731c,0}
+
+
+
+hl{m,16,0,3fff731c}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      6 blocks starting at    663 - existing
+
+
+
+hl{m,16,0,3fff7334}
+
+Looking at block    669 size   1803
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{m,44,0,3fff8774}
+
+Looking at block    669 size   1803
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    669 - existing
+
+
+
+hl{m,12,0,3fff7b84}
+
+Looking at block    673 size   1799
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     10 blocks starting at    673 - existing
+
+
+
+hl{z,28,0,3fff87a4}
+
+
+
+hl{m,76,0,3fff87c4}
+
+Freeing block    281
+
+Just add to head of free list
+
+
+
+hl{f,3fff7b84,0}
+
+Freeing block    669
+
+Just add to head of free list
+
+
+
+hl{f,3fff87a4,0}
+
+Freeing block    673
+
+Assimilate up to next block, which is FREE
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff87c4,0}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8774,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      6 blocks starting at    663 - existing
+
+
+
+hl{m,16,0,3fff7334}
+
+Looking at block    669 size   1803
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{m,44,0,3fff8774}
+
+Looking at block    669 size   1803
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    669 - existing
+
+
+
+hl{m,12,0,3fff7b84}
+
+Looking at block    673 size   1799
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     10 blocks starting at    673 - existing
+
+
+
+hl{z,28,0,3fff87a4}
+
+
+
+hl{m,76,0,3fff87c4}
+
+Freeing block    281
+
+Just add to head of free list
+
+
+
+hl{f,3fff7b84,0}
+
+Freeing block    669
+
+Just add to head of free list
+
+
+
+hl{f,3fff87a4,0}
+
+Freeing block    673
+
+Assimilate up to next block, which is FREE
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff87c4,0}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8774,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      6 blocks starting at    663 - existing
+
+
+
+hl{m,16,0,3fff7334}
+
+Looking at block    669 size   1803
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{m,44,0,3fff8774}
+
+Looking at block    669 size   1803
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    669 - existing
+
+
+
+hl{m,12,0,3fff7b84}
+
+Looking at block    673 size   1799
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     10 blocks starting at    673 - existing
+
+
+
+hl{z,28,0,3fff87a4}
+
+
+
+hl{m,76,0,3fff87c4}
+
+Freeing block    281
+
+Just add to head of free list
+
+
+
+hl{f,3fff7b84,0}
+
+Freeing block    669
+
+Just add to head of free list
+
+
+
+hl{f,3fff87a4,0}
+
+Freeing block    673
+
+Assimilate up to next block, which is FREE
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff87c4,0}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8774,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      6 blocks starting at    663 - existing
+
+
+
+hl{m,16,0,3fff7334}
+
+Looking at block    669 size   1803
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{m,44,0,3fff8774}
+
+Looking at block    669 size   1803
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    669 - existing
+
+
+
+hl{m,12,0,3fff7b84}
+
+Looking at block    673 size   1799
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     10 blocks starting at    673 - existing
+
+
+
+hl{z,28,0,3fff87a4}
+
+
+
+hl{m,76,0,3fff87c4}
+
+Freeing block    281
+
+Just add to head of free list
+
+
+
+hl{f,3fff7b84,0}
+
+Freeing block    669
+
+Just add to head of free list
+
+
+
+hl{f,3fff87a4,0}
+
+Freeing block    673
+
+Assimilate up to next block, which is FREE
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff87c4,0}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8774,0}
+
+Freeing block     18
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block     18 size      6
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     18 - existing
+
+
+
+hl{f,3fff734c,0}
+
+
+
+hl{m,16,0,3fff734c}
+
+Freeing block     12
+
+Just add to head of free list
+
+Looking at block     12 size      3
+
+Looking at block     21 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     12 - exact
+
+
+
+hl{f,3fff731c,0}
+
+
+
+hl{m,16,0,3fff731c}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block     21 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block     21 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+Looking at block     21 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      6 blocks starting at    663 - existing
+
+
+
+hl{m,16,0,3fff7334}
+
+Looking at block     21 size      3
+
+Looking at block    669 size   1803
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{m,44,0,3fff8774}
+
+Looking at block     21 size      3
+
+Looking at block    669 size   1803
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    669 - existing
+
+
+
+hl{m,12,0,3fff7b84}
+
+Looking at block     21 size      3
+
+Looking at block    673 size   1799
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     10 blocks starting at    673 - existing
+
+
+
+hl{z,28,0,3fff87a4}
+
+
+
+hl{m,76,0,3fff87c4}
+
+Freeing block    281
+
+Just add to head of free list
+
+
+
+hl{f,3fff7b84,0}
+
+Freeing block    669
+
+Just add to head of free list
+
+
+
+hl{f,3fff87a4,0}
+
+Freeing block    673
+
+Assimilate up to next block, which is FREE
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff87c4,0}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8774,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      6 blocks starting at    663 - existing
+
+
+
+hl{m,16,0,3fff7334}
+
+Looking at block    669 size   1803
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{m,44,0,3fff8774}
+
+Looking at block    669 size   1803
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    669 - existing
+
+
+
+hl{m,12,0,3fff7b84}
+
+Looking at block    673 size   1799
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     10 blocks starting at    673 - existing
+
+
+
+hl{z,28,0,3fff87a4}
+
+
+
+hl{m,76,0,3fff87c4}
+
+Freeing block    281
+
+Just add to head of free list
+
+
+
+hl{f,3fff7b84,0}
+
+Freeing block    669
+
+Just add to head of free list
+
+
+
+hl{f,3fff87a4,0}
+
+Freeing block    673
+
+Assimilate up to next block, which is FREE
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff87c4,0}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8774,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      6 blocks starting at    663 - existing
+
+
+
+hl{m,16,0,3fff7334}
+
+Looking at block    669 size   1803
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{m,44,0,3fff8774}
+
+Looking at block    669 size   1803
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    669 - existing
+
+
+
+hl{m,12,0,3fff7b84}
+
+Looking at block    673 size   1799
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     10 blocks starting at    673 - existing
+
+
+
+hl{z,28,0,3fff87a4}
+
+
+
+hl{m,76,0,3fff87c4}
+
+Freeing block    281
+
+Just add to head of free list
+
+
+
+hl{f,3fff7b84,0}
+
+Freeing block    669
+
+Just add to head of free list
+
+
+
+hl{f,3fff87a4,0}
+
+Freeing block    673
+
+Assimilate up to next block, which is FREE
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff87c4,0}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8774,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     12
+
+Just add to head of free list
+
+Looking at block     12 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     12 - exact
+
+
+
+hl{f,3fff731c,0}
+
+
+
+hl{m,16,0,3fff731c}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      6 blocks starting at    663 - existing
+
+
+
+hl{m,16,0,3fff7334}
+
+Looking at block    669 size   1803
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{m,44,0,3fff8774}
+
+Looking at block    669 size   1803
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    669 - existing
+
+
+
+hl{m,12,0,3fff7b84}
+
+Looking at block    673 size   1799
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     10 blocks starting at    673 - existing
+
+
+
+hl{z,28,0,3fff87a4}
+
+
+
+hl{m,76,0,3fff87c4}
+
+Freeing block    281
+
+Just add to head of free list
+
+
+
+hl{f,3fff7b84,0}
+
+Freeing block    669
+
+Just add to head of free list
+
+
+
+hl{f,3fff87a4,0}
+
+Freeing block    673
+
+Assimilate up to next block, which is FREE
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff87c4,0}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8774,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      6 blocks starting at    663 - existing
+
+
+
+hl{m,16,0,3fff7334}
+
+Looking at block    669 size   1803
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{m,44,0,3fff8774}
+
+Looking at block    669 size   1803
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    669 - existing
+
+
+
+hl{m,12,0,3fff7b84}
+
+Looking at block    673 size   1799
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     10 blocks starting at    673 - existing
+
+
+
+hl{z,28,0,3fff87a4}
+
+
+
+hl{m,76,0,3fff87c4}
+
+Freeing block    281
+
+Just add to head of free list
+
+
+
+hl{f,3fff7b84,0}
+
+Freeing block    669
+
+Just add to head of free list
+
+
+
+hl{f,3fff87a4,0}
+
+Freeing block    673
+
+Assimilate up to next block, which is FREE
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff87c4,0}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8774,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      6 blocks starting at    663 - existing
+
+
+
+hl{m,16,0,3fff7334}
+
+Looking at block    669 size   1803
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{m,44,0,3fff8774}
+
+Looking at block    669 size   1803
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    669 - existing
+
+
+
+hl{m,12,0,3fff7b84}
+
+Looking at block    673 size   1799
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     10 blocks starting at    673 - existing
+
+
+
+hl{z,28,0,3fff87a4}
+
+
+
+hl{m,76,0,3fff87c4}
+
+Freeing block    281
+
+Just add to head of free list
+
+
+
+hl{f,3fff7b84,0}
+
+Freeing block    669
+
+Just add to head of free list
+
+
+
+hl{f,3fff87a4,0}
+
+Freeing block    673
+
+Assimilate up to next block, which is FREE
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff87c4,0}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8774,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     21 - exact
+
+
+
+hl{m,16,0,3fff7334}
+
+scandone
+
+
+
+hl{m,13,0,3fff7364}
+
+Freeing block     21
+
+Just add to head of free list
+
+Looking at block     21 size      3
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    663 - existing
+
+
+
+hl{f,3fff7364,0}
+
+state: 0 -> 2 (b0)
+
+
+
+hl{m,25,0,3fff8774}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    663 size   1809
+
+Looking at block     21 size      3
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    663 - existing
+
+
+
+hl{f,3fff8774,0}
+
+state: 2 -> 3 (0)
+
+
+
+hl{m,25,0,3fff8774}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    663 size   1809
+
+Looking at block     21 size      3
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      6 blocks starting at    663 - existing
+
+
+
+hl{f,3fff8774,0}
+
+Looking at block    669 size   1803
+
+Looking at block     21 size      3
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{m,44,0,3fff8774}
+
+Looking at block    669 size   1803
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    669 - existing
+
+
+
+hl{m,12,0,3fff7b84}
+
+Looking at block    673 size   1799
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     27 blocks starting at    673 - existing
+
+
+
+hl{z,28,0,3fff87a4}
+
+
+
+hl{m,208,0,3fff87c4}
+
+Freeing block    281
+
+Just add to head of free list
+
+
+
+hl{f,3fff7b84,0}
+
+Freeing block    669
+
+Just add to head of free list
+
+
+
+hl{f,3fff87a4,0}
+
+Freeing block    673
+
+Assimilate up to next block, which is FREE
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff87c4,0}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      4 blocks starting at    663 - existing
+
+
+
+hl{f,3fff8774,0}
+
+state: 3 -> 5 (10)
+
+
+
+hl{m,25,0,3fff8774}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{f,3fff8774,0}
+
+add 0
+
+
+
+hl{m,9,0,3fff7b84}
+
+Freeing block    281
+
+Just add to head of free list
+
+Looking at block    281 size      2
+
+Looking at block    663 size   1809
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{f,3fff7b84,0}
+
+aid 3
+
+
+
+hl{m,9,0,3fff7b84}
+
+Freeing block    281
+
+Just add to head of free list
+
+Looking at block    281 size      2
+
+Looking at block    663 size   1809
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{f,3fff7b84,0}
+
+cnt
+
+
+
+hl{m,9,0,3fff7b84}
+
+Freeing block    281
+
+Just add to head of free list
+
+Looking at block    281 size      2
+
+Looking at block    663 size   1809
+
+Looking at block     21 size      3
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     40 blocks starting at    663 - existing
+
+
+
+hl{f,3fff7b84,0}
+
+
+
+hl{m,312,0,3fff8774}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    663 size   1809
+
+Looking at block    281 size      2
+
+Looking at block     21 size      3
+
+Looking at block    276 sLooking at block    758 size   1714
+
+Looking at block     21 size      3
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     21 - exact
+
+
+
+hl{f,3fff8a6c,0}
+
+
+
+hl{m,20,0,3fff7364}
+
+Freeing block     21
+
+Just add to head of free list
+
+
+
+hl{f,3fff7364,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block     21 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block     21 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block     21 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block     21 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+rtc time init...
+
+ 0: 0:25 Dormitor H:55.90(0.0) T:19.20(0.0 0.0)/24.7 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+RX timeout
+
+HEATER(1) TX FAIL:1
+RX timeout
+
+HEATER(1) TX FAIL:2
+RX timeout
+
+HEATER(1) TX FAIL:3
+RX timeout
+
+HEATER(1) TX FAIL:4
+RX timeout
+
+HEATER(1) TX FAIL:5
+TH(0) BROADCAST to 0 clients
+
+Looking at block     21 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     21 - exact
+
+Freeing block    492
+
+Just add to head of free list
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     12
+
+Just add to head of free list
+
+Looking at block     12 size      3
+
+Looking at block    492 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     12 - exact
+
+
+
+hl{f,3fff731c,0}
+
+
+
+hl{m,16,0,3fff731c}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    492 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    492 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    492 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    492 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    492 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     18
+
+Just add to head of free list
+
+Looking at block     18 size      3
+
+Looking at block    492 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     18 - exact
+
+
+
+hl{f,3fff734c,0}
+
+
+
+hl{m,16,0,3fff734c}
+
+Freeing block     12
+
+Just add to head of free list
+
+Looking at block     12 size      3
+
+Looking at block    492 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     12 - exact
+
+
+
+hl{f,3fff731c,0}
+
+
+
+hl{m,16,0,3fff731c}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    492 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    492 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to he
+
+hl{m,16,0,3fff7334}
+
+Freeing block     12
+
+Just add to head of free list
+
+Looking at block     12 size      3
+
+Looking at block    492 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     53 blocks starting at    758 - existing
+
+
+
+hl{f,3fff731c,0}
+
+Looking at block     12 size      3
+
+Looking at block    492 size      3
+
+Looking at block    811 size   1661
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     12 - exact
+
+
+
+hl{m,420,0,3fff8a6c}
+
+
+
+hl{m,16,0,3fff731c}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    492 size      3
+
+Looking at block    811 size   1661
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block    758
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    758 size   1714
+
+Looking at block    492 size      3
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at    492 - exact
+
+
+
+hl{f,3fff8a6c,0}
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     53 blocks starting at    758 - existing
+
+
+
+hl{m,20,0,3fff821c}
+
+
+
+hl{m,420,0,3fff8a6c}
+
+Freeing block    492
+
+Just add to head of free list
+
+
+
+hl{f,3fff821c,0}
+
+Freeing block    758
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    758 size   1714
+
+Looking at block    492 size      3
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at    492 - exact
+
+
+
+hl{f,3fff8a6c,0}
+
+Looking at block    758 size   1714
+
+Looking at block    663 size     40
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     13 blocks starting at    663 - existing
+
+
+
+hl{m,20,0,3fff821c}
+
+
+
+hl{m,100,0,3fff8774}
+
+Freeing block    492
+
+Just add to head of free list
+
+
+
+hl{f,3fff821c,0}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    663 size     40
+
+Looking at block    492 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at    492 - exact
+
+Freeing block    293
+
+Just add to head of free list
+
+
+
+hl{f,3fff8774,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    293 size      3
+
+Looking at block    663 size     40
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    293 size      3
+
+Looking at block    663 size     40
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    293 size      3
+
+Looking at block    663 size     40
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    293 size      3
+
+Looking at block    663 size     40
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     18
+
+Just add to head of free list
+
+Looking at block     18 size      3
+
+Looking at block    293 size      3
+
+Looking at block    663 size     40
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     18 - exact
+
+
+
+hl{f,3fff734c,0}
+
+
+
+hl{m,16,0,3fff734c}
+
+Freeing block     12
+
+Just add to head of free list
+
+Looking at block     12 size      3
+
+Looking at block    293 size      3
+
+Looking at block    663 size     40
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     13 blocks starting at    663 - existing
+
+
+
+hl{f,3fff731c,0}
+
+Looking at block     12 size      3
+
+Looking at block    293 size      3
+
+Looking at block    676 size     27
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     12 - exact
+
+
+
+hl{m,100,0,3fff8774}
+
+
+
+hl{m,16,0,3fff731c}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    293 size      3
+
+Looking at block    676 size     27
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8774,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size     40
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size     40
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size     40
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    663 size     40
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block     12
+
+Just add to head of free list
+
+Looking at block     12 size      3
+
+Looking at block    663 size     40
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating     13 blocks starting at    663 - existing
+
+
+
+hl{f,3fff731c,0}
+
+Looking at block     12 size      3
+
+Looking at block    676 size     27
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      7 blocks starting at    676 - existing
+
+
+
+hl{m,100,0,3fff8774}
+
+ip:192.168.0.101,mask:255.255.255.0,gw:192.168.0.1
+
+hl{m,49,0,3fff87dc}
+
+Freeing block    676
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    676 size     27
+
+Looking at block     12 size      3
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    281 size      2
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    281 - exact
+
+
+
+hl{f,3fff87dc,0}
+
+
+
+
+
+hl{m,5,0,3fff7b84}
+
+Freeing block    281
+
+Just add to head of free list
+
+Looking at block    281 size      2
+
+Looking at block    676 size     27
+
+Looking at block     12 size      3
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     12 - exact
+
+
+
+hl{f,3fff7b84,0}
+
+
+
+hl{m,16,0,3fff731c}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    281 size      2
+
+Looking at block    676 size     27
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Freeing block    279
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Freeing block    513
+
+Just add to head of free list
+
+AP CONNECT
+Looking at block    513 size      7
+
+Looking at block    279 size      4
+
+Looking at block    663 size     40
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      5 blocks starting at    513 - existing
+
+
+
+hl{f,3fff8774,0}
+
+
+
+hl{m,36,0,3fff82c4}
+
+Freeing block     97
+
+Just add to head of free list
+
+realloc the NULL pointer - call malloc()
+
+Looking at block     97 size     22
+
+Looking at block    518 size      2
+
+Looking at block    279 size      4
+
+Looking at block    663 size     40
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    276 size      1
+
+Looking at block    158 size      2
+
+Allocating      1 blocks starting at    276 - exact
+
+Looking at block     97 size     22
+
+Looking at block    518 size      2
+
+Looking at block    279 size      4
+
+Looking at block    663 size     40
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    158 size      2
+
+Allocating      2 blocks starting at    518 - exact
+
+realloc the NULL pointer - call malloc()
+
+Looking at block     97 size     22
+
+Looking at block    279 size      4
+
+Looking at block    663 size     40
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Looking at block    158 size      2
+
+Allocating      1 blocks starting at    158 - existing
+
+Freeing block    158
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+'/' registered
+
+realloc the NULL pointer - call malloc()
+
+Looking at block    158 size      2
+
+Looking at block     97 size     22
+
+Looking at block    279 size      4
+
+Looking at block    663 size     40
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Allocating      1 blocks starting at    158 - existing
+
+realloc the NULL pointer - call malloc()
+
+Looking at block    159 size      1
+
+Looking at block     97 size     22
+
+Looking at block    279 size      4
+
+Looking at block    663 size     40
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Allocating      1 blocks starting at    159 - exact
+
+Freeing block    159
+
+Just add to head of free list
+
+Looking at block    159 size      1
+
+Looking at block     97 size     22
+
+Looking at block    279 size      4
+
+Looking at block    663 size     40
+
+Looking at block    293 size      3
+
+Looking at block    758 size   1714
+
+Allocating      1 blocks starting at    159 - exact
+
+Looking at block     97 size     22
+
+Looking at block    279 size      4
+
+Looking ing at block    158 size      1
+
+Looking at block    117 size      2
+
+Looking at block    663 size     40
+
+Looking at block    758 size   1714
+
+Allocating      1 blocks starting at     99 - exact
+
+realloc the same size block - 1, do nothing
+
+realloc 1 to a bigger block 2, make new, copy, and free the old
+
+Looking at block    276 size      1
+
+Looking at block    158 size      1
+
+Looking at block    117 size      2
+
+Looking at block    663 size     40
+
+Looking at block    758 size   1714
+
+Allocating      2 blocks starting at    117 - exact
+
+Freeing block     99
+
+Just add to head of free list
+
+realloc the same size block - 2, do nothing
+
+realloc the same size block - 2, do nothing
+
+realloc the same size block - 2, do nothing
+
+realloc the same size block - 2, do nothing
+
+realloc 2 to a bigger block 3, make new, copy, and free the old
+
+Looking at block     99 size      1
+
+Looking at block    276 size      1
+
+Looking at block    158 size      1
+
+Looking at block    663 size     40
+
+Looking at block    758 size   1714
+
+Allocating      3 blocks starting at    663 - existing
+
+Freeing block    117
+
+Just add to head of free list
+
+HTTP server STARTED 192.168.0.101
+Freeing block    663
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+realloc the NULL pointer - call malloc()
+
+Looking at block    663 size     40
+
+Looking at block    117 size      2
+
+Looking at block     99 size      1
+
+Looking at block    276 size      1
+
+Looking at block    158 size      1
+
+Looking at block    758 size   1714
+
+Allocating      3 blocks starting at    663 - existing
+
+Looking at block    666 size     37
+
+Looking at block    117 size      2
+
+Looking at block     99 size      1
+
+Looking at block    276 size    ze      1
+
+Looking at block    850 size   1622
+
+Allocating     17 blocks starting at    850 - existing
+
+
+
+hl{m,100,0,3fff8ce4}
+
+
+
+hl{m,128,0,3fff8d4c}
+
+Freeing block    820
+
+Just add to head of free list
+
+
+
+hl{f,3fff8c5c,0}
+
+Freeing block    758
+
+Just add to head of free list
+
+NTP client STARTED
+wscli:wsCliStart()
+Looking at block    758 size     49
+
+Looking at block    820 size     17
+
+Looking at block    663 size      3
+
+Looking at block    117 size      2
+
+Looking at block     99 size      1
+
+Looking at block    276 size      1
+
+Looking at block    158 size      1
+
+Looking at block    867 size   1605
+
+Allocating      2 blocks starting at    117 - exact
+
+Looking at block    758 size     49
+
+Looking at block    820 size     17
+
+Looking at block    663 size      3
+
+Looking at block     99 size      1
+
+Looking at block    276 size      1
+
+Looking at block    158 size      1
+
+Looking at block    867 size   1605
+
+Allocating      2 blocks starting at    663 - existing
+
+Looking at block    758 size     49
+
+Looking at block    820 size     17
+
+Looking at block    665 size      1
+
+Looking at block     99 size      1
+
+Looking at block    276 size      1
+
+Looking at block    158 size      1
+
+Looking at block    867 size   1605
+
+Allocating      2 blocks starting at    820 - existing
+
+realloc the NULL pointer - call malloc()
+
+Looking at block    758 size     49
+
+Looking at block    822 size     15
+
+Looking at block    665 size      1
+
+Looking at block     99 size      1
+
+Looking at block    276 size      1
+
+Looking at block    158 size      1
+
+Looking at block    867 size   1605
+
+Allocating      4 blocks starting at    822 - existing
+
+realloc the NULL pointer - call malloc()
+
+Looking at block    758 size     49
+
+Looking at block    826 size     11
+
+Looking at block    665 size      1
+
+Looking at block     99 size      1
+
+Looking at block    276 size      1
+
+Looking at block    158 size      1
+
+Looking at block    867 size   1605
+
+Allocating      4 blocks startinealloc 1 to a bigger block 3, make new, copy, and free the old
+
+Looking at block    831 size      6
+
+Looking at block    758 size     49
+
+Looking at block    867 size   1605
+
+Allocating      3 blocks starting at    831 - existing
+
+Freeing block    665
+
+Just add to head of free list
+
+Freeing block     99
+
+Just add to head of free list
+
+free a null pointer -> do nothing
+
+realloc the NULL pointer - call malloc()
+
+Looking at block     99 size      1
+
+Looking at block    665 size      1
+
+Looking at block    834 size      3
+
+Looking at block    758 size     49
+
+Looking at block    867 size   1605
+
+Allocating      1 blocks starting at     99 - exact
+
+realloc the same size block - 1, do nothing
+
+Freeing block    276
+
+Just add to head of free list
+
+free a null pointer -> do nothing
+
+Freeing block     86
+
+Just add to head of free list
+
+Freeing block     87
+
+Assimilate down to next block, which is FREE
+
+Freeing block     88
+
+Assimilate down to next block, which is FREE
+
+Freeing block     89
+
+Assimilate down to next block, which is FREE
+
+free a null pointer -> do nothing
+
+free a null pointer -> do nothing
+
+free a null pointer -> do nothing
+
+free a null pointer -> do nothing
+
+Freeing block    826
+
+Just add to head of free list
+
+realloc() could assimilate down 4 blocks - fits!
+
+realloc 5 to a smaller block 4, shrink and free the leftover bits
+
+Freeing block     90
+
+Just add to head of free list
+
+realloc the NULL pointer - call malloc()
+
+Looking at block     90 size      1
+
+Looking at block    826 size      4
+
+Looking at block    276 size      1
+
+Looking at block    665 size      1
+
+Looking at block    834 size      3
+
+Looking at block    758 size     49
+
+Looking at block    867 size   1605
+
+Allocating      3 blocks starting at    834 - copy, and free the old
+
+Looking at block    834 size      3
+
+Looking at block    826 size      4
+
+Looking at block    850 size   1622
+
+Looking at block     47 size      1
+
+Looking at block     90 size      1
+
+Looking at block    276 size      1
+
+Looking at block    665 size      1
+
+Looking at block    794 size     13
+
+Allocating      4 blocks starting at    826 - exact
+
+Freeing block     91
+
+Assimilate down to next block, which is FREE
+
+wscli enc key string IW0nYobqprcFOY+Q+g33PA==
+
+realloc the NULL pointer - call malloc()
+
+Looking at block    834 size      3
+
+Looking at block    850 size   1622
+
+Looking at block     47 size      1
+
+Looking at block     90 size      2
+
+Looking at block    276 size      1
+
+Looking at block    665 size      1
+
+Looking at block    794 size     13
+
+Allocating      2 blocks starting at     90 - exact
+
+realloc the NULL pointer - call malloc()
+
+Looking at block    834 size      3
+
+Looking at block    850 size   1622
+
+Looking at block     47 size      1
+
+Looking at block    276 size      1
+
+Looking at block    665 size      1
+
+Looking at block    794 size     13
+
+Allocating      2 blocks starting at    834 - existing
+
+Looking at block    836 size      1
+
+Looking at block    850 size   1622
+
+Looking at block     47 size      1
+
+Looking at block    276 size      1
+
+Looking at block    665 size      1
+
+Looking at block    794 size     13
+
+Allocating      4 blocks starting at    794 - existing
+
+Looking at block    836 size      1
+
+Looc the NULL pointer - call malloc()
+
+Looking at block    798 size      9
+
+Looking at block    885 size   1587
+
+Looking at block    834 size      3
+
+Looking at block     47 size      1
+
+Looking at block    276 size      1
+
+Looking at block    665 size      1
+
+Allocating      1 blocks starting at     47 - exact
+
+Freeing block     47
+
+Just add to head of free list
+
+realloc the NULL pointer - call malloc()
+
+Looking at block     47 size      1
+
+Looking at block    798 size      9
+
+Looking at block    885 size   1587
+
+Looking at block    834 size      3
+
+Looking at block    276 size      1
+
+Looking at block    665 size      1
+
+Allocating      4 blocks starting at    798 - existing
+
+Freeing block    798
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+realloc the NULL pointer - call malloc()
+
+Looking at block    798 size      9
+
+Looking at block     47 size      1
+
+Looking at block    885 size   1587
+
+Looking at block    834 size      3
+
+Looking at block    276 size      1
+
+Looking at block    665 size      1
+
+Allocating      2 blocks starting at    834 - existing
+
+Freeing block    834
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+realloc the NULL pointer - call malloc()
+
+Looking at block    834 size      3
+
+Looking at block    798 size      9
+
+Looking at block     47 size      1
+
+Looking at block    885 size   1587
+
+Looking at block    276 size      1
+
+Looking at block    665 size      1
+
+Allocating
+Looking at block    834 size      3
+
+Looking at block    901 size   1571
+
+Looking at block    276 size      3
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block    807
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff8bf4,0}
+
+Freeing block    837
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff8ce4,0}
+
+Freeing block    763
+
+Just add to head of free list
+
+
+
+hl{f,3fff8a94,0}
+
+Freeing block    885
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    885 size   1587
+
+Looking at block    763 size     13
+
+Looking at block    822 size      4
+
+Looking at block     90 size      2
+
+Looking at block     47 size      1
+
+Looking at block    798 size     22
+
+Looking at block    834 size     16
+
+Looking at block    276 size      3
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at    276 - exact
+
+
+
+hl{f,3fff8e64,0}
+
+Looking at block    885 size   1587
+
+Looking at block    763 size     13
+
+Looking at block    822 size      4
+
+Looking at block     90 size      2
+
+Looking at block     47 size      1
+
+Looking at block    798 size     22
+
+Looking at block    834 size     16
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at    822 - existing
+
+
+
+hl{m,20,0,3fff7b5c}
+
+Looking at block    885 size   1587
+
+Looking at block    763 size     13
+
+Looking at block    825 size      1
+
+Looking at block     90 size      2
+
+Looking at block     47 size      1
+
+Looking at block    798 size     22
+
+Looking at block    834 size     16
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at    763 - existing
+
+
+
+hl{m,20,0,3fff8c6c}
+
+
+
+hl{m,20,0,3fff8a94}
+
+Freeing block    276
+
+Just add to head of free list
+
+
+
+hl{f,3fff7b5c,0}
+
+Freeing block    822
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8c6c,0}
+
+Freeing block    776
+
+Assimilate down to next block, which is FREE
+
+
+
+hl{f,3fff8afc,0}
+
+Freeing block    763
+
+Assimilate up to next block, which is FREE
+
+Just add tLooking at block    763 size     31
+
+Looking at block    822 size      4
+
+Looking at block    276 size      3
+
+Looking at block    885 size   1587
+
+Looking at block     90 size      2
+
+Looking at block     47 size      1
+
+Looking at block    798 size     22
+
+Looking at block    834 size     16
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at    276 - exact
+
+
+
+hl{f,3fff8a94,0}
+
+Looking at block    763 size     31
+
+Looking at block    822 size      4
+
+Looking at block    885 size   1587
+
+Looking at block     90 size      2
+
+Looking at block     47 size      1
+
+Looking at block    798 size     22
+
+Looking at block    834 size     16
+
+Looking at block    665 size      1
+
+Allocating     65 blocks starting at    885 - existing
+
+
+
+hl{m,20,0,3fff7b5c}
+
+DNS record found: homea.herokuapp.com = 54.217.211.53
+
+Looking at block    763 size     31
+
+Looking at block    822 size      4
+
+Looking at block    950 size   1522
+
+Looking at block     90 size      2
+
+Looking at block     47 size      1
+
+Looking at block    798 size     22
+
+Looking at block    834 size     16
+
+Looking at block    665 size      1
+
+Allocating     15 blocks starting at    834 - existing
+
+
+
+hl{z,515,0,3fff8e64}
+
+Looking at block    763 size     31
+
+Looking at block    822 size      4
+
+Looking at block    950 size   1522
+
+Looking at block     90 size      2
+
+Looking at block     47 size      1
+
+Looking at block    798 size     22
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Allocating      4 blocks starting at    822 - exact
+
+
+
+hl{m,116,0,3fff8ccc}
+
+Looking at block    763 size     31
+
+Looking at block    950 size   1522
+
+Looking at block     90 size      2
+
+Looking at block     47 size      1
+
+Looking at block    798 size     22
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at    798 - existing
+
+
+
+hl{m,24,0,3fff8c6c}
+
+TcpConnection::connect result:, 0
+
+Freeing block    761
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{m,16,0,3fff8bac}
+
+Freeing block    276
+
+Just add to head of free list
+
+
+
+hl{f,3fff7b5c,0}
+
+Freeing block    885
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8e64,0}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    885 size   1587
+
+Looking at block    276 size      3
+
+Looking at block    761 size     33
+
+Looking at block     90 size      2
+
+Looking at block     47 size      1
+
+Looking at block    801 size     19
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block    798
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    798 size     22
+
+Looking at block    885 size   1587
+
+Looking a
+
+Looking at block    885 size   1587
+
+Looking at block    761 size     33
+
+Looking at block     90 size      2
+
+Looking at block     47 size      1
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at    798 - existing
+
+
+
+hl{m,16,0,3fff7b5c}
+
+
+
+hl{m,20,0,3fff8bac}
+
+Freeing block    834
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fff8ccc,0}
+
+Freeing block    822
+
+Just add to head of free list
+
+OnConnected
+
+staticOnConnected: useSSL: 1, Error: 0
+
+SSL: Show debug data ...
+
+SSL: Starting connection...
+
+SSL: Switching to 160 MHz
+
+SSL: handshake start (36621 ms)
+
+Looking at block    822 size      4
+
+Looking at block    834 size     16
+
+Looking at block    801 size     19
+
+Looking at block    885 size   1587
+
+Looking at block    761 size     33
+
+Looking at block     90 size      2
+
+Looking at block     47 size      1
+
+Looking at block    665 size      1
+
+Allocating      6 blocks starting at    834 - existing
+
+
+
+hl{f,3fff8c6c,0}
+
+Looking at block    822 size      4
+
+Looking at block    840 size     10
+
+Looking at block    801 size     19
+
+Looking at block    885 size   1587
+
+Looking at block    761 size     33
+
+Looking at block     90 size      2
+
+Looking at block     47 size      1
+
+Looking at block    665 size      1
+
+Allocating      1 blocks starting at     47 - exact
+
+
+
+hl{m,40,0,3fff8ccc}
+
+Looking at be list
+
+
+
+hl{f,3fff8bac,0}
+
+Freeing block     18
+
+Just add to head of free list
+
+Looking at block     18 size      3
+
+Looking at block    798 size     22
+
+Looking at block    843 size      7
+
+Looking at block   2107 size    365
+
+Looking at block    784 size     10
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating     49 blocks starting at   2107 - existing
+
+
+
+hl{f,3fff734c,0}
+
+Looking at block     18 size      3
+
+Looking at block    798 size     22
+
+Looking at block    843 size      7
+
+Looking at block   2156 size    316
+
+Looking at block    784 size     10
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating     49 blocks starting at   2156 - existing
+
+
+
+hl{m,384,0,3fffb494}
+
+Looking at block     18 size      3
+
+Looking at block    798 size     22
+
+Looking at block    843 size      7
+
+Looking at block   2205 size    267
+
+Looking at block    784 size     10
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at     18 - exact
+
+
+
+hl{m,384,0,3fffb61c}
+
+
+
+hl{m,16,0,3fff734c}
+
+Freeing block     12
+
+Just add to head of free list
+
+Looking at block     12 size      3
+
+Looking at block    798 size     22
+
+Looking at block    843 size      7
+
+Looking at block   2205 size    267
+
+Looking at block    784 size     10
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at     12 - exact
+
+
+
+hl{f,3fff731c,0}
+
+
+
+hl{m,16,0,3fff731c}
+
+Freeing block     15
+
+Just add to head of free list
+
+Looking at block     15 size      3
+
+Looking at block    798 size     22
+
+Looking at block    843 size      7
+
+Looking at block   2205 size    267
+
+Looking at block    784 size     10
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at     15 - exact
+
+
+
+hl{f,3fff7334,0}
+
+
+
+hl{m,16,0,3fff7334}
+
+Freeing block   2107
+
+Just add to head of free list
+
+
+
+hl{f,3fffb494,0}
+
+Freeing block   2156
+
+Assimilate up to next block, which is FREE
+
+Assimilate down to next block, which is FREE
+
+Looking at block   2107 size    365
+
+Looking at block    798 size     22
+
+Looking at block    843 size      7
+
+Looking at block    784 size     10
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at    843 - existing
+
+
+
+hl{f,3fffb61c,0}
+
+
+
+hl{m,20,0,3fff8d14}
+
+Freeing block   1910
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+
+
+hl{f,3fffae6c,0}
+
+Freeing block    822
+
+Just add to head of free list
+
+TCP sent: 52
+
+
+
+hl{f,3fff8c6c,0}
+
+Freeing block    843
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+Looking at block    843 size      7
+
+Looking at block    822 size      4
+
+Looking at block   1910 size    562
+
+Looking at block    798 size     22
+
+Looking at block    784 size     10
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at    822 - existing
+
+
+
+hl{f,3fff8d14,0}
+
+Looking at block    843 size      7
+
+Looking at block    825 size      1
+
+Looking at block   1910 size    562
+
+Looking at block    798 size     22
+
+Looking at block    784 size     10
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating    184 blocks starting at   1910 - existing
+
+Freeing block   1910
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+axl_ssl_read: Read bytes: 0
+
+
+Looking at block   1910 size    562
+
+Looking at block    843 size      7
+
+Looking at block    825 size      1
+
+Looking at block    798 size     22
+
+Looking at block    784 size     10
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating    184 blocks starting at   1910 - existing
+
+Freeing block   1910
+
+Assimilate up to next block, which is FREE
+
+Just add to head of free list
+
+State:  receiving Server Hello (2)
+
+please start sntp first !
+
+Looking at block   1910 size    562
+
+Looking at block    843 size      7
+
+Looking at block    825 size      1
+
+Looking at block    798 size     22
+
+Looking at block    784 size     10
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating     11 blocks starting at    798 - existing
+
+
+
+hl{m,20,0,3fff8c6c}
+
+axl_ssl_read: Read bytes: 0
+
+
+Looking at block   1910 size    562
+
+Looking at block    843 size      7
+
+Looking at block    825 size      1
+
+Looking existing
+
+
+
+hl{f,3fff8c84,0}
+
+Looking at block    825 size      1
+
+Looking at block   1910 size    562
+
+Looking at block    849 size      1
+
+Looking at block    812 size      8
+
+Looking at block    792 size      2
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at    812 - existing
+
+
+
+hl{m,13,0,3fff8c04}
+
+Looking at block    825 size      1
+
+Looking at block   1910 size    562
+
+Looking at block    849 size      1
+
+Looking at block    815 size      5
+
+Looking at block    792 size      2
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      6 blocks starting at   1910 - existing
+
+
+
+hl{m,17,0,3fff8c1c}
+
+Looking at block    825 size      1
+
+Looking at block   1916 size    556
+
+Looking at block    849 size      1
+
+Looking at block    815 size      5
+
+Looking at block    792 size      2
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      1 blocks starting at    825 - exact
+
+
+
+hl{m,39,0,3fffae6c}
+
+
+
+hl{m,3,0,3fff8c84}
+
+Freeing block    825
+
+Just add to head of free list
+
+free 10102, left 4552
+
+Looking at block    825 size      1
+
+Looking at block   1916 size    556
+
+Looking at block    849 size      1
+
+Looking at block    815 size      5
+
+Looking at block    792 size      2
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      2 blocks starting at    792 - exact
+
+
+
+hl{f,3fff8c84,0}
+
+
+
+hl{m,11,0,3fff8b7c}
+
+Freeing block    792
+
+Just add to head of free list
+
+Looking at block    792 size      2
+
+Looking at blo}
+
+Looking at block    792 size      2
+
+Looking at block   2042 size    430
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at   2042 - existing
+
+
+
+hl{m,260,0,3fffb184}
+
+Looking at block    792 size      2
+
+Looking at block   2045 size    427
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      2 blocks starting at    792 - exact
+
+
+
+hl{m,16,0,3fffb28c}
+
+realloc 2 to a bigger block 65, make new, copy, and free the old
+
+Looking at block   2045 size    427
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating     65 blocks starting at   2045 - existing
+
+Freeing block    792
+
+Just add to head of free list
+
+
+
+hl{m,8,0,3fff8b7c}
+
+Looking at block    792 size      2
+
+Looking at block   2110 size    362
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at   2110 - existing
+
+
+
+hl{r,516,0,3fffb2a4}
+
+Looking at block    792 size      2
+
+Looking at block   2113 size    359
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating     34 blocks starting at   2113 - existing
+
+
+
+hl{m,16,0,3fffb4ac}
+
+Looking at block    792 size      2
+
+Looking at block   2147 size    325
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at   2147 - existing
+
+
+
+hl{m,264,0,3fffb4c4}
+
+Looking at block    792 size      2
+
+Looking at block   2150 size    322
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating     33 blocks starting at   2150 - existing
+
+
+
+hl{m,16,0,3fffb5d4}
+
+realloc 65 to a bigger blockrting at    792 - exact
+
+
+
+hl{m,20,0,3fffb3c4}
+
+Looking at block    825 size      1
+
+Looking at block   1919 size     33
+
+Looking at block   2084 size     26
+
+Looking at block   2313 size    159
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at   2084 - existing
+
+
+
+hl{r,8,0,3fff8b7c}
+
+realloc the same size block - 2, do nothing
+
+
+
+hl{m,16,0,3fffb3dc}
+
+Looking at block    825 size      1
+
+Looking at block   1919 size     33
+
+Looking at block   2087 size     23
+
+Looking at block   2313 size    159
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at   2087 - existing
+
+
+
+hl{r,12,0,3fff8b7c}
+
+Looking at block    825 size      1
+
+Looking at block   1919 size     33
+
+Looking at block   2090 size     20
+
+Looking at block   2313 size    159
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating     33 blocks starting at   1919 - exact
+
+
+
+hl{m,14,0,3fffb3f4}
+
+Looking at block    825 size      1
+
+Looking at block   2090 size     20
+
+Looking at block   2313 size    159
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      8 blocks starting at   2090 - existing
+
+
+
+hl{m,256,0,3fffaeb4}
+
+Looking at block    825 size      1
+
+Looking at block   2098 size     12
+
+Looking at block   2313 size    159
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      1 blocks starting at    825 - exact
+
+
+
+hl{m,60,0,3fffb40c}
+
+
+
+hl{m,3,0,3fff8c84}
+
+Freeing block    825
+
+Just add to head of free list
+
+fr19 size    153
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      6 blocks starting at   2319 - existing
+
+
+
+hl{m,17,0,3fffbb1c}
+
+Looking at block    825 size      1
+
+Looking at block   2109 size      1
+
+Looking at block   2325 size    147
+
+Looking at block    849 size      1
+
+Looking at block     90 size   oking at block    665 size      1
+
+Allocating     33 blocks starting at   2325 - existing
+
+
+
+hl{m,39,0,3fffbb34}
+
+Looking at block    825 size      1
+
+Looking at block   2109 size      1
+
+Looking at block   2358 size    114
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      1 blocks starting at    825 - exact
+
+
+
+hl{m,256,0,3fffbb64}
+
+Looking at block   2109 size      1
+
+Looking at block   2358 size    114
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      9 blocks starting at   2358 - existing
+
+
+
+hl{m,3,0,3fff8c84}
+
+Looking at block   2109 size      1
+
+Looking at block   2367 size    105
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Allocating      3 blocks starting at   2367 - existing
+
+
+
+hl{m,68,0,3fffbc6c}
+
+Looking at block   2109 size      1
+
+Looking at block   2370 size    102
+
+Looking at block    849 size      1
+
+Looking at block     90 size      2
+
+Looking at block    665 size      1
+
+Alloca
+
+***RESET***
+
+
+
+Soft WDT reset
+
+
+
+ctx: sys
+
+sp: 3ffff9e0 end: 3fffffb0 offset: 01b0
+
+
+
+>>>stack>>>
+
+3ffffb90:  3fffbc6c 00000081 3fffbf3c 40251613
+
+3ffffba0:  3fffbc6c 3fffbf3c 0000007f 4025240d
+
+3ffffbb0:  3fffbc6c 00000001 3ffffd28 4025167c
+
+3ffffbc0:  3fffbb64 00000100 00000100 3fffbccc
+
+3ffffbd0:  3fffb438 00000100 3fffbc6c 40253680
+
+3ffffbe0:  3fffbb64 3fff8c84 00000003 40253d98
+
+3ffffbf0:  0000009f 3fff93ce 00000027 3fffb40c
+
+3ffffc00:  00000000 3fff93ce 3ffffd28 402541d6
+
+3ffffc10:  3fff8c84 3fffbb64 00000000 40254144
+
+3ffffc20:  00000100 00000026 00000003 40253fb4
+
+3ffffc30:  40250c0a 0000003c 3fff93ce 3fff8b74
+
+3ffffc40:  00000004 3fffb40c 3fff93ce 40248d51
+
+3ffffc50:  000002c6 3fff3720 00001800 00008000
+
+3ffffc60:  00007fff 0230fb51 3fff3e64 40103f9c
+
+3ffffc70:  3fff0500 00000000 00000000 3ffffcc4
+
+3ffffc80:  4eff5705 9d24ed85 c32bfba6 75a8ac2d
+
+3ffffc90:  16ef7d79 27b2ebc2 9d0b07ea aa85d301
+
+3ffffca0:  a3202841 594328d2 81e3aaf6 ec7b3b77
+
+3ffffcb0:  f5698cca 29685e47 2638c51a 18f18a6a
+
+3ffffcc0:  ea60564d 00000000 00000000 00000000
+
+3ffffcd0:  00000000 00000000 00000000 00000000
+
+3ffffce0:  00000000 00000000 00000000 00000000
+
+3ffffcf0:  00000000 00000000 00000000 00000000
+
+3ffffd00:  00000000 00000000 00000000 b05a0000
+
+3ffffd10:  4f0ab601 93f4d120 9b392b3f d33d1024
+
+3ffffd20:  04acd60a 000004b5 00000254 000003a1
+
+3ffffd30:  00000000 3fff8b74 000002c6 3fff8b80
+
+3ffffd40:  0000000c 00000004 51b6d1d7 4e6d72c8
+
+3ffffd50:  cf5160ca 75eafc3c 617dc90b 3fff8b74
+
+3ffffd60:  3fff8e69 3fff8a84 00000565 4024736d
+
+3ffffd70:  00000a1a 00000a13 00ba0011 000004b5
+
+3ffffd80:  efb560dd 9e21fea9 a4fef642 00000a1a
+
+3ffffd90:  0000000b 3fff8e69 3fff8a84 40248469
+
+3ffffda0:  aad4dca9 49a6a5e3 b9aa28af efc863b3
+
+3ffffdb0:  7d6dd159 b9a502a8 cfc35542 7b6a6f3c
+
+3ffffdc0:  6777c026 f4528410 8c720844 4025099e
+
+3ffffdd0:  00000a1a 3fff9883 3fff986f 3fffa994
+
+3ffffde0:  3fff8a84 00000a1a 3fff8e69 00000a1a
+
+3ffffdf0:  0000000b 3fff8e69 3fff8a84 40247fa8
+
+3ffffe00:  66666633 34316438 00000000 00000030
+
+3ffffe10:  0000000a 401004a2 0000000a 00000000
+
+3ffffe20:  00000a1a 3ffffe70 00000010 00000000
+
+3ffffe30:  00000000 3ffffea0 3ffffea0 3fff8c6c
+
+3ffffe40:  3fff7674 3fff8a84 00000000 40248086
+
+3ffffe50:  40002514 3fffdd3c 00000000 3fff8d2c
+
+3ffffe60:  0000006d 00000000 00000000 40250a56
+
+3ffffe70:  00000000 3fff8d14 00000000 3ffffe08
+
+3ffffe80:  3fff8c6c 3fff8a84 3ffffeb0 4024427b
+
+3ffffe90:  4024ebc8 600011f0 3fff743c 3fff8c6c
+
+3ffffea0:  3fff743c 3fff6434 3fff51ac 4024be6f
+
+3ffffeb0:  3ffe0000 3fff51c4 3fff743c 4021e3c1
+
+3ffffec0:  3fff8c6c 3fff71cc 3fff71d4 00000001
+
+3ffffed0:  00000014 00000000 00000000 00000018
+
+3ffffee0:  3fff51b0 3fff743c 3fff51ac 4021ef2c
+
+3ffffef0:  00000000 00000014 3fff8d2c 40104e8c
+
+3fffff00:  00000000 00000024 00000002 3fff71d0
+
+3fffff10:  3fff120e 3fff71d4 3fff8c6c 4021d7f9
+
+3fffff20:  00304a88 3fff86bc 3fff86bc 3fff4598
+
+3fffff30:  00000000 3fff8d2c 0000001c 3fff8704
+
+3fffff40:  3fff8c6c 3fff86bc 3fff1200 4021b481
+
+3fffff50:  3fff055c 000000b0 00000000 4022b0bb
+
+3fffff60:  4010079a ffffffff 00000000 60000600
+
+3fffff70:  4020fb04 3ffef3c0 3ffef39c 4020fae5
+
+3fffff80:  4020fb2a 3fffdab0 00000000 3fff8704
+
+3fffff90:  3fffdc80 00000000 3fff8c6c 4021360b
+
+3fffffa0:  40000f49 3fffdab0 ffffff01 55aa55aa
+
+<<<stack<<<
+
+Looking at block   2109 size      1
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Can't allocate     4 blocks
+
+
+
+hl{r,516,0,0}
+
+Looking at block   2109 size      1
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Can't allocate     4 blocks
+
+
+
+hl{m,25,0,0}
+
+Looking at block   2109 size      1
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Can't allocate     4 blocks
+
+
+
+hl{m,21,0,0}
+
+Looking at block   2109 size      1
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Can't allocate     4 blocks
+
+
+
+hl{m,21,0,0}
+
+Looking at block   2109 size      1
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Can't allocate     4 blocks
+
+
+
+hl{m,21,0,0}
+
+Looking at block   2109 size      1
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Can't allocate     4 blocks
+
+
+
+hl{m,21,0,0}
+
+Looking at block   2109 size      1
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Can't allocate     4 blocks
+
+
+
+hl{m,21,0,0}
+
+Looking at block   2109 size      1
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Can't allocate     4 blocks
+
+
+
+hl{m,21,0,0}
+
+Looking at block   2109 size      1
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Can't allocate     4 blocks
+
+
+
+hl{m,21,0,0}
+
+Looking at block   2109 size      1
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Can't allocate     4 blocks
+
+
+
+hl{m,21,0,0}
+
+Looking at block   2109 size      1
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Can't allocate     4 blocks
+
+
+
+hl{m,21,0,0}
+
+Looking at block   2109 size      1
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Can't allocate     4 blocks
+
+
+
+hl{m,21,0,0}
+
+Looking at block   2109 size      1
+
+Looking at block    849 size      1
+
+Looking at block    665 size      1
+
+Can't allocate     4 blocks
+
+
+
+hl{m,21,0,0}
+
+¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦

@@ -1,6 +1,11 @@
 #include <user_config.h>
 #include <SmingCore/SmingCore.h>
 
+//provided by linker
+extern char _heap_start;
+
+extern uint8_t gHeapOpFlushAfter;
+
 //TODO: CHANGE static const char secret[] PROGMEM = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
 //TODO: make PR to remove spiffs_mount(); from appinit/user_main.cpp
 
@@ -161,7 +166,7 @@ static void mainLoop()
 		gHttpServer.getActiveWebSockets().count() == 0)
 	{
 		debugf("LOW HEAP: %d\r\n", system_get_free_heap_size());
-		system_restart();
+		//system_restart();
 	}
 
 	if(Radio && getRadio(5))
@@ -233,13 +238,13 @@ static void initNetwork()
 			 TCP_WND, TCP_MAXRTX, TCP_SYNMAXRTX);
 }
 
+
+
 extern void init()
 {
 	initNetwork();
 
 	initDevices();
-
-	LOG_E("System start.\n");
 
 	WDT.enable(false);
 
@@ -248,6 +253,10 @@ extern void init()
 	// set timezone hourly difference to UTC
 	//TODO: send from mobile phone & store on disk
 	SystemClock.setTimeZone(2);
+
+	LOG_I("\nhlog_param:{\"heap_start\":0x%x, \"heap_end\":0x3fffc000}", ((uint32_t)&_heap_start));
+
+	gHeapOpFlushAfter = 32;
 
 	WifiStation.enable(true);
 	WifiStation.config(WIFI_SSID, WIFI_PWD);
