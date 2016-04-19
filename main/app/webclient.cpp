@@ -13,13 +13,13 @@ void displaySessionId(SSL *ssl)
 
     if (sess_id_size > 0)
     {
-        debugf("-----BEGIN SSL SESSION PARAMETERS-----");
+    	LOG_I("-----BEGIN SSL SESSION PARAMETERS-----");
         for (i = 0; i < sess_id_size; i++)
         {
         	m_printf("%02x", session_id[i]);
         }
 
-        debugf("\n-----END SSL SESSION PARAMETERS-----");
+        LOG_I("\n-----END SSL SESSION PARAMETERS-----");
     }
 }
 
@@ -28,31 +28,31 @@ void displaySessionId(SSL *ssl)
  */
 void displayCipher(SSL *ssl)
 {
-	m_printf("CIPHER is ");
+	LOG_I("CIPHER is ");
     switch (ssl_get_cipher_id(ssl))
     {
         case SSL_AES128_SHA:
-        	m_printf("AES128-SHA");
+        	LOG_I("AES128-SHA");
             break;
 
         case SSL_AES256_SHA:
-        	m_printf("AES256-SHA");
+        	LOG_I("AES256-SHA");
             break;
 
         case SSL_RC4_128_SHA:
-        	m_printf("RC4-SHA");
+        	LOG_I("RC4-SHA");
             break;
 
         case SSL_RC4_128_MD5:
-        	m_printf("RC4-MD5");
+        	LOG_I("RC4-MD5");
             break;
 
         default:
-        	m_printf("Unknown - %d", ssl_get_cipher_id(ssl));
+        	LOG_I("Unknown - %d", ssl_get_cipher_id(ssl));
             break;
     }
 
-    m_printf("\n");
+    LOG_I("\n");
 }
 
 

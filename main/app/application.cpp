@@ -163,7 +163,7 @@ static void mainLoop()
 	if (system_get_free_heap_size() < 6500 &&
 		gHttpServer.getActiveWebSockets().count() == 0)
 	{
-		debugf("LOW HEAP: %d\r\n", system_get_free_heap_size());
+		LOG_E("LOW HEAP: %d\r\n", system_get_free_heap_size());
 		//system_restart();
 	}
 
