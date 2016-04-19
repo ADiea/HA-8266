@@ -8,8 +8,6 @@ extern uint8_t gHeapOpFlushAfter;
 
 //TODO: CHANGE static const char secret[] PROGMEM = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
 //TODO: make PR to remove spiffs_mount(); from appinit/user_main.cpp
-
-#include "debug.h"
 #include "device.h"
 #include "commWeb.h"
 #include "webserver.h"

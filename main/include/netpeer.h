@@ -5,9 +5,6 @@
 #include <SmingCore/SmingCore.h>
 #include <SmingCore/Network/WebsocketClient.h>
 
-#include "debug.h"
-
-
 class CAbstractPeer;
 
 typedef Vector<CAbstractPeer*> ConnectedPeerList;

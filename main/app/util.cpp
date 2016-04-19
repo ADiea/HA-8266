@@ -1,5 +1,5 @@
 #include "util.h"
-#include "debug.h"
+#include "debug_progmem.h"
 
 #include <stdarg.h>
 

@@ -32,7 +32,6 @@
 
 			if(millis() - lastDataTime > timeout*1000)
 			{
-				LOG_I("WS: close inactive connection %x (%d)", webSock, millis() - lastDataTime);
 				return false;
 			}
 
@@ -158,6 +157,10 @@
 					{
 						if(!g_sockDataPool[i].isAlive((10*60)/clients.count()))
 						{
+							LOG_I("WS: close inactive connection %x (%d)",
+									g_sockDataPool[i].webSock,
+									millis() - g_sockDataPool[i].lastDataTime);
+
 							clients[s].close();
 							g_sockDataPool[i].invalidate();
 						}

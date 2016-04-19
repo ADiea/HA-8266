@@ -1,8 +1,6 @@
 #ifndef __DEVICE_H_
 #define __DEVICE_H_
 
-#include "debug.h"
-
 #include "drv/drvUART.h"
 #include "drv/drvRGB.h"
 #include "drv/drvRadio.h"
