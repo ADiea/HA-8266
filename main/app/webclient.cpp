@@ -160,7 +160,7 @@ void wsMessageReceived(String message)
 			LOG_I("Common Name:\t%s\n", common_name);
 		}
 		displayCipher(ssl);
-		displaySessionId(ssl);
+		//displaySessionId(ssl);
 	}
     /******/
 

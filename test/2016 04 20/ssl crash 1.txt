@@ -1,0 +1,1333 @@
+Reset: REASON_DEFAULT_RST
+Chip id=10502778
+
+_Flash id=1261768
+
+_Mem info:
+
+ddata  : 0x3ffe8000 ~ 0x3ffe843a, len: 1082
+
+rodata: 0x3ffe8440 ~ 0x3ffec4e0, len: 16544
+
+bss   : 0x3ffec4e0 ~ 0x3fff4a50, len: 34160
+
+heap  : 0x3fff4a50 ~ 0x3fffc000, len: 30128
+
+
+hlog_param:{"heap_start":0x3fff4a50, "heap_end":0x3fffc000}RStation configuratio                                           n was updated to: TP-LINK_B4EB92mode :
+hl{m,36,0,3fff4a5c} 1
+hl{m,16,0,3fff4a84} 2
+hl{m,16,0,3fff4a9c} 3
+hl{m,16,0,3fff4ab4} 4
+hl{m,16,0,3fff4acc} 5
+hl{m,16,0,3fff4ae4} 6
+hl{m,16,0,3fff4afc} 7
+hl{m,32,0,3fff4b14} 8
+hl{m,756,0,3fff4b3c} 9
+hl{m,212,0,3fff4e34} 10
+hl{f,3fff4e34,0} 11
+ hl{f,3fff4b3c,0} 12
+ hl{m,49,0,3fff4b3c} 13
+hl{f,3fff4b3c,0} 14
+ hl{m,29,0,3fff4b3c} 15
+hl{f,3fff4b3c,0} 16
+ hl{m,28,0,3fff4b3c} 17
+hl{f,3fff4b3c,0} 18
+ hl{m,172,0,3fff4bd4} 19
+hl{m,172,0,3fff4d5c} 20
+hl{m,33,0,3fff52fc} 21
+hl{f,3fff52fc,0} 22
+ hl{m,33,0,3fff52fc} 23
+hl{f,3fff52fc,0} 24
+ hl{m,33,0,3fff52fc} 25
+hl{f,3fff52fc,0} 26
+ hl{m,33,0,3fff52fc} 27
+hl{f,3fff52fc,0} 28
+ hl{m,1156,0,3fff5a5c} 29
+hl{f,3fff5a5c,0} 30
+ hl{m,9,0,3fff531c} 31
+hl{f,3fff531c,0} 32
+ sta(18:fe:34:a0:42:7a)
+
+add if0
+
+f r0,
+hl{m,5,0,3fff531c} 33
+hl{f,3fff531c,0} 34
+ hl{m,33,0,3fff5a94} 35
+hl{f,3fff5a94,0} 36
+ hl{m,672,0,3fff5a94} 37
+hl{m,272,0,3fff5d3c} 38
+hl{m,5,0,3fff531c} 39
+hl{f,3fff531c,0} 40
+ hl{m,68,0,3fff5e54} 41
+hl{f,3fff4b14,0} 42
+ hl{m,32,0,3fff4b14} 43
+hl{m,80,0,3fff5e9c} 44
+hl{m,20,0,3fff5ef4} 45
+hl{m,13,0,3fff5f0c} 46
+hl{f,3fff5f0c,0} 47
+ hl{m,9,0,3fff531c} 48
+hl{f,3fff531c,0} 49
+ hl{m,44,0,3fff5f0c} 50
+hl{m,12,0,3fff531c} 51
+hl{m,28,0,3fff5f3c} 52
+hl{m,76,0,3fff5f5c} 53
+hl{f,3fff531c,0} 54
+ hl{f,3fff5f3c,0} 55
+ hl{f,3fff5f5c,0} 56
+ hl{f,3fff5f0c,0} 57
+ hl{f,3fff4acc,0} 58
+ hl{m,16,0,3fff4acc} 59
+hl{f,3fff4afc,0} 60
+ hl{f,3fff4acc,0} 61
+ hl{m,16,0,3fff4acc} 62
+hl{f,3fff4acc,0} 63
+ hl{m,16,0,3fff4acc} 64
+
+hl{f,3fff4acc,0} 65
+ hl{m,16,0,3fff4acc} 66
+hl{f,3fff4ab4,0} 67
+ hl{m,16,0,3fff4ab4} 68
+hl{f,3fff4acc,0} 69
+ hl{m,16,0,3fff4acc} 70
+hl{f,3fff4acc,0} 71
+ hl{m,16,0,3fff4acc} 72
+hl{f,3fff4acc,0} 73
+ hl{m,16,0,3fff4acc} 74
+hl{f,3fff4acc,0} 75
+ hl{m,16,0,3fff4acc} 76
+hl{f,3fff4acc,0} 77
+ hl{m,16,0,3fff4acc} 78
+hl{f,3fff4ae4,0} 79
+ hl{m,16,0,3fff4ae4} 80
+hl{f,3fff4ab4,0} 81
+ hl{m,16,0,3fff4ab4} 82
+hl{f,3fff4acc,0} 83
+ hl{m,16,0,3fff4acc} 84
+hl{f,3fff4acc,0} 85
+ hl{m,16,0,3fff4acc} 86
+hl{f,3fff4acc,0} 87
+ hl{m,16,0,3fff4acc} 88
+hl{f,3fff4acc,0} 89
+ hl{m,16,0,3fff4acc} 90
+hl{f,3fff4acc,0} 91
+ hl{m,16,0,3fff4acc} 92
+hl{f,3fff4ab4,0} 93
+ hl{m,16,0,3fff4ab4} 94
+hl{f,3fff4acc,0} 95
+ hl{m,16,0,3fff4acc} 96
+
+hl{f,3fff4acc,0} 97
+hl{m,16,0,3fff4acc} 98
+hl{f,3fff4acc,0} 99
+ hl{m,16,0,3fff4acc} 100
+hl{f,3fff4acc,0} 101
+ hl{m,16,0,3fff4acc} 102
+hl{f,3fff4acc,0} 103
+ hl{m,16,0,3fff4acc} 104
+hl{f,3fff4ae4,0} 105
+ hl{m,16,0,3fff4ae4} 106
+hl{f,3fff4ab4,0} 107
+ hl{m,16,0,3fff4ab4} 108
+hl{f,3fff4acc,0} 109
+ hl{m,16,0,3fff4acc} 110
+hl{f,3fff4acc,0} 111
+ hl{m,16,0,3fff4acc} 112
+hl{f,3fff4acc,0} 113
+ hl{m,16,0,3fff4acc} 114
+hl{f,3fff4acc,0} 115
+ hl{m,16,0,3fff4acc} 116
+hl{f,3fff4acc,0} 117
+ hl{m,16,0,3fff4acc} 118
+hl{f,3fff4ab4,0} 119
+ hl{m,16,0,3fff4ab4} 120
+hl{f,3fff4acc,0} 121
+ hl{m,16,0,3fff4acc} 122
+hl{f,3fff4acc,0} 123
+ hl{m,16,0,3fff4acc} 124
+hl{f,3fff4acc,0} 125
+ hl{m,16,0,3fff4acc} 126
+hl{f,3fff4acc,0} 127
+ hl{m,16,0,3fff4acc} 128
+
+hl{m,44,0,3fff5f0c} 129
+hl{m,12,0,3fff531c} 130
+hl{m,28,0,3fff5f3c} 131
+hl{m,76,0,3fff5f5c} 132
+hl{f,3fff531c,0} 133
+ hl{f,3fff5f3c,0} 134
+ hl{f,3fff5f5c,0} 135
+ hl{f,3fff5f0c,0} 136
+ hl{f,3fff4acc,0} 137
+ hl{m,16,0,3fff4acc} 138
+hl{m,44,0,3fff5f0c} 139
+hl{m,12,0,3fff531c} 140
+hl{m,28,0,3fff5f3c} 141
+hl{m,76,0,3fff5f5c} 142
+hl{f,3fff531c,0} 143
+ hl{f,3fff5f3c,0} 144
+ hl{f,3fff5f5c,0} 145
+ hl{f,3fff5f0c,0} 146
+ hl{f,3fff4ae4,0} 147
+ hl{m,16,0,3fff4ae4} 148
+hl{f,3fff4ab4,0} 149
+ hl{m,16,0,3fff4ab4} 150
+hl{f,3fff4acc,0} 151
+ hl{m,16,0,3fff4acc} 152
+hl{m,44,0,3fff5f0c} 153
+hl{m,12,0,3fff531c} 154
+hl{m,28,0,3fff5f3c} 155
+hl{m,76,0,3fff5f5c} 156
+hl{f,3fff4acc,0} 157
+ hl{m,16,0,3fff4acc} 158
+hl{f,3fff531c,0} 159
+ hl{f,3fff5f3c,0} 160
+
+hl{f,3fff5f5c,0} 161
+hl{f,3fff5f0c,0} 162
+hl{f,3fff4acc,0} 163
+hl{m,16,0,3fff4acc} 164
+hl{m,44,0,3fff5f0c} 165
+hl{m,12,0,3fff531c} 166
+hl{m,28,0,3fff5f3c} 167
+hl{m,76,0,3fff5f5c} 168
+hl{f,3fff531c,0} 169
+ hl{f,3fff5f3c,0} 170
+ hl{f,3fff5f5c,0} 171
+ hl{f,3fff5f0c,0} 172
+ hl{f,3fff4acc,0} 173
+ hl{m,16,0,3fff4acc} 174
+hl{m,44,0,3fff5f0c} 175
+hl{m,12,0,3fff531c} 176
+hl{m,28,0,3fff5f3c} 177
+hl{m,76,0,3fff5f5c} 178
+hl{f,3fff531c,0} 179
+ hl{f,3fff5f3c,0} 180
+ hl{f,3fff5f5c,0} 181
+ hl{f,3fff5f0c,0} 182
+ hl{f,3fff4acc,0} 183
+ hl{m,16,0,3fff4acc} 184
+hl{f,3fff4ab4,0} 185
+ hl{m,16,0,3fff4ab4} 186
+hl{f,3fff4acc,0} 187
+ hl{m,16,0,3fff4acc} 188
+hl{m,44,0,3fff5f0c} 189
+hl{m,12,0,3fff531c} 190
+hl{m,28,0,3fff5f3c} 191
+hl{m,76,0,3fff5f5c} 192
+ASYNC RX (0):
+hl{f,3fff531c,0} 193
+ hl{f,3fff5f3c,0} 194
+ hl{f,3fff5f5c,0} 195
+ hl{f,3fff5f0c,0} 196
+ hl{f,3fff4acc,0} 197
+ hl{m,16,0,3fff4acc} 198
+hl{m,44,0,3fff5f0c} 199
+hl{m,12,0,3fff531c} 200
+hl{m,28,0,3fff5f3c} 201
+hl{m,76,0,3fff5f5c} 202
+hl{f,3fff531c,0} 203
+ hl{f,3fff5f3c,0} 204
+ hl{f,3fff5f5c,0} 205
+ hl{f,3fff5f0c,0} 206
+ hl{f,3fff4acc,0} 207
+ hl{m,16,0,3fff4acc} 208
+hl{m,44,0,3fff5f0c} 209
+hl{m,12,0,3fff531c} 210
+hl{m,28,0,3fff5f3c} 211
+hl{m,76,0,3fff5f5c} 212
+hl{f,3fff531c,0} 213
+ hl{f,3fff5f3c,0} 214
+ hl{f,3fff5f5c,0} 215
+ hl{f,3fff5f0c,0} 216
+ hl{f,3fff4acc,0} 217
+ hl{m,16,0,3fff4acc} 218
+hl{f,3fff4acc,0} 219
+ hl{m,16,0,3fff4acc} 220
+hl{m,44,0,3fff5f0c} 221
+hl{m,12,0,3fff531c} 222
+hl{m,28,0,3fff5f3c} 223
+hl{m,76,0,3fff5f5c} 224
+
+hl{f,3fff531c,0} 225
+hl{f,3fff5f3c,0} 226
+hl{f,3fff5f5c,0} 227
+hl{f,3fff5f0c,0} 228
+hl{f,3fff4ae4,0} 229
+hl{m,16,0,3fff4ae4} 230
+hl{f,3fff4ab4,0} 231
+ hl{m,16,0,3fff4ab4} 232
+hl{f,3fff4acc,0} 233
+ hl{m,16,0,3fff4acc} 234
+hl{m,44,0,3fff5f0c} 235
+hl{m,12,0,3fff531c} 236
+hl{m,28,0,3fff5f3c} 237
+hl{m,76,0,3fff5f5c} 238
+hl{f,3fff531c,0} 239
+ hl{f,3fff5f3c,0} 240
+ hl{f,3fff5f5c,0} 241
+ hl{f,3fff5f0c,0} 242
+ hl{f,3fff4acc,0} 243
+ hl{m,16,0,3fff4acc} 244
+hl{f,3fff4acc,0} 245
+ hl{m,16,0,3fff4acc} 246
+hl{m,44,0,3fff5f0c} 247
+hl{m,12,0,3fff531c} 248
+hl{m,28,0,3fff5f3c} 249
+hl{m,76,0,3fff5f5c} 250
+hl{f,3fff531c,0} 251
+ hl{f,3fff5f3c,0} 252
+ hl{f,3fff5f5c,0} 253
+ hl{f,3fff5f0c,0} 254
+ hl{f,3fff4acc,0} 255
+ hl{m,16,0,3fff4acc} 256
+ASYNC RX (0):scandone
+
+state: 0 -> 2 (b0)
+
+state: 2 -> 3 (0)
+
+
+hl{m,44,0,3fff5f0c} 257
+hl{m,12,0,3fff531c} 258
+hl{m,28,0,3fff5f3c} 259
+hl{m,76,0,3fff5f5c} 260
+hl{f,3fff531c,0} 261
+ hl{f,3fff5f3c,0} 262
+ hl{f,3fff5f5c,0} 263
+ hl{f,3fff5f0c,0} 264
+ hl{f,3fff4acc,0} 265
+ hl{m,16,0,3fff4acc} 266
+hl{f,3fff4ab4,0} 267
+ hl{m,16,0,3fff4ab4} 268
+hl{f,3fff4acc,0} 269
+ hl{m,16,0,3fff4acc} 270
+hl{m,44,0,3fff5f0c} 271
+hl{m,12,0,3fff531c} 272
+hl{m,28,0,3fff5f3c} 273
+hl{m,76,0,3fff5f5c} 274
+hl{f,3fff4acc,0} 275
+ hl{m,16,0,3fff4acc} 276
+hl{f,3fff531c,0} 277
+ hl{f,3fff5f3c,0} 278
+ hl{f,3fff5f5c,0} 279
+ hl{f,3fff5f0c,0} 280
+ hl{m,13,0,3fff4afc} 281
+hl{f,3fff4afc,0} 282
+ hl{m,25,0,3fff5f0c} 283
+hl{f,3fff5f0c,0} 284
+ hl{m,25,0,3fff5f0c} 285
+hl{f,3fff5f0c,0} 286
+ hl{m,44,0,3fff5f0c} 287
+hl{m,12,0,3fff531c} 288
+state: 3 -> 5 (10)
+
+add 0
+
+aid 4
+
+cnt
+
+
+
+connected with TP-LINK_B4EB92, channel 6
+
+dhcp client start...
+
+
+hl{m,28,0,3fff5f3c} 289
+hl{m,208,0,3fff5f5c} 290
+hl{f,3fff531c,0} 291
+ hl{f,3fff5f3c,0} 292
+ hl{f,3fff5f5c,0} 293
+ hl{f,3fff5f0c,0} 294
+ hl{m,25,0,3fff5f0c} 295
+hl{f,3fff5f0c,0} 296
+ hl{m,9,0,3fff531c} 297
+hl{f,3fff531c,0} 298
+ hl{m,9,0,3fff531c} 299
+hl{f,3fff531c,0} 300
+ hl{m,9,0,3fff531c} 301
+hl{f,3fff531c,0} 302
+ hl{m,312,0,3fff5f0c} 303
+hl{f,3fff5f0c,0} 304
+ hl{f,3fff4acc,0} 305
+ hl{m,16,0,3fff4acc} 306
+hl{m,312,0,3fff5f0c} 307
+hl{m,160,0,3fff604c} 308
+hl{m,160,0,3fff60f4} 309
+hl{m,33,0,3fff619c} 310
+hl{f,3fff619c,0} 311
+ hl{m,25,0,3fff619c} 312
+hl{f,3fff619c,0} 313
+ hl{m,60,0,3fff619c} 314
+hl{m,36,0,3fff61dc} 315
+hl{m,420,0,3fff6204} 316
+hl{f,3fff5f0c,0} 317
+ hl{f,3fff6204,0} 318
+ hl{m,20,0,3fff4afc} 319
+hl{f,3fff4afc,0} 320
+ rtc time init... 0: 0:39 Dormitor H:59.40(0.0) T:19.00(0.0 0.0)/24.5 SetPt:21.5                                           0 needHeat:1HEATER(1) Force radio send2HEATER(1) trigState send:1 reqHeat:1 isSy                                           nc:0 state:0lHEATER(1) TX: ONERX timeoutHEATER(1) TX FAIL:1RRX timeoutHEATER(1                                           ) TX FAIL:2RRX timeoutHEATER(1) TX FAIL:3RRX timeoutHEATER(1) TX FAIL:4RRX tim                                           eoutHEATER(1) TX FAIL:5RTH(0) BROADCAST to 0 clients
+T
+hl{f,3fff4acc,0} 321
+hl{m,16,0,3fff4acc} 322
+=hl{m,20,0,3fff4afc} 323
+=hl{f,3fff4afc,0} 324
+ hl{f,3fff4acc,0} 325
+ hl{m,16,0,3fff4acc} 326
+=hl{f,3fff4a84,0} 327
+ hl{m,16,0,3fff4a84} 328
+=hl{f,3fff4ae4,0} 329
+ hl{m,16,0,3fff4ae4} 330
+=hl{f,3fff4ab4,0} 331
+ hl{m,16,0,3fff4ab4} 332
+=hl{f,3fff4acc,0} 333
+ hl{m,16,0,3fff4acc} 334
+=hl{f,3fff4acc,0} 335
+ hl{m,16,0,3fff4acc} 336
+=hl{f,3fff4acc,0} 337
+ hl{m,16,0,3fff4acc} 338
+=hl{f,3fff4acc,0} 339
+ hl{m,16,0,3fff4acc} 340
+=hl{f,3fff4acc,0} 341
+ hl{m,16,0,3fff4acc} 342
+=hl{f,3fff4ab4,0} 343
+ hl{m,16,0,3fff4ab4} 344
+=hl{f,3fff4acc,0} 345
+ hl{m,16,0,3fff4acc} 346
+=hl{f,3fff4acc,0} 347
+ hl{m,16,0,3fff4acc} 348
+=hl{f,3fff4acc,0} 349
+ hl{m,16,0,3fff4acc} 350
+=hl{f,3fff4acc,0} 351
+ hl{m,16,0,3fff4acc} 352
+=ASYNC RX (0):$
+hl{f,3fff4acc,0} 353
+"hl{m,16,0,3fff4acc} 354
+hl{f,3fff4ae4,0} 355
+ hl{m,16,0,3fff4ae4} 356
+hl{f,3fff4ab4,0} 357
+ hl{m,16,0,3fff4ab4} 358
+hl{f,3fff4acc,0} 359
+ hl{m,16,0,3fff4acc} 360
+hl{f,3fff4acc,0} 361
+ hl{m,16,0,3fff4acc} 362
+hl{f,3fff4acc,0} 363
+ hl{m,16,0,3fff4acc} 364
+hl{f,3fff4acc,0} 365
+ hl{m,16,0,3fff4acc} 366
+hl{m,20,0,3fff59b4} 367
+hl{f,3fff59b4,0} 368
+ hl{f,3fff4acc,0} 369
+ hl{m,16,0,3fff4acc} 370
+hl{f,3fff4ab4,0} 371
+ hl{m,420,0,3fff6204} 372
+hl{m,16,0,3fff4ab4} 373
+hl{f,3fff4acc,0} 374
+ hl{m,16,0,3fff4acc} 375
+hl{f,3fff6204,0} 376
+ hl{f,3fff4acc,0} 377
+ hl{m,16,0,3fff4acc} 378
+hl{m,20,0,3fff537c} 379
+hl{m,420,0,3fff6204} 380
+hl{f,3fff537c,0} 381
+ hl{m,20,0,3fff537c} 382
+hl{f,3fff537c,0} 383
+ hl{f,3fff6204,0} 384
+ ASYNC RX (0):
+hl{m,20,0,3fff537c} 385
+#hl{m,100,0,3fff5f0c} 386
+#hl{f,3fff537c,0} 387
+ hl{f,3fff5f0c,0} 388
+ hl{f,3fff4acc,0} 389
+ hl{m,16,0,3fff4acc} 390
+#hl{m,20,0,3fff537c} 391
+#hl{f,3fff537c,0} 392
+ hl{m,20,0,3fff537c} 393
+#hl{f,3fff537c,0} 394
+ hl{m,20,0,3fff537c} 395
+#hl{f,3fff537c,0} 396
+ hl{f,3fff4acc,0} 397
+ hl{m,16,0,3fff4acc} 398
+#hl{f,3fff4acc,0} 399
+ hl{m,16,0,3fff4acc} 400
+#hl{f,3fff4ae4,0} 401
+ hl{m,16,0,3fff4ae4} 402
+#hl{f,3fff4ab4,0} 403
+ hl{m,100,0,3fff5f0c} 404
+#hl{m,16,0,3fff4ab4} 405
+#hl{f,3fff4acc,0} 406
+ hl{m,16,0,3fff4acc} 407
+#hl{f,3fff5f0c,0} 408
+ hl{f,3fff4acc,0} 409
+ hl{m,16,0,3fff4acc} 410
+#hl{f,3fff4acc,0} 411
+ hl{m,16,0,3fff4acc} 412
+#hl{f,3fff4acc,0} 413
+ hl{m,16,0,3fff4acc} 414
+#hl{f,3fff4acc,0} 415
+ hl{m,16,0,3fff4acc} 416
+#ip:192.168.0.102,mask:255.255.255.0,gw:192.168.0.1
+
+AP CONNECT'/' registered?HTTP server STARTED 192.168.0.102NTP client STARTEDDws                                           cli:wsCliStart()connect to: homea.herokuapp.com!wscli Connecting to Serverwscli                                            enc key string NAaXuJ9xVg8DDQ+/c83FCA==vrealloc 4 -> 134wrealloc 120 -> 273w
+hl{f,3fff4ab4,0} 417
+"hl{m,100,0,3fff5f0c} 418
+hl{m,49,0,3fff5f74} 419
+hl{f,3fff5f74,0} 420
+ hl{m,5,0,3fff531c} 421
+hl{f,3fff531c,0} 422
+ hl{m,16,0,3fff4ab4} 423
+hl{f,3fff4acc,0} 424
+ hl{m,16,0,3fff4acc} 425
+hl{f,3fff5f0c,0} 426
+ hl{m,36,0,3fff5a5c} 427
+hl{f,3fff4d5c,0} 428
+ hl{m,36,0,3fff5fdc} 429
+hl{m,384,0,3fff6204} 430
+hl{m,100,0,3fff638c} 431
+hl{m,128,0,3fff63f4} 432
+hl{f,3fff6204,0} 433
+ hl{m,384,0,3fff6204} 434
+hl{m,100,0,3fff647c} 435
+hl{m,128,0,3fff64e4} 436
+hl{f,3fff63f4,0} 437
+ hl{f,3fff6204,0} 438
+ hl{m,384,0,3fff656c} 439
+hl{m,100,0,3fff622c} 440
+hl{m,136,0,3fff6294} 441
+hl{f,3fff64e4,0} 442
+ hl{f,3fff656c,0} 443
+ hl{f,3fff638c,0} 444
+ hl{f,3fff647c,0} 445
+ hl{f,3fff622c,0} 446
+ hl{m,20,0,3fff52f4} 447
+hl{f,3fff52f4,0} 448
+ DNS record found: homea.herokuapp.com = 176.34.115.171TcpConnection::connect r                                           esult:, 0OnConnectedstaticOnConnected: useSSL: 1, Error: 0SSL: Show debug data .                                           ..LSSL: Starting connection...%SSL: Switching to 160 MHz.SSL: handshake start (5                                           6660 ms):550 malloc 6864, left 16544
+
+please start sntp first !
+hState: sending Client Hello (1)
+
+SSL: sending 52 bytes
+ax_port_write: send_raw_packet length 52(52)
+SSL: handshake is in progress...r
+hl{m,20,0,3fff52f4} 449
+hl{m,20,0,3fff6404} 450
+hl{f,3fff6294,0} 451
+ hl{f,3fff52f4,0} 452
+ hl{f,3fff6404,0} 453
+ hl{m,20,0,3fff52f4} 454
+hl{m,515,0,3fff65fc} 455
+hl{m,116,0,3fff6464} 456
+hl{m,24,0,3fff6404} 457
+hl{m,16,0,3fff6344} 458
+hl{f,3fff52f4,0} 459
+ hl{f,3fff65fc,0} 460
+ hl{f,3fff4acc,0} 461
+ hl{m,16,0,3fff4acc} 462
+hl{f,3fff6344,0} 463
+ hl{m,16,0,3fff52f4} 464
+hl{m,20,0,3fff6344} 465
+hl{f,3fff6464,0} 466
+ hl{f,3fff6404,0} 467
+ hl{m,40,0,3fff6464} 468
+hl{m,4,0,3fff4bcc} 469
+hl{m,180,0,3fff621c} 470
+hl{m,6864,0,3fff65fc} 471
+hl{m,316,0,3fff80d4} 472
+hl{m,500,0,3fff8214} 473
+hl{m,500,0,3fff840c} 474
+hl{m,1572,0,3fff8604} 475
+hl{m,24,0,3fff6404} 476
+hl{m,20,0,3fff6494} 477
+hl{f,3fff6344,0} 478
+ hl{f,3fff4acc,0} 479
+ hl{m,16,0,3fff4acc} 480
+TCP sent: 52SSL: received 5 bytes
+axl_ssl_read: Read bytes: 0
+_SSL: received 74 bytes
+State:  receiving Server Hello (2)
+
+please start sntp first !
+axl_ssl_read: Read bytes: 0
+_SSL: received 5 bytes
+axl_ssl_read: Read bytes: 0
+_SSL: received 1376 bytes
+axl_ssl_read: Read bytes: 0
+_SSL: received 1210 bytes
+State:  receiving Certificate (11)
+
+free 10102, left 14920
+
+$free 10102, left 14824
+
+$free 4143, left 14824
+
+$
+hl{m,20,0,3fff64ac} 481
+hl{m,20,0,3fff64c4} 482
+hl{f,3fff8604,0} 483
+ hl{f,3fff6404,0} 484
+ hl{f,3fff64ac,0} 485
+ hl{m,84,0,3fff6344} 486
+hl{f,3fff64c4,0} 487
+ hl{m,112,0,3fff8604} 488
+hl{m,20,0,3fff6404} 489
+hl{m,60,0,3fff62d4} 490
+hl{m,3,0,3fff641c} 491
+hl{f,3fff641c,0} 492
+ hl{m,13,0,3fff64ac} 493
+hl{m,17,0,3fff64c4} 494
+hl{m,39,0,3fff639c} 495
+hl{m,3,0,3fff641c} 496
+hl{f,3fff641c,0} 497
+ hl{m,11,0,3fff6314} 498
+hl{f,3fff6314,0} 499
+ hl{m,14,0,3fff63cc} 500
+hl{f,3fff63cc,0} 501
+ hl{m,13,0,3fff63cc} 502
+hl{m,16,0,3fff867c} 503
+hl{m,256,0,3fff8694} 504
+hl{m,3,0,3fff641c} 505
+hl{m,68,0,3fff879c} 506
+hl{m,16,0,3fff87e4} 507
+hl{m,8,0,3fff63e4} 508
+hl{m,40,0,3fff87fc} 509
+hl{m,16,0,3fff882c} 510
+hl{m,256,0,3fff8844} 511
+hl{m,16,0,3fff894c} 512
+:1072 realloc 1032, left 12120
+
+free 6d6f63, left 12096
+
+free 10102, left 12104
+
+free 10102, left 11688
+
+free 10102, left 11600
+
+
+hl{m,260,0,3fff8964} 513
+hl{m,16,0,3fff8a6c} 514
+hl{m,8,0,3fff6314} 515
+hl{m,516,0,3fff8a84} 516
+hl{m,16,0,3fff8c8c} 517
+hl{m,264,0,3fff8ca4} 518
+hl{m,16,0,3fff8db4} 519
+hl{m,260,0,3fff8dcc} 520
+hl{m,1032,0,3fff8ed4} 521
+hl{m,16,0,3fff8a84} 522
+hl{m,260,0,3fff8a9c} 523
+hl{f,3fff8694,0} 524
+ hl{f,3fff641c,0} 525
+ hl{m,20,0,3fff8ba4} 526
+hl{m,8,0,3fff6314} 527
+hl{m,16,0,3fff8bbc} 528
+hl{m,12,0,3fff6314} 529
+hl{m,14,0,3fff8bd4} 530
+hl{m,256,0,3fff8694} 531
+hl{m,60,0,3fff8bec} 532
+hl{m,3,0,3fff641c} 533
+hl{f,3fff641c,0} 534
+ hl{m,13,0,3fff8c2c} 535
+hl{m,17,0,3fff8c44} 536
+hl{m,35,0,3fff8c5c} 537
+hl{m,3,0,3fff641c} 538
+hl{f,3fff641c,0} 539
+ hl{m,13,0,3fff92e4} 540
+hl{m,17,0,3fff92fc} 541
+hl{m,39,0,3fff9314} 542
+hl{m,256,0,3fff9344} 543
+hl{m,3,0,3fff641c} 544
+:1072 realloc 1032, left 8848
+
+free 4143, left 8824
+
+free 10102, left 8832
+
+axl_ssl_read: Read bytes: 0
+_SSL: received 5 bytes
+axl_ssl_read: Read bytes: 0
+_SSL: received 4 bytes
+State:  receiving Server Hello Done (14)
+
+
+hl{m,68,0,3fff944c} 545
+8hl{m,16,0,3fff9494} 546
+8hl{m,8,0,3fff4d24} 547
+8hl{m,40,0,3fff94ac} 548
+8hl{m,16,0,3fff94dc} 549
+8hl{m,256,0,3fff94f4} 550
+8hl{m,16,0,3fff95fc} 551
+8hl{m,260,0,3fff9614} 552
+8hl{m,16,0,3fff971c} 553
+8hl{m,8,0,3fff9734} 554
+8hl{m,516,0,3fff9734} 555
+8hl{m,16,0,3fff993c} 556
+8hl{m,264,0,3fff9954} 557
+8hl{m,16,0,3fff9a64} 558
+8hl{m,260,0,3fff9a7c} 559
+8hl{m,1032,0,3fff9b84} 560
+8hl{m,16,0,3fff9734} 561
+8hl{m,260,0,3fff974c} 562
+8hl{f,3fff9344,0} 563
+ hl{f,3fff641c,0} 564
+ hl{m,20,0,3fff9854} 565
+8hl{m,256,0,3fff9344} 566
+8hl{m,4,0,3fff641c} 567
+8hl{m,16,0,3fff986c} 568
+8hl{m,256,0,3fff9f94} 569
+8hl{m,16,0,3fff9884} 570
+8hl{m,516,0,3fffa09c} 571
+8hl{m,16,0,3fff989c} 572
+8hl{m,512,0,3fffa2a4} 573
+8hl{m,16,0,3fff98b4} 574
+8hl{m,520,0,3fffa4ac} 575
+8hl{m,520,0,3fffa6bc} 576
+8:1072 realloc 1024, left 5832
+
+free 10102, left 5840
+
+free 2345d, left 6360
+
+free 3fff9f94, left 6384
+
+free 3fff8dcc, left 6648
+
+free a69ada76, left 6960
+
+free 3fff8ed4, left 7512
+
+free 3fffa09c, left 8568
+
+free 3fffa8cc, left 9120
+
+State: sending Client Key Exchange (16)
+
+SSL: sending 267 bytes
+ax_port_write: send_raw_packet length 267(267)
+.SSL: sending 6 bytes
+ax_port_write: send_raw_packet length 6(6)
+iState: sending Finished (16)
+
+free 2f6b7c93, left 7400
+
+9SSL: unencrypted write
+free 3fff8ed4, left 7400
+
+%SSL: sending 69 bytes
+ax_port_write: send_raw_packet length 69(69)
+ axl_ssl_read: Read bytes: 0
+_
+hl{m,1024,0,3fffa8cc} 577
+hl{f,3fff641c,0} 578
+ hl{f,3fffa09c,0} 579
+ hl{f,3fff9884,0} 580
+ hl{f,3fff8dcc,0} 581
+ hl{f,3fff8db4,0} 582
+ hl{f,3fff9f94,0} 583
+ hl{f,3fff986c,0} 584
+ hl{f,3fffa6bc,0} 585
+ hl{f,3fff8a84,0} 586
+ hl{f,3fffa8cc,0} 587
+ hl{f,3fff989c,0} 588
+ hl{f,3fffa4ac,0} 589
+ hl{f,3fff98b4,0} 590
+ hl{m,1572,0,3fff9f94} 591
+hl{m,24,0,3fff986c} 592
+hl{m,104,0,3fff988c} 593
+hl{m,39,0,3fff98fc} 594
+hl{f,3fff98fc,0} 595
+ hl{m,64,0,3fff8a84} 596
+hl{f,3fff8a84,0} 597
+ hl{f,3fff6404,0} 598
+ hl{f,3fff8604,0} 599
+ hl{m,20,0,3fff6404} 600
+hl{m,20,0,3fff98fc} 601
+hl{m,20,0,3fff9914} 602
+hl{f,3fff52f4,0} 603
+ hl{m,16,0,3fff52f4} 604
+hl{f,3fff4acc,0} 605
+ hl{m,120,0,3fff8a84} 606
+hl{m,16,0,3fff4acc} 607
+hl{f,3fff6404,0} 608
+ TCP sent: 342SSL: received 5 bytes
+axl_ssl_read: Read bytes: 0
+kSSL: received 1 bytes
+axl_ssl_read: Read bytes: 0
+kSSL: received 5 bytes
+axl_ssl_read: Read bytes: 0
+kSSL: received 64 bytes
+SSL: decrypted
+State:  receiving Finished (16)
+
+free 3fff9ff0, left 9240
+
+axl_ssl_read: Read bytes: 0
+kSSL: Handshake done (56965 ms).SSL: Switching back to 80 MHzTCP connectedkonRe                                           adyToSendData: 0free c2bc0937, left 9632
+
+free 99e5, left 9656
+
+free 2e707061, left 9680
+
+free 4143, left 9704
+
+free 8000, left 9728
+
+free 6d6f63, left 9992
+
+free 2345d, left 10016
+
+free 6a8af118, left 10040
+
+free 6d6f63, left 10064
+
+free 3fff8ba4, left 10080
+
+free fe180000, left 10096
+
+free 3fff8964, left 10384
+
+free d2d1b803, left 10408
+
+free 3fff8ca4, left 10680
+
+free 8418890, left 10704
+
+free 3fff8844, left 10968
+
+free 3fff879c, left 10992
+
+free 2345d, left 12032
+
+free d2d1b803, left 12056
+
+free 3c6e3e7b, left 12128
+
+free 3fff63e4, left 12176
+
+efree 1000, left 12240
+
+
+hl{f,3fff98fc,0} 609
+hl{f,3fff8a84,0} 610
+hl{f,3fff9914,0} 611
+hl{m,20,0,3fff6404} 612
+hl{f,3fff9f94,0} 613
+ hl{f,3fff986c,0} 614
+ hl{f,3fff988c,0} 615
+ hl{f,3fff80d4,0} 616
+ hl{f,3fff6404,0} 617
+ hl{f,3fff639c,0} 618
+ hl{f,3fff867c,0} 619
+ hl{f,3fff64ac,0} 620
+ hl{f,3fff63cc,0} 621
+ hl{f,3fff64c4,0} 622
+ hl{f,3fff8694,0} 623
+ hl{f,3fff8ba4,0} 624
+ hl{f,3fff8bbc,0} 625
+ hl{f,3fff8bd4,0} 626
+ hl{f,3fff6314,0} 627
+ hl{f,3fff63e4,0} 628
+ hl{f,3fff87e4,0} 629
+ hl{f,3fff8964,0} 630
+ hl{f,3fff894c,0} 631
+ hl{f,3fff8ca4,0} 632
+ hl{f,3fff8c8c,0} 633
+ hl{f,3fff8844,0} 634
+ hl{f,3fff882c,0} 635
+ hl{f,3fff8ed4,0} 636
+ hl{f,3fff8a6c,0} 637
+ hl{f,3fff879c,0} 638
+ hl{f,3fff87fc,0} 639
+ hl{f,3fff62d4,0} 640
+ free 6d6f632e, left 12280
+
+free 6d6f632e, left 12328
+
+free 3fff9854, left 12352
+
+free 4143, left 12688
+
+free 10cd48a6, left 12712
+
+free 6f632e70, left 12728
+
+free 3fff9614, left 13016
+
+free b6e02fc2, left 13040
+
+free 3fff9954, left 13312
+
+free 3fff94f4, left 13600
+
+free 3fff944c, left 13624
+
+free 19b756a0, left 14664
+
+free b6e02fc2, left 14688
+
+free 3fff9a7c, left 14952
+
+free 3fff974c, left 15240
+
+free 3fff9b84, left 15264
+
+free b4c91ef5, left 15336
+
+free 3fff4d24, left 15384
+
+efree 6b6f7265, left 22320
+
+:1423 malloc 17408 failed, left 22320
+
+r
+
+*RESET*
+
+
+
+Soft WDT reset
+
+
+
+ctx: sys
+
+sp: 3ffff1f0 end: 3fffffb0 offset: 01b0
+
+stack:
+
+3ffff3a0:  6c696166 202c6465 7466656c 0d642520
+
+3ffff3b0:  6500720a 2c782520 66656c20 64252074
+
+3ffff3c0:  00000a0d 03640843 3fff1194 40103f9c
+
+3ffff3d0:  3ffed860 00000001 00000000 00000000
+
+3ffff3e0:  4370678a d2739af0 c6f8bf10 c505002b
+
+3ffff3f0:  d62c3d58 80000000 00000000 00000000
+
+3ffff400:  00000000 00000000 00000000 00000000
+
+3ffff410:  00000000 00000000 00000000 000002a0
+
+3ffff420:  0b11b135 2eed35b6 21a901d0 9c29623c
+
+3ffff430:  f18211dd 435203a1 3852c479 e30426fb
+
+3ffff440:  90876528 2d7fe39e 855a4e57 195c0e28
+
+3ffff450:  5f43de30 4f4342ec 80a5a4ca 45491918
+
+3ffff460:  d256bb23 80000000 00000000 00000000
+
+3ffff470:  00000000 3fff944c 3fff9734 402557f0
+
+3ffff480:  3fff8bf8 3fff944c 3fff944c 40255954
+
+3ffff490:  bfccf5f5 3fff944c 3fff94ac 40257610
+
+3ffff4a0:  8c841997 00000000 3fff8bec 3fff621c
+
+3ffff4b0:  000000cd 00000000 3fff621c 4024a0f2
+
+3ffff4c0:  e1042258 3ffff630 000000cd 4024adb7
+
+3ffff4d0:  4022a1a1 00186a00 111ef003 518870f3
+
+3ffff4e0:  40252948 4ff4df6c 18065f03 00000003
+
+3ffff4f0:  000000cd 3fff2f2c 00000000 4024f190
+
+3ffff500:  1b3a22b9 00c3b710 781045d6 6c0de29e
+
+3ffff510:  b3694bcb 355187b8 17556e75 f520a15a
+
+3ffff520:  66a18a80 50cd01b6 e292fa18 99221fdd
+
+3ffff530:  e8be2c37 6cfe50f7 cd9393e8 95b11d09
+
+3ffff540:  d2eb7a30 e3218fa1 78b5d219 252a0196
+
+3ffff550:  5f470c51 a8754819 329aed17 de376368
+
+3ffff560:  fd5a8563 30a8f9ba 595ccebd 5b5997be
+
+3ffff570:  95849468 10cd96b4 ed7726e2 7a46cb50
+
+3ffff580:  8f9377fc 37a8a2de 09d1b74a b32b539a
+
+3ffff590:  905830fb e2e1063c 02514b2c 4025758b
+
+3ffff5a0:  00000040 00000047 3ffff6d0 3ffff5c0
+
+3ffff5b0:  00000047 00000018 3ffff6d0 40256ae8
+
+3ffff5c0:  76b10539 01fb0ca5 5d1828b1 04881af5
+
+3ffff5d0:  ee3e30f3 00000000 00000000 00000000
+
+3ffff5e0:  00000000 00000000 00000000 00000000
+
+3ffff5f0:  00000000 00000000 00000000 00000000
+
+3ffff600:  3ffff630 00000000 00000000 00000000
+
+3ffff610:  00000000 00000000 00000000 3fff632c
+
+3ffff620:  3fff2f2c 00000001 00000000 4024fa4f
+
+3ffff630:  20544547 5448202f 312f5054 0a0d312e
+
+3ffff640:  6e6e6f43 69746365 203a6e6f 72677055
+
+3ffff650:  0d656461 6770550a 65646172 6557203a
+
+3ffff660:  636f5362 0d74656b 69724f0a 3a6e6967
+
+3ffff670:  6c696620 2f2f3a65 6f480a0d 203a7473
+
+3ffff680:  656d6f68 65682e61 756b6f72 2e707061
+
+3ffff690:  0d6d6f63 6365530a 6265572d 6b636f53
+
+3ffff6a0:  4b2d7465 203a7965 5861414e 78394a75
+
+3ffff6b0:  44386756 2f2b5144 46333863 3d3d4143
+
+3ffff6c0:  65530a0d 65572d63 636f5362 2d74656b
+
+3ffff6d0:  746f7250 6c6f636f 6863203a 0a0d7461
+
+3ffff6e0:  2d636553 53626557 656b636f 65562d74
+
+3ffff6f0:  6f697372 31203a6e 0d0a0d33 944b390a
+
+3ffff700:  6161f15e 2dc0c3bf d27adef1 5094d495
+
+3ffff710:  3ff57e81 e77a8d4a 20123cfa 53db603b
+
+3ffff720:  9ee0556b 8f852b6a 5c5c5c5c 3ffffa20
+
+3ffff730:  3fff81b4 3fff819c 00000047 4024a034
+
+3ffff740:  4d0817bf 7a3fdfc2 d5395029 514902a1
+
+3ffff750:  42bdaac9 6620746e 73696e69 1a646568
+
+3ffff760:  3a60b2e4 2ed0daea aa253a74 6f97a035
+
+3ffff770:  122969c4 eda89d05 9f68c0e6 5c768b55
+
+3ffff780:  36060153 36363636 36363636 36363636
+
+3ffff790:  3ffff9c0 afd280e1 36363636 36363636
+
+3ffff7a0:  00000000 00000000 00000000 00000000
+
+3ffff7b0:  00000000 00000000 00000000 00000000
+
+3ffff7c0:  37000000 00303034 956324d6 65c4e94c
+
+3ffff7d0:  1ea0d20c 53ec02c7 c1921443 e8b58afe
+
+3ffff7e0:  00000000 00000000 00000000 00000000
+
+3ffff7f0:  00000000 00393600 00000000 00000000
+
+3ffff800:  00000045 00000006 3ffff7f5 00000001
+
+3ffff810:  00000000 00303034 3adc8500 b77d9bfd
+
+3ffff820:  00001ce8 00000007 3ffff813 3ffff9f0
+
+3ffff830:  3ffffa3a 3ffff8b0 3ffff8d9 40246ad4
+
+3ffff840:  00000000 00000000 00000000 00000000
+
+3ffff850:  00000000 00000000 00000000 00000000
+
+3ffff860:  39000000 00303432 a26344ab 16800000
+
+3ffff870:  00002418 00000009 3ffff863 00000001
+
+3ffff880:  00000000 045a89de 7e1a0f20 ab9550cd
+
+3ffff890:  0c121ab6 073a4f12 e1284223 3ffffa60
+
+3ffff8a0:  3ffffa8f 3ffff920 3ffff934 40246ad4
+
+3ffff8b0:  30343239 30666600 c4234f00 f42ff968
+
+3ffff8c0:  d5c70a2a 72d92ba6 700e9aa9 d3af0a21
+
+3ffff8d0:  7c60582b e5297d50 73c9ab32 ded4c3de
+
+3ffff8e0:  3ffffa60 3ffffa50 00000004 3ffffa50
+
+3ffff8f0:  00000100 0000000c 0ee7414e 98404a75
+
+3ffff900:  944b398b 6161f15e 2dc0c3bf 00000010
+
+3ffff910:  3ffe836c 3ffffa80 00000000 40246ba2
+
+3ffff920:  00000000 00000000 00000000 00000000
+
+3ffff930:  00000000 00000000 00000000 00000000
+
+3ffff940:  00000000 00300000 00000000 00000000
+
+3ffff950:  00000000 00000000 00000000 00000000
+
+3ffff960:  00000000 00000000 00000000 000002a0
+
+3ffff970:  5e84f715 53b41382 52e6688e 3ffffb40
+
+3ffff980:  3ffffb74 3ffffa00 3ffffa13 40246ad4
+
+3ffff990:  f6900030 c7c11214 29a3a72b dd7402ab
+
+3ffff9a0:  49b59a72 18dee92d 6748de6d b86c6097
+
+3ffff9b0:  c458754f d62f257f 4064e03e 4995d77b
+
+3ffff9c0:  3ffffb40 3ffffb30 00000004 3ffffb30
+
+3ffff9d0:  00000100 00000008 0000000c 3ffffb90
+
+3ffff9e0:  00000100 2c220cfc b9f01977 3fff6404
+
+3ffff9f0:  3ffe836c 00000000 00000000 40246ba2
+
+3ffffa00:  65526e6f 54796461 6e65536f 74614464
+
+3ffffa10:  30203a61 63656400 74707972 000a6465
+
+3ffffa20:  3ffffa60 3ffffa50 00000004 d8f0ed3a
+
+3ffffa30:  00000000 00000000 00000000 00000000
+
+3ffffa40:  00000000 00000000 00000000 00000000
+
+3ffffa50:  00000000 00300000 3fff80d4 40247b5c
+
+3ffffa60:  00000000 00000000 c7219a8a 40104ebe
+
+3ffffa70:  00000014 00000000 3fff80c8 40254c87
+
+3ffffa80:  65657266 2c782520 66656c20 3ffffc50
+
+3ffffa90:  3ffffc8b 3ffffb10 3ffffb2a 40246ad4
+
+3ffffaa0:  30b70030 6fec4221 13d84ab7 ba6955ec
+
+3ffffab0:  3ffffb10 3ffffb00 0000000c 3ffffb00
+
+3ffffac0:  00000050 00000000 00000000 00000000
+
+3ffffad0:  3ffffc50 3ffffc40 00000004 3ffffc40
+
+3ffffae0:  3ffffc60 3ffffc50 00000004 3ffffc50
+
+3ffffaf0:  00000100 0000000a 0000000c 3fff4e0c
+
+3ffffb00:  3ffffb40 3ffffb30 00000004 3fff6404
+
+3ffffb10:  3fff4bd4 00000000 00000000 40246c00
+
+3ffffb20:  3ffffb40 3ffffb30 00000004 40006b64
+
+3ffffb30:  00000000 00000000 4023fe15 000000cd
+
+3ffffb40:  3ffffb75 00000064 4510eac3 3fff6404
+
+3ffffb50:  3fff4bd4 00000000 3fff2f2c 4025944e
+
+3ffffb60:  65526e6f 54796461 6e65536f 74614464
+
+3ffffb70:  25203a61 00000064 00000000 00000000
+
+3ffffb80:  00000000 00000000 00000000 00000000
+
+3ffffb90:  36350000 00353639 3fff621c 4024bb7c
+
+3ffffba0:  0000de85 00000005 3ffffb92 00000001
+
+3ffffbb0:  00000000 3ffffbd0 00000004 4024aafd
+
+3ffffbc0:  3ffead30 0000000e 00000014 3ffffd90
+
+3ffffbd0:  3ffffdc6 3ffffc50 3ffffc65 40246ad4
+
+3ffffbe0:  36393635 00000035 3fff6611 00000010
+
+3ffffbf0:  00000014 3fff6611 3fff621c 4024b5d4
+
+3ffffc00:  f455b730 2142ec6f b74ad813 ec5569ba
+
+3ffffc10:  3ffffd90 3ffffd80 00000004 3ffffd80
+
+3ffffc20:  3ffffc60 3ffffc50 00000004 40246c00
+
+3ffffc30:  3fff4bd4 00000000 3fff2f2c 40246c00
+
+3ffffc40:  3ffffc60 3ffffc50 00000004 40246ba2
+
+3ffffc50:  3a4c5353 4023fe41 4023fe41 00000064
+
+3ffffc60:  3ffffc8d 00000064 3fff2f2c 40259678
+
+3ffffc70:  3fff4bd4 00000000 3fff2f2c 4024f3c1
+
+3ffffc80:  20504354 6e6e6f63 65746365 40006b64
+
+3ffffc90:  667b6c68 6666332c 30343666 7d302c34
+
+3ffffca0:  38303620 0a00200a 00000000 3fff621c
+
+3ffffcb0:  3ffffcd0 3ffffcc0 0000000c 00000000
+
+3ffffcc0:  00000000 00000000 00000000 4022b3bf
+
+3ffffcd0:  00000000 00000000 0000001f 40100829
+
+3ffffce0:  4000050c 3ffffd00 00000004 4022b3bf
+
+3ffffcf0:  4022ca35 00000030 00000018 ffffffff
+
+3ffffd00:  3fff070c 00000000 00000001 00000000
+
+3ffffd10:  3fff8ada 3fff8a84 3fff0610 00000000
+
+3ffffd20:  00000003 00000001 00000003 3fff18c8
+
+3ffffd30:  3fff5a94 3fff8a84 3fff5e87 00000030
+
+3ffffd40:  3ffecfb2 4022a88a 3fff0764 3fff5e87
+
+3ffffd50:  3ffffd90 3ffffd80 00000004 3fff9f94
+
+3ffffd60:  3fff4bd4 3fff2f2c 3ffffdb0 40246c00
+
+3ffffd70:  3ffffd90 3ffffd80 00000004 40247b5c
+
+3ffffd80:  4020fd8d 00000000 3fff2f2c 402595c4
+
+3ffffd90:  3ffffdcd 3fff2f2c 3ffffdb0 40251a2b
+
+3ffffda0:  3fff4bd4 3fff2f2c 3ffffdb0 4024f930 <
+
+3ffffdb0:  3a4c5353 69775320 69686374 6220676e
+
+3ffffdc0:  206b6361 38206f74 484d2030 4000007a
+
+3ffffdd0:  00000001 ffffffff 00000000 3ffed101
+
+3ffffde0:  3ffecb70 40102cae 00000001 00000000
+
+3ffffdf0:  00000000 40102a7f 00000000 3ffecb40
+
+3ffffe00:  00000005 00000000 00000020 40103116
+
+3ffffe10:  3ffecfb5 40102983 3fff0a7c 40103116
+
+3ffffe20:  40103e0d 3fff0a7c 3ffecb70 3fff5d3c
+
+3ffffe30:  00007fff 036525db 3fff1194 40103f9c
+
+3ffffe40:  3ffed848 00000000 00000000 3ffffed0
+
+3ffffe50:  00000000 3fff9f94 401043b7 00000100
+
+3ffffe60:  00000000 3fff986c 00000aa8 402476e8
+
+3ffffe70:  3fff24ac 000009c3 000009c3 402476e8
+
+3ffffe80:  3fff986c 3fff24ec 3fff986c 40247b5c
+
+3ffffe90:  4000050c 3fffc278 00000001 40104ebe
+
+3ffffea0:  3fff986c 3fff24ec 3fff986c 40218aed
+
+3ffffeb0:  40000091 3fff24f8 3fff4bd4 4021e6c5
+
+3ffffec0:  3fff6404 3fff2f2c 3fff2f2c 4025971e
+
+3ffffed0:  3ffecb70 3fff0898 3fff496c 00000018
+
+3ffffee0:  3fff24e4 3fff4bd4 3fff24e0 4021f230
+
+3ffffef0:  00000000 3fffdcc0 3ffed090 40104e8c
+
+3fffff00:  00000000 00000024 00000002 3fff4968
+
+3fffff10:  3ffee53e 3fff496c 3fff6404 4021dae9
+
+3fffff20:  002c4288 3fff5e54 3fff5e54 3fff18c8
+
+3fffff30:  00000000 3fff6404 0000001c 3fff5e9c
+
+3fffff40:  3fff6404 3fff5e54 3ffee530 4021b6a5
+
+3fffff50:  3ffee514 000000a9 00000000 0000001f
+
+3fffff60:  00000002 0000001a 4022ad3b 3fff0a7c
+
+3fffff70:  3ffee508 3fffdcc0 3ffed098 3ffed098
+
+3fffff80:  4022acae 3fff0a7c 3fffdab0 3fff5e9c
+
+3fffff90:  3fffdc80 00000000 3fff6404 4021360b
+
+3fffffa0:  40000f49 3fffdab0 ffffff01 55aa55aa
+
+state: 5 -> 0 (0)
+
+rm 0
+
+tcp_abandon: sending RST
+
+hl{f,3fff8c5c,0} 641
+hl{f,3fff9314,0} 642
+hl{f,3fff8c2c,0} 643
+hl{f,3fff92e4,0} 644
+hl{f,3fff8c44,0} 645
+hl{f,3fff92fc,0} 646
+hl{f,3fff9344,0} 647
+hl{f,3fff9854,0} 648
+hl{f,3fff4d24,0} 649
+hl{f,3fff9494,0} 650
+hl{f,3fff9614,0} 651
+hl{f,3fff95fc,0} 652
+hl{f,3fff9954,0} 653
+hl{f,3fff993c,0} 654
+hl{f,3fff94f4,0} 655
+hl{f,3fff94dc,0} 656
+hl{f,3fff9b84,0} 657
+hl{f,3fff971c,0} 658
+hl{f,3fff9a7c,0} 659
+hl{f,3fff9a64,0} 660
+hl{f,3fff974c,0} 661
+hl{f,3fff9734,0} 662
+hl{f,3fff944c,0} 663
+hl{f,3fff94ac,0} 664
+hl{f,3fff8bec,0} 665
+hl{f,3fff65fc,0} 666
+hl{m,25,0,3fff6404} 667
+hl{f,3fff6404,0} 668
+ hl{m,9,0,3fff4d24} 669
+hl{f,3fff4d24,0} 670
+ hl{m,420,0,3fff65fc} 671
+hl{f,3fff65fc,0} 672
+ tcp_rst: seqno 6905 ackno 1381586404.
+wscli TCP Connection Reseted or Aborted -8`wscli Tcp Client failure...wscli:WsC                                           li Disconnected. Reconnecting ..Fatal exception 29(StoreProhibitedCause):
+
+epc1=0x4000dfa9, epc2=0x00000000, epc3=0x00000000, excvaddr=0x00000000, depc=0x0                                           0000000
+
+
+
+*RESET*
+
+                                           
