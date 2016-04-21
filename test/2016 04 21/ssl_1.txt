@@ -1,0 +1,1578 @@
+libDHT: Detected DHT-22 compatible sensor.
+DEV 4 is DIS
+
+PREGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+˙(00): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(10): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(20): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(30): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(40): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(50): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(60): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(70): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 40
+Loading dev DEV_0, 159 bytes
+Type: TH
+eTH device: 0;Dormitor;21.5;15.0;27.0;0;1;1;1;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;0;0;0;0;0;0;0;19.2;62.0;19.1;0.0;62.1;0.0;
+fTH device ID:0 NAME: Dormitor
+iAdd watcher ID:1
+MAdded device.
+,Loading dev DEV_1, 44 bytes
+Type:HEATER
+%HEATER device ID:1 NAME: Centrala
+Add watcher ID:0
+dAdded device.
+,Reset:
+REASON_DEFAULT_RST
+
+Chip id=10502778
+
+
+RFlash id=1261768
+
+
+RMem info:
+
+
+
+data  : 0x3ffe8000 ~ 0x3ffe843a, len: 1082
+
+rodata: 0x3ffe8440 ~ 0x3ffec5a0, len: 16736
+
+bss   : 0x3ffec5a0 ~ 0x3fff4288, len: 31976
+
+heap  : 0x3fff4288 ~ 0x3fffc000, len: 32120
+
+
+hlog_param:{"heap_start":0x3fff4288, "heap_end":0x3fffc000}
+TStation configuration was updated to: AndroidHotspot4594
+mode :
+hl{m,36,0,3fff4294} 1
+hl{m,16,0,3fff42bc} 2
+hl{m,16,0,3fff42d4} 3
+hl{m,16,0,3fff42ec} 4
+hl{m,16,0,3fff4304} 5
+hl{m,16,0,3fff431c} 6
+hl{m,16,0,3fff4334} 7
+hl{m,32,0,3fff434c} 8
+hl{z,756,0,3fff4374} 9
+hl{z,212,0,3fff466c} 10
+hl{f,3fff466c,0} 11
+hl{f,3fff4374,0} 12
+hl{m,49,0,3fff4374} 13
+hl{f,3fff4374,0} 14
+hl{m,29,0,3fff4374} 15
+hl{f,3fff4374,0} 16
+hl{z,28,0,3fff4374} 17
+hl{f,3fff4374,0} 18
+hl{m,172,0,3fff440c} 19
+hl{m,172,0,3fff4594} 20
+hl{m,33,0,3fff4b34} 21
+hl{f,3fff4b34,0} 22
+hl{m,33,0,3fff4b34} 23
+hl{f,3fff4b34,0} 24
+hl{m,33,0,3fff4b34} 25
+hl{f,3fff4b34,0} 26
+hl{m,33,0,3fff4b34} 27
+hl{f,3fff4b34,0} 28
+hl{m,1156,0,3fff5294} 29
+hl{f,3fff5294,0} 30
+hl{m,9,0,3fff4b54} 31
+hl{f,3fff4b54,0} 32
+hl flush 32 - remains 27960
+sta(18:fe:34:a0:42:7a)
+
+add if0
+
+f r0,
+hl{m,5,0,3fff4b54} 33
+hl{f,3fff4b54,0} 34
+hl{m,33,0,3fff52cc} 35
+hl{f,3fff52cc,0} 36
+hl{z,672,0,3fff52cc} 37
+hl{z,272,0,3fff5574} 38
+hl{m,5,0,3fff4b54} 39
+hl{f,3fff4b54,0} 40
+hl{m,68,0,3fff568c} 41
+hl{f,3fff434c,0} 42
+hl{m,32,0,3fff434c} 43
+hl{m,80,0,3fff56d4} 44
+hl{m,20,0,3fff572c} 45
+hl{m,13,0,3fff5744} 46
+hl{f,3fff5744,0} 47
+hl{m,9,0,3fff4b54} 48
+hl{f,3fff4b54,0} 49
+hl{m,44,0,3fff5744} 50
+hl{m,12,0,3fff4b54} 51
+hl{z,28,0,3fff5774} 52
+hl{m,76,0,3fff5794} 53
+hl{f,3fff4b54,0} 54
+hl{f,3fff5774,0} 55
+hl{f,3fff5794,0} 56
+hl{f,3fff5744,0} 57
+hl{f,3fff4304,0} 58
+hl{m,16,0,3fff4304} 59
+hl{f,3fff4334,0} 60
+hl{f,3fff4304,0} 61
+hl{m,16,0,3fff4304} 62
+hl{f,3fff4304,0} 63
+hl{m,16,0,3fff4304} 64
+hl flush 64 - remains 26880
+Ě#M 0>1/4013 !E 1 5 3fff4294
+#M 1>6/4008 !E 6 3 3fff42bc
+#M 2>9/4005 !E 9 3 3fff42d4
+#M 3>12/4002 !E 12 3 3fff42ec
+#M 4>15/3999 !E 15 3 3fff4304
+#M 5>18/3996 !E 18 3 3fff431c
+#M 6>21/3993 !E 21 3 3fff4334
+#M 7>24/3990 !E 24 5 3fff434
+hl{f,3fff4304,0} 65
+hl{m,16,0,3fff4304} 66
+hl{f,3fff42ec,0} 67
+hl{m,16,0,3fff42ec} 68
+hl{f,3fff4304,0} 69
+hl{m,16,0,3fff4304} 70
+hl{f,3fff4304,0} 71
+hl{m,16,0,3fff4304} 72
+hl{f,3fff4304,0} 73
+hl{m,16,0,3fff4304} 74
+hl{f,3fff4304,0} 75
+hl{m,16,0,3fff4304} 76
+hl{f,3fff4304,0} 77
+hl{m,16,0,3fff4304} 78
+hl{f,3fff431c,0} 79
+hl{m,16,0,3fff431c} 80
+hl{f,3fff42ec,0} 81
+hl{m,16,0,3fff42ec} 82
+hl{f,3fff4304,0} 83
+hl{m,16,0,3fff4304} 84
+hl{f,3fff4304,0} 85
+hl{m,16,0,3fff4304} 86
+hl{f,3fff4304,0} 87
+hl{m,16,0,3fff4304} 88
+hl{f,3fff4304,0} 89
+hl{m,16,0,3fff4304} 90
+hl{f,3fff4304,0} 91
+hl{m,16,0,3fff4304} 92
+hl{f,3fff42ec,0} 93
+hl{m,16,0,3fff42ec} 94
+hl{f,3fff4304,0} 95
+hl{m,16,0,3fff4304} 96
+hl flush 96 - remains 26880
+/
+hl{f,3fff4304,0} 97
+hl{m,16,0,3fff4304} 98
+hl{f,3fff4304,0} 99
+hl{m,16,0,3fff4304} 100
+hl{f,3fff4304,0} 101
+hl{m,16,0,3fff4304} 102
+hl{f,3fff4304,0} 103
+hl{m,16,0,3fff4304} 104
+hl{f,3fff431c,0} 105
+hl{m,16,0,3fff431c} 106
+hl{f,3fff42ec,0} 107
+hl{m,16,0,3fff42ec} 108
+hl{f,3fff4304,0} 109
+hl{m,16,0,3fff4304} 110
+hl{f,3fff4304,0} 111
+hl{m,16,0,3fff4304} 112
+hl{f,3fff4304,0} 113
+hl{m,16,0,3fff4304} 114
+hl{f,3fff4304,0} 115
+hl{m,16,0,3fff4304} 116
+hl{f,3fff4304,0} 117
+hl{m,16,0,3fff4304} 118
+hl{f,3fff42ec,0} 119
+hl{m,16,0,3fff42ec} 120
+hl{f,3fff4304,0} 121
+hl{m,16,0,3fff4304} 122
+hl{f,3fff4304,0} 123
+hl{m,16,0,3fff4304} 124
+hl{f,3fff4304,0} 125
+hl{m,16,0,3fff4304} 126
+hl{f,3fff4304,0} 127
+hl{m,16,0,3fff4304} 128
+hl flush 128 - remains 26832
+˙
+hl{m,44,0,3fff5744} 129
+hl{m,12,0,3fff4b54} 130
+hl{z,28,0,3fff5774} 131
+hl{m,76,0,3fff5794} 132
+hl{f,3fff4b54,0} 133
+hl{f,3fff5774,0} 134
+hl{f,3fff5794,0} 135
+hl{f,3fff5744,0} 136
+hl{f,3fff4304,0} 137
+hl{m,16,0,3fff4304} 138
+hl{m,44,0,3fff5744} 139
+hl{m,12,0,3fff4b54} 140
+hl{z,28,0,3fff5774} 141
+hl{m,76,0,3fff5794} 142
+hl{f,3fff4b54,0} 143
+hl{f,3fff5774,0} 144
+hl{f,3fff5794,0} 145
+hl{f,3fff5744,0} 146
+hl{f,3fff431c,0} 147
+hl{m,16,0,3fff431c} 148
+hl{f,3fff42ec,0} 149
+hl{m,16,0,3fff42ec} 150
+hl{f,3fff4304,0} 151
+hl{m,16,0,3fff4304} 152
+hl{f,3fff4304,0} 153
+hl{m,16,0,3fff4304} 154
+hl{m,44,0,3fff5744} 155
+hl{m,12,0,3fff4b54} 156
+hl{z,28,0,3fff5774} 157
+hl{m,76,0,3fff5794} 158
+hl{f,3fff4b54,0} 159
+hl{f,3fff5774,0} 160
+hl flush 160 - remains 26752
+
+hl{f,3fff5794,0} 161
+hl{f,3fff5744,0} 162
+hl{f,3fff4304,0} 163
+hl{m,16,0,3fff4304} 164
+hl{m,44,0,3fff5744} 165
+hl{m,12,0,3fff4b54} 166
+hl{z,28,0,3fff5774} 167
+hl{m,76,0,3fff5794} 168
+hl{f,3fff4b54,0} 169
+hl{f,3fff5774,0} 170
+hl{f,3fff5794,0} 171
+hl{f,3fff5744,0} 172
+hl{f,3fff4304,0} 173
+hl{m,16,0,3fff4304} 174
+hl{f,3fff4304,0} 175
+hl{m,16,0,3fff4304} 176
+hl{m,44,0,3fff5744} 177
+hl{m,12,0,3fff4b54} 178
+hl{z,28,0,3fff5774} 179
+hl{m,76,0,3fff5794} 180
+hl{f,3fff4b54,0} 181
+hl{f,3fff5774,0} 182
+hl{f,3fff5794,0} 183
+hl{f,3fff5744,0} 184
+hl{f,3fff42ec,0} 185
+hl{m,16,0,3fff42ec} 186
+hl{f,3fff4304,0} 187
+hl{m,16,0,3fff4304} 188
+hl{m,44,0,3fff5744} 189
+hl{m,12,0,3fff4b54} 190
+hl{z,28,0,3fff5774} 191
+hl{m,76,0,3fff5794} 192
+hl flush 192 - remains 26704
+ASYNC RX (0):
+
+hl{f,3fff4b54,0} 193
+hl{f,3fff5774,0} 194
+hl{f,3fff5794,0} 195
+hl{f,3fff5744,0} 196
+hl{f,3fff4304,0} 197
+hl{m,16,0,3fff4304} 198
+hl{m,44,0,3fff5744} 199
+hl{m,12,0,3fff4b54} 200
+hl{z,28,0,3fff5774} 201
+hl{m,76,0,3fff5794} 202
+hl{f,3fff4b54,0} 203
+hl{f,3fff5774,0} 204
+hl{f,3fff5794,0} 205
+hl{f,3fff5744,0} 206
+hl{f,3fff4304,0} 207
+hl{m,16,0,3fff4304} 208
+hl{f,3fff4304,0} 209
+hl{m,16,0,3fff4304} 210
+hl{m,44,0,3fff5744} 211
+hl{m,12,0,3fff4b54} 212
+hl{z,28,0,3fff5774} 213
+hl{m,76,0,3fff5794} 214
+hl{f,3fff4b54,0} 215
+hl{f,3fff5774,0} 216
+hl{f,3fff5794,0} 217
+hl{f,3fff5744,0} 218
+hl{f,3fff4304,0} 219
+hl{m,16,0,3fff4304} 220
+hl{m,44,0,3fff5744} 221
+hl{m,12,0,3fff4b54} 222
+hl{z,28,0,3fff5774} 223
+hl{m,76,0,3fff5794} 224
+hl flush 224 - remains 26704
+
+hl{f,3fff4b54,0} 225
+hl{f,3fff5774,0} 226
+hl{f,3fff5794,0} 227
+hl{f,3fff5744,0} 228
+hl{f,3fff431c,0} 229
+hl{m,16,0,3fff431c} 230
+hl{f,3fff42ec,0} 231
+hl{m,16,0,3fff42ec} 232
+hl{f,3fff4304,0} 233
+hl{m,16,0,3fff4304} 234
+hl{m,44,0,3fff5744} 235
+hl{m,12,0,3fff4b54} 236
+hl{z,28,0,3fff5774} 237
+hl{m,76,0,3fff5794} 238
+hl{f,3fff4304,0} 239
+hl{m,16,0,3fff4304} 240
+hl{f,3fff4b54,0} 241
+hl{f,3fff5774,0} 242
+hl{f,3fff5794,0} 243
+hl{f,3fff5744,0} 244
+hl{f,3fff4304,0} 245
+hl{m,16,0,3fff4304} 246
+hl{m,44,0,3fff5744} 247
+hl{m,12,0,3fff4b54} 248
+hl{z,28,0,3fff5774} 249
+hl{m,76,0,3fff5794} 250
+hl{f,3fff4b54,0} 251
+hl{f,3fff5774,0} 252
+hl{f,3fff5794,0} 253
+hl{f,3fff5744,0} 254
+hl{f,3fff4304,0} 255
+hl{m,16,0,3fff4304} 256
+hl flush 256 - remains 26832
+ASYNC RX (0):
+?scandone
+
+state: 0 -> 2 (b0)
+
+state: 2 -> 3 (0)
+
+
+hl{m,44,0,3fff5744} 257
+hl{m,12,0,3fff4b54} 258
+hl{z,28,0,3fff5774} 259
+hl{m,76,0,3fff5794} 260
+hl{f,3fff4b54,0} 261
+hl{f,3fff5774,0} 262
+hl{f,3fff5794,0} 263
+hl{f,3fff5744,0} 264
+hl{f,3fff4304,0} 265
+hl{m,16,0,3fff4304} 266
+hl{f,3fff42ec,0} 267
+hl{m,16,0,3fff42ec} 268
+hl{f,3fff4304,0} 269
+hl{m,16,0,3fff4304} 270
+hl{m,44,0,3fff5744} 271
+hl{m,12,0,3fff4b54} 272
+hl{z,28,0,3fff5774} 273
+hl{m,76,0,3fff5794} 274
+hl{f,3fff4b54,0} 275
+hl{f,3fff5774,0} 276
+hl{f,3fff5794,0} 277
+hl{f,3fff5744,0} 278
+hl{f,3fff4304,0} 279
+hl{m,16,0,3fff4304} 280
+hl{m,13,0,3fff4334} 281
+hl{f,3fff4334,0} 282
+hl{m,25,0,3fff5744} 283
+hl{f,3fff5744,0} 284
+hl{m,25,0,3fff5744} 285
+hl{f,3fff5744,0} 286
+hl{m,44,0,3fff5744} 287
+hl{m,12,0,3fff4b54} 288
+hl flush 288 - remains 26784
+7state: 3 -> 5 (10)
+
+add 0
+
+aid 1
+
+cnt
+
+
+
+connected with AndroidHotspot4594, channel 6
+
+dhcp client start...
+
+
+hl{z,28,0,3fff5774} 289
+hl{m,208,0,3fff5794} 290
+hl{f,3fff4b54,0} 291
+hl{f,3fff5774,0} 292
+hl{f,3fff5794,0} 293
+hl{f,3fff5744,0} 294
+hl{m,25,0,3fff5744} 295
+hl{f,3fff5744,0} 296
+hl{m,9,0,3fff4b54} 297
+hl{f,3fff4b54,0} 298
+hl{m,9,0,3fff4b54} 299
+hl{f,3fff4b54,0} 300
+hl{m,9,0,3fff4b54} 301
+hl{f,3fff4b54,0} 302
+hl{f,3fff4304,0} 303
+hl{m,16,0,3fff4304} 304
+hl{m,312,0,3fff5744} 305
+hl{f,3fff5744,0} 306
+hl{m,312,0,3fff5744} 307
+hl{m,160,0,3fff5884} 308
+hl{m,160,0,3fff592c} 309
+hl{m,33,0,3fff59d4} 310
+hl{f,3fff59d4,0} 311
+hl{m,25,0,3fff59d4} 312
+hl{f,3fff59d4,0} 313
+hl{m,60,0,3fff59d4} 314
+hl{m,36,0,3fff5a14} 315
+hl{m,420,0,3fff5a3c} 316
+hl{f,3fff5744,0} 317
+hl{f,3fff5a3c,0} 318
+hl{f,3fff4304,0} 319
+hl{m,16,0,3fff4304} 320
+hl flush 320 - remains 26440
+
+rtc time init...
+ 0: 0:23 Dormitor H:36.20(0.0) T:21.90(0.0 0.0)/25.5 SetPt:21.50 needHeat:0
+ZHEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:0 isSync:0 state:0
+pHEATER(1) TX: OFF
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{f,3fff4304,0} 321
+hl{m,16,0,3fff4304} 322
+hl{f,3fff42bc,0} 323
+hl{m,16,0,3fff42bc} 324
+hl{f,3fff431c,0} 325
+hl{m,16,0,3fff431c} 326
+hl{f,3fff42ec,0} 327
+hl{m,16,0,3fff42ec} 328
+hl{f,3fff4304,0} 329
+hl{m,16,0,3fff4304} 330
+hl{f,3fff4304,0} 331
+hl{m,16,0,3fff4304} 332
+hl{f,3fff4304,0} 333
+hl{m,16,0,3fff4304} 334
+hl{f,3fff4304,0} 335
+hl{m,16,0,3fff4304} 336
+hl{f,3fff4304,0} 337
+hl{m,16,0,3fff4304} 338
+hl{f,3fff42ec,0} 339
+hl{m,16,0,3fff42ec} 340
+hl{f,3fff4304,0} 341
+hl{m,16,0,3fff4304} 342
+hl{f,3fff4304,0} 343
+hl{m,16,0,3fff4304} 344
+hl{f,3fff4304,0} 345
+hl{m,16,0,3fff4304} 346
+hl{f,3fff4304,0} 347
+hl{m,16,0,3fff4304} 348
+hl{f,3fff4304,0} 349
+hl{m,16,0,3fff4304} 350
+hl{f,3fff431c,0} 351
+hl{m,16,0,3fff431c} 352
+hl flush 352 - remains 26440
+ASYNC RX (0):
+@
+hl{f,3fff42ec,0} 353
+hl{m,16,0,3fff42ec} 354
+hl{f,3fff4304,0} 355
+hl{m,16,0,3fff4304} 356
+hl{f,3fff4304,0} 357
+hl{m,16,0,3fff4304} 358
+hl{f,3fff4304,0} 359
+hl{m,16,0,3fff4304} 360
+hl{f,3fff4304,0} 361
+hl{m,16,0,3fff4304} 362
+hl{f,3fff4304,0} 363
+hl{m,16,0,3fff4304} 364
+hl{f,3fff42ec,0} 365
+hl{m,420,0,3fff5a3c} 366
+hl{m,16,0,3fff42ec} 367
+hl{f,3fff4304,0} 368
+hl{m,16,0,3fff4304} 369
+hl{f,3fff5a3c,0} 370
+hl{m,20,0,3fff51ec} 371
+hl{m,420,0,3fff5a3c} 372
+hl{f,3fff51ec,0} 373
+hl{f,3fff5a3c,0} 374
+hl{m,20,0,3fff4bb4} 375
+hl{m,100,0,3fff5744} 376
+hl{f,3fff4bb4,0} 377
+hl{f,3fff5744,0} 378
+hl{f,3fff4304,0} 379
+hl{m,16,0,3fff4304} 380
+hl{f,3fff4304,0} 381
+hl{m,16,0,3fff4304} 382
+hl{f,3fff4304,0} 383
+hl{m,16,0,3fff4304} 384
+hl flush 384 - remains 26440
+ţASYNC RX (0):
+?ip:192.168.43.214,mask:255.255.255.0,gw:192.168.43.1
+
+AP CONNECT
+?'/' registered
+HTTP server STARTED 192.168.43.214
+
+hl{f,3fff4304,0} 385
+hl{m,16,0,3fff4304} 386
+hl{f,3fff431c,0} 387
+hl{m,16,0,3fff431c} 388
+hl{f,3fff42ec,0} 389
+hl{m,100,0,3fff5744} 390
+hl{m,16,0,3fff42ec} 391
+hl{f,3fff4304,0} 392
+hl{m,16,0,3fff4304} 393
+hl{f,3fff5744,0} 394
+hl{f,3fff4304,0} 395
+hl{m,16,0,3fff4304} 396
+hl{f,3fff4304,0} 397
+hl{m,16,0,3fff4304} 398
+hl{f,3fff4304,0} 399
+hl{m,16,0,3fff4304} 400
+hl{f,3fff4304,0} 401
+hl{m,16,0,3fff4304} 402
+hl{f,3fff42ec,0} 403
+hl{m,100,0,3fff5744} 404
+hl{m,49,0,3fff57ac} 405
+hl{f,3fff57ac,0} 406
+hl{m,5,0,3fff4b54} 407
+hl{f,3fff4b54,0} 408
+hl{m,16,0,3fff42ec} 409
+hl{f,3fff4304,0} 410
+hl{m,16,0,3fff4304} 411
+hl{f,3fff5744,0} 412
+hl{m,36,0,3fff5294} 413
+hl{f,3fff4594,0} 414
+hl{m,36,0,3fff5814} 415
+hl{m,384,0,3fff5a3c} 416
+hl flush 416 - remains 25600
+NTP client STARTED
+ wscli:wsCliStart()
+@TCP connect() to: homea.herokuapp.com:443
+<wscli Connecting to Server
+wscli enc key string TwpnU554Dyz5WXh60Y04fQ==
+erealloc 4 -> 134
+srealloc 120 -> 273
+s
+hl{m,100,0,3fff5bc4} 417
+hl{m,128,0,3fff5c2c} 418
+hl{f,3fff5a3c,0} 419
+hl{m,384,0,3fff5a3c} 420
+hl{m,100,0,3fff5cb4} 421
+hl{m,128,0,3fff5d1c} 422
+hl{f,3fff5c2c,0} 423
+hl{f,3fff5a3c,0} 424
+hl{m,384,0,3fff5da4} 425
+hl{m,100,0,3fff5a64} 426
+hl{m,136,0,3fff5acc} 427
+hl{f,3fff5d1c,0} 428
+hl{f,3fff5da4,0} 429
+hl{f,3fff5bc4,0} 430
+hl{f,3fff5cb4,0} 431
+hl{f,3fff5a64,0} 432
+hl{m,20,0,3fff4b2c} 433
+hl{f,3fff4b2c,0} 434
+hl{f,3fff5acc,0} 435
+hl{m,20,0,3fff4b2c} 436
+hl{f,3fff4b2c,0} 437
+hl{m,20,0,3fff4b2c} 438
+hl{f,3fff4b2c,0} 439
+hl{f,3fff4304,0} 440
+hl{m,16,0,3fff4304} 441
+hl{f,3fff4304,0} 442
+hl{m,120,0,3fff5c9c} 443
+hl{m,16,0,3fff4304} 444
+hl{f,3fff5c9c,0} 445
+hl{f,3fff4304,0} 446
+hl{m,16,0,3fff4304} 447
+hl{f,3fff4304,0} 448
+hl flush 448 - remains 25680
+ASYNC RX (0):
+˙
+hl{m,16,0,3fff4304} 449
+hl{f,3fff431c,0} 450
+hl{m,384,0,3fff5e34} 451
+hl{m,384,0,3fff5fbc} 452
+hl{m,384,0,3fff6144} 453
+hl{m,16,0,3fff431c} 454
+hl{f,3fff42ec,0} 455
+hl{m,16,0,3fff42ec} 456
+hl{f,3fff4304,0} 457
+hl{m,16,0,3fff4304} 458
+hl{f,3fff5e34,0} 459
+hl{f,3fff5fbc,0} 460
+hl{f,3fff6144,0} 461
+hl{m,20,0,3fff4b2c} 462
+hl{z,515,0,3fff5e34} 463
+hl{f,3fff4b2c,0} 464
+hl{f,3fff5e34,0} 465
+hl{f,3fff4304,0} 466
+hl{m,16,0,3fff4304} 467
+hl{f,3fff4304,0} 468
+hl{m,16,0,3fff4304} 469
+hl{f,3fff4304,0} 470
+hl{m,16,0,3fff4304} 471
+hl{m,20,0,3fff4b2c} 472
+hl{z,515,0,3fff5e34} 473
+hl{f,3fff4b2c,0} 474
+hl{f,3fff5e34,0} 475
+hl{m,20,0,3fff4b2c} 476
+hl{z,515,0,3fff5e34} 477
+hl{f,3fff4b2c,0} 478
+hl{f,3fff5e34,0} 479
+hl{m,20,0,3fff4b2c} 480
+hl flush 480 - remains 25136
+DNS record found: homea.herokuapp.com = 176.34.255.126
+?TcpConnection::connect result:, 0
+?
+hl{z,515,0,3fff5e34} 481
+hl{m,116,0,3fff5c9c} 482
+hl{m,24,0,3fff5c3c} 483
+hl{m,16,0,3fff5b7c} 484
+hl{f,3fff4b2c,0} 485
+hl{f,3fff5e34,0} 486
+hl{f,3fff4304,0} 487
+hl{m,16,0,3fff4304} 488
+hl{f,3fff5b7c,0} 489
+hl{m,16,0,3fff4b2c} 490
+hl{f,3fff42ec,0} 491
+hl{m,16,0,3fff42ec} 492
+hl{f,3fff4304,0} 493
+hl{m,16,0,3fff4304} 494
+hl{f,3fff4b2c,0} 495
+hl{m,16,0,3fff4b2c} 496
+hl{f,3fff4304,0} 497
+hl{m,16,0,3fff4304} 498
+hl{f,3fff4b2c,0} 499
+hl{m,16,0,3fff4b2c} 500
+hl{f,3fff4304,0} 501
+hl{m,16,0,3fff4304} 502
+hl{f,3fff4b2c,0} 503
+hl{m,16,0,3fff4b2c} 504
+hl{f,3fff4304,0} 505
+hl{m,16,0,3fff4304} 506
+hl{f,3fff4304,0} 507
+hl{m,16,0,3fff4304} 508
+hl{f,3fff4b2c,0} 509
+hl{m,16,0,3fff4b2c} 510
+hl{f,3fff431c,0} 511
+hl{m,384,0,3fff5e34} 512
+hl flush 512 - remains 24760
+^UDP LocalPort: 4097
+"UDP connect to 93.190.144.28:123                                                                                                                                                                      ASYNC RX (0):
+?
+hl{m,384,0,3fff5fbc} 513
+hl{m,16,0,3fff431c} 514
+hl{f,3fff42ec,0} 515
+hl{m,16,0,3fff42ec} 516
+hl{f,3fff4304,0} 517
+hl{m,16,0,3fff4304} 518
+hl{f,3fff5e34,0} 519
+hl{f,3fff5fbc,0} 520
+hl{m,20,0,3fff5b7c} 521
+hl{z,515,0,3fff5e34} 522
+hl{f,3fff5b7c,0} 523
+hl{f,3fff5e34,0} 524
+hl{m,20,0,3fff5b7c} 525
+hl{z,515,0,3fff5e34} 526
+hl{m,160,0,3fff5a54} 527
+hl{f,3fff5b7c,0} 528
+hl{f,3fff5e34,0} 529
+hl{f,3fff5a54,0} 530
+hl{f,3fff4b2c,0} 531
+hl{m,16,0,3fff4b2c} 532
+hl{f,3fff4304,0} 533
+hl{m,16,0,3fff4304} 534
+hl{f,3fff4b2c,0} 535
+hl{m,16,0,3fff4b2c} 536
+hl{f,3fff4304,0} 537
+hl{m,16,0,3fff4304} 538
+hl{f,3fff4b2c,0} 539
+hl{m,16,0,3fff4b2c} 540
+hl{f,3fff4304,0} 541
+hl{m,16,0,3fff4304} 542
+hl{f,3fff4304,0} 543
+hl{m,16,0,3fff4304} 544
+hl flush 544 - remains 25520
+
+time updated? 1
+ýOnConnected
+staticOnConnected: useSSL: 1, Error: 0
+SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start (35598 ms)
+SSL: load key certsSSL: Cert and key loaded.SSL: building contextSSL: context built:553 malloc 6864, left 18536
+
+
+please start sntp first !
+
+aState: sending Client Hello (1)
+
+ax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+r
+hl{f,3fff4b2c,0} 545
+hl{m,16,0,3fff4b2c} 546
+hl{f,3fff42ec,0} 547
+hl{m,16,0,3fff42ec} 548
+hl{f,3fff4304,0} 549
+hl{m,16,0,3fff4304} 550
+hl{m,20,0,3fff5b7c} 551
+hl{f,3fff5b7c,0} 552
+hl{f,3fff4b2c,0} 553
+hl{m,16,0,3fff4b2c} 554
+hl{m,20,0,3fff5b7c} 555
+hl{f,3fff5c9c,0} 556
+hl{f,3fff5c3c,0} 557
+hl{m,40,0,3fff5c9c} 558
+hl{m,4,0,3fff4404} 559
+hl{m,180,0,3fff5a54} 560
+hl{m,6864,0,3fff5e34} 561
+hl{m,316,0,3fff790c} 562
+hl{m,500,0,3fff7a4c} 563
+hl{m,500,0,3fff7c44} 564
+hl{m,1572,0,3fff7e3c} 565
+hl{m,24,0,3fff5c3c} 566
+hl{m,20,0,3fff5ccc} 567
+hl{f,3fff5b7c,0} 568
+hl{m,20,0,3fff5ce4} 569
+hl{m,112,0,3fff5b7c} 570
+hl{f,3fff5ce4,0} 571
+hl{f,3fff5b7c,0} 572
+hl{f,3fff4304,0} 573
+hl{m,16,0,3fff4304} 574
+hl{m,20,0,3fff5ce4} 575
+hl{f,3fff7e3c,0} 576
+hl flush 576 - remains 17152
+~axl_ssl_read: Read bytes: 0
+
+State:  receiving Server Hello (2)
+
+please start sntp first !
+
+?axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:  receiving Certificate (11)
+
+
+hl{f,3fff5c3c,0} 577
+hl{f,3fff5ce4,0} 578
+hl{m,20,0,3fff5c3c} 579
+hl{m,84,0,3fff5b7c} 580
+hl{f,3fff5c3c,0} 581
+hl{m,20,0,3fff5c3c} 582
+hl{m,60,0,3fff5b0c} 583
+hl{m,3,0,3fff5c54} 584
+hl{f,3fff5c54,0} 585
+hl{m,13,0,3fff5ce4} 586
+hl{m,17,0,3fff5cfc} 587
+hl{m,39,0,3fff5bd4} 588
+hl{m,3,0,3fff5c54} 589
+hl{f,3fff5c54,0} 590
+hl{m,11,0,3fff5b4c} 591
+hl{f,3fff5b4c,0} 592
+hl{m,14,0,3fff5c04} 593
+hl{f,3fff5c04,0} 594
+hl{m,13,0,3fff5c04} 595
+hl{m,16,0,3fff7e3c} 596
+hl{m,256,0,3fff7e54} 597
+hl{m,3,0,3fff5c54} 598
+hl{m,68,0,3fff7f5c} 599
+hl{m,16,0,3fff7fa4} 600
+hl{m,8,0,3fff5c1c} 601
+hl{m,40,0,3fff7fbc} 602
+hl{m,16,0,3fff7fec} 603
+hl{m,256,0,3fff8004} 604
+hl{m,16,0,3fff810c} 605
+hl{m,260,0,3fff8124} 606
+hl{m,16,0,3fff822c} 607
+hl{m,8,0,3fff5b4c} 608
+hl flush 608 - remains 15336
+:1072 realloc 1032, left 14232
+
+
+
+hl{f,3fff5b4c,0} (r)609
+hl{m,516,0,3fff8244} (r)609
+\hl{m,16,0,3fff844c} 610
+hl{m,264,0,3fff8464} 611
+hl{m,16,0,3fff8574} 612
+hl{m,260,0,3fff858c} 613
+hl{f,3fff8244,0} (r)614
+%hl{m,1032,0,3fff8694} (r)614
+\hl{m,16,0,3fff8244} 615
+hl{m,260,0,3fff825c} 616
+hl{f,3fff7e54,0} 617
+hl{f,3fff5c54,0} 618
+hl{m,20,0,3fff8364} 619
+hl{m,8,0,3fff5b4c} (r)620
+\hl{m,16,0,3fff837c} 621
+hl{f,3fff5b4c,0} (r)622
+%hl{m,12,0,3fff5b4c} (r)622
+\hl{m,14,0,3fff8394} 623
+hl{m,256,0,3fff7e54} 624
+hl{m,60,0,3fff83ac} 625
+hl{m,3,0,3fff5c54} 626
+hl{f,3fff5c54,0} 627
+hl{m,13,0,3fff83ec} 628
+hl{m,17,0,3fff8404} 629
+hl{m,35,0,3fff841c} 630
+hl{m,3,0,3fff5c54} 631
+hl{f,3fff5c54,0} 632
+hl{m,13,0,3fff8aa4} 633
+hl{m,17,0,3fff8abc} 634
+hl{m,39,0,3fff8ad4} 635
+hl{m,256,0,3fff8b04} 636
+hl{m,3,0,3fff5c54} 637
+hl{m,68,0,3fff8c0c} 638
+hl{m,16,0,3fff8c54} 639
+hl{m,8,0,3fff455c} 640
+hl flush 640 - remains 13184
+:1072 realloc 1032, left 10960
+
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:  receiving Server Hello Done (14)
+
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+Modulus: (size 64)
+
+D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+Public Key: (size 1)
+
+00010001
+
+Private Key: (null)
+
+:1072 realloc 1024, left 7944
+
+
+0
+hl{m,40,0,3fff8c6c} 641
+hl{m,16,0,3fff8c9c} 642
+hl{m,256,0,3fff8cb4} 643
+hl{m,16,0,3fff8dbc} 644
+hl{m,260,0,3fff8dd4} 645
+hl{m,16,0,3fff8edc} 646
+hl{m,8,0,3fff8ef4} 647
+hl{f,3fff8ef4,0} (r)648
+
+hl{m,516,0,3fff8ef4} (r)648
+Shl{m,16,0,3fff90fc} 649
+hl{m,264,0,3fff9114} 650
+hl{m,16,0,3fff9224} 651
+hl{m,260,0,3fff923c} 652
+hl{f,3fff8ef4,0} (r)653
+%hl{m,1032,0,3fff9344} (r)653
+Shl{m,16,0,3fff8ef4} 654
+hl{m,260,0,3fff8f0c} 655
+hl{f,3fff8b04,0} 656
+hl{f,3fff5c54,0} 657
+hl{m,20,0,3fff9014} 658
+hl{m,256,0,3fff8b04} 659
+hl{m,4,0,3fff5c54} 660
+hl{m,16,0,3fff902c} 661
+hl{m,256,0,3fff9754} 662
+hl{m,16,0,3fff9044} 663
+hl{m,516,0,3fff985c} 664
+hl{m,16,0,3fff905c} 665
+hl{m,512,0,3fff9a64} 666
+hl{m,16,0,3fff9074} 667
+hl{m,520,0,3fff9c6c} 668
+hl{f,3fff825c,0} (r)669
+%hl{m,520,0,3fff9e7c} (r)669
+Shl{f,3fff9a64,0} (r)670
+%hl{m,1024,0,3fffa08c} (r)670
+Shl{f,3fff5c54,0} 671
+hl{f,3fff985c,0} 672
+hl flush 672 - remains 8472
+State:  sending Client Key Exchange (16)
+
+ax_port_write: send_raw_packet length 267(267)
+
+¸ax_port_write: send_raw_packet length 6(6)
+
+őState: sending Finished (16)
+
+ax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+14:46:53 Dormitor H:36.00(0.0) T:22.00(0.0 0.0)/25.6 SetPt:21.50 needHeat:0
+$HEATER(1) trigState send:1 reqHeat:0 isSync:0 state:0
+HEATER(1) TX: OFF
+ARX timeout
+żHEATER(1) TX FAIL:1
+(RX timeout
+żHEATER(1) TX FAIL:2
+(RX timeout
+żHEATER(1) TX FAIL:3
+(RX timeout
+żHEATER(1) TX FAIL:4
+(RX timeout
+żHEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{f,3fff9044,0} 673
+hl{f,3fff858c,0} 674
+hl{f,3fff8574,0} 675
+hl{f,3fff9754,0} 676
+hl{f,3fff902c,0} 677
+hl{f,3fff9e7c,0} 678
+hl{f,3fff8244,0} 679
+hl{f,3fffa08c,0} 680
+hl{f,3fff905c,0} 681
+hl{f,3fff9c6c,0} 682
+hl{f,3fff9074,0} 683
+hl{m,1572,0,3fff9754} 684
+hl{m,24,0,3fff902c} 685
+hl{m,104,0,3fff904c} 686
+hl{m,39,0,3fff90bc} 687
+hl{f,3fff90bc,0} 688
+hl{m,64,0,3fff8244} 689
+hl{f,3fff8244,0} 690
+hl{f,3fff5c3c,0} 691
+hl{f,3fff4b2c,0} 692
+hl{m,16,0,3fff4b2c} 693
+hl{f,3fff4304,0} 694
+hl{m,16,0,3fff4304} 695
+hl{f,3fff4b2c,0} 696
+hl{m,16,0,3fff4b2c} 697
+hl{f,3fff4304,0} 698
+hl{m,16,0,3fff4304} 699
+hl{f,3fff4304,0} 700
+hl{m,16,0,3fff4304} 701
+hl{f,3fff4b2c,0} 702
+hl{m,16,0,3fff4b2c} 703
+hl{f,3fff42bc,0} 704
+hl flush 704 - remains 9536
+
+hl{m,16,0,3fff42bc} 705
+hl{f,3fff431c,0} 706
+hl{m,16,0,3fff431c} 707
+hl{f,3fff42ec,0} 708
+hl{m,16,0,3fff42ec} 709
+hl{f,3fff4304,0} 710
+hl{m,16,0,3fff4304} 711
+hl{f,3fff4b2c,0} 712
+hl{m,16,0,3fff4b2c} 713
+hl{f,3fff4304,0} 714
+hl{m,16,0,3fff4304} 715
+hl{f,3fff4b2c,0} 716
+hl{m,16,0,3fff4b2c} 717
+hl{f,3fff4304,0} 718
+hl{m,16,0,3fff4304} 719
+hl{f,3fff4b2c,0} 720
+hl{m,16,0,3fff4b2c} 721
+hl{f,3fff4304,0} 722
+hl{m,16,0,3fff4304} 723
+hl{f,3fff4304,0} 724
+hl{m,16,0,3fff4304} 725
+hl{f,3fff4b2c,0} 726
+hl{m,16,0,3fff4b2c} 727
+hl{f,3fff42ec,0} 728
+hl{m,16,0,3fff42ec} 729
+hl{f,3fff4304,0} 730
+hl{m,16,0,3fff4304} 731
+hl{f,3fff4b2c,0} 732
+hl{m,16,0,3fff4b2c} 733
+hl{f,3fff4304,0} 734
+hl{m,16,0,3fff4304} 735
+hl{f,3fff4b2c,0} 736
+hl flush 736 - remains 9536
+ASYNC RX (0):
+?axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 0
+
+$State: receiving Finished (16)
+
+axl_ssl_read: Read bytes: 0
+
+$SSL: Handshake done (36887 ms).
+BSSL: Switching back to 80 MHz
+TCP connected
+$onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+5
+hl{m,16,0,3fff4b2c} 737
+hl{f,3fff4304,0} 738
+hl{m,16,0,3fff4304} 739
+hl{m,20,0,3fff4334} 740
+hl{f,3fff902c,0} 741
+hl{f,3fff904c,0} 742
+hl{f,3fff790c,0} 743
+hl{f,3fff4334,0} 744
+hl{m,228,0,3fff8244} 745
+hl{f,3fff8244,0} 746
+hl{m,256,0,3fff8244} 747
+hl{f,3fff8244,0} 748
+hl{m,1572,0,3fff9d7c} 749
+hl{m,24,0,3fff902c} 750
+hl{f,3fff9754,0} 751
+hl{f,3fff4b2c,0} 752
+hl{m,16,0,3fff4b2c} 753
+hl{f,3fff4304,0} 754
+hl{m,16,0,3fff4304} 755
+hl{m,20,0,3fff4334} 756
+hl{m,112,0,3fff904c} 757
+hl{f,3fff4334,0} 758
+hl{f,3fff904c,0} 759
+hl{f,3fff4304,0} 760
+hl{m,16,0,3fff4304} 761
+hl{f,3fff4b2c,0} 762
+hl{m,16,0,3fff4b2c} 763
+hl{m,20,0,3fff4334} 764
+hl{f,3fff4334,0} 765
+hl{m,20,0,3fff4334} 766
+hl{f,3fff9d7c,0} 767
+hl{f,3fff902c,0} 768
+hl flush 768 - remains 11864
+Saxl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 175
+
+$wscli RX data HTTP/1.1 101 Switching Protocols
+
+Connection: Upgrade
+
+Upgrade: websocket
+
+Sec-Websocket-Accept: HruJYzErq/y9OaL1JZxboSXEMzw=
+
+Sec-Websocket-Protocol: chat
+
+Via: 1.1 vegur
+
+
+
+, size 175 175
+
+wscli search key HruJYzErq/y9OaL1JZxboSXEMzw=
+wscli clienKey : HruJYzErq/y9OaL1JZxboSXEMzw=
+wscli Key Verified. Websocket Handshake completed
+wscli Sending PING
+cwscli: Connection with server successful
+crealloc 2 -> 145
+HonReadyToSendData: 1
+ax_port_write: send_raw_packet length 69(69)
+
+TTcpClient request completed
+UDP connect to 89.149.59.102:123
+time updated? 1
+
+hl{f,3fff4334,0} 769
+hl{m,20,0,3fff4334} 770
+hl{m,288,0,3fff790c} 771
+hl{f,3fff4334,0} 772
+hl{m,39,0,3fff82dc} 773
+hl{f,3fff82dc,0} 774
+hl{m,64,0,3fff82dc} 775
+hl{f,3fff82dc,0} 776
+hl{m,1572,0,3fff9754} 777
+hl{m,24,0,3fff82dc} 778
+hl{f,3fff790c,0} 779
+hl{f,3fff431c,0} 780
+hl{m,384,0,3fff9d7c} 781
+hl{m,16ASYNC RX (0):
+?
+hl{m,16,0,3fff4304} 833
+hl{f,3fff4b2c,0} 834
+hl{m,16,0,3fff4b2c} 835
+hl{f,3fff42ec,0} 836
+hl{m,16,0,3fff42ec} 837
+hl{f,3fff4304,0} 838
+hl{m,16,0,3fff4304} 839
+hl{f,3fff4b2c,0} 840
+hl{m,16,0,3fff4b2c} 841
+hl{f,3fff4304,0} 842
+hl{m,16,0,3fff4304} 843
+hl{f,3fff4b2c,0} 844
+hl{m,16,0,3fff4b2c} 845
+hl{f,3fff4304,0} 846
+hl{m,16,0,3fff4304} 847
+hl{f,3fff4b2c,0} 848
+hl{m,16,0,3fff4b2c} 849
+hl{f,3fff4304,0} 850
+hl{m,16,0,3fff4304} 851
+hl{f,3fff4304,0} 852
+hl{m,16,0,3fff4304} 853
+hl{f,3fff4b2c,0} 854
+hl{m,16,0,3fff4b2c} 855
+hl{f,3fff5b5c,0} 856
+hl{m,16,0,3fff51ec} 857
+hl{f,3fff42ec,0} 858
+hl{m,16,0,3fff42ec} 859
+hl{f,3fff4304,0} 860
+hl{m,16,0,3fff4304} 861
+hl{f,3fff4b2c,0} 862
+hl{m,16,0,3fff4b2c} 863
+hl{f,3fff4304,0} 864
+hl flush 864 - remains 11888
+(ASYNC RX (0):
+?wscli Sending PING
+
+hl{m,16,0,3fff4304} 865
+hl{f,3fff4b2c,0} 866
+hl{m,16,0,3fff4b2c} 867
+hl{f,3fff4304,0} 868
+hl{m,16,0,3fff4304} 869
+hl{f,3fff4b2c,0} 870
+hl{m,16,0,3fff4b2c} 871
+hl{f,3fff4304,0} 872
+hl{m,16,0,3fff4304} 873
+hl{f,3fff4304,0} 874
+hl{m,16,0,3fff4304} 875
+hl{m,20,0,3fff4334} 876
+hl{m,100,0,3fff902c} 877
+hl{f,3fff4334,0} 878
+hl{f,3fff902c,0} 879
+hl{f,3fff4b2c,0} 880
+hl{m,16,0,3fff4b2c} 881
+hl{f,3fff42ec,0} 882
+hl{m,16,0,3fff42ec} 883
+hl{f,3fff4304,0} 884
+hl{m,16,0,3fff4304} 885
+hl{f,3fff4b2c,0} 886
+hl{m,16,0,3fff4b2c} 887
+hl{f,3fff4304,0} 888
+hl{m,16,0,3fff4304} 889
+hl{f,3fff4b2c,0} 890
+hl{m,16,0,3fff4b2c} 891
+hl{f,3fff4304,0} 892
+hl{m,16,0,3fff4304} 893
+hl{f,3fff4b2c,0} 894
+hl{m,16,0,3fff4b2c} 895
+hl{f,3fff4304,0} 896
+hl flush 896 - remains 11848
+˙ax_port_write: send_raw_packet length 53(53)
+
+$TcpClient request completed
+PonReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+ASYNC RX (0):
+?
+hl{m,16,0,3fff4304} 897
+hl{f,3fff4304,0} 898
+hl{m,16,0,3fff4304} 899
+hl{f,3fff4b2c,0} 900
+hl{m,16,0,3fff4b2c} 901
+hl{f,3fff51ec,0} 902
+hl{m,16,0,3fff51ec} 903
+hl{f,3fff42ec,0} 904
+hl{m,16,0,3fff42ec} 905
+hl{f,3fff4304,0} 906
+hl{m,16,0,3fff4304} 907
+hl{f,3fff4b2c,0} 908
+hl{m,25,0,3fff902c} 909
+hl{f,3fff902c,0} 910
+hl{m,48,0,3fff902c} 911
+hl{f,3fff902c,0} 912
+hl{m,1572,0,3fff9754} 913
+hl{m,24,0,3fff902c} 914
+hl{m,16,0,3fff4b2c} 915
+hl{f,3fff4304,0} 916
+hl{m,16,0,3fff4304} 917
+hl{f,3fff4b2c,0} 918
+hl{m,16,0,3fff4b2c} 919
+hl{f,3fff4304,0} 920
+hl{m,16,0,3fff4304} 921
+hl{m,20,0,3fff4334} 922
+hl{f,3fff9754,0} 923
+hl{f,3fff902c,0} 924
+hl{m,116,0,3fff902c} 925
+hl{f,3fff4334,0} 926
+hl{f,3fff902c,0} 927
+hl{f,3fff4b2c,0} 928
+hl flush 928 - remains 11792
+pm open,type:2 0
+
+
+hl{m,112,0,3fff902c} 929
+hl{m,16,0,3fff4b2c} 930
+hl{f,3fff4304,0} 931
+hl{m,16,0,3fff4304} 932
+hl{f,3fff902c,0} 933
+hl{f,3fff4304,0} 934
+hl{m,16,0,3fff4304} 935
+hl{f,3fff4b2c,0} 936
+hl{m,16,0,3fff4b2c} 937
+hl{f,3fff42ec,0} 938
+hl{m,16,0,3fff42ec} 939
+hl{f,3fff4304,0} 940
+hl{m,16,0,3fff4304} 941
+hl{f,3fff4b2c,0} 942
+hl{m,16,0,3fff4b2c} 943
+hl{m,21,0,3fff5b5c} 944
+hl{f,3fff5b5c,0} 945
+hl{f,3fff4304,0} 946
+hl{m,16,0,3fff4304} 947
+hl{f,3fff4b2c,0} 948
+hl{m,16,0,3fff4b2c} 949
+hl{f,3fff4304,0} 950
+hl{m,16,0,3fff4304} 951
+hl{f,3fff4b2c,0} 952
+hl{m,16,0,3fff4b2c} 953
+hl{f,3fff4304,0} 954
+hl{m,16,0,3fff4304} 955
+hl{z,756,0,3fff9754} 956
+hl{f,3fff9754,0} 957
+hl{f,3fff4304,0} 958
+hl{m,16,0,3fff4304} 959
+hl{f,3fff4b2c,0} 960
+hl flush 960 - remains 11888
+14:46:58 Dormitor H:36.10(0.0) T:21.90(0.0 0.0)/25.5 SetPt:21.50 needHeat:0
+$HEATER(1) trigState send:1 reqHeat:0 isSync:0 state:0
+?HEATER(1) TX: OFF
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{m,16,0,3fff4b2c} 961
+hl{z,756,0,3fff9754} 962
+hl{f,3fff9754,0} 963
+hl{f,3fff51ec,0} 964
+hl{m,16,0,3fff51ec} 965
+hl{f,3fff42ec,0} 966
+hl{m,16,0,3fff42ec} 967
+hl{f,3fff4304,0} 968
+hl{m,16,0,3fff4304} 969
+hl{f,3fff4b2c,0} 970
+hl{m,16,0,3fff4b2c} 971
+hl{f,3fff4304,0} 972
+hl{m,16,0,3fff4304} 973
+hl{f,3fff4b2c,0} 974
+hl{m,16,0,3fff4b2c} 975
+hl{f,3fff4304,0} 976
+hl{m,16,0,3fff4304} 977
+hl{f,3fff4b2c,0} 978
+hl{m,16,0,3fff4b2c} 979
+hl{f,3fff4304,0} 980
+hl{m,16,0,3fff4304} 981
+hl{f,3fff4304,0} 982
+hl{m,16,0,3fff4304} 983
+hl{f,3fff4b2c,0} 984
+hl{m,16,0,3fff4b2c} 985
+hl{f,3fff42ec,0} 986
+hl{m,16,0,3fff42ec} 987
+hl{f,3fff4304,0} 988
+hl{m,16,0,3fff4304} 989
+hl{f,3fff4b2c,0} 990
+hl{m,16,0,3fff4b2c} 991
+hl{f,3fff4304,0} 992
+hl flush 992 - remains 11888
+ASYNC RX (0):
+˙wscli Sending PING
+ax_port_write: send_raw_packet length 53(53)
+
+$TcpClient request completed
+P
+hl{m,16,0,3fff4304} 993
+hl{f,3fff4b2c,0} 994
+hl{m,16,0,3fff4b2c} 995
+hl{f,3fff4304,0} 996
+hl{m,16,0,3fff4304} 997
+hl{f,3fff4b2c,0} 998
+hl{m,16,0,3fff4b2c} 999
+hl{f,3fff4304,0} 1000
+hl{m,16,0,3fff4304} 1001
+hl{f,3fff4304,0} 1002
+hl{m,16,0,3fff4304} 1003
+hl{f,3fff4b2c,0} 1004
+hl{m,16,0,3fff4b2c} 1005
+hl{f,3fff42bc,0} 1006
+hl{m,16,0,3fff42bc} 1007
+hl{f,3fff51ec,0} 1008
+hl{m,16,0,3fff51ec} 1009
+hl{f,3fff42ec,0} 1010
+hl{m,16,0,3fff42ec} 1011
+hl{f,3fff4304,0} 1012
+hl{m,16,0,3fff4304} 1013
+hl{z,756,0,3fff9754} 1014
+hl{f,3fff9754,0} 1015
+hl{f,3fff4b2c,0} 1016
+hl{m,25,0,3fff5b5c} 1017
+hl{f,3fff5b5c,0} 1018
+hl{m,48,0,3fff902c} 1019
+hl{f,3fff902c,0} 1020
+hl{m,1572,0,3fff9754} 1021
+hl{m,24,0,3fff5b5c} 1022
+hl{m,16,0,3fff4b2c} 1023
+hl{f,3fff4304,0} 1024
+hl flush 1024 - remains 10280
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+-axl_ssl_read: Read bytes: 2
+
+-wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl{m,16,0,3fff4304} 1025
+hl{f,3fff4b2c,0} 1026
+hl{m,16,0,3fff4b2c} 1027
+hl{f,3fff4304,0} 1028
+hl{m,16,0,3fff4304} 1029
+hl{m,20,0,3fff5c3c} 1030
+hl{f,3fff9754,0} 1031
+hl{f,3fff5b5c,0} 1032
+hl{m,116,0,3fff902c} 1033
+hl{f,3fff5c3c,0} 1034
+hl{f,3fff902c,0} 1035
+hl{f,3fff4b2c,0} 1036
+hl{m,112,0,3fff902c} 1037
+hl{m,16,0,3fff4b2c} 1038
+hl{f,3fff4304,0} 1039
+hl{m,16,0,3fff4304} 1040
+hl{z,756,0,3fff9754} 1041
+hl{f,3fff9754,0} 1042
+hl{f,3fff902c,0} 1043
+hl{f,3fff4304,0} 1044
+hl{m,16,0,3fff5b5c} 1045
+hl{f,3fff4b2c,0} 1046
+hl{m,16,0,3fff4b2c} 1047
+hl{f,3fff42ec,0} 1048
+hl{m,16,0,3fff42ec} 1049
+hl{f,3fff5b5c,0} 1050
+hl{m,16,0,3fff5b5c} 1051
+hl{z,756,0,3fff9754} 1052
+hl{f,3fff9754,0} 1053
+hl{f,3fff4b2c,0} 1054
+hl{m,16,0,3fff4b2c} 1055
+hl{f,3fff5b5c,0} 1056
+hl flush 1056 - remains 11888
+ASYNC RX (0):
+˙
+hl{m,16,0,3fff5b5c} 1057
+hl{f,3fff4b2c,0} 1058
+hl{m,16,0,3fff4b2c} 1059
+hl{z,756,0,3fff9754} 1060
+hl{f,3fff9754,0} 1061
+hl{f,3fff5b5c,0} 1062
+hl{m,16,0,3fff5b5c} 1063
+hl{f,3fff4b2c,0} 1064
+hl{m,16,0,3fff4b2c} 1065
+hl{f,3fff5b5c,0} 1066
+hl{m,16,0,3fff5b5c} 1067
+hl{z,756,0,3fff9754} 1068
+hl{f,3fff9754,0} 1069
+hl{f,3fff5b5c,0} 1070
+hl{m,16,0,3fff5b5c} 1071
+hl{f,3fff4b2c,0} 1072
+hl{m,16,0,3fff4b2c} 1073
+hl{f,3fff51ec,0} 1074
+hl{m,16,0,3fff51ec} 1075
+hl{f,3fff42ec,0} 1076
+hl{m,16,0,3fff42ec} 1077
+hl{f,3fff5b5c,0} 1078
+hl{m,16,0,3fff5b5c} 1079
+hl{z,756,0,3fff9754} 1080
+hl{f,3fff9754,0} 1081
+hl{f,3fff4b2c,0} 1082
+hl{m,16,0,3fff4b2c} 1083
+hl{f,3fff5b5c,0} 1084
+hl{m,16,0,3fff5b5c} 1085
+hl{f,3fff4b2c,0} 1086
+hl{m,16,0,3fff4b2c} 1087
+hl{z,756,0,3fff9754} 1088
+hl flush 1088 - remains 11128
+ASYNC RX (0):
+˙wscli Sending PING
+r
+hl{f,3fff9754,0} 1089
+hl{f,3fff5b5c,0} 1090
+hl{m,16,0,3fff5b5c} 1091
+hl{f,3fff4b2c,0} 1092
+hl{m,16,0,3fff4b2c} 1093
+hl{f,3fff5b5c,0} 1094
+hl{m,16,0,3fff5b5c} 1095
+hl{z,756,0,3fff9754} 1096
+hl{f,3fff9754,0} 1097
+hl{f,3fff5b5c,0} 1098
+hl{m,16,0,3fff5b5c} 1099
+hl{f,3fff4b2c,0} 1100
+hl{m,16,0,3fff4b2c} 1101
+hl{f,3fff42ec,0} 1102
+hl{m,16,0,3fff42ec} 1103
+hl{f,3fff5b5c,0} 1104
+hl{m,16,0,3fff5b5c} 1105
+hl{z,756,0,3fff9754} 1106
+hl{f,3fff9754,0} 1107
+hl{f,3fff4b2c,0} 1108
+hl{m,16,0,3fff4b2c} 1109
+hl{f,3fff5b5c,0} 1110
+hl{m,16,0,3fff5b5c} 1111
+hl{f,3fff4b2c,0} 1112
+hl{m,16,0,3fff4b2c} 1113
+hl{z,756,0,3fff9754} 1114
+hl{f,3fff9754,0} 1115
+hl{f,3fff5b5c,0} 1116
+hl{m,16,0,3fff5b5c} 1117
+hl{f,3fff4b2c,0} 1118
+hl{m,16,0,3fff4b2c} 1119
+hl{f,3fff5b5c,0} 1120
+hl flush 1120 - remains 11848
+ax_port_write: send_raw_packet length 53(53)
+
+$TcpClient request completed
+P
+hl{m,16,0,3fff5b5c} 1121
+hl{z,756,0,3fff9754} 1122
+hl{f,3fff9754,0} 1123
+hl{f,3fff5b5c,0} 1124
+hl{m,16,0,3fff5b5c} 1125
+hl{f,3fff4b2c,0} 1126
+hl{m,16,0,3fff4b2c} 1127
+hl{f,3fff51ec,0} 1128
+hl{m,16,0,3fff51ec} 1129
+hl{f,3fff42ec,0} 1130
+hl{m,16,0,3fff42ec} 1131
+hl{f,3fff5b5c,0} 1132
+hl{m,16,0,3fff5b5c} 1133
+hl{z,756,0,3fff9754} 1134
+hl{f,3fff9754,0} 1135
+hl{f,3fff4b2c,0} 1136
+hl{m,25,0,3fff902c} 1137
+hl{f,3fff902c,0} 1138
+hl{m,48,0,3fff902c} 1139
+hl{f,3fff902c,0} 1140
+hl{m,1572,0,3fff9754} 1141
+hl{m,24,0,3fff902c} 1142
+hl{m,16,0,3fff4b2c} 1143
+hl{z,756,0,3fff9d7c} 1144
+hl{f,3fff9d7c,0} 1145
+hl{f,3fff5b5c,0} 1146
+hl{m,16,0,3fff5b5c} 1147
+hl{f,3fff4b2c,0} 1148
+hl{m,16,0,3fff4b2c} 1149
+hl{z,756,0,3fff9d7c} 1150
+hl{f,3fff9d7c,0} 1151
+hl{m,20,0,3fff4304} 1152
+hl flush 1152 - remains 10256
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+ASYNC RX (0):
+?
+hl{f,3fff9754,0} 1153
+hl{f,3fff902c,0} 1154
+hl{m,116,0,3fff902c} 1155
+hl{f,3fff4304,0} 1156
+hl{f,3fff902c,0} 1157
+hl{f,3fff5b5c,0} 1158
+hl{m,16,0,3fff5b5c} 1159
+hl{f,3fff4b2c,0} 1160
+hl{m,112,0,3fff902c} 1161
+hl{m,16,0,3fff4b2c} 1162
+hl{f,3fff5b5c,0} 1163
+hl{m,16,0,3fff5b5c} 1164
+hl{z,756,0,3fff9754} 1165
+hl{f,3fff9754,0} 1166
+hl{f,3fff902c,0} 1167
+hl{f,3fff5b5c,0} 1168
+hl{m,16,0,3fff5b5c} 1169
+hl{f,3fff4b2c,0} 1170
+hl{m,16,0,3fff4b2c} 1171
+hl{f,3fff42ec,0} 1172
+hl{m,16,0,3fff42ec} 1173
+hl{f,3fff5b5c,0} 1174
+hl{m,16,0,3fff5b5c} 1175
+hl{z,756,0,3fff9754} 1176
+hl{f,3fff9754,0} 1177
+hl{f,3fff4b2c,0} 1178
+hl{m,16,0,3fff4b2c} 1179
+hl{f,3fff5b5c,0} 1180
+hl{m,16,0,3fff5b5c} 1181
+hl{f,3fff4b2c,0} 1182
+hl{m,16,0,3fff4b2c} 1183
+hl{f,3fff5b5c,0} 1184
+hl flush 1184 - remains 11888
+
+hl{m,16,0,3fff5b5c} 1185
+hl{z,756,0,3fff9754} 1186
+hl{f,3fff9754,0} 1187
+hl{f,3fff4b2c,0} 1188
+hl{m,16,0,3fff4b2c} 1189
+hl{f,3fff5b5c,0} 1190
+hl{m,16,0,3fff5b5c} 1191
+hl{f,3fff5b5c,0} 1192
+hl{m,16,0,3fff5b5c} 1193
+hl{z,756,0,3fff9754} 1194
+hl{f,3fff9754,0} 1195
+hl{f,3fff4b2c,0} 1196
+hl{m,16,0,3fff4b2c} 1197
+hl{f,3fff51ec,0} 1198
+hl{m,16,0,3fff51ec} 1199
+hl{f,3fff42ec,0} 1200
+hl{m,16,0,3fff42ec} 1201
+hl{f,3fff5b5c,0} 1202
+hl{m,16,0,3fff5b5c} 1203
+hl{f,3fff4b2c,0} 1204
+hl{m,16,0,3fff4b2c} 1205
+hl{z,756,0,3fff9754} 1206
+hl{f,3fff9754,0} 1207
+hl{f,3fff5b5c,0} 1208
+hl{m,16,0,3fff5b5c} 1209
+hl{f,3fff4b2c,0} 1210
+hl{m,16,0,3fff4b2c} 1211
+hl{f,3fff5b5c,0} 1212
+hl{m,16,0,3fff5b5c} 1213
+hl{z,756,0,3fff9754} 1214
+hl{f,3fff9754,0} 1215
+hl{f,3fff4b2c,0} 1216
+hl flush 1216 - remains 11888
+14:47: 3 Dormitor H:36.10(0.0) T:22.00(0.0 0.0)/25.6 SetPt:21.50 needHeat:0
+BHEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:0 isSync:0 state:0
+?HEATER(1) TX: OFF
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(R

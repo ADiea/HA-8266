@@ -1,0 +1,1136 @@
+Reset:
+REASON_DEFAULT_RST
+
+Chip id=10502778
+
+
+RFlash id=1261768
+
+
+RMem info:
+
+
+
+data  : 0x3ffe8000 ~ 0x3ffe843a, len: 1082
+
+rodata: 0x3ffe8440 ~ 0x3ffec4e8, len: 16552
+
+bss   : 0x3ffec4e8 ~ 0x3fff3fd0, len: 31464
+
+heap  : 0x3fff3fd0 ~ 0x3fffc000, len: 32816
+
+
+hlog_param:{"heap_start":0x3fff3fd0, "heap_end":0x3fffc000}
+TStation configuration was updated to: TP-LINK_B4EB92
+mode :
+ hl flush 32
+dsta(18:fe:34:a0:42:7a)
+
+add if0
+
+f r0,
+hl flush 64
+x
+hl flush 96
+x
+hl flush 128
+x
+ hl flush 160
+d
+hl flush 192
+xASYNC RX (0):
+?
+hl flush 224
+x
+hl flush 256
+xASYNC RX (0):
+?scandone
+
+state: 0 -> 2 (b0)
+
+state: 2 -> 3 (0)
+
+
+hl flush 288
+xstate: 3 -> 5 (10)
+
+add 0
+
+aid 3
+
+cnt
+
+
+
+connected with TP-LINK_B4EB92, channel 6
+
+dhcp client start...
+
+
+hl flush 320
+xrtc time init...
+ 0: 0:25 Dormitor H:50.70(0.0) T:19.10(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+SHEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ip:192.168.0.100,mask:255.255.255.0,gw:192.168.0.1
+ hl flush 352
+d
+
+ASYNC RX (0):
+?AP CONNECT
+?'/' registered
+HTTP server STARTED 192.168.0.100
+
+hl flush 384
+xNTP client STARTED
+ wscli:wsCliStart()
+@connect to: homea.herokuapp.com
+@wscli Connecting to Server
+wscli enc key string o4TWs/f90zHCNt7nGzK4PQ==
+erealloc 4 -> 134
+srealloc 120 -> 273
+sDNS record found: homea.herokuapp.com = 176.34.126.212
+?TcpConnection::connect result:, 0
+
+ hl flush 416
+dOnConnected
+dstaticOnConnected: useSSL: 1, Error: 0
+SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start (35568 ms)
+:550 malloc 6864, left 19232
+
+
+please start sntp first !
+
+aState: sending Client Hello (1)
+
+ax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+rTCP sent: 52
+axl_ssl_read: Read bytes: 0
+
+State: receiving Server Hello (2)
+
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State: receiving Certificate (11)
+
+
+hl flush 448
+x:1072 realloc 1032, left 14928
+
+
+
+
+
+ hl flush 480
+d
+
+
+dhl flush 512
+x:1072 realloc 1032, left 11656
+
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State: receiving Server Hello Done (14)
+
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+Modulus: (size 64)
+
+D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+Public Key: (size 1)
+
+00010001
+
+Private Key: (null)
+
+:1072 realloc 1024, left 8640
+
+
+0
+
+
+(hl flush 544
+dState: sending Client Key Exchange (16)
+
+ax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+State: sending Finished (16)
+
+ax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+TCP sent: 342
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State: receiving Finished (16)
+
+axl_ssl_read: Read bytes: 0
+
+SSL: Handshake done (35859 ms).
+SSL: Switching back to 80 MHz
+TCP connected
+onReadyToSendData: 0
+
+ hl flush 576
+d
+ hl flush 608
+d:1423 malloc 17408, left 7592
+
+
+?ax_port_write: send_raw_packet length 261(261)
+
+%Written: 205, Available: 205, isFinished: 1, PushCount: 1
+5TcpClient request completed
+TCP sent: 261
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 175
+
+$SSL: Decrypted data len 175
+dwscli RX data HTTP/1.1 101 Switching Protocols
+
+Connection: Upgrade
+
+Upgrade: websocket
+
+Sec-Websocket-Accept: 4hudUDPnVjAGqxxQBT6rSRWKUiY=
+
+Sec-Websocket-Protocol: chat
+
+Via: 1.1 vegur
+
+
+
+, size 175 175
+
+wscli search key 4hudUDPnVjAGqxxQBT6rSRWKUiY=
+wscli clienKey : 4hudUDPnVjAGqxxQBT6rSRWKUiY=
+wscli Key Verified. Websocket Handshake completed
+Rwscli Sending PING
+cwscli: Connection with server successful
+crealloc 2 -> 145
+4TCP received: 175 bytes
+sonReadyToSendData: 1
+ax_port_write: send_raw_packet length 69(69)
+
+Written: 16, Available: 16, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 69
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$
+ hl flush 640
+dSSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 10
+
+SSL: Decrypted data len 10
+dwscli RX data {"op":1}, size 10 10
+
+wscli:WebSocket message received: {"op":1}
+:CIPHER is
+AES128-SHA
+
+
+Swscli:WebSockCli RX Op is:1
+vwscli:WebSockCli State is 0 SrvHello, login
+eTCP received: 10 bytes
+6onReadyToSendData: 1
+ax_port_write: send_raw_packet length 85(85)
+
+Written: 32, Available: 32, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 85
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 20
+
+$SSL: Decrypted data len 20
+dwscli RX data {"op":5,"conID":1}, size 20 20
+
+wscli:WebSocket message received: {"op":5,"conID":1}
+ CIPHER is
+{AES128-SHA
+{
+
+Swscli:WebSockCli RX Op is:5
+vwscli:WebSockCli logged in
+dTCP received: 20 bytes
+6onReadyToSendData: 1
+
+ hl flush 672
+dUDP LocalPort: 4097
+"UDP connect to 91.216.151.202:123
+time updated? 1
+\ASYNC RX (0):
+?
+ hl flush 704
+dUDP connect to 92.86.106.228:123
+
+hl flush 736
+xtime updated? 1
+\ASYNC RX (0):
+?wscli Sending PING
+L
+ hl flush 768
+dax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+ASYNC RX (0):
+?
+ hl flush 800
+d
+hl flush 832
+x 4:33: 5 Dormitor H:50.80(0.0) T:19.10(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+rHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+hHEATER(1) TX FAIL:1
+(RX timeout
+hHEATER(1) TX FAIL:2
+(RX timeout
+hHEATER(1) TX FAIL:3
+(RX timeout
+hHEATER(1) TX FAIL:4
+(RX timeout
+hHEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+ hl flush 864
+dASYNC RX (0):
+?wscli Sending PING
+
+ hl flush 896
+dASYNC RX (0):
+?
+ hl flush 928
+dax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+ hl flush 960
+dASYNC RX (0):
+?wscli Sending PING
+Lax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$
+ hl flush 992
+dSSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+ hl flush 1024
+dASYNC RX (0):
+?pm open,type:2 0
+
+
+ hl flush 1056
+d 4:33: 9 Dormitor H:50.70(0.0) T:19.10(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+@HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+hHEATER(1) TX FAIL:1
+(RX timeout
+hHEATER(1) TX FAIL:2
+(RX timeout
+hHEATER(1) TX FAIL:3
+(RX timeout
+hHEATER(1) TX FAIL:4
+(RX timeout
+hHEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+ hl flush 1088
+dASYNC RX (0):
+wscli Sending PING
+
+hl flush 1120
+xax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+
+hl flush 1152
+xTCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+ASYNC RX (0):
+
+hl flush 1184
+x
+hl flush 1216
+xASYNC RX (0):
+wscli Sending PING
+L
+ hl flush 1248
+d
+ hl flush 1280
+dax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+onReadyToSendData: 1
+ASYNC RX (0):
+?
+ hl flush 1312
+d
+ hl flush 1344
+d 4:33:14 Dormitor H:50.70(0.0) T:19.10(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+@HEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+hHEATER(1) TX FAIL:1
+(RX timeout
+hHEATER(1) TX FAIL:2
+(RX timeout
+hHEATER(1) TX FAIL:3
+(RX timeout
+hHEATER(1) TX FAIL:4
+(RX timeout
+hHEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+ hl flush 1376
+dASYNC RX (0):
+?wscli Sending PING
+
+hl flush 1408
+x
+ hl flush 1440
+dASYNC RX (0):
+ax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+ hl flush 1472
+d
+ hl flush 1504
+dASYNC RX (0):
+wscli Sending PING
+Lax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+
+hl flush 1536
+xTCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+hl flush 1568
+xASYNC RX (0):
+
+hl flush 1600
+x 4:33:19 Dormitor H:50.70(0.0) T:19.10(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+mHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+hHEATER(1) TX FAIL:1
+(RX timeout
+hHEATER(1) TX FAIL:2
+(RX timeout
+hHEATER(1) TX FAIL:3
+(RX timeout
+hHEATER(1) TX FAIL:4
+(RX timeout
+hHEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+ hl flush 1632
+d
+ hl flush 1664
+dASYNC RX (0):
+wscli Sending PING
+
+ hl flush 1696
+dax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+ hl flush 1728
+dASYNC RX (0):
+?
+ hl flush 1760
+d
+ hl flush 1792
+dASYNC RX (0):
+wscli Sending PING
+L
+hl flush 1824
+xax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+LOW HEAP: 6296
+
+
+?ASYNC RX (0):
+?TCP sent: 53
+AonReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$
+ hl flush 1856
+dSSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+ hl flush 1888
+d 4:33:24 Dormitor H:50.70(0.0) T:19.10(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+#HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+hHEATER(1) TX FAIL:1
+(RX timeout
+hHEATER(1) TX FAIL:2
+(RX timeout
+hHEATER(1) TX FAIL:3
+(RX timeout
+hHEATER(1) TX FAIL:4
+(RX timeout
+hHEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+ hl flush 1920
+dASYNC RX (0):
+wscli Sending PING
+
+ hl flush 1952
+dax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+ hl flush 1984
+dASYNC RX (0):
+
+ hl flush 2016
+d
+ hl flush 2048
+dASYNC RX (0):
+wscli Sending PING
+L
+ hl flush 2080
+dax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+ hl flush 2112
+dASYNC RX (0):
+
+ hl flush 2144
+d
+ hl flush 2176
+d 4:33:29 Dormitor H:50.60(0.0) T:19.10(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+@HEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+hHEATER(1) TX FAIL:1
+(RX timeout
+hHEATER(1) TX FAIL:2
+(RX timeout
+hHEATER(1) TX FAIL:3
+(RX timeout
+hHEATER(1) TX FAIL:4
+(RX timeout
+hHEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+ hl flush 2208
+dASYNC RX (0):
+?wscli Sending PING
+
+ hl flush 2240
+d
+hl flush 2272
+xax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+ASYNC RX (0):
+?
+ hl flush 2304
+d
+ hl flush 2336
+dASYNC RX (0):
+wscli Sending PING
+ax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+ hl flush 2368
+d
+hl flush 2400
+xASYNC RX (0):
+
+ hl flush 2432
+d 4:33:34 Dormitor H:50.50(0.0) T:19.10(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+@HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+hHEATER(1) TX FAIL:1
+(RX timeout
+hHEATER(1) TX FAIL:2
+(RX timeout
+hHEATER(1) TX FAIL:3
+(RX timeout
+hHEATER(1) TX FAIL:4
+(RX timeout
+hHEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+ hl flush 2464
+d
+ hl flush 2496
+dASYNC RX (0):
+wscli Sending PING
+
+ hl flush 2528
+dax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+ hl flush 2560
+dASYNC RX (0):
+
+ hl flush 2592
+dASYNC RX (0):
+wscli Sending PING
+L
+ hl flush 2624
+d
+ hl flush 2656
+dax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+LOW HEAP: 6296
+
+
+ASYNC RX (0):
+
+ hl flush 2688
+dTCP sent: 53
+ronReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+hl flush 2720
+x 4:33:39 Dormitor H:50.50(0.0) T:19.10(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+mHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+hHEATER(1) TX FAIL:1
+(RX timeout
+hHEATER(1) TX FAIL:2
+(RX timeout
+hHEATER(1) TX FAIL:3
+(RX timeout
+hHEATER(1) TX FAIL:4
+(RX timeout
+hHEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+ hl flush 2752
+dASYNC RX (0):
+wscli Sending PING
+
+ hl flush 2784
+dax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+hl flush 2816
+xASYNC RX (0):
+?
+ hl flush 2848
+dtcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno -285365394.
+
+hl flush 2880
+xtcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno -285365394.
+ASYNC RX (0):
+?wscli Sending PING
+Ltcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno -285365394.
+
+ hl flush 2912
+dax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+ hl flush 2944
+dASYNC RX (0):
+?
+ hl flush 2976
+d 4:33:44 Dormitor H:50.50(0.0) T:19.20(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+@HEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+hHEATER(1) TX FAIL:1
+(RX timeout
+hHEATER(1) TX FAIL:2
+(RX timeout
+hHEATER(1) TX FAIL:3
+(RX timeout
+hHEATER(1) TX FAIL:4
+(RX timeout
+hHEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+ hl flush 3008
+dASYNC RX (0):
+wscli Sending PING
+
+hl flush 3040
+x
+dhl flush 3072
+xax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+ASYNC RX (0):
+?
+hl flush 3104
+x
+hl flush 3136
+xASYNC RX (0):
+wscli Sending PING
+L
+ hl flush 3168
+d
+ hl flush 3200
+dASYNC RX (0):
+ax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+ hl flush 3232
+d
+hl flush 3264
+x 4:33:49 Dormitor H:50.50(0.0) T:19.20(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+mHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+hHEATER(1) TX FAIL:1
+(RX timeout
+hHEATER(1) TX FAIL:2
+(RX timeout
+hHEATER(1) TX FAIL:3
+(RX timeout
+hHEATER(1) TX FAIL:4
+(RX timeout
+hHEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+ hl flush 3296
+dASYNC RX (0):
+%wscli Sending PING
+
+hl flush 3328
+xax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+ hl flush 3360
+dASYNC RX (0):
+?
+hl flush 3392
+x
+hl flush 3424
+xASYNC RX (0):
+%wscli Sending PING
+L
+hl flush 3456
+xax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+hl flush 3488
+xASYNC RX (0):
+?
+ hl flush 3520
+d 4:33:54 Dormitor H:50.40(0.0) T:19.20(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+@HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+hHEATER(1) TX FAIL:1
+(RX timeout
+hHEATER(1) TX FAIL:2
+(RX timeout
+hHEATER(1) TX FAIL:3
+(RX timeout
+hHEATER(1) TX FAIL:4
+(RX timeout
+hHEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+ hl flush 3552
+d
+ hl flush 3584
+dASYNC RX (0):
+wscli Sending PING
+
+ hl flush 3616
+dASYNC RX (0):
+
+ hl flush 3648
+dax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+hl flush 3680
+x21.04.2016 06:33:56 Heap: 7880
+2ASYNC RX (0):
+?wscli Sending PING
+L
+hl flush 3712
+xax_port_write: send_raw_packet length 53(53)
+
+$Written: 2, Available: 2, isFinished: 1, PushCount: 1
+TcpClient request completed
+TCP sent: 53
+1onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$SSL: Decrypted data len 2
+dwscli RX data , size 2 1
+
+wscli Got pong ...
+iTCP received: 2 bytes
+6onReadyToSendData: 1
+
+hl flush 3744
+xASYNC RX (0):
+
+hl flush 3776
+x
+ hl flush 3808
+d 4:33:59 Dormitor H:50.20(0.0) T:19.20(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+mHEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+A
