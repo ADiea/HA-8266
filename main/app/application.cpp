@@ -172,48 +172,27 @@ static void mainLoop()
 		if(Radio->isPacketReceived())
 		{
 			Radio->getPacketReceived(&len, pkg);
-
-			LOG_I("ASYNC RX (%d):", len);
-
-			for (i = 0; i < len; ++i)
+			if(len > 0)
 			{
-				m_printf( "%x ", pkg[i]);
-			}
+				LOG_I("ASYNC RX (%d):", len);
 
-			uint8_t senderID = pkg[1];
-
-			for(i=0; i < g_activeDevices.count(); ++i)
-			{
-				if(senderID == g_activeDevices[i]->m_ID)
+				for (i = 0; i < len; ++i)
 				{
-					g_activeDevices[i]->radioPktReceivedFromDevice((char*)pkg, len);
+					m_printf( "%x ", pkg[i]);
 				}
-			}
 
+				uint8_t senderID = pkg[1];
 
-/*
-			if(len == 5)
-			{
-				if(pkg[1] == 3)
+				for(i=0; i < g_activeDevices.count(); ++i)
 				{
-					WebSocketsList &clients = server.getActiveWebSockets();
-					if(pkg[3] == 0x01)
+					if(senderID == g_activeDevices[i]->m_ID)
 					{
-						LOG_I("MOVEMENT ON");
-						for (int i = 0; i < clients.count(); i++)
-							clients[i].sendString("MOVEMENT ON");
-					}
-					else if(pkg[3] == 0x02)
-					{
-						LOG_I("MOVEMENT OFF");
-						for (int i = 0; i < clients.count(); i++)
-							clients[i].sendString("MOVEMENT OFF");
+						g_activeDevices[i]->radioPktReceivedFromDevice((char*)pkg, len);
 					}
 				}
-			}
-*/
 
-			//devRGB_setColor(COLOR_GREEN);
+			}
+
 		}
 		Radio->startListening();
 		releaseRadio();
