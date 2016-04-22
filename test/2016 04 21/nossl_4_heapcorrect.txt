@@ -1,0 +1,6531 @@
+Reset:
+REASON_DEFAULT_RST
+
+Chip id=10502778
+
+
+RFlash id=1261768
+
+
+RMem info:
+
+
+
+data  : 0x3ffe8000 ~ 0x3ffe843a, len: 1082
+
+rodata: 0x3ffe8440 ~ 0x3ffec5a0, len: 16736
+
+bss   : 0x3ffec5a0 ~ 0x3fff4888, len: 33512
+
+heap  : 0x3fff4888 ~ 0x3fffc000, len: 30584
+
+
+hlog_param:{"heap_start":0x3fff4888, "heap_end":0x3fffc000}
+T
+hl{m,40,0,3fff50d4} 64
+hl{m,32,0,3fff5104} 65
+hl{m,160,0,3fff512c} 66
+hl{m,1016,0,3fff51d4} 67
+hl{m,40,0,3fff55d4} 68
+hl{m,8,0,3fff5604} 69
+hl{m,40,0,3fff5614} 70
+hl{m,40,0,3fff5644} 71
+hl{m,40,0,3fff5674} 72
+hl{m,40,0,3fff56a4} 73
+hl{m,40,0,3fff56d4} 74
+hl{m,40,0,3fff5704} 75
+hl{m,40,0,3fff5734} 76
+hl{m,8,0,3fff5764} 77
+hl{m,20,0,3fff5774} 78
+hl{m,20,0,3fff578c} 79
+hl{m,20,0,3fff57a4} 80
+hl{m,20,0,3fff57bc} 81
+hl{m,20,0,3fff57d4} 82
+hl{m,20,0,3fff57ec} 83
+hl{f,3fff512c,0} 84
+hl{m,4,0,3fff4d8c} 85
+hl{m,45,0,3fff512c} 86
+hl{m,136,0,3fff5804} 87
+hl{m,40,0,3fff5164} 88
+hl{m,8,0,3fff5194} 89
+hl{m,8,0,3fff51a4} 90
+hl{m,20,0,3fff51b4} 91
+hl{f,3fff512c,0} 92
+hl{m,4,0,3fff51cc} 93
+hl{m,4,0,3fff512c} 94
+hl{m,33,0,3fff5134} 95
+hl{f,3fff5134,0} 96
+hl{m,33,0,3fff5134} 97
+hl{f,3fff5134,0} 98
+hl{m,33,0,3fff5134} 99
+hl{f,3fff5134,0} 100
+hl{m,33,0,3fff5134} 101
+hl{f,3fff5134,0} 102
+hl flush 102 - remains 26504
+▒Station configuration was updated to: TP-LINK_B4EB92
+mode : sta(18:fe:34:a0:42:7a)
+
+add if0
+
+f r0,
+hl{m,15,0,3fff5134} 103
+hl{m,14,0,3fff514c} 104
+hl{m,1156,0,3fff5894} 105
+hl{f,3fff5894,0} 106
+hl{f,3fff514c,0} 107
+hl{f,3fff5134,0} 108
+hl{m,12,0,3fff5134} 109
+hl{m,12,0,3fff5144} 110
+hl{m,48,0,3fff5894} 111
+hl{m,9,0,3fff5154} 112
+hl{f,3fff5154,0} 113
+hl{m,5,0,3fff5154} 114
+hl{f,3fff5154,0} 115
+hl{m,33,0,3fff58cc} 116
+hl{f,3fff58cc,0} 117
+hl{m,672,0,3fff58cc} 118
+hl{m,272,0,3fff5b74} 119
+hl{m,5,0,3fff5154} 120
+hl{f,3fff5154,0} 121
+hl{m,68,0,3fff5c8c} 122
+h_l{f,3fff494c,0} 123
+hl{m,32,0,3fff494c} 124
+hl{m,80,0,3fff5cd4} 125
+hl{m,20,0,3fff5d2c} 126
+hl{m,13,0,3fff5d44} 127
+hl{f,3fff5d44,0} 128
+hl{m,9,0,3fff5154} 129
+hl{f,3fff5154,0} 130
+hl{m,44,0,3fff5d44} 131
+hl{m,12,0,3fff5154} 132
+hl{m,28,0,3fff5d74} 133
+hl{m,76,0,3fff5d94} 134
+hl flush 134 - remains 25128
+]
+h_l{f,3fff4d7c,0} 135
+hl{f,3fff4d84,0} 136
+hl{f,3fff512c,0} 137
+hl{f,3fff5154,0} 138
+hl{f,3fff5d74,0} 139
+hl{f,3fff5d94,0} 140
+hl{f,3fff5d44,0} 141
+hl{f,3fff4904,0} 142
+hl{m,16,0,3fff4904} 143
+hl{f,3fff4934,0} 144
+hl{f,3fff4904,0} 145
+hl{m,16,0,3fff4904} 146
+hl{f,3fff4904,0} 147
+hl{m,16,0,3fff4904} 148
+hl{f,3fff4904,0} 149
+hl{m,16,0,3fff4904} 150
+hl{f,3fff48ec,0} 151
+hl{m,16,0,3fff48ec} 152
+hl{f,3fff4904,0} 153
+hl{m,16,0,3fff4904} 154
+hl{f,3fff4904,0} 155
+hl{m,16,0,3fff4904} 156
+hl{f,3fff4904,0} 157
+hl{m,16,0,3fff4904} 158
+hl{f,3fff4904,0} 159
+hl{m,16,0,3fff4904} 160
+hl{f,3fff4904,0} 161
+hl{m,16,0,3fff4904} 162
+hl{f,3fff491c,0} 163
+hl{m,16,0,3fff491c} 164
+hl{f,3fff48ec,0} 165
+hl{m,16,0,3fff48ec} 166
+hl flush 166 - remains 25368
+
+hl{f,3fff4904,0} 167
+hl{m,16,0,3fff4904} 168
+hl{f,3fff4904,0} 169
+hl{m,16,0,3fff4904} 170
+hl{f,3fff4904,0} 171
+hl{m,16,0,3fff4904} 172
+hl{f,3fff4904,0} 173
+hl{m,16,0,3fff4904} 174
+hl{f,3fff4904,0} 175
+hl{m,16,0,3fff4904} 176
+hl{f,3fff48ec,0} 177
+hl{m,16,0,3fff48ec} 178
+hl{f,3fff4904,0} 179
+hl{m,16,0,3fff4904} 180
+hl{f,3fff4904,0} 181
+hl{m,16,0,3fff4904} 182
+hl{f,3fff4904,0} 183
+hl{m,16,0,3fff4904} 184
+hl{f,3fff4904,0} 185
+hl{m,16,0,3fff4904} 186
+hl{f,3fff4904,0} 187
+hl{m,16,0,3fff4904} 188
+hl{f,3fff491c,0} 189
+hl{m,16,0,3fff491c} 190
+hl{f,3fff48ec,0} 191
+hl{m,16,0,3fff48ec} 192
+hl{f,3fff4904,0} 193
+hl{m,16,0,3fff4904} 194
+hl{f,3fff4904,0} 195
+hl{m,16,0,3fff4904} 196
+hl{f,3fff4904,0} 197
+hl{m,16,0,3fff4904} 198
+hl flush 198 - remains 25368
+
+hl{f,3fff4904,0} 199
+hl{m,16,0,3fff4904} 200
+hl{f,3fff4904,0} 201
+hl{m,16,0,3fff4904} 202
+hl{f,3fff48ec,0} 203
+hl{m,16,0,3fff48ec} 204
+hl{f,3fff4904,0} 205
+hl{m,16,0,3fff4904} 206
+hl{f,3fff4904,0} 207
+hl{m,16,0,3fff4904} 208
+hl{f,3fff4904,0} 209
+hl{m,16,0,3fff4904} 210
+hl{f,3fff4904,0} 211
+hl{m,16,0,3fff4904} 212
+hl{f,3fff4904,0} 213
+hl{m,16,0,3fff4904} 214
+hl{m,44,0,3fff5d44} 215
+hl{m,12,0,3fff5154} 216
+hl{m,28,0,3fff5d74} 217
+hl{m,76,0,3fff5d94} 218
+hl{f,3fff5154,0} 219
+hl{f,3fff5d74,0} 220
+hl{f,3fff5d94,0} 221
+hl{f,3fff5d44,0} 222
+hl{f,3fff491c,0} 223
+hl{m,16,0,3fff491c} 224
+hl{f,3fff48ec,0} 225
+hl{m,16,0,3fff48ec} 226
+hl{f,3fff4904,0} 227
+hl{m,16,0,3fff4904} 228
+hl{m,44,0,3fff5d44} 229
+hl{m,12,0,3fff5154} 230
+hl flush 230 - remains 25248
+▒
+hl{m,28,0,3fff5d74} 231
+hl{m,76,0,3fff5d94} 232
+hl{f,3fff5154,0} 233
+hl{f,3fff5d74,0} 234
+hl{f,3fff5d94,0} 235
+hl{f,3fff5d44,0} 236
+hl{f,3fff4904,0} 237
+hl{m,16,0,3fff4904} 238
+hl{m,44,0,3fff5d44} 239
+hl{m,12,0,3fff5154} 240
+hl{m,28,0,3fff5d74} 241
+hl{m,76,0,3fff5d94} 242
+hl{f,3fff5154,0} 243
+hl{f,3fff5d74,0} 244
+hl{f,3fff5d94,0} 245
+hl{f,3fff5d44,0} 246
+hl{f,3fff4904,0} 247
+hl{m,16,0,3fff4904} 248
+hl{f,3fff4904,0} 249
+hl{m,16,0,3fff4904} 250
+hl{m,44,0,3fff5d44} 251
+hl{m,12,0,3fff5154} 252
+hl{m,28,0,3fff5d74} 253
+hl{m,76,0,3fff5d94} 254
+hl{f,3fff5154,0} 255
+hl{f,3fff5d74,0} 256
+hl{f,3fff5d94,0} 257
+hl{f,3fff5d44,0} 258
+hl{f,3fff4904,0} 259
+hl{m,16,0,3fff4904} 260
+hl{m,44,0,3fff5d44} 261
+hl{m,12,0,3fff5154} 262
+hl flush 262 - remains 25248
+▒ASYNC RX (0):
+?
+hl{m,28,0,3fff5d74} 263
+hl{m,76,0,3fff5d94} 264
+hl{f,3fff5154,0} 265
+hl{f,3fff5d74,0} 266
+hl{f,3fff5d94,0} 267
+hl{f,3fff5d44,0} 268
+hl{f,3fff48ec,0} 269
+hl{m,16,0,3fff48ec} 270
+hl{f,3fff4904,0} 271
+hl{m,16,0,3fff4904} 272
+hl{f,3fff4904,0} 273
+hl{m,16,0,3fff4904} 274
+hl{m,44,0,3fff5d44} 275
+hl{m,12,0,3fff5154} 276
+hl{m,28,0,3fff5d74} 277
+hl{m,76,0,3fff5d94} 278
+hl{f,3fff5154,0} 279
+hl{f,3fff5d74,0} 280
+hl{f,3fff5d94,0} 281
+hl{f,3fff5d44,0} 282
+hl{f,3fff4904,0} 283
+hl{m,16,0,3fff4904} 284
+hl{m,44,0,3fff5d44} 285
+hl{m,12,0,3fff5154} 286
+hl{m,28,0,3fff5d74} 287
+hl{m,76,0,3fff5d94} 288
+hl{f,3fff5154,0} 289
+hl{f,3fff5d74,0} 290
+hl{f,3fff5d94,0} 291
+hl{f,3fff5d44,0} 292
+hl{f,3fff4904,0} 293
+hl{m,16,0,3fff4904} 294
+hl flush 294 - remains 25368
+
+hl{f,3fff4904,0} 295
+hl{m,16,0,3fff4904} 296
+hl{m,44,0,3fff5d44} 297
+hl{m,12,0,3fff5154} 298
+hl{m,28,0,3fff5d74} 299
+hl{m,76,0,3fff5d94} 300
+hl{f,3fff5154,0} 301
+hl{f,3fff5d74,0} 302
+hl{f,3fff5d94,0} 303
+hl{f,3fff5d44,0} 304
+hl{f,3fff491c,0} 305
+hl{m,16,0,3fff491c} 306
+hl{f,3fff48ec,0} 307
+hl{m,16,0,3fff48ec} 308
+hl{f,3fff4904,0} 309
+hl{m,16,0,3fff4904} 310
+hl{m,44,0,3fff5d44} 311
+hl{m,12,0,3fff5154} 312
+hl{m,28,0,3fff5d74} 313
+hl{m,76,0,3fff5d94} 314
+hl{f,3fff5154,0} 315
+hl{f,3fff5d74,0} 316
+hl{f,3fff5d94,0} 317
+hl{f,3fff5d44,0} 318
+hl{f,3fff4904,0} 319
+hl{m,16,0,3fff4904} 320
+hl{f,3fff4904,0} 321
+hl{m,16,0,3fff4904} 322
+hl{m,44,0,3fff5d44} 323
+hl{m,12,0,3fff5154} 324
+hl{m,28,0,3fff5d74} 325
+hl{m,76,0,3fff5d94} 326
+hl flush 326 - remains 25184
+ASYNC RX (0):
+?
+hl{f,3fff5154,0} 327
+hl{f,3fff5d74,0} 328
+hl{f,3fff5d94,0} 329
+hl{f,3fff5d44,0} 330
+hl{f,3fff4904,0} 331
+hl{m,16,0,3fff4904} 332
+hl{m,44,0,3fff5d44} 333
+hl{m,12,0,3fff5154} 334
+hl{m,28,0,3fff5d74} 335
+hl{m,76,0,3fff5d94} 336
+hl{f,3fff5154,0} 337
+hl{f,3fff5d74,0} 338
+hl{f,3fff5d94,0} 339
+hl{f,3fff5d44,0} 340
+hl{f,3fff4904,0} 341
+hl{m,16,0,3fff4904} 342
+hl{m,44,0,3fff5d44} 343
+hl{m,12,0,3fff5154} 344
+hl{m,28,0,3fff5d74} 345
+hl{m,76,0,3fff5d94} 346
+hl{f,3fff5154,0} 347
+hl{f,3fff5d74,0} 348
+hl{f,3fff5d94,0} 349
+hl{f,3fff5d44,0} 350
+hl{f,3fff48ec,0} 351
+hl{m,16,0,3fff48ec} 352
+hl{f,3fff4904,0} 353
+hl{m,16,0,3fff4904} 354
+hl{f,3fff4904,0} 355
+hl{m,16,0,3fff4904} 356
+hl{m,44,0,3fff5d44} 357
+hl{m,12,0,3fff5154} 358
+hl flush 358 - remains 25248
+▒scandone
+
+state: 0 -> 2 (b0)
+
+state: 2 -> 3 (0)
+
+state: 3 -> 5 (10)
+
+add 0
+
+aid 3
+
+cnt
+
+
+hl{m,28,0,3fff5d74} 359
+hl{m,76,0,3fff5d94} 360
+hl{f,3fff5154,0} 361
+hl{f,3fff5d74,0} 362
+hl{f,3fff5d94,0} 363
+hl{f,3fff5d44,0} 364
+hl{f,3fff4904,0} 365
+hl{m,16,0,3fff4904} 366
+hl{m,13,0,3fff4934} 367
+hl{f,3fff4934,0} 368
+hl{m,25,0,3fff5d44} 369
+hl{f,3fff5d44,0} 370
+hl{m,25,0,3fff5d44} 371
+hl{f,3fff5d44,0} 372
+hl{m,44,0,3fff5d44} 373
+hl{m,12,0,3fff5154} 374
+hl{m,28,0,3fff5d74} 375
+hl{m,208,0,3fff5d94} 376
+hl{m,25,0,3fff5e6c} 377
+hl{f,3fff5e6c,0} 378
+hl{m,9,0,3fff4d7c} 379
+hl{f,3fff4d7c,0} 380
+hl{m,9,0,3fff4d7c} 381
+hl{f,3fff4d7c,0} 382
+hl{m,9,0,3fff4d7c} 383
+hl{f,3fff4d7c,0} 384
+hl{m,312,0,3fff5e6c} 385
+hl{f,3fff5154,0} 386
+hl{f,3fff5d74,0} 387
+hl{f,3fff5d94,0} 388
+hl{f,3fff5d44,0} 389
+hl{f,3fff5e6c,0} 390
+hl flush 390 - remains 25024
+▒
+
+connected with TP-LINK_B4EB92, channel 6
+
+dhcp client start...
+
+
+hl{m,312,0,3fff5d44} 391
+hl{f,3fff4904,0} 392
+hl{m,16,0,3fff4904} 393
+hl{m,160,0,3fff5e84} 394
+hl{m,160,0,3fff5f2c} 395
+hl{m,33,0,3fff5fd4} 396
+hl{f,3fff5fd4,0} 397
+hl{m,25,0,3fff5fd4} 398
+hl{f,3fff5fd4,0} 399
+hl{m,60,0,3fff5fd4} 400
+hl{m,36,0,3fff6014} 401
+hl{m,420,0,3fff603c} 402
+hl{f,3fff5d44,0} 403
+hl{f,3fff603c,0} 404
+hl{m,20,0,3fff4934} 405
+hl{f,3fff4934,0} 406
+hl{f,3fff4904,0} 407
+hl{m,16,0,3fff4904} 408
+hl{f,3fff48bc,0} 409
+hl{m,16,0,3fff48bc} 410
+hl{f,3fff491c,0} 411
+hl{m,16,0,3fff491c} 412
+hl{f,3fff48ec,0} 413
+hl{m,16,0,3fff48ec} 414
+hl{f,3fff4904,0} 415
+hl{m,16,0,3fff4904} 416
+hl{f,3fff4904,0} 417
+hl{m,16,0,3fff4904} 418
+hl{f,3fff4904,0} 419
+hl{m,16,0,3fff4904} 420
+hl{f,3fff4904,0} 421
+hl{m,16,0,3fff4904} 422
+hl flush 422 - remains 24928
+,DHT22 read FAIL:2 (2)
+
+ASYNC RX (0):
+?
+hl{f,3fff4904,0} 423
+hl{m,16,0,3fff4904} 424
+hl{m,20,0,3fff4934} 425
+hl{f,3fff57ec,0} 426
+hl{f,3fff48ec,0} 427
+hl{m,16,0,3fff48ec} 428
+hl{f,3fff4904,0} 429
+hl{m,16,0,3fff4904} 430
+hl{f,3fff4904,0} 431
+hl{m,16,0,3fff4904} 432
+hl{f,3fff4904,0} 433
+hl{m,16,0,3fff4904} 434
+hl{f,3fff4904,0} 435
+hl{m,16,0,3fff4904} 436
+hl{f,3fff4904,0} 437
+hl{m,16,0,3fff4904} 438
+hl{f,3fff491c,0} 439
+hl{m,16,0,3fff491c} 440
+hl{f,3fff48ec,0} 441
+hl{m,16,0,3fff48ec} 442
+hl{f,3fff4904,0} 443
+hl{m,16,0,3fff4904} 444
+hl{f,3fff4904,0} 445
+hl{m,16,0,3fff4904} 446
+hl{f,3fff4904,0} 447
+hl{m,16,0,3fff4904} 448
+hl{f,3fff4904,0} 449
+hl{m,16,0,3fff4904} 450
+hl{f,3fff4904,0} 451
+hl{m,16,0,3fff4904} 452
+hl{f,3fff48ec,0} 453
+hl{m,420,0,3fff603c} 454
+hl flush 454 - remains 24480
+`ASYNC RX (0):
+?ASYNC RX (0):
+?
+hl{m,16,0,3fff48ec} 455
+hl{f,3fff4904,0} 456
+hl{m,16,0,3fff4904} 457
+hl{f,3fff603c,0} 458
+hl{f,3fff4904,0} 459
+hl{m,16,0,3fff4904} 460
+hl{m,20,0,3fff57ec} 461
+hl{f,3fff51b4,0} 462
+hl{f,3fff4904,0} 463
+hl{m,16,0,3fff4904} 464
+hl{f,3fff4904,0} 465
+hl{m,16,0,3fff4904} 466
+hl{f,3fff4904,0} 467
+hl{m,16,0,3fff4904} 468
+hl{f,3fff491c,0} 469
+hl{m,16,0,3fff491c} 470
+hl{f,3fff48ec,0} 471
+hl{m,16,0,3fff48ec} 472
+hl{f,3fff4904,0} 473
+hl{m,16,0,3fff4904} 474
+hl{f,3fff4904,0} 475
+hl{m,16,0,3fff4904} 476
+hl{f,3fff4904,0} 477
+hl{m,16,0,3fff4904} 478
+hl{f,3fff4904,0} 479
+hl{m,16,0,3fff4904} 480
+hl{f,3fff4904,0} 481
+hl{m,16,0,3fff4904} 482
+hl{f,3fff48ec,0} 483
+hl{m,16,0,3fff48ec} 484
+hl{f,3fff4904,0} 485
+hl{m,16,0,3fff4904} 486
+hl flush 486 - remains 24928
+▒ASYNC RX (0):
+?
+hl{f,3fff4904,0} 487
+hl{m,16,0,3fff4904} 488
+hl{f,3fff4904,0} 489
+hl{m,16,0,3fff4904} 490
+hl{f,3fff4904,0} 491
+hl{m,16,0,3fff4904} 492
+hl{f,3fff4904,0} 493
+hl{m,16,0,3fff4904} 494
+hl{f,3fff491c,0} 495
+hl{m,16,0,3fff491c} 496
+hl{f,3fff48ec,0} 497
+hl{m,16,0,3fff48ec} 498
+hl{f,3fff4904,0} 499
+hl{m,16,0,3fff4904} 500
+hl{f,3fff4904,0} 501
+hl{m,16,0,3fff4904} 502
+hl{f,3fff4904,0} 503
+hl{m,16,0,3fff4904} 504
+hl{f,3fff4904,0} 505
+hl{m,16,0,3fff4904} 506
+hl{f,3fff4904,0} 507
+hl{m,16,0,3fff4904} 508
+hl{f,3fff48ec,0} 509
+hl{m,16,0,3fff48ec} 510
+hl{f,3fff4904,0} 511
+hl{m,16,0,3fff4904} 512
+hl{f,3fff4904,0} 513
+hl{m,16,0,3fff4904} 514
+hl{f,3fff4904,0} 515
+hl{m,16,0,3fff4904} 516
+hl{f,3fff4904,0} 517
+hl{m,16,0,3fff4904} 518
+hl flush 518 - remains 24928
+▒rtc time init...
+a 0: 0:30 Dormitor H:45.70(0.0) T:20.30(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{f,3fff4904,0} 519
+hl{m,16,0,3fff4904} 520
+hl{f,3fff491c,0} 521
+hl{m,16,0,3fff491c} 522
+hl{f,3fff48ec,0} 523
+hl{m,16,0,3fff48ec} 524
+hl{f,3fff4904,0} 525
+hl{m,16,0,3fff4904} 526
+hl{f,3fff4904,0} 527
+hl{m,16,0,3fff4904} 528
+hl{f,3fff4904,0} 529
+hl{m,16,0,3fff4904} 530
+hl{f,3fff4904,0} 531
+hl{m,16,0,3fff4904} 532
+hl{m,20,0,3fff51b4} 533
+hl{f,3fff4934,0} 534
+hl{f,3fff4904,0} 535
+hl{m,16,0,3fff4904} 536
+hl{f,3fff48ec,0} 537
+hl{m,16,0,3fff48ec} 538
+hl{f,3fff4904,0} 539
+hl{m,16,0,3fff4904} 540
+hl{f,3fff4904,0} 541
+hl{m,16,0,3fff4904} 542
+hl{f,3fff4904,0} 543
+hl{m,16,0,3fff4904} 544
+hl{f,3fff4904,0} 545
+hl{m,16,0,3fff4904} 546
+hl{f,3fff4904,0} 547
+hl{m,16,0,3fff4904} 548
+hl{f,3fff48bc,0} 549
+hl{m,16,0,3fff48bc} 550
+hl flush 550 - remains 24928
+▒ASYNC RX (0):
+?
+hl{f,3fff491c,0} 551
+hl{m,16,0,3fff491c} 552
+hl{f,3fff48ec,0} 553
+hl{m,16,0,3fff48ec} 554
+hl{f,3fff4904,0} 555
+hl{m,16,0,3fff4904} 556
+hl{f,3fff4904,0} 557
+hl{m,16,0,3fff4904} 558
+hl{f,3fff4904,0} 559
+hl{m,16,0,3fff4904} 560
+hl{f,3fff4904,0} 561
+hl{m,16,0,3fff4904} 562
+hl{m,20,0,3fff4934} 563
+hl{m,20,0,3fff5d44} 564
+hl{f,3fff4934,0} 565
+hl{f,3fff5d44,0} 566
+hl{f,3fff4904,0} 567
+hl{m,16,0,3fff4904} 568
+hl{f,3fff48ec,0} 569
+hl{m,420,0,3fff603c} 570
+hl{m,16,0,3fff48ec} 571
+hl{f,3fff4904,0} 572
+hl{m,16,0,3fff4904} 573
+hl{f,3fff603c,0} 574
+hl{f,3fff4904,0} 575
+hl{m,16,0,3fff4904} 576
+hl{f,3fff4904,0} 577
+hl{m,16,0,3fff4904} 578
+hl{f,3fff4904,0} 579
+hl{m,16,0,3fff4904} 580
+hl{f,3fff4904,0} 581
+hl{m,16,0,3fff4904} 582
+hl flush 582 - remains 24928
+ASYNC RX (0):
+?
+hl{f,3fff491c,0} 583
+hl{m,16,0,3fff491c} 584
+hl{f,3fff48ec,0} 585
+hl{m,16,0,3fff48ec} 586
+hl{f,3fff4904,0} 587
+hl{m,16,0,3fff4904} 588
+hl{f,3fff4904,0} 589
+hl{m,16,0,3fff4904} 590
+hl{f,3fff4904,0} 591
+hl{m,16,0,3fff4904} 592
+hl{f,3fff4904,0} 593
+hl{m,16,0,3fff4904} 594
+hl{f,3fff4904,0} 595
+hl{m,16,0,3fff4904} 596
+hl{m,20,0,3fff4934} 597
+hl{f,3fff57ec,0} 598
+hl{f,3fff48ec,0} 599
+hl{m,16,0,3fff48ec} 600
+hl{f,3fff4904,0} 601
+hl{m,16,0,3fff4904} 602
+hl{f,3fff4904,0} 603
+hl{m,16,0,3fff4904} 604
+hl{f,3fff4904,0} 605
+hl{m,16,0,3fff4904} 606
+hl{f,3fff4904,0} 607
+hl{m,16,0,3fff4904} 608
+hl{f,3fff4904,0} 609
+hl{m,16,0,3fff4904} 610
+hl{f,3fff491c,0} 611
+hl{m,16,0,3fff491c} 612
+hl{f,3fff48ec,0} 613
+hl{m,16,0,3fff48ec} 614
+hl flush 614 - remains 24928
+▒ASYNC RX (0):
+?ASYNC RX (0):
+?
+hl{f,3fff4904,0} 615
+hl{m,16,0,3fff4904} 616
+hl{f,3fff4904,0} 617
+hl{m,16,0,3fff4904} 618
+hl{f,3fff4904,0} 619
+hl{m,16,0,3fff4904} 620
+hl{f,3fff4904,0} 621
+hl{m,16,0,3fff4904} 622
+hl{f,3fff4904,0} 623
+hl{m,16,0,3fff4904} 624
+hl{f,3fff48ec,0} 625
+hl{m,16,0,3fff48ec} 626
+hl{f,3fff4904,0} 627
+hl{m,16,0,3fff4904} 628
+hl{f,3fff4904,0} 629
+hl{m,16,0,3fff4904} 630
+hl{f,3fff4904,0} 631
+hl{m,16,0,3fff4904} 632
+hl{f,3fff4904,0} 633
+hl{m,16,0,3fff4904} 634
+hl{f,3fff4904,0} 635
+hl{m,16,0,3fff4904} 636
+hl{f,3fff491c,0} 637
+hl{m,16,0,3fff491c} 638
+hl{f,3fff48ec,0} 639
+hl{m,16,0,3fff48ec} 640
+hl{f,3fff4904,0} 641
+hl{m,16,0,3fff4904} 642
+hl{f,3fff4904,0} 643
+hl{m,16,0,3fff4904} 644
+hl{f,3fff4904,0} 645
+hl{m,16,0,3fff4904} 646
+hl flush 646 - remains 24928
+▒ 0: 0:35 Dormitor H:45.70(0.0) T:20.30(0.0 0.0)/25.2 SetPt:21.50 needHeat:1   HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{f,3fff4904,0} 647
+hl{m,16,0,3fff4904} 648
+hl{f,3fff4904,0} 649
+hl{m,16,0,3fff4904} 650
+hl{f,3fff48ec,0} 651
+hl{m,16,0,3fff48ec} 652
+hl{f,3fff4904,0} 653
+hl{m,16,0,3fff4904} 654
+hl{f,3fff4904,0} 655
+hl{m,16,0,3fff4904} 656
+hl{f,3fff4904,0} 657
+hl{m,16,0,3fff4904} 658
+hl{f,3fff4904,0} 659
+hl{m,16,0,3fff4904} 660
+hl{f,3fff4904,0} 661
+hl{m,16,0,3fff4904} 662
+hl{f,3fff491c,0} 663
+hl{m,16,0,3fff491c} 664
+hl{f,3fff48ec,0} 665
+hl{m,16,0,3fff48ec} 666
+hl{f,3fff4904,0} 667
+hl{m,16,0,3fff4904} 668
+hl{f,3fff4904,0} 669
+hl{m,16,0,3fff4904} 670
+hl{m,20,0,3fff57ec} 671
+hl{f,3fff51b4,0} 672
+hl{f,3fff4904,0} 673
+hl{m,16,0,3fff4904} 674
+hl{f,3fff4904,0} 675
+hl{m,16,0,3fff4904} 676
+hl{f,3fff4904,0} 677
+hl{m,16,0,3fff4904} 678
+hl flush 678 - remains 24928
+ASYNC RX (0):
+pm open,type:2 0
+
+
+hl{f,3fff48ec,0} 679
+hl{m,16,0,3fff48ec} 680
+hl{f,3fff4904,0} 681
+hl{m,16,0,3fff4904} 682
+hl{f,3fff4904,0} 683
+hl{m,16,0,3fff4904} 684
+hl{f,3fff4904,0} 685
+hl{m,16,0,3fff4904} 686
+hl{f,3fff4904,0} 687
+hl{m,16,0,3fff4904} 688
+hl{f,3fff4904,0} 689
+hl{m,16,0,3fff4904} 690
+hl{f,3fff48bc,0} 691
+hl{m,16,0,3fff48bc} 692
+hl{f,3fff491c,0} 693
+hl{m,16,0,3fff491c} 694
+hl{f,3fff48ec,0} 695
+hl{m,16,0,3fff48ec} 696
+hl{f,3fff4904,0} 697
+hl{m,16,0,3fff4904} 698
+hl{f,3fff4904,0} 699
+hl{m,16,0,3fff4904} 700
+hl{m,21,0,3fff5d44} 701
+hl{f,3fff5d44,0} 702
+hl{f,3fff4904,0} 703
+hl{m,16,0,3fff4904} 704
+hl{f,3fff4904,0} 705
+hl{m,16,0,3fff4904} 706
+hl{m,756,0,3fff603c} 707
+hl{f,3fff603c,0} 708
+hl{f,3fff4904,0} 709
+hl{m,16,0,3fff4904} 710
+hl flush 710 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff48ec,0} 711
+hl{m,16,0,3fff48ec} 712
+hl{f,3fff4904,0} 713
+hl{m,16,0,3fff4904} 714
+hl{m,756,0,3fff603c} 715
+hl{f,3fff603c,0} 716
+hl{f,3fff4904,0} 717
+hl{m,16,0,3fff4904} 718
+hl{m,756,0,3fff603c} 719
+hl{f,3fff603c,0} 720
+hl{f,3fff4904,0} 721
+hl{m,16,0,3fff4904} 722
+hl{m,756,0,3fff603c} 723
+hl{f,3fff603c,0} 724
+hl{f,3fff4904,0} 725
+hl{m,16,0,3fff4904} 726
+hl{m,756,0,3fff603c} 727
+hl{f,3fff603c,0} 728
+hl{f,3fff4904,0} 729
+hl{m,16,0,3fff4904} 730
+hl{m,756,0,3fff603c} 731
+hl{f,3fff603c,0} 732
+hl{f,3fff491c,0} 733
+hl{m,16,0,3fff491c} 734
+hl{f,3fff48ec,0} 735
+hl{m,16,0,3fff48ec} 736
+hl{f,3fff4904,0} 737
+hl{m,16,0,3fff4904} 738
+hl{m,756,0,3fff603c} 739
+hl{f,3fff603c,0} 740
+hl{f,3fff4904,0} 741
+hl{m,16,0,3fff4904} 742
+hl flush 742 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff4904,0} 743
+hl{m,16,0,3fff4904} 744
+hl{m,20,0,3fff51b4} 745
+hl{f,3fff4934,0} 746
+hl{f,3fff4904,0} 747
+hl{m,16,0,3fff4904} 748
+hl{f,3fff4904,0} 749
+hl{m,16,0,3fff4904} 750
+hl{m,756,0,3fff603c} 751
+hl{f,3fff603c,0} 752
+hl{f,3fff48ec,0} 753
+hl{m,16,0,3fff48ec} 754
+hl{f,3fff4904,0} 755
+hl{m,16,0,3fff4904} 756
+hl{f,3fff4904,0} 757
+hl{m,16,0,3fff4904} 758
+hl{m,756,0,3fff603c} 759
+hl{f,3fff603c,0} 760
+hl{f,3fff4904,0} 761
+hl{m,16,0,3fff4904} 762
+hl{m,756,0,3fff603c} 763
+hl{f,3fff603c,0} 764
+hl{f,3fff4904,0} 765
+hl{m,16,0,3fff4904} 766
+hl{m,756,0,3fff603c} 767
+hl{f,3fff603c,0} 768
+hl{f,3fff4904,0} 769
+hl{m,16,0,3fff4904} 770
+hl{m,756,0,3fff603c} 771
+hl{f,3fff603c,0} 772
+hl{f,3fff491c,0} 773
+hl{m,16,0,3fff491c} 774
+hl flush 774 - remains 24928
+▒
+hl{f,3fff48ec,0} 775
+hl{m,16,0,3fff48ec} 776
+hl{f,3fff4904,0} 777
+hl{m,16,0,3fff4904} 778
+hl{m,756,0,3fff603c} 779
+hl{f,3fff603c,0} 780
+hl{f,3fff4904,0} 781
+hl{m,16,0,3fff4904} 782
+hl{m,756,0,3fff603c} 783
+hl{f,3fff603c,0} 784
+hl{f,3fff4904,0} 785
+hl{m,16,0,3fff4904} 786
+hl{m,756,0,3fff603c} 787
+hl{f,3fff603c,0} 788
+hl{f,3fff4904,0} 789
+hl{m,16,0,3fff4904} 790
+hl{m,756,0,3fff603c} 791
+hl{f,3fff603c,0} 792
+hl{f,3fff4904,0} 793
+hl{m,16,0,3fff4904} 794
+hl{m,756,0,3fff603c} 795
+hl{f,3fff603c,0} 796
+hl{f,3fff48ec,0} 797
+hl{m,16,0,3fff48ec} 798
+hl{f,3fff4904,0} 799
+hl{m,16,0,3fff4904} 800
+hl{m,756,0,3fff603c} 801
+hl{f,3fff603c,0} 802
+hl{f,3fff4904,0} 803
+hl{m,16,0,3fff4904} 804
+hl{m,756,0,3fff603c} 805
+hl{f,3fff603c,0} 806
+hl flush 806 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff4904,0} 807
+hl{m,16,0,3fff4904} 808
+hl{m,756,0,3fff603c} 809
+hl{f,3fff603c,0} 810
+hl{f,3fff4904,0} 811
+hl{m,16,0,3fff4904} 812
+hl{m,756,0,3fff603c} 813
+hl{f,3fff603c,0} 814
+hl{f,3fff4904,0} 815
+hl{m,16,0,3fff4904} 816
+hl{m,756,0,3fff603c} 817
+hl{f,3fff603c,0} 818
+hl{f,3fff491c,0} 819
+hl{m,16,0,3fff491c} 820
+hl{f,3fff48ec,0} 821
+hl{m,16,0,3fff48ec} 822
+hl{f,3fff4904,0} 823
+hl{m,16,0,3fff4904} 824
+hl{m,756,0,3fff603c} 825
+hl{f,3fff603c,0} 826
+hl{f,3fff4904,0} 827
+hl{m,16,0,3fff4904} 828
+hl{f,3fff4904,0} 829
+hl{m,16,0,3fff4904} 830
+hl{m,756,0,3fff603c} 831
+hl{f,3fff603c,0} 832
+hl{f,3fff4904,0} 833
+hl{m,16,0,3fff4904} 834
+hl{m,756,0,3fff603c} 835
+hl{f,3fff603c,0} 836
+hl{f,3fff4904,0} 837
+hl{m,16,0,3fff4904} 838
+hl flush 838 - remains 24144
+▒ 0: 0:40 Dormitor H:46.90(0.0) T:20.30(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+\HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{m,756,0,3fff603c} 839
+hl{f,3fff603c,0} 840
+hl{f,3fff48ec,0} 841
+hl{m,420,0,3fff603c} 842
+hl{m,16,0,3fff48ec} 843
+hl{f,3fff4904,0} 844
+hl{m,16,0,3fff4904} 845
+hl{f,3fff603c,0} 846
+hl{f,3fff4904,0} 847
+hl{m,16,0,3fff4904} 848
+hl{m,756,0,3fff603c} 849
+hl{f,3fff603c,0} 850
+hl{f,3fff4904,0} 851
+hl{m,16,0,3fff4904} 852
+hl{m,756,0,3fff603c} 853
+hl{f,3fff603c,0} 854
+hl{f,3fff4904,0} 855
+hl{m,16,0,3fff4904} 856
+hl{m,756,0,3fff603c} 857
+hl{f,3fff603c,0} 858
+hl{m,20,0,3fff4934} 859
+hl{f,3fff57ec,0} 860
+hl{f,3fff4904,0} 861
+hl{m,16,0,3fff4904} 862
+hl{f,3fff491c,0} 863
+hl{m,16,0,3fff491c} 864
+hl{f,3fff48ec,0} 865
+hl{m,16,0,3fff48ec} 866
+hl{f,3fff4904,0} 867
+hl{m,16,0,3fff4904} 868
+hl{f,3fff4904,0} 869
+hl{m,16,0,3fff4904} 870
+hl flush 870 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff4904,0} 871
+hl{m,16,0,3fff4904} 872
+hl{f,3fff4904,0} 873
+hl{m,16,0,3fff4904} 874
+hl{f,3fff4904,0} 875
+hl{m,16,0,3fff4904} 876
+hl{f,3fff48ec,0} 877
+hl{m,16,0,3fff48ec} 878
+hl{f,3fff4904,0} 879
+hl{m,16,0,3fff4904} 880
+hl{f,3fff4904,0} 881
+hl{m,16,0,3fff4904} 882
+hl{f,3fff4904,0} 883
+hl{m,16,0,3fff4904} 884
+hl{f,3fff4904,0} 885
+hl{m,16,0,3fff4904} 886
+hl{m,756,0,3fff603c} 887
+hl{f,3fff603c,0} 888
+hl{f,3fff4904,0} 889
+hl{m,16,0,3fff4904} 890
+hl{m,756,0,3fff603c} 891
+hl{f,3fff603c,0} 892
+hl{f,3fff48bc,0} 893
+hl{m,16,0,3fff48bc} 894
+hl{f,3fff491c,0} 895
+hl{m,16,0,3fff491c} 896
+hl{f,3fff48ec,0} 897
+hl{m,16,0,3fff48ec} 898
+hl{f,3fff4904,0} 899
+hl{m,16,0,3fff4904} 900
+hl{m,756,0,3fff603c} 901
+hl{f,3fff603c,0} 902
+hl flush 902 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff4904,0} 903
+hl{m,16,0,3fff4904} 904
+hl{m,756,0,3fff603c} 905
+hl{f,3fff603c,0} 906
+hl{f,3fff4904,0} 907
+hl{m,16,0,3fff4904} 908
+hl{m,756,0,3fff603c} 909
+hl{f,3fff603c,0} 910
+hl{f,3fff4904,0} 911
+hl{m,16,0,3fff4904} 912
+hl{f,3fff4904,0} 913
+hl{m,16,0,3fff4904} 914
+hl{m,756,0,3fff603c} 915
+hl{f,3fff603c,0} 916
+hl{f,3fff48ec,0} 917
+hl{m,16,0,3fff48ec} 918
+hl{f,3fff4904,0} 919
+hl{m,16,0,3fff4904} 920
+hl{m,756,0,3fff603c} 921
+hl{f,3fff603c,0} 922
+hl{f,3fff4904,0} 923
+hl{m,16,0,3fff4904} 924
+hl{m,756,0,3fff603c} 925
+hl{f,3fff603c,0} 926
+hl{f,3fff4904,0} 927
+hl{m,16,0,3fff4904} 928
+hl{m,756,0,3fff603c} 929
+hl{f,3fff603c,0} 930
+hl{f,3fff4904,0} 931
+hl{m,16,0,3fff4904} 932
+hl{m,756,0,3fff603c} 933
+hl{f,3fff603c,0} 934
+hl flush 934 - remains 24928
+▒
+hl{f,3fff4904,0} 935
+hl{m,16,0,3fff4904} 936
+hl{m,756,0,3fff603c} 937
+hl{f,3fff603c,0} 938
+hl{f,3fff491c,0} 939
+hl{m,16,0,3fff491c} 940
+hl{f,3fff48ec,0} 941
+hl{m,16,0,3fff48ec} 942
+hl{f,3fff4904,0} 943
+hl{m,16,0,3fff4904} 944
+hl{m,756,0,3fff603c} 945
+hl{f,3fff603c,0} 946
+hl{m,20,0,3fff57ec} 947
+hl{f,3fff51b4,0} 948
+hl{f,3fff4904,0} 949
+hl{m,16,0,3fff4904} 950
+hl{m,756,0,3fff603c} 951
+hl{f,3fff603c,0} 952
+hl{f,3fff4904,0} 953
+hl{m,16,0,3fff4904} 954
+hl{m,756,0,3fff603c} 955
+hl{f,3fff603c,0} 956
+hl{f,3fff4904,0} 957
+hl{m,16,0,3fff4904} 958
+hl{f,3fff4904,0} 959
+hl{m,16,0,3fff4904} 960
+hl{m,756,0,3fff603c} 961
+hl{f,3fff603c,0} 962
+hl{f,3fff48ec,0} 963
+hl{m,16,0,3fff48ec} 964
+hl{f,3fff4904,0} 965
+hl{m,16,0,3fff4904} 966
+hl flush 966 - remains 24144
+ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 967
+hl{f,3fff603c,0} 968
+hl{f,3fff4904,0} 969
+hl{m,16,0,3fff4904} 970
+hl{f,3fff4904,0} 971
+hl{m,16,0,3fff4904} 972
+hl{m,756,0,3fff603c} 973
+hl{f,3fff603c,0} 974
+hl{f,3fff4904,0} 975
+hl{m,16,0,3fff4904} 976
+hl{m,756,0,3fff603c} 977
+hl{f,3fff603c,0} 978
+hl{f,3fff4904,0} 979
+hl{m,16,0,3fff4904} 980
+hl{m,756,0,3fff603c} 981
+hl{f,3fff603c,0} 982
+hl{f,3fff491c,0} 983
+hl{m,16,0,3fff491c} 984
+hl{f,3fff48ec,0} 985
+hl{m,16,0,3fff48ec} 986
+hl{f,3fff4904,0} 987
+hl{m,16,0,3fff4904} 988
+hl{m,756,0,3fff603c} 989
+hl{f,3fff603c,0} 990
+hl{f,3fff4904,0} 991
+hl{m,16,0,3fff4904} 992
+hl{m,756,0,3fff603c} 993
+hl{f,3fff603c,0} 994
+hl{f,3fff4904,0} 995
+hl{m,16,0,3fff4904} 996
+hl{m,756,0,3fff603c} 997
+hl{f,3fff603c,0} 998
+hl flush 998 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff4904,0} 999
+hl{m,16,0,3fff4904} 1000
+hl{m,756,0,3fff603c} 1001
+hl{f,3fff603c,0} 1002
+hl{f,3fff4904,0} 1003
+hl{m,16,0,3fff4904} 1004
+hl{m,756,0,3fff603c} 1005
+hl{f,3fff603c,0} 1006
+hl{f,3fff48ec,0} 1007
+hl{m,16,0,3fff48ec} 1008
+hl{f,3fff4904,0} 1009
+hl{m,16,0,3fff4904} 1010
+hl{m,756,0,3fff603c} 1011
+hl{f,3fff603c,0} 1012
+hl{f,3fff4904,0} 1013
+hl{m,16,0,3fff4904} 1014
+hl{m,756,0,3fff603c} 1015
+hl{f,3fff603c,0} 1016
+hl{f,3fff4904,0} 1017
+hl{m,16,0,3fff4904} 1018
+hl{m,756,0,3fff603c} 1019
+hl{f,3fff603c,0} 1020
+hl{f,3fff4904,0} 1021
+hl{m,16,0,3fff4904} 1022
+hl{f,3fff4904,0} 1023
+hl{m,16,0,3fff4904} 1024
+hl{m,756,0,3fff603c} 1025
+hl{f,3fff603c,0} 1026
+hl{f,3fff491c,0} 1027
+hl{m,16,0,3fff491c} 1028
+hl{f,3fff48ec,0} 1029
+hl{m,16,0,3fff48ec} 1030
+hl flush 1030 - remains 24928
+▒ 0: 0:45 Dormitor H:47.00(0.0) T:20.30(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{f,3fff4904,0} 1031
+hl{m,16,0,3fff4904} 1032
+hl{m,756,0,3fff603c} 1033
+hl{f,3fff603c,0} 1034
+hl{f,3fff4904,0} 1035
+hl{m,16,0,3fff4904} 1036
+hl{m,756,0,3fff603c} 1037
+hl{f,3fff603c,0} 1038
+hl{f,3fff4904,0} 1039
+hl{m,16,0,3fff4904} 1040
+hl{f,3fff4904,0} 1041
+hl{m,16,0,3fff4904} 1042
+hl{m,756,0,3fff603c} 1043
+hl{f,3fff603c,0} 1044
+hl{f,3fff4904,0} 1045
+hl{m,16,0,3fff4904} 1046
+hl{m,756,0,3fff603c} 1047
+hl{f,3fff603c,0} 1048
+hl{f,3fff48ec,0} 1049
+hl{m,16,0,3fff48ec} 1050
+hl{f,3fff4904,0} 1051
+hl{m,16,0,3fff4904} 1052
+hl{m,756,0,3fff603c} 1053
+hl{f,3fff603c,0} 1054
+hl{f,3fff4904,0} 1055
+hl{m,16,0,3fff4904} 1056
+hl{m,756,0,3fff603c} 1057
+hl{f,3fff603c,0} 1058
+hl{m,20,0,3fff51b4} 1059
+hl{f,3fff4934,0} 1060
+hl{f,3fff4904,0} 1061
+hl{m,16,0,3fff4904} 1062
+hl flush 1062 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff4904,0} 1063
+hl{m,16,0,3fff4904} 1064
+hl{f,3fff4904,0} 1065
+hl{m,16,0,3fff4904} 1066
+hl{f,3fff491c,0} 1067
+hl{m,16,0,3fff491c} 1068
+hl{f,3fff48ec,0} 1069
+hl{m,16,0,3fff48ec} 1070
+hl{f,3fff4904,0} 1071
+hl{m,16,0,3fff4904} 1072
+hl{f,3fff4904,0} 1073
+hl{m,16,0,3fff4904} 1074
+hl{f,3fff4904,0} 1075
+hl{m,16,0,3fff4904} 1076
+hl{f,3fff4904,0} 1077
+hl{m,16,0,3fff4904} 1078
+hl{f,3fff4904,0} 1079
+hl{m,16,0,3fff4904} 1080
+hl{f,3fff48ec,0} 1081
+hl{m,16,0,3fff48ec} 1082
+hl{f,3fff4904,0} 1083
+hl{m,16,0,3fff4904} 1084
+hl{f,3fff4904,0} 1085
+hl{m,16,0,3fff4904} 1086
+hl{f,3fff4904,0} 1087
+hl{m,16,0,3fff4904} 1088
+hl{m,756,0,3fff603c} 1089
+hl{f,3fff603c,0} 1090
+hl{f,3fff4904,0} 1091
+hl{m,16,0,3fff4904} 1092
+hl{m,756,0,3fff603c} 1093
+hl{f,3fff603c,0} 1094
+hl flush 1094 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff4904,0} 1095
+hl{m,16,0,3fff4904} 1096
+hl{m,756,0,3fff603c} 1097
+hl{f,3fff603c,0} 1098
+hl{f,3fff48bc,0} 1099
+hl{m,16,0,3fff48bc} 1100
+hl{f,3fff491c,0} 1101
+hl{m,16,0,3fff491c} 1102
+hl{f,3fff48ec,0} 1103
+hl{m,16,0,3fff48ec} 1104
+hl{f,3fff4904,0} 1105
+hl{m,16,0,3fff4904} 1106
+hl{m,756,0,3fff603c} 1107
+hl{f,3fff603c,0} 1108
+hl{f,3fff4904,0} 1109
+hl{m,16,0,3fff4904} 1110
+hl{m,756,0,3fff603c} 1111
+hl{f,3fff603c,0} 1112
+hl{f,3fff4904,0} 1113
+hl{m,16,0,3fff4904} 1114
+hl{f,3fff4904,0} 1115
+hl{m,16,0,3fff4904} 1116
+hl{m,756,0,3fff603c} 1117
+hl{f,3fff603c,0} 1118
+hl{f,3fff4904,0} 1119
+hl{m,16,0,3fff4904} 1120
+hl{m,756,0,3fff603c} 1121
+hl{f,3fff603c,0} 1122
+hl{f,3fff48ec,0} 1123
+hl{m,16,0,3fff48ec} 1124
+hl{f,3fff4904,0} 1125
+hl{m,16,0,3fff4904} 1126
+hl flush 1126 - remains 24144
+▒
+hl{m,756,0,3fff603c} 1127
+hl{f,3fff603c,0} 1128
+hl{f,3fff4904,0} 1129
+hl{m,16,0,3fff4904} 1130
+hl{f,3fff4904,0} 1131
+hl{m,16,0,3fff4904} 1132
+hl{m,756,0,3fff603c} 1133
+hl{f,3fff603c,0} 1134
+hl{f,3fff4904,0} 1135
+hl{m,16,0,3fff4904} 1136
+hl{m,20,0,3fff4934} 1137
+hl{f,3fff57ec,0} 1138
+hl{m,756,0,3fff603c} 1139
+hl{f,3fff603c,0} 1140
+hl{f,3fff4904,0} 1141
+hl{m,16,0,3fff4904} 1142
+hl{m,756,0,3fff603c} 1143
+hl{f,3fff603c,0} 1144
+hl{f,3fff491c,0} 1145
+hl{m,16,0,3fff491c} 1146
+hl{f,3fff48ec,0} 1147
+hl{m,16,0,3fff48ec} 1148
+hl{f,3fff4904,0} 1149
+hl{m,16,0,3fff4904} 1150
+hl{m,756,0,3fff603c} 1151
+hl{f,3fff603c,0} 1152
+hl{f,3fff4904,0} 1153
+hl{m,16,0,3fff4904} 1154
+hl{m,756,0,3fff603c} 1155
+hl{f,3fff603c,0} 1156
+hl{f,3fff4904,0} 1157
+hl{m,16,0,3fff4904} 1158
+hl flush 1158 - remains 24144
+▒ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 1159
+hl{f,3fff603c,0} 1160
+hl{f,3fff4904,0} 1161
+hl{m,16,0,3fff4904} 1162
+hl{f,3fff4904,0} 1163
+hl{m,16,0,3fff4904} 1164
+hl{m,756,0,3fff603c} 1165
+hl{f,3fff603c,0} 1166
+hl{f,3fff48ec,0} 1167
+hl{m,16,0,3fff48ec} 1168
+hl{f,3fff4904,0} 1169
+hl{m,16,0,3fff4904} 1170
+hl{m,756,0,3fff603c} 1171
+hl{f,3fff603c,0} 1172
+hl{f,3fff4904,0} 1173
+hl{m,16,0,3fff4904} 1174
+hl{m,756,0,3fff603c} 1175
+hl{f,3fff603c,0} 1176
+hl{m,756,0,3fff603c} 1177
+hl{f,3fff603c,0} 1178
+hl{f,3fff4904,0} 1179
+hl{m,16,0,3fff4904} 1180
+hl{m,756,0,3fff603c} 1181
+hl{f,3fff603c,0} 1182
+hl{f,3fff4904,0} 1183
+hl{m,16,0,3fff4904} 1184
+hl{m,756,0,3fff603c} 1185
+hl{f,3fff603c,0} 1186
+hl{f,3fff4904,0} 1187
+hl{m,16,0,3fff4904} 1188
+hl{f,3fff491c,0} 1189
+hl{m,16,0,3fff491c} 1190
+hl flush 1190 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff48ec,0} 1191
+hl{m,16,0,3fff48ec} 1192
+hl{f,3fff4904,0} 1193
+hl{m,16,0,3fff4904} 1194
+hl{m,756,0,3fff603c} 1195
+hl{f,3fff603c,0} 1196
+hl{f,3fff4904,0} 1197
+hl{m,16,0,3fff4904} 1198
+hl{m,756,0,3fff603c} 1199
+hl{f,3fff603c,0} 1200
+hl{f,3fff4904,0} 1201
+hl{m,16,0,3fff4904} 1202
+hl{m,756,0,3fff603c} 1203
+hl{f,3fff603c,0} 1204
+hl{f,3fff4904,0} 1205
+hl{m,16,0,3fff4904} 1206
+hl{m,756,0,3fff603c} 1207
+hl{f,3fff603c,0} 1208
+hl{f,3fff4904,0} 1209
+hl{m,16,0,3fff4904} 1210
+hl{m,756,0,3fff603c} 1211
+hl{f,3fff603c,0} 1212
+hl{f,3fff48ec,0} 1213
+hl{m,16,0,3fff48ec} 1214
+hl{f,3fff4904,0} 1215
+hl{m,16,0,3fff4904} 1216
+hl{m,756,0,3fff603c} 1217
+hl{f,3fff603c,0} 1218
+hl{f,3fff4904,0} 1219
+hl{m,16,0,3fff4904} 1220
+hl{m,756,0,3fff603c} 1221
+hl{f,3fff603c,0} 1222
+hl flush 1222 - remains 24928
+▒ 0: 0:50 Dormitor H:46.90(0.0) T:20.30(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{f,3fff4904,0} 1223
+hl{m,16,0,3fff4904} 1224
+hl{m,756,0,3fff603c} 1225
+hl{f,3fff603c,0} 1226
+hl{f,3fff4904,0} 1227
+hl{m,16,0,3fff4904} 1228
+hl{m,756,0,3fff603c} 1229
+hl{f,3fff603c,0} 1230
+hl{f,3fff4904,0} 1231
+hl{m,16,0,3fff4904} 1232
+hl{m,756,0,3fff603c} 1233
+hl{f,3fff603c,0} 1234
+hl{f,3fff491c,0} 1235
+hl{m,16,0,3fff491c} 1236
+hl{f,3fff48ec,0} 1237
+hl{m,16,0,3fff48ec} 1238
+hl{f,3fff4904,0} 1239
+hl{m,16,0,3fff4904} 1240
+hl{m,756,0,3fff603c} 1241
+hl{f,3fff603c,0} 1242
+hl{f,3fff4904,0} 1243
+hl{m,16,0,3fff4904} 1244
+hl{m,756,0,3fff603c} 1245
+hl{f,3fff603c,0} 1246
+hl{f,3fff4904,0} 1247
+hl{m,16,0,3fff4904} 1248
+hl{m,756,0,3fff603c} 1249
+hl{f,3fff603c,0} 1250
+hl{f,3fff4904,0} 1251
+hl{m,16,0,3fff4904} 1252
+hl{m,756,0,3fff603c} 1253
+hl{f,3fff603c,0} 1254
+hl flush 1254 - remains 24880
+▒ASYNC RX (0):
+▒
+hl{m,20,0,3fff57ec} 1255
+hl{f,3fff51b4,0} 1256
+hl{f,3fff4904,0} 1257
+hl{m,16,0,3fff4904} 1258
+hl{f,3fff48ec,0} 1259
+hl{m,16,0,3fff48ec} 1260
+hl{f,3fff4904,0} 1261
+hl{m,16,0,3fff4904} 1262
+hl{f,3fff4904,0} 1263
+hl{m,16,0,3fff4904} 1264
+hl{f,3fff4904,0} 1265
+hl{m,16,0,3fff4904} 1266
+hl{f,3fff4904,0} 1267
+hl{m,16,0,3fff4904} 1268
+hl{f,3fff4904,0} 1269
+hl{m,16,0,3fff4904} 1270
+hl{f,3fff491c,0} 1271
+hl{m,16,0,3fff491c} 1272
+hl{f,3fff48ec,0} 1273
+hl{m,16,0,3fff48ec} 1274
+hl{f,3fff4904,0} 1275
+hl{m,16,0,3fff4904} 1276
+hl{f,3fff4904,0} 1277
+hl{m,16,0,3fff4904} 1278
+hl{f,3fff4904,0} 1279
+hl{m,16,0,3fff4904} 1280
+hl{f,3fff4904,0} 1281
+hl{m,16,0,3fff4904} 1282
+hl{m,756,0,3fff603c} 1283
+hl{f,3fff603c,0} 1284
+hl{f,3fff4904,0} 1285
+hl{m,16,0,3fff4904} 1286
+hl flush 1286 - remains 24928
+
+hl{f,3fff48ec,0} 1287
+hl{m,16,0,3fff48ec} 1288
+hl{f,3fff4904,0} 1289
+hl{m,16,0,3fff4904} 1290
+hl{m,756,0,3fff603c} 1291
+hl{f,3fff603c,0} 1292
+hl{f,3fff4904,0} 1293
+hl{m,16,0,3fff4904} 1294
+hl{f,3fff4904,0} 1295
+hl{m,16,0,3fff4904} 1296
+hl{m,756,0,3fff603c} 1297
+hl{f,3fff603c,0} 1298
+hl{f,3fff4904,0} 1299
+hl{m,16,0,3fff4904} 1300
+hl{m,756,0,3fff603c} 1301
+hl{f,3fff603c,0} 1302
+hl{f,3fff4904,0} 1303
+hl{m,16,0,3fff4904} 1304
+hl{f,3fff48bc,0} 1305
+hl{m,16,0,3fff48bc} 1306
+hl{f,3fff491c,0} 1307
+hl{m,16,0,3fff491c} 1308
+hl{f,3fff48ec,0} 1309
+hl{m,16,0,3fff48ec} 1310
+hl{f,3fff4904,0} 1311
+hl{m,16,0,3fff4904} 1312
+hl{m,756,0,3fff603c} 1313
+hl{f,3fff603c,0} 1314
+hl{f,3fff4904,0} 1315
+hl{m,16,0,3fff4904} 1316
+hl{m,20,0,3fff51b4} 1317
+hl{f,3fff51b4,0} 1318
+hl flush 1318 - remains 24928
+ASYNC RX (0):
+?
+hl{f,3fff4904,0} 1319
+hl{m,16,0,3fff4904} 1320
+hl{f,3fff4904,0} 1321
+hl{m,16,0,3fff4904} 1322
+hl{m,756,0,3fff603c} 1323
+hl{f,3fff603c,0} 1324
+hl{f,3fff4904,0} 1325
+hl{m,16,0,3fff4904} 1326
+hl{m,756,0,3fff603c} 1327
+hl{f,3fff603c,0} 1328
+hl{f,3fff48ec,0} 1329
+hl{m,16,0,3fff48ec} 1330
+hl{f,3fff4904,0} 1331
+hl{m,16,0,3fff4904} 1332
+hl{m,20,0,3fff51b4} 1333
+hl{f,3fff4934,0} 1334
+hl{m,756,0,3fff603c} 1335
+hl{f,3fff603c,0} 1336
+hl{f,3fff4904,0} 1337
+hl{m,16,0,3fff4904} 1338
+hl{m,756,0,3fff603c} 1339
+hl{f,3fff603c,0} 1340
+hl{f,3fff4904,0} 1341
+hl{m,16,0,3fff4904} 1342
+hl{m,756,0,3fff603c} 1343
+hl{f,3fff603c,0} 1344
+hl{f,3fff4904,0} 1345
+hl{m,16,0,3fff4904} 1346
+hl{m,756,0,3fff603c} 1347
+hl{f,3fff603c,0} 1348
+hl{f,3fff4904,0} 1349
+hl{m,16,0,3fff4904} 1350
+hl flush 1350 - remains 24144
+ASYNC RX (0):
+▒FAIL CONNECT
+
+hl{m,756,0,3fff603c} 1351
+hl{f,3fff603c,0} 1352
+hl{f,3fff491c,0} 1353
+hl{m,16,0,3fff491c} 1354
+hl{f,3fff48ec,0} 1355
+hl{m,16,0,3fff48ec} 1356
+hl{f,3fff4904,0} 1357
+hl{m,16,0,3fff4904} 1358
+hl{f,3fff4904,0} 1359
+hl{m,16,0,3fff4904} 1360
+hl{m,756,0,3fff603c} 1361
+hl{f,3fff603c,0} 1362
+hl{f,3fff4904,0} 1363
+hl{m,16,0,3fff4904} 1364
+hl{m,756,0,3fff603c} 1365
+hl{f,3fff603c,0} 1366
+hl{f,3fff4904,0} 1367
+hl{m,16,0,3fff4904} 1368
+hl{m,756,0,3fff603c} 1369
+hl{f,3fff603c,0} 1370
+hl{f,3fff4904,0} 1371
+hl{m,16,0,3fff4904} 1372
+hl{m,756,0,3fff603c} 1373
+hl{f,3fff603c,0} 1374
+hl{f,3fff5134,0} 1375
+hl{f,3fff5894,0} 1376
+hl{m,12,0,3fff5154} 1377
+hl{m,12,0,3fff4d7c} 1378
+hl{m,48,0,3fff5894} 1379
+hl{f,3fff5144,0} 1380
+hl{f,3fff48ec,0} 1381
+hl{m,16,0,3fff48ec} 1382
+hl flush 1382 - remains 24928
+6ASYNC RX (0):
+?
+hl{f,3fff4904,0} 1383
+hl{m,16,0,3fff4904} 1384
+hl{m,756,0,3fff603c} 1385
+hl{f,3fff603c,0} 1386
+hl{f,3fff4904,0} 1387
+hl{m,16,0,3fff4904} 1388
+hl{m,756,0,3fff603c} 1389
+hl{f,3fff603c,0} 1390
+hl{f,3fff4904,0} 1391
+hl{m,16,0,3fff4904} 1392
+hl{m,756,0,3fff603c} 1393
+hl{f,3fff603c,0} 1394
+hl{f,3fff4904,0} 1395
+hl{m,16,0,3fff4904} 1396
+hl{m,756,0,3fff603c} 1397
+hl{f,3fff603c,0} 1398
+hl{f,3fff4904,0} 1399
+hl{m,16,0,3fff4904} 1400
+hl{m,756,0,3fff603c} 1401
+hl{f,3fff603c,0} 1402
+hl{f,3fff491c,0} 1403
+hl{m,16,0,3fff512c} 1404
+hl{f,3fff48ec,0} 1405
+hl{m,16,0,3fff48ec} 1406
+hl{f,3fff4904,0} 1407
+hl{m,16,0,3fff4904} 1408
+hl{f,3fff4904,0} 1409
+hl{m,16,0,3fff4904} 1410
+hl{m,756,0,3fff603c} 1411
+hl{f,3fff603c,0} 1412
+hl{f,3fff4904,0} 1413
+hl{m,16,0,3fff4904} 1414
+hl flush 1414 - remains 24928
+▒
+hl{f,3fff4904,0} 1415
+hl{m,16,0,3fff4904} 1416
+hl{m,756,0,3fff603c} 1417
+hl{f,3fff603c,0} 1418
+hl{f,3fff4904,0} 1419
+hl{m,16,0,3fff4904} 1420
+hl{m,756,0,3fff603c} 1421
+hl{f,3fff603c,0} 1422
+hl{f,3fff48ec,0} 1423
+hl{m,16,0,3fff48ec} 1424
+hl{f,3fff4904,0} 1425
+hl{m,16,0,3fff4904} 1426
+hl{m,756,0,3fff603c} 1427
+hl{f,3fff603c,0} 1428
+hl{f,3fff4904,0} 1429
+hl{m,16,0,3fff4904} 1430
+hl{m,756,0,3fff603c} 1431
+hl{f,3fff603c,0} 1432
+hl{f,3fff4904,0} 1433
+hl{m,16,0,3fff4904} 1434
+hl{m,756,0,3fff603c} 1435
+hl{f,3fff603c,0} 1436
+hl{f,3fff4904,0} 1437
+hl{m,16,0,3fff4904} 1438
+hl{m,756,0,3fff603c} 1439
+hl{f,3fff603c,0} 1440
+hl{f,3fff4904,0} 1441
+hl{m,16,0,3fff4904} 1442
+hl{m,756,0,3fff603c} 1443
+hl{f,3fff603c,0} 1444
+hl{f,3fff512c,0} 1445
+hl{m,16,0,3fff512c} 1446
+hl flush 1446 - remains 24928
+▒ 0: 0:55 Dormitor H:46.90(0.0) T:20.30(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{f,3fff48ec,0} 1447
+hl{m,16,0,3fff48ec} 1448
+hl{f,3fff4904,0} 1449
+hl{m,16,0,3fff4904} 1450
+hl{m,756,0,3fff603c} 1451
+hl{f,3fff603c,0} 1452
+hl{f,3fff4904,0} 1453
+hl{m,16,0,3fff4904} 1454
+hl{m,20,0,3fff491c} 1455
+hl{f,3fff57ec,0} 1456
+hl{f,3fff4904,0} 1457
+hl{m,16,0,3fff4904} 1458
+hl{f,3fff4904,0} 1459
+hl{m,16,0,3fff4904} 1460
+hl{f,3fff4904,0} 1461
+hl{m,16,0,3fff4904} 1462
+hl{f,3fff48ec,0} 1463
+hl{m,16,0,3fff48ec} 1464
+hl{f,3fff4904,0} 1465
+hl{m,16,0,3fff4904} 1466
+hl{f,3fff4904,0} 1467
+hl{m,16,0,3fff4904} 1468
+hl{f,3fff4904,0} 1469
+hl{m,16,0,3fff4904} 1470
+hl{f,3fff4904,0} 1471
+hl{m,16,0,3fff4904} 1472
+hl{f,3fff4904,0} 1473
+hl{m,16,0,3fff4904} 1474
+hl{f,3fff512c,0} 1475
+hl{m,16,0,3fff57ec} 1476
+hl{f,3fff48ec,0} 1477
+hl{m,16,0,3fff48ec} 1478
+hl flush 1478 - remains 24928
+▒
+hl{f,3fff4904,0} 1479
+hl{m,16,0,3fff4904} 1480
+hl{f,3fff4904,0} 1481
+hl{m,16,0,3fff4904} 1482
+hl{m,756,0,3fff603c} 1483
+hl{f,3fff603c,0} 1484
+hl{f,3fff4904,0} 1485
+hl{m,16,0,3fff4904} 1486
+hl{m,756,0,3fff603c} 1487
+hl{f,3fff603c,0} 1488
+hl{f,3fff4904,0} 1489
+hl{m,16,0,3fff4904} 1490
+hl{m,756,0,3fff603c} 1491
+hl{f,3fff603c,0} 1492
+hl{f,3fff4904,0} 1493
+hl{m,16,0,3fff4904} 1494
+hl{m,756,0,3fff603c} 1495
+hl{f,3fff603c,0} 1496
+hl{f,3fff48ec,0} 1497
+hl{m,420,0,3fff603c} 1498
+hl{m,16,0,3fff48ec} 1499
+hl{f,3fff4904,0} 1500
+hl{m,16,0,3fff4904} 1501
+hl{m,756,0,3fff61e4} 1502
+hl{f,3fff61e4,0} 1503
+hl{f,3fff603c,0} 1504
+hl{f,3fff4904,0} 1505
+hl{m,16,0,3fff4904} 1506
+hl{m,756,0,3fff603c} 1507
+hl{f,3fff603c,0} 1508
+hl{f,3fff4904,0} 1509
+hl{m,16,0,3fff4904} 1510
+hl flush 1510 - remains 24144
+ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 1511
+hl{f,3fff603c,0} 1512
+hl{f,3fff4904,0} 1513
+hl{m,16,0,3fff4904} 1514
+hl{f,3fff4904,0} 1515
+hl{m,16,0,3fff4904} 1516
+hl{m,756,0,3fff603c} 1517
+hl{f,3fff603c,0} 1518
+hl{f,3fff48bc,0} 1519
+hl{m,16,0,3fff48bc} 1520
+hl{f,3fff57ec,0} 1521
+hl{m,16,0,3fff57ec} 1522
+hl{f,3fff48ec,0} 1523
+hl{m,16,0,3fff48ec} 1524
+hl{f,3fff4904,0} 1525
+hl{m,16,0,3fff4904} 1526
+hl{m,756,0,3fff603c} 1527
+hl{f,3fff603c,0} 1528
+hl{f,3fff4904,0} 1529
+hl{m,16,0,3fff4904} 1530
+hl{m,756,0,3fff603c} 1531
+hl{f,3fff603c,0} 1532
+hl{f,3fff4904,0} 1533
+hl{m,16,0,3fff4904} 1534
+hl{m,756,0,3fff603c} 1535
+hl{f,3fff603c,0} 1536
+hl{f,3fff4904,0} 1537
+hl{m,16,0,3fff4904} 1538
+hl{m,756,0,3fff603c} 1539
+hl{f,3fff603c,0} 1540
+hl{f,3fff4904,0} 1541
+hl{m,16,0,3fff4904} 1542
+hl flush 1542 - remains 24880
+▒ASYNC RX (0):
+▒
+hl{m,20,0,3fff4934} 1543
+hl{f,3fff51b4,0} 1544
+hl{m,756,0,3fff603c} 1545
+hl{f,3fff603c,0} 1546
+hl{f,3fff48ec,0} 1547
+hl{m,16,0,3fff48ec} 1548
+hl{f,3fff4904,0} 1549
+hl{m,16,0,3fff4904} 1550
+hl{m,756,0,3fff603c} 1551
+hl{f,3fff603c,0} 1552
+hl{f,3fff4904,0} 1553
+hl{m,16,0,3fff4904} 1554
+hl{m,756,0,3fff603c} 1555
+hl{f,3fff603c,0} 1556
+hl{f,3fff4904,0} 1557
+hl{m,16,0,3fff4904} 1558
+hl{m,756,0,3fff603c} 1559
+hl{f,3fff603c,0} 1560
+hl{f,3fff4904,0} 1561
+hl{m,16,0,3fff4904} 1562
+hl{m,756,0,3fff603c} 1563
+hl{f,3fff603c,0} 1564
+hl{f,3fff4904,0} 1565
+hl{m,16,0,3fff4904} 1566
+hl{m,756,0,3fff603c} 1567
+hl{f,3fff603c,0} 1568
+hl{f,3fff57ec,0} 1569
+hl{m,16,0,3fff57ec} 1570
+hl{f,3fff48ec,0} 1571
+hl{m,16,0,3fff48ec} 1572
+hl{f,3fff4904,0} 1573
+hl{m,16,0,3fff4904} 1574
+hl flush 1574 - remains 24144
+▒
+hl{m,756,0,3fff603c} 1575
+hl{f,3fff603c,0} 1576
+hl{f,3fff4904,0} 1577
+hl{m,16,0,3fff4904} 1578
+hl{f,3fff4904,0} 1579
+hl{m,16,0,3fff4904} 1580
+hl{m,756,0,3fff603c} 1581
+hl{f,3fff603c,0} 1582
+hl{f,3fff4904,0} 1583
+hl{m,16,0,3fff4904} 1584
+hl{m,756,0,3fff603c} 1585
+hl{f,3fff603c,0} 1586
+hl{f,3fff4904,0} 1587
+hl{m,16,0,3fff4904} 1588
+hl{m,756,0,3fff603c} 1589
+hl{f,3fff603c,0} 1590
+hl{f,3fff48ec,0} 1591
+hl{m,16,0,3fff48ec} 1592
+hl{f,3fff4904,0} 1593
+hl{m,16,0,3fff4904} 1594
+hl{f,3fff4904,0} 1595
+hl{m,16,0,3fff4904} 1596
+hl{m,756,0,3fff603c} 1597
+hl{f,3fff603c,0} 1598
+hl{f,3fff4904,0} 1599
+hl{m,16,0,3fff4904} 1600
+hl{m,756,0,3fff603c} 1601
+hl{f,3fff603c,0} 1602
+hl{f,3fff4904,0} 1603
+hl{m,16,0,3fff4904} 1604
+hl{m,756,0,3fff603c} 1605
+hl{f,3fff603c,0} 1606
+hl flush 1606 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff4904,0} 1607
+hl{m,16,0,3fff4904} 1608
+hl{m,756,0,3fff603c} 1609
+hl{f,3fff603c,0} 1610
+hl{f,3fff57ec,0} 1611
+hl{m,16,0,3fff57ec} 1612
+hl{f,3fff48ec,0} 1613
+hl{m,16,0,3fff48ec} 1614
+hl{f,3fff4904,0} 1615
+hl{m,16,0,3fff4904} 1616
+hl{m,756,0,3fff603c} 1617
+hl{f,3fff603c,0} 1618
+hl{f,3fff4904,0} 1619
+hl{m,16,0,3fff4904} 1620
+hl{m,756,0,3fff603c} 1621
+hl{f,3fff603c,0} 1622
+hl{f,3fff4904,0} 1623
+hl{m,16,0,3fff4904} 1624
+hl{m,756,0,3fff603c} 1625
+hl{f,3fff603c,0} 1626
+hl{f,3fff4904,0} 1627
+hl{m,16,0,3fff4904} 1628
+hl{m,756,0,3fff603c} 1629
+hl{f,3fff603c,0} 1630
+hl{f,3fff4904,0} 1631
+hl{m,16,0,3fff4904} 1632
+hl{m,756,0,3fff603c} 1633
+hl{f,3fff603c,0} 1634
+hl{f,3fff48ec,0} 1635
+hl{m,16,0,3fff48ec} 1636
+hl{f,3fff4904,0} 1637
+hl{m,16,0,3fff4904} 1638
+hl flush 1638 - remains 24144
+▒ 0: 1: 0 Dormitor H:46.90(0.0) T:20.30(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+fHEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+?
+hl{m,756,0,3fff603c} 1639
+hl{f,3fff603c,0} 1640
+hl{f,3fff4904,0} 1641
+hl{m,16,0,3fff4904} 1642
+hl{f,3fff4904,0} 1643
+hl{m,16,0,3fff4904} 1644
+hl{m,756,0,3fff603c} 1645
+hl{f,3fff603c,0} 1646
+hl{f,3fff4904,0} 1647
+hl{m,16,0,3fff4904} 1648
+hl{m,756,0,3fff603c} 1649
+hl{f,3fff603c,0} 1650
+hl{f,3fff4904,0} 1651
+hl{m,16,0,3fff4904} 1652
+hl{m,20,0,3fff51b4} 1653
+hl{f,3fff491c,0} 1654
+hl{f,3fff57ec,0} 1655
+hl{m,16,0,3fff57ec} 1656
+hl{f,3fff48ec,0} 1657
+hl{m,16,0,3fff48ec} 1658
+hl{f,3fff4904,0} 1659
+hl{m,16,0,3fff512c} 1660
+hl{f,3fff512c,0} 1661
+hl{m,16,0,3fff512c} 1662
+hl{f,3fff512c,0} 1663
+hl{m,16,0,3fff512c} 1664
+hl{f,3fff512c,0} 1665
+hl{m,16,0,3fff512c} 1666
+hl{f,3fff512c,0} 1667
+hl{m,16,0,3fff512c} 1668
+hl{f,3fff48ec,0} 1669
+hl{m,16,0,3fff48ec} 1670
+hl flush 1670 - remains 24928
+▒
+hl{f,3fff512c,0} 1671
+hl{m,16,0,3fff512c} 1672
+hl{f,3fff512c,0} 1673
+hl{m,16,0,3fff512c} 1674
+hl{f,3fff512c,0} 1675
+hl{m,16,0,3fff512c} 1676
+hl{f,3fff512c,0} 1677
+hl{m,16,0,3fff512c} 1678
+hl{f,3fff512c,0} 1679
+hl{m,16,0,3fff512c} 1680
+hl{f,3fff57ec,0} 1681
+hl{m,16,0,3fff57ec} 1682
+hl{f,3fff48ec,0} 1683
+hl{m,16,0,3fff48ec} 1684
+hl{f,3fff512c,0} 1685
+hl{m,16,0,3fff512c} 1686
+hl{m,756,0,3fff603c} 1687
+hl{f,3fff603c,0} 1688
+hl{f,3fff512c,0} 1689
+hl{m,16,0,3fff512c} 1690
+hl{m,756,0,3fff603c} 1691
+hl{f,3fff603c,0} 1692
+hl{f,3fff512c,0} 1693
+hl{m,16,0,3fff512c} 1694
+hl{m,756,0,3fff603c} 1695
+hl{f,3fff603c,0} 1696
+hl{f,3fff512c,0} 1697
+hl{m,16,0,3fff512c} 1698
+hl{m,756,0,3fff603c} 1699
+hl{f,3fff603c,0} 1700
+hl{f,3fff512c,0} 1701
+hl{m,16,0,3fff512c} 1702
+hl flush 1702 - remains 24144
+ASYNC RX (0):
+?
+hl{m,756,0,3fff603c} 1703
+hl{f,3fff603c,0} 1704
+hl{f,3fff48ec,0} 1705
+hl{m,16,0,3fff48ec} 1706
+hl{f,3fff512c,0} 1707
+hl{m,16,0,3fff512c} 1708
+hl{f,3fff512c,0} 1709
+hl{m,16,0,3fff512c} 1710
+hl{m,756,0,3fff603c} 1711
+hl{f,3fff603c,0} 1712
+hl{f,3fff512c,0} 1713
+hl{m,16,0,3fff512c} 1714
+hl{m,756,0,3fff603c} 1715
+hl{f,3fff603c,0} 1716
+hl{f,3fff512c,0} 1717
+hl{m,16,0,3fff512c} 1718
+hl{m,756,0,3fff603c} 1719
+hl{f,3fff603c,0} 1720
+hl{f,3fff512c,0} 1721
+hl{m,16,0,3fff512c} 1722
+hl{f,3fff48bc,0} 1723
+hl{m,16,0,3fff48bc} 1724
+hl{f,3fff57ec,0} 1725
+hl{m,16,0,3fff57ec} 1726
+hl{f,3fff48ec,0} 1727
+hl{m,16,0,3fff48ec} 1728
+hl{f,3fff512c,0} 1729
+hl{m,16,0,3fff512c} 1730
+hl{m,756,0,3fff603c} 1731
+hl{f,3fff603c,0} 1732
+hl{f,3fff512c,0} 1733
+hl{m,16,0,3fff512c} 1734
+hl flush 1734 - remains 24144
+ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 1735
+hl{f,3fff603c,0} 1736
+hl{f,3fff512c,0} 1737
+hl{m,16,0,3fff512c} 1738
+hl{m,20,0,3fff4904} 1739
+hl{f,3fff4934,0} 1740
+hl{f,3fff512c,0} 1741
+hl{m,16,0,3fff512c} 1742
+hl{m,756,0,3fff603c} 1743
+hl{f,3fff603c,0} 1744
+hl{f,3fff512c,0} 1745
+hl{m,16,0,3fff512c} 1746
+hl{m,756,0,3fff603c} 1747
+hl{f,3fff603c,0} 1748
+hl{f,3fff48ec,0} 1749
+hl{m,16,0,3fff48ec} 1750
+hl{f,3fff512c,0} 1751
+hl{m,16,0,3fff512c} 1752
+hl{m,756,0,3fff603c} 1753
+hl{f,3fff603c,0} 1754
+hl{f,3fff512c,0} 1755
+hl{m,16,0,3fff512c} 1756
+hl{m,756,0,3fff603c} 1757
+hl{f,3fff603c,0} 1758
+hl{f,3fff512c,0} 1759
+hl{m,16,0,3fff512c} 1760
+hl{m,756,0,3fff603c} 1761
+hl{f,3fff603c,0} 1762
+hl{f,3fff512c,0} 1763
+hl{m,16,0,3fff512c} 1764
+hl{m,756,0,3fff603c} 1765
+hl{f,3fff603c,0} 1766
+hl flush 1766 - remains 24928
+▒FAIL CONNECT
+
+hl{f,3fff512c,0} 1767
+hl{m,16,0,3fff512c} 1768
+hl{m,756,0,3fff603c} 1769
+hl{f,3fff603c,0} 1770
+hl{f,3fff57ec,0} 1771
+hl{m,16,0,3fff57ec} 1772
+hl{f,3fff48ec,0} 1773
+hl{m,16,0,3fff48ec} 1774
+hl{f,3fff512c,0} 1775
+hl{m,16,0,3fff512c} 1776
+hl{m,756,0,3fff603c} 1777
+hl{f,3fff603c,0} 1778
+hl{f,3fff512c,0} 1779
+hl{m,16,0,3fff512c} 1780
+hl{m,756,0,3fff603c} 1781
+hl{f,3fff603c,0} 1782
+hl{f,3fff512c,0} 1783
+hl{m,16,0,3fff512c} 1784
+hl{f,3fff5154,0} 1785
+hl{f,3fff5894,0} 1786
+hl{m,12,0,3fff5144} 1787
+hl{m,12,0,3fff5154} 1788
+hl{m,48,0,3fff5894} 1789
+hl{f,3fff4d7c,0} 1790
+hl{m,756,0,3fff603c} 1791
+hl{f,3fff603c,0} 1792
+hl{f,3fff512c,0} 1793
+hl{m,16,0,3fff512c} 1794
+hl{f,3fff512c,0} 1795
+hl{m,16,0,3fff512c} 1796
+hl{m,756,0,3fff603c} 1797
+hl{f,3fff603c,0} 1798
+hl flush 1798 - remains 24928
+6ASYNC RX (0):
+?
+hl{f,3fff48ec,0} 1799
+hl{m,16,0,3fff48ec} 1800
+hl{f,3fff512c,0} 1801
+hl{m,16,0,3fff512c} 1802
+hl{m,756,0,3fff603c} 1803
+hl{f,3fff603c,0} 1804
+hl{f,3fff512c,0} 1805
+hl{m,16,0,3fff512c} 1806
+hl{m,756,0,3fff603c} 1807
+hl{f,3fff603c,0} 1808
+hl{f,3fff512c,0} 1809
+hl{m,16,0,3fff512c} 1810
+hl{m,756,0,3fff603c} 1811
+hl{f,3fff603c,0} 1812
+hl{f,3fff512c,0} 1813
+hl{m,16,0,3fff512c} 1814
+hl{f,3fff512c,0} 1815
+hl{m,16,0,3fff512c} 1816
+hl{m,756,0,3fff603c} 1817
+hl{f,3fff603c,0} 1818
+hl{f,3fff57ec,0} 1819
+hl{m,16,0,3fff57ec} 1820
+hl{f,3fff48ec,0} 1821
+hl{m,16,0,3fff48ec} 1822
+hl{f,3fff512c,0} 1823
+hl{m,16,0,3fff512c} 1824
+hl{m,756,0,3fff603c} 1825
+hl{f,3fff603c,0} 1826
+hl{f,3fff512c,0} 1827
+hl{m,16,0,3fff512c} 1828
+hl{m,756,0,3fff603c} 1829
+hl{f,3fff603c,0} 1830
+hl flush 1830 - remains 24928
+ 0: 1: 5 Dormitor H:46.90(0.0) T:20.30(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+▒HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 1831
+hl{m,16,0,3fff512c} 1832
+hl{m,756,0,3fff603c} 1833
+hl{f,3fff603c,0} 1834
+hl{f,3fff512c,0} 1835
+hl{m,16,0,3fff512c} 1836
+hl{m,756,0,3fff603c} 1837
+hl{f,3fff603c,0} 1838
+hl{f,3fff512c,0} 1839
+hl{m,16,0,3fff512c} 1840
+hl{m,756,0,3fff603c} 1841
+hl{f,3fff603c,0} 1842
+hl{f,3fff48ec,0} 1843
+hl{m,16,0,3fff48ec} 1844
+hl{f,3fff512c,0} 1845
+hl{m,16,0,3fff512c} 1846
+hl{m,756,0,3fff603c} 1847
+hl{f,3fff603c,0} 1848
+hl{f,3fff512c,0} 1849
+hl{m,16,0,3fff512c} 1850
+hl{m,756,0,3fff603c} 1851
+hl{f,3fff603c,0} 1852
+hl{f,3fff512c,0} 1853
+hl{m,16,0,3fff512c} 1854
+hl{m,756,0,3fff603c} 1855
+hl{f,3fff603c,0} 1856
+hl{f,3fff512c,0} 1857
+hl{m,16,0,3fff512c} 1858
+hl{m,20,0,3fff491c} 1859
+hl{f,3fff51b4,0} 1860
+hl{f,3fff512c,0} 1861
+hl{m,16,0,3fff512c} 1862
+hl flush 1862 - remains 24928
+▒
+hl{f,3fff57ec,0} 1863
+hl{m,16,0,3fff57ec} 1864
+hl{f,3fff48ec,0} 1865
+hl{m,16,0,3fff48ec} 1866
+hl{f,3fff512c,0} 1867
+hl{m,16,0,3fff512c} 1868
+hl{f,3fff512c,0} 1869
+hl{m,16,0,3fff512c} 1870
+hl{f,3fff512c,0} 1871
+hl{m,16,0,3fff512c} 1872
+hl{f,3fff512c,0} 1873
+hl{m,16,0,3fff512c} 1874
+hl{f,3fff512c,0} 1875
+hl{m,16,0,3fff512c} 1876
+hl{f,3fff48ec,0} 1877
+hl{m,16,0,3fff48ec} 1878
+hl{f,3fff512c,0} 1879
+hl{m,16,0,3fff512c} 1880
+hl{f,3fff512c,0} 1881
+hl{m,16,0,3fff512c} 1882
+hl{f,3fff512c,0} 1883
+hl{m,16,0,3fff512c} 1884
+hl{m,756,0,3fff603c} 1885
+hl{f,3fff603c,0} 1886
+hl{f,3fff512c,0} 1887
+hl{m,16,0,3fff512c} 1888
+hl{m,756,0,3fff603c} 1889
+hl{f,3fff603c,0} 1890
+hl{f,3fff512c,0} 1891
+hl{m,16,0,3fff512c} 1892
+hl{m,756,0,3fff603c} 1893
+hl{f,3fff603c,0} 1894
+hl flush 1894 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff57ec,0} 1895
+hl{m,16,0,3fff57ec} 1896
+hl{f,3fff48ec,0} 1897
+hl{m,16,0,3fff48ec} 1898
+hl{f,3fff512c,0} 1899
+hl{m,16,0,3fff512c} 1900
+hl{m,756,0,3fff603c} 1901
+hl{f,3fff603c,0} 1902
+hl{f,3fff512c,0} 1903
+hl{m,16,0,3fff512c} 1904
+hl{m,756,0,3fff603c} 1905
+hl{f,3fff603c,0} 1906
+hl{f,3fff512c,0} 1907
+hl{m,16,0,3fff512c} 1908
+hl{m,756,0,3fff603c} 1909
+hl{f,3fff603c,0} 1910
+hl{f,3fff512c,0} 1911
+hl{m,16,0,3fff512c} 1912
+hl{f,3fff512c,0} 1913
+hl{m,16,0,3fff512c} 1914
+hl{m,756,0,3fff603c} 1915
+hl{f,3fff603c,0} 1916
+hl{f,3fff48ec,0} 1917
+hl{m,16,0,3fff48ec} 1918
+hl{f,3fff512c,0} 1919
+hl{m,16,0,3fff512c} 1920
+hl{m,756,0,3fff603c} 1921
+hl{f,3fff603c,0} 1922
+hl{f,3fff512c,0} 1923
+hl{m,16,0,3fff512c} 1924
+hl{m,756,0,3fff603c} 1925
+hl{f,3fff603c,0} 1926
+hl flush 1926 - remains 24928
+▒
+hl{f,3fff512c,0} 1927
+hl{m,16,0,3fff512c} 1928
+hl{m,756,0,3fff603c} 1929
+hl{f,3fff603c,0} 1930
+hl{f,3fff512c,0} 1931
+hl{m,16,0,3fff512c} 1932
+hl{m,756,0,3fff603c} 1933
+hl{f,3fff603c,0} 1934
+hl{f,3fff512c,0} 1935
+hl{m,16,0,3fff512c} 1936
+hl{m,756,0,3fff603c} 1937
+hl{f,3fff603c,0} 1938
+hl{f,3fff48bc,0} 1939
+hl{m,16,0,3fff48bc} 1940
+hl{f,3fff57ec,0} 1941
+hl{m,16,0,3fff57ec} 1942
+hl{f,3fff48ec,0} 1943
+hl{m,16,0,3fff48ec} 1944
+hl{f,3fff512c,0} 1945
+hl{m,16,0,3fff512c} 1946
+hl{m,756,0,3fff603c} 1947
+hl{f,3fff603c,0} 1948
+hl{m,20,0,3fff51b4} 1949
+hl{f,3fff4904,0} 1950
+hl{f,3fff512c,0} 1951
+hl{m,16,0,3fff512c} 1952
+hl{m,756,0,3fff603c} 1953
+hl{f,3fff603c,0} 1954
+hl{f,3fff512c,0} 1955
+hl{m,16,0,3fff512c} 1956
+hl{m,756,0,3fff603c} 1957
+hl{f,3fff603c,0} 1958
+hl flush 1958 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 1959
+hl{m,16,0,3fff512c} 1960
+hl{m,756,0,3fff603c} 1961
+hl{f,3fff603c,0} 1962
+hl{f,3fff512c,0} 1963
+hl{m,16,0,3fff512c} 1964
+hl{m,756,0,3fff603c} 1965
+hl{f,3fff603c,0} 1966
+hl{f,3fff48ec,0} 1967
+hl{m,16,0,3fff4934} 1968
+hl{f,3fff512c,0} 1969
+hl{m,16,0,3fff512c} 1970
+hl{m,756,0,3fff603c} 1971
+hl{f,3fff603c,0} 1972
+hl{f,3fff512c,0} 1973
+hl{m,16,0,3fff512c} 1974
+hl{m,756,0,3fff603c} 1975
+hl{f,3fff603c,0} 1976
+hl{f,3fff512c,0} 1977
+hl{m,16,0,3fff512c} 1978
+hl{m,756,0,3fff603c} 1979
+hl{f,3fff603c,0} 1980
+hl{f,3fff512c,0} 1981
+hl{m,16,0,3fff512c} 1982
+hl{m,756,0,3fff603c} 1983
+hl{f,3fff603c,0} 1984
+hl{f,3fff512c,0} 1985
+hl{m,16,0,3fff512c} 1986
+hl{f,3fff57ec,0} 1987
+hl{m,16,0,3fff57ec} 1988
+hl{f,3fff4934,0} 1989
+hl{m,16,0,3fff4934} 1990
+hl flush 1990 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 1991
+hl{m,16,0,3fff512c} 1992
+hl{m,756,0,3fff603c} 1993
+hl{f,3fff603c,0} 1994
+hl{f,3fff512c,0} 1995
+hl{m,16,0,3fff512c} 1996
+hl{m,756,0,3fff603c} 1997
+hl{f,3fff603c,0} 1998
+hl{f,3fff512c,0} 1999
+hl{m,16,0,3fff512c} 2000
+hl{m,756,0,3fff603c} 2001
+hl{f,3fff603c,0} 2002
+hl{f,3fff512c,0} 2003
+hl{m,16,0,3fff512c} 2004
+hl{m,756,0,3fff603c} 2005
+hl{f,3fff603c,0} 2006
+hl{f,3fff512c,0} 2007
+hl{m,16,0,3fff512c} 2008
+hl{m,756,0,3fff603c} 2009
+hl{f,3fff603c,0} 2010
+hl{f,3fff4934,0} 2011
+hl{m,16,0,3fff4934} 2012
+hl{f,3fff512c,0} 2013
+hl{m,16,0,3fff512c} 2014
+hl{m,756,0,3fff603c} 2015
+hl{f,3fff603c,0} 2016
+hl{f,3fff512c,0} 2017
+hl{m,16,0,3fff512c} 2018
+hl{m,756,0,3fff603c} 2019
+hl{f,3fff603c,0} 2020
+hl{f,3fff512c,0} 2021
+hl{m,16,0,3fff512c} 2022
+hl flush 2022 - remains 24144
+▒
+hl{m,756,0,3fff603c} 2023
+hl{f,3fff603c,0} 2024
+hl{f,3fff512c,0} 2025
+hl{m,16,0,3fff512c} 2026
+hl{f,3fff512c,0} 2027
+hl{m,16,0,3fff512c} 2028
+hl{m,756,0,3fff603c} 2029
+hl{f,3fff603c,0} 2030
+hl{f,3fff57ec,0} 2031
+hl{m,16,0,3fff57ec} 2032
+hl{f,3fff4934,0} 2033
+hl{m,16,0,3fff4934} 2034
+hl{f,3fff512c,0} 2035
+hl{m,16,0,3fff512c} 2036
+hl{m,756,0,3fff603c} 2037
+hl{f,3fff603c,0} 2038
+hl{f,3fff512c,0} 2039
+hl{m,16,0,3fff512c} 2040
+hl{m,756,0,3fff603c} 2041
+hl{f,3fff603c,0} 2042
+hl{f,3fff512c,0} 2043
+hl{m,16,0,3fff512c} 2044
+hl{m,756,0,3fff603c} 2045
+hl{f,3fff603c,0} 2046
+hl{f,3fff512c,0} 2047
+hl{m,16,0,3fff512c} 2048
+hl{m,756,0,3fff603c} 2049
+hl{f,3fff603c,0} 2050
+hl{f,3fff512c,0} 2051
+hl{m,16,0,3fff512c} 2052
+hl{m,756,0,3fff603c} 2053
+hl{f,3fff603c,0} 2054
+hl flush 2054 - remains 24928
+▒ 0: 1:10 Dormitor H:46.90(0.0) T:20.30(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{f,3fff4934,0} 2055
+hl{m,16,0,3fff4934} 2056
+hl{f,3fff512c,0} 2057
+hl{m,16,0,3fff512c} 2058
+hl{m,756,0,3fff603c} 2059
+hl{f,3fff603c,0} 2060
+hl{m,20,0,3fff48ec} 2061
+hl{f,3fff491c,0} 2062
+hl{f,3fff512c,0} 2063
+hl{m,16,0,3fff512c} 2064
+hl{f,3fff512c,0} 2065
+hl{m,16,0,3fff512c} 2066
+hl{f,3fff512c,0} 2067
+hl{m,16,0,3fff512c} 2068
+hl{f,3fff512c,0} 2069
+hl{m,16,0,3fff512c} 2070
+hl{f,3fff57ec,0} 2071
+hl{m,16,0,3fff57ec} 2072
+hl{f,3fff4934,0} 2073
+hl{m,16,0,3fff4904} 2074
+hl{f,3fff512c,0} 2075
+hl{m,16,0,3fff512c} 2076
+hl{f,3fff512c,0} 2077
+hl{m,16,0,3fff512c} 2078
+hl{f,3fff512c,0} 2079
+hl{m,16,0,3fff512c} 2080
+hl{f,3fff512c,0} 2081
+hl{m,16,0,3fff512c} 2082
+hl{f,3fff512c,0} 2083
+hl{m,16,0,3fff512c} 2084
+hl{f,3fff4904,0} 2085
+hl{m,16,0,3fff4904} 2086
+hl flush 2086 - remains 24928
+▒
+hl{f,3fff512c,0} 2087
+hl{m,16,0,3fff512c} 2088
+hl{f,3fff512c,0} 2089
+hl{m,16,0,3fff512c} 2090
+hl{f,3fff512c,0} 2091
+hl{m,16,0,3fff512c} 2092
+hl{m,756,0,3fff603c} 2093
+hl{f,3fff603c,0} 2094
+hl{f,3fff512c,0} 2095
+hl{m,16,0,3fff512c} 2096
+hl{f,3fff512c,0} 2097
+hl{m,16,0,3fff512c} 2098
+hl{m,756,0,3fff603c} 2099
+hl{f,3fff603c,0} 2100
+hl{f,3fff57ec,0} 2101
+hl{m,16,0,3fff57ec} 2102
+hl{f,3fff4904,0} 2103
+hl{m,16,0,3fff4904} 2104
+hl{f,3fff512c,0} 2105
+hl{m,16,0,3fff512c} 2106
+hl{m,756,0,3fff603c} 2107
+hl{f,3fff603c,0} 2108
+hl{f,3fff512c,0} 2109
+hl{m,16,0,3fff512c} 2110
+hl{m,756,0,3fff603c} 2111
+hl{f,3fff603c,0} 2112
+hl{f,3fff512c,0} 2113
+hl{m,16,0,3fff512c} 2114
+hl{m,756,0,3fff603c} 2115
+hl{f,3fff603c,0} 2116
+hl{f,3fff512c,0} 2117
+hl{m,16,0,3fff512c} 2118
+hl flush 2118 - remains 24144
+ASYNC RX (0):
+?
+hl{m,756,0,3fff603c} 2119
+hl{f,3fff603c,0} 2120
+hl{f,3fff512c,0} 2121
+hl{m,16,0,3fff512c} 2122
+hl{f,3fff4904,0} 2123
+hl{m,16,0,3fff4904} 2124
+hl{f,3fff512c,0} 2125
+hl{m,16,0,3fff512c} 2126
+hl{f,3fff512c,0} 2127
+hl{m,16,0,3fff512c} 2128
+hl{m,756,0,3fff603c} 2129
+hl{f,3fff603c,0} 2130
+hl{f,3fff512c,0} 2131
+hl{m,16,0,3fff512c} 2132
+hl{f,3fff512c,0} 2133
+hl{m,16,0,3fff512c} 2134
+hl{m,756,0,3fff603c} 2135
+hl{f,3fff603c,0} 2136
+hl{f,3fff512c,0} 2137
+hl{m,16,0,3fff512c} 2138
+hl{m,20,0,3fff491c} 2139
+hl{f,3fff51b4,0} 2140
+hl{f,3fff48bc,0} 2141
+hl{m,16,0,3fff48bc} 2142
+hl{f,3fff57ec,0} 2143
+hl{m,16,0,3fff57ec} 2144
+hl{f,3fff4904,0} 2145
+hl{m,16,0,3fff4904} 2146
+hl{f,3fff512c,0} 2147
+hl{m,16,0,3fff512c} 2148
+hl{m,756,0,3fff603c} 2149
+hl{f,3fff603c,0} 2150
+hl flush 2150 - remains 24928
+ASYNC RX (0):
+?FAIL CONNECT
+
+hl{f,3fff512c,0} 2151
+hl{m,16,0,3fff512c} 2152
+hl{f,3fff512c,0} 2153
+hl{m,16,0,3fff512c} 2154
+hl{m,756,0,3fff603c} 2155
+hl{f,3fff603c,0} 2156
+hl{f,3fff512c,0} 2157
+hl{m,16,0,3fff512c} 2158
+hl{f,3fff512c,0} 2159
+hl{m,16,0,3fff512c} 2160
+hl{m,756,0,3fff603c} 2161
+hl{f,3fff603c,0} 2162
+hl{f,3fff4904,0} 2163
+hl{m,16,0,3fff4904} 2164
+hl{f,3fff512c,0} 2165
+hl{m,16,0,3fff512c} 2166
+hl{f,3fff512c,0} 2167
+hl{m,16,0,3fff512c} 2168
+hl{f,3fff512c,0} 2169
+hl{m,16,0,3fff512c} 2170
+hl{m,756,0,3fff603c} 2171
+hl{f,3fff603c,0} 2172
+hl{f,3fff512c,0} 2173
+hl{m,16,0,3fff512c} 2174
+hl{m,756,0,3fff603c} 2175
+hl{f,3fff603c,0} 2176
+hl{f,3fff512c,0} 2177
+hl{m,16,0,3fff512c} 2178
+hl{m,756,0,3fff603c} 2179
+hl{f,3fff603c,0} 2180
+hl{f,3fff5144,0} 2181
+hl{f,3fff5894,0} 2182
+hl flush 2182 - remains 24960
+ASYNC RX (0):
+▒
+hl{m,12,0,3fff5144} 2183
+hl{m,12,0,3fff4d7c} 2184
+hl{m,48,0,3fff5894} 2185
+hl{f,3fff5154,0} 2186
+hl{f,3fff57ec,0} 2187
+hl{m,16,0,3fff57ec} 2188
+hl{f,3fff4904,0} 2189
+hl{m,16,0,3fff4904} 2190
+hl{f,3fff512c,0} 2191
+hl{m,16,0,3fff512c} 2192
+hl{m,756,0,3fff603c} 2193
+hl{f,3fff603c,0} 2194
+hl{f,3fff512c,0} 2195
+hl{m,16,0,3fff512c} 2196
+hl{m,756,0,3fff603c} 2197
+hl{f,3fff603c,0} 2198
+hl{f,3fff512c,0} 2199
+hl{m,16,0,3fff512c} 2200
+hl{m,756,0,3fff603c} 2201
+hl{f,3fff603c,0} 2202
+hl{f,3fff512c,0} 2203
+hl{m,16,0,3fff512c} 2204
+hl{m,756,0,3fff603c} 2205
+hl{f,3fff603c,0} 2206
+hl{f,3fff512c,0} 2207
+hl{m,16,0,3fff512c} 2208
+hl{m,756,0,3fff603c} 2209
+hl{f,3fff603c,0} 2210
+hl{f,3fff4904,0} 2211
+hl{m,16,0,3fff4904} 2212
+hl{f,3fff512c,0} 2213
+hl{m,16,0,3fff512c} 2214
+hl flush 2214 - remains 24144
+▒
+hl{m,756,0,3fff603c} 2215
+hl{f,3fff603c,0} 2216
+hl{f,3fff512c,0} 2217
+hl{m,16,0,3fff512c} 2218
+hl{f,3fff512c,0} 2219
+hl{m,16,0,3fff512c} 2220
+hl{m,756,0,3fff603c} 2221
+hl{f,3fff603c,0} 2222
+hl{f,3fff512c,0} 2223
+hl{m,16,0,3fff512c} 2224
+hl{m,756,0,3fff603c} 2225
+hl{f,3fff603c,0} 2226
+hl{f,3fff512c,0} 2227
+hl{m,16,0,3fff512c} 2228
+hl{m,756,0,3fff603c} 2229
+hl{f,3fff603c,0} 2230
+hl{f,3fff57ec,0} 2231
+hl{m,16,0,3fff57ec} 2232
+hl{f,3fff4904,0} 2233
+hl{m,16,0,3fff4904} 2234
+hl{f,3fff512c,0} 2235
+hl{m,16,0,3fff512c} 2236
+hl{m,756,0,3fff603c} 2237
+hl{f,3fff603c,0} 2238
+hl{f,3fff512c,0} 2239
+hl{m,16,0,3fff512c} 2240
+hl{m,756,0,3fff603c} 2241
+hl{f,3fff603c,0} 2242
+hl{f,3fff512c,0} 2243
+hl{m,16,0,3fff512c} 2244
+hl{m,756,0,3fff603c} 2245
+hl{f,3fff603c,0} 2246
+hl flush 2246 - remains 24928
+▒ 0: 1:15 Dormitor H:46.90(0.0) T:20.20(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+?
+hl{f,3fff512c,0} 2247
+hl{m,16,0,3fff512c} 2248
+hl{m,756,0,3fff603c} 2249
+hl{f,3fff603c,0} 2250
+hl{f,3fff512c,0} 2251
+hl{m,16,0,3fff512c} 2252
+hl{m,20,0,3fff51b4} 2253
+hl{f,3fff48ec,0} 2254
+hl{f,3fff4904,0} 2255
+hl{m,16,0,3fff4934} 2256
+hl{f,3fff512c,0} 2257
+hl{m,16,0,3fff512c} 2258
+hl{f,3fff512c,0} 2259
+hl{m,16,0,3fff512c} 2260
+hl{f,3fff512c,0} 2261
+hl{m,16,0,3fff512c} 2262
+hl{f,3fff512c,0} 2263
+hl{m,16,0,3fff512c} 2264
+hl{f,3fff512c,0} 2265
+hl{m,16,0,3fff512c} 2266
+hl{f,3fff57ec,0} 2267
+hl{m,16,0,3fff57ec} 2268
+hl{f,3fff4934,0} 2269
+hl{m,16,0,3fff4934} 2270
+hl{f,3fff512c,0} 2271
+hl{m,16,0,3fff512c} 2272
+hl{f,3fff512c,0} 2273
+hl{m,16,0,3fff512c} 2274
+hl{f,3fff512c,0} 2275
+hl{m,16,0,3fff512c} 2276
+hl{f,3fff512c,0} 2277
+hl{m,16,0,3fff512c} 2278
+hl flush 2278 - remains 24928
+▒
+hl{f,3fff512c,0} 2279
+hl{m,16,0,3fff512c} 2280
+hl{f,3fff4934,0} 2281
+hl{m,16,0,3fff4934} 2282
+hl{f,3fff512c,0} 2283
+hl{m,16,0,3fff512c} 2284
+hl{f,3fff512c,0} 2285
+hl{m,16,0,3fff512c} 2286
+hl{m,756,0,3fff603c} 2287
+hl{f,3fff603c,0} 2288
+hl{f,3fff512c,0} 2289
+hl{m,16,0,3fff512c} 2290
+hl{m,756,0,3fff603c} 2291
+hl{f,3fff603c,0} 2292
+hl{f,3fff512c,0} 2293
+hl{m,16,0,3fff512c} 2294
+hl{m,756,0,3fff603c} 2295
+hl{f,3fff603c,0} 2296
+hl{f,3fff512c,0} 2297
+hl{m,16,0,3fff512c} 2298
+hl{m,756,0,3fff603c} 2299
+hl{f,3fff603c,0} 2300
+hl{f,3fff57ec,0} 2301
+hl{m,16,0,3fff57ec} 2302
+hl{f,3fff4934,0} 2303
+hl{m,16,0,3fff4934} 2304
+hl{f,3fff512c,0} 2305
+hl{m,16,0,3fff512c} 2306
+hl{m,756,0,3fff603c} 2307
+hl{f,3fff603c,0} 2308
+hl{f,3fff512c,0} 2309
+hl{m,16,0,3fff512c} 2310
+hl flush 2310 - remains 24144
+ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 2311
+hl{f,3fff603c,0} 2312
+hl{f,3fff512c,0} 2313
+hl{m,16,0,3fff512c} 2314
+hl{m,756,0,3fff603c} 2315
+hl{f,3fff603c,0} 2316
+hl{f,3fff512c,0} 2317
+hl{m,16,0,3fff512c} 2318
+hl{m,756,0,3fff603c} 2319
+hl{f,3fff603c,0} 2320
+hl{f,3fff512c,0} 2321
+hl{m,16,0,3fff512c} 2322
+hl{f,3fff4934,0} 2323
+hl{m,16,0,3fff4934} 2324
+hl{f,3fff512c,0} 2325
+hl{m,16,0,3fff512c} 2326
+hl{m,756,0,3fff603c} 2327
+hl{f,3fff603c,0} 2328
+hl{f,3fff512c,0} 2329
+hl{m,16,0,3fff512c} 2330
+hl{m,756,0,3fff603c} 2331
+hl{f,3fff603c,0} 2332
+hl{f,3fff512c,0} 2333
+hl{m,16,0,3fff512c} 2334
+hl{f,3fff512c,0} 2335
+hl{m,16,0,3fff512c} 2336
+hl{m,756,0,3fff603c} 2337
+hl{f,3fff603c,0} 2338
+hl{m,20,0,3fff48ec} 2339
+hl{f,3fff491c,0} 2340
+hl{f,3fff512c,0} 2341
+hl{m,16,0,3fff512c} 2342
+hl flush 2342 - remains 24144
+ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 2343
+hl{f,3fff603c,0} 2344
+hl{f,3fff48bc,0} 2345
+hl{m,16,0,3fff48bc} 2346
+hl{f,3fff57ec,0} 2347
+hl{m,16,0,3fff57ec} 2348
+hl{f,3fff4934,0} 2349
+hl{m,16,0,3fff4904} 2350
+hl{f,3fff512c,0} 2351
+hl{m,16,0,3fff512c} 2352
+hl{f,3fff512c,0} 2353
+hl{m,16,0,3fff512c} 2354
+hl{m,756,0,3fff603c} 2355
+hl{f,3fff603c,0} 2356
+hl{f,3fff512c,0} 2357
+hl{m,16,0,3fff512c} 2358
+hl{m,756,0,3fff603c} 2359
+hl{f,3fff603c,0} 2360
+hl{f,3fff512c,0} 2361
+hl{m,16,0,3fff512c} 2362
+hl{m,756,0,3fff603c} 2363
+hl{f,3fff603c,0} 2364
+hl{f,3fff512c,0} 2365
+hl{m,16,0,3fff512c} 2366
+hl{m,756,0,3fff603c} 2367
+hl{f,3fff603c,0} 2368
+hl{f,3fff4904,0} 2369
+hl{m,16,0,3fff4904} 2370
+hl{f,3fff512c,0} 2371
+hl{m,16,0,3fff512c} 2372
+hl{m,756,0,3fff603c} 2373
+hl{f,3fff603c,0} 2374
+hl flush 2374 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 2375
+hl{m,16,0,3fff512c} 2376
+hl{m,756,0,3fff603c} 2377
+hl{f,3fff603c,0} 2378
+hl{f,3fff512c,0} 2379
+hl{m,16,0,3fff512c} 2380
+hl{m,756,0,3fff603c} 2381
+hl{f,3fff603c,0} 2382
+hl{f,3fff512c,0} 2383
+hl{m,16,0,3fff512c} 2384
+hl{m,756,0,3fff603c} 2385
+hl{f,3fff603c,0} 2386
+hl{f,3fff512c,0} 2387
+hl{m,16,0,3fff512c} 2388
+hl{m,756,0,3fff603c} 2389
+hl{f,3fff603c,0} 2390
+hl{f,3fff57ec,0} 2391
+hl{m,16,0,3fff57ec} 2392
+hl{f,3fff4904,0} 2393
+hl{m,16,0,3fff4904} 2394
+hl{f,3fff512c,0} 2395
+hl{m,16,0,3fff512c} 2396
+hl{m,756,0,3fff603c} 2397
+hl{f,3fff603c,0} 2398
+hl{f,3fff512c,0} 2399
+hl{m,16,0,3fff512c} 2400
+hl{m,756,0,3fff603c} 2401
+hl{f,3fff603c,0} 2402
+hl{f,3fff512c,0} 2403
+hl{m,16,0,3fff512c} 2404
+hl{m,756,0,3fff603c} 2405
+hl{f,3fff603c,0} 2406
+hl flush 2406 - remains 24928
+▒
+hl{f,3fff512c,0} 2407
+hl{m,16,0,3fff512c} 2408
+hl{m,756,0,3fff603c} 2409
+hl{f,3fff603c,0} 2410
+hl{f,3fff512c,0} 2411
+hl{m,16,0,3fff512c} 2412
+hl{f,3fff4904,0} 2413
+hl{m,16,0,3fff4904} 2414
+hl{f,3fff512c,0} 2415
+hl{m,16,0,3fff512c} 2416
+hl{m,756,0,3fff603c} 2417
+hl{f,3fff603c,0} 2418
+hl{m,756,0,3fff603c} 2419
+hl{f,3fff603c,0} 2420
+hl{f,3fff512c,0} 2421
+hl{m,16,0,3fff512c} 2422
+hl{m,756,0,3fff603c} 2423
+hl{f,3fff603c,0} 2424
+hl{f,3fff512c,0} 2425
+hl{m,16,0,3fff512c} 2426
+hl{m,756,0,3fff603c} 2427
+hl{f,3fff603c,0} 2428
+hl{f,3fff512c,0} 2429
+hl{m,16,0,3fff512c} 2430
+hl{m,756,0,3fff603c} 2431
+hl{f,3fff603c,0} 2432
+hl{f,3fff512c,0} 2433
+hl{m,16,0,3fff512c} 2434
+hl{m,756,0,3fff603c} 2435
+hl{f,3fff603c,0} 2436
+hl{f,3fff57ec,0} 2437
+hl{m,16,0,3fff57ec} 2438
+hl flush 2438 - remains 24928
+ 0: 1:20 Dormitor H:47.00(0.0) T:20.30(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{f,3fff4904,0} 2439
+hl{m,16,0,3fff4904} 2440
+hl{f,3fff512c,0} 2441
+hl{m,16,0,3fff512c} 2442
+hl{m,756,0,3fff603c} 2443
+hl{f,3fff603c,0} 2444
+hl{f,3fff512c,0} 2445
+hl{m,16,0,3fff512c} 2446
+hl{m,20,0,3fff491c} 2447
+hl{f,3fff51b4,0} 2448
+hl{m,756,0,3fff603c} 2449
+hl{f,3fff603c,0} 2450
+hl{f,3fff512c,0} 2451
+hl{m,16,0,3fff512c} 2452
+hl{f,3fff512c,0} 2453
+hl{m,16,0,3fff512c} 2454
+hl{f,3fff512c,0} 2455
+hl{m,16,0,3fff512c} 2456
+hl{f,3fff4904,0} 2457
+hl{m,16,0,3fff4904} 2458
+hl{f,3fff512c,0} 2459
+hl{m,16,0,3fff512c} 2460
+hl{f,3fff512c,0} 2461
+hl{m,16,0,3fff512c} 2462
+hl{f,3fff512c,0} 2463
+hl{m,16,0,3fff512c} 2464
+hl{f,3fff512c,0} 2465
+hl{m,16,0,3fff512c} 2466
+hl{f,3fff512c,0} 2467
+hl{m,16,0,3fff512c} 2468
+hl{f,3fff57ec,0} 2469
+hl{m,16,0,3fff57ec} 2470
+hl flush 2470 - remains 24928
+▒
+hl{f,3fff4904,0} 2471
+hl{m,16,0,3fff4904} 2472
+hl{f,3fff512c,0} 2473
+hl{m,16,0,3fff512c} 2474
+hl{f,3fff512c,0} 2475
+hl{m,16,0,3fff512c} 2476
+hl{f,3fff512c,0} 2477
+hl{m,16,0,3fff512c} 2478
+hl{m,756,0,3fff603c} 2479
+hl{f,3fff603c,0} 2480
+hl{f,3fff512c,0} 2481
+hl{m,16,0,3fff512c} 2482
+hl{m,756,0,3fff603c} 2483
+hl{f,3fff603c,0} 2484
+hl{f,3fff512c,0} 2485
+hl{m,16,0,3fff512c} 2486
+hl{m,756,0,3fff603c} 2487
+hl{f,3fff603c,0} 2488
+hl{f,3fff4904,0} 2489
+hl{m,16,0,3fff4904} 2490
+hl{f,3fff512c,0} 2491
+hl{m,16,0,3fff512c} 2492
+hl{m,756,0,3fff603c} 2493
+hl{f,3fff603c,0} 2494
+hl{f,3fff512c,0} 2495
+hl{m,16,0,3fff512c} 2496
+hl{m,756,0,3fff603c} 2497
+hl{f,3fff603c,0} 2498
+hl{f,3fff512c,0} 2499
+hl{m,16,0,3fff512c} 2500
+hl{m,756,0,3fff603c} 2501
+hl{f,3fff603c,0} 2502
+hl flush 2502 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 2503
+hl{m,16,0,3fff512c} 2504
+hl{m,756,0,3fff603c} 2505
+hl{f,3fff603c,0} 2506
+hl{f,3fff512c,0} 2507
+hl{m,16,0,3fff512c} 2508
+hl{f,3fff57ec,0} 2509
+hl{m,16,0,3fff57ec} 2510
+hl{f,3fff4904,0} 2511
+hl{m,16,0,3fff4904} 2512
+hl{f,3fff512c,0} 2513
+hl{m,16,0,3fff512c} 2514
+hl{m,756,0,3fff603c} 2515
+hl{f,3fff603c,0} 2516
+hl{f,3fff512c,0} 2517
+hl{m,16,0,3fff512c} 2518
+hl{m,756,0,3fff603c} 2519
+hl{f,3fff603c,0} 2520
+hl{f,3fff512c,0} 2521
+hl{m,16,0,3fff512c} 2522
+hl{m,756,0,3fff603c} 2523
+hl{f,3fff603c,0} 2524
+hl{f,3fff512c,0} 2525
+hl{m,16,0,3fff512c} 2526
+hl{m,756,0,3fff603c} 2527
+hl{f,3fff603c,0} 2528
+hl{f,3fff512c,0} 2529
+hl{m,16,0,3fff512c} 2530
+hl{m,756,0,3fff603c} 2531
+hl{f,3fff603c,0} 2532
+hl{f,3fff4904,0} 2533
+hl{m,16,0,3fff4904} 2534
+hl flush 2534 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 2535
+hl{m,16,0,3fff512c} 2536
+hl{m,756,0,3fff603c} 2537
+hl{f,3fff603c,0} 2538
+hl{f,3fff512c,0} 2539
+hl{m,16,0,3fff512c} 2540
+hl{m,20,0,3fff51b4} 2541
+hl{f,3fff48ec,0} 2542
+hl{m,756,0,3fff603c} 2543
+hl{f,3fff603c,0} 2544
+hl{f,3fff512c,0} 2545
+hl{m,16,0,3fff512c} 2546
+hl{m,756,0,3fff603c} 2547
+hl{f,3fff603c,0} 2548
+hl{f,3fff512c,0} 2549
+hl{m,16,0,3fff512c} 2550
+hl{m,756,0,3fff603c} 2551
+hl{f,3fff603c,0} 2552
+hl{f,3fff512c,0} 2553
+hl{m,16,0,3fff512c} 2554
+hl{m,756,0,3fff603c} 2555
+hl{f,3fff603c,0} 2556
+hl{f,3fff48d4,0} 2557
+hl{m,16,0,3fff4934} 2558
+hl{f,3fff48bc,0} 2559
+hl{m,16,0,3fff48bc} 2560
+hl{f,3fff57ec,0} 2561
+hl{m,16,0,3fff57ec} 2562
+hl{f,3fff4904,0} 2563
+hl{m,16,0,3fff48d4} 2564
+hl{f,3fff512c,0} 2565
+hl{m,16,0,3fff512c} 2566
+hl flush 2566 - remains 24144
+▒01.01.1970 00:01:23 Heap: 24880
+2
+hl{m,756,0,3fff603c} 2567
+hl{f,3fff603c,0} 2568
+hl{f,3fff512c,0} 2569
+hl{m,16,0,3fff512c} 2570
+hl{f,3fff512c,0} 2571
+hl{m,16,0,3fff512c} 2572
+hl{m,756,0,3fff603c} 2573
+hl{f,3fff603c,0} 2574
+hl{f,3fff512c,0} 2575
+hl{m,16,0,3fff512c} 2576
+hl{m,756,0,3fff603c} 2577
+hl{f,3fff603c,0} 2578
+hl{f,3fff512c,0} 2579
+hl{m,16,0,3fff512c} 2580
+hl{m,756,0,3fff603c} 2581
+hl{f,3fff603c,0} 2582
+hl{f,3fff48d4,0} 2583
+hl{m,16,0,3fff48d4} 2584
+hl{f,3fff512c,0} 2585
+hl{m,16,0,3fff512c} 2586
+hl{m,11,0,3fff5154} 2587
+hl{m,11,0,3fff48ec} 2588
+hl{m,9,0,3fff48fc} 2589
+hl{m,20,0,3fff5d44} 2590
+hl{f,3fff48ec,0} 2591
+hl{m,20,0,3fff5d5c} 2592
+hl{f,3fff48fc,0} 2593
+hl{f,3fff5d44,0} 2594
+hl{f,3fff5154,0} 2595
+hl{f,3fff5d5c,0} 2596
+hl{m,756,0,3fff603c} 2597
+hl{f,3fff603c,0} 2598
+hl flush 2598 - remains 24928
+FAIL CONNECT
+1ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 2599
+hl{m,16,0,3fff512c} 2600
+hl{f,3fff5144,0} 2601
+hl{f,3fff5894,0} 2602
+hl{m,12,0,3fff5144} 2603
+hl{m,12,0,3fff5154} 2604
+hl{m,48,0,3fff5894} 2605
+hl{f,3fff4d7c,0} 2606
+hl{f,3fff512c,0} 2607
+hl{m,16,0,3fff512c} 2608
+hl{m,756,0,3fff603c} 2609
+hl{f,3fff603c,0} 2610
+hl{f,3fff512c,0} 2611
+hl{m,16,0,3fff512c} 2612
+hl{m,756,0,3fff603c} 2613
+hl{f,3fff603c,0} 2614
+hl{f,3fff512c,0} 2615
+hl{m,16,0,3fff512c} 2616
+hl{m,756,0,3fff603c} 2617
+hl{f,3fff603c,0} 2618
+hl{f,3fff57ec,0} 2619
+hl{m,16,0,3fff57ec} 2620
+hl{f,3fff48d4,0} 2621
+hl{m,16,0,3fff48d4} 2622
+hl{f,3fff512c,0} 2623
+hl{m,16,0,3fff512c} 2624
+hl{m,756,0,3fff603c} 2625
+hl{f,3fff603c,0} 2626
+hl{f,3fff512c,0} 2627
+hl{m,16,0,3fff512c} 2628
+hl{m,756,0,3fff603c} 2629
+hl{f,3fff603c,0} 2630
+hl flush 2630 - remains 24928
+▒
+hl{f,3fff512c,0} 2631
+hl{m,16,0,3fff512c} 2632
+hl{m,756,0,3fff603c} 2633
+hl{f,3fff603c,0} 2634
+hl{f,3fff512c,0} 2635
+hl{m,16,0,3fff512c} 2636
+hl{m,756,0,3fff603c} 2637
+hl{f,3fff603c,0} 2638
+hl{f,3fff512c,0} 2639
+hl{m,16,0,3fff512c} 2640
+hl{m,756,0,3fff603c} 2641
+hl{f,3fff603c,0} 2642
+hl{f,3fff48d4,0} 2643
+hl{m,16,0,3fff48d4} 2644
+hl{f,3fff512c,0} 2645
+hl{m,16,0,3fff512c} 2646
+hl{m,756,0,3fff603c} 2647
+hl{f,3fff603c,0} 2648
+hl{f,3fff512c,0} 2649
+hl{m,16,0,3fff512c} 2650
+hl{m,756,0,3fff603c} 2651
+hl{f,3fff603c,0} 2652
+hl{f,3fff512c,0} 2653
+hl{m,16,0,3fff512c} 2654
+hl{m,756,0,3fff603c} 2655
+hl{f,3fff603c,0} 2656
+hl{f,3fff512c,0} 2657
+hl{m,16,0,3fff512c} 2658
+hl{m,756,0,3fff603c} 2659
+hl{f,3fff603c,0} 2660
+hl{f,3fff512c,0} 2661
+hl{m,16,0,3fff512c} 2662
+hl flush 2662 - remains 24144
+▒ 0: 1:25 Dormitor H:47.00(0.0) T:20.30(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+fHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 2663
+hl{f,3fff603c,0} 2664
+hl{m,20,0,3fff48ec} 2665
+hl{f,3fff491c,0} 2666
+hl{f,3fff57ec,0} 2667
+hl{m,16,0,3fff57ec} 2668
+hl{f,3fff48d4,0} 2669
+hl{m,16,0,3fff48d4} 2670
+hl{f,3fff512c,0} 2671
+hl{m,16,0,3fff512c} 2672
+hl{f,3fff512c,0} 2673
+hl{m,16,0,3fff512c} 2674
+hl{f,3fff512c,0} 2675
+hl{m,16,0,3fff512c} 2676
+hl{f,3fff512c,0} 2677
+hl{m,16,0,3fff512c} 2678
+hl{f,3fff512c,0} 2679
+hl{m,16,0,3fff512c} 2680
+hl{f,3fff48d4,0} 2681
+hl{m,16,0,3fff48d4} 2682
+hl{f,3fff512c,0} 2683
+hl{m,16,0,3fff512c} 2684
+hl{f,3fff512c,0} 2685
+hl{m,16,0,3fff512c} 2686
+hl{f,3fff512c,0} 2687
+hl{m,16,0,3fff512c} 2688
+hl{f,3fff512c,0} 2689
+hl{m,16,0,3fff512c} 2690
+hl{f,3fff512c,0} 2691
+hl{m,16,0,3fff512c} 2692
+hl{f,3fff57ec,0} 2693
+hl{m,16,0,3fff57ec} 2694
+hl flush 2694 - remains 24928
+
+hl{f,3fff48d4,0} 2695
+hl{m,16,0,3fff48d4} 2696
+hl{f,3fff512c,0} 2697
+hl{m,16,0,3fff512c} 2698
+hl{f,3fff512c,0} 2699
+hl{m,16,0,3fff512c} 2700
+hl{m,756,0,3fff603c} 2701
+hl{f,3fff603c,0} 2702
+hl{f,3fff512c,0} 2703
+hl{m,16,0,3fff512c} 2704
+hl{m,756,0,3fff603c} 2705
+hl{f,3fff603c,0} 2706
+hl{f,3fff512c,0} 2707
+hl{m,16,0,3fff512c} 2708
+hl{m,756,0,3fff603c} 2709
+hl{f,3fff603c,0} 2710
+hl{f,3fff512c,0} 2711
+hl{m,16,0,3fff512c} 2712
+hl{m,756,0,3fff603c} 2713
+hl{f,3fff603c,0} 2714
+hl{f,3fff48d4,0} 2715
+hl{m,16,0,3fff48d4} 2716
+hl{f,3fff512c,0} 2717
+hl{m,16,0,3fff512c} 2718
+hl{f,3fff512c,0} 2719
+hl{m,16,0,3fff512c} 2720
+hl{m,756,0,3fff603c} 2721
+hl{f,3fff603c,0} 2722
+hl{f,3fff512c,0} 2723
+hl{m,16,0,3fff512c} 2724
+hl{m,756,0,3fff603c} 2725
+hl{f,3fff603c,0} 2726
+hl flush 2726 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 2727
+hl{m,16,0,3fff512c} 2728
+hl{m,756,0,3fff603c} 2729
+hl{f,3fff603c,0} 2730
+hl{f,3fff512c,0} 2731
+hl{m,16,0,3fff512c} 2732
+hl{m,756,0,3fff603c} 2733
+hl{f,3fff603c,0} 2734
+hl{f,3fff57ec,0} 2735
+hl{m,16,0,3fff57ec} 2736
+hl{f,3fff48d4,0} 2737
+hl{m,16,0,3fff48d4} 2738
+hl{f,3fff512c,0} 2739
+hl{m,16,0,3fff512c} 2740
+hl{m,756,0,3fff603c} 2741
+hl{f,3fff603c,0} 2742
+hl{f,3fff512c,0} 2743
+hl{m,16,0,3fff512c} 2744
+hl{m,756,0,3fff603c} 2745
+hl{f,3fff603c,0} 2746
+hl{f,3fff512c,0} 2747
+hl{m,16,0,3fff512c} 2748
+hl{m,756,0,3fff603c} 2749
+hl{f,3fff603c,0} 2750
+hl{f,3fff512c,0} 2751
+hl{m,16,0,3fff512c} 2752
+hl{f,3fff512c,0} 2753
+hl{m,16,0,3fff512c} 2754
+hl{m,20,0,3fff4904} 2755
+hl{f,3fff51b4,0} 2756
+hl{m,756,0,3fff603c} 2757
+hl{f,3fff603c,0} 2758
+hl flush 2758 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff48d4,0} 2759
+hl{m,16,0,3fff48d4} 2760
+hl{f,3fff512c,0} 2761
+hl{m,16,0,3fff512c} 2762
+hl{m,756,0,3fff603c} 2763
+hl{f,3fff603c,0} 2764
+hl{f,3fff512c,0} 2765
+hl{m,16,0,3fff512c} 2766
+hl{m,756,0,3fff603c} 2767
+hl{f,3fff603c,0} 2768
+hl{f,3fff512c,0} 2769
+hl{m,16,0,3fff512c} 2770
+hl{m,756,0,3fff603c} 2771
+hl{f,3fff603c,0} 2772
+hl{f,3fff512c,0} 2773
+hl{m,16,0,3fff512c} 2774
+hl{m,756,0,3fff603c} 2775
+hl{f,3fff603c,0} 2776
+hl{f,3fff512c,0} 2777
+hl{m,16,0,3fff512c} 2778
+hl{m,756,0,3fff603c} 2779
+hl{f,3fff603c,0} 2780
+hl{f,3fff48bc,0} 2781
+hl{m,16,0,3fff48bc} 2782
+hl{f,3fff57ec,0} 2783
+hl{m,16,0,3fff57ec} 2784
+hl{f,3fff48d4,0} 2785
+hl{m,16,0,3fff48d4} 2786
+hl{f,3fff512c,0} 2787
+hl{m,16,0,3fff512c} 2788
+hl{m,756,0,3fff603c} 2789
+hl{f,3fff603c,0} 2790
+hl flush 2790 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 2791
+hl{m,16,0,3fff512c} 2792
+hl{m,756,0,3fff603c} 2793
+hl{f,3fff603c,0} 2794
+hl{f,3fff512c,0} 2795
+hl{m,16,0,3fff512c} 2796
+hl{m,756,0,3fff603c} 2797
+hl{f,3fff603c,0} 2798
+hl{f,3fff512c,0} 2799
+hl{m,16,0,3fff512c} 2800
+hl{m,756,0,3fff603c} 2801
+hl{f,3fff603c,0} 2802
+hl{f,3fff512c,0} 2803
+hl{m,16,0,3fff512c} 2804
+hl{m,756,0,3fff603c} 2805
+hl{f,3fff603c,0} 2806
+hl{f,3fff48d4,0} 2807
+hl{m,16,0,3fff48d4} 2808
+hl{f,3fff512c,0} 2809
+hl{m,16,0,3fff512c} 2810
+hl{m,756,0,3fff603c} 2811
+hl{f,3fff603c,0} 2812
+hl{f,3fff512c,0} 2813
+hl{m,16,0,3fff512c} 2814
+hl{m,756,0,3fff603c} 2815
+hl{f,3fff603c,0} 2816
+hl{f,3fff512c,0} 2817
+hl{m,16,0,3fff512c} 2818
+hl{m,756,0,3fff603c} 2819
+hl{f,3fff603c,0} 2820
+hl{f,3fff512c,0} 2821
+hl{m,16,0,3fff512c} 2822
+hl flush 2822 - remains 24928
+▒
+hl{f,3fff512c,0} 2823
+hl{m,16,0,3fff512c} 2824
+hl{m,756,0,3fff603c} 2825
+hl{f,3fff603c,0} 2826
+hl{f,3fff57ec,0} 2827
+hl{m,16,0,3fff57ec} 2828
+hl{f,3fff48d4,0} 2829
+hl{m,16,0,3fff48d4} 2830
+hl{f,3fff512c,0} 2831
+hl{m,16,0,3fff512c} 2832
+hl{m,756,0,3fff603c} 2833
+hl{f,3fff603c,0} 2834
+hl{f,3fff512c,0} 2835
+hl{m,16,0,3fff512c} 2836
+hl{f,3fff512c,0} 2837
+hl{m,16,0,3fff512c} 2838
+hl{f,3fff512c,0} 2839
+hl{m,16,0,3fff512c} 2840
+hl{m,756,0,3fff603c} 2841
+hl{f,3fff603c,0} 2842
+hl{f,3fff512c,0} 2843
+hl{m,16,0,3fff512c} 2844
+hl{m,756,0,3fff603c} 2845
+hl{f,3fff603c,0} 2846
+hl{f,3fff48d4,0} 2847
+hl{m,420,0,3fff603c} 2848
+hl{m,16,0,3fff48d4} 2849
+hl{f,3fff512c,0} 2850
+hl{m,16,0,3fff512c} 2851
+hl{m,756,0,3fff61e4} 2852
+hl{f,3fff61e4,0} 2853
+hl{f,3fff603c,0} 2854
+hl flush 2854 - remains 24928
+ 0: 1:30 Dormitor H:47.10(0.0) T:20.30(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+?
+hl{f,3fff512c,0} 2855
+hl{m,16,0,3fff512c} 2856
+hl{f,3fff512c,0} 2857
+hl{m,16,0,3fff512c} 2858
+hl{m,20,0,3fff51b4} 2859
+hl{f,3fff48ec,0} 2860
+hl{m,756,0,3fff603c} 2861
+hl{f,3fff603c,0} 2862
+hl{f,3fff512c,0} 2863
+hl{m,16,0,3fff512c} 2864
+hl{f,3fff512c,0} 2865
+hl{m,16,0,3fff512c} 2866
+hl{f,3fff57ec,0} 2867
+hl{m,16,0,3fff57ec} 2868
+hl{f,3fff48d4,0} 2869
+hl{m,16,0,3fff491c} 2870
+hl{f,3fff512c,0} 2871
+hl{m,16,0,3fff512c} 2872
+hl{f,3fff512c,0} 2873
+hl{m,16,0,3fff512c} 2874
+hl{f,3fff512c,0} 2875
+hl{m,16,0,3fff512c} 2876
+hl{f,3fff512c,0} 2877
+hl{m,16,0,3fff512c} 2878
+hl{f,3fff512c,0} 2879
+hl{m,16,0,3fff512c} 2880
+hl{f,3fff491c,0} 2881
+hl{m,16,0,3fff491c} 2882
+hl{f,3fff512c,0} 2883
+hl{m,16,0,3fff512c} 2884
+hl{f,3fff512c,0} 2885
+hl{m,16,0,3fff512c} 2886
+hl flush 2886 - remains 24928
+▒
+hl{f,3fff512c,0} 2887
+hl{m,16,0,3fff512c} 2888
+hl{f,3fff512c,0} 2889
+hl{m,16,0,3fff512c} 2890
+hl{m,756,0,3fff603c} 2891
+hl{f,3fff603c,0} 2892
+hl{f,3fff512c,0} 2893
+hl{m,16,0,3fff512c} 2894
+hl{m,756,0,3fff603c} 2895
+hl{f,3fff603c,0} 2896
+hl{f,3fff57ec,0} 2897
+hl{m,16,0,3fff57ec} 2898
+hl{f,3fff491c,0} 2899
+hl{m,16,0,3fff491c} 2900
+hl{f,3fff512c,0} 2901
+hl{m,16,0,3fff512c} 2902
+hl{m,756,0,3fff603c} 2903
+hl{f,3fff603c,0} 2904
+hl{f,3fff512c,0} 2905
+hl{m,16,0,3fff512c} 2906
+hl{m,756,0,3fff603c} 2907
+hl{f,3fff603c,0} 2908
+hl{f,3fff512c,0} 2909
+hl{m,16,0,3fff512c} 2910
+hl{f,3fff512c,0} 2911
+hl{m,16,0,3fff512c} 2912
+hl{m,756,0,3fff603c} 2913
+hl{f,3fff603c,0} 2914
+hl{f,3fff512c,0} 2915
+hl{m,16,0,3fff512c} 2916
+hl{m,756,0,3fff603c} 2917
+hl{f,3fff603c,0} 2918
+hl flush 2918 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff491c,0} 2919
+hl{m,16,0,3fff491c} 2920
+hl{f,3fff512c,0} 2921
+hl{m,16,0,3fff512c} 2922
+hl{m,756,0,3fff603c} 2923
+hl{f,3fff603c,0} 2924
+hl{f,3fff512c,0} 2925
+hl{m,16,0,3fff512c} 2926
+hl{m,756,0,3fff603c} 2927
+hl{f,3fff603c,0} 2928
+hl{f,3fff512c,0} 2929
+hl{m,16,0,3fff512c} 2930
+hl{f,3fff512c,0} 2931
+hl{m,16,0,3fff512c} 2932
+hl{m,756,0,3fff603c} 2933
+hl{f,3fff603c,0} 2934
+hl{f,3fff512c,0} 2935
+hl{m,16,0,3fff512c} 2936
+hl{m,756,0,3fff603c} 2937
+hl{f,3fff603c,0} 2938
+hl{f,3fff57ec,0} 2939
+hl{m,16,0,3fff57ec} 2940
+hl{f,3fff491c,0} 2941
+hl{m,16,0,3fff491c} 2942
+hl{f,3fff512c,0} 2943
+hl{m,16,0,3fff512c} 2944
+hl{m,756,0,3fff603c} 2945
+hl{f,3fff603c,0} 2946
+hl{f,3fff512c,0} 2947
+hl{m,16,0,3fff512c} 2948
+hl{m,756,0,3fff603c} 2949
+hl{f,3fff603c,0} 2950
+hl flush 2950 - remains 24880
+ASYNC RX (0):
+?
+hl{m,20,0,3fff48d4} 2951
+hl{f,3fff48d4,0} 2952
+hl{f,3fff512c,0} 2953
+hl{m,16,0,3fff512c} 2954
+hl{f,3fff512c,0} 2955
+hl{m,16,0,3fff512c} 2956
+hl{m,20,0,3fff48d4} 2957
+hl{f,3fff4904,0} 2958
+hl{m,756,0,3fff603c} 2959
+hl{f,3fff603c,0} 2960
+hl{f,3fff512c,0} 2961
+hl{m,16,0,3fff512c} 2962
+hl{m,756,0,3fff603c} 2963
+hl{f,3fff603c,0} 2964
+hl{f,3fff491c,0} 2965
+hl{m,16,0,3fff48ec} 2966
+hl{f,3fff512c,0} 2967
+hl{m,16,0,3fff512c} 2968
+hl{m,756,0,3fff603c} 2969
+hl{f,3fff603c,0} 2970
+hl{f,3fff512c,0} 2971
+hl{m,16,0,3fff512c} 2972
+hl{f,3fff512c,0} 2973
+hl{m,16,0,3fff512c} 2974
+hl{m,756,0,3fff603c} 2975
+hl{f,3fff603c,0} 2976
+hl{f,3fff512c,0} 2977
+hl{m,16,0,3fff512c} 2978
+hl{f,3fff512c,0} 2979
+hl{m,16,0,3fff512c} 2980
+hl{m,756,0,3fff603c} 2981
+hl{f,3fff603c,0} 2982
+hl flush 2982 - remains 24928
+FAIL CONNECT
+1
+hl{f,3fff48bc,0} 2983
+hl{m,16,0,3fff48bc} 2984
+hl{f,3fff57ec,0} 2985
+hl{m,16,0,3fff57ec} 2986
+hl{f,3fff48ec,0} 2987
+hl{m,16,0,3fff48ec} 2988
+hl{f,3fff512c,0} 2989
+hl{m,16,0,3fff512c} 2990
+hl{f,3fff512c,0} 2991
+hl{m,16,0,3fff512c} 2992
+hl{m,756,0,3fff603c} 2993
+hl{f,3fff603c,0} 2994
+hl{f,3fff512c,0} 2995
+hl{m,16,0,3fff512c} 2996
+hl{f,3fff512c,0} 2997
+hl{m,16,0,3fff512c} 2998
+hl{f,3fff5144,0} 2999
+hl{f,3fff5894,0} 3000
+hl{m,12,0,3fff5144} 3001
+hl{m,12,0,3fff4d7c} 3002
+hl{m,48,0,3fff5894} 3003
+hl{f,3fff5154,0} 3004
+hl{m,756,0,3fff603c} 3005
+hl{f,3fff603c,0} 3006
+hl{f,3fff512c,0} 3007
+hl{m,16,0,3fff512c} 3008
+hl{f,3fff48ec,0} 3009
+hl{m,16,0,3fff48ec} 3010
+hl{f,3fff512c,0} 3011
+hl{m,16,0,3fff512c} 3012
+hl{m,756,0,3fff603c} 3013
+hl{f,3fff603c,0} 3014
+hl flush 3014 - remains 24928
+ASYNC RX (0):
+?
+hl{f,3fff512c,0} 3015
+hl{m,16,0,3fff512c} 3016
+hl{f,3fff512c,0} 3017
+hl{m,16,0,3fff512c} 3018
+hl{m,756,0,3fff603c} 3019
+hl{f,3fff603c,0} 3020
+hl{f,3fff512c,0} 3021
+hl{m,16,0,3fff512c} 3022
+hl{f,3fff512c,0} 3023
+hl{m,16,0,3fff512c} 3024
+hl{m,756,0,3fff603c} 3025
+hl{f,3fff603c,0} 3026
+hl{f,3fff57ec,0} 3027
+hl{m,16,0,3fff57ec} 3028
+hl{f,3fff48ec,0} 3029
+hl{m,16,0,3fff48ec} 3030
+hl{f,3fff512c,0} 3031
+hl{m,16,0,3fff512c} 3032
+hl{m,756,0,3fff603c} 3033
+hl{f,3fff603c,0} 3034
+hl{f,3fff512c,0} 3035
+hl{m,16,0,3fff512c} 3036
+hl{m,756,0,3fff603c} 3037
+hl{f,3fff603c,0} 3038
+hl{f,3fff512c,0} 3039
+hl{m,16,0,3fff512c} 3040
+hl{f,3fff512c,0} 3041
+hl{m,16,0,3fff512c} 3042
+hl{m,756,0,3fff603c} 3043
+hl{f,3fff603c,0} 3044
+hl{m,756,0,3fff603c} 3045
+hl{f,3fff603c,0} 3046
+hl flush 3046 - remains 24928
+ 0: 1:35 Dormitor H:47.10(0.0) T:20.30(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 3047
+hl{m,16,0,3fff512c} 3048
+hl{m,756,0,3fff603c} 3049
+hl{f,3fff603c,0} 3050
+hl{f,3fff48ec,0} 3051
+hl{m,16,0,3fff48ec} 3052
+hl{f,3fff512c,0} 3053
+hl{m,16,0,3fff512c} 3054
+hl{m,20,0,3fff4904} 3055
+hl{f,3fff51b4,0} 3056
+hl{f,3fff512c,0} 3057
+hl{m,16,0,3fff512c} 3058
+hl{f,3fff512c,0} 3059
+hl{m,16,0,3fff512c} 3060
+hl{f,3fff512c,0} 3061
+hl{m,16,0,3fff512c} 3062
+hl{f,3fff512c,0} 3063
+hl{m,16,0,3fff512c} 3064
+hl{f,3fff57ec,0} 3065
+hl{m,16,0,3fff57ec} 3066
+hl{f,3fff48ec,0} 3067
+hl{m,16,0,3fff48ec} 3068
+hl{f,3fff512c,0} 3069
+hl{m,16,0,3fff512c} 3070
+hl{f,3fff512c,0} 3071
+hl{m,16,0,3fff512c} 3072
+hl{f,3fff512c,0} 3073
+hl{m,16,0,3fff512c} 3074
+hl{f,3fff512c,0} 3075
+hl{m,16,0,3fff512c} 3076
+hl{f,3fff512c,0} 3077
+hl{m,16,0,3fff512c} 3078
+hl flush 3078 - remains 24144
+▒
+hl{m,756,0,3fff603c} 3079
+hl{f,3fff603c,0} 3080
+hl{f,3fff48ec,0} 3081
+hl{m,16,0,3fff48ec} 3082
+hl{f,3fff512c,0} 3083
+hl{m,16,0,3fff512c} 3084
+hl{m,756,0,3fff603c} 3085
+hl{f,3fff603c,0} 3086
+hl{f,3fff512c,0} 3087
+hl{m,16,0,3fff512c} 3088
+hl{m,756,0,3fff603c} 3089
+hl{f,3fff603c,0} 3090
+hl{f,3fff512c,0} 3091
+hl{m,16,0,3fff512c} 3092
+hl{m,756,0,3fff603c} 3093
+hl{f,3fff603c,0} 3094
+hl{f,3fff512c,0} 3095
+hl{m,16,0,3fff512c} 3096
+hl{m,756,0,3fff603c} 3097
+hl{f,3fff603c,0} 3098
+hl{f,3fff512c,0} 3099
+hl{m,16,0,3fff512c} 3100
+hl{m,756,0,3fff603c} 3101
+hl{f,3fff603c,0} 3102
+hl{f,3fff57ec,0} 3103
+hl{m,16,0,3fff57ec} 3104
+hl{f,3fff48ec,0} 3105
+hl{m,16,0,3fff48ec} 3106
+hl{f,3fff512c,0} 3107
+hl{m,16,0,3fff512c} 3108
+hl{m,756,0,3fff603c} 3109
+hl{f,3fff603c,0} 3110
+hl flush 3110 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 3111
+hl{m,16,0,3fff512c} 3112
+hl{m,756,0,3fff603c} 3113
+hl{f,3fff603c,0} 3114
+hl{f,3fff512c,0} 3115
+hl{m,16,0,3fff512c} 3116
+hl{m,756,0,3fff603c} 3117
+hl{f,3fff603c,0} 3118
+hl{f,3fff512c,0} 3119
+hl{m,16,0,3fff512c} 3120
+hl{m,756,0,3fff603c} 3121
+hl{f,3fff603c,0} 3122
+hl{f,3fff512c,0} 3123
+hl{m,16,0,3fff512c} 3124
+hl{m,756,0,3fff603c} 3125
+hl{f,3fff603c,0} 3126
+hl{f,3fff48ec,0} 3127
+hl{m,16,0,3fff48ec} 3128
+hl{f,3fff512c,0} 3129
+hl{m,16,0,3fff512c} 3130
+hl{m,756,0,3fff603c} 3131
+hl{f,3fff603c,0} 3132
+hl{f,3fff512c,0} 3133
+hl{m,16,0,3fff512c} 3134
+hl{m,756,0,3fff603c} 3135
+hl{f,3fff603c,0} 3136
+hl{f,3fff512c,0} 3137
+hl{m,16,0,3fff512c} 3138
+hl{f,3fff512c,0} 3139
+hl{m,16,0,3fff512c} 3140
+hl{m,756,0,3fff603c} 3141
+hl{f,3fff603c,0} 3142
+hl flush 3142 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 3143
+hl{m,16,0,3fff512c} 3144
+hl{m,756,0,3fff603c} 3145
+hl{f,3fff603c,0} 3146
+hl{f,3fff57ec,0} 3147
+hl{m,16,0,3fff57ec} 3148
+hl{f,3fff48ec,0} 3149
+hl{m,16,0,3fff48ec} 3150
+hl{f,3fff512c,0} 3151
+hl{m,16,0,3fff512c} 3152
+hl{m,20,0,3fff51b4} 3153
+hl{f,3fff48d4,0} 3154
+hl{f,3fff512c,0} 3155
+hl{m,16,0,3fff512c} 3156
+hl{m,756,0,3fff603c} 3157
+hl{f,3fff603c,0} 3158
+hl{f,3fff512c,0} 3159
+hl{m,16,0,3fff512c} 3160
+hl{m,756,0,3fff603c} 3161
+hl{f,3fff603c,0} 3162
+hl{f,3fff512c,0} 3163
+hl{m,16,0,3fff512c} 3164
+hl{m,756,0,3fff603c} 3165
+hl{f,3fff603c,0} 3166
+hl{f,3fff512c,0} 3167
+hl{m,16,0,3fff512c} 3168
+hl{m,756,0,3fff603c} 3169
+hl{f,3fff603c,0} 3170
+hl{f,3fff48ec,0} 3171
+hl{m,16,0,3fff491c} 3172
+hl{f,3fff512c,0} 3173
+hl{m,16,0,3fff512c} 3174
+hl flush 3174 - remains 24144
+▒
+hl{m,756,0,3fff603c} 3175
+hl{f,3fff603c,0} 3176
+hl{f,3fff512c,0} 3177
+hl{m,16,0,3fff512c} 3178
+hl{f,3fff512c,0} 3179
+hl{m,16,0,3fff512c} 3180
+hl{m,756,0,3fff603c} 3181
+hl{f,3fff603c,0} 3182
+hl{f,3fff512c,0} 3183
+hl{m,16,0,3fff512c} 3184
+hl{m,756,0,3fff603c} 3185
+hl{f,3fff603c,0} 3186
+hl{f,3fff512c,0} 3187
+hl{m,16,0,3fff512c} 3188
+hl{m,756,0,3fff603c} 3189
+hl{f,3fff603c,0} 3190
+hl{f,3fff48bc,0} 3191
+hl{m,16,0,3fff48bc} 3192
+hl{f,3fff57ec,0} 3193
+hl{m,16,0,3fff57ec} 3194
+hl{f,3fff491c,0} 3195
+hl{m,16,0,3fff491c} 3196
+hl{f,3fff512c,0} 3197
+hl{m,16,0,3fff512c} 3198
+hl{f,3fff512c,0} 3199
+hl{m,16,0,3fff512c} 3200
+hl{m,756,0,3fff603c} 3201
+hl{f,3fff603c,0} 3202
+hl{f,3fff512c,0} 3203
+hl{m,16,0,3fff512c} 3204
+hl{m,756,0,3fff603c} 3205
+hl{f,3fff603c,0} 3206
+hl flush 3206 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 3207
+hl{m,16,0,3fff512c} 3208
+hl{m,756,0,3fff603c} 3209
+hl{f,3fff603c,0} 3210
+hl{f,3fff512c,0} 3211
+hl{m,16,0,3fff512c} 3212
+hl{f,3fff491c,0} 3213
+hl{m,16,0,3fff491c} 3214
+hl{f,3fff512c,0} 3215
+hl{m,16,0,3fff512c} 3216
+hl{m,756,0,3fff603c} 3217
+hl{f,3fff603c,0} 3218
+hl{f,3fff512c,0} 3219
+hl{m,16,0,3fff512c} 3220
+hl{m,756,0,3fff603c} 3221
+hl{f,3fff603c,0} 3222
+hl{f,3fff512c,0} 3223
+hl{m,16,0,3fff512c} 3224
+hl{m,756,0,3fff603c} 3225
+hl{f,3fff603c,0} 3226
+hl{f,3fff512c,0} 3227
+hl{m,16,0,3fff512c} 3228
+hl{m,756,0,3fff603c} 3229
+hl{f,3fff603c,0} 3230
+hl{f,3fff512c,0} 3231
+hl{m,16,0,3fff512c} 3232
+hl{f,3fff57ec,0} 3233
+hl{m,16,0,3fff57ec} 3234
+hl{f,3fff491c,0} 3235
+hl{m,16,0,3fff491c} 3236
+hl{f,3fff512c,0} 3237
+hl{m,16,0,3fff512c} 3238
+hl flush 3238 - remains 24928
+ 0: 1:40 Dormitor H:47.10(0.0) T:20.30(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 3239
+hl{m,16,0,3fff512c} 3240
+hl{m,756,0,3fff603c} 3241
+hl{f,3fff603c,0} 3242
+hl{f,3fff512c,0} 3243
+hl{m,16,0,3fff512c} 3244
+hl{m,756,0,3fff603c} 3245
+hl{f,3fff603c,0} 3246
+hl{f,3fff512c,0} 3247
+hl{m,16,0,3fff512c} 3248
+hl{m,20,0,3fff48d4} 3249
+hl{f,3fff4904,0} 3250
+hl{f,3fff512c,0} 3251
+hl{m,16,0,3fff512c} 3252
+hl{f,3fff491c,0} 3253
+hl{m,16,0,3fff48ec} 3254
+hl{f,3fff512c,0} 3255
+hl{m,16,0,3fff512c} 3256
+hl{f,3fff512c,0} 3257
+hl{m,16,0,3fff512c} 3258
+hl{f,3fff512c,0} 3259
+hl{m,16,0,3fff512c} 3260
+hl{f,3fff512c,0} 3261
+hl{m,16,0,3fff512c} 3262
+hl{f,3fff512c,0} 3263
+hl{m,16,0,3fff512c} 3264
+hl{f,3fff57ec,0} 3265
+hl{m,16,0,3fff57ec} 3266
+hl{f,3fff48ec,0} 3267
+hl{m,16,0,3fff48ec} 3268
+hl{f,3fff512c,0} 3269
+hl{m,16,0,3fff512c} 3270
+hl flush 3270 - remains 24928
+▒
+hl{f,3fff512c,0} 3271
+hl{m,16,0,3fff512c} 3272
+hl{f,3fff512c,0} 3273
+hl{m,16,0,3fff512c} 3274
+hl{f,3fff512c,0} 3275
+hl{m,16,0,3fff512c} 3276
+hl{m,756,0,3fff603c} 3277
+hl{f,3fff603c,0} 3278
+hl{f,3fff512c,0} 3279
+hl{m,16,0,3fff512c} 3280
+hl{m,756,0,3fff603c} 3281
+hl{f,3fff603c,0} 3282
+hl{f,3fff48ec,0} 3283
+hl{m,16,0,3fff48ec} 3284
+hl{f,3fff512c,0} 3285
+hl{m,16,0,3fff512c} 3286
+hl{m,756,0,3fff603c} 3287
+hl{f,3fff603c,0} 3288
+hl{f,3fff512c,0} 3289
+hl{m,16,0,3fff512c} 3290
+hl{m,756,0,3fff603c} 3291
+hl{f,3fff603c,0} 3292
+hl{f,3fff512c,0} 3293
+hl{m,16,0,3fff512c} 3294
+hl{m,756,0,3fff603c} 3295
+hl{f,3fff603c,0} 3296
+hl{f,3fff512c,0} 3297
+hl{m,16,0,3fff512c} 3298
+hl{m,756,0,3fff603c} 3299
+hl{f,3fff603c,0} 3300
+hl{f,3fff512c,0} 3301
+hl{m,16,0,3fff512c} 3302
+hl flush 3302 - remains 24144
+▒ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 3303
+hl{f,3fff603c,0} 3304
+hl{f,3fff57ec,0} 3305
+hl{m,16,0,3fff57ec} 3306
+hl{f,3fff48ec,0} 3307
+hl{m,16,0,3fff48ec} 3308
+hl{f,3fff512c,0} 3309
+hl{m,16,0,3fff512c} 3310
+hl{f,3fff512c,0} 3311
+hl{m,16,0,3fff512c} 3312
+hl{m,756,0,3fff603c} 3313
+hl{f,3fff603c,0} 3314
+hl{f,3fff512c,0} 3315
+hl{m,16,0,3fff512c} 3316
+hl{m,756,0,3fff603c} 3317
+hl{f,3fff603c,0} 3318
+hl{f,3fff512c,0} 3319
+hl{m,16,0,3fff512c} 3320
+hl{f,3fff512c,0} 3321
+hl{m,16,0,3fff512c} 3322
+hl{m,756,0,3fff603c} 3323
+hl{f,3fff603c,0} 3324
+hl{f,3fff48ec,0} 3325
+hl{m,16,0,3fff48ec} 3326
+hl{f,3fff512c,0} 3327
+hl{m,16,0,3fff512c} 3328
+hl{m,756,0,3fff603c} 3329
+hl{f,3fff603c,0} 3330
+hl{f,3fff512c,0} 3331
+hl{m,16,0,3fff512c} 3332
+hl{m,756,0,3fff603c} 3333
+hl{f,3fff603c,0} 3334
+hl flush 3334 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 3335
+hl{m,16,0,3fff512c} 3336
+hl{m,756,0,3fff603c} 3337
+hl{f,3fff603c,0} 3338
+hl{f,3fff512c,0} 3339
+hl{m,16,0,3fff512c} 3340
+hl{m,756,0,3fff603c} 3341
+hl{f,3fff603c,0} 3342
+hl{f,3fff512c,0} 3343
+hl{m,16,0,3fff512c} 3344
+hl{m,20,0,3fff4904} 3345
+hl{f,3fff51b4,0} 3346
+hl{f,3fff57ec,0} 3347
+hl{m,16,0,3fff57ec} 3348
+hl{f,3fff48ec,0} 3349
+hl{m,16,0,3fff48ec} 3350
+hl{f,3fff512c,0} 3351
+hl{m,16,0,3fff512c} 3352
+hl{m,756,0,3fff603c} 3353
+hl{f,3fff603c,0} 3354
+hl{f,3fff512c,0} 3355
+hl{m,16,0,3fff512c} 3356
+hl{m,756,0,3fff603c} 3357
+hl{f,3fff603c,0} 3358
+hl{f,3fff512c,0} 3359
+hl{m,16,0,3fff512c} 3360
+hl{m,756,0,3fff603c} 3361
+hl{f,3fff603c,0} 3362
+hl{f,3fff512c,0} 3363
+hl{m,16,0,3fff512c} 3364
+hl{m,756,0,3fff603c} 3365
+hl{f,3fff603c,0} 3366
+hl flush 3366 - remains 24928
+▒
+hl{f,3fff512c,0} 3367
+hl{m,16,0,3fff512c} 3368
+hl{m,756,0,3fff603c} 3369
+hl{f,3fff603c,0} 3370
+hl{f,3fff48ec,0} 3371
+hl{m,16,0,3fff48ec} 3372
+hl{f,3fff512c,0} 3373
+hl{m,16,0,3fff512c} 3374
+hl{m,756,0,3fff603c} 3375
+hl{f,3fff603c,0} 3376
+hl{f,3fff512c,0} 3377
+hl{m,16,0,3fff512c} 3378
+hl{m,756,0,3fff603c} 3379
+hl{f,3fff603c,0} 3380
+hl{f,3fff512c,0} 3381
+hl{m,16,0,3fff512c} 3382
+hl{m,756,0,3fff603c} 3383
+hl{f,3fff603c,0} 3384
+hl{f,3fff512c,0} 3385
+hl{m,16,0,3fff512c} 3386
+hl{m,756,0,3fff603c} 3387
+hl{f,3fff603c,0} 3388
+hl{f,3fff512c,0} 3389
+hl{m,16,0,3fff512c} 3390
+hl{m,756,0,3fff603c} 3391
+hl{f,3fff603c,0} 3392
+hl{f,3fff48bc,0} 3393
+hl{m,16,0,3fff48bc} 3394
+hl{f,3fff57ec,0} 3395
+hl{m,16,0,3fff57ec} 3396
+hl{f,3fff48ec,0} 3397
+hl{m,16,0,3fff48ec} 3398
+hl flush 3398 - remains 24928
+▒FAIL CONNECT
+ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 3399
+hl{m,16,0,3fff512c} 3400
+hl{f,3fff5144,0} 3401
+hl{f,3fff5894,0} 3402
+hl{m,12,0,3fff51b4} 3403
+hl{m,12,0,3fff491c} 3404
+hl{m,48,0,3fff5894} 3405
+hl{f,3fff4d7c,0} 3406
+hl{m,756,0,3fff603c} 3407
+hl{f,3fff603c,0} 3408
+hl{f,3fff512c,0} 3409
+hl{m,16,0,3fff512c} 3410
+hl{m,756,0,3fff603c} 3411
+hl{f,3fff603c,0} 3412
+hl{f,3fff512c,0} 3413
+hl{m,16,0,3fff512c} 3414
+hl{m,756,0,3fff603c} 3415
+hl{f,3fff603c,0} 3416
+hl{f,3fff512c,0} 3417
+hl{m,16,0,3fff512c} 3418
+hl{m,756,0,3fff603c} 3419
+hl{f,3fff603c,0} 3420
+hl{f,3fff512c,0} 3421
+hl{m,16,0,3fff512c} 3422
+hl{m,756,0,3fff603c} 3423
+hl{f,3fff603c,0} 3424
+hl{f,3fff48ec,0} 3425
+hl{m,16,0,3fff48ec} 3426
+hl{f,3fff512c,0} 3427
+hl{m,16,0,3fff512c} 3428
+hl{m,756,0,3fff603c} 3429
+hl{f,3fff603c,0} 3430
+hl flush 3430 - remains 24928
+ 0: 1:45 Dormitor H:47.00(46.8) T:20.30(20.2 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 3431
+hl{m,16,0,3fff512c} 3432
+hl{m,756,0,3fff603c} 3433
+hl{f,3fff603c,0} 3434
+hl{f,3fff512c,0} 3435
+hl{m,16,0,3fff512c} 3436
+hl{m,756,0,3fff603c} 3437
+hl{f,3fff603c,0} 3438
+hl{f,3fff512c,0} 3439
+hl{m,16,0,3fff512c} 3440
+hl{m,756,0,3fff603c} 3441
+hl{f,3fff603c,0} 3442
+hl{f,3fff512c,0} 3443
+hl{m,16,0,3fff512c} 3444
+hl{m,756,0,3fff603c} 3445
+hl{f,3fff603c,0} 3446
+hl{f,3fff57ec,0} 3447
+hl{m,16,0,3fff57ec} 3448
+hl{f,3fff48ec,0} 3449
+hl{m,16,0,3fff48ec} 3450
+hl{f,3fff512c,0} 3451
+hl{m,16,0,3fff512c} 3452
+hl{m,756,0,3fff603c} 3453
+hl{f,3fff603c,0} 3454
+hl{m,20,0,3fff5144} 3455
+hl{f,3fff48d4,0} 3456
+hl{f,3fff512c,0} 3457
+hl{m,16,0,3fff512c} 3458
+hl{f,3fff512c,0} 3459
+hl{m,16,0,3fff512c} 3460
+hl{f,3fff512c,0} 3461
+hl{m,16,0,3fff512c} 3462
+hl flush 3462 - remains 24928
+▒
+hl{f,3fff512c,0} 3463
+hl{m,16,0,3fff512c} 3464
+hl{f,3fff48ec,0} 3465
+hl{m,16,0,3fff48d4} 3466
+hl{f,3fff512c,0} 3467
+hl{m,16,0,3fff512c} 3468
+hl{f,3fff512c,0} 3469
+hl{m,16,0,3fff512c} 3470
+hl{f,3fff512c,0} 3471
+hl{m,16,0,3fff512c} 3472
+hl{f,3fff512c,0} 3473
+hl{m,16,0,3fff512c} 3474
+hl{f,3fff512c,0} 3475
+hl{m,16,0,3fff512c} 3476
+hl{f,3fff57ec,0} 3477
+hl{m,16,0,3fff57ec} 3478
+hl{f,3fff48d4,0} 3479
+hl{m,16,0,3fff48d4} 3480
+hl{f,3fff512c,0} 3481
+hl{m,16,0,3fff512c} 3482
+hl{m,756,0,3fff603c} 3483
+hl{f,3fff603c,0} 3484
+hl{f,3fff512c,0} 3485
+hl{m,16,0,3fff512c} 3486
+hl{m,756,0,3fff603c} 3487
+hl{f,3fff603c,0} 3488
+hl{f,3fff512c,0} 3489
+hl{m,16,0,3fff512c} 3490
+hl{m,756,0,3fff603c} 3491
+hl{f,3fff603c,0} 3492
+hl{f,3fff512c,0} 3493
+hl{m,16,0,3fff512c} 3494
+hl flush 3494 - remains 24144
+▒ASYNC RX (0):
+?
+hl{m,756,0,3fff603c} 3495
+hl{f,3fff603c,0} 3496
+hl{f,3fff512c,0} 3497
+hl{m,16,0,3fff512c} 3498
+hl{f,3fff48d4,0} 3499
+hl{m,16,0,3fff48d4} 3500
+hl{f,3fff512c,0} 3501
+hl{m,16,0,3fff512c} 3502
+hl{m,756,0,3fff603c} 3503
+hl{f,3fff603c,0} 3504
+hl{f,3fff512c,0} 3505
+hl{m,16,0,3fff512c} 3506
+hl{m,756,0,3fff603c} 3507
+hl{f,3fff603c,0} 3508
+hl{f,3fff512c,0} 3509
+hl{m,16,0,3fff512c} 3510
+hl{m,756,0,3fff603c} 3511
+hl{f,3fff603c,0} 3512
+hl{f,3fff512c,0} 3513
+hl{m,16,0,3fff512c} 3514
+hl{m,756,0,3fff603c} 3515
+hl{f,3fff603c,0} 3516
+hl{f,3fff512c,0} 3517
+hl{m,16,0,3fff512c} 3518
+hl{m,756,0,3fff603c} 3519
+hl{f,3fff603c,0} 3520
+hl{f,3fff57ec,0} 3521
+hl{m,16,0,3fff57ec} 3522
+hl{f,3fff48d4,0} 3523
+hl{m,16,0,3fff48d4} 3524
+hl{f,3fff512c,0} 3525
+hl{m,16,0,3fff512c} 3526
+hl flush 3526 - remains 24928
+▒
+hl{f,3fff512c,0} 3527
+hl{m,16,0,3fff512c} 3528
+hl{m,756,0,3fff603c} 3529
+hl{f,3fff603c,0} 3530
+hl{f,3fff512c,0} 3531
+hl{m,16,0,3fff512c} 3532
+hl{m,756,0,3fff603c} 3533
+hl{f,3fff603c,0} 3534
+hl{f,3fff512c,0} 3535
+hl{m,16,0,3fff512c} 3536
+hl{m,756,0,3fff603c} 3537
+hl{f,3fff603c,0} 3538
+hl{f,3fff512c,0} 3539
+hl{m,16,0,3fff512c} 3540
+hl{f,3fff48d4,0} 3541
+hl{m,16,0,3fff48d4} 3542
+hl{f,3fff512c,0} 3543
+hl{m,16,0,3fff512c} 3544
+hl{m,756,0,3fff603c} 3545
+hl{f,3fff603c,0} 3546
+hl{f,3fff512c,0} 3547
+hl{m,16,0,3fff512c} 3548
+hl{m,756,0,3fff603c} 3549
+hl{f,3fff603c,0} 3550
+hl{f,3fff512c,0} 3551
+hl{m,16,0,3fff512c} 3552
+hl{m,756,0,3fff603c} 3553
+hl{f,3fff603c,0} 3554
+hl{m,20,0,3fff48ec} 3555
+hl{f,3fff4904,0} 3556
+hl{f,3fff512c,0} 3557
+hl{m,16,0,3fff512c} 3558
+hl flush 3558 - remains 24144
+ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 3559
+hl{f,3fff603c,0} 3560
+hl{f,3fff512c,0} 3561
+hl{m,16,0,3fff512c} 3562
+hl{f,3fff57ec,0} 3563
+hl{m,16,0,3fff57ec} 3564
+hl{f,3fff48d4,0} 3565
+hl{m,16,0,3fff48d4} 3566
+hl{f,3fff512c,0} 3567
+hl{m,16,0,3fff512c} 3568
+hl{m,756,0,3fff603c} 3569
+hl{f,3fff603c,0} 3570
+hl{f,3fff512c,0} 3571
+hl{m,16,0,3fff512c} 3572
+hl{m,756,0,3fff603c} 3573
+hl{f,3fff603c,0} 3574
+hl{f,3fff512c,0} 3575
+hl{m,16,0,3fff512c} 3576
+hl{m,756,0,3fff603c} 3577
+hl{f,3fff603c,0} 3578
+hl{f,3fff512c,0} 3579
+hl{m,16,0,3fff512c} 3580
+hl{f,3fff512c,0} 3581
+hl{m,16,0,3fff512c} 3582
+hl{m,756,0,3fff603c} 3583
+hl{f,3fff603c,0} 3584
+hl{f,3fff48d4,0} 3585
+hl{m,16,0,3fff48d4} 3586
+hl{f,3fff512c,0} 3587
+hl{m,16,0,3fff512c} 3588
+hl{m,756,0,3fff603c} 3589
+hl{f,3fff603c,0} 3590
+hl flush 3590 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 3591
+hl{m,16,0,3fff512c} 3592
+hl{m,756,0,3fff603c} 3593
+hl{f,3fff603c,0} 3594
+hl{f,3fff512c,0} 3595
+hl{m,16,0,3fff512c} 3596
+hl{m,756,0,3fff603c} 3597
+hl{f,3fff603c,0} 3598
+hl{f,3fff512c,0} 3599
+hl{m,16,0,3fff512c} 3600
+hl{m,756,0,3fff603c} 3601
+hl{f,3fff603c,0} 3602
+hl{f,3fff512c,0} 3603
+hl{m,16,0,3fff512c} 3604
+hl{f,3fff48bc,0} 3605
+hl{m,16,0,3fff48bc} 3606
+hl{f,3fff57ec,0} 3607
+hl{m,16,0,3fff57ec} 3608
+hl{f,3fff48d4,0} 3609
+hl{m,16,0,3fff48d4} 3610
+hl{f,3fff512c,0} 3611
+hl{m,16,0,3fff512c} 3612
+hl{m,756,0,3fff603c} 3613
+hl{f,3fff603c,0} 3614
+hl{f,3fff512c,0} 3615
+hl{m,16,0,3fff512c} 3616
+hl{m,756,0,3fff603c} 3617
+hl{f,3fff603c,0} 3618
+hl{f,3fff512c,0} 3619
+hl{m,16,0,3fff512c} 3620
+hl{m,756,0,3fff603c} 3621
+hl{f,3fff603c,0} 3622
+hl flush 3622 - remains 24928
+▒ 0: 1:50 Dormitor H:47.00(46.8) T:20.30(20.2 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 3623
+hl{m,16,0,3fff512c} 3624
+hl{m,756,0,3fff603c} 3625
+hl{f,3fff603c,0} 3626
+hl{f,3fff512c,0} 3627
+hl{m,16,0,3fff512c} 3628
+hl{m,756,0,3fff603c} 3629
+hl{f,3fff603c,0} 3630
+hl{f,3fff48d4,0} 3631
+hl{m,16,0,3fff48d4} 3632
+hl{f,3fff512c,0} 3633
+hl{m,16,0,3fff512c} 3634
+hl{m,756,0,3fff603c} 3635
+hl{f,3fff603c,0} 3636
+hl{f,3fff512c,0} 3637
+hl{m,16,0,3fff512c} 3638
+hl{m,756,0,3fff603c} 3639
+hl{f,3fff603c,0} 3640
+hl{f,3fff512c,0} 3641
+hl{m,16,0,3fff512c} 3642
+hl{m,756,0,3fff603c} 3643
+hl{f,3fff603c,0} 3644
+hl{m,20,0,3fff4904} 3645
+hl{f,3fff5144,0} 3646
+hl{f,3fff512c,0} 3647
+hl{m,16,0,3fff512c} 3648
+hl{f,3fff512c,0} 3649
+hl{m,16,0,3fff512c} 3650
+hl{f,3fff57ec,0} 3651
+hl{m,16,0,3fff57ec} 3652
+hl{f,3fff48d4,0} 3653
+hl{m,16,0,3fff48d4} 3654
+hl flush 3654 - remains 24928
+▒
+hl{f,3fff512c,0} 3655
+hl{m,16,0,3fff512c} 3656
+hl{f,3fff512c,0} 3657
+hl{m,16,0,3fff512c} 3658
+hl{f,3fff512c,0} 3659
+hl{m,16,0,3fff512c} 3660
+hl{f,3fff512c,0} 3661
+hl{m,16,0,3fff512c} 3662
+hl{f,3fff512c,0} 3663
+hl{m,16,0,3fff512c} 3664
+hl{f,3fff48d4,0} 3665
+hl{m,16,0,3fff48d4} 3666
+hl{f,3fff512c,0} 3667
+hl{m,16,0,3fff512c} 3668
+hl{f,3fff512c,0} 3669
+hl{m,16,0,3fff512c} 3670
+hl{f,3fff512c,0} 3671
+hl{m,16,0,3fff512c} 3672
+hl{m,756,0,3fff603c} 3673
+hl{f,3fff603c,0} 3674
+hl{f,3fff512c,0} 3675
+hl{m,16,0,3fff512c} 3676
+hl{m,756,0,3fff603c} 3677
+hl{f,3fff603c,0} 3678
+hl{f,3fff512c,0} 3679
+hl{m,16,0,3fff512c} 3680
+hl{m,756,0,3fff603c} 3681
+hl{f,3fff603c,0} 3682
+hl{f,3fff57ec,0} 3683
+hl{m,16,0,3fff57ec} 3684
+hl{f,3fff48d4,0} 3685
+hl{m,16,0,3fff48d4} 3686
+hl flush 3686 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff512c,0} 3687
+hl{m,16,0,3fff512c} 3688
+hl{m,756,0,3fff603c} 3689
+hl{f,3fff603c,0} 3690
+hl{f,3fff512c,0} 3691
+hl{m,16,0,3fff512c} 3692
+hl{f,3fff512c,0} 3693
+hl{m,16,0,3fff512c} 3694
+hl{m,756,0,3fff603c} 3695
+hl{f,3fff603c,0} 3696
+hl{f,3fff512c,0} 3697
+hl{m,16,0,3fff512c} 3698
+hl{m,756,0,3fff603c} 3699
+hl{f,3fff603c,0} 3700
+hl{f,3fff512c,0} 3701
+hl{m,16,0,3fff512c} 3702
+hl{m,756,0,3fff603c} 3703
+hl{f,3fff603c,0} 3704
+hl{f,3fff48d4,0} 3705
+hl{m,16,0,3fff48d4} 3706
+hl{f,3fff512c,0} 3707
+hl{m,16,0,3fff512c} 3708
+hl{m,756,0,3fff603c} 3709
+hl{f,3fff603c,0} 3710
+hl{f,3fff512c,0} 3711
+hl{m,16,0,3fff512c} 3712
+hl{m,756,0,3fff603c} 3713
+hl{f,3fff603c,0} 3714
+hl{f,3fff512c,0} 3715
+hl{m,16,0,3fff512c} 3716
+hl{m,756,0,3fff603c} 3717
+hl{f,3fff603c,0} 3718
+hl flush 3718 - remains 24928
+▒
+hl{f,3fff512c,0} 3719
+hl{m,16,0,3fff512c} 3720
+hl{m,756,0,3fff603c} 3721
+hl{f,3fff603c,0} 3722
+hl{f,3fff512c,0} 3723
+hl{m,16,0,3fff512c} 3724
+hl{m,756,0,3fff603c} 3725
+hl{f,3fff603c,0} 3726
+hl{f,3fff57ec,0} 3727
+hl{m,16,0,3fff57ec} 3728
+hl{f,3fff48d4,0} 3729
+hl{m,16,0,3fff48d4} 3730
+hl{f,3fff512c,0} 3731
+hl{m,16,0,3fff512c} 3732
+hl{m,756,0,3fff603c} 3733
+hl{f,3fff603c,0} 3734
+hl{f,3fff512c,0} 3735
+hl{m,16,0,3fff512c} 3736
+hl{m,756,0,3fff603c} 3737
+hl{f,3fff603c,0} 3738
+hl{f,3fff512c,0} 3739
+hl{m,16,0,3fff512c} 3740
+hl{m,756,0,3fff603c} 3741
+hl{f,3fff603c,0} 3742
+hl{f,3fff512c,0} 3743
+hl{m,16,0,3fff512c} 3744
+hl{m,756,0,3fff603c} 3745
+hl{f,3fff603c,0} 3746
+hl{f,3fff512c,0} 3747
+hl{m,16,0,3fff512c} 3748
+hl{m,20,0,3fff5144} 3749
+hl{f,3fff48ec,0} 3750
+hl flush 3750 - remains 24144
+▒ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 3751
+hl{f,3fff603c,0} 3752
+hl{f,3fff48d4,0} 3753
+hl{m,16,0,3fff48d4} 3754
+hl{f,3fff512c,0} 3755
+hl{m,16,0,3fff512c} 3756
+hl{f,3fff512c,0} 3757
+hl{m,16,0,3fff512c} 3758
+hl{m,756,0,3fff603c} 3759
+hl{f,3fff603c,0} 3760
+hl{f,3fff512c,0} 3761
+hl{m,16,0,3fff512c} 3762
+hl{m,756,0,3fff603c} 3763
+hl{f,3fff603c,0} 3764
+hl{f,3fff512c,0} 3765
+hl{m,16,0,3fff512c} 3766
+hl{m,756,0,3fff603c} 3767
+hl{f,3fff603c,0} 3768
+hl{f,3fff512c,0} 3769
+hl{m,16,0,3fff512c} 3770
+hl{m,756,0,3fff603c} 3771
+hl{f,3fff603c,0} 3772
+hl{f,3fff57ec,0} 3773
+hl{m,16,0,3fff57ec} 3774
+hl{f,3fff48d4,0} 3775
+hl{m,16,0,3fff48d4} 3776
+hl{f,3fff512c,0} 3777
+hl{m,16,0,3fff512c} 3778
+hl{m,756,0,3fff603c} 3779
+hl{f,3fff603c,0} 3780
+hl{f,3fff512c,0} 3781
+hl{m,16,0,3fff512c} 3782
+hl flush 3782 - remains 24144
+FAIL CONNECT
+ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 3783
+hl{f,3fff603c,0} 3784
+hl{f,3fff512c,0} 3785
+hl{m,16,0,3fff512c} 3786
+hl{f,3fff512c,0} 3787
+hl{m,16,0,3fff512c} 3788
+hl{m,756,0,3fff603c} 3789
+hl{f,3fff603c,0} 3790
+hl{f,3fff512c,0} 3791
+hl{m,16,0,3fff512c} 3792
+hl{f,3fff51b4,0} 3793
+hl{f,3fff5894,0} 3794
+hl{m,12,0,3fff4d7c} 3795
+hl{m,12,0,3fff51b4} 3796
+hl{m,48,0,3fff5894} 3797
+hl{f,3fff491c,0} 3798
+hl{m,756,0,3fff603c} 3799
+hl{f,3fff603c,0} 3800
+hl{f,3fff48d4,0} 3801
+hl{m,16,0,3fff491c} 3802
+hl{f,3fff512c,0} 3803
+hl{m,16,0,3fff512c} 3804
+hl{m,756,0,3fff603c} 3805
+hl{f,3fff603c,0} 3806
+hl{f,3fff512c,0} 3807
+hl{m,16,0,3fff512c} 3808
+hl{m,756,0,3fff603c} 3809
+hl{f,3fff603c,0} 3810
+hl{f,3fff512c,0} 3811
+hl{m,16,0,3fff512c} 3812
+hl{f,3fff512c,0} 3813
+hl{m,16,0,3fff512c} 3814
+hl flush 3814 - remains 24144
+ 0: 1:55 Dormitor H:47.00(46.9) T:20.30(20.2 0.0)/25.2 SetPt:21.50 needHeat:1
+fHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+?
+hl{m,756,0,3fff603c} 3815
+hl{f,3fff603c,0} 3816
+hl{f,3fff512c,0} 3817
+hl{m,16,0,3fff512c} 3818
+hl{f,3fff48bc,0} 3819
+hl{m,16,0,3fff48bc} 3820
+hl{f,3fff57ec,0} 3821
+hl{m,16,0,3fff57ec} 3822
+hl{f,3fff491c,0} 3823
+hl{m,16,0,3fff491c} 3824
+hl{f,3fff512c,0} 3825
+hl{m,16,0,3fff512c} 3826
+hl{f,3fff512c,0} 3827
+hl{m,16,0,3fff512c} 3828
+hl{m,756,0,3fff603c} 3829
+hl{f,3fff603c,0} 3830
+hl{f,3fff512c,0} 3831
+hl{m,16,0,3fff512c} 3832
+hl{f,3fff512c,0} 3833
+hl{m,16,0,3fff512c} 3834
+hl{m,756,0,3fff603c} 3835
+hl{f,3fff603c,0} 3836
+hl{f,3fff512c,0} 3837
+hl{m,16,0,3fff512c} 3838
+hl{m,20,0,3fff48d4} 3839
+hl{f,3fff48d4,0} 3840
+hl{m,20,0,3fff48d4} 3841
+hl{f,3fff4904,0} 3842
+hl{f,3fff491c,0} 3843
+hl{m,16,0,3fff48ec} 3844
+hl{f,3fff512c,0} 3845
+hl{m,16,0,3fff512c} 3846
+hl flush 3846 - remains 24928
+▒
+hl{f,3fff512c,0} 3847
+hl{m,16,0,3fff512c} 3848
+hl{f,3fff512c,0} 3849
+hl{m,16,0,3fff512c} 3850
+hl{f,3fff512c,0} 3851
+hl{m,16,0,3fff512c} 3852
+hl{f,3fff512c,0} 3853
+hl{m,16,0,3fff512c} 3854
+hl{f,3fff57ec,0} 3855
+hl{m,16,0,3fff57ec} 3856
+hl{f,3fff48ec,0} 3857
+hl{m,16,0,3fff48ec} 3858
+hl{f,3fff512c,0} 3859
+hl{m,16,0,3fff512c} 3860
+hl{f,3fff512c,0} 3861
+hl{m,16,0,3fff512c} 3862
+hl{f,3fff512c,0} 3863
+hl{m,16,0,3fff512c} 3864
+hl{f,3fff512c,0} 3865
+hl{m,16,0,3fff512c} 3866
+hl{m,20,0,3fff4904} 3867
+hl{m,20,0,3fff491c} 3868
+hl{f,3fff4904,0} 3869
+hl{f,3fff491c,0} 3870
+hl{f,3fff512c,0} 3871
+hl{m,16,0,3fff512c} 3872
+hl{m,756,0,3fff603c} 3873
+hl{f,3fff603c,0} 3874
+hl{f,3fff48ec,0} 3875
+hl{m,16,0,3fff48ec} 3876
+hl{f,3fff512c,0} 3877
+hl{m,16,0,3fff512c} 3878
+hl flush 3878 - remains 24144
+ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 3879
+hl{f,3fff603c,0} 3880
+hl{f,3fff512c,0} 3881
+hl{m,16,0,3fff512c} 3882
+hl{f,3fff512c,0} 3883
+hl{m,16,0,3fff512c} 3884
+hl{m,756,0,3fff603c} 3885
+hl{f,3fff603c,0} 3886
+hl{f,3fff512c,0} 3887
+hl{m,16,0,3fff512c} 3888
+hl{m,756,0,3fff603c} 3889
+hl{f,3fff603c,0} 3890
+hl{f,3fff512c,0} 3891
+hl{m,16,0,3fff512c} 3892
+hl{m,756,0,3fff603c} 3893
+hl{f,3fff603c,0} 3894
+hl{f,3fff57ec,0} 3895
+hl{m,16,0,3fff57ec} 3896
+hl{f,3fff48ec,0} 3897
+hl{m,16,0,3fff48ec} 3898
+hl{f,3fff512c,0} 3899
+hl{m,16,0,3fff512c} 3900
+hl{m,756,0,3fff603c} 3901
+hl{f,3fff603c,0} 3902
+hl{f,3fff512c,0} 3903
+hl{m,16,0,3fff512c} 3904
+hl{m,756,0,3fff603c} 3905
+hl{f,3fff603c,0} 3906
+hl{f,3fff512c,0} 3907
+hl{m,16,0,3fff512c} 3908
+hl{m,756,0,3fff603c} 3909
+hl{f,3fff603c,0} 3910
+hl flush 3910 - remains 24928
+▒
+hl{f,3fff512c,0} 3911
+hl{m,16,0,3fff512c} 3912
+hl{m,756,0,3fff603c} 3913
+hl{f,3fff603c,0} 3914
+hl{f,3fff512c,0} 3915
+hl{m,16,0,3fff512c} 3916
+hl{m,756,0,3fff603c} 3917
+hl{f,3fff603c,0} 3918
+hl{f,3fff48ec,0} 3919
+hl{m,16,0,3fff48ec} 3920
+hl{f,3fff512c,0} 3921
+hl{m,16,0,3fff512c} 3922
+hl{m,756,0,3fff603c} 3923
+hl{f,3fff603c,0} 3924
+hl{f,3fff512c,0} 3925
+hl{m,16,0,3fff512c} 3926
+hl{m,756,0,3fff603c} 3927
+hl{f,3fff603c,0} 3928
+hl{f,3fff512c,0} 3929
+hl{m,16,0,3fff512c} 3930
+hl{m,756,0,3fff603c} 3931
+hl{f,3fff603c,0} 3932
+hl{f,3fff512c,0} 3933
+hl{m,16,0,3fff512c} 3934
+hl{m,756,0,3fff603c} 3935
+hl{f,3fff603c,0} 3936
+hl{f,3fff512c,0} 3937
+hl{m,16,0,3fff512c} 3938
+hl{m,756,0,3fff603c} 3939
+hl{f,3fff603c,0} 3940
+hl{f,3fff57ec,0} 3941
+hl{m,16,0,3fff57ec} 3942
+hl flush 3942 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff48ec,0} 3943
+hl{m,16,0,3fff48ec} 3944
+hl{f,3fff512c,0} 3945
+hl{m,16,0,3fff512c} 3946
+hl{m,756,0,3fff603c} 3947
+hl{f,3fff603c,0} 3948
+hl{f,3fff512c,0} 3949
+hl{m,16,0,3fff512c} 3950
+hl{m,20,0,3fff4904} 3951
+hl{f,3fff5144,0} 3952
+hl{f,3fff512c,0} 3953
+hl{m,16,0,3fff491c} 3954
+hl{m,756,0,3fff603c} 3955
+hl{f,3fff603c,0} 3956
+hl{f,3fff491c,0} 3957
+hl{m,16,0,3fff491c} 3958
+hl{f,3fff491c,0} 3959
+hl{m,16,0,3fff491c} 3960
+hl{m,756,0,3fff603c} 3961
+hl{f,3fff603c,0} 3962
+hl{f,3fff48ec,0} 3963
+hl{m,16,0,3fff48ec} 3964
+hl{f,3fff491c,0} 3965
+hl{m,16,0,3fff491c} 3966
+hl{m,756,0,3fff603c} 3967
+hl{f,3fff603c,0} 3968
+hl{f,3fff491c,0} 3969
+hl{m,16,0,3fff491c} 3970
+hl{m,756,0,3fff603c} 3971
+hl{f,3fff603c,0} 3972
+hl{f,3fff491c,0} 3973
+hl{m,16,0,3fff491c} 3974
+hl flush 3974 - remains 24144
+▒ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 3975
+hl{f,3fff603c,0} 3976
+hl{f,3fff491c,0} 3977
+hl{m,16,0,3fff491c} 3978
+hl{f,3fff491c,0} 3979
+hl{m,16,0,3fff491c} 3980
+hl{m,756,0,3fff603c} 3981
+hl{f,3fff603c,0} 3982
+hl{f,3fff57ec,0} 3983
+hl{m,16,0,3fff57ec} 3984
+hl{f,3fff48ec,0} 3985
+hl{m,16,0,3fff48ec} 3986
+hl{f,3fff491c,0} 3987
+hl{m,16,0,3fff491c} 3988
+hl{m,756,0,3fff603c} 3989
+hl{f,3fff603c,0} 3990
+hl{f,3fff491c,0} 3991
+hl{m,16,0,3fff491c} 3992
+hl{m,756,0,3fff603c} 3993
+hl{f,3fff603c,0} 3994
+hl{f,3fff491c,0} 3995
+hl{m,16,0,3fff491c} 3996
+hl{m,756,0,3fff603c} 3997
+hl{f,3fff603c,0} 3998
+hl{f,3fff491c,0} 3999
+hl{m,16,0,3fff491c} 4000
+hl{m,756,0,3fff603c} 4001
+hl{f,3fff603c,0} 4002
+hl{f,3fff491c,0} 4003
+hl{m,16,0,3fff491c} 4004
+hl{m,756,0,3fff603c} 4005
+hl{f,3fff603c,0} 4006
+hl flush 4006 - remains 24928
+▒
+hl{f,3fff48ec,0} 4007
+hl{m,16,0,3fff48ec} 4008
+hl{f,3fff491c,0} 4009
+hl{m,16,0,3fff491c} 4010
+hl{m,756,0,3fff603c} 4011
+hl{f,3fff603c,0} 4012
+hl{f,3fff491c,0} 4013
+hl{m,16,0,3fff491c} 4014
+hl{m,756,0,3fff603c} 4015
+hl{f,3fff603c,0} 4016
+hl{f,3fff491c,0} 4017
+hl{m,16,0,3fff491c} 4018
+hl{m,756,0,3fff603c} 4019
+hl{f,3fff603c,0} 4020
+hl{f,3fff491c,0} 4021
+hl{m,16,0,3fff491c} 4022
+hl{m,756,0,3fff603c} 4023
+hl{f,3fff603c,0} 4024
+hl{f,3fff491c,0} 4025
+hl{m,16,0,3fff491c} 4026
+hl{f,3fff48bc,0} 4027
+hl{m,16,0,3fff48bc} 4028
+hl{f,3fff57ec,0} 4029
+hl{m,16,0,3fff57ec} 4030
+hl{f,3fff48ec,0} 4031
+hl{m,16,0,3fff48ec} 4032
+hl{f,3fff491c,0} 4033
+hl{m,16,0,3fff491c} 4034
+hl{m,756,0,3fff603c} 4035
+hl{f,3fff603c,0} 4036
+hl{f,3fff491c,0} 4037
+hl{m,16,0,3fff491c} 4038
+hl flush 4038 - remains 24144
+ 0: 2: 0 Dormitor H:47.00(46.9) T:20.30(20.2 0.0)/25.2 SetPt:21.50 needHeat:1
+fHEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 4039
+hl{f,3fff603c,0} 4040
+hl{m,20,0,3fff512c} 4041
+hl{f,3fff48d4,0} 4042
+hl{f,3fff491c,0} 4043
+hl{m,16,0,3fff491c} 4044
+hl{f,3fff491c,0} 4045
+hl{m,16,0,3fff491c} 4046
+hl{f,3fff491c,0} 4047
+hl{m,16,0,3fff491c} 4048
+hl{f,3fff48ec,0} 4049
+hl{m,16,0,3fff5144} 4050
+hl{f,3fff491c,0} 4051
+hl{m,16,0,3fff491c} 4052
+hl{f,3fff491c,0} 4053
+hl{m,16,0,3fff491c} 4054
+hl{f,3fff491c,0} 4055
+hl{m,16,0,3fff491c} 4056
+hl{f,3fff491c,0} 4057
+hl{m,16,0,3fff491c} 4058
+hl{f,3fff491c,0} 4059
+hl{m,16,0,3fff491c} 4060
+hl{f,3fff57ec,0} 4061
+hl{m,16,0,3fff57ec} 4062
+hl{f,3fff5144,0} 4063
+hl{m,16,0,3fff5144} 4064
+hl{f,3fff491c,0} 4065
+hl{m,16,0,3fff491c} 4066
+hl{f,3fff491c,0} 4067
+hl{m,16,0,3fff491c} 4068
+hl{f,3fff491c,0} 4069
+hl{m,16,0,3fff491c} 4070
+hl flush 4070 - remains 24144
+ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 4071
+hl{f,3fff603c,0} 4072
+hl{f,3fff491c,0} 4073
+hl{m,16,0,3fff491c} 4074
+hl{f,3fff491c,0} 4075
+hl{m,16,0,3fff491c} 4076
+hl{m,756,0,3fff603c} 4077
+hl{f,3fff603c,0} 4078
+hl{f,3fff5144,0} 4079
+hl{m,16,0,3fff5144} 4080
+hl{f,3fff491c,0} 4081
+hl{m,16,0,3fff491c} 4082
+hl{f,3fff491c,0} 4083
+hl{m,16,0,3fff491c} 4084
+hl{m,756,0,3fff603c} 4085
+hl{f,3fff603c,0} 4086
+hl{f,3fff491c,0} 4087
+hl{m,16,0,3fff491c} 4088
+hl{m,756,0,3fff603c} 4089
+hl{f,3fff603c,0} 4090
+hl{f,3fff491c,0} 4091
+hl{m,16,0,3fff491c} 4092
+hl{f,3fff491c,0} 4093
+hl{m,16,0,3fff491c} 4094
+hl{m,756,0,3fff603c} 4095
+hl{f,3fff603c,0} 4096
+hl{f,3fff57ec,0} 4097
+hl{m,16,0,3fff57ec} 4098
+hl{f,3fff5144,0} 4099
+hl{m,16,0,3fff5144} 4100
+hl{f,3fff491c,0} 4101
+hl{m,16,0,3fff491c} 4102
+hl flush 4102 - remains 24144
+▒
+hl{m,756,0,3fff603c} 4103
+hl{f,3fff603c,0} 4104
+hl{f,3fff491c,0} 4105
+hl{m,16,0,3fff491c} 4106
+hl{f,3fff491c,0} 4107
+hl{m,16,0,3fff491c} 4108
+hl{m,756,0,3fff603c} 4109
+hl{f,3fff603c,0} 4110
+hl{f,3fff491c,0} 4111
+hl{m,16,0,3fff491c} 4112
+hl{m,756,0,3fff603c} 4113
+hl{f,3fff603c,0} 4114
+hl{f,3fff491c,0} 4115
+hl{m,16,0,3fff491c} 4116
+hl{m,756,0,3fff603c} 4117
+hl{f,3fff603c,0} 4118
+hl{f,3fff5144,0} 4119
+hl{m,16,0,3fff5144} 4120
+hl{f,3fff491c,0} 4121
+hl{m,16,0,3fff491c} 4122
+hl{m,756,0,3fff603c} 4123
+hl{f,3fff603c,0} 4124
+hl{f,3fff491c,0} 4125
+hl{m,16,0,3fff491c} 4126
+hl{m,756,0,3fff603c} 4127
+hl{f,3fff603c,0} 4128
+hl{f,3fff491c,0} 4129
+hl{m,16,0,3fff491c} 4130
+hl{m,756,0,3fff603c} 4131
+hl{f,3fff603c,0} 4132
+hl{f,3fff491c,0} 4133
+hl{m,16,0,3fff491c} 4134
+hl flush 4134 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff491c,0} 4135
+hl{m,16,0,3fff491c} 4136
+hl{m,20,0,3fff48d4} 4137
+hl{f,3fff4904,0} 4138
+hl{m,756,0,3fff603c} 4139
+hl{f,3fff603c,0} 4140
+hl{f,3fff57ec,0} 4141
+hl{m,16,0,3fff57ec} 4142
+hl{f,3fff5144,0} 4143
+hl{m,16,0,3fff5144} 4144
+hl{f,3fff491c,0} 4145
+hl{m,16,0,3fff48ec} 4146
+hl{m,756,0,3fff603c} 4147
+hl{f,3fff603c,0} 4148
+hl{f,3fff48ec,0} 4149
+hl{m,16,0,3fff48ec} 4150
+hl{m,756,0,3fff603c} 4151
+hl{f,3fff603c,0} 4152
+hl{f,3fff48ec,0} 4153
+hl{m,16,0,3fff48ec} 4154
+hl{m,756,0,3fff603c} 4155
+hl{f,3fff603c,0} 4156
+hl{f,3fff48ec,0} 4157
+hl{m,16,0,3fff48ec} 4158
+hl{m,756,0,3fff603c} 4159
+hl{f,3fff603c,0} 4160
+hl{f,3fff48ec,0} 4161
+hl{m,16,0,3fff48ec} 4162
+hl{m,756,0,3fff603c} 4163
+hl{f,3fff603c,0} 4164
+hl{f,3fff5144,0} 4165
+hl{m,16,0,3fff5144} 4166
+hl flush 4166 - remains 24928
+▒ASYNC RX (0):
+▒FAIL CONNECT
+
+hl{f,3fff48ec,0} 4167
+hl{m,16,0,3fff48ec} 4168
+hl{m,756,0,3fff603c} 4169
+hl{f,3fff603c,0} 4170
+hl{f,3fff48ec,0} 4171
+hl{m,16,0,3fff48ec} 4172
+hl{m,756,0,3fff603c} 4173
+hl{f,3fff603c,0} 4174
+hl{f,3fff48ec,0} 4175
+hl{m,16,0,3fff48ec} 4176
+hl{m,756,0,3fff603c} 4177
+hl{f,3fff603c,0} 4178
+hl{f,3fff48ec,0} 4179
+hl{m,16,0,3fff48ec} 4180
+hl{m,756,0,3fff603c} 4181
+hl{f,3fff603c,0} 4182
+hl{f,3fff48ec,0} 4183
+hl{m,16,0,3fff48ec} 4184
+hl{m,756,0,3fff603c} 4185
+hl{f,3fff603c,0} 4186
+hl{f,3fff57ec,0} 4187
+hl{m,16,0,3fff57ec} 4188
+hl{f,3fff5144,0} 4189
+hl{m,16,0,3fff5144} 4190
+hl{f,3fff48ec,0} 4191
+hl{m,16,0,3fff48ec} 4192
+hl{f,3fff4d7c,0} 4193
+hl{f,3fff5894,0} 4194
+hl{m,12,0,3fff4d7c} 4195
+hl{m,12,0,3fff4904} 4196
+hl{m,48,0,3fff5894} 4197
+hl{f,3fff51b4,0} 4198
+hl flush 4198 - remains 24144
+S
+hl{m,756,0,3fff603c} 4199
+hl{f,3fff603c,0} 4200
+hl{f,3fff48ec,0} 4201
+hl{m,16,0,3fff48ec} 4202
+hl{f,3fff48ec,0} 4203
+hl{m,16,0,3fff48ec} 4204
+hl{m,756,0,3fff603c} 4205
+hl{f,3fff603c,0} 4206
+hl{f,3fff48ec,0} 4207
+hl{m,16,0,3fff48ec} 4208
+hl{m,756,0,3fff603c} 4209
+hl{f,3fff603c,0} 4210
+hl{f,3fff48ec,0} 4211
+hl{m,16,0,3fff48ec} 4212
+hl{m,756,0,3fff603c} 4213
+hl{f,3fff603c,0} 4214
+hl{f,3fff5144,0} 4215
+hl{m,16,0,3fff51b4} 4216
+hl{f,3fff48ec,0} 4217
+hl{m,16,0,3fff48ec} 4218
+hl{m,756,0,3fff603c} 4219
+hl{f,3fff603c,0} 4220
+hl{f,3fff48ec,0} 4221
+hl{m,16,0,3fff48ec} 4222
+hl{f,3fff48ec,0} 4223
+hl{m,16,0,3fff48ec} 4224
+hl{m,756,0,3fff603c} 4225
+hl{f,3fff603c,0} 4226
+hl{f,3fff48ec,0} 4227
+hl{m,16,0,3fff48ec} 4228
+hl{m,756,0,3fff603c} 4229
+hl{f,3fff603c,0} 4230
+hl flush 4230 - remains 24928
+ 0: 2: 5 Dormitor H:47.00(46.9) T:20.30(20.2 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{f,3fff48ec,0} 4231
+hl{m,16,0,3fff48ec} 4232
+hl{m,756,0,3fff603c} 4233
+hl{f,3fff603c,0} 4234
+hl{m,20,0,3fff5144} 4235
+hl{f,3fff512c,0} 4236
+hl{f,3fff48bc,0} 4237
+hl{m,16,0,3fff48bc} 4238
+hl{f,3fff57ec,0} 4239
+hl{m,16,0,3fff57ec} 4240
+hl{f,3fff51b4,0} 4241
+hl{m,16,0,3fff51b4} 4242
+hl{f,3fff48ec,0} 4243
+hl{m,16,0,3fff48ec} 4244
+hl{f,3fff48ec,0} 4245
+hl{m,16,0,3fff48ec} 4246
+hl{f,3fff48ec,0} 4247
+hl{m,16,0,3fff48ec} 4248
+hl{f,3fff48ec,0} 4249
+hl{m,16,0,3fff48ec} 4250
+hl{f,3fff48ec,0} 4251
+hl{m,16,0,3fff48ec} 4252
+hl{f,3fff51b4,0} 4253
+hl{m,16,0,3fff51b4} 4254
+hl{f,3fff48ec,0} 4255
+hl{m,16,0,3fff48ec} 4256
+hl{f,3fff48ec,0} 4257
+hl{m,16,0,3fff48ec} 4258
+hl{f,3fff48ec,0} 4259
+hl{m,16,0,3fff48ec} 4260
+hl{f,3fff48ec,0} 4261
+hl{m,16,0,3fff48ec} 4262
+hl flush 4262 - remains 24928
+▒
+hl{f,3fff48ec,0} 4263
+hl{m,16,0,3fff48ec} 4264
+hl{m,756,0,3fff603c} 4265
+hl{f,3fff603c,0} 4266
+hl{f,3fff57ec,0} 4267
+hl{m,16,0,3fff57ec} 4268
+hl{f,3fff51b4,0} 4269
+hl{m,16,0,3fff51b4} 4270
+hl{f,3fff48ec,0} 4271
+hl{m,16,0,3fff48ec} 4272
+hl{m,756,0,3fff603c} 4273
+hl{f,3fff603c,0} 4274
+hl{f,3fff48ec,0} 4275
+hl{m,16,0,3fff48ec} 4276
+hl{m,756,0,3fff603c} 4277
+hl{f,3fff603c,0} 4278
+hl{f,3fff48ec,0} 4279
+hl{m,16,0,3fff48ec} 4280
+hl{m,756,0,3fff603c} 4281
+hl{f,3fff603c,0} 4282
+hl{f,3fff48ec,0} 4283
+hl{m,16,0,3fff48ec} 4284
+hl{m,756,0,3fff603c} 4285
+hl{f,3fff603c,0} 4286
+hl{f,3fff48ec,0} 4287
+hl{m,16,0,3fff48ec} 4288
+hl{m,756,0,3fff603c} 4289
+hl{f,3fff603c,0} 4290
+hl{f,3fff51b4,0} 4291
+hl{m,16,0,3fff51b4} 4292
+hl{f,3fff48ec,0} 4293
+hl{m,16,0,3fff48ec} 4294
+hl flush 4294 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff48ec,0} 4295
+hl{m,16,0,3fff48ec} 4296
+hl{m,756,0,3fff603c} 4297
+hl{f,3fff603c,0} 4298
+hl{f,3fff48ec,0} 4299
+hl{m,16,0,3fff48ec} 4300
+hl{m,756,0,3fff603c} 4301
+hl{f,3fff603c,0} 4302
+hl{f,3fff48ec,0} 4303
+hl{m,16,0,3fff48ec} 4304
+hl{m,756,0,3fff603c} 4305
+hl{f,3fff603c,0} 4306
+hl{f,3fff48ec,0} 4307
+hl{m,16,0,3fff48ec} 4308
+hl{m,756,0,3fff603c} 4309
+hl{f,3fff603c,0} 4310
+hl{f,3fff57ec,0} 4311
+hl{m,16,0,3fff57ec} 4312
+hl{f,3fff51b4,0} 4313
+hl{m,16,0,3fff51b4} 4314
+hl{f,3fff48ec,0} 4315
+hl{m,16,0,3fff48ec} 4316
+hl{m,756,0,3fff603c} 4317
+hl{f,3fff603c,0} 4318
+hl{f,3fff48ec,0} 4319
+hl{m,16,0,3fff48ec} 4320
+hl{m,756,0,3fff603c} 4321
+hl{f,3fff603c,0} 4322
+hl{f,3fff48ec,0} 4323
+hl{m,16,0,3fff48ec} 4324
+hl{m,756,0,3fff603c} 4325
+hl{f,3fff603c,0} 4326
+hl flush 4326 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff48ec,0} 4327
+hl{m,16,0,3fff48ec} 4328
+hl{m,756,0,3fff603c} 4329
+hl{f,3fff603c,0} 4330
+hl{f,3fff48ec,0} 4331
+hl{m,16,0,3fff48ec} 4332
+hl{m,756,0,3fff603c} 4333
+hl{f,3fff603c,0} 4334
+hl{f,3fff51b4,0} 4335
+hl{m,16,0,3fff51b4} 4336
+hl{f,3fff48ec,0} 4337
+hl{m,16,0,3fff48ec} 4338
+hl{m,756,0,3fff603c} 4339
+hl{f,3fff603c,0} 4340
+hl{f,3fff48ec,0} 4341
+hl{m,16,0,3fff48ec} 4342
+hl{m,756,0,3fff603c} 4343
+hl{f,3fff603c,0} 4344
+hl{m,20,0,3fff512c} 4345
+hl{f,3fff48d4,0} 4346
+hl{f,3fff48ec,0} 4347
+hl{m,16,0,3fff4914} 4348
+hl{m,756,0,3fff603c} 4349
+hl{f,3fff603c,0} 4350
+hl{f,3fff4914,0} 4351
+hl{m,16,0,3fff4914} 4352
+hl{f,3fff4914,0} 4353
+hl{m,16,0,3fff4914} 4354
+hl{m,756,0,3fff603c} 4355
+hl{f,3fff603c,0} 4356
+hl{f,3fff57ec,0} 4357
+hl{m,16,0,3fff57ec} 4358
+hl flush 4358 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff51b4,0} 4359
+hl{m,16,0,3fff51b4} 4360
+hl{f,3fff4914,0} 4361
+hl{m,16,0,3fff4914} 4362
+hl{m,756,0,3fff603c} 4363
+hl{f,3fff603c,0} 4364
+hl{f,3fff4914,0} 4365
+hl{m,16,0,3fff4914} 4366
+hl{m,756,0,3fff603c} 4367
+hl{f,3fff603c,0} 4368
+hl{f,3fff4914,0} 4369
+hl{m,16,0,3fff4914} 4370
+hl{f,3fff4914,0} 4371
+hl{m,16,0,3fff4914} 4372
+hl{m,756,0,3fff603c} 4373
+hl{f,3fff603c,0} 4374
+hl{f,3fff4914,0} 4375
+hl{m,16,0,3fff4914} 4376
+hl{m,756,0,3fff603c} 4377
+hl{f,3fff603c,0} 4378
+hl{f,3fff51b4,0} 4379
+hl{m,16,0,3fff51b4} 4380
+hl{f,3fff4914,0} 4381
+hl{m,16,0,3fff4914} 4382
+hl{m,756,0,3fff603c} 4383
+hl{f,3fff603c,0} 4384
+hl{f,3fff4914,0} 4385
+hl{m,16,0,3fff4914} 4386
+hl{m,756,0,3fff603c} 4387
+hl{f,3fff603c,0} 4388
+hl{f,3fff4914,0} 4389
+hl{m,16,0,3fff4914} 4390
+hl flush 4390 - remains 24144
+▒
+hl{m,756,0,3fff603c} 4391
+hl{f,3fff603c,0} 4392
+hl{f,3fff4914,0} 4393
+hl{m,16,0,3fff4914} 4394
+hl{f,3fff4914,0} 4395
+hl{m,16,0,3fff4914} 4396
+hl{m,756,0,3fff603c} 4397
+hl{f,3fff603c,0} 4398
+hl{f,3fff57ec,0} 4399
+hl{m,16,0,3fff57ec} 4400
+hl{f,3fff51b4,0} 4401
+hl{m,16,0,3fff51b4} 4402
+hl{f,3fff4914,0} 4403
+hl{m,16,0,3fff4914} 4404
+hl{m,756,0,3fff603c} 4405
+hl{f,3fff603c,0} 4406
+hl{f,3fff4914,0} 4407
+hl{m,16,0,3fff4914} 4408
+hl{f,3fff4914,0} 4409
+hl{m,16,0,3fff4914} 4410
+hl{m,756,0,3fff603c} 4411
+hl{f,3fff603c,0} 4412
+hl{f,3fff4914,0} 4413
+hl{m,16,0,3fff4914} 4414
+hl{m,756,0,3fff603c} 4415
+hl{f,3fff603c,0} 4416
+hl{f,3fff4914,0} 4417
+hl{m,16,0,3fff4914} 4418
+hl{m,756,0,3fff603c} 4419
+hl{f,3fff603c,0} 4420
+hl{f,3fff51b4,0} 4421
+hl{m,16,0,3fff51b4} 4422
+hl flush 4422 - remains 24928
+ 0: 2: 9 Dormitor H:47.00(46.9) T:20.30(20.2 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{f,3fff4914,0} 4423
+hl{m,16,0,3fff4914} 4424
+hl{m,756,0,3fff603c} 4425
+hl{f,3fff603c,0} 4426
+hl{f,3fff4914,0} 4427
+hl{m,16,0,3fff4914} 4428
+hl{m,756,0,3fff603c} 4429
+hl{f,3fff603c,0} 4430
+hl{f,3fff4914,0} 4431
+hl{m,16,0,3fff4914} 4432
+hl{m,20,0,3fff48d4} 4433
+hl{f,3fff5144,0} 4434
+hl{f,3fff4914,0} 4435
+hl{m,16,0,3fff48ec} 4436
+hl{f,3fff48ec,0} 4437
+hl{m,16,0,3fff48ec} 4438
+hl{f,3fff48bc,0} 4439
+hl{m,16,0,3fff48bc} 4440
+hl{f,3fff57ec,0} 4441
+hl{m,16,0,3fff57ec} 4442
+hl{f,3fff51b4,0} 4443
+hl{m,16,0,3fff51b4} 4444
+hl{f,3fff48ec,0} 4445
+hl{m,16,0,3fff48ec} 4446
+hl{f,3fff48ec,0} 4447
+hl{m,16,0,3fff48ec} 4448
+hl{f,3fff48ec,0} 4449
+hl{m,16,0,3fff48ec} 4450
+hl{f,3fff48ec,0} 4451
+hl{m,16,0,3fff48ec} 4452
+hl{f,3fff48ec,0} 4453
+hl{m,16,0,3fff48ec} 4454
+hl flush 4454 - remains 24928
+▒
+hl{f,3fff51b4,0} 4455
+hl{m,16,0,3fff51b4} 4456
+hl{f,3fff48ec,0} 4457
+hl{m,16,0,3fff48ec} 4458
+hl{f,3fff48ec,0} 4459
+hl{m,16,0,3fff48ec} 4460
+hl{f,3fff48ec,0} 4461
+hl{m,16,0,3fff48ec} 4462
+hl{m,756,0,3fff603c} 4463
+hl{f,3fff603c,0} 4464
+hl{f,3fff48ec,0} 4465
+hl{m,16,0,3fff48ec} 4466
+hl{m,756,0,3fff603c} 4467
+hl{f,3fff603c,0} 4468
+hl{f,3fff48ec,0} 4469
+hl{m,16,0,3fff48ec} 4470
+hl{m,756,0,3fff603c} 4471
+hl{f,3fff603c,0} 4472
+hl{f,3fff57ec,0} 4473
+hl{m,16,0,3fff57ec} 4474
+hl{f,3fff51b4,0} 4475
+hl{m,16,0,3fff51b4} 4476
+hl{f,3fff48ec,0} 4477
+hl{m,16,0,3fff48ec} 4478
+hl{m,756,0,3fff603c} 4479
+hl{f,3fff603c,0} 4480
+hl{f,3fff48ec,0} 4481
+hl{m,16,0,3fff48ec} 4482
+hl{f,3fff48ec,0} 4483
+hl{m,16,0,3fff48ec} 4484
+hl{m,756,0,3fff603c} 4485
+hl{f,3fff603c,0} 4486
+hl flush 4486 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff48ec,0} 4487
+hl{m,16,0,3fff48ec} 4488
+hl{m,756,0,3fff603c} 4489
+hl{f,3fff603c,0} 4490
+hl{f,3fff48ec,0} 4491
+hl{m,16,0,3fff48ec} 4492
+hl{f,3fff51b4,0} 4493
+hl{m,16,0,3fff51b4} 4494
+hl{f,3fff48ec,0} 4495
+hl{m,16,0,3fff48ec} 4496
+hl{m,756,0,3fff603c} 4497
+hl{f,3fff603c,0} 4498
+hl{f,3fff48ec,0} 4499
+hl{m,16,0,3fff48ec} 4500
+hl{m,756,0,3fff603c} 4501
+hl{f,3fff603c,0} 4502
+hl{f,3fff48ec,0} 4503
+hl{m,16,0,3fff48ec} 4504
+hl{m,756,0,3fff603c} 4505
+hl{f,3fff603c,0} 4506
+hl{f,3fff48ec,0} 4507
+hl{m,16,0,3fff48ec} 4508
+hl{m,756,0,3fff603c} 4509
+hl{f,3fff603c,0} 4510
+hl{f,3fff48ec,0} 4511
+hl{m,16,0,3fff48ec} 4512
+hl{m,756,0,3fff603c} 4513
+hl{f,3fff603c,0} 4514
+hl{f,3fff57ec,0} 4515
+hl{m,16,0,3fff57ec} 4516
+hl{f,3fff51b4,0} 4517
+hl{m,16,0,3fff51b4} 4518
+hl flush 4518 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff48ec,0} 4519
+hl{m,16,0,3fff48ec} 4520
+hl{m,756,0,3fff603c} 4521
+hl{f,3fff603c,0} 4522
+hl{f,3fff48ec,0} 4523
+hl{m,16,0,3fff48ec} 4524
+hl{m,756,0,3fff603c} 4525
+hl{f,3fff603c,0} 4526
+hl{f,3fff48ec,0} 4527
+hl{m,16,0,3fff48ec} 4528
+hl{m,756,0,3fff603c} 4529
+hl{f,3fff603c,0} 4530
+hl{f,3fff48ec,0} 4531
+hl{m,16,0,3fff48ec} 4532
+hl{m,756,0,3fff603c} 4533
+hl{f,3fff603c,0} 4534
+hl{f,3fff48ec,0} 4535
+hl{m,16,0,3fff48ec} 4536
+hl{m,756,0,3fff603c} 4537
+hl{f,3fff603c,0} 4538
+hl{f,3fff51b4,0} 4539
+hl{m,16,0,3fff51b4} 4540
+hl{f,3fff48ec,0} 4541
+hl{m,16,0,3fff48ec} 4542
+hl{m,756,0,3fff603c} 4543
+hl{f,3fff603c,0} 4544
+hl{m,20,0,3fff4914} 4545
+hl{f,3fff512c,0} 4546
+hl{f,3fff48ec,0} 4547
+hl{m,16,0,3fff48ec} 4548
+hl{m,756,0,3fff603c} 4549
+hl{f,3fff603c,0} 4550
+hl flush 4550 - remains 24928
+▒
+hl{f,3fff48ec,0} 4551
+hl{m,16,0,3fff48ec} 4552
+hl{m,756,0,3fff603c} 4553
+hl{f,3fff603c,0} 4554
+hl{f,3fff48ec,0} 4555
+hl{m,16,0,3fff48ec} 4556
+hl{m,756,0,3fff603c} 4557
+hl{f,3fff603c,0} 4558
+hl{f,3fff48ec,0} 4559
+hl{m,16,0,3fff48ec} 4560
+hl{m,756,0,3fff603c} 4561
+hl{f,3fff603c,0} 4562
+hl{f,3fff57ec,0} 4563
+hl{m,16,0,3fff57ec} 4564
+hl{f,3fff51b4,0} 4565
+hl{m,16,0,3fff51b4} 4566
+hl{f,3fff48ec,0} 4567
+hl{m,16,0,3fff48ec} 4568
+hl{m,756,0,3fff603c} 4569
+hl{f,3fff603c,0} 4570
+hl{f,3fff48ec,0} 4571
+hl{m,16,0,3fff48ec} 4572
+hl{m,756,0,3fff603c} 4573
+hl{f,3fff603c,0} 4574
+hl{f,3fff48ec,0} 4575
+hl{m,16,0,3fff48ec} 4576
+hl{m,756,0,3fff603c} 4577
+hl{f,3fff603c,0} 4578
+hl{f,3fff48ec,0} 4579
+hl{m,16,0,3fff48ec} 4580
+hl{m,756,0,3fff603c} 4581
+hl{f,3fff603c,0} 4582
+hl flush 4582 - remains 24928
+ASYNC RX (0):
+▒FAIL CONNECT
+
+hl{f,3fff48ec,0} 4583
+hl{m,16,0,3fff48ec} 4584
+hl{m,756,0,3fff603c} 4585
+hl{f,3fff603c,0} 4586
+hl{f,3fff51b4,0} 4587
+hl{m,16,0,3fff51b4} 4588
+hl{f,3fff48ec,0} 4589
+hl{m,16,0,3fff48ec} 4590
+hl{m,756,0,3fff603c} 4591
+hl{f,3fff603c,0} 4592
+hl{f,3fff4d7c,0} 4593
+hl{f,3fff5894,0} 4594
+hl{m,12,0,3fff4d7c} 4595
+hl{m,12,0,3fff5894} 4596
+hl{m,48,0,3fff512c} 4597
+hl{f,3fff4904,0} 4598
+hl{f,3fff48ec,0} 4599
+hl{m,16,0,3fff48ec} 4600
+hl{m,756,0,3fff603c} 4601
+hl{f,3fff603c,0} 4602
+hl{f,3fff48ec,0} 4603
+hl{m,16,0,3fff48ec} 4604
+hl{m,756,0,3fff603c} 4605
+hl{f,3fff603c,0} 4606
+hl{f,3fff48ec,0} 4607
+hl{m,16,0,3fff48ec} 4608
+hl{m,756,0,3fff603c} 4609
+hl{f,3fff603c,0} 4610
+hl{f,3fff48ec,0} 4611
+hl{m,16,0,3fff48ec} 4612
+hl{m,756,0,3fff603c} 4613
+hl{f,3fff603c,0} 4614
+hl flush 4614 - remains 24928
+6 0: 2:14 Dormitor H:47.00(46.9) T:20.30(20.2 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+?
+hl{f,3fff57ec,0} 4615
+hl{m,16,0,3fff57ec} 4616
+hl{f,3fff51b4,0} 4617
+hl{m,16,0,3fff51b4} 4618
+hl{f,3fff48ec,0} 4619
+hl{m,16,0,3fff48ec} 4620
+hl{m,756,0,3fff603c} 4621
+hl{f,3fff603c,0} 4622
+hl{f,3fff48ec,0} 4623
+hl{m,16,0,3fff48ec} 4624
+hl{m,756,0,3fff603c} 4625
+hl{f,3fff603c,0} 4626
+hl{f,3fff48ec,0} 4627
+hl{m,16,0,3fff48ec} 4628
+hl{m,756,0,3fff603c} 4629
+hl{f,3fff603c,0} 4630
+hl{f,3fff48ec,0} 4631
+hl{m,16,0,3fff48ec} 4632
+hl{m,756,0,3fff603c} 4633
+hl{f,3fff603c,0} 4634
+hl{f,3fff48ec,0} 4635
+hl{m,16,0,3fff48ec} 4636
+hl{m,20,0,3fff58a4} 4637
+hl{f,3fff48d4,0} 4638
+hl{f,3fff51b4,0} 4639
+hl{m,16,0,3fff51b4} 4640
+hl{f,3fff48ec,0} 4641
+hl{m,16,0,3fff48d4} 4642
+hl{f,3fff48d4,0} 4643
+hl{m,16,0,3fff48d4} 4644
+hl{f,3fff48d4,0} 4645
+hl{m,16,0,3fff48d4} 4646
+hl flush 4646 - remains 24928
+▒
+hl{f,3fff48d4,0} 4647
+hl{m,16,0,3fff48d4} 4648
+hl{f,3fff48d4,0} 4649
+hl{m,16,0,3fff48d4} 4650
+hl{f,3fff48bc,0} 4651
+hl{m,16,0,3fff48bc} 4652
+hl{f,3fff57ec,0} 4653
+hl{m,16,0,3fff57ec} 4654
+hl{f,3fff51b4,0} 4655
+hl{m,16,0,3fff51b4} 4656
+hl{f,3fff48d4,0} 4657
+hl{m,16,0,3fff48d4} 4658
+hl{f,3fff48d4,0} 4659
+hl{m,16,0,3fff48d4} 4660
+hl{f,3fff48d4,0} 4661
+hl{m,16,0,3fff48d4} 4662
+hl{f,3fff48d4,0} 4663
+hl{m,16,0,3fff48d4} 4664
+hl{f,3fff48d4,0} 4665
+hl{m,16,0,3fff48d4} 4666
+hl{m,20,0,3fff48ec} 4667
+hl{f,3fff48ec,0} 4668
+hl{f,3fff51b4,0} 4669
+hl{m,16,0,3fff51b4} 4670
+hl{f,3fff48d4,0} 4671
+hl{m,16,0,3fff48d4} 4672
+hl{f,3fff48d4,0} 4673
+hl{m,16,0,3fff48d4} 4674
+hl{m,756,0,3fff603c} 4675
+hl{f,3fff603c,0} 4676
+hl{f,3fff48d4,0} 4677
+hl{m,16,0,3fff48d4} 4678
+hl flush 4678 - remains 24928
+(ASYNC RX (0):
+▒
+hl{f,3fff48d4,0} 4679
+hl{m,16,0,3fff48d4} 4680
+hl{m,756,0,3fff603c} 4681
+hl{f,3fff603c,0} 4682
+hl{f,3fff48d4,0} 4683
+hl{m,16,0,3fff48d4} 4684
+hl{f,3fff57ec,0} 4685
+hl{m,16,0,3fff57ec} 4686
+hl{f,3fff51b4,0} 4687
+hl{m,16,0,3fff51b4} 4688
+hl{f,3fff48d4,0} 4689
+hl{m,16,0,3fff48d4} 4690
+hl{m,756,0,3fff603c} 4691
+hl{f,3fff603c,0} 4692
+hl{f,3fff48d4,0} 4693
+hl{m,16,0,3fff48d4} 4694
+hl{m,756,0,3fff603c} 4695
+hl{f,3fff603c,0} 4696
+hl{f,3fff48d4,0} 4697
+hl{m,16,0,3fff48d4} 4698
+hl{m,756,0,3fff603c} 4699
+hl{f,3fff603c,0} 4700
+hl{f,3fff48d4,0} 4701
+hl{m,16,0,3fff48d4} 4702
+hl{f,3fff48d4,0} 4703
+hl{m,16,0,3fff48d4} 4704
+hl{m,756,0,3fff603c} 4705
+hl{f,3fff603c,0} 4706
+hl{f,3fff51b4,0} 4707
+hl{m,16,0,3fff51b4} 4708
+hl{f,3fff48d4,0} 4709
+hl{m,16,0,3fff48d4} 4710
+hl flush 4710 - remains 24144
+▒ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 4711
+hl{f,3fff603c,0} 4712
+hl{f,3fff48d4,0} 4713
+hl{m,16,0,3fff48d4} 4714
+hl{f,3fff48d4,0} 4715
+hl{m,16,0,3fff48d4} 4716
+hl{m,756,0,3fff603c} 4717
+hl{f,3fff603c,0} 4718
+hl{f,3fff48d4,0} 4719
+hl{m,16,0,3fff48d4} 4720
+hl{m,756,0,3fff603c} 4721
+hl{f,3fff603c,0} 4722
+hl{f,3fff48d4,0} 4723
+hl{m,16,0,3fff48d4} 4724
+hl{m,756,0,3fff603c} 4725
+hl{f,3fff603c,0} 4726
+hl{f,3fff57ec,0} 4727
+hl{m,16,0,3fff57ec} 4728
+hl{f,3fff51b4,0} 4729
+hl{m,16,0,3fff51b4} 4730
+hl{f,3fff48d4,0} 4731
+hl{m,16,0,3fff48d4} 4732
+hl{m,756,0,3fff603c} 4733
+hl{f,3fff603c,0} 4734
+hl{f,3fff48d4,0} 4735
+hl{m,16,0,3fff48d4} 4736
+hl{m,756,0,3fff603c} 4737
+hl{f,3fff603c,0} 4738
+hl{f,3fff48d4,0} 4739
+hl{m,16,0,3fff48d4} 4740
+hl{m,756,0,3fff603c} 4741
+hl{f,3fff603c,0} 4742
+hl flush 4742 - remains 24880
+▒
+hl{m,20,0,3fff48ec} 4743
+hl{f,3fff4914,0} 4744
+hl{f,3fff48d4,0} 4745
+hl{m,16,0,3fff48d4} 4746
+hl{f,3fff48d4,0} 4747
+hl{m,16,0,3fff48d4} 4748
+hl{m,756,0,3fff603c} 4749
+hl{f,3fff603c,0} 4750
+hl{f,3fff51b4,0} 4751
+hl{m,16,0,3fff51b4} 4752
+hl{f,3fff48d4,0} 4753
+hl{m,16,0,3fff48d4} 4754
+hl{m,756,0,3fff603c} 4755
+hl{f,3fff603c,0} 4756
+hl{f,3fff48d4,0} 4757
+hl{m,16,0,3fff48d4} 4758
+hl{m,756,0,3fff603c} 4759
+hl{f,3fff603c,0} 4760
+hl{f,3fff48d4,0} 4761
+hl{m,16,0,3fff48d4} 4762
+hl{m,756,0,3fff603c} 4763
+hl{f,3fff603c,0} 4764
+hl{f,3fff48d4,0} 4765
+hl{m,16,0,3fff48d4} 4766
+hl{f,3fff48d4,0} 4767
+hl{m,16,0,3fff48d4} 4768
+hl{m,756,0,3fff603c} 4769
+hl{f,3fff603c,0} 4770
+hl{f,3fff57ec,0} 4771
+hl{m,16,0,3fff57ec} 4772
+hl{f,3fff51b4,0} 4773
+hl{m,16,0,3fff51b4} 4774
+hl flush 4774 - remains 24928
+▒ASYNC RX (0):
+?
+hl{f,3fff48d4,0} 4775
+hl{m,16,0,3fff48d4} 4776
+hl{m,756,0,3fff603c} 4777
+hl{f,3fff603c,0} 4778
+hl{f,3fff48d4,0} 4779
+hl{m,16,0,3fff48d4} 4780
+hl{f,3fff48d4,0} 4781
+hl{m,16,0,3fff48d4} 4782
+hl{m,756,0,3fff603c} 4783
+hl{f,3fff603c,0} 4784
+hl{f,3fff48d4,0} 4785
+hl{m,16,0,3fff48d4} 4786
+hl{f,3fff48d4,0} 4787
+hl{m,16,0,3fff48d4} 4788
+hl{m,756,0,3fff603c} 4789
+hl{f,3fff603c,0} 4790
+hl{m,756,0,3fff603c} 4791
+hl{f,3fff603c,0} 4792
+hl{f,3fff51b4,0} 4793
+hl{m,16,0,3fff51b4} 4794
+hl{f,3fff48d4,0} 4795
+hl{m,16,0,3fff48d4} 4796
+hl{m,756,0,3fff603c} 4797
+hl{f,3fff603c,0} 4798
+hl{f,3fff48d4,0} 4799
+hl{m,16,0,3fff48d4} 4800
+hl{m,756,0,3fff603c} 4801
+hl{f,3fff603c,0} 4802
+hl{f,3fff48d4,0} 4803
+hl{m,16,0,3fff48d4} 4804
+hl{m,756,0,3fff603c} 4805
+hl{f,3fff603c,0} 4806
+hl flush 4806 - remains 24928
+ 0: 2:19 Dormitor H:47.00(47.0) T:20.30(20.2 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{f,3fff48d4,0} 4807
+hl{m,16,0,3fff48d4} 4808
+hl{m,756,0,3fff603c} 4809
+hl{f,3fff603c,0} 4810
+hl{f,3fff48d4,0} 4811
+hl{m,16,0,3fff48d4} 4812
+hl{m,756,0,3fff603c} 4813
+hl{f,3fff603c,0} 4814
+hl{f,3fff57ec,0} 4815
+hl{m,16,0,3fff57ec} 4816
+hl{f,3fff51b4,0} 4817
+hl{m,16,0,3fff51b4} 4818
+hl{f,3fff48d4,0} 4819
+hl{m,16,0,3fff48d4} 4820
+hl{m,756,0,3fff603c} 4821
+hl{f,3fff603c,0} 4822
+hl{f,3fff48d4,0} 4823
+hl{m,16,0,3fff48d4} 4824
+hl{m,20,0,3fff4904} 4825
+hl{f,3fff58a4,0} 4826
+hl{f,3fff48d4,0} 4827
+hl{m,16,0,3fff48d4} 4828
+hl{f,3fff48d4,0} 4829
+hl{m,16,0,3fff48d4} 4830
+hl{f,3fff48d4,0} 4831
+hl{m,16,0,3fff48d4} 4832
+hl{f,3fff51b4,0} 4833
+hl{m,16,0,3fff51b4} 4834
+hl{f,3fff48d4,0} 4835
+hl{m,16,0,3fff48d4} 4836
+hl{f,3fff48d4,0} 4837
+hl{m,16,0,3fff48d4} 4838
+hl flush 4838 - remains 24928
+▒
+hl{f,3fff48d4,0} 4839
+hl{m,16,0,3fff48d4} 4840
+hl{f,3fff48d4,0} 4841
+hl{m,16,0,3fff48d4} 4842
+hl{f,3fff48d4,0} 4843
+hl{m,16,0,3fff48d4} 4844
+hl{f,3fff48bc,0} 4845
+hl{m,16,0,3fff48bc} 4846
+hl{f,3fff57ec,0} 4847
+hl{m,16,0,3fff57ec} 4848
+hl{f,3fff51b4,0} 4849
+hl{m,16,0,3fff51b4} 4850
+hl{f,3fff48d4,0} 4851
+hl{m,16,0,3fff48d4} 4852
+hl{m,756,0,3fff603c} 4853
+hl{f,3fff603c,0} 4854
+hl{f,3fff48d4,0} 4855
+hl{m,16,0,3fff48d4} 4856
+hl{f,3fff48d4,0} 4857
+hl{m,16,0,3fff48d4} 4858
+hl{m,756,0,3fff603c} 4859
+hl{f,3fff603c,0} 4860
+hl{f,3fff48d4,0} 4861
+hl{m,16,0,3fff48d4} 4862
+hl{m,756,0,3fff603c} 4863
+hl{f,3fff603c,0} 4864
+hl{f,3fff48d4,0} 4865
+hl{m,16,0,3fff48d4} 4866
+hl{m,756,0,3fff603c} 4867
+hl{f,3fff603c,0} 4868
+hl{f,3fff51b4,0} 4869
+hl{m,16,0,3fff51b4} 4870
+hl flush 4870 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff48d4,0} 4871
+hl{m,16,0,3fff48d4} 4872
+hl{m,756,0,3fff603c} 4873
+hl{f,3fff603c,0} 4874
+hl{f,3fff48d4,0} 4875
+hl{m,16,0,3fff48d4} 4876
+hl{m,756,0,3fff603c} 4877
+hl{f,3fff603c,0} 4878
+hl{f,3fff48d4,0} 4879
+hl{m,16,0,3fff48d4} 4880
+hl{m,756,0,3fff603c} 4881
+hl{f,3fff603c,0} 4882
+hl{f,3fff48d4,0} 4883
+hl{m,16,0,3fff48d4} 4884
+hl{m,756,0,3fff603c} 4885
+hl{f,3fff603c,0} 4886
+hl{f,3fff48d4,0} 4887
+hl{m,16,0,3fff48d4} 4888
+hl{m,756,0,3fff603c} 4889
+hl{f,3fff603c,0} 4890
+hl{f,3fff57ec,0} 4891
+hl{m,16,0,3fff57ec} 4892
+hl{f,3fff51b4,0} 4893
+hl{m,16,0,3fff51b4} 4894
+hl{f,3fff48d4,0} 4895
+hl{m,16,0,3fff48d4} 4896
+hl{m,756,0,3fff603c} 4897
+hl{f,3fff603c,0} 4898
+hl{f,3fff48d4,0} 4899
+hl{m,16,0,3fff48d4} 4900
+hl{m,756,0,3fff603c} 4901
+hl{f,3fff603c,0} 4902
+hl flush 4902 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff48d4,0} 4903
+hl{m,16,0,3fff48d4} 4904
+hl{m,756,0,3fff603c} 4905
+hl{f,3fff603c,0} 4906
+hl{f,3fff48d4,0} 4907
+hl{m,16,0,3fff48d4} 4908
+hl{m,756,0,3fff603c} 4909
+hl{f,3fff603c,0} 4910
+hl{f,3fff48d4,0} 4911
+hl{m,16,0,3fff48d4} 4912
+hl{m,756,0,3fff603c} 4913
+hl{f,3fff603c,0} 4914
+hl{f,3fff51b4,0} 4915
+hl{m,16,0,3fff51b4} 4916
+hl{f,3fff48d4,0} 4917
+hl{m,16,0,3fff48d4} 4918
+hl{m,756,0,3fff603c} 4919
+hl{f,3fff603c,0} 4920
+hl{f,3fff48d4,0} 4921
+hl{m,16,0,3fff48d4} 4922
+hl{f,3fff48d4,0} 4923
+hl{m,16,0,3fff48d4} 4924
+hl{m,756,0,3fff603c} 4925
+hl{f,3fff603c,0} 4926
+hl{f,3fff48d4,0} 4927
+hl{m,16,0,3fff48d4} 4928
+hl{m,756,0,3fff603c} 4929
+hl{f,3fff603c,0} 4930
+hl{f,3fff48d4,0} 4931
+hl{m,16,0,3fff48d4} 4932
+hl{m,756,0,3fff603c} 4933
+hl{f,3fff603c,0} 4934
+hl flush 4934 - remains 24880
+▒
+hl{m,20,0,3fff491c} 4935
+hl{f,3fff48ec,0} 4936
+hl{f,3fff57ec,0} 4937
+hl{m,16,0,3fff57ec} 4938
+hl{f,3fff51b4,0} 4939
+hl{m,16,0,3fff51b4} 4940
+hl{f,3fff48d4,0} 4941
+hl{m,16,0,3fff58a4} 4942
+hl{m,756,0,3fff603c} 4943
+hl{f,3fff603c,0} 4944
+hl{f,3fff58a4,0} 4945
+hl{m,16,0,3fff58a4} 4946
+hl{m,756,0,3fff603c} 4947
+hl{f,3fff603c,0} 4948
+hl{f,3fff58a4,0} 4949
+hl{m,16,0,3fff58a4} 4950
+hl{m,756,0,3fff603c} 4951
+hl{f,3fff603c,0} 4952
+hl{f,3fff58a4,0} 4953
+hl{m,16,0,3fff58a4} 4954
+hl{m,756,0,3fff603c} 4955
+hl{f,3fff603c,0} 4956
+hl{f,3fff58a4,0} 4957
+hl{m,16,0,3fff58a4} 4958
+hl{m,756,0,3fff603c} 4959
+hl{f,3fff603c,0} 4960
+hl{f,3fff51b4,0} 4961
+hl{m,16,0,3fff51b4} 4962
+hl{f,3fff58a4,0} 4963
+hl{m,16,0,3fff58a4} 4964
+hl{m,756,0,3fff603c} 4965
+hl{f,3fff603c,0} 4966
+hl flush 4966 - remains 24928
+01.01.1970 00:02:23 Heap: 24880
+2ASYNC RX (0):
+▒
+hl{f,3fff58a4,0} 4967
+hl{m,16,0,3fff58a4} 4968
+hl{f,3fff58a4,0} 4969
+hl{m,16,0,3fff58a4} 4970
+hl{m,756,0,3fff603c} 4971
+hl{f,3fff603c,0} 4972
+hl{m,11,0,3fff58bc} 4973
+hl{m,11,0,3fff48d4} 4974
+hl{m,9,0,3fff48e4} 4975
+hl{m,20,0,3fff5d44} 4976
+hl{f,3fff48d4,0} 4977
+hl{m,20,0,3fff5d5c} 4978
+hl{f,3fff48e4,0} 4979
+hl{f,3fff5d44,0} 4980
+hl{f,3fff58bc,0} 4981
+hl{f,3fff5d5c,0} 4982
+hl{m,756,0,3fff603c} 4983
+hl{f,3fff603c,0} 4984
+hl{f,3fff58a4,0} 4985
+hl{m,16,0,3fff58a4} 4986
+hl{m,756,0,3fff603c} 4987
+hl{f,3fff603c,0} 4988
+hl{f,3fff58a4,0} 4989
+hl{m,16,0,3fff58a4} 4990
+hl{m,756,0,3fff603c} 4991
+hl{f,3fff603c,0} 4992
+hl{f,3fff57ec,0} 4993
+hl{m,16,0,3fff57ec} 4994
+hl{f,3fff51b4,0} 4995
+hl{m,16,0,3fff51b4} 4996
+hl{f,3fff58a4,0} 4997
+hl{m,16,0,3fff58a4} 4998
+hl flush 4998 - remains 24920
+FAIL CONNECT
+
+hl{f,3fff4d7c,0} 4999
+hl{f,3fff512c,0} 5000
+hl{m,12,0,3fff4d7c} 5001
+hl{m,12,0,3fff58bc} 5002
+hl{m,48,0,3fff512c} 5003
+hl{f,3fff5894,0} 5004
+hl{m,756,0,3fff603c} 5005
+hl{f,3fff603c,0} 5006
+hl{f,3fff58a4,0} 5007
+hl{m,16,0,3fff5894} 5008
+hl{m,756,0,3fff603c} 5009
+hl{f,3fff603c,0} 5010
+hl{f,3fff5894,0} 5011
+hl{m,16,0,3fff5894} 5012
+hl{m,756,0,3fff603c} 5013
+hl{f,3fff603c,0} 5014
+hl{f,3fff5894,0} 5015
+hl{m,16,0,3fff5894} 5016
+hl{m,756,0,3fff603c} 5017
+hl{f,3fff603c,0} 5018
+hl{f,3fff5894,0} 5019
+hl{m,16,0,3fff5894} 5020
+hl{m,756,0,3fff603c} 5021
+hl{f,3fff603c,0} 5022
+hl{f,3fff51b4,0} 5023
+hl{m,16,0,3fff51b4} 5024
+hl{f,3fff5894,0} 5025
+hl{m,16,0,3fff5894} 5026
+hl{m,756,0,3fff603c} 5027
+hl{f,3fff603c,0} 5028
+hl{f,3fff5894,0} 5029
+hl{m,16,0,3fff5894} 5030
+hl flush 5030 - remains 24144
+S 0: 2:24 Dormitor H:47.00(47.0) T:20.30(20.2 0.0)/25.2 SetPt:21.50 needHeat:1
+fHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 5031
+hl{f,3fff603c,0} 5032
+hl{f,3fff5894,0} 5033
+hl{m,16,0,3fff5894} 5034
+hl{m,20,0,3fff48d4} 5035
+hl{f,3fff4904,0} 5036
+hl{f,3fff5894,0} 5037
+hl{m,16,0,3fff5894} 5038
+hl{f,3fff5894,0} 5039
+hl{m,16,0,3fff5894} 5040
+hl{f,3fff57ec,0} 5041
+hl{m,16,0,3fff57ec} 5042
+hl{f,3fff51b4,0} 5043
+hl{m,16,0,3fff51b4} 5044
+hl{f,3fff5894,0} 5045
+hl{m,16,0,3fff5894} 5046
+hl{f,3fff5894,0} 5047
+hl{m,16,0,3fff5894} 5048
+hl{f,3fff5894,0} 5049
+hl{m,16,0,3fff5894} 5050
+hl{f,3fff5894,0} 5051
+hl{m,16,0,3fff5894} 5052
+hl{f,3fff5894,0} 5053
+hl{m,16,0,3fff5894} 5054
+hl{f,3fff51b4,0} 5055
+hl{m,16,0,3fff51b4} 5056
+hl{f,3fff5894,0} 5057
+hl{m,16,0,3fff5894} 5058
+hl{f,3fff5894,0} 5059
+hl{m,16,0,3fff5894} 5060
+hl{f,3fff5894,0} 5061
+hl{m,16,0,3fff5894} 5062
+hl flush 5062 - remains 24928
+
+hl{f,3fff5894,0} 5063
+hl{m,16,0,3fff5894} 5064
+hl{f,3fff5894,0} 5065
+hl{m,16,0,3fff5894} 5066
+hl{m,756,0,3fff603c} 5067
+hl{f,3fff603c,0} 5068
+hl{f,3fff4934,0} 5069
+hl{m,16,0,3fff4934} 5070
+hl{f,3fff48bc,0} 5071
+hl{m,16,0,3fff48bc} 5072
+hl{f,3fff57ec,0} 5073
+hl{m,16,0,3fff57ec} 5074
+hl{f,3fff51b4,0} 5075
+hl{m,16,0,3fff51b4} 5076
+hl{f,3fff5894,0} 5077
+hl{m,16,0,3fff5894} 5078
+hl{m,756,0,3fff603c} 5079
+hl{f,3fff603c,0} 5080
+hl{f,3fff5894,0} 5081
+hl{m,16,0,3fff5894} 5082
+hl{m,756,0,3fff603c} 5083
+hl{f,3fff603c,0} 5084
+hl{f,3fff5894,0} 5085
+hl{m,16,0,3fff5894} 5086
+hl{m,756,0,3fff603c} 5087
+hl{f,3fff603c,0} 5088
+hl{f,3fff5894,0} 5089
+hl{m,16,0,3fff5894} 5090
+hl{m,756,0,3fff603c} 5091
+hl{f,3fff603c,0} 5092
+hl{f,3fff5894,0} 5093
+hl{m,16,0,3fff5894} 5094
+hl flush 5094 - remains 24144
+ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 5095
+hl{f,3fff603c,0} 5096
+hl{f,3fff51b4,0} 5097
+hl{m,16,0,3fff51b4} 5098
+hl{f,3fff5894,0} 5099
+hl{m,16,0,3fff5894} 5100
+hl{f,3fff5894,0} 5101
+hl{m,16,0,3fff5894} 5102
+hl{m,756,0,3fff603c} 5103
+hl{f,3fff603c,0} 5104
+hl{f,3fff5894,0} 5105
+hl{m,16,0,3fff5894} 5106
+hl{m,756,0,3fff603c} 5107
+hl{f,3fff603c,0} 5108
+hl{f,3fff5894,0} 5109
+hl{m,16,0,3fff5894} 5110
+hl{m,756,0,3fff603c} 5111
+hl{f,3fff603c,0} 5112
+hl{f,3fff5894,0} 5113
+hl{m,16,0,3fff5894} 5114
+hl{m,756,0,3fff603c} 5115
+hl{f,3fff603c,0} 5116
+hl{f,3fff57ec,0} 5117
+hl{m,16,0,3fff57ec} 5118
+hl{f,3fff51b4,0} 5119
+hl{m,16,0,3fff51b4} 5120
+hl{f,3fff5894,0} 5121
+hl{m,16,0,3fff5894} 5122
+hl{m,756,0,3fff603c} 5123
+hl{f,3fff603c,0} 5124
+hl{f,3fff5894,0} 5125
+hl{m,16,0,3fff5894} 5126
+hl flush 5126 - remains 24144
+▒ASYNC RX (0):
+?
+hl{m,756,0,3fff603c} 5127
+hl{f,3fff603c,0} 5128
+hl{f,3fff5894,0} 5129
+hl{m,16,0,3fff5894} 5130
+hl{f,3fff5894,0} 5131
+hl{m,16,0,3fff5894} 5132
+hl{m,756,0,3fff603c} 5133
+hl{f,3fff603c,0} 5134
+hl{f,3fff5894,0} 5135
+hl{m,16,0,3fff5894} 5136
+hl{m,756,0,3fff603c} 5137
+hl{f,3fff603c,0} 5138
+hl{f,3fff51b4,0} 5139
+hl{m,16,0,3fff51b4} 5140
+hl{f,3fff5894,0} 5141
+hl{m,16,0,3fff5894} 5142
+hl{f,3fff5894,0} 5143
+hl{m,16,0,3fff5894} 5144
+hl{m,756,0,3fff603c} 5145
+hl{f,3fff603c,0} 5146
+hl{f,3fff5894,0} 5147
+hl{m,16,0,3fff5894} 5148
+hl{m,20,0,3fff48ec} 5149
+hl{f,3fff491c,0} 5150
+hl{m,756,0,3fff603c} 5151
+hl{f,3fff603c,0} 5152
+hl{f,3fff5894,0} 5153
+hl{m,16,0,3fff5894} 5154
+hl{m,756,0,3fff603c} 5155
+hl{f,3fff603c,0} 5156
+hl{f,3fff5894,0} 5157
+hl{m,16,0,3fff5894} 5158
+hl flush 5158 - remains 24144
+ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 5159
+hl{f,3fff603c,0} 5160
+hl{f,3fff57ec,0} 5161
+hl{m,16,0,3fff57ec} 5162
+hl{f,3fff51b4,0} 5163
+hl{m,16,0,3fff51b4} 5164
+hl{f,3fff5894,0} 5165
+hl{m,16,0,3fff5894} 5166
+hl{f,3fff5894,0} 5167
+hl{m,16,0,3fff5894} 5168
+hl{m,756,0,3fff603c} 5169
+hl{f,3fff603c,0} 5170
+hl{f,3fff5894,0} 5171
+hl{m,16,0,3fff5894} 5172
+hl{m,756,0,3fff603c} 5173
+hl{f,3fff603c,0} 5174
+hl{f,3fff5894,0} 5175
+hl{m,16,0,3fff5894} 5176
+hl{m,756,0,3fff603c} 5177
+hl{f,3fff603c,0} 5178
+hl{f,3fff5894,0} 5179
+hl{m,16,0,3fff5894} 5180
+hl{m,756,0,3fff603c} 5181
+hl{f,3fff603c,0} 5182
+hl{f,3fff51b4,0} 5183
+hl{m,16,0,3fff51b4} 5184
+hl{f,3fff5894,0} 5185
+hl{m,16,0,3fff5894} 5186
+hl{m,756,0,3fff603c} 5187
+hl{f,3fff603c,0} 5188
+hl{f,3fff5894,0} 5189
+hl{m,16,0,3fff5894} 5190
+hl flush 5190 - remains 24144
+▒
+hl{m,756,0,3fff603c} 5191
+hl{f,3fff603c,0} 5192
+hl{f,3fff5894,0} 5193
+hl{m,16,0,3fff5894} 5194
+hl{f,3fff5894,0} 5195
+hl{m,16,0,3fff5894} 5196
+hl{m,756,0,3fff603c} 5197
+hl{f,3fff603c,0} 5198
+hl{f,3fff5894,0} 5199
+hl{m,16,0,3fff5894} 5200
+hl{m,756,0,3fff603c} 5201
+hl{f,3fff603c,0} 5202
+hl{f,3fff57ec,0} 5203
+hl{m,16,0,3fff57ec} 5204
+hl{f,3fff51b4,0} 5205
+hl{m,16,0,3fff51b4} 5206
+hl{f,3fff5894,0} 5207
+hl{m,16,0,3fff5894} 5208
+hl{m,756,0,3fff603c} 5209
+hl{f,3fff603c,0} 5210
+hl{f,3fff5894,0} 5211
+hl{m,16,0,3fff5894} 5212
+hl{f,3fff5894,0} 5213
+hl{m,16,0,3fff5894} 5214
+hl{m,756,0,3fff603c} 5215
+hl{f,3fff603c,0} 5216
+hl{f,3fff5894,0} 5217
+hl{m,16,0,3fff5894} 5218
+hl{m,756,0,3fff603c} 5219
+hl{f,3fff603c,0} 5220
+hl{f,3fff5894,0} 5221
+hl{m,16,0,3fff5894} 5222
+hl flush 5222 - remains 24144
+ 0: 2:29 Dormitor H:47.00(47.0) T:20.30(20.2 0.0)/25.2 SetPt:21.50 needHeat:1
+fHEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 5223
+hl{f,3fff603c,0} 5224
+hl{f,3fff51b4,0} 5225
+hl{m,16,0,3fff51b4} 5226
+hl{f,3fff5894,0} 5227
+hl{m,16,0,3fff5894} 5228
+hl{m,20,0,3fff4904} 5229
+hl{f,3fff48d4,0} 5230
+hl{f,3fff5894,0} 5231
+hl{m,16,0,3fff48d4} 5232
+hl{f,3fff48d4,0} 5233
+hl{m,16,0,3fff48d4} 5234
+hl{f,3fff48d4,0} 5235
+hl{m,16,0,3fff48d4} 5236
+hl{f,3fff48d4,0} 5237
+hl{m,16,0,3fff48d4} 5238
+hl{f,3fff57ec,0} 5239
+hl{m,16,0,3fff57ec} 5240
+hl{f,3fff51b4,0} 5241
+hl{m,16,0,3fff51b4} 5242
+hl{f,3fff48d4,0} 5243
+hl{m,16,0,3fff48d4} 5244
+hl{f,3fff48d4,0} 5245
+hl{m,16,0,3fff48d4} 5246
+hl{f,3fff48d4,0} 5247
+hl{m,16,0,3fff48d4} 5248
+hl{f,3fff48d4,0} 5249
+hl{m,16,0,3fff48d4} 5250
+hl{f,3fff48d4,0} 5251
+hl{m,16,0,3fff48d4} 5252
+hl{f,3fff51b4,0} 5253
+hl{m,16,0,3fff51b4} 5254
+hl flush 5254 - remains 24928
+▒
+hl{f,3fff48d4,0} 5255
+hl{m,16,0,3fff48d4} 5256
+hl{m,756,0,3fff603c} 5257
+hl{f,3fff603c,0} 5258
+hl{m,756,0,3fff603c} 5259
+hl{f,3fff603c,0} 5260
+hl{f,3fff48d4,0} 5261
+hl{m,16,0,3fff48d4} 5262
+hl{m,756,0,3fff603c} 5263
+hl{f,3fff603c,0} 5264
+hl{f,3fff48d4,0} 5265
+hl{m,16,0,3fff48d4} 5266
+hl{m,756,0,3fff603c} 5267
+hl{f,3fff603c,0} 5268
+hl{f,3fff48d4,0} 5269
+hl{m,16,0,3fff48d4} 5270
+hl{m,756,0,3fff603c} 5271
+hl{f,3fff603c,0} 5272
+hl{f,3fff48d4,0} 5273
+hl{m,16,0,3fff48d4} 5274
+hl{f,3fff48bc,0} 5275
+hl{m,16,0,3fff48bc} 5276
+hl{f,3fff57ec,0} 5277
+hl{m,16,0,3fff57ec} 5278
+hl{f,3fff51b4,0} 5279
+hl{m,16,0,3fff51b4} 5280
+hl{f,3fff48d4,0} 5281
+hl{m,16,0,3fff48d4} 5282
+hl{m,756,0,3fff603c} 5283
+hl{f,3fff603c,0} 5284
+hl{f,3fff48d4,0} 5285
+hl{m,16,0,3fff48d4} 5286
+hl flush 5286 - remains 24144
+ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 5287
+hl{f,3fff603c,0} 5288
+hl{f,3fff48d4,0} 5289
+hl{m,16,0,3fff48d4} 5290
+hl{f,3fff48d4,0} 5291
+hl{m,16,0,3fff48d4} 5292
+hl{m,756,0,3fff603c} 5293
+hl{f,3fff603c,0} 5294
+hl{f,3fff48d4,0} 5295
+hl{m,16,0,3fff48d4} 5296
+hl{m,756,0,3fff603c} 5297
+hl{f,3fff603c,0} 5298
+hl{f,3fff51b4,0} 5299
+hl{m,16,0,3fff51b4} 5300
+hl{f,3fff48d4,0} 5301
+hl{m,16,0,3fff48d4} 5302
+hl{m,756,0,3fff603c} 5303
+hl{f,3fff603c,0} 5304
+hl{f,3fff48d4,0} 5305
+hl{m,16,0,3fff48d4} 5306
+hl{m,756,0,3fff603c} 5307
+hl{f,3fff603c,0} 5308
+hl{f,3fff48d4,0} 5309
+hl{m,16,0,3fff48d4} 5310
+hl{m,756,0,3fff603c} 5311
+hl{f,3fff603c,0} 5312
+hl{f,3fff48d4,0} 5313
+hl{m,16,0,3fff48d4} 5314
+hl{m,756,0,3fff603c} 5315
+hl{f,3fff603c,0} 5316
+hl{f,3fff48d4,0} 5317
+hl{m,16,0,3fff48d4} 5318
+hl flush 5318 - remains 24144
+▒ASYNC RX (0):
+▒
+hl{m,756,0,3fff603c} 5319
+hl{f,3fff603c,0} 5320
+hl{f,3fff57ec,0} 5321
+hl{m,16,0,3fff57ec} 5322
+hl{f,3fff51b4,0} 5323
+hl{m,16,0,3fff51b4} 5324
+hl{f,3fff48d4,0} 5325
+hl{m,16,0,3fff48d4} 5326
+hl{f,3fff48d4,0} 5327
+hl{m,16,0,3fff48d4} 5328
+hl{m,756,0,3fff603c} 5329
+hl{f,3fff603c,0} 5330
+hl{f,3fff48d4,0} 5331
+hl{m,16,0,3fff48d4} 5332
+hl{m,756,0,3fff603c} 5333
+hl{f,3fff603c,0} 5334
+hl{f,3fff48d4,0} 5335
+hl{m,16,0,3fff48d4} 5336
+hl{m,756,0,3fff603c} 5337
+hl{f,3fff603c,0} 5338
+hl{f,3fff48d4,0} 5339
+hl{m,16,0,3fff48d4} 5340
+hl{m,756,0,3fff603c} 5341
+hl{f,3fff603c,0} 5342
+hl{f,3fff51b4,0} 5343
+hl{m,420,0,3fff603c} 5344
+hl{m,16,0,3fff51b4} 5345
+hl{f,3fff48d4,0} 5346
+hl{m,16,0,3fff48d4} 5347
+hl{m,756,0,3fff61e4} 5348
+hl{f,3fff61e4,0} 5349
+hl{f,3fff603c,0} 5350
+hl flush 5350 - remains 24880
+
+hl{m,20,0,3fff491c} 5351
+hl{f,3fff48ec,0} 5352
+hl{f,3fff48d4,0} 5353
+hl{m,16,0,3fff5894} 5354
+hl{f,3fff5894,0} 5355
+hl{m,16,0,3fff5894} 5356
+hl{m,756,0,3fff603c} 5357
+hl{f,3fff603c,0} 5358
+hl{f,3fff5894,0} 5359
+hl{m,16,0,3fff5894} 5360
+hl{m,756,0,3fff603c} 5361
+hl{f,3fff603c,0} 5362
+hl{f,3fff5894,0} 5363
+hl{m,16,0,3fff5894} 5364
+hl{m,756,0,3fff603c} 5365
+hl{f,3fff603c,0} 5366
+hl{f,3fff57ec,0} 5367
+hl{m,16,0,3fff57ec} 5368
+hl{f,3fff51b4,0} 5369
+hl{m,16,0,3fff51b4} 5370
+hl{f,3fff5894,0} 5371
+hl{m,16,0,3fff5894} 5372
+hl{m,756,0,3fff603c} 5373
+hl{f,3fff603c,0} 5374
+hl{f,3fff5894,0} 5375
+hl{m,16,0,3fff5894} 5376
+hl{m,756,0,3fff603c} 5377
+hl{f,3fff603c,0} 5378
+hl{f,3fff5894,0} 5379
+hl{m,16,0,3fff5894} 5380
+hl{m,756,0,3fff603c} 5381
+hl{f,3fff603c,0} 5382
+hl flush 5382 - remains 24928
+ASYNC RX (0):
+▒FAIL CONNECT
+
+hl{f,3fff5894,0} 5383
+hl{m,16,0,3fff5894} 5384
+hl{m,756,0,3fff603c} 5385
+hl{f,3fff603c,0} 5386
+hl{f,3fff5894,0} 5387
+hl{m,16,0,3fff5894} 5388
+hl{m,756,0,3fff603c} 5389
+hl{f,3fff603c,0} 5390
+hl{f,3fff51b4,0} 5391
+hl{m,16,0,3fff51b4} 5392
+hl{f,3fff5894,0} 5393
+hl{m,16,0,3fff5894} 5394
+hl{m,756,0,3fff603c} 5395
+hl{f,3fff603c,0} 5396
+hl{f,3fff5894,0} 5397
+hl{m,16,0,3fff5894} 5398
+hl{m,756,0,3fff603c} 5399
+hl{f,3fff603c,0} 5400
+hl{f,3fff4d7c,0} 5401
+hl{f,3fff512c,0} 5402
+hl{m,12,0,3fff4d7c} 5403
+hl{m,12,0,3fff58ac} 5404
+hl{m,48,0,3fff512c} 5405
+hl{f,3fff58bc,0} 5406
+hl{f,3fff5894,0} 5407
+hl{m,16,0,3fff5894} 5408
+hl{m,756,0,3fff603c} 5409
+hl{f,3fff603c,0} 5410
+hl{f,3fff5894,0} 5411
+hl{m,16,0,3fff5894} 5412
+hl{m,756,0,3fff603c} 5413
+hl{f,3fff603c,0} 5414
+hl flush 5414 - remains 24928
+6 0: 2:34 Dormitor H:46.90(47.0) T:20.30(20.3 0.0)/25.2 SetPt:21.50 needHeat:1
+
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+?
+hl{f,3fff5894,0} 5415
+hl{m,16,0,3fff5894} 5416
+hl{m,756,0,3fff603c} 5417
+hl{f,3fff603c,0} 5418
+hl{f,3fff57ec,0} 5419
+hl{m,16,0,3fff57ec} 5420
+hl{f,3fff51b4,0} 5421
+hl{m,16,0,3fff51b4} 5422
+hl{f,3fff5894,0} 5423
+hl{m,16,0,3fff5894} 5424
+hl{m,756,0,3fff603c} 5425
+hl{f,3fff603c,0} 5426
+hl{f,3fff5894,0} 5427
+hl{m,16,0,3fff5894} 5428
+hl{m,756,0,3fff603c} 5429
+hl{f,3fff603c,0} 5430
+hl{f,3fff5894,0} 5431
+hl{m,16,0,3fff5894} 5432
+hl{m,756,0,3fff603c} 5433
+hl{f,3fff603c,0} 5434
+hl{f,3fff5894,0} 5435
+hl{m,16,0,3fff5894} 5436
+hl{m,20,0,3fff48d4} 5437
+hl{f,3fff4904,0} 5438
+hl{f,3fff5894,0} 5439
+hl{m,16,0,3fff5894} 5440
+hl{f,3fff51b4,0} 5441
+hl{m,16,0,3fff51b4} 5442
+hl{f,3fff5894,0} 5443
+hl{m,16,0,3fff5894} 5444
+hl{f,3fff5894,0} 5445
+hl{m,16,0,3fff5894} 5446
+hl flush 5446 - remains 24928
+▒
+hl{f,3fff5894,0} 5447
+hl{m,16,0,3fff5894} 5448
+hl{f,3fff5894,0} 5449
+hl{m,16,0,3fff5894} 5450
+hl{f,3fff5894,0} 5451
+hl{m,16,0,3fff5894} 5452
+hl{f,3fff57ec,0} 5453
+hl{m,16,0,3fff57ec} 5454
+hl{f,3fff51b4,0} 5455
+hl{m,16,0,3fff51b4} 5456
+hl{f,3fff5894,0} 5457
+hl{m,16,0,3fff5894} 5458
+hl{f,3fff5894,0} 5459
+hl{m,16,0,3fff5894} 5460
+hl{f,3fff5894,0} 5461
+hl{m,16,0,3fff5894} 5462
+hl{f,3fff5894,0} 5463
+hl{m,16,0,3fff5894} 5464
+hl{f,3fff5894,0} 5465
+hl{m,16,0,3fff5894} 5466
+hl{m,756,0,3fff603c} 5467
+hl{f,3fff603c,0} 5468
+hl{f,3fff51b4,0} 5469
+hl{m,16,0,3fff51b4} 5470
+hl{f,3fff5894,0} 5471
+hl{m,16,0,3fff5894} 5472
+hl{m,756,0,3fff603c} 5473
+hl{f,3fff603c,0} 5474
+hl{f,3fff5894,0} 5475
+hl{m,16,0,3fff5894} 5476
+hl{m,756,0,3fff603c} 5477
+hl{f,3fff603c,0} 5478
+hl flush 5478 - remains 24928
+ASYNC RX (0):
+?
+hl{f,3fff5894,0} 5479
+hl{m,16,0,3fff5894} 5480
+hl{m,756,0,3fff603c} 5481
+hl{f,3fff603c,0} 5482
+hl{f,3fff5894,0} 5483
+hl{m,16,0,3fff5894} 5484
+hl{m,20,0,3fff48ec} 5485
+hl{f,3fff48ec,0} 5486
+hl{f,3fff5894,0} 5487
+hl{m,16,0,3fff5894} 5488
+hl{f,3fff48bc,0} 5489
+hl{m,16,0,3fff48bc} 5490
+hl{f,3fff57ec,0} 5491
+hl{m,16,0,3fff57ec} 5492
+hl{f,3fff51b4,0} 5493
+hl{m,16,0,3fff51b4} 5494
+hl{f,3fff5894,0} 5495
+hl{m,16,0,3fff5894} 5496
+hl{m,756,0,3fff603c} 5497
+hl{f,3fff603c,0} 5498
+hl{f,3fff5894,0} 5499
+hl{m,16,0,3fff5894} 5500
+hl{f,3fff5894,0} 5501
+hl{m,16,0,3fff5894} 5502
+hl{m,756,0,3fff603c} 5503
+hl{f,3fff603c,0} 5504
+hl{f,3fff5894,0} 5505
+hl{m,16,0,3fff5894} 5506
+hl{f,3fff5894,0} 5507
+hl{m,16,0,3fff5894} 5508
+hl{f,3fff51b4,0} 5509
+hl{m,16,0,3fff51b4} 5510
+hl flush 5510 - remains 24928
+ASYNC RX (0):
+▒
+hl{f,3fff5894,0} 5511
+hl{m,16,0,3fff5894} 5512
+hl{m,756,0,3fff603c} 5513
+hl{f,3fff603c,0} 5514
+hl{f,3fff5894,0} 5515
+hl{m,16,0,3fff5894} 5516
+hl{m,756,0,3fff603c} 5517
+hl{f,3fff603c,0} 5518
+hl{f,3fff5894,0} 5519
+hl{m,16,0,3fff5894} 5520
+hl{f,3fff5894,0} 5521
+hl{m,16,0,3fff5894} 5522
+hl{m,756,0,3fff603c} 5523
+hl{f,3fff603c,0} 5524
+hl{f,3fff5894,0} 5525
+hl{m,16,0,3fff5894} 5526
+hl{f,3fff57ec,0} 5527
+hl{m,16,0,3fff57ec} 5528
+hl{f,3fff51b4,0} 5529
+hl{m,16,0,3fff51b4} 5530
+hl{f,3fff5894,0} 5531
+hl{m,16,0,3fff5894} 5532
+hl{m,756,0,3fff603c} 5533
+hl{f,3fff603c,0} 5534
+hl{f,3fff5894,0} 5535
+hl{m,16,0,3fff5894} 5536
+hl{m,756,0,3fff603c} 5537
+hl{f,3fff603c,0} 5538
+hl{f,3fff5894,0} 5539
+hl{m,16,0,3fff5894} 5540
+hl{f,3fff5894,0} 5541
+hl{m,16,0,3fff5894} 5542
+hl flush 5542 - remains 24880
+▒
+hl{m,20,0,3fff48ec} 5543
+hl{f,3fff491c,0} 5544
+hl{m,756,0,3fff603c} 5545
+hl{f,3fff603c,0} 5546
+hl{f,3fff5894,0} 5547
+hl{m,16,0,3fff5894} 5548
+hl{m,756,0,3fff603c} 5549
+hl{f,3fff603c,0} 5550
+hl{f,3fff51b4,0} 5551
+hl{m,16,0,3fff51b4} 5552
+hl{f,3fff5894,0} 5553
+hl{m,16,0,3fff5894} 5554
+hl{m,756,0,3fff603c} 5555
+hl{f,3fff603c,0} 5556
+hl{f,3fff5894,0} 5557
+hl{m,16,0,3fff5894} 5558
+hl{m,756,0,3fff603c} 5559
+hl{f,3fff603c,0} 5560
+hl{f,3fff5894,0} 5561
+hl{m,16,0,3fff5894} 5562
+hl{m,756,0,3fff603c} 5563
+hl{f,3fff603c,0} 5564
+hl{f,3fff5894,0} 5565
+hl{m,16,0,3fff5894} 5566
+hl{m,756,0,3fff603c} 5567
+hl{f,3fff603c,0} 5568
+hl{f,3fff5894,0} 5569
+hl{m,16,0,3fff5894} 5570
+hl{m,756,0,3fff603c} 5571
+hl{f,3fff603c,0} 5572
+hl{f,3fff57ec,0} 5573
+hl{m,16,0,3fff57ec} 5574
+hl flush 5574 - remains 24928
+▒ASYNC RX (0):
+▒
+hl{f,3fff51b4,0} 5575
+hl{m,16,0,3fff51b4} 5576
+hl{f,3fff5894,0} 5577
+hl{m,16,0,3fff5894} 5578
+hl{m,756,0,3fff603c} 5579
+hl{f,3fff603c,0} 5580
+hl{f,3fff5894,0} 5581
+hl{m,16,0,3fff5894} 5582
+hl{m,756,0,3fff603c} 5583
+hl{f,3fff603c,0} 5584
+hl{f,3fff5894,0} 5585
+hl{m,16,0,3fff5894} 5586
+hl{m,756,0,3fff603c} 5587
+hl{f,3fff603c,0} 5588
+hl{f,3fff5894,0} 5589
+hl{m,16,0,3fff5894} 5590
+hl{m,756,0,3fff603c} 5591
+hl{f,3fff603c,0} 5592
+hl{f,3fff5894,0} 5593
+hl{m,16,0,3fff5894} 5594
+hl{m,756,0,3fff603c} 5595
+hl{f,3fff603c,0} 5596
+hl{f,3fff51b4,0} 5597
+hl{m,16,0,3fff51b4} 5598
+hl{f,3fff5894,0} 5599
+hl{m,16,0,3fff5894} 5600
+hl{m,756,0,3fff603c} 5601
+hl{f,3fff603c,0} 5602
+hl{f,3fff5894,0} 5603
+hl{m,16,0,3fff5894} 5604
+hl{m,756,0,3fff603c} 5605
+hl{f,3fff603c,0} 5606
+hl flush 5606 - remains 24928
+▒ 0: 2:39 Dormitor H:46.90(47.0) T:20.40(20.3 0.0)/25.2 SetPt:21.50 needHeat:1
+▒HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ASYNC RX (0):
+▒
+hl{f,3fff5894,0} 5607
+hl{m,16,0,3fff5894} 5608
+hl{m,756,0,3fff603c} 5609
+hl{f,3fff603c,0} 5610
+hl{f,3fff5894,0} 5611
+hl{m,16,0,3fff5894} 5612
+hl{f,3fff5894,0} 5613
+hl{m,16,0,3fff5894} 5614
+hl{m,756,0,3fff603c} 5615
+hl{f,3fff603c,0} 5616
+hl{f,3fff57ec,0} 5617
+hl{m,16,0,3fff57ec} 5618
+hl{f,3fff51b4,0} 5619
+hl{m,16,0,3fff51b4} 5620
+hl{f,3fff5894,0} 5621
+hl{m,16,0,3fff5894} 5622
+hl{m,756,0,3fff603c} 5623
+hl{f,3fff603c,0} 5624
+hl{m,20,0,3fff4904} 5625
+hl{f,3fff48d4,0} 5626
+hl{f,3fff5894,0} 5627
+hl{m,16,0,3fff5894} 5628
+hl{f,3fff5894,0} 5629
+hl{m,16,0,3fff5894} 5630
+hl{f,3fff5894,0} 5631
+hl{m,16,0,3fff5894} 5632
+hl{f,3fff5894,0} 5633
+hl{m,16,0,3fff5894} 5634
+hl{f,3fff51b4,0} 5635
+hl{m,16,0,3fff51b4} 5636
+hl{f,3fff5894,0} 5637
+hl{m,16,0,3fff5894} 5638
+hl flush 5638 - remains 24928
+▒

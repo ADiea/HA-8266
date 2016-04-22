@@ -302,7 +302,7 @@
     var addr;
     var cell;
 
-    for (addr = alloc.addr; addr < alloc.addr + alloc.size; addr += BYTES_PER_CELL) {
+    for (addr = alloc.addr; addr < alloc.addr + alloc.size + 4/*overhead*/; addr += BYTES_PER_CELL) {
       // get cell at current coords
       cell = tbl.rows[cellxy.y].cells[cellxy.x];
 
@@ -351,7 +351,7 @@
       var addr;
       var cell;
 
-      for (addr = alloc.addr; addr < alloc.addr + alloc.size; addr += BYTES_PER_CELL) {
+      for (addr = alloc.addr; addr < alloc.addr + alloc.size + 4; addr += BYTES_PER_CELL) {
         // get cell at current coords
         cell = tbl.rows[cellxy.y].cells[cellxy.x];
 

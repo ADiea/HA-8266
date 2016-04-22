@@ -1,0 +1,127 @@
+libDHT: Detected DHT-22 compatible sensor.
+DEV 4 is DIS
+
+PREGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+?(00): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(10): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(20): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(30): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(40): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(50): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(60): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(70): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 40
+Loading dev DEV_0, 159 bytes
+Type: TH
+eTH device: 0;Dormitor;21.5;15.0;27.0;0;1;1;1;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;0;0;0;0;0;0;0;19.2;62.0;19.1;0.0;62.1;0.0;
+fTH device ID:0 NAME: Dormitor
+iAdd watcher ID:1
+MAdded device.
+,Loading dev DEV_1, 44 bytes
+Type:HEATER
+%HEATER device ID:1 NAME: Centrala
+Add watcher ID:0
+dAdded device.
+,Reset:
+REASON_DEFAULT_RST
+
+Chip id=10502778
+
+
+RFlash id=1261768
+
+
+RMem info:
+
+
+
+data  : 0x3ffe8000 ~ 0x3ffe843a, len: 1082
+
+rodata: 0x3ffe8440 ~ 0x3ffec5a0, len: 16736
+
+bss   : 0x3ffec5a0 ~ 0x3fff4288, len: 31976
+
+heap  : 0x3fff4288 ~ 0x3fffc000, len: 32120
+
+
+hlog_param:{"heap_start":0x3fff4288, "heap_end":0x3fffc000}
+TStation configuration was updated to: AndroidHotspot4594
+mode :
+hl{m,36,0,3fff4294} 1
+hl{m,16,0,3fff42bc} 2
+hl{m,16,0,3fff42d4} 3
+hl{m,16,0,3fff42ec} 4
+hl{m,16,0,3fff4304} 5
+hl{m,16,0,3fff431c} 6
+hl{m,16,0,3fff4334} 7
+hl{m,32,0,3fff434c} 8
+hl{z,756,0,3fff4374} 9
+hl{z,212,0,3fff466c} 10
+hl{f,3fff466c,0} 11
+hl{f,3fff4374,0} 12
+hl{m,49,0,3fff4374} 13
+hl{f,3fff4374,0} 14
+hl{m,29,0,3fff4374} 15
+hl{f,3fff4374,0} 16
+hl{z,28,0,3fff4374} 17
+hl{f,3fff4374,0} 18
+hl{m,172,0,3fff440c} 19
+hl{m,172,0,3fff4594} 20
+hl{m,33,0,3fff4b34} 21
+hl{f,3fff4b34,0} 22
+hl{m,33,0,3fff4b34} 23
+hl{f,3fff4b34,0} 24
+hl{m,33,0,3fff4b34} 25
+hl{f,3fff4b34,0} 26
+hl{m,33,0,3fff4b34} 27
+hl{f,3fff4b34,0} 28
+hl{m,1156,0,3fff5294} 29
+hl{f,3fff5294,0} 30
+hl{m,9,0,3fff4b54} 31
+hl{f,3fff4b54,0} 32
+hl flush 32 - remains 27960
+sta(18:fe:34:a0:42:7a)
+
+add if0
+
+f r0,
+hl{m,5,0,3fff4b54} 33
+hl{f,3fff4b54,0} 34
+hl{m,33,0,3fff52cc} 35
+hl{f,3fff52cc,0} 36
+hl{z,672,0,3fff52cc} 37
+hl{z,272,0,3fff5574} 38
+hl{m,5,0,3fff4b54} 39
+hl{f,3fff4b54,0} 40
+hl{m,68,0,3fff568c} 41
+hl{f,3fff434c,0} 42
+hl{m,32,0,3fff434c} 43
+hl{m,80,0,3fff56d4} 44
+hl{m,20,0,3fff572c} 45
+hl{m,13,0,3fff5744} 46
+hl{f,3fff5744,0} 47
+hl{m,9,0,3fff4b54} 48
+hl{f,3fff4b54,0} 49
+hl{m,44,0,3fff5744} 50
+hl{m,12,0,3fff4b54} 51
+hl{z,28,0,3fff5774} 52
+hl{m,76,0,3fff5794} 53
+hl{f,3fff4b54,0} 54
+hl{f,3fff5774,0} 55
+hl{f,3fff5794,0} 56
+hl{f,3fff5744,0} 57
+hl{f,3fff4304,0} 58
+hl{m,16,0,3fff4304} 59
+hl{f,3fff4334,0} 60
+hl{f,3fff4304,0} 61
+hl{m,16,0,3fff4304} 62
+hl{f,3fff4304,0} 63
+hl{m,16,0,3fff4304} 64
+hl flush 64 - remains 26880
+E#M 0>1/4013 !E 1 5 3fff4294
+#M 1>6/4008 !E 6 3 3fff42bc
+#M 2>9/4005 !E 9 3 3fff42d4
+#M 3>12/4002 !E 12 3 3fff42ec
+#M 4>15/3999 !E 15 3 3fff4304
+#M 5>18/3996 !E 18 3 3fff431c
+#M 6>21/3993 !E 21 3 3fff4334
+#M 7>24/3990 !E 24 5 3fff434
