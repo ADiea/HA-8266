@@ -1,0 +1,3 @@
+int /*ICACHE_FLASH_ATTR*/ RSA_decrypt(const RSA_CTX *ctx, const uint8_t *in_data, 
+                            uint8_t *out_data, int out_len, int is_decryption)
+
