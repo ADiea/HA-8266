@@ -659,7 +659,11 @@
             ptr: parseInt(dataArr[0], 16),
             shim: parseInt(dataArr[1]),
           };
-          var alloc = allocMap.getAllocByAddr(data.ptr);
+		  
+          var alloc = allocMap.getAllocByAddrUnsafe(data.ptr);
+		 
+		  if(alloc)
+		  {
           item = new LogItemFree(
             data.ptr,
             alloc.size,
@@ -667,6 +671,12 @@
             alloc.item
           );
           delta = allocMap.free(data.ptr, item);
+		  }
+		  else 
+		  {
+			  item = new LogItemNone();
+			  delta = {stat:''};
+		  }
         } else {
           throw Error("wrong heaplog verb: " + verb);
         }
@@ -868,6 +878,10 @@
         }
         return getCurAlloc(addr);
       },
+	  
+	  getAllocByAddrUnsafe: function(addr) {
+        return getCurAlloc(addr);
+      },
 
       getAllocAddresses: getAllocAddresses,
 
@@ -986,6 +1000,7 @@
 
       // check if new allocation intersects any existing one
       for (key in curAllocs) {
+		  break;;
         if (curAllocs.hasOwnProperty(key)
             && curAllocs[key].addr < (addr + size)
             && (curAllocs[key].addr + curAllocs[key].size) >= addr) {

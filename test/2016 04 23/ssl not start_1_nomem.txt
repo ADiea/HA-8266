@@ -1,0 +1,343 @@
+
+initNetwork() OLD: TCP_WND=5840 TCP_MAXRTX=12 TCP_SYNMAXRTX=6
+initNetwork() NEW: TCP_WND=5840 TCP_MAXRTX=5 TCP_SYNMAXRTX=3
+SDCard begin
+SDCard init start
+-disk_initialize (send 80 0xFF cycles)
+¦disk_initialize (send n send_cmd(CMD0, 0)
+ldisk_initialize (until n = 5 && ret != 1
+
+disk_initialize (Enter Idle state - send_cmd(CMD8, 0x1AA) == 1
+HSDCard OK: TYPE 12
+
+eSDCard init end
+%rver timeout updating: 40 -> 90
+initNetwork() OLD: TCP_WND=5840 TCP_MAXRTX=12 TCP_SYNMAXRTX=6
+initNetwork() NEW: TCP_WND=5840 TCP_MAXRTX=5 TCP_SYNMAXRTX=3
+SDCard begin
+SDCard init start
+-disk_initialize (send 80 0xFF cycles)
+¦disk_initialize (send n send_cmd(CMD0, 0)
+ldisk_initialize (until n = 5 && ret != 1
+
+disk_initialize (Enter Idle state - send_cmd(CMD8, 0x1AA) == 1
+HSDCard OK: TYPE 12
+
+eSDCard init end
+%libDHT: Detected DHT-22 compatible sensor.
+DEV 4 is DIS
+
+PREGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+¦(00): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+¦(10): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+¦(20): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+¦(30): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+¦(40): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+¦(50): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+¦(60): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+¦(70): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 40
+¦Loading dev DEV_0, 159 bytes
+Type: TH
+eTH device: 0;Dormitor;21.5;15.0;27.0;0;1;1;1;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;0;0;0;0;0;0;0;19.2;62.0;19.1;0.0;62.1;0.0;
+fTH device ID:0 NAME: Dormitor
+iAdd watcher ID:1
+MAdded device.
+,Loading dev DEV_1, 44 bytes
+Type:HEATER
+%HEATER device ID:1 NAME: Centrala
+Add watcher ID:0
+dAdded device.
+,Reset:
+REASON_DEFAULT_RST
+
+Chip id=10502778
+
+
+RFlash id=1261768
+
+
+RMem info:
+
+
+
+data  : 0x3ffe8000 ~ 0x3ffe843a, len: 1082
+
+rodata: 0x3ffe8440 ~ 0x3ffebb24, len: 14052
+
+bss   : 0x3ffebb28 ~ 0x3fff36d8, len: 31664
+
+heap  : 0x3fff36d8 ~ 0x3fffc000, len: 35112
+
+
+hlog_param:{"heap_start":0x3fff36d8, "heap_end":0x3fffc000}
+T
+hl flush 102 - remains 31032
+<Station configuration was updated to: TP-LINK_B4EB92
+mode : sta(18:fe:34:a0:42:7a)
+
+add if0
+
+f r0,
+hl flush 134 - remains 29656
+L
+hl flush 166 - remains 29896
+
+hl flush 230 - remains 29776
+¦
+hl flush 262 - remains 29776
+¦
+hl flush 294 - remains 29896
+
+hl flush 326 - remains 29712
+¦
+hl flush 358 - remains 29776
+¦scandone
+
+state: 0 -> 2 (b0)
+
+state: 2 -> 3 (0)
+
+state: 3 -> 5 (10)
+
+add 0
+
+aid 3
+
+cnt
+
+
+hl flush 390 - remains 29552
+@
+
+connected with TP-LINK_B4EB92, channel 6
+
+dhcp client start...
+
+
+hl flush 422 - remains 29456
+rtc time init...
+ 0: 0: 5 Dormitor H:52.40(0.0) T:20.60(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+NHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+0HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 454 - remains 29008
+¦
+hl flush 486 - remains 29456
+ip:192.168.0.103,mask:255.255.255.0,gw:192.168.0.1
+
+AP CONNECT
+?'/' registered
+¦
+hl flush 518 - remains 29592
+HTTP server STARTED 192.168.0.103
+
+hl flush 550 - remains 28720
+NTP client STARTED
+ wscli:wsCliStart()
+@
+hl flush 582 - remains 28672
+NTCP connect() to: homea.herokuapp.com:443
+
+wscli Connecting to Server
+wscli enc key string EFgj4Zg0McGxE0XTA9u8tg==
+erealloc 4 -> 134
+s
+h_l{f,3fff4f54,0} 601
+hl flush 614 - remains 28408
+realloc 120 -> 273
+sUDP LocalPort: 4097
+"
+hl flush 646 - remains 28136
+"UDP connect to 78.96.7.8:123
+Gtime updated? 1
+
+hl flush 678 - remains 28664
+UDP connect to 193.22.95.9:123
+¦time updated? 1
+P
+hl flush 710 - remains 28712
+
+hl flush 742 - remains 28664
+
+hl flush 774 - remains 28664
+? 9:51:44 Dormitor H:52.00(0.0) T:20.60(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+¦HEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 806 - remains 28712
+
+hl flush 838 - remains 28664
+?
+hl flush 870 - remains 28712
+
+hl flush 902 - remains 28712
+pm open,type:2 0
+
+ 9:51:49 Dormitor H:51.80(0.0) T:20.60(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+¦HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 934 - remains 28664
+¦
+hl flush 966 - remains 27928
+?
+hl flush 998 - remains 28712
+
+hl flush 1030 - remains 27928
+?
+hl flush 1062 - remains 28712
+
+hl flush 1094 - remains 27928
+? 9:51:54 Dormitor H:51.70(0.0) T:20.60(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+¦HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 1126 - remains 28712
+
+hl flush 1158 - remains 28712
+
+hl flush 1190 - remains 27928
+¦
+hl flush 1222 - remains 28712
+
+hl flush 1254 - remains 27928
+?
+hl flush 1286 - remains 28712
+
+hl flush 1318 - remains 27928
+¦ 9:51:59 Dormitor H:51.60(0.0) T:20.60(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+¦HEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 1350 - remains 28712
+
+hl flush 1382 - remains 28712
+
+hl flush 1414 - remains 27928
+?
+hl flush 1446 - remains 27928
+?
+hl flush 1478 - remains 28712
+
+hl flush 1510 - remains 28664
+ 9:52: 4 Dormitor H:51.50(0.0) T:20.60(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+¦HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 1542 - remains 28712
+
+hl flush 1574 - remains 28712
+
+hl flush 1606 - remains 27928
+?
+hl flush 1638 - remains 27928
+?
+hl flush 1670 - remains 28712
+
+hl flush 1702 - remains 28712
+ 9:52: 9 Dormitor H:51.50(0.0) T:20.60(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+¦HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 1734 - remains 28712
+
+hl flush 1766 - remains 28664
+¦
+hl flush 1798 - remains 27928
+?
+hl flush 1830 - remains 27928
+?
+hl flush 1862 - remains 27928
+?
+hl flush 1894 - remains 27928
+? 9:52:14 Dormitor H:51.50(0.0) T:20.60(0.0 0.0)/25.2 SetPt:21.50 needHeat:1
+¦HEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+A

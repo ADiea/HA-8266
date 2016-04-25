@@ -1,0 +1,9378 @@
+libDHT: Detected DHT-22 compatible sensor.
+DEV 4 is DIS
+
+PREGS  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+(00): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(10): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(20): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(30): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(40): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(50): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(60): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+(70): ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 40
+Loading dev DEV_0, 159 bytes
+Type: TH
+eTH device: 0;Dormitor;21.5;15.0;27.0;0;1;1;1;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;0;0;0;0;0;0;0;19.2;62.0;19.1;0.0;62.1;0.0;
+fTH device ID:0 NAME: Dormitor
+iAdd watcher ID:1
+MAdded device.
+,Loading dev DEV_1, 44 bytes
+Type:HEATER
+%HEATER device ID:1 NAME: Centrala
+Add watcher ID:0
+dAdded device.
+,Reset:
+REASON_DEFAULT_RST
+
+Chip id=10502778
+
+
+RFlash id=1261768
+
+
+RMem info:
+
+
+
+data  : 0x3ffe8000 ~ 0x3ffe843a, len: 1082
+
+rodata: 0x3ffe8440 ~ 0x3ffebfc4, len: 15236
+
+bss   : 0x3ffebfc8 ~ 0x3fff3cb0, len: 31976
+
+heap  : 0x3fff3cb0 ~ 0x3fffc000, len: 33616
+
+
+hlog_param:{"heap_start":0x3fff3cb0, "heap_end":0x3fffc000}
+T
+hl flush 102 - remains 29536
+BStation configuration was updated to: TP-LINK_B4EB92
+mode : sta(18:fe:34:a0:42:7a)
+
+add if0
+
+f r0,
+hl flush 134 - remains 28160
+Rdns_tmr: dns_check_entries
+
+hl flush 166 - remains 28400
+dns_tmr: dns_check_entries
+
+
+hl flush 230 - remains 28280
+
+hl flush 262 - remains 28280
+
+hl flush 294 - remains 28328
+dns_tmr: dns_check_entries
+
+hl flush 326 - remains 28328
+
+hl flush 358 - remains 28280
+scandone
+
+state: 0 -> 2 (b0)
+
+state: 2 -> 3 (0)
+
+state: 3 -> 5 (10)
+
+add 0
+
+aid 2
+
+cnt
+
+
+hl flush 390 - remains 28056
+
+
+
+connected with TP-LINK_B4EB92, channel 6
+
+dhcp client start...
+
+dns_tmr: dns_check_entries
+
+hl flush 422 - remains 27832
+rtc time init...
+ 0: 0:24 Dormitor H:56.00(0.0) T:19.70(0.0 0.0)/24.8 SetPt:21.50 needHeat:1
+tHEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:ip:192.168.0.100,mask:255.255.255.0,gw:192.168.0.1
+
+dns_tmr: dns_check_entries
+
+hl flush 454 - remains 27728
+AP CONNECT
+?'/' registered
+P
+hl flush 486 - remains 28064
+HTTP server STARTED 192.168.0.100
+dns_enqueue: "pool.ntp.org": use DNS entry 0
+dns_send: dns_servers[0] "pool.ntp.org": request
+dns_enqueue: "pool.ntp.org": use DNS entry 1
+dns_send: dns_servers[0] "pool.ntp.org": request
+
+hl flush 518 - remains 26872
+NTP client STARTED
+ wscli:wsCliStart()
+@TCP connect() to: homea.herokuapp.com:443 SSL
+:
+hl flush 550 - remains 27072
+dns_enqueue: "homea.herokuapp.com": use DNS entry 2
+dns_send: dns_servers[0] "homea.herokuapp.com": request
+DNS lookup in progress...
+
+wscli Connecting to Server
+wscli enc key string YsnxUaFsXD/wXRLX1uIc3w==
+erealloc 4 -> 134
+s
+hl flush 582 - remains 26792
+ realloc 120 -> 273
+a
+hl flush 614 - remains 27176
+dns_recv: "homea.herokuapp.com": response = 54.217.211.53
+DNS record found: homea.herokuapp.com = 54.217.211.53
+?TcpConnection::connect result:, 0
+OnConnected
+'staticOnConnected: useSSL: 1, Error: 0
+SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 20024
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+r
+hl flush 646 - remains 18640
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 678 - remains 18376
+:1072 realloc 1032, left 15720
+
+
+
+hl flush 710 - remains 15288
+~:1072 realloc 1032, left 12448
+
+
+
+hl flush 742 - remains 12408
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+00010001
+
+:Private Key: (null)
+
+):1072 realloc 1024, left 9144
+
+
+B
+hl flush 774 - remains 11880
+State:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+
+hl flush 806 - remains 12776
+SSL: Handshake done (314 ms).
+SSL: Switching back to 80 MHz
+TCP connected
+onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 175
+
+wscli RX data HTTP/1.1 101 Switching Protocols
+
+Connection: Upgrade
+
+Upgrade: websocket
+
+Sec-Websocket-Accept: rF9ct+UjkZfQHrDLSw4f/j69LaA=
+
+Sec-Websocket-Protocol: chat
+
+Via: 1.1 vegur
+
+
+
+, size 175 175
+
+wscli search key rF9ct+UjkZfQHrDLSw4f/j69LaA=
+wscli clienKey : rF9ct+UjkZfQHrDLSw4f/j69LaA=
+
+hl flush 838 - remains 12608
+ewscli Key Verified. Websocket Handshake completed
+Iwscli Sending PING
+cwscli: Connection with server successful
+crealloc 2 -> 145
+onReadyToSendData: 1
+ax_port_write: send_raw_packet length 69(69)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+Haxl_ssl_read: Read bytes: 2
+
+H
+hl flush 870 - remains 12960
+wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+dns_send: dns_servers[0] "pool.ntp.org": request
+dns_send: dns_servers[0] "pool.ntp.org": request
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 10
+
+wscli RX data {"op":1}, size 10 10
+
+wscli:WebSocket message received: {"op":1}
+:Common Name:   *.herokuapp.com
+
+eCIPHER is
+@AES128-SHA
+@
+
+Swscli:WebSockCli RX Op is:1
+vwscli:WebSockCli State is 0 SrvHello, login
+e
+hl flush 902 - remains 12208
+onReadyToSendData: 1
+ax_port_write: send_raw_packet length 85(85)
+
+TcpClient request completed
+dns_recv: "pool.ntp.org": response = 93.114.42.129
+UDP LocalPort: 4097
+
+hl flush 934 - remains 10912
+gUDP connect to 93.114.42.129:123
+time updated? 1
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 20
+
+wscli RX data {"op":5,"conID":0}, size 20 20
+
+wscli:WebSocket message received: {"op":5,"conID":0}
+ Common Name:   *.herokuapp.com
+
+eCIPHER is
+AES128-SHA
+
+
+Swscli:WebSockCli RX Op is:5
+vwscli:WebSockCli logged in
+donReadyToSendData: 1
+
+hl flush 966 - remains 12952
+n
+hl flush 998 - remains 13112
+dns_tmr: dns_check_entries
+dns_send: dns_servers[0] "pool.ntp.org": request
+dns_recv: "pool.ntp.org": response = 92.86.106.228
+UDP connect to 92.86.106.228:123
+time updated? 1
+
+hl flush 1030 - remains 13088
+wscli Sending PING
+L
+hl flush 1062 - remains 13048
+Edns_tmr: dns_check_entries
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 1094 - remains 13088
+
+hl flush 1126 - remains 13088
+20:13:52 Dormitor H:56.00(0.0) T:19.70(0.0 0.0)/24.8 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 1158 - remains 13088
+(wscli Sending PING
+dns_tmr: dns_check_entries
+
+hl flush 1190 - remains 13016
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 1222 - remains 13088
+
+hl flush 1254 - remains 13088
+Edns_tmr: dns_check_entries
+wscli Sending PING
+L
+hl flush 1286 - remains 13048
+dns_tmr: dns_check_entries
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+d
+hl flush 1318 - remains 13032
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 1350 - remains 13088
+Etcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno -2035586301.
+pm open,type:2 0
+
+dns_tmr: dns_check_entries
+
+hl flush 1382 - remains 13088
+(tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno -2035586301.
+20:13:57 Dormitor H:56.00(0.0) T:19.70(0.0 0.0)/24.8 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 1414 - remains 13088
+dns_tmr: dns_check_entries
+wscli Sending PING
+
+hl flush 1446 - remains 13048
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno -2035586301.
+
+hl flush 1478 - remains 13048
+dns_tmr: dns_check_entries
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+onReadyToSendData: 2
+s
+hl flush 1510 - remains 13000
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 1542 - remains 13088
+
+hl flush 1574 - remains 13088
+wscli Sending PING
+dns_tmr: dns_check_entries
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$
+hl flush 1606 - remains 12960
+wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 1638 - remains 13088
+dns_tmr: dns_check_entries
+
+hl flush 1670 - remains 13088
+(
+hl flush 1702 - remains 13088
+(20:14: 2 Dormitor H:56.00(0.0) T:19.70(0.0 0.0)/24.8 SetPt:21.50 needHeat:1
+tHEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 1734 - remains 13088
+(wscli Sending PING
+
+hl flush 1766 - remains 13048
+Edns_tmr: dns_check_entries
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$
+hl flush 1798 - remains 12960
+wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 1830 - remains 13088
+Edns_tmr: dns_check_entries
+
+hl flush 1862 - remains 13088
+(wscli Sending PING
+@
+hl flush 1894 - remains 13048
+Edns_tmr: dns_check_entries
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+d
+hl flush 1926 - remains 11472
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 1958 - remains 13088
+
+hl flush 1990 - remains 13088
+dns_tmr: dns_check_entries
+20:14: 6 Dormitor H:55.90(0.0) T:19.70(0.0 0.0)/24.8 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 2022 - remains 13088
+dns_tmr: dns_check_entries
+
+hl flush 2054 - remains 13088
+(wscli Sending PING
+
+hl flush 2086 - remains 13048
+E
+hl flush 2118 - remains 13048
+%dns_tmr: dns_check_entries
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+%axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$
+hl flush 2150 - remains 13056
+ewscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 2182 - remains 13088
+Ewscli Sending PING
+dns_tmr: dns_check_entries
+
+hl flush 2214 - remains 13016
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 2246 - remains 13088
+
+hl flush 2278 - remains 13088
+dns_tmr: dns_check_entries
+
+hl flush 2310 - remains 13088
+E20:14:11 Dormitor H:55.90(0.0) T:19.70(0.0 0.0)/24.8 SetPt:21.50 needHeat:1
+ HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 2342 - remains 13088
+(dns_tmr: dns_check_entries
+
+hl flush 2374 - remains 13088
+(wscli Sending PING
+dns_tmr: dns_check_entries
+
+hl flush 2406 - remains 13016
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 2438 - remains 13088
+
+hl flush 2470 - remains 13088
+dns_tmr: dns_check_entries
+
+hl flush 2502 - remains 13088
+(wscli Sending PING
+L
+hl flush 2534 - remains 13048
+Edns_tmr: dns_check_entries
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+d
+hl flush 2566 - remains 11480
+
+hl flush 2598 - remains 11480
+EonReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 2
+
+wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 2630 - remains 13088
+20:14:16 Dormitor H:55.90(0.0) T:19.70(0.0 0.0)/24.8 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 2662 - remains 13088
+wscli Sending PING
+dns_tmr: dns_check_entries
+
+hl flush 2694 - remains 13048
+
+hl flush 2726 - remains 13048
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 2758 - remains 13088
+        dns_tmr: dns_check_entries
+
+hl flush 2790 - remains 13088
+wscli Sending PING
+
+hl flush 2822 - remains 13016
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 2854 - remains 13088
+dns_tmr: dns_check_entries
+
+hl flush 2886 - remains 13088
+dns_tmr: dns_check_entries
+
+hl flush 2918 - remains 13088
+20:14:21 Dormitor H:55.80(0.0) T:19.80(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 2950 - remains 13088
+dns_tmr: dns_check_entries
+wscli Sending PING
+
+hl flush 2982 - remains 13048
+
+hl flush 3014 - remains 13048
+Eax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+saxl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 3046 - remains 12992
+dns_tmr: dns_check_entries
+
+hl flush 3078 - remains 13088
+E
+hl flush 3110 - remains 13088
+(wscli Sending PING
+Ldns_tmr: dns_check_entries
+
+hl flush 3142 - remains 13048
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+d
+hl flush 3174 - remains 11480
+(onReadyToSendData: 2
+saxl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 3206 - remains 13088
+
+hl flush 3238 - remains 13088
+20:14:26 Dormitor H:55.80(0.0) T:19.80(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 3270 - remains 13088
+wscli Sending PING
+
+hl flush 3302 - remains 11496
+^ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 3334 - remains 13088
+
+hl flush 3366 - remains 13088
+dns_tmr: dns_check_entries
+
+hl flush 3398 - remains 13088
+wscli Sending PING
+L
+hl flush 3430 - remains 13048
+(ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+d
+hl flush 3462 - remains 11480
+onReadyToSendData: 2
+saxl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 3494 - remains 13088
+
+hl flush 3526 - remains 13088
+Edns_tmr: dns_check_entries
+
+hl flush 3558 - remains 13088
+s20:14:31 Dormitor H:55.80(0.0) T:19.80(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 3590 - remains 13088
+(dns_tmr: dns_check_entries
+wscli Sending PING
+
+hl flush 3622 - remains 13048
+(
+hl flush 3654 - remains 11496
+^ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 3686 - remains 13088
+
+hl flush 3718 - remains 13088
+wscli Sending PING
+@
+hl flush 3750 - remains 13048
+(dns_tmr: dns_check_entries
+
+hl flush 3782 - remains 13048
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+
+hl flush 3814 - remains 13000
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 3846 - remains 13088
+20:14:36 Dormitor H:55.80(0.0) T:19.80(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 3878 - remains 13088
+dns_tmr: dns_check_entries
+
+hl flush 3910 - remains 13088
+wscli Sending PING
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+d
+hl flush 3942 - remains 11480
+(onReadyToSendData: 2
+saxl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 3974 - remains 13088
+
+hl flush 4006 - remains 13088
+Edns_tmr: dns_check_entries
+
+hl flush 4038 - remains 13088
+wscli Sending PING
+@
+hl flush 4070 - remains 13048
+Eax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+saxl_ssl_read: Read bytes: 0
+
+$
+hl flush 4102 - remains 13000
+axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 4134 - remains 13088
+
+hl flush 4166 - remains 13088
+20:14:41 Dormitor H:55.70(0.0) T:19.80(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 4198 - remains 13088
+wscli Sending PING
+
+hl flush 4230 - remains 13048
+Edns_tmr: dns_check_entries
+
+hl flush 4262 - remains 13048
+2ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+
+hl flush 4294 - remains 13000
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 4326 - remains 13088
+23.04.2016 22:14:44 Heap: 13064
+
+hl flush 4358 - remains 13088
+wscli Sending PING
+@ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+d
+hl flush 4390 - remains 11480
+onReadyToSendData: 2
+saxl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 4422 - remains 13088
+s
+hl flush 4454 - remains 13088
+Edns_tmr: dns_check_entries
+
+hl flush 4486 - remains 13088
+20:14:46 Dormitor H:55.80(0.0) T:19.80(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+tHEATER(1) Force radio send
+1HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 4518 - remains 13088
+(dns_tmr: dns_check_entries
+wscli Sending PING
+
+hl flush 4550 - remains 13048
+Eax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+d
+hl flush 4582 - remains 11480
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 2
+
+wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 4614 - remains 13088
+wscli:wsCliOnTimerStayConnected() disconnecting
+Dwscli Terminating Websocket connection.
+
+hl flush 4646 - remains 13048
+Eax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+D
+hl flush 4678 - remains 13032
+onReadyToSendData: 2
+swscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+lax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+
+
+o
+hl flush 4710 - remains 15296
+idone
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+'-TCP connection
+g
+hl flush 4742 - remains 25560
+(dns_tmr: dns_check_entries
+
+hl flush 4774 - remains 27512
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 8699 ackno -581789288.
+
+hl flush 4806 - remains 27512
+Edns_tmr: dns_check_entries
+
+hl flush 4838 - remains 27512
+s20:14:51 Dormitor H:55.80(0.0) T:19.80(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 4870 - remains 27512
+dns_tmr: dns_check_entries
+
+hl flush 4902 - remains 27512
+Edns_tmr: dns_check_entries
+dns_check_entry: "homea.herokuapp.com": flush
+
+hl flush 4934 - remains 27512
+s
+hl flush 4966 - remains 27512
+Edns_tmr: dns_check_entries
+
+hl flush 4998 - remains 27512
+dns_tmr: dns_check_entries
+
+hl flush 5030 - remains 27512
+s20:14:56 Dormitor H:55.90(0.0) T:19.90(0.0 0.0)/24.9 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 5062 - remains 27512
+dns_tmr: dns_check_entries
+
+hl flush 5094 - remains 27512
+
+hl flush 5126 - remains 27512
+dns_tmr: dns_check_entries
+dns_check_entry: "pool.ntp.org": flush
+
+hl flush 5158 - remains 27512
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+1dns_enqueue: "homea.herokuapp.com": use DNS entry 0
+dns_send: dns_servers[0] "homea.herokuapp.com": request
+DNS lookup in progress...
+
+wscli Connecting to Server
+wscli enc key string DIl4IGCWdBBSvgrs/lEymQ==
+e
+hl flush 5190 - remains 26880
+realloc 4 -> 134
+srealloc 120 -> 273
+s
+hl flush 5222 - remains 26552
+dns_recv: "homea.herokuapp.com": response = 176.34.102.205
+DNS record found: homea.herokuapp.com = 176.34.102.205
+?TcpConnection::connect result:, 0
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 19728
+
+
+
+hl flush 5254 - remains 18400
+oplease start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 5286 - remains 18104
+y:1072 realloc 1032, left 15304
+
+
+
+hl flush 5318 - remains 15016
+
+20:15: 1 Dormitor H:55.80(55.8) T:19.90(19.7 0.0)/24.9 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+h_l{m,20,0,3fff5624} 5631
+hl flush 5638 - remains 12816
+dns_tmr: dns_check_entries
+
+hl flush 5670 - remains 12816
+wscli Sending PING
+
+hl flush 5702 - remains 11992
+Eax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+d
+hl flush 5734 - remains 11160
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 5766 - remains 12816
+
+hl flush 5798 - remains 12032
+wscli Sending PING
+@ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$
+hl flush 5830 - remains 12672
+wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 5862 - remains 12816
+
+hl flush 5894 - remains 12816
+dns_tmr: dns_check_entries
+
+hl flush 5926 - remains 12032
+d20:15: 6 Dormitor H:55.90(55.8) T:19.90(19.7 0.0)/24.9 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 5958 - remains 12816
+wscli Sending PING
+
+hl flush 5990 - remains 11992
+Eax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$
+hl flush 6022 - remains 12672
+wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 6054 - remains 12816
+
+hl flush 6086 - remains 12816
+dns_tmr: dns_check_entries
+wscli Sending PING
+@
+hl flush 6118 - remains 12776
+
+hl flush 6150 - remains 11992
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 6182 - remains 12816
+dns_tmr: dns_check_entries
+
+hl flush 6214 - remains 12816
+20:15:11 Dormitor H:56.00(55.8) T:19.90(19.7 0.0)/24.9 SetPt:21.50 needHeat:1
+PHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 6246 - remains 12816
+
+hl flush 6278 - remains 12816
+wscli Sending PING
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno 791820173.
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$
+hl flush 6310 - remains 12768
+axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 6342 - remains 12032
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno 791820173.
+
+hl flush 6374 - remains 12816
+dns_tmr: dns_check_entries
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno 791820173.
+
+hl flush 6406 - remains 12816
+wscli Sending PING
+
+hl flush 6438 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 6470 - remains 12672
+dns_tmr: dns_check_entries
+
+hl flush 6502 - remains 12816
+dns_tmr: dns_check_entries
+
+hl flush 6534 - remains 12032
+d20:15:16 Dormitor H:56.00(55.8) T:19.90(19.8 0.0)/24.9 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 6566 - remains 12816
+dns_tmr: dns_check_entries
+wscli Sending PING
+
+hl flush 6598 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$
+hl flush 6630 - remains 12640
+wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 6662 - remains 12032
+E
+hl flush 6694 - remains 12032
+(wscli Sending PING
+dns_tmr: dns_check_entries
+
+hl flush 6726 - remains 12776
+
+hl flush 6758 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 6790 - remains 12816
+
+hl flush 6822 - remains 12032
+20:15:21 Dormitor H:56.00(55.8) T:20.00(19.8 0.0)/24.9 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 6854 - remains 12816
+wscli Sending PING
+
+hl flush 6886 - remains 11992
+Eax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 6918 - remains 12816
+
+hl flush 6950 - remains 12816
+dns_tmr: dns_check_entries
+
+hl flush 6982 - remains 12816
+wscli Sending PING
+@
+hl flush 7014 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+d
+hl flush 7046 - remains 11208
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+-axl_ssl_read: Read bytes: 2
+
+-wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 7078 - remains 12816
+
+hl flush 7110 - remains 12816
+20:15:26 Dormitor H:55.90(55.8) T:20.00(19.8 0.0)/24.9 SetPt:21.50 needHeat:1
+PHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 7142 - remains 12816
+wscli Sending PING
+dns_tmr: dns_check_entries
+
+hl flush 7174 - remains 12776
+
+hl flush 7206 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+d
+hl flush 7238 - remains 11208
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 7270 - remains 12816
+wscli Sending PING
+@
+hl flush 7302 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+d
+hl flush 7334 - remains 12768
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 7366 - remains 12816
+
+hl flush 7398 - remains 12032
+Edns_tmr: dns_check_entries
+
+hl flush 7430 - remains 12032
+20:15:31 Dormitor H:55.80(55.8) T:20.00(19.8 0.0)/24.9 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 7462 - remains 12816
+wscli Sending PING
+
+hl flush 7494 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+d
+hl flush 7526 - remains 12768
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 7558 - remains 12816
+
+hl flush 7590 - remains 12032
+dns_tmr: dns_check_entries
+wscli Sending PING
+L
+hl flush 7622 - remains 11992
+E
+hl flush 7654 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl flush 7686 - remains 12672
+dns_tmr: dns_check_entries
+
+hl flush 7718 - remains 12032
+20:15:36 Dormitor H:55.80(55.8) T:20.00(19.8 0.0)/24.9 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 7750 - remains 12816
+
+hl flush 7782 - remains 12816
+wscli Sending PING
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$
+hl flush 7814 - remains 12640
+wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 7846 - remains 12816
+
+hl flush 7878 - remains 12816
+dns_tmr: dns_check_entries
+
+hl flush 7910 - remains 12032
+dwscli Sending PING
+L
+hl flush 7942 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 7974 - remains 12816
+
+hl flush 8006 - remains 12816
+dns_tmr: dns_check_entries
+
+hl flush 8038 - remains 12816
+20:15:41 Dormitor H:55.70(55.8) T:20.10(19.9 0.0)/25.0 SetPt:21.50 needHeat:1
+PHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 8070 - remains 12816
+dns_tmr: dns_check_entries
+wscli Sending PING
+
+hl flush 8102 - remains 11992
+E
+hl flush 8134 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 8166 - remains 12816
+
+hl flush 8198 - remains 12816
+
+hl flush 8230 - remains 12736
+23.04.2016 22:15:44 Heap: 12768
+wscli Sending PING
+Hdns_tmr: dns_check_entries
+
+hl flush 8262 - remains 11992
+d
+hl flush 8294 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 8326 - remains 12816
+T
+hl flush 8358 - remains 12032
+20:15:46 Dormitor H:55.40(55.8) T:20.10(19.9 0.0)/25.0 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 8390 - remains 12816
+wscli Sending PING
+
+hl flush 8422 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 8454 - remains 12816
+
+hl flush 8486 - remains 12816
+dns_tmr: dns_check_entries
+
+hl flush 8518 - remains 12816
+wscli Sending PING
+
+hl flush 8550 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+d
+hl flush 8582 - remains 11208
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 8614 - remains 12672
+
+hl flush 8646 - remains 12816
+dns_tmr: dns_check_entries
+
+hl flush 8678 - remains 12816
+20:15:51 Dormitor H:55.40(55.7) T:20.10(19.9 0.0)/25.0 SetPt:21.50 needHeat:1
+PHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 8710 - remains 12816
+dns_tmr: dns_check_entries
+wscli Sending PING
+
+hl flush 8742 - remains 12776
+
+hl flush 8774 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 8806 - remains 12816
+
+hl flush 8838 - remains 12816
+wscli Sending PING
+Lax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+d
+hl flush 8870 - remains 11208
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+-axl_ssl_read: Read bytes: 2
+
+-wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 8902 - remains 12816
+
+hl flush 8934 - remains 12816
+dns_tmr: dns_check_entries
+
+hl flush 8966 - remains 12816
+20:15:56 Dormitor H:55.50(55.7) T:20.10(19.9 0.0)/25.0 SetPt:21.50 needHeat:1
+PHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 8998 - remains 12768
+dns_tmr: dns_check_entries
+
+hl flush 9030 - remains 12816
+wscli Sending PING
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno -1000228383.
+
+hl flush 9062 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+dns_tmr: dns_check_entries
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$
+hl flush 9094 - remains 12672
+wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno -1000228383.
+
+hl flush 9126 - remains 12816
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno -1000228383.
+
+hl flush 9158 - remains 12816
+dns_tmr: dns_check_entries
+wscli Sending PING
+
+hl flush 9190 - remains 12776
+
+hl flush 9222 - remains 12776
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+donReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 2
+
+$wscli RX data , size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl flush 9254 - remains 12816
+wscli:wsCliOnTimerStayConnected() disconnecting
+Dwscli Terminating Websocket connection.
+T
+hl flush 9286 - remains 11992
+Eax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+D
+hl flush 9318 - remains 10424
+onReadyToSendData: 2
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+4SSL: closing ...
+lax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+
+
+o
+hl flush 9350 - remains 14640
+
+hl flush 9382 - remains 25384
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+gdns_tmr: dns_check_entries
+tcp_abandon: sending RST
+tcp_rst: seqno 9139 ackno -1223552709.
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 9085 ackno -1223552708.
+20:16: 1 Dormitodns_tmr: dns_check_entries
+
+hl flush 9478 - remains 26456
+d
+hl flush 9510 - remains 26456
+Edns_tmr: dns_check_entries
+
+hl flush 9542 - remains 27240
+dns_tmr: dns_check_entries
+dns_check_entry: "homea.herokuapp.com": flush
+
+hl flush 9574 - remains 27240
+20:16: 5 Dormitor H:55.60(55.7) T:20.20(20.0 0.0)/25.0 SetPt:21.50 needHeat:1
+rHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 9606 - remains 27240
+dns_tmr: dns_check_entries
+
+hl flush 9638 - remains 27240
+
+hl flush 9670 - remains 27192
+Edns_tmr: dns_check_entries
+
+hl flush 9702 - remains 27240
+dns_tmr: dns_check_entries
+
+hl flush 9734 - remains 26456
+ddns_tmr: dns_check_entries
+
+hl flush 9766 - remains 27240
+20:16:10 Dormitor H:55.70(55.7) T:20.20(20.0 0.0)/25.0 SetPt:21.50 needHeat:1
+PHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 9798 - remains 27240
+dns_tmr: dns_check_entries
+
+hl flush 9830 - remains 27096
++TCP connection
+ TCP connect() to: homea.herokuapp.com:443 SSL
+?dns_enqueue: "homea.herokuapp.com": use DNS entry 0
+dns_send: dns_servers[0] "homea.herokuapp.com": request
+DNS lookup in progress...
+
+wscli Connecting to Server
+wscli enc key string MbfV5ve138zgXxedmFNZVQ==
+erealloc 4 -> 134
+s
+hl flush 9862 - remains 26392
+realloc 120 -> 273
+s
+hl flush 9894 - remains 26560
+dns_recv: "homea.herokuapp.com": response = 46.137.181.240
+DNS record found: homea.herokuapp.com = 46.137.181.240
+fTcpConnection::connect result:, 0
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 19432
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+
+hl flush 9926 - remains 18080
+State:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+`receiving
+@Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 9958 - remains 16944
+:1072 realloc 1032, left 15008
+
+
+
+hl flush 9990 - remains 14392
+:1072 realloc 1032, left 11736
+
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+)
+hl flush 10022 - remains 11400
+:1072 realloc 1024, left 8432
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+,ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+i
+hl flush 10054 - remains 10000
+ax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+SSL: Handshake done (305 ms).
+1SSL: Switching back to 80 MHz
+TCP connected
+onReadyToSendData: 0
+
+hl flush 10086 - remains 12184
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 693
+
+wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:16:12 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+
+hl flush 10118 - remains 12296
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+0close notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 10150 - remains 14608
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 10182 - remains 24968
+dns_tmr: dns_check_entries
+
+hl flush 10214 - remains 26920
+dns_tmr: dns_check_entries
+
+hl flush 10246 - remains 26920
+s
+hl flush 10278 - remains 26920
+Edns_tmr: dns_check_entries
+
+hl flush 10310 - remains 26920
+Edns_tmr: dns_check_entries
+
+hl flush 10342 - remains 26920
+20:16:15 Dormitor H:55.60(55.7) T:20.20(20.0 0.0)/25.0 SetPt:21.50 needHeat:1
+tHEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 10374 - remains 26920
+dns_tmr: dns_check_entries
+
+hl flush 10406 - remains 26920
+
+hl flush 10438 - remains 26920
+Etcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno -1060069338.
+dns_tmr: dns_check_entries
+
+hl flush 10470 - remains 26920
+Etcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno -1060069338.
+dns_tmr: dns_check_entries
+
+hl flush 10502 - remains 26920
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno -1060069338.
+
+hl flush 10534 - remains 26920
+20:16:20 Dormitor H:55.60(55.7) T:20.20(20.0 0.0)/25.0 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 10566 - remains 26920
+dns_tmr: dns_check_entries
+
+hl flush 10598 - remains 26920
+
+hl flush 10630 - remains 26664
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+dns_lookup: "homea.herokuapp.com": found = 46.137.181.240
+TcpConnection::connect result:, 0
+wscli Connecting to Server
+wscli enc key string PE1Gt3NwSB0FfQmn1S2VDg==
+erealloc 4 -> 134
+s
+hl flush 10662 - remains 26192
+realloc 120 -> 273
+sOnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 19136
+
+
+
+hl flush 10694 - remains 17808
+oplease start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+?axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+Dreceiving
+ICertificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 10726 - remains 17536
+s:1072 realloc 1032, left 14832
+
+
+
+hl flush 10758 - remains 14816
+
+hl flush 10790 - remains 12344
+:1072 realloc 1032, left 11560
+
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+):1072 realloc 1024, left 8256
+
+
+B
+hl flush 10822 - remains 8808
+State:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+s
+hl flush 10854 - remains 11352
+taxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+sSSL: Handshake done (320 ms).
+PSSL: Switching back to 80 MHz
+TCP connected
+sonReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 693
+
+s
+hl flush 10886 - remains 11360
+ wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:16:22 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+hclose notify
+/
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 10918 - remains 12056
+
+hl flush 10950 - remains 15904
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+dns_tmr: dns_check_entries
+
+hl flush 10982 - remains 26624
+dns_tmr: dns_check_entries
+
+hl flush 11014 - remains 26624
+dns_tmr: dns_check_entries
+
+hl flush 11046 - remains 26624
+20:16:25 Dormitor H:55.50(55.6) T:20.20(20.0 0.0)/25.0 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 11078 - remains 26624
+dns_tmr: dns_check_entries
+
+hl flush 11110 - remains 26624
+sdns_tmr: dns_check_entries
+
+hl flush 11142 - remains 26624
+
+hl flush 11174 - remains 26624
+Edns_tmr: dns_check_entries
+
+hl flush 11206 - remains 26624
+dns_tmr: dns_check_entries
+
+hl flush 11238 - remains 26624
+s20:16:30 Dormitor H:55.40(55.6) T:20.30(20.1 0.0)/25.0 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 11270 - remains 26624
+
+hl flush 11302 - remains 26624
+dns_tmr: dns_check_entries
+
+hl flush 11334 - remains 26560
++TCP connection
+PTCP connect() to: homea.herokuapp.com:443 SSL
+6dns_lookup: "homea.herokuapp.com": found = 46.137.181.240
+TcpConnection::connect result:, 0
+@wscli Connecting to Server
+wscli enc key string 8vTk95nhrDwUuFpVBxWPnw==
+e
+hl flush 11366 - remains 26080
+realloc 4 -> 134
+srealloc 120 -> 273
+s
+hl flush 11398 - remains 25784
+ OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 18840
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+r
+hl flush 11430 - remains 17512
+axl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+s
+hl flush 11462 - remains 17400
+aaxl_ssl_read: Read bytes: 0
+
+sdns_tmr: dns_check_entries
+State:
+.receiving
+Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 11494 - remains 16824
+1:1072 realloc 1032, left 14536
+
+
+
+hl flush 11526 - remains 14008
+:1072 realloc 1032, left 11264
+
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+s
+hl flush 11558 - remains 9736
+cState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+?D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+?00010001
+
+:Private Key: (null)
+
+):1072 realloc 1024, left 7960
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+i
+hl flush 11590 - remains 9640
+ax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+s
+hl flush 11622 - remains 11088
+sState:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+sSSL: Handshake done (882 ms).
+SSL: Switching back to 80 MHz
+TCP connected
+sonReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 693
+
+swscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:16:34 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+
+hl flush 11654 - remains 11904
+axl_ssl_read: Read bytes: 0
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+hwscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 11686 - remains 11984
+
+hl flush 11718 - remains 17104
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 11750 - remains 26328
+dns_tmr: dns_check_entries
+
+hl flush 11782 - remains 26328
+Edns_tmr: dns_check_entries
+20:16:35 Dormitor H:55.20(55.6) T:20.30(20.1 0.0)/25.1 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 11814 - remains 26328
+Edns_tmr: dns_check_entries
+
+hl flush 11846 - remains 26328
+dns_tmr: dns_check_entries
+
+hl flush 11878 - remains 26328
+
+hl flush 11910 - remains 26328
+dns_tmr: dns_check_entries
+
+hl flush 11942 - remains 26328
+Edns_tmr: dns_check_entries
+
+hl flush 11974 - remains 26328
+s
+hl flush 12006 - remains 26328
+20:16:40 Dormitor H:55.20(55.5) T:20.30(20.1 0.0)/25.1 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 12038 - remains 26328
+dns_tmr: dns_check_entries
+
+hl flush 12070 - remains 26328
+sdns_tmr: dns_check_entries
+
+hl flush 12102 - remains 26328
+dns_tmr: dns_check_entries
+
+hl flush 12134 - remains 26328
+
+hl flush 12166 - remains 26264
+1+TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+3dns_lookup: "homea.herokuapp.com": found = 46.137.181.240
+TcpConnection::connect result:, 0
+wscli Connecting to Server
+wscli enc key string tJG8DYeOIeDQ0lhEJnt9Dw==
+erealloc 4 -> 134
+s
+hl flush 12198 - remains 25624
+ realloc 120 -> 273
+a23.04.2016 22:16:44 Heap: 25512
+2
+hl flush 12230 - remains 25536
+6OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 18544
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+?please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+s
+hl flush 12262 - remains 17104
+aaxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+        Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 12294 - remains 15224
+:1072 realloc 1032, left 14120
+
+
+
+hl flush 12326 - remains 13072
+]:1072 realloc 1032, left 10848
+
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+)
+hl flush 12358 - remains 9128
+:1072 realloc 1024, left 7544
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+lax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+s
+hl flush 12390 - remains 9280
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+ SSL: Handshake done (295 ms).
+SSL: Switching back to 80 MHz
+TCP connected
+ onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+
+hl flush 12422 - remains 9976
+(onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 693
+
+ wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:16:44 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+
+hl flush 12454 - remains 9832
+Jax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+'
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 12486 - remains 14040
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 12518 - remains 25808
+dns_tmr: dns_check_entries
+
+hl flush 12550 - remains 25272
+d20:16:45 Dormitor H:55.10(55.5) T:20.30(20.1 0.0)/25.1 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 12582 - remains 26056
+dns_tmr: dns_check_entries
+
+hl flush 12614 - remains 25272
+d
+hl flush 12646 - remains 26056
+dns_tmr: dns_check_entries
+
+hl flush 12678 - remains 25272
+ddns_tmr: dns_check_entries
+
+hl flush 12710 - remains 25272
+ddns_tmr: dns_check_entries
+
+hl flush 12742 - remains 25272
+d20:16:50 Dormitor H:55.10(55.4) T:20.30(20.1 0.0)/25.1 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 12774 - remains 26056
+dns_tmr: dns_check_entries
+
+hl flush 12806 - remains 26056
+
+hl flush 12838 - remains 26056
+dns_tmr: dns_check_entries
+
+hl flush 12870 - remains 25272
+Edns_tmr: dns_check_entries
+
+hl flush 12902 - remains 25272
+d
+hl flush 12934 - remains 25648
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+8dns_lookup: "homea.herokuapp.com": found = 46.137.181.240
+TcpConnection::connect result:, 0
+wscli Connecting to Server
+wscli enc key string qATLkt3WfXjlIGlikTCsUQ==
+erealloc 4 -> 134
+s
+hl flush 12966 - remains 25328
+ realloc 120 -> 273
+aOnConnected
+staticOnConnected: useSSL: 1, Error: 0
+SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 18248
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+i
+hl flush 12998 - remains 15344
+ax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+sState:
+ receiving
+ Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+Aplease start sntp first !
+
+3axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 13030 - remains 16640
+:1072 realloc 1032, left 13944
+
+
+
+hl flush 13062 - remains 13888
+hl flush 13094 - remains 10152
+:1072 realloc 1032, left 10672
+
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+):1072 realloc 1024, left 7368
+
+
+B
+hl flush 13126 - remains 8208
+State:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+s
+hl flush 13158 - remains 10464
+vaxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+sSSL: Handshake done (317 ms).
+1SSL: Switching back to 80 MHz
+TCP connected
+sonReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 693
+
+s
+hl flush 13190 - remains 10472
+ wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:16:54 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+Dclose notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+wscli Websocket Closed Normally.
+        wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 13222 - remains 11168
+
+hl flush 13254 - remains 15016
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+$-TCP connection
+
+
+hl flush 13286 - remains 25736
+dns_tmr: dns_check_entries
+20:16:55 Dormitor H:55.00(55.4) T:20.40(20.2 0.0)/25.1 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 13318 - remains 25736
+Edns_tmr: dns_check_entries
+
+hl flush 13350 - remains 25736
+sdns_tmr: dns_check_entries
+
+hl flush 13382 - remains 25736
+Edns_tmr: dns_check_entries
+
+hl flush 13414 - remains 25736
+
+hl flush 13446 - remains 25736
+dns_tmr: dns_check_entries
+
+hl flush 13478 - remains 25736
+20:17: 0 Dormitor H:55.10(55.3) T:20.40(20.2 0.0)/25.1 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 13510 - remains 25736
+dns_tmr: dns_check_entries
+
+hl flush 13542 - remains 25736
+
+hl flush 13574 - remains 25736
+sdns_tmr: dns_check_entries
+
+hl flush 13606 - remains 25736
+dns_tmr: dns_check_entries
+
+hl flush 13638 - remains 25736
+s
+hl flush 13670 - remains 25736
+Edns_tmr: dns_check_entries
+
+hl flush 13702 - remains 25624
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+7dns_lookup: "homea.herokuapp.com": found = 46.137.181.240
+TcpConnection::connect result:, 0
+wscli Connecting to Server
+wscli enc key string LdcNOfvmX5ZsYktNTp/R8w==
+erealloc 4 -> 134
+s
+hl flush 13734 - remains 25000
+realloc 120 -> 273
+s
+hl flush 13766 - remains 24920
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 17952
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+s
+hl flush 13798 - remains 16536
+State:
+receiving
+Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 13830 - remains 14632
+:1072 realloc 1032, left 13528
+
+
+
+hl flush 13862 - remains 12480
+c:1072 realloc 1032, left 10256
+
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+)
+hl flush 13894 - remains 8536
+:1072 realloc 1024, left 6952
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+`ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+s
+hl flush 13926 - remains 8688
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+ SSL: Handshake done (292 ms).
+SSL: Switching back to 80 MHz
+TCP connected
+ onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+
+hl flush 13958 - remains 10992
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 693
+
+ wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:17:05 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?
+hl flush 13990 - remains 9384
+20:17: 5 Dormitor H:55.10(55.3) T:20.40(20.2 0.0)/25.1 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 14022 - remains 9384
+staticOnReceive: pbuf is NULL
+%TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 14054 - remains 12816
+
+hl flush 14086 - remains 23392
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+dns_tmr: dns_check_entries
+
+hl flush 14118 - remains 25464
+
+hl flush 14150 - remains 25464
+dns_tmr: dns_check_entries
+
+hl flush 14182 - remains 25464
+dns_tmr: dns_check_entries
+
+hl flush 14214 - remains 25464
+
+hl flush 14246 - remains 25464
+dns_tmr: dns_check_entries
+20:17:10 Dormitor H:55.00(55.3) T:20.40(20.2 0.0)/25.1 SetPt:21.50 needHeat:1
+PHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 14278 - remains 25464
+dns_tmr: dns_check_entries
+
+hl flush 14310 - remains 24680
+ddns_tmr: dns_check_entries
+
+hl flush 14342 - remains 25464
+dns_tmr: dns_check_entries
+dns_check_entry: "homea.herokuapp.com": flush
+
+hl flush 14374 - remains 25464
+
+hl flush 14406 - remains 24680
+dns_tmr: dns_check_entries
+
+hl flush 14438 - remains 25464
+dns_tmr: dns_check_entries
+20:17:15 Dormitor H:54.90(55.2) T:20.40(20.2 0.0)/25.1 SetPt:21.50 needHeat:1
+PHEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 14470 - remains 25464
+dns_tmr: dns_check_entries
+
+hl flush 14502 - remains 25320
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+4dns_enqueue: "homea.herokuapp.com": use DNS entry 0
+dns_send: dns_servers[0] "homea.herokuapp.com": request
+DNS lookup in progress...
+
+wscli Connecting to Server
+wscli enc key string jI3tGOs8Bh1hQ0fIVs9HNg==
+erealloc 4 -> 134
+s
+hl flush 14534 - remains 24608
+realloc 120 -> 273
+s
+hl flush 14566 - remains 24784
+dns_recv: "homea.herokuapp.com": response = 46.137.127.234
+DNS record found: homea.herokuapp.com = 46.137.127.234
+fTcpConnection::connect result:, 0
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 17656
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+r
+hl flush 14598 - remains 16304
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+!please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+&receiving
+sCertificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 14630 - remains 15456
+6:1072 realloc 1032, left 13232
+
+
+
+hl flush 14662 - remains 12664
+n:1072 realloc 1032, left 9960
+
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+)
+hl flush 14694 - remains 9624
+:1072 realloc 1024, left 6656
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+hax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+i
+hl flush 14726 - remains 8224
+ax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+SSL: Handshake done (305 ms).
+1SSL: Switching back to 80 MHz
+TCP connected
+onReadyToSendData: 0
+
+hl flush 14758 - remains 8800
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 693
+
+wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:17:17 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+
+hl flush 14790 - remains 10520
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+M
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 14822 - remains 12832
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 14854 - remains 23192
+dns_tmr: dns_check_entries
+
+hl flush 14886 - remains 25144
+s
+hl flush 14918 - remains 25144
+dns_tmr: dns_check_entries
+
+hl flush 14950 - remains 25144
+sdns_tmr: dns_check_entries
+
+hl flush 14982 - remains 25144
+20:17:20 Dormitor H:54.90(55.2) T:20.50(20.3 0.0)/25.1 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 15014 - remains 25144
+dns_tmr: dns_check_entries
+
+hl flush 15046 - remains 25144
+
+hl flush 15078 - remains 25144
+dns_tmr: dns_check_entries
+
+hl flush 15110 - remains 25144
+dns_tmr: dns_check_entries
+
+hl flush 15142 - remains 25144
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno -675413570.
+
+hl flush 15174 - remains 25144
+dns_tmr: dns_check_entries
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno -675413570.
+
+hl flush 15206 - remains 25144
+20:17:25 Dormitor H:54.80(55.2) T:20.50(20.3 0.0)/25.1 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 15238 - remains 25144
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno -675413570.
+dns_tmr: dns_check_entries
+
+hl flush 15270 - remains 25144
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+dns_lookup: "homea.herokuapp.com": found = 46.137.127.234
+
+hl flush 15302 - remains 24640
+TcpConnection::connect result:, 0
+wscli Connecting to Server
+wscli enc key string rTsFiXdhZvAz6gNpJbMzfw==
+erealloc 4 -> 134
+srealloc 120 -> 273
+s
+hl flush 15334 - remains 24272
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 17360
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+r
+hl flush 15366 - remains 14448
+axl_ssl_read: Read bytes: 0
+
+ State:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ State:
+oreceiving
+`Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 15398 - remains 15640
+`:1072 realloc 1032, left 12936
+
+
+
+hl flush 15430 - remains 12832
+
+hl flush 15462 - remains 9664
+:1072 realloc 1032, left 9664
+
+
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ State:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+):1072 realloc 1024, left 6360
+
+
+B
+hl flush 15494 - remains 7464
+State:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+
+hl flush 15526 - remains 9576
+\State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+ SSL: Handshake done (305 ms).
+PSSL: Switching back to 80 MHz
+TCP connected
+ onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 693
+
+ wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:17:27 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+
+hl flush 15558 - remains 10424
+axl_ssl_read: Read bytes: 0
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+z
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+
+SSL: closing ...
+l
+hl flush 15590 - remains 10280
+
+hl flush 15622 - remains 14128
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 15654 - remains 24848
+dns_tmr: dns_check_entries
+
+hl flush 15686 - remains 24848
+Edns_tmr: dns_check_entries
+
+hl flush 15718 - remains 24848
+Edns_tmr: dns_check_entries
+20:17:30 Dormitor H:54.70(55.1) T:20.50(20.3 0.0)/25.1 SetPt:21.50 needHeat:1
+tHEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 15750 - remains 24848
+Edns_tmr: dns_check_entries
+
+hl flush 15782 - remains 24848
+dns_tmr: dns_check_entries
+
+hl flush 15814 - remains 24848
+
+hl flush 15846 - remains 24848
+dns_tmr: dns_check_entries
+
+hl flush 15878 - remains 24848
+dns_tmr: dns_check_entries
+
+hl flush 15910 - remains 24848
+20:17:35 Dormitor H:54.70(55.0) T:20.50(20.3 0.0)/25.1 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 15942 - remains 24848
+dns_tmr: dns_check_entries
+
+hl flush 15974 - remains 24848
+
+hl flush 16006 - remains 24848
+
+hl flush 16038 - remains 24592
++TCP connection
+MTCP connect() to: homea.herokuapp.com:443 SSL
+8dns_lookup: "homea.herokuapp.com": found = 46.137.127.234
+TcpConnection::connect result:, 0
+@wscli Connecting to Server
+wscli enc key string WgWADMA78psK4MbGi/0E+g==
+erealloc 4 -> 134
+s
+hl flush 16070 - remains 24120
+realloc 120 -> 273
+sdns_tmr: dns_check_entries
+
+hl flush 16102 - remains 24184
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 17064
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+sState:                                                                        receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+?axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+s
+hl flush 16134 - remains 14400
+State:
+receiving
+!Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 16166 - remains 13544
+:1072 realloc 1032, left 12760
+
+
+
+hl flush 16198 - remains 11400
+:1072 realloc 1032, left 9488
+
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+?D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+?00010001
+
+:Private Key: (null)
+
+)
+hl flush 16230 - remains 7216
+:1072 realloc 1024, left 6184
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+s
+hl flush 16262 - remains 7776
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+sSSL: Handshake done (409 ms).
+1SSL: Switching back to 80 MHz
+TCP connected
+sonReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+
+hl flush 16294 - remains 8520
+[onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 693
+
+swscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:17:38 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+
+hl flush 16326 - remains 9904
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 16358 - remains 12336
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 16390 - remains 22592
+dns_tmr: dns_check_entries
+
+hl flush 16422 - remains 24552
+s
+hl flush 16454 - remains 24552
+Edns_tmr: dns_check_entries
+
+hl flush 16486 - remains 24552
+20:17:40 Dormitor H:54.60(55.0) T:20.50(20.3 0.0)/25.1 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 16518 - remains 24552
+sdns_tmr: dns_check_entries
+
+hl flush 16550 - remains 24552
+sdns_tmr: dns_check_entries
+
+hl flush 16582 - remains 24552
+
+hl flush 16614 - remains 24552
+dns_tmr: dns_check_entries
+
+hl flush 16646 - remains 24480
+23.04.2016 22:17:44 Heap: 24528
+2
+hl flush 16678 - remains 24552
+Edns_tmr: dns_check_entries
+20:17:45 Dormitor H:54.50(54.9) T:20.50(20.4 0.0)/25.1 SetPt:21.50 needHeat:1
+tHEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 16710 - remains 24552
+Edns_tmr: dns_check_entries
+
+hl flush 16742 - remains 24552
+dns_tmr: dns_check_entries
+
+hl flush 16774 - remains 24552
+dns_tmr: dns_check_entries
+
+hl flush 16806 - remains 24552
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+5
+hl flush 16838 - remains 24152
+dns_lookup: "homea.herokuapp.com": found = 46.137.127.234
+TcpConnection::connect result:, 0
+wscli Connecting to Server
+wscli enc key string uROgQ8HLCu7fFfDvIgxnfg==
+erealloc 4 -> 134
+s
+hl flush 16870 - remains 23816
+realloc 120 -> 273
+sOnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 16768
+
+
+
+hl flush 16902 - remains 15944
+oplease start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+-please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+Dreceiving
+uCertificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 16934 - remains 15264
+o
+hl flush 16966 - remains 11944
+:1072 realloc 1032, left 12464
+
+
+
+hl flush 16998 - remains 10816
+:1072 realloc 1032, left 9192
+
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+)
+hl flush 17030 - remains 6664
+t:1072 realloc 1024, left 5888
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+s
+hl flush 17062 - remains 7480
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+sSSL: Handshake done (343 ms).
+1SSL: Switching back to 80 MHz
+TCP connected
+sonReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+
+hl flush 17094 - remains 9776
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 693
+
+swscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:17:48 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 17126 - remains 8704
+S
+hl flush 17158 - remains 12336
+ldone
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 17190 - remains 24000
+dns_tmr: dns_check_entries
+
+hl flush 17222 - remains 24256
+Edns_tmr: dns_check_entries
+
+hl flush 17254 - remains 24256
+s20:17:50 Dormitor H:54.60(54.9) T:20.60(20.4 0.0)/25.2 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 17286 - remains 24256
+
+hl flush 17318 - remains 24256
+dns_tmr: dns_check_entries
+
+hl flush 17350 - remains 24256
+dns_tmr: dns_check_entries
+
+hl flush 17382 - remains 24256
+dns_tmr: dns_check_entries
+
+hl flush 17414 - remains 24256
+
+hl flush 17446 - remains 24256
+20:17:55 Dormitor H:54.70(54.8) T:20.60(20.4 0.0)/25.2 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 17478 - remains 24256
+dns_tmr: dns_check_entries
+
+hl flush 17510 - remains 24256
+dns_tmr: dns_check_entries
+
+hl flush 17542 - remains 24256
+s
+hl flush 17574 - remains 24256
+Edns_tmr: dns_check_entries
+
+hl flush 17606 - remains 24128
++TCP connection
+ TCP connect() to: homea.herokuapp.com:443 SSL
+?dns_lookup: "homea.herokuapp.com": found = 46.137.127.234
+TcpConnection::connect result:, 0
+fwscli Connecting to Server
+wscli enc key string QF3fhJNC57caEmYNNXde1w==
+erealloc 4 -> 134
+s
+hl flush 17638 - remains 23520
+realloc 120 -> 273
+s
+hl flush 17670 - remains 22704
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 16472
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+$State:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 0
+
+$
+hl flush 17702 - remains 13560
+axl_ssl_read: Read bytes: 0
+
+$State:
+%receiving
+uCertificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 17734 - remains 13656
+:1072 realloc 1032, left 12048
+
+
+
+hl flush 17766 - remains 11064
+:1072 realloc 1032, left 8776
+
+
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 0
+
+$State:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+?D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+?00010001
+
+:Private Key: (null)
+
+)
+hl flush 17798 - remains 8120
+:1072 realloc 1024, left 5472
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+$
+hl flush 17830 - remains 7184
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+SSL: Handshake done (305 ms).
+1SSL: Switching back to 80 MHz
+TCP connected
+onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+
+hl flush 17862 - remains 7928
+[onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 693
+
+wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:17:59 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+
+hl flush 17894 - remains 9312
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+kclose notify
+X
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+wscli Websocket Closed Normally.
+rwscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 17926 - remains 11856
+mdone
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 17958 - remains 22000
+dns_tmr: dns_check_entries
+
+hl flush 17990 - remains 23960
+20:17:59 Dormitor H:54.80(54.8) T:20.60(20.4 0.0)/25.2 SetPt:21.50 needHeat:1
+tHEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 18022 - remains 23960
+dns_tmr: dns_check_entries
+
+hl flush 18054 - remains 23960
+
+hl flush 18086 - remains 23960
+dns_tmr: dns_check_entries
+
+hl flush 18118 - remains 23960
+sdns_tmr: dns_check_entries
+
+hl flush 18150 - remains 23960
+
+hl flush 18182 - remains 23960
+Edns_tmr: dns_check_entries
+20:18: 4 Dormitor H:54.70(54.8) T:20.60(20.4 0.0)/25.2 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 18214 - remains 23960
+Edns_tmr: dns_check_entries
+
+hl flush 18246 - remains 23960
+dns_tmr: dns_check_entries
+
+hl flush 18278 - remains 23960
+dns_tmr: dns_check_entries
+
+hl flush 18310 - remains 23960
+
+hl flush 18342 - remains 23960
+Edns_tmr: dns_check_entries
+
+hl flush 18374 - remains 23880
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+9dns_lookup: "homea.herokuapp.com": found = 46.137.127.234
+TcpConnection::connect result:, 0
+wscli Connecting to Server
+wscli enc key string /XAiQw+I16VQ/05WT4vaig==
+e
+hl flush 18406 - remains 23368
+realloc 4 -> 134
+srealloc 120 -> 273
+s
+hl flush 18438 - remains 23112
+OnConnected
+staticOnConnected: useSSL: 1, Err
+hl flush 18854 - remains 23664
+dns_tmr: dns_check_entries
+
+hl flush 18886 - remains 23664
+dns_tmr: dns_check_entries
+
+hl flush 18918 - remains 23664
+20:18:14 Dormitor H:54.30(54.7) T:20.60(20.5 0.0)/25.2 SetPt:21.50 needHeat:1
+tHEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 18950 - remains 23664
+Edns_tmr: dns_check_entries
+
+hl flush 18982 - remains 23664
+sdns_tmr: dns_check_entries
+
+hl flush 19014 - remains 23664
+dns_tmr: dns_check_entries
+
+hl flush 19046 - remains 23664
+sdns_tmr: dns_check_entries
+
+hl flush 19078 - remains 23664
+
+hl flush 19110 - remains 23664
+Edns_tmr: dns_check_entries
+dns_check_entry: "homea.herokuapp.com": flush
+
+hl flush 19142 - remains 23568
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+6dns_enqueue: "homea.herokuapp.com": use DNS entry 0
+dns_send: dns_servers[0] "homea.herokuapp.com": request
+DNS lookup in progress...
+
+wscli Connecting to Server
+wscli enc key string juLmAvcOkUaYp8pzuyB5QA==
+erealloc 4 -> 134
+s
+hl flush 19174 - remains 22856
+ realloc 120 -> 273
+a
+hl flush 19206 - remains 22736
+ dns_recv: "homea.herokuapp.com": response = 54.246.118.110
+DNS record found: homea.herokuapp.com = 54.246.118.110
+TcpConnection::connect result:, 0
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 15880
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+r
+hl flush 19238 - remains 12944
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 19270 - remains 14280
+g:1072 realloc 1032, left 11576
+
+
+
+hl flush 19302 - remains 11144
+:1072 realloc 1032, left 8304
+
+
+
+hl flush 19334 - remains 8016
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+):1072 realloc 1024, left 5000
+
+
+B
+hl flush 19366 - remains 6656
+State:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+:ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+20:18:20 Dormitor H:54.30(54.7) T:20.60(20.5 0.0)/25.2 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 19398 - remains 6616
+dns_tmr: dns_check_entries
+
+hl flush 19430 - remains 8176
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+ SSL: Handshake done (1143 ms).
+zSSL: Switching back to 80 MHz
+TCP connected
+ onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 693
+
+
+hl flush 19462 - remains 7400
+wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:18:20 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 19494 - remains 8776
+
+hl flush 19526 - remains 12624
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 19558 - remains 23392
+dns_tmr: dns_check_entries
+
+hl flush 19590 - remains 23392
+dns_tmr: dns_check_entries
+
+hl flush 19622 - remains 23392
+dns_tmr: dns_check_entries
+
+hl flush 19654 - remains 23392
+
+hl flush 19686 - remains 23392
+dns_tmr: dns_check_entries
+20:18:24 Dormitor H:54.20(54.6) T:20.60(20.5 0.0)/25.2 SetPt:21.50 needHeat:1
+PHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 19718 - remains 23392
+dns_tmr: dns_check_entries
+
+hl flush 19750 - remains 22608
+ddns_tmr: dns_check_entries
+
+hl flush 19782 - remains 22608
+E
+hl flush 19814 - remains 22608
+Edns_tmr: dns_check_entries
+
+hl flush 19846 - remains 23392
+dns_tmr: dns_check_entries
+
+hl flush 19878 - remains 22608
+Edns_tmr: dns_check_entries
+
+hl flush 19910 - remains 23232
+20:18:29 Dormitor H:54.30(54.6) T:20.70(20.5 0.0)/25.2 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+9HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 19942 - remains 22608
+d+TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+dns_lookup: "homea.herokuapp.com": found = 54.246.118.110
+TcpConnection::connect result:, 0
+
+hl flush 19974 - remains 22832
+(wscli Connecting to Server
+wscli enc key string 0mEWaDRwTtCkMPjjHqhwVA==
+erealloc 4 -> 134
+srealloc 120 -> 273
+s
+hl flush 20006 - remains 22496
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 15584
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+r
+hl flush 20038 - remains 14232
+axl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+bplease start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+2receiving
+Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 20070 - remains 13544
+r:1072 realloc 1032, left 11160
+
+
+
+hl flush 20102 - remains 10640
+:1072 realloc 1032, left 7888
+
+
+axl_ssl_read: Read bytes: 0
+
+s
+hl flush 20134 - remains 6360
+caxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+?D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+?00010001
+
+:Private Key: (null)
+
+):1072 realloc 1024, left 4584
+
+
+B
+hl flush 20166 - remains 7064
+6State:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+B
+hl flush 20198 - remains 8056
+8axl_ssl_read: Read bytes: 0
+
+sSSL: Handshake done (310 ms).
+1SSL: Switching back to 80 MHz
+TCP connected
+sonReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 693
+
+swscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:18:31 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+
+hl flush 20230 - remains 8272
+axl_ssl_read: Read bytes: 0
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+;close notify
+%
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+@staticOnReceive: pbuf is NULL
+TCP received: (null)
+wscli Websocket Closed Normally.
+
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 20262 - remains 8744
+
+hl flush 20294 - remains 13872
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+dns_tmr: dns_check_entries
+
+hl flush 20326 - remains 23096
+
+hl flush 20358 - remains 22312
+dns_tmr: dns_check_entries
+
+hl flush 20390 - remains 22312
+ddns_tmr: dns_check_entries
+
+hl flush 20422 - remains 23096
+20:18:34 Dormitor H:54.50(54.5) T:20.70(20.5 0.0)/25.2 SetPt:21.50 needHeat:1
+PHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 20454 - remains 23096
+
+hl flush 20486 - remains 23096
+dns_tmr: dns_check_entries
+
+hl flush 20518 - remains 22312
+Edns_tmr: dns_check_entries
+
+hl flush 20550 - remains 22312
+ddns_tmr: dns_check_entries
+
+hl flush 20582 - remains 22312
+d
+hl flush 20614 - remains 22312
+Edns_tmr: dns_check_entries
+20:18:39 Dormitor H:54.50(54.5) T:20.70(20.5 0.0)/25.2 SetPt:21.50 needHeat:1  HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 20646 - remains 23096
+dns_tmr: dns_check_entries
+
+hl flush 20678 - remains 23096
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno 1631530659.
+dns_tmr: dns_check_entries
+
+hl flush 20710 - remains 22968
++TCP connection
+ TCP connect() to: homea.herokuapp.com:443 SSL
+?dns_lookup: "homea.herokuapp.com": found = 54.246.118.110
+TcpConnection::connect result:, 0
+fwscli Connecting to Server
+wscli enc key string 5pkQf219FK4x3p2JO3MfTA==
+erealloc 4 -> 134
+s
+hl flush 20742 - remains 22344
+realloc 120 -> 273
+s
+hl flush 20774 - remains 22232
+ tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno 1631530659.
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 15288
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+r
+hl flush 20806 - remains 13904
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+treceiving
+        Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 20838 - remains 13688
+:1072 realloc 1032, left 10984
+
+
+
+hl flush 20870 - remains 10552
+:1072 realloc 1032, left 7712
+
+
+
+hl flush 20902 - remains 7424
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+):1072 realloc 1024, left 4408
+
+
+B
+hl flush 20934 - remains 6064
+State:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+@ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+LOW HEAP: 6000
+
+
+?
+hl flush 20966 - remains 7584
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 0
+
+$State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+$SSL: Handshake done (394 ms).
+PSSL: Switching back to 80 MHz
+TCP connected
+$onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$
+hl flush 20998 - remains 8328
+axl_ssl_read: Read bytes: 693
+
+$wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:18:41 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+wscli Websocket Closed Normally.
+pwscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 21030 - remains 7848
+
+hl flush 21062 - remains 11448
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno 1631530659.
+
+hl flush 21094 - remains 22752
+dns_tmr: dns_check_entries
+
+hl flush 21126 - remains 22800
+dns_tmr: dns_check_entries
+
+hl flush 21158 - remains 22016
+d23.04.2016 22:18:44 Heap: 22752
+2
+hl flush 21190 - remains 22800
+dns_tmr: dns_check_entries
+20:18:44 Dormitor H:54.40(54.5) T:20.70(20.6 0.0)/25.2 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 21222 - remains 22800
+dns_tmr: dns_check_entries
+
+hl flush 21254 - remains 22800
+dns_tmr: dns_check_entries
+
+hl flush 21286 - remains 22800
+
+hl flush 21318 - remains 22800
+dns_tmr: dns_check_entries
+
+hl flush 21350 - remains 22016
+Edns_tmr: dns_check_entries
+20:18:49 Dormitor H:54.40(54.5) T:20.70(20.6 0.0)/25.2 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 21382 - remains 22800
+dns_tmr: dns_check_entries
+
+hl flush 21414 - remains 22016
+ddns_tmr: dns_check_entries
+
+hl flush 21446 - remains 22800
+
+hl flush 21478 - remains 22672
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+4dns_lookup: "homea.herokuapp.com": found = 54.246.118.110
+TcpConnection::connect result:, 0
+wscli Connecting to Server
+wscli enc key string pGCLpBqP2cAgyVoeFGrf1w==
+erealloc 4 -> 134
+s
+hl flush 21510 - remains 22072
+ realloc 120 -> 273
+a
+hl flush 21542 - remains 22080
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 14992
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+s
+hl flush 21574 - remains 13552
+(State:
+receiving
+Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 21606 - remains 11496
+:1072 realloc 1032, left 10688
+
+
+
+hl flush 21638 - remains 9352
+2:1072 realloc 1032, left 7416
+
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+)
+hl flush 21670 - remains 5672
+:1072 realloc 1024, left 4112
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+s
+hl flush 21702 - remains 5728
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+ SSL: Handshake done (354 ms).
+SSL: Switching back to 80 MHz
+TCP connected
+ onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+
+hl flush 21734 - remains 6472
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 693
+
+ wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:18:52 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+
+hl flush 21766 - remains 6280
+Gax_port_write: send_raw_packet length 53(53)
+
+Alert:
+Pclose notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 21798 - remains 10488
+rdone
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 21830 - remains 20496
+Edns_tmr: dns_check_entries
+
+hl flush 21862 - remains 22504
+dns_tmr: dns_check_entries
+
+hl flush 21894 - remains 22504
+20:18:54 Dormitor H:54.40(54.4) T:20.70(20.6 0.0)/25.2 SetPt:21.50 needHeat:1
+PHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 21926 - remains 22504
+dns_tmr: dns_check_entries
+
+hl flush 21958 - remains 22456
+dns_tmr: dns_check_entries
+
+hl flush 21990 - remains 22504
+dns_tmr: dns_check_entries
+
+hl flush 22022 - remains 22504
+dns_tmr: dns_check_entries
+
+hl flush 22054 - remains 21720
+d
+hl flush 22086 - remains 22504
+dns_tmr: dns_check_entries
+
+hl flush 22118 - remains 22504
+20:18:59 Dormitor H:54.40(54.4) T:20.70(20.6 0.0)/25.2 SetPt:21.50 needHeat:1
+PHEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 22150 - remains 21720
+ddns_tmr: dns_check_entries
+
+hl flush 22182 - remains 21720
+ddns_tmr: dns_check_entries
+
+hl flush 22214 - remains 21720
+d
+hl flush 22246 - remains 22360
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+@dns_lookup: "homea.herokuapp.com": found = 54.246.118.110
+TcpConnection::connect result:, 0
+wscli Connecting to Server
+wscli enc key string roO0FbvTu8dG0M6OfgT7Hw==
+erealloc 4 -> 134
+s
+hl flush 22278 - remains 21776
+ realloc 120 -> 273
+a
+hl flush 22310 - remains 21784
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 14696
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+s
+hl flush 22342 - remains 13160
+PState:
+^receiving
+@Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 22374 - remains 11496
+:1072 realloc 1032, left 10392
+
+
+
+hl flush 22406 - remains 9344
+:1072 realloc 1032, left 7120
+
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+)
+hl flush 22438 - remains 5920
+:1072 realloc 1024, left 3816
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+Nax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+s
+hl flush 22470 - remains 5432
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+ SSL: Handshake done (365 ms).
+SSL: Switching back to 80 MHz
+TCP connected
+ onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+
+hl flush 22502 - remains 6120
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 693
+
+ wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:19:03 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+
+hl flush 22534 - remains 7592
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
++close notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+hwscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 22566 - remains 10120
+tdone
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+8-TCP connection
+
+dns_tmr: dns_check_entries
+
+hl flush 22598 - remains 20248
+
+hl flush 22630 - remains 22208
+dns_tmr: dns_check_entries
+
+hl flush 22662 - remains 22208
+20:19: 4 Dormitor H:54.40(54.4) T:20.80(20.6 0.0)/25.3 SetPt:21.50 needHeat:1
+PHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 22694 - remains 22208
+
+hl flush 22726 - remains 21424
+dns_tmr: dns_check_entries
+
+hl flush 22758 - remains 21424
+Edns_tmr: dns_check_entries
+
+hl flush 22790 - remains 22208
+dns_tmr: dns_check_entries
+
+hl flush 22822 - remains 21424
+d
+hl flush 22854 - remains 21424
+d20:19: 9 Dormitor H:54.40(54.4) T:20.80(20.6 0.0)/25.3 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 22886 - remains 22208
+dns_tmr: dns_check_entries
+
+hl flush 22918 - remains 22208
+dns_tmr: dns_check_entries
+
+hl flush 22950 - remains 22208
+dns_tmr: dns_check_entries
+
+hl flush 22982 - remains 21424
+d
+hl flush 23014 - remains 22152
+2+TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+9dns_lookup: "homea.herokuapp.com": found = 54.246.118.110
+TcpConnection::connect result:, 0
+wscli Connecting to Server
+wscli enc key string zgXOxG4IL6orXD8gAlSg7Q==
+erealloc 4 -> 134
+s
+hl flush 23046 - remains 21472
+realloc 120 -> 273
+s
+hl flush 23078 - remains 21520
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 14400
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+s
+hl flush 23110 - remains 12840
+(State:
+receiving
+Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 23142 - remains 11176
+:1072 realloc 1032, left 10096
+
+
+
+hl flush 23174 - remains 9024
+:1072 realloc 1032, left 6824
+
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+)
+hl flush 23206 - remains 5104
+:1072 realloc 1024, left 3520
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+s
+hl flush 23238 - remains 5112
+LOW HEAP: 5112
+
+
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 0
+
+$State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+$SSL: Handshake done (295 ms).
+PSSL: Switching back to 80 MHz
+TCP connected
+$onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+
+hl flush 23270 - remains 5856
+onReadyToSendData: 2
+saxl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 693
+
+$wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:19:13 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+K
+
+oaxl_ssl_read: Read bytes: -3
+
+
+hl flush 23302 - remains 5712
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 23334 - remains 9920
+udone
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 23366 - remains 21632
+dns_tmr: dns_check_entries
+
+hl flush 23398 - remains 21888
+20:19:14 Dormitor H:54.40(54.4) T:20.70(20.6 0.0)/25.2 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 23430 - remains 21888
+dns_tmr: dns_check_entries
+
+hl flush 23462 - remains 21888
+%dns_tmr: dns_check_entries
+
+hl flush 23494 - remains 21888
+
+hl flush 23526 - remains 21888
+Edns_tmr: dns_check_entries
+
+hl flush 23558 - remains 21888
+Edns_tmr: dns_check_entries
+
+hl flush 23590 - remains 21888
+s20:19:19 Dormitor H:54.40(54.4) T:20.80(20.6 0.0)/25.3 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 23622 - remains 21888
+
+hl flush 23654 - remains 21888
+sdns_tmr: dns_check_entries
+dns_check_entry: "homea.herokuapp.com": flush
+
+hl flush 23686 - remains 21888
+dns_tmr: dns_check_entries
+
+hl flush 23718 - remains 21888
+dns_tmr: dns_check_entries
+
+hl flush 23750 - remains 21888
+
+hl flush 23782 - remains 21824
+2+TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+8dns_enqueue: "homea.herokuapp.com": use DNS entry 0
+dns_send: dns_servers[0] "homea.herokuapp.com": request
+DNS lookup in progress...
+
+wscli Connecting to Server
+wscli enc key string a7h/+QKUxmr2PXs8nnqZFA==
+erealloc 4 -> 134
+s
+hl flush 23814 - remains 21056
+realloc 120 -> 273
+sdns_recv: "homea.herokuapp.com": response = 46.137.181.240
+DNS record found: homea.herokuapp.com = 46.137.181.240
+TcpConnection::connect result:, 0
+
+hl flush 23846 - remains 21096
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 14104
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+
+hl flush 23878 - remains 12664
+aaxl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 23910 - remains 11304
+:1072 realloc 1032, left 9680
+
+
+
+hl flush 23942 - remains 8696
+:1072 realloc 1032, left 6408
+
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+)
+hl flush 23974 - remains 5232
+:1072 realloc 1024, left 3104
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+5ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+
+hl flush 24006 - remains 4840
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+ SSL: Handshake done (297 ms).
+SSL: Switching back to 80 MHz
+TCP connected
+ onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+
+hl flush 24038 - remains 7144
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 693
+
+ wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:19:23 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+
+hl flush 24070 - remains 5392
+7ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+~close notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 24102 - remains 9600
+udone
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 24134 - remains 21368
+20:19:24 Dormitor H:54.10(54.3) T:20.80(20.7 0.0)/25.3 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 24166 - remains 21616
+dns_tmr: dns_check_entries
+
+hl flush 24198 - remains 21616
+dns_tmr: dns_check_entries
+
+hl flush 24230 - remains 21616
+dns_tmr: dns_check_entries
+
+hl flush 24262 - remains 21616
+
+hl flush 24294 - remains 21568
+dns_tmr: dns_check_entries
+
+hl flush 24326 - remains 21616
+20:19:29 Dormitor H:53.90(54.3) T:20.80(20.7 0.0)/25.3 SetPt:21.50 needHeat:1
+PHEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 24358 - remains 21616
+dns_tmr: dns_check_entries
+
+hl flush 24390 - remains 21616
+
+hl flush 24422 - remains 20832
+Edns_tmr: dns_check_entries
+
+hl flush 24454 - remains 21616
+dns_tmr: dns_check_entries
+
+hl flush 24486 - remains 21616
+dns_tmr: dns_check_entries
+
+hl flush 24518 - remains 21616
+
+hl flush 24550 - remains 21488
++TCP connection
+ TCP connect() to: homea.herokuapp.com:443 SSL
+?dns_lookup: "homea.herokuapp.com": found = 46.137.181.240
+TcpConnection::connect result:, 0
+fwscli Connecting to Server
+wscli enc key string kgYyAzGtaBz1wJFzR0LvVg==
+erealloc 4 -> 134
+s
+hl flush 24582 - remains 20864
+realloc 120 -> 273
+s
+hl flush 24614 - remains 20752
+ OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 13808
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+r20:19:34 Dormitor H:53.80(54.3) T:20.80(20.7 0.0)/25.3 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+kHEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 24646 - remains 10872
+Edns_tmr: dns_check_entries
+
+hl flush 24678 - remains 10872
+axl_ssl_read: Read bytes: 0
+
+KState:
+receiving
+?Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+Wplease start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+Kaxl_ssl_read: Read bytes: 0
+
+Kaxl_ssl_read: Read bytes: 0
+
+KState:
+receiving
+Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 24710 - remains 12064
+2:1072 realloc 1032, left 9384
+
+
+
+hl flush 24742 - remains 8944
+:1072 realloc 1032, left 6112
+
+
+
+hl flush 24774 - remains 6096
+axl_ssl_read: Read bytes: 0
+
+Kaxl_ssl_read: Read bytes: 0
+
+KState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+):1072 realloc 1024, left 2808
+
+
+B
+hl flush 24806 - remains 5520
+State:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+Kaxl_ssl_read: Read bytes: 0
+
+Kaxl_ssl_read: Read bytes: 0
+
+K
+hl flush 24838 - remains 6024
+kaxl_ssl_read: Read bytes: 0
+
+KState:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+KSSL: Handshake done (1199 ms).
+1SSL: Switching back to 80 MHz
+TCP connected
+KonReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+Kaxl_ssl_read: Read bytes: 693
+
+K
+hl flush 24870 - remains 5352
+wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:19:34 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 24902 - remains 6728
+
+hl flush 24934 - remains 10576
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+dns_tmr: dns_check_entries
+
+hl flush 24966 - remains 21296
+
+hl flush 24998 - remains 21296
+dns_tmr: dns_check_entries
+
+hl flush 25030 - remains 21296
+Edns_tmr: dns_check_entries
+
+hl flush 25062 - remains 21296
+
+hl flush 25094 - remains 21296
+dns_tmr: dns_check_entries
+20:19:39 Dormitor H:53.80(54.2) T:20.80(20.7 0.0)/25.3 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 25126 - remains 21296
+Edns_tmr: dns_check_entries
+
+hl flush 25158 - remains 21296
+sdns_tmr: dns_check_entries
+
+hl flush 25190 - remains 21296
+dns_tmr: dns_check_entries
+
+hl flush 25222 - remains 21296
+tcp_input: no PCB match found, resetting.
+
+hl flush 25254 - remains 21152
+tcp_rst: seqno 0 ackno 1615585756.
+dns_tmr: dns_check_entries
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno 1615585756.
+
+hl flush 25286 - remains 21296
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno 1615585756.
+
+hl flush 25318 - remains 21256
+23.04.2016 22:19:44 Heap: 21272
+20:19:44 Dormitor H:53.80(54.2) T:20.80(20.7 0.0)/25.3 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 25350 - remains 21296
+dns_tmr: dns_check_entries
+
+hl flush 25382 - remains 21184
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+dns_lookup: "homea.herokuapp.com": found = 46.137.181.240
+TcpConnection::connect result:, 0
+wscli Connecting to Server
+wscli enc key string hPzunH3ChLhnbGGi+SX6mw==
+erealloc 4 -> 134
+s
+hl flush 25414 - remains 20592
+ realloc 120 -> 273
+a
+hl flush 25446 - remains 20504
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 13512
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+~please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+s
+hl flush 25478 - remains 11976
+State:
+eceiving
+LCertificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 25510 - remains 10312
+u:1072 realloc 1032, left 9208
+
+
+
+hl flush 25542 - remains 8160
+!:1072 realloc 1032, left 5936
+
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+)
+hl flush 25574 - remains 4216
+:1072 realloc 1024, left 2632
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+Pax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+s
+hl flush 25606 - remains 4224
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+SSL: Handshake done (305 ms).
+1SSL: Switching back to 80 MHz
+TCP connected
+onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+
+hl flush 25638 - remains 4968
+onReadyToSendData: 2
+saxl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 693
+
+wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:19:45 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+
+hl flush 25670 - remains 6432
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+}
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?LOW HEAP: 4968
+
+
+?onReadyToSendData: 2
+dns_tmr: dns_check_entries
+staticOnReceive: pbuf is NULL
+$TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 25702 - remains 7056
+S
+hl flush 25734 - remains 10688
+udone
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 25766 - remains 20952
+(dns_tmr: dns_check_entries
+
+hl flush 25798 - remains 21000
+dns_tmr: dns_check_entries
+
+hl flush 25830 - remains 21000
+20:19:49 Dormitor H:53.70(54.2) T:20.80(20.7 0.0)/25.3 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 25862 - remains 21000
+Edns_tmr: dns_check_entries
+
+hl flush 25894 - remains 21000
+dns_tmr: dns_check_entries
+
+hl flush 25926 - remains 21000
+Edns_tmr: dns_check_entries
+
+hl flush 25958 - remains 21000
+
+hl flush 25990 - remains 21000
+dns_tmr: dns_check_entries
+
+hl flush 26022 - remains 21000
+dns_tmr: dns_check_entries
+
+hl flush 26054 - remains 21000
+20:19:54 Dormitor H:53.60(54.1) T:20.80(20.7 0.0)/25.3 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 26086 - remains 21000
+sdns_tmr: dns_check_entries
+
+hl flush 26118 - remains 21000
+
+hl flush 26150 - remains 20904
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+0dns_lookup: "homea.herokuapp.com": found = 46.137.181.240
+TcpConnection::connect result:, 0
+wscli Connecting to Server
+wscli enc key string 1rSRcZmNw4bydEzSY9+KpQ==
+erealloc 4 -> 134
+s
+hl flush 26182 - remains 20288
+realloc 120 -> 273
+s
+hl flush 26214 - remains 20160
+ OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 13216
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+Fplease start sntp first !
+
+
+hl flush 26246 - remains 11776
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 26278 - remains 10704
+:1072 realloc 1032, left 8792
+
+
+
+hl flush 26310 - remains 7912
+:1072 realloc 1032, left 5520
+
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+)
+hl flush 26342 - remains 5152
+:1072 realloc 1024, left 2216
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+i
+hl flush 26374 - remains 3528
+ax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+sSSL: Handshake done (314 ms).
+1SSL: Switching back to 80 MHz
+TCP connected
+sonReadyToSendData: 0
+
+hl flush 26406 - remains 4104
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+dns_tmr: dns_check_entries
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 693
+
+swscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:19:57 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+
+hl flush 26438 - remains 5792
+axl_ssl_read: Read bytes: 0
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?LOW HEAP: 4392
+
+
+staticOnReceive: pbuf is NULL
+%TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request                                                    SSL: closing ...
+l
+hl flush 26470 - remains 7040
+
+hl flush 26502 - remains 11744
+
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 26534 - remains 20704
+dns_tmr: dns_check_entries
+
+hl flush 26566 - remains 20704
+20:19:59 Dormitor H:53.60(54.0) T:20.80(20.7 0.0)/25.3 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 26598 - remains 20704
+dns_tmr: dns_check_entries
+
+hl flush 26630 - remains 20704
+
+hl flush 26662 - remains 20704
+sdns_tmr: dns_check_entries
+
+hl flush 26694 - remains 20704
+dns_tmr: dns_check_entries
+
+hl flush 26726 - remains 20704
+s
+hl flush 26758 - remains 20704
+dns_tmr: dns_check_entries
+
+hl flush 26790 - remains 20704
+20:20: 3 Dormitor H:53.60(54.0) T:20.80(20.7 0.0)/25.3 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 26822 - remains 20704
+sdns_tmr: dns_check_entries
+
+hl flush 26854 - remains 20704
+sdns_tmr: dns_check_entries
+
+hl flush 26886 - remains 20704
+
+hl flush 26918 - remains 20608
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+7dns_lookup: "homea.herokuapp.com": found = 46.137.181.240
+TcpConnection::connect result:, 0
+wscli Connecting to Server
+wscli enc key string IKrTno+KxIVOPb5rTN6Iaw==
+erealloc 4 -> 134
+s
+hl flush 26950 - remains 19992
+realloc 120 -> 273
+s
+hl flush 26982 - remains 19864
+ OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 12920
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+
+hl flush 27014 - remains 11480
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 27046 - remains 10408
+:1072 realloc 1032, left 8496
+
+
+
+hl flush 27078 - remains 7616
+:1072 realloc 1032, left 5224
+
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+)
+hl flush 27110 - remains 4856
+:1072 realloc 1024, left 1920
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+|ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+i
+hl flush 27142 - remains 3488
+ax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+sSSL: Handshake done (308 ms).
+1SSL: Switching back to 80 MHz
+TCP connected
+sonReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+
+hl flush 27174 - remains 4376
+monReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 693
+
+swscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:20:07 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+
+hl flush 27206 - remains 5760
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+3close notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+@staticOnReceive: pbuf is NULL
+TCP received: (null)
+wscli Websocket Closed Normally.
+,wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 27238 - remains 8304
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 27270 - remains 18448
+dns_tmr: dns_check_entries
+
+hl flush 27302 - remains 20408
+Edns_tmr: dns_check_entries
+
+hl flush 27334 - remains 20408
+20:20: 8 Dormitor H:53.60(53.9) T:20.80(20.7 0.0)/25.3 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 27366 - remains 20408
+
+hl flush 27398 - remains 20408
+dns_tmr: dns_check_entries
+
+hl flush 27430 - remains 20408
+dns_tmr: dns_check_entries
+
+hl flush 27462 - remains 20408
+Edns_tmr: dns_check_entries
+
+hl flush 27494 - remains 20408
+
+hl flush 27526 - remains 20408
+20:20:13 Dormitor H:53.70(53.9) T:20.80(20.7 0.0)/25.3 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 27558 - remains 20408
+dns_tmr: dns_check_entries
+
+hl flush 27590 - remains 20408
+dns_tmr: dns_check_entries
+
+hl flush 27622 - remains 20408
+
+hl flush 27654 - remains 20408
+dns_tmr: dns_check_entries
+
+hl flush 27686 - remains 20408
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+4dns_lookup: "homea.herokuapp.com": found = 46.137.181.240
+
+hl flush 27718 - remains 19848
+ATcpConnection::connect result:, 0
+wscli Connecting to Server
+wscli enc key string K6n+QtWk7GMzsfOMCrlz2A==
+erealloc 4 -> 134
+srealloc 120 -> 273
+s
+hl flush 27750 - remains 19568
+ OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 12624
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+r
+hl flush 27782 - remains 9688
+axl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+nreceiving
+JCertificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 27814 - remains 11024
+:1072 realloc 1032, left 8320
+
+
+
+hl flush 27846 - remains 7888
+:1072 realloc 1032, left 5048
+
+
+
+hl flush 27878 - remains 5024
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+):1072 realloc 1024, left 1744
+
+
+B
+hl flush 27910 - remains 3424
+State:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+{ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+sLOW HEAP: 3336
+
+
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 0
+
+$
+hl flush 27942 - remains 4840
+pState:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+$SSL: Handshake done (341 ms).
+PSSL: Switching back to 80 MHz
+TCP connected
+$onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axl_ssl_read: Read bytes: 693
+
+$wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:20:18 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+
+hl flush 27974 - remains 5688
+axl_ssl_read: Read bytes: 0
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 28006 - remains 5864
+
+hl flush 28038 - remains 10744
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+dns_tmr: dns_check_entries
+
+hl flush 28070 - remains 20112
+20:20:18 Dormitor H:53.70(53.9) T:20.80(20.7 0.0)/25.3 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 28102 - remains 20112
+Edns_tmr: dns_check_entries
+
+hl flush 28134 - remains 20112
+dns_tmr: dns_check_entries
+
+hl flush 28166 - remains 20112
+dns_tmr: dns_check_entries
+
+hl flush 28198 - remains 20112
+dns_tmr: dns_check_entries
+
+hl flush 28230 - remains 20112
+
+hl flush 28262 - remains 20112
+dns_tmr: dns_check_entries
+
+hl flush 28294 - remains 20112
+20:20:23 Dormitor H:53.70(53.8) T:20.80(20.7 0.0)/25.3 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+?HEATER(1) TX FAIL:1
+(RX timeout
+?HEATER(1) TX FAIL:2
+(RX timeout
+?HEATER(1) TX FAIL:3
+(RX timeout
+?HEATER(1) TX FAIL:4
+(RX timeout
+?HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 28326 - remains 20112
+sdns_tmr: dns_check_entries
+
+hl flush 28358 - remains 20112
+
+hl flush 28390 - remains 20112
+Edns_tmr: dns_check_entries
+dns_check_entry: "homea.herokuapp.com": flush
+
+hl flush 28422 - remains 20112
+dns_tmr: dns_check_entries
+
+hl flush 28454 - remains 20112
+s
+hl flush 28486 - remains 20048
+2+TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+1dns_enqueue: "homea.herokuapp.com": use DNS entry 0
+dns_send: dns_servers[0] "homea.herokuapp.com": request
+DNS lookup in progress...
+
+wscli Connecting to Server
+wscli enc key string k5dDl9LDo25zZSiGVbxQIw==
+erealloc 4 -> 134
+s
+hl flush 28518 - remains 19304
+ realloc 120 -> 273
+adns_recv: "homea.herokuapp.com": response = 46.137.90.245
+DNS record found: homea.herokuapp.com = 46.137.90.245
+TcpConnection::connect result:, 0
+
+hl flush 28550 - remains 19320
+OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 12328
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+?axl_ssl_read: Read bytes: 0
+
+
+hl flush 28582 - remains 10888
+aaxl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+        receiving
+YCertificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 28614 - remains 9528
+2:1072 realloc 1032, left 7904
+
+
+
+hl flush 28646 - remains 6920
+2:1072 realloc 1032, left 4632
+
+
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+)
+hl flush 28678 - remains 3456
+:1072 realloc 1024, left 1328
+
+
+BState:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+aax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+
+hl flush 28710 - remains 3064
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 0
+
+ State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+ SSL: Handshake done (293 ms).
+SSL: Switching back to 80 MHz
+TCP connected
+ onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+
+hl flush 28742 - remains 3808
+dns_tmr: dns_check_entries
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+ axl_ssl_read: Read bytes: 693
+
+ wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:20:28 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+
+hl flush 28774 - remains 5224
+Kax_port_write: send_raw_packet length 53(53)
+
+Alert:
+close notify
+&
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 28806 - remains 7528
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+
+hl flush 28838 - remains 17832
+20:20:28 Dormitor H:53.50(53.8) T:20.80(20.7 0.0)/25.3 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 28870 - remains 19840
+dns_tmr: dns_check_entries
+
+hl flush 28902 - remains 19840
+dns_tmr: dns_check_entries
+
+hl flush 28934 - remains 19056
+Edns_tmr: dns_check_entries
+
+hl flush 28966 - remains 19840
+
+hl flush 28998 - remains 19056
+dns_tmr: dns_check_entries
+
+hl flush 29030 - remains 19840
+20:20:33 Dormitor H:53.60(53.7) T:20.90(20.8 0.0)/25.3 SetPt:21.50 needHeat:1
+PHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 29062 - remains 19840
+dns_tmr: dns_check_entries
+
+
+hl flush 29222 - remains 19056
+d
+hl flush 29254 - remains 19696
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+1dns_lookup: "homea.herokuapp.com": found = 46.137.90.245
+TcpConnection::connect result:, 0
+wscli Connecting to Server
+wscli enc key string lmR+L3/K6w3GIWkRZIfkMg==
+erealloc 4 -> 134
+s
+hl flush 29286 - remains 19112
+ realloc 120 -> 273
+a
+hl flush 29318 - remains 19024
+(OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 12032
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+r20:20:38 Dormitor H:53.50(53.7) T:20.90(20.8 0.0)/25.3 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+kHEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 29350 - remains 9096
+
+hl flush 29382 - remains 10600
+axl_ssl_read: Read bytes: 0
+
+JState:
+receiving
+?Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+?axl_ssl_read: Read bytes: 0
+
+Jaxl_ssl_read: Read bytes: 0
+
+Jaxl_ssl_read: Read bytes: 0
+
+JState:
+.receiving
+lCertificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 29414 - remains 9920
+:1072 realloc 1032, left 7608
+
+
+
+hl flush 29446 - remains 7080
+:1072 realloc 1032, left 4336
+
+
+axl_ssl_read: Read bytes: 0
+
+Jaxl_ssl_read: Read bytes: 0
+
+J
+hl flush 29478 - remains 2808
+cState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+?D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC
+hl flush 29510 - remains 4064
+State:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+Jaxl_ssl_read: Read bytes: 0
+
+Jaxl_ssl_read: Read bytes: 0
+
+Jaxl_ssl_read: Read bytes: 0
+
+JState:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+B
+hl flush 29542 - remains 4504
+axl_ssl_read: Read bytes: 0
+
+JSSL: Handshake done (1140 ms).
+1SSL: Switching back to 80 MHz
+TCP connected
+JonReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+Jaxl_ssl_read: Read bytes: 693
+
+Jwscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:20:39 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+
+hl flush 29574 - remains 4672
+Paxl_ssl_read: Read bytes: 0
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+!close notify
+
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+nstaticOnReceive: pbuf is NULL
+!TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+
+hl flush 29606 - remains 5336
+
+hl flush 29638 - remains 10512
+done
+
+lTCP connection closing
+axl_free: Freeing 1 tcp item
+-TCP connection
+dns_tmr: dns_check_entries
+
+hl flush 29670 - remains 19544
+dns_tmr: dns_check_entries
+
+hl flush 29702 - remains 18760
+d
+hl flush 29734 - remains 19544
+dns_tmr: dns_check_entries
+
+hl flush 29766 - remains 19544
+dns_tmr: dns_check_entries
+
+hl flush 29798 - remains 18760
+d20:20:43 Dormitor H:53.60(53.6) T:20.90(20.8 0.0)/25.3 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 29830 - remains 19544
+23.04.2016 22:20:44 Heap: 19496
+
+hl flush 29862 - remains 18760
+dns_tmr: dns_check_entries
+
+hl flush 29894 - remains 19544
+dns_tmr: dns_check_entries
+
+hl flush 29926 - remains 18760
+E
+hl flush 29958 - remains 19544
+dns_tmr: dns_check_entries
+
+hl flush 29990 - remains 18760
+Edns_tmr: dns_check_entries
+20:20:48 Dormitor H:53.60(53.6) T:20.90(20.8 0.0)/25.3 SetPt:21.50 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl flush 30022 - remains 19544
+dns_tmr: dns_check_entries
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno 1179834722.
+
+hl flush 30054 - remains 18760
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+dns_lookup: "homea.herokuapp.com": found = 46.137.90.245
+TcpConnection::connect result:, 0
+
+hl flush 30086 - remains 18984
+(wscli Connecting to Server
+wscli enc key string Un5Lz+mLt2LajRK/FaXgtg==
+erealloc 4 -> 134
+srealloc 120 -> 273
+s
+hl flush 30118 - remains 18680
+ OnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 11736
+
+
+please start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+r
+hl flush 30150 - remains 10352
+axl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+eplease start sntp first !
+
+?axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+[Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 30182 - remains 9704
+r:1072 realloc 1032, left 7312
+
+
+
+hl flush 30214 - remains 6856
+:1072 realloc 1032, left 4040
+
+
+
+hl flush 30246 - remains 3736
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+):1072 realloc 1024, left 736
+
+
+B
+hl flush 30278 - remains 4000
+State:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+ax_port_write: send_raw_packet length 6(6)
+
+$State:
+isending
+Finished (16)
+
+iax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+stcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno 1179834722.
+axl_ssl_read: Read bytes: 0
+
+
+hl flush 30310 - remains 3952
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 0
+
+State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+Baxl_ssl_read: Read bytes: 0
+
+SSL: Handshake done (303 ms).
+1SSL: Switching back to 80 MHz
+TCP connected
+onReadyToSendData: 0
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+axl_ssl_read: Read bytes: 693
+
+
+hl flush 30342 - remains 3280
+wscli RX data HTTP/1.1 503 Service Unavailable
+
+Connection: keep-alive
+
+Server: Cowboy
+
+Date: Sat, 23 Apr 2016 20:20:49 GMT
+
+Content-Length: 484
+
+Content-Type: text/html; charset=utf-8
+
+Cache-Control: no-cache, no-store
+
+
+
+<!DOCTYPE,(...)wscli cannot find key
+wscli Key Not Verified.
+dwscli: Connection with server not successful
+6onReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+=close notify
+C
+
+oaxl_ssl_read: Read bytes: -3
+
+SSL: Got error: -3
+?staticOnReceive: pbuf is NULL
+!TCP received: (null)
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+SSL: closing ...
+l
+hl flush 30374 - remains 4608
+
+hl flush 30406 - remains 8216
+done
+
+lTCP connection closing
+Naxl_free: Freeing 1 tcp item
+-TCP connection
+
+dns_tmr: dns_check_entries
+
+hl flush 30438 - remains 19224
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 0 ackno 1179834722.
+
+hl flush 30470 - remains 19224
+dns_tmr: dns_check_entries
+
+hl flush 30502 - remains 19224
+dns_tmr: dns_check_entries
+
+hl flush 30534 - remains 19224
+20:20:53 Dormitor H:53.70(53.6) T:20.90(20.8 0.0)/25.3 SetPt:21.50 needHeat:1
+tHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 30566 - remains 19224
+dns_tmr: dns_check_entries
+
+hl flush 30598 - remains 19224
+dns_tmr: dns_check_entries
+
+hl flush 30630 - remains 19224
+dns_tmr: dns_check_entries
+
+hl flush 30662 - remains 19224
+s
+hl flush 30694 - remains 19224
+Edns_tmr: dns_check_entries
+
+hl flush 30726 - remains 19224
+20:20:58 Dormitor H:53.70(53.6) T:20.90(20.8 0.0)/25.3 SetPt:21.50 needHeat:1
+HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl flush 30758 - remains 19224
+dns_tmr: dns_check_entries
+
+hl flush 30790 - remains 19224
+s+TCP connection
+STCP connect() to: homea.herokuapp.com:443 SSL
+2
+hl flush 30822 - remains 18824
+dns_lookup: "homea.herokuapp.com": found = 46.137.90.245
+TcpConnection::connect result:, 0
+@wscli Connecting to Server
+wscli enc key string mJ142aQVSags3JzOyzg1/Q==
+erealloc 4 -> 134
+s
+hl flush 30854 - remains 18488
+realloc 120 -> 273
+sOnConnected
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ :551 malloc 6864, left 11440
+
+
+
+hl flush 30886 - remains 10616
+oplease start sntp first !
+
+aState:
+sending
+Client Hello (1)
+
+iax_port_write: send_raw_packet length 52(52)
+
+SSL: handshake is in progress...
+raxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+please start sntp first !
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Certificate (11)
+
+iSSL > do_clnt_handshake 11
+
+hl flush 30918 - remains 9888
+]:1072 realloc 1032, left 7136
+
+
+
+hl flush 30950 - remains 7112
+
+hl flush 30982 - remains 4672
+:1072 realloc 1032, left 3864
+
+
+axl_ssl_read: Read bytes: 0
+
+saxl_ssl_read: Read bytes: 0
+
+sState:
+receiving
+Server Hello Done (14)
+
+iSSL > do_clnt_handshake 14
+BSSL > send_client_key_xchg
+-----------------   RSA DEBUG   ----------------
+
+Size:   256
+
+-Modulus: (size 64)
+
+@D2D1B80340854182214FFCF0DD34183ED99759A1B507F881D7F28527927B6F9F56A583C57658A54F68B05436A03A476837646115643B1B89A6C9F0D8C5BDBAF0476E69EC18040D65721ADE87DE945BBFF0400EA58CBA4A6A838D9842614E2D369B947DAC7E3417D0B4C728FE0896DB727BFC41FE4575419255DECF00AF40DEAD3FE64AA7FB8CEBDBF24F2B486501AE9A29A066BC65DFACC963F2C5C5E90CE1B4C49D89D8715F58266BD9D38B627123D6BFE824D44D6295FC48A8F0C382E7801C72BBBFF92660059A392BBB1896CF8B2C73CDA3D1E014F277FE23933BE57A03CFC30C77580C18FDA749A4E3F6F2B8DE60F6A63D6A14E6EE68A73618B957D59FBD
+
+:Public Key: (size 1)
+
+@00010001
+
+:Private Key: (null)
+
+):1072 realloc 1024 failed, left 1072
+
+
+?
+
+*RESET*
+
+
+
+Soft WDT reset
+
+
+
+ctx: sys
+
+sp: 3ffff3d0 end: 3fffffb0 offset: 01b0
+
+stack:
+
+3ffff580:  69616620 2c64656c 66656c20 64252074
+
+3ffff590:  3f0a0a0d 3fff9700 00000204 00000430
+
+3ffff5a0:  3ffeba80 00000080 00000208 40104ebc
+
+3ffff5b0:  00000ecf 00000002 3ffff5a4 40255d4f
+
+3ffff5c0:  00000000 0000005d 0000039d 40255c83
+
+3ffff5d0:  3ffeba80 3fff97cc 00000100 402488f0
+
+3ffff5e0:  3ffff7c7 3ffff660 3ffff666 40104e74
+
+3ffff5f0:  00363532 3fff9f84 3fff80d6 40255c83
+
+3ffff600:  00000000 00000000 ac5d79b4 a1e84b9e
+
+3ffff610:  a1f7f72b 02215854 0f37c855 7fc99f0c
+
+3ffff620:  3ffff7a0 3ffff790 00000004 3ffff790
+
+3ffff630:  3ffff670 3ffff660 00000004 02081a26
+
+3ffff640:  00000000 3fff6f3c 3ffeb98f 40247b0c
+
+3ffff650:  3ffff670 3ffff660 00000004 40247aae
+
+3ffff660:  657a6953 3ffeb98f 0000000c 3ffff69c
+
+3ffff670:  0a0a296c 6c756e28 55424544 4024804a
+
+3ffff680:  00000000 3fff6f3c 3ffeb98f 3fff97cc
+
+3ffff690:  00000082 00000082 3fffac4c 40255efb
+
+3ffff6a0:  00000082 3fff97cc 3fffac4c 40256091
+
+3ffff6b0:  0000006d 3fff97cc 3fffac04 40256219
+
+3ffff6c0:  000718bc 00000000 3fff452c 40256219
+
+3ffff6d0:  3fff1d9c 00006368 00000001 3fff97cc
+
+3ffff6e0:  00000080 00000080 3fffac04 40255efb
+
+3ffff6f0:  00000080 3fff97cc 3fffac04 40256091
+
+3ffff700:  3ffeba80 00000010 00000004 402488f0
+
+3ffff710:  00000100 00000001 000000cd 3ffeba80
+
+3ffff720:  00000040 3fff97cc 3fffac1c 402560b0
+
+3ffff730:  3ffe836c 3fff7b98 00000000 40247aae
+
+3ffff740:  3ffff8c0 3ffff8b0 00000004 40256219
+
+3ffff750:  00000100 20747372 000a0a21 00000000
+
+3ffff760:  3ffff7a0 3ffff790 00000004 00000004
+
+3ffff770:  3fff7b71 3fff97cc 3fff9e1c 40256091
+
+3ffff780:  3ffff7a0 3ffff790 00000004 6e65696c
+
+3ffff790:  00000000 d2d1b803 3fffac34 3fff97cc
+
+3ffff7a0:  00000000 00000000 d2d1b803 00000000
+
+3ffff7b0:  00000001 00000000 40256425 3fff97cc
+
+3ffff7c0:  3fffac34 3fffac04 3fffa024 40256392
+
+3ffff7d0:  0002e4a8 00000041 00000041 3fffbb50
+
+3ffff7e0:  00000000 00000000 0002e4a8 00000000
+
+3ffff7f0:  00000082 3fffac34 402568b1 40255fb6
+
+3ffff800:  0000003f 0000003f 00000008 3fff97cc
+
+3ffff810:  3fffac34 00000040 3fffac34 3fff97cc
+
+3ffff820:  3fffac34 00000040 3fff97cc 40256e29
+
+3ffff830:  3fff9bc4 0000003f 2adf654f 40256844
+
+3ffff840:  3fffac34 00000010 3fff9e1c 3fffac04
+
+3ffff850:  3fff9e04 0000000f 3fff97cc 4025705e
+
+3ffff860:  00000001 3fff9e1c 00000000 3ffff9d0
+
+3ffff870:  972e955c 40241e57 40241e57 00000010
+
+3ffff880:  3fff7b79 3fff9b94 3fff7b77 00000030
+
+3ffff890:  00000100 3fff9b94 3fff7b77 40258136
+
+3ffff8a0:  00000100 3fff9b94 3fff7b77 402582ea
+
+3ffff8b0:  000000d0 00000000 3ffff8e0 0000000a
+
+3ffff8c0:  7338371a 0000000a 3fff7b71 00000004
+
+3ffff8d0:  3fff7b71 3fff6f3c 3fff7b71 4024c7b1
+
+3ffff8e0:  8a450203 8465248c 081be2bd 2857801e
+
+3ffff8f0:  e6a76e0f d2a8f7fb 7dba45a1 e314f5ea
+
+3ffff900:  9dd02acf bdc19017 698c8eb0 371a6de3
+
+3ffff910:  00000000 00000000 00000000 00000000
+
+3ffff920:  00000000 00000000 00000000 00000000
+
+3ffff930:  b4795dac 9e4be8a1 2bf7f7a1 54582102
+
+3ffff940:  55c8370f 0c9fc97f 677fb308 77a13206
+
+3ffff950:  00000000 3ffffac0 00000004 000001f4
+
+3ffff960:  3ffe836c 3fff717c 00000000 40247aae
+
+3ffff970:  000004b5 000004b5 000003a1 2d203638
+
+3ffff980:  0000006d 00000000 000002c6 3fff9830
+
+3ffff990:  3ffff9d0 3ffff9c0 00000004 000004c4
+
+3ffff9a0:  3fff7b71 0000000e 3fff6f3c 40247b0c
+
+3ffff9b0:  3ffff9d0 3ffff9c0 00000004 40247b0c
+
+3ffff9c0:  3ffff9e0 3ffeacc0 0000000e 3ffff9fc
+
+3ffff9d0:  0a642520 7325203e 00000004 4024804a
+
+3ffff9e0:  3fff7b71 0000000e 3fff6f3c 4024cbba
+
+3ffff9f0:  204c5353 7325203e 0a642520 40240042
+
+3ffffa00:  0a0a7325 6e690069 f00a2067 4d3d1100
+
+3ffffa10:  89905ee6 212e101e e624758f 617c7217
+
+3ffffa20:  fc754983 286f2681 09fa773f b05a463c
+
+3ffffa30:  00000000 00000000 00000000 00000000
+
+3ffffa40:  00000000 00000000 00000000 00000000
+
+3ffffa50:  00000000 00300000 61466b78 a8482d9a
+
+3ffffa60:  00000000 7d917f24 51b6d1d7 4e6d72c8
+
+3ffffa70:  cf5160ca 75eafc3c 617dc90b e73fd246
+
+3ffffa80:  04ed451d d53841ee 7dc1ab42 3ffffc50
+
+3ffffa90:  3ffffc8b 3ffffb10 3ffffb2a 402479e0
+
+3ffffaa0:  efb50030 9e21fea9 a4fef642 eb60320c
+
+3ffffab0:  b48ece5e 43f3e0d6 4e481a99 6fa07910
+
+3ffffac0:  aad4dca9 49a6a5e3 b9aa28af efc863b3
+
+3ffffad0:  3ffffc50 3ffffc40 00000004 3ffffc40
+
+3ffffae0:  00000100 00000008 eff6f5ec 40247aae
+
+3ffffaf0:  3fff7b71 3fff7544 3fff8577 00000004
+
+3ffffb00:  3fff6f3c 00000004 3fff7b71 00000004
+
+3ffffb10:  0000000e 3fff7b71 3fff6f3c 4024c61c
+
+3ffffb20:  62206461 73657479 0a30203a 4000730a
+
+3ffffb30:  00000bbb 00080000 00000000 7fffffff
+
+3ffffb40:  00000118 000a6425 3fff281c 3fff6b34
+
+3ffffb50:  00000000 000083e3 00000000 402488f0
+
+3ffffb60:  00000000 656e6e6f 00000000 40104e74
+
+3ffffb70:  00000000 000083e3 3fff750c 40219647
+
+3ffffb80:  00000000 00000000 3fff9a8c 00000000
+
+3ffffb90:  00000000 00000000 00000000 3fff6b34
+
+3ffffba0:  3ffffbe0 3ffffbd0 00000004 40219ad5
+
+3ffffbb0:  3fff6ebc 00000034 00000034 40247b0c
+
+3ffffbc0:  3ffffbe0 3ffffbd0 00000004 00000001
+
+3ffffbd0:  3fff9a8c 00000034 00000034 0000000a
+
+3ffffbe0:  3ffffc2e 00000a0a 00000004 00000000
+
+3ffffbf0:  3fff6ebc 00000034 00000034 40255947
+
+3ffffc00:  0000006d 00000000 74697277 73203a65
+
+3ffffc10:  3ffffc50 3ffffc40 00000004 00000014
+
+3ffffc20:  00000004 3ffffd70 00000010 40247b0c
+
+3ffffc30:  3ffffc50 3ffffc40 00000004 3fff6ebc
+
+3ffffc40:  00000000 3fff6f3c 00000000 4024c70b
+
+3ffffc50:  3ffffd70 00000a0a 00000000 4024804a
+
+3ffffc60:  00000000 00000000 00000000 40255b0e
+
+3ffffc70:  5f6c7861 5f6c7373 64616572 6552203a
+
+3ffffc80:  62206461 73657479 6425203a 00730a0a
+
+3ffffc90:  676e6972 314a6d20 51613234 67615356
+
+3ffffca0:  7a4a3373 677a794f 3d512f31 00650a3d
+
+3ffffcb0:  0000058a 3fff6904 0000058a 4024869d
+
+3ffffcc0:  00000000 40370000 00000004 4022b527
+
+3ffffcd0:  00000000 ffffffff 00000000 3ffecbf1
+
+3ffffce0:  00000000 00002c50 0000058a 4022b527
+
+3ffffcf0:  4022b576 3fff01d0 3fff4cf4 3fff9784
+
+3ffffd00:  4022b684 3fff01d0 3fff4cf4 3fff01d0
+
+3ffffd10:  00000002 00000000 00000020 40103116
+
+3ffffd20:  3ffecaa2 4022a9f2 3fff01d0 3fff50e7
+
+3ffffd30:  00000000 402308f4 3fff13b8 3fff9784
+
+3ffffd40:  00000002 00000000 00000000 3fff97be
+
+3ffffd50:  3fff01d0 4021b254 3fff97be 3fff50b4
+
+3ffffd60:  3fff9784 00000000 00000000 3fff7544
+
+3ffffd70:  00000000 00000000 00000001 40248aa0
+
+3ffffd80:  3fff7544 3fff6f3c 3ffffeb0 3fff1c8c
+
+3ffffd90:  40253b28 600011f0 3fff6b34 3fff7544
+
+3ffffda0:  3fff6b34 00000000 3fff281c 40250a12
+
+3ffffdb0:  00000002 3fff50b4 00000001 0000438d
+
+3ffffdc0:  00000008 00000000 00000020 40103116
+
+3ffffdd0:  3ffecaa8 40102dc5 00000002 0000768d
+
+3ffffde0:  00000005 00000008 40102c7a 00000002
+
+3ffffdf0:  00000002 40102a7f 00000002 3ffec630
+
+3ffffe00:  00000005 00000000 00000020 40103116
+
+3ffffe10:  3ffecaa5 40102983 3fff04bc 0000001a
+
+3ffffe20:  40103e0d 3fff04bc 3ffec6a8 000000ff
+
+3ffffe30:  00007fff 1bcc93b7 3fff0c84 40103f9c
+
+3ffffe40:  3ffed32c 00000000 00000000 40104e74
+
+3ffffe50:  00000000 1bcc93b7 401043b7 00000100
+
+3ffffe60:  3ffed32c 7fffffff 3ffed32c 00000001
+
+3ffffe70:  00000001 00007fff 0000001c ffffffff
+
+3ffffe80:  4022b39d 1bcc93b7 00002200 3ffed344
+
+3ffffe90:  0000006d 00000000 40104160 3fffc200
+
+3ffffea0:  00000022 3fffc6fc 0000005c 00000014
+
+3ffffeb0:  3fff0000 3fff1de8 3fff6b34 4021e82d
+
+3ffffec0:  3fff7544 3fff3c20 3fff3c28 00000001
+
+3ffffed0:  82ede5c0 00000000 00003a98 00000018
+
+3ffffee0:  3fff1dd4 3fff6b34 3fff1dd0 4021f398
+
+3ffffef0:  00000000 3fffdcb0 3ffec1f8 40104e74
+
+3fffff00:  00000000 00000000 3ffeecde 3fff3c24
+
+3fffff10:  3ffed9ea 3fff3c28 3fff7544 4021dc51
+
+3fffff20:  002c4a88 3fff50b4 3fff50b4 3fff13b8
+
+3fffff30:  00000000 3fff7544 0000001c 3fff5124
+
+3fffff40:  3fff7544 3fff50b4 3ffed9dc 4021b80d
+
+3fffff50:  3ffed9c0 00000521 00000000 00000019
+
+3fffff60:  00000002 0000001a 4022aea3 3fff04bc
+
+3fffff70:  3ffed9b4 3fffdcc0 3ffecbe0 3ffecbe0
+
+3fffff80:  4022ae16 3fff04bc 00000000 3fff5124
+
+3fffff90:  3fffdc80 00000000 3fff7544 4021360b
+
+3fffffa0:  40000f49 3fffdab0 ffffff01 55aa55aa
+
+state: 5 -> 0 (0)
+
+rm 0
+
+
+hl flush 31014 - remains 1072
+pm close 7
+
+tcp_abandon: sending RST
+tcp_rst: seqno 33815 ackno -761307054.
+wscli TCP Connection Reseted or Aborted -8
+2wscli Tcp Client failure...
+wscli:WsCli Disconnected. Reconnecting ..
+1ax_port_write: Got error: -11
+
+ax_port_write: send_raw_packet length 7(7)
+
+Alert:
+close notify
+'
+
+obi_terminate: there were 4 un-freed bigints
+
+sFatal exception 29(StoreProhibitedCause):
+
+epc1=0x40248c99, epc2=0x00000000, epc3=0x00000000, excvaddr=0x00000000, depc=0x00000000
+
+
+
+*RESET*
+
+

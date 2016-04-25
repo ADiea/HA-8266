@@ -1,0 +1,3 @@
+C:\Espressif\xtensa-lx106-elf\bin\xtensa-lx106-elf-readelf -s "D:\mystuff\prj\home auto\esp\soft\HA-8266\main\out\build\app.out" | perl -ne 'if(/(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)/) { if($4 eq "FUNC") {print $3 . " " . " " . $4 . " " . $5 . " " . $8. "\n";}}'|sort -nr >symbols_func.txt
+C:\Espressif\xtensa-lx106-elf\bin\xtensa-lx106-elf-readelf -s "D:\mystuff\prj\home auto\esp\soft\HA-8266\main\out\build\app.out" | perl -ne 'if(/(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)/) { if($4 eq "OBJECT") {print $3 . " " . " " . $4 . " " . $5 . " " . $8. "\n";}}'|sort -nr >symbols_obj.txt
+rem pause
