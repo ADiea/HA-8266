@@ -1,0 +1,6127 @@
+hlog_param:{"heap_start":0x3fff3d00, "heap_end":0x3fffc000}
+hl{m,184,0,3fff56ec} 5716
+hl{m,6864,0,3fff590c} 5717
+hl{m,316,0,3fff73e4} 5718
+hl{m,500,0,3fff7524} 5719
+hl{m,500,0,3fff771c} 5720
+hl{m,1572,0,3fff7914} 5721
+hl{m,24,0,3fff5634} 5722
+hl{m,20,0,3fff3dac} 5723
+hl{f,3fff3d94,0} 5724
+hl{f,3fff3d64,0} 5725
+hl{m,16,0,3fff3d64} 5726
+hl{m,20,0,3fff3d94} 5727
+hl{f,3fff7914,0} 5728
+hl{f,3fff5634,0} 5729
+hl{f,3fff3d94,0} 5730
+hl{m,20,0,3fff3d94} 5731
+hl{m,1461,0,3fff7914} 5732
+hl{f,3fff7914,0} 5733
+hl{m,1461,0,3fff7914} 5734
+hl flush 5734 - remains 18376
+State:
+receiving
+Server Hello (2)
+
+iSSL > do_clnt_handshake 2
+▒please start sntp first !
+
+?axl_ssl_read: Read bytes: 0
+
+daxl_ssl_read: Read bytes: 0
+
+daxl_ssl_read: Read bytes: 0
+
+dState:
+▒receiving
+ertificate (11)
+
+iSSL > do_clnt_handshake 11
+▒axtls-8266/ssl/x509.c:81 malloc 60 => 3fff57ac left 18312
+
+
+daxtls-8266/ssl/asn1.c:374 malloc 3 => 3fff57ec left 18304
+
+
+%axtls-8266/ssl/asn1.c:374 malloc 13 => 3fff5634 left 18288
+
+
+%axtls-8266/ssl/asn1.c:374 malloc 17 => 3fff55d4 left 18264
+
+
+%axtls-8266/ssl/asn1.c:374 malloc 39 => 3fff55ec left 18216
+
+
+%axtls-8266/ssl/asn1.c:374 malloc 3 => 3fff57ec left 18208
+
+
+%axtls-8266/ssl/asn1.c:374 malloc 11 => 3fff7914 left 18200
+
+
+%axtls-8266/ssl/asn1.c:374 malloc 14 => 3fff7914 left 18192
+
+
+%axtls-8266/ssl/asn1.c:374 malloc 13 => 3fff7914 left 18192
+
+
+%axtls-8266/ssl/asn1.c:374 malloc 16 => 3fff792c left 18168
+
+
+%axtls-8266/ssl/asn1.c:157 malloc 256 => 3fff7944 left 17904
+
+
+axtls-8266/ssl/asn1.c:157 malloc 3 => 3fff57ec left 17896
+
+
+axtls-8266/crypto/bigint.c:101 malloc 68 => 3fff7a4c left 17824
+
+
+axtls-8266/crypto/bigint.c:1111 malloc 16 => 3fff7a94 left 17800
+
+
+saxtls-8266/crypto/bigint.c:1112 malloc 8 => 3fff7aac left 17784
+
+
+saxtls-8266/crypto/rsa.c:89 malloc 40 => 3fff7abc left 17736
+
+
+%axtls-8266/crypto/bigint.c:1111 malloc 16 => 3fff7aec left 17712
+
+
+s
+hl{f,3fff7914,0} 5735
+hl{m,1461,0,3fff7914} 5736
+hl{f,3fff7914,0} 5737
+hl{m,1461,0,3fff7914} 5738
+hl{f,3fff7914,0} 5739
+hl{f,3fff3d94,0} 5740
+hl{m,112,0,3fff7914} 5741
+hl{f,3fff7914,0} 5742
+hl{m,20,0,3fff3d94} 5743
+hl{m,1220,0,3fff7914} 5744
+hl{f,3fff7914,0} 5745
+hl{m,60,0,3fff57ac} 5746
+hl{m,3,0,3fff57ec} 5747
+hl{f,3fff57ec,0} 5748
+hl{m,13,0,3fff5634} 5749
+hl{m,17,0,3fff55d4} 5750
+hl{m,39,0,3fff55ec} 5751
+hl{m,3,0,3fff57ec} 5752
+hl{f,3fff57ec,0} 5753
+hl{m,11,0,3fff7914} 5754
+hl{f,3fff7914,0} 5755
+hl{m,14,0,3fff7914} 5756
+hl{f,3fff7914,0} 5757
+hl{m,13,0,3fff7914} 5758
+hl{m,16,0,3fff792c} 5759
+hl{m,256,0,3fff7944} 5760
+hl{m,3,0,3fff57ec} 5761
+hl{m,68,0,3fff7a4c} 5762
+hl{m,16,0,3fff7a94} 5763
+hl{m,8,0,3fff7aac} 5764
+hl{m,40,0,3fff7abc} 5765
+hl{m,16,0,3fff7aec} 5766
+hl flush 5766 - remains 17448
+axtls-8266/crypto/bigint.c:1112 malloc 256 => 3fff7b04 left 17448
+
+
+saxtls-8266/crypto/bigint.c:1111 malloc 16 => 3fff7c0c left 17424
+
+
+axtls-8266/crypto/bigint.c:1112 malloc 260 => 3fff7c24 left 17160
+
+
+axtls-8266/crypto/bigint.c:1111 malloc 16 => 3fff7d2c left 17136
+
+
+axtls-8266/crypto/bigint.c:1112 malloc 8 => 3fff7d44 left 17120
+
+
+axtls-8266/crypto/bigint.c:1072 realloc 516=>3fff7d44, left 16616
+
+
+▒axtls-8266/crypto/bigint.c:1111 malloc 16 => 3fff7f4c left 16592
+
+
+aaxtls-8266/crypto/bigint.c:1112 malloc 264 => 3fff7f64 left 16320
+
+
+aaxtls-8266/crypto/bigint.c:1111 malloc 16 => 3fff8074 left 16296
+
+
+aaxtls-8266/crypto/bigint.c:1112 malloc 260 => 3fff808c left 16032
+
+
+aaxtls-8266/crypto/bigint.c:1072 realloc 1032=>3fff8194, left 15512
+
+
+axtls-8266/crypto/bigint.c:1111 malloc 16 => 3fff7d44 left 15488
+
+
+faxtls-8266/crypto/bigint.c:1112 malloc 260 => 3fff7d5c left 15224
+
+
+faxtls-8266/ssl/x509.c:124 malloc 20 => 3fff7e64 left 15472
+
+
+axtls-8266/ssl/x509.c:218 realloc 8=>3fff7e7c, left 15456
+
+
+▒axtls-8266/ssl/x509.c:220 malloc 16 => 3fff7e8c left 15432
+
+
+▒axtls-8266/ssl/x509.c:218 realloc 12=>3fff7e7c, left 15432
+
+
+▒axtls-8266/ssl/x509.c:220 malloc 14 => 3fff7ea4 left 15408
+
+
+▒axtls-8266/ssl/asn1.c:482 malloc 256 => 3fff7944 left 15144
+
+
+=axtls-8266/ssl/x509.c:81 malloc 60 => 3fff7ebc left 15080
+
+
+=axtls-8266/ssl/asn1.c:374 malloc 3 => 3fff57ec left 15072
+
+
+%axtls-8266/ssl/asn1.c:374 malloc 13 => 3fff7efc left 15056
+
+
+%axtls-8266/ssl/asn1.c:374 malloc 17 => 3fff7f14 left 15032
+
+
+%axtls-8266/ssl/asn1.c:374 malloc 35 => 3fff85a4 left 14992
+
+
+%axtls-8266/ssl/asn1.c:374 malloc 3 => 3fff57ec left 14984
+
+
+%axtls-8266/ssl/asn1.c:374 malloc 13 => 3fff7f2c left 14968
+
+
+%axtls-8266/ssl/asn1.c:374 malloc 17 => 3fff85cc left 14944
+
+
+%axtls-8266/ssl/asn1.c:374 malloc 39 => 3fff85e4 left 14896
+
+
+%
+hl{m,256,0,3fff7b04} 5767
+hl{m,16,0,3fff7c0c} 5768
+hl{m,260,0,3fff7c24} 5769
+hl{m,16,0,3fff7d2c} 5770
+hl{m,8,0,3fff7d44} 5771
+hl{f,3fff7f4c,0} 5772
+hl{m,16,0,3fff7f4c} 5773
+hl{m,264,0,3fff7f64} 5774
+hl{m,16,0,3fff8074} 5775
+hl{m,260,0,3fff808c} 5776
+hl{m,1032,0,3fff8194} 5777
+hl{f,3fff7d44,0} 5778
+hl{m,16,0,3fff7d44} 5779
+hl{m,260,0,3fff7d5c} 5780
+hl{f,3fff7944,0} 5781
+hl{f,3fff57ec,0} 5782
+hl{m,20,0,3fff7e64} 5783
+hl{m,8,0,3fff7e7c} 5784
+hl{m,16,0,3fff7e8c} 5785
+hl{m,14,0,3fff7ea4} 5786
+hl{m,256,0,3fff7944} 5787
+hl{m,60,0,3fff7ebc} 5788
+hl{m,3,0,3fff57ec} 5789
+hl{f,3fff57ec,0} 5790
+hl{m,13,0,3fff7efc} 5791
+hl{m,17,0,3fff7f14} 5792
+hl{m,35,0,3fff85a4} 5793
+hl{m,3,0,3fff57ec} 5794
+hl{f,3fff57ec,0} 5795
+hl{m,13,0,3fff7f2c} 5796
+hl{m,17,0,3fff85cc} 5797
+hl{m,39,0,3fff85e4} 5798
+hl flush 5798 - reaxtls-8266/crypto/bigint.c:1072 realloc 520=>3fff999c, left 9448
+
+
+=axtls-8266/crypto/bigint.c:1072 realloc 1024=>3fff9bac, left 8936
+
+
+axtls-8266/crypto/bigint.c:1072 realloc 512=>3fff9584, left 8680
+
+
+|State:
+esending
+Client Key Exchange (16)
+
+iax_port_write: send_raw_packet length 267(267)
+
+▒ax_port_write: send_raw_packet length 6(6)
+
+$axtls-8266/ssl/tls1.c:1143 malloc 104 => 3fff8b6c left 10248
+
+
+:State:
+isending
+Finished (16)
+
+iaxtls-8266/ssl/tls1.c:646 malloc 39 => 3fff8bdc left 10200
+
+
+%
+hl{m,16,0,3fff8b64} 5831
+hl{m,256,0,3fff9274} 5832
+hl{m,16,0,3fff8b7c} 5833
+hl{m,516,0,3fff937c} 5834
+hl{m,16,0,3fff8b94} 5835
+hl{m,512,0,3fff9584} 5836
+hl{m,16,0,3fff8bac} 5837
+hl{m,520,0,3fff978c} 5838
+hl{m,260,0,3fff999c} 5839
+hl{f,3fff57ec,0} 5840
+hl{f,3fff9bac,0} 5841
+hl{m,1024,0,3fff9bac} 5842
+hl{f,3fff9584,0} 5843
+hl{m,512,0,3fff9584} 5844
+hl{f,3fff7b04,0} 5845
+hl{f,3fff7f44,0} 5846
+hl{f,3fff937c,0} 5847
+hl{f,3fff8b7c,0} 5848
+hl{f,3fff7d5c,0} 5849
+hl{f,3fff7d44,0} 5850
+hl{f,3fff9274,0} 5851
+hl{f,3fff8b64,0} 5852
+hl{f,3fff999c,0} 5853
+hl{f,3fff8b4c,0} 5854
+hl{f,3fff9bac,0} 5855
+hl{f,3fff8b94,0} 5856
+hl{f,3fff978c,0} 5857
+hl{f,3fff8bac,0} 5858
+hl{m,1572,0,3fff978c} 5859
+hl{m,24,0,3fff8b4c} 5860
+hl{m,104,0,3fff8b6c} 5861
+hl{m,39,0,3fff8bdc} 5862
+hl flush 5862 - remains 10248
+▒axtls-8266/ssl/tls1.c:1091 malloc 64 => 3fff7b04 left 10176
+
+
+ax_port_write: send_raw_packet length 69(69)
+
+axl_ssl_read: Read bytes: 0
+
+daxl_ssl_read: Read bytes: 0
+
+daxl_ssl_read: Read bytes: 0
+
+daxl_ssl_read: Read bytes: 0
+
+daxtls-8266/ssl/tls1.c:646 malloc 39 => 3fff8bdc left 11808
+
+
+@State:
+receiving
+Finished (16)
+
+iSSL > do_clnt_handshake 20
+▒
+hl{f,3fff8bdc,0} 5863
+hl{m,64,0,3fff7b04} 5864
+hl{f,3fff7b04,0} 5865
+hl{f,3fff3d94,0} 5866
+hl{f,3fff3f1c,0} 5867
+hl{m,16,0,3fff3f1c} 5868
+hl{f,3fff3d64,0} 5869
+hl{m,16,0,3fff3d64} 5870
+hl{f,3fff3f1c,0} 5871
+hl{m,16,0,3fff3f1c} 5872
+hl{f,3fff45a4,0} 5873
+hl{m,16,0,3fff45a4} 5874
+hl{f,3fff3d64,0} 5875
+hl{m,16,0,3fff3d64} 5876
+hl{m,20,0,3fff3d94} 5877
+hl{m,112,0,3fff7b04} 5878
+hl{f,3fff3d94,0} 5879
+hl{f,3fff7b04,0} 5880
+hl{m,20,0,3fff3d94} 5881
+hl{f,3fff978c,0} 5882
+hl{f,3fff8b4c,0} 5883
+hl{m,76,0,3fff7b04} 5884
+hl{f,3fff7b04,0} 5885
+hl{m,76,0,3fff7b04} 5886
+hl{f,3fff7b04,0} 5887
+hl{m,76,0,3fff7b04} 5888
+hl{f,3fff7b04,0} 5889
+hl{m,76,0,3fff7b04} 5890
+hl{f,3fff7b04,0} 5891
+hl{m,39,0,3fff8bdc} 5892
+hl{f,3fff8bdc,0} 5893
+hl{f,3fff8b6c,0} 5894
+hl flush 5894 - remains 12288
+▒axl_ssl_read: Read bytes: 0
+
+dSSL: Handshake done (376 ms).
+1SSL: Switching back to 80 MHz
+TCP connected
+donReadyToSendData: 0
+axtls-8266/ssl/tls1.c:646 malloc 228 => 3fff7b04 left 12080
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 256 => 3fff7b04 left 12048
+
+
+ax_port_write: send_raw_packet length 261(261)
+
+TcpClient request completed
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+daxtls-8266/ssl/tls1.c:646 malloc 198 => 3fff8b4c left 12392
+
+
+▒axl_ssl_read: Read bytes: 175
+
+dwscli RX data HTTP/1.1 101 Switching Protocols
+
+Connection: Upgrade
+
+Upgrade: websocket
+
+Sec-Websocket-Accept: Vq8m9GG4YDCL14FgHi6m7mIjDJY=
+
+Sec-Websocket-Protocol: chat
+
+Via: 1.1 vegur
+
+
+
+, size 175 175
+
+wscli search key Vq8m9GG4YDCL14FgHi6m7mIjDJY=
+
+hl{f,3fff73e4,0} 5895
+hl{f,3fff3d94,0} 5896
+hl{m,228,0,3fff7b04} 5897
+hl{f,3fff7b04,0} 5898
+hl{m,256,0,3fff7b04} 5899
+hl{f,3fff7b04,0} 5900
+hl{m,1572,0,3fff978c} 5901
+hl{m,24,0,3fff8b4c} 5902
+hl{f,3fff57f4,0} 5903
+hl{f,3fff5674,0} 5904
+hl{f,3fff3f1c,0} 5905
+hl{m,16,0,3fff3f1c} 5906
+hl{f,3fff3d64,0} 5907
+hl{m,16,0,3fff3d64} 5908
+hl{m,20,0,3fff3d94} 5909
+hl{f,3fff978c,0} 5910
+hl{f,3fff8b4c,0} 5911
+hl{m,230,0,3fff7b04} 5912
+hl{f,3fff7b04,0} 5913
+hl{m,230,0,3fff7b04} 5914
+hl{f,3fff7b04,0} 5915
+hl{m,198,0,3fff8b4c} 5916
+hl{f,3fff8b4c,0} 5917
+hl{m,175,0,3fff8b4c} 5918
+hl{m,288,0,3fff73e4} 5919
+hl{f,3fff8b4c,0} 5920
+hl{f,3fff3d94,0} 5921
+hl{m,176,0,3fff8b4c} 5922
+hl{m,25,0,3fff5674} 5923
+hl{m,61,0,3fff7b04} 5924
+hl{f,3fff5674,0} 5925
+hl{m,61,0,3fff7b4c} 5926
+hl flush 5926 - remains 12072
+rwscli clienKey : Vq8m9GG4YDCL14FgHi6m7mIjDJY=
+wscli Key Verified. Websocket Handshake completed
+pwscli Sending PING
+cTcpClient: Malloc 2 bytes in stream
+wscli: Connection with server successful
+cTcpClient: Malloc 14 bytes in stream
+▒MStream realloc 2 -> 145
+onReadyToSendData: 1
+axtls-8266/ssl/tls1.c:646 malloc 39 => 3fff7b9c left 11912
+
+
+eaxtls-8266/ssl/tls1.c:1091 malloc 64 => 3fff7b9c left 11888
+
+
+ax_port_write: send_raw_packet length 69(69)
+
+TcpClient request completed
+onReadyToSendData: 2
+▒axl_ssl_read: Read bytes: 0
+
+Haxtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+H
+hl{f,3fff7b04,0} 5927
+hl{f,3fff7b4c,0} 5928
+hl{m,28,0,3fff5674} 5929
+hl{m,3,0,3fff7f44} 5930
+hl{m,9,0,3fff3d94} 5931
+hl{m,18,0,3fff8c04} 5932
+hl{m,145,0,3fff7b04} 5933
+hl{f,3fff7f44,0} 5934
+hl{f,3fff8c04,0} 5935
+hl{f,3fff3d94,0} 5936
+hl{m,39,0,3fff7b9c} 5937
+hl{f,3fff7b9c,0} 5938
+hl{m,64,0,3fff7b9c} 5939
+hl{f,3fff7b9c,0} 5940
+hl{m,1572,0,3fff978c} 5941
+hl{m,24,0,3fff7b9c} 5942
+hl{f,3fff7b04,0} 5943
+hl{f,3fff5674,0} 5944
+hl{f,3fff8b4c,0} 5945
+hl{f,3fff73e4,0} 5946
+hl{m,20,0,3fff3d94} 5947
+hl{f,3fff978c,0} 5948
+hl{f,3fff7b9c,0} 5949
+hl{m,54,0,3fff8b4c} 5950
+hl{f,3fff8b4c,0} 5951
+hl{m,54,0,3fff8b4c} 5952
+hl{f,3fff8b4c,0} 5953
+hl{m,25,0,3fff5674} 5954
+hl{f,3fff5674,0} 5955
+hl{m,2,0,3fff7f44} 5956
+hl{m,116,0,3fff8b4c} 5957
+hl{f,3fff7f44,0} 5958
+hl flush 5958 - remains 12504
+wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+axl_ssl_read: Read bytes: 0
+
+axtls-8266/ssl/tls1.c:646 malloc 33 => 3fff8bc4 left 12440
+
+
+0axl_ssl_read: Read bytes: 10
+
+wscli RX data {"op":1}, size 10 10
+
+wscli:WebSocket message received: {"op":1}
+:Common Name:   *.herokuapp.com
+
+eCIPHER is
+AES128-SHA
+
+
+Swscli:WebSockCli RX Op is:1
+vwscli:WebSockCli State is 0 SrvHello, login
+eTcpClient: Malloc 32 bytes in stream
+
+hl{f,3fff3d94,0} 5959
+hl{m,3,0,3fff7f44} 5960
+hl{f,3fff7f44,0} 5961
+hl{f,3fff8b4c,0} 5962
+hl{m,20,0,3fff3d94} 5963
+hl{f,3fff3f1c,0} 5964
+hl{m,112,0,3fff8b4c} 5965
+hl{m,16,0,3fff3f1c} 5966
+hl{f,3fff3d64,0} 5967
+hl{m,16,0,3fff3d64} 5968
+hl{m,54,0,3fff8bc4} 5969
+hl{f,3fff8bc4,0} 5970
+hl{m,54,0,3fff8bc4} 5971
+hl{f,3fff8bc4,0} 5972
+hl{m,33,0,3fff8bc4} 5973
+hl{f,3fff8bc4,0} 5974
+hl{m,10,0,3fff5674} 5975
+hl{m,124,0,3fff7b04} 5976
+hl{f,3fff5674,0} 5977
+hl{f,3fff3d94,0} 5978
+hl{m,11,0,3fff3d94} 5979
+hl{m,9,0,3fff5674} 5980
+hl{m,9,0,3fff5684} 5981
+hl{m,9,0,3fff8bc4} 5982
+hl{m,1,0,3fff3da4} 5983
+hl{m,6,0,3fff8bd4} 5984
+hl{f,3fff8bd4,0} 5985
+hl{m,27,0,3fff8bd4} 5986
+hl{m,36,0,3fff8bf4} 5987
+hl{m,28,0,3fff7b84} 5988
+hl{m,33,0,3fff7ba4} 5989
+hl{f,3fff8bf4,0} 5990
+hl flush 5990 - remains 12232
+SonReadyToSendData: 1
+axtls-8266/ssl/tls1.c:646 malloc 55 => 3fff7bcc left 12224
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 80 => 3fff8bc4 left 12200
+
+
+ax_port_write: send_raw_packet length 85(85)
+
+TcpClient request completed
+onReadyToSendData: 2
+▒axl_ssl_read: Read bytes: 0
+
+axtls-8266/ssl/tls1.c:646 malloc 43 => 3fff8b4c left 12552
+
+
+@axl_ssl_read: Read bytes: 20
+
+wscli RX data ▒{"op":5,"conID":0}, size 20 20
+
+
+hl{f,3fff8bd4,0} 5991
+hl{f,3fff3da4,0} 5992
+hl{f,3fff8bc4,0} 5993
+hl{f,3fff5684,0} 5994
+hl{f,3fff5674,0} 5995
+hl{m,55,0,3fff7bcc} 5996
+hl{f,3fff7bcc,0} 5997
+hl{m,80,0,3fff8bc4} 5998
+hl{f,3fff8bc4,0} 5999
+hl{m,1572,0,3fff978c} 6000
+hl{m,24,0,3fff5674} 6001
+hl{f,3fff7ba4,0} 6002
+hl{f,3fff7b84,0} 6003
+hl{f,3fff3d94,0} 6004
+hl{f,3fff7b04,0} 6005
+hl{f,3fff8b4c,0} 6006
+hl{m,20,0,3fff3d94} 6007
+hl{f,3fff978c,0} 6008
+hl{f,3fff5674,0} 6009
+hl{m,70,0,3fff8b4c} 6010
+hl{f,3fff8b4c,0} 6011
+hl{m,70,0,3fff8b4c} 6012
+hl{f,3fff8b4c,0} 6013
+hl{m,43,0,3fff8b4c} 6014
+hl{f,3fff8b4c,0} 6015
+hl{m,20,0,3fff5674} 6016
+hl{m,132,0,3fff8b4c} 6017
+hl{f,3fff5674,0} 6018
+hl{f,3fff3d94,0} 6019
+hl{m,21,0,3fff5674} 6020
+hl{m,19,0,3fff3d94} 6021
+hl{m,19,0,3fff8bd4} 6022
+hl flush 6022 - remains 12384
+▒wscli:WebSocket message received: {"op":5,"conID":0}
+ Common Name:   *.herokuapp.com
+
+eCIPHER is
+▒AES128-SHA
+▒
+
+Swscli:WebSockCli RX Op is:5
+vwscli:WebSockCli logged in
+donReadyToSendData: 1
+▒dns_tmr: dns_check_entries
+
+hl{m,19,0,3fff8bec} 6023
+hl{m,1,0,3fff7f44} 6024
+hl{m,6,0,3fff8c04} 6025
+hl{f,3fff8c04,0} 6026
+hl{f,3fff7f44,0} 6027
+hl{f,3fff8bec,0} 6028
+hl{f,3fff8bd4,0} 6029
+hl{f,3fff3d94,0} 6030
+hl{f,3fff5674,0} 6031
+hl{f,3fff8b4c,0} 6032
+hl{f,3fff3d64,0} 6033
+hl{m,16,0,3fff3d64} 6034
+hl{f,3fff3f1c,0} 6035
+hl{m,112,0,3fff8b4c} 6036
+hl{m,16,0,3fff3f1c} 6037
+hl{f,3fff8b4c,0} 6038
+hl{f,3fff3d64,0} 6039
+hl{m,16,0,3fff3d64} 6040
+hl{f,3fff3f1c,0} 6041
+hl{m,16,0,3fff3f1c} 6042
+hl{m,756,0,3fff9274} 6043
+hl{f,3fff9274,0} 6044
+hl{f,3fff3d34,0} 6045
+hl{m,16,0,3fff3d34} 6046
+hl{f,3fff4c64,0} 6047
+hl{m,16,0,3fff4c64} 6048
+hl{f,3fff45a4,0} 6049
+hl{m,16,0,3fff45a4} 6050
+hl{f,3fff3d64,0} 6051
+hl{m,16,0,3fff3d64} 6052
+hl{m,756,0,3fff9274} 6053
+hl{f,3fff9274,0} 6054
+hl flush 6054 - remains 12648
+
+hl{f,3fff3f1c,0} 6055
+hl{m,16,0,3fff3f1c} 6056
+hl{f,3fff3d64,0} 6057
+hl{m,16,0,3fff3d64} 6058
+hl{m,756,0,3fff9274} 6059
+hl{f,3fff9274,0} 6060
+hl{f,3fff3f1c,0} 6061
+hl{m,16,0,3fff3f1c} 6062
+hl{f,3fff3d64,0} 6063
+hl{m,16,0,3fff3d64} 6064
+hl{m,756,0,3fff9274} 6065
+hl{f,3fff9274,0} 6066
+hl{f,3fff3d64,0} 6067
+hl{m,16,0,3fff3d64} 6068
+hl{f,3fff3f1c,0} 6069
+hl{m,16,0,3fff3f1c} 6070
+hl{m,756,0,3fff9274} 6071
+hl{f,3fff9274,0} 6072
+hl{f,3fff3d64,0} 6073
+hl{m,16,0,3fff3d64} 6074
+hl{m,756,0,3fff9274} 6075
+hl{f,3fff9274,0} 6076
+hl{f,3fff3f1c,0} 6077
+hl{m,16,0,3fff3f1c} 6078
+hl{f,3fff45a4,0} 6079
+hl{m,16,0,3fff45a4} 6080
+hl{f,3fff3d64,0} 6081
+hl{m,16,0,3fff3d64} 6082
+hl{m,756,0,3fff9274} 6083
+hl{f,3fff9274,0} 6084
+hl{f,3fff3f1c,0} 6085
+hl{m,16,0,3fff3f1c} 6086
+hl flush 6086 - remains 11864
+(dns_tmr: dns_check_entries
+
+hl{m,756,0,3fff9274} 6087
+hl{f,3fff9274,0} 6088
+hl{f,3fff3d64,0} 6089
+hl{m,16,0,3fff3d64} 6090
+hl{f,3fff3f1c,0} 6091
+hl{m,16,0,3fff3f1c} 6092
+hl{f,3fff3d64,0} 6093
+hl{m,16,0,3fff3d64} 6094
+hl{m,756,0,3fff9274} 6095
+hl{f,3fff9274,0} 6096
+hl{f,3fff3d64,0} 6097
+hl{m,16,0,3fff3d64} 6098
+hl{f,3fff3f1c,0} 6099
+hl{m,16,0,3fff3f1c} 6100
+hl{m,756,0,3fff9274} 6101
+hl{f,3fff9274,0} 6102
+hl{f,3fff3d64,0} 6103
+hl{m,16,0,3fff3d64} 6104
+hl{f,3fff3f1c,0} 6105
+hl{m,16,0,3fff3f1c} 6106
+hl{f,3fff4c64,0} 6107
+hl{m,16,0,3fff4c64} 6108
+hl{f,3fff45a4,0} 6109
+hl{m,16,0,3fff45a4} 6110
+hl{f,3fff3d64,0} 6111
+hl{m,16,0,3fff3d64} 6112
+hl{m,756,0,3fff9274} 6113
+hl{f,3fff9274,0} 6114
+hl{f,3fff3f1c,0} 6115
+hl{m,16,0,3fff3f1c} 6116
+hl{m,756,0,3fff9274} 6117
+hl{f,3fff9274,0} 6118
+hl flush 6118 - remains 12648
+ 6:10:23 Dormitor H:56.50(56.7) T:18.00(17.9 0.0)/24.7 SetPt:23.00 needHeat:1
+▒HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{f,3fff3d64,0} 6119
+hl{m,16,0,3fff3d64} 6120
+hl{m,756,0,3fff9274} 6121
+hl{f,3fff9274,0} 6122
+hl{f,3fff3f1c,0} 6123
+hl{m,16,0,3fff3f1c} 6124
+hl{f,3fff3d64,0} 6125
+hl{m,16,0,3fff3d64} 6126
+hl{m,756,0,3fff9274} 6127
+hl{f,3fff9274,0} 6128
+hl{f,3fff3d64,0} 6129
+hl{m,16,0,3fff3d64} 6130
+hl{f,3fff3f1c,0} 6131
+hl{m,16,0,3fff3f1c} 6132
+hl{m,20,0,3fff3d94} 6133
+hl{f,3fff3d7c,0} 6134
+hl{m,756,0,3fff9274} 6135
+hl{f,3fff9274,0} 6136
+hl{f,3fff3d64,0} 6137
+hl{m,16,0,3fff5674} 6138
+hl{f,3fff3f1c,0} 6139
+hl{m,16,0,3fff3f1c} 6140
+hl{f,3fff45a4,0} 6141
+hl{m,16,0,3fff45a4} 6142
+hl{f,3fff5674,0} 6143
+hl{m,16,0,3fff5674} 6144
+hl{f,3fff3f1c,0} 6145
+hl{m,16,0,3fff3f1c} 6146
+hl{f,3fff5674,0} 6147
+hl{m,16,0,3fff5674} 6148
+hl{f,3fff3f1c,0} 6149
+hl{m,16,0,3fff3f1c} 6150
+hl flush 6150 - remains 12648
+dns_tmr: dns_check_entries
+wscli Sending PING
+TcpClient: Malloc 2 bytes in stream
+
+hl{f,3fff5674,0} 6151
+hl{m,16,0,3fff5674} 6152
+hl{f,3fff5674,0} 6153
+hl{m,16,0,3fff5674} 6154
+hl{f,3fff3f1c,0} 6155
+hl{m,16,0,3fff3f1c} 6156
+hl{f,3fff5674,0} 6157
+hl{m,16,0,3fff5674} 6158
+hl{f,3fff3f1c,0} 6159
+hl{m,16,0,3fff3f1c} 6160
+hl{f,3fff4c64,0} 6161
+hl{m,16,0,3fff4c64} 6162
+hl{f,3fff45a4,0} 6163
+hl{m,16,0,3fff45a4} 6164
+hl{f,3fff5674,0} 6165
+hl{m,16,0,3fff5674} 6166
+hl{f,3fff3f1c,0} 6167
+hl{m,16,0,3fff3f1c} 6168
+hl{f,3fff5674,0} 6169
+hl{m,16,0,3fff5674} 6170
+hl{f,3fff3f1c,0} 6171
+hl{m,16,0,3fff3f1c} 6172
+hl{f,3fff5674,0} 6173
+hl{m,16,0,3fff5674} 6174
+hl{f,3fff5674,0} 6175
+hl{m,16,0,3fff5674} 6176
+hl{f,3fff3f1c,0} 6177
+hl{m,16,0,3fff3f1c} 6178
+hl{m,28,0,3fff3d64} 6179
+hl{m,3,0,3fff568c} 6180
+hl{f,3fff5674,0} 6181
+hl{m,16,0,3fff5674} 6182
+hl flush 6182 - remains 12608
+▒axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+6axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12568
+
+
+0
+hl{f,3fff3f1c,0} 6183
+hl{m,16,0,3fff3f1c} 6184
+hl{m,756,0,3fff9274} 6185
+hl{f,3fff9274,0} 6186
+hl{f,3fff45a4,0} 6187
+hl{m,16,0,3fff45a4} 6188
+hl{f,3fff5674,0} 6189
+hl{m,16,0,3fff5674} 6190
+hl{m,756,0,3fff9274} 6191
+hl{f,3fff9274,0} 6192
+hl{f,3fff3f1c,0} 6193
+hl{m,25,0,3fff8b4c} 6194
+hl{f,3fff8b4c,0} 6195
+hl{m,48,0,3fff8b4c} 6196
+hl{f,3fff8b4c,0} 6197
+hl{m,1572,0,3fff978c} 6198
+hl{m,24,0,3fff8b4c} 6199
+hl{f,3fff568c,0} 6200
+hl{f,3fff3d64,0} 6201
+hl{m,16,0,3fff3f1c} 6202
+hl{m,756,0,3fff9274} 6203
+hl{f,3fff9274,0} 6204
+hl{f,3fff5674,0} 6205
+hl{m,16,0,3fff5674} 6206
+hl{m,20,0,3fff3d64} 6207
+hl{f,3fff978c,0} 6208
+hl{f,3fff8b4c,0} 6209
+hl{m,54,0,3fff8b4c} 6210
+hl{f,3fff8b4c,0} 6211
+hl{m,54,0,3fff8b4c} 6212
+hl{f,3fff8b4c,0} 6213
+hl{m,25,0,3fff8b4c} 6214
+hl flush 6214 - remains 12600
+<axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl{f,3fff8b4c,0} 6215
+hl{m,2,0,3fff568c} 6216
+hl{m,116,0,3fff8b4c} 6217
+hl{f,3fff568c,0} 6218
+hl{f,3fff3d64,0} 6219
+hl{m,3,0,3fff568c} 6220
+hl{f,3fff568c,0} 6221
+hl{f,3fff8b4c,0} 6222
+hl{f,3fff3f1c,0} 6223
+hl{m,112,0,3fff8b4c} 6224
+hl{m,16,0,3fff3f1c} 6225
+hl{f,3fff5674,0} 6226
+hl{m,16,0,3fff5674} 6227
+hl{f,3fff8b4c,0} 6228
+hl{f,3fff5674,0} 6229
+hl{m,16,0,3fff5674} 6230
+hl{f,3fff3f1c,0} 6231
+hl{m,16,0,3fff3f1c} 6232
+hl{f,3fff5674,0} 6233
+hl{m,16,0,3fff5674} 6234
+hl{m,756,0,3fff9274} 6235
+hl{f,3fff9274,0} 6236
+hl{f,3fff3f1c,0} 6237
+hl{m,16,0,3fff3f1c} 6238
+hl{f,3fff4c64,0} 6239
+hl{m,16,0,3fff4c64} 6240
+hl{f,3fff45a4,0} 6241
+hl{m,16,0,3fff45a4} 6242
+hl{f,3fff5674,0} 6243
+hl{m,16,0,3fff5674} 6244
+hl{m,756,0,3fff9274} 6245
+hl{f,3fff9274,0} 6246
+hl flush 6246 - remains 12648
+
+hl{f,3fff3f1c,0} 6247
+hl{m,16,0,3fff3f1c} 6248
+hl{m,20,0,3fff3d64} 6249
+hl{f,3fff54cc,0} 6250
+hl{f,3fff5674,0} 6251
+hl{m,16,0,3fff54cc} 6252
+hl{m,756,0,3fff9274} 6253
+hl{f,3fff9274,0} 6254
+hl{f,3fff3f1c,0} 6255
+hl{m,16,0,3fff3f1c} 6256
+hl{f,3fff54cc,0} 6257
+hl{m,16,0,3fff54cc} 6258
+hl{m,756,0,3fff9274} 6259
+hl{f,3fff9274,0} 6260
+hl{f,3fff54cc,0} 6261
+hl{m,16,0,3fff54cc} 6262
+hl{m,756,0,3fff9274} 6263
+hl{f,3fff9274,0} 6264
+hl{f,3fff3f1c,0} 6265
+hl{m,16,0,3fff3f1c} 6266
+hl{f,3fff54cc,0} 6267
+hl{m,16,0,3fff54cc} 6268
+hl{f,3fff3f1c,0} 6269
+hl{m,16,0,3fff3f1c} 6270
+hl{m,756,0,3fff9274} 6271
+hl{f,3fff9274,0} 6272
+hl{f,3fff45a4,0} 6273
+hl{m,16,0,3fff45a4} 6274
+hl{f,3fff54cc,0} 6275
+hl{m,16,0,3fff54cc} 6276
+hl{m,756,0,3fff9274} 6277
+hl{f,3fff9274,0} 6278
+hl flush 6278 - remains 12648
+dns_tmr: dns_check_entries
+
+hl{f,3fff3f1c,0} 6279
+hl{m,16,0,3fff3f1c} 6280
+hl{f,3fff54cc,0} 6281
+hl{m,16,0,3fff54cc} 6282
+hl{m,756,0,3fff9274} 6283
+hl{f,3fff9274,0} 6284
+hl{f,3fff3f1c,0} 6285
+hl{m,16,0,3fff3f1c} 6286
+hl{f,3fff54cc,0} 6287
+hl{m,16,0,3fff54cc} 6288
+hl{m,756,0,3fff9274} 6289
+hl{f,3fff9274,0} 6290
+hl{f,3fff54cc,0} 6291
+hl{m,16,0,3fff54cc} 6292
+hl{f,3fff3f1c,0} 6293
+hl{m,16,0,3fff3f1c} 6294
+hl{m,756,0,3fff9274} 6295
+hl{f,3fff9274,0} 6296
+hl{f,3fff54cc,0} 6297
+hl{m,16,0,3fff54cc} 6298
+hl{m,756,0,3fff9274} 6299
+hl{f,3fff9274,0} 6300
+hl{f,3fff3f1c,0} 6301
+hl{m,16,0,3fff3f1c} 6302
+hl{f,3fff4c64,0} 6303
+hl{m,16,0,3fff4c64} 6304
+hl{f,3fff45a4,0} 6305
+hl{m,16,0,3fff45a4} 6306
+hl{f,3fff54cc,0} 6307
+hl{m,16,0,3fff54cc} 6308
+hl{m,756,0,3fff9274} 6309
+hl{f,3fff9274,0} 6310
+hl flush 6310 - remains 12648
+wscli Sending PING
+LTcpClient: Malloc 2 bytes in stream
+
+hl{f,3fff3f1c,0} 6311
+hl{m,16,0,3fff3f1c} 6312
+hl{f,3fff54cc,0} 6313
+hl{m,16,0,3fff54cc} 6314
+hl{m,756,0,3fff9274} 6315
+hl{f,3fff9274,0} 6316
+hl{m,28,0,3fff5674} 6317
+hl{m,3,0,3fff7f44} 6318
+hl{f,3fff3f1c,0} 6319
+hl{m,16,0,3fff3f1c} 6320
+hl{f,3fff54cc,0} 6321
+hl{m,16,0,3fff54cc} 6322
+hl{m,756,0,3fff9274} 6323
+hl{f,3fff9274,0} 6324
+hl{f,3fff54cc,0} 6325
+hl{m,16,0,3fff54cc} 6326
+hl{m,756,0,3fff9274} 6327
+hl{f,3fff9274,0} 6328
+hl{f,3fff3f1c,0} 6329
+hl{m,16,0,3fff3f1c} 6330
+hl{m,756,0,3fff9274} 6331
+hl{f,3fff9274,0} 6332
+hl{f,3fff54cc,0} 6333
+hl{m,16,0,3fff54cc} 6334
+hl{f,3fff3f1c,0} 6335
+hl{m,16,0,3fff3f1c} 6336
+hl{m,756,0,3fff9274} 6337
+hl{f,3fff9274,0} 6338
+hl{f,3fff45a4,0} 6339
+hl{m,16,0,3fff45a4} 6340
+hl{f,3fff54cc,0} 6341
+hl{m,16,0,3fff54cc} 6342
+hl flush 6342 - remains 11824
+Eaxtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+▒axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl{m,756,0,3fff9274} 6343
+hl{f,3fff9274,0} 6344
+hl{f,3fff3f1c,0} 6345
+hl{m,25,0,3fff8b4c} 6346
+hl{f,3fff8b4c,0} 6347
+hl{m,48,0,3fff8b4c} 6348
+hl{f,3fff8b4c,0} 6349
+hl{m,1572,0,3fff978c} 6350
+hl{m,24,0,3fff8b4c} 6351
+hl{f,3fff7f44,0} 6352
+hl{f,3fff5674,0} 6353
+hl{m,16,0,3fff3f1c} 6354
+hl{f,3fff54cc,0} 6355
+hl{m,16,0,3fff54cc} 6356
+hl{m,20,0,3fff3d7c} 6357
+hl{f,3fff978c,0} 6358
+hl{f,3fff8b4c,0} 6359
+hl{m,54,0,3fff8b4c} 6360
+hl{f,3fff8b4c,0} 6361
+hl{m,54,0,3fff8b4c} 6362
+hl{f,3fff8b4c,0} 6363
+hl{m,25,0,3fff5674} 6364
+hl{f,3fff5674,0} 6365
+hl{m,2,0,3fff7f44} 6366
+hl{m,116,0,3fff8b4c} 6367
+hl{f,3fff7f44,0} 6368
+hl{f,3fff3d7c,0} 6369
+hl{m,3,0,3fff7f44} 6370
+hl{f,3fff7f44,0} 6371
+hl{f,3fff8b4c,0} 6372
+hl{f,3fff3f1c,0} 6373
+hl{m,112,0,3fff8b4c} 6374
+hl flush 6374 - remains 12504
+dns_tmr: dns_check_entries
+
+hl{m,16,0,3fff3f1c} 6375
+hl{f,3fff54cc,0} 6376
+hl{m,16,0,3fff54cc} 6377
+hl{f,3fff8b4c,0} 6378
+hl{f,3fff54cc,0} 6379
+hl{m,16,0,3fff54cc} 6380
+hl{f,3fff3f1c,0} 6381
+hl{m,16,0,3fff3f1c} 6382
+hl{f,3fff54cc,0} 6383
+hl{m,16,0,3fff54cc} 6384
+hl{m,756,0,3fff9274} 6385
+hl{f,3fff9274,0} 6386
+hl{f,3fff3f1c,0} 6387
+hl{m,16,0,3fff3f1c} 6388
+hl{f,3fff3d34,0} 6389
+hl{m,16,0,3fff3d34} 6390
+hl{f,3fff4c64,0} 6391
+hl{m,16,0,3fff4c64} 6392
+hl{f,3fff45a4,0} 6393
+hl{m,16,0,3fff45a4} 6394
+hl{f,3fff54cc,0} 6395
+hl{m,16,0,3fff54cc} 6396
+hl{m,756,0,3fff9274} 6397
+hl{f,3fff9274,0} 6398
+hl{f,3fff3f1c,0} 6399
+hl{m,16,0,3fff3f1c} 6400
+hl{f,3fff54cc,0} 6401
+hl{m,16,0,3fff54cc} 6402
+hl{m,756,0,3fff9274} 6403
+hl{f,3fff9274,0} 6404
+hl{f,3fff3f1c,0} 6405
+hl{m,16,0,3fff3f1c} 6406
+hl flush 6406 - remains 12648
+
+hl{f,3fff54cc,0} 6407
+hl{m,16,0,3fff54cc} 6408
+hl{m,756,0,3fff9274} 6409
+hl{f,3fff9274,0} 6410
+hl{f,3fff54cc,0} 6411
+hl{m,16,0,3fff54cc} 6412
+hl{m,20,0,3fff3d7c} 6413
+hl{f,3fff3d7c,0} 6414
+hl{f,3fff3f1c,0} 6415
+hl{m,16,0,3fff3f1c} 6416
+hl{m,20,0,3fff3d7c} 6417
+hl{f,3fff3d7c,0} 6418
+hl{f,3fff54cc,0} 6419
+hl{m,16,0,3fff54cc} 6420
+hl{f,3fff3f1c,0} 6421
+hl{m,16,0,3fff3f1c} 6422
+hl{m,20,0,3fff3d7c} 6423
+hl{f,3fff3d7c,0} 6424
+hl{f,3fff45a4,0} 6425
+hl{m,16,0,3fff45a4} 6426
+hl{f,3fff54cc,0} 6427
+hl{m,16,0,3fff54cc} 6428
+hl{m,20,0,3fff3d7c} 6429
+hl{f,3fff3d7c,0} 6430
+hl{f,3fff3f1c,0} 6431
+hl{m,16,0,3fff3f1c} 6432
+hl{f,3fff54cc,0} 6433
+hl{m,16,0,3fff54cc} 6434
+hl{m,20,0,3fff3d7c} 6435
+hl{f,3fff3d7c,0} 6436
+hl{f,3fff3f1c,0} 6437
+hl{m,16,0,3fff3f1c} 6438
+hl flush 6438 - remains 12648
+ 6:10:28 Dormitor H:56.60(56.7) T:18.10(17.9 0.0)/24.6 SetPt:23.00 needHeat:1
+QHEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+?HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl{f,3fff54cc,0} 6439
+hl{m,16,0,3fff54cc} 6440
+hl{m,20,0,3fff3d7c} 6441
+hl{f,3fff3d7c,0} 6442
+hl{f,3fff54cc,0} 6443
+hl{m,16,0,3fff54cc} 6444
+hl{f,3fff3f1c,0} 6445
+hl{m,16,0,3fff3f1c} 6446
+hl{m,20,0,3fff3d7c} 6447
+hl{f,3fff3d7c,0} 6448
+hl{m,20,0,3fff3d7c} 6449
+hl{f,3fff3d94,0} 6450
+hl{f,3fff54cc,0} 6451
+hl{m,16,0,3fff54cc} 6452
+hl{f,3fff3f1c,0} 6453
+hl{m,16,0,3fff3f1c} 6454
+hl{f,3fff4c64,0} 6455
+hl{m,16,0,3fff4c64} 6456
+hl{f,3fff45a4,0} 6457
+hl{m,16,0,3fff45a4} 6458
+hl{f,3fff54cc,0} 6459
+hl{m,16,0,3fff54cc} 6460
+hl{f,3fff3f1c,0} 6461
+hl{m,16,0,3fff3f1c} 6462
+hl{f,3fff54cc,0} 6463
+hl{m,16,0,3fff54cc} 6464
+hl{f,3fff3f1c,0} 6465
+hl{m,16,0,3fff3f1c} 6466
+hl{f,3fff54cc,0} 6467
+hl{m,16,0,3fff54cc} 6468
+hl{f,3fff54cc,0} 6469
+hl{m,16,0,3fff54cc} 6470
+hl flush 6470 - remains 12648
+wscli Sending PING
+TcpClient: Malloc 2 bytes in stream
+
+hl{f,3fff3f1c,0} 6471
+hl{m,16,0,3fff3f1c} 6472
+hl{f,3fff54cc,0} 6473
+hl{m,16,0,3fff54cc} 6474
+hl{f,3fff3f1c,0} 6475
+hl{m,16,0,3fff3f1c} 6476
+hl{f,3fff45a4,0} 6477
+hl{m,16,0,3fff45a4} 6478
+hl{f,3fff54cc,0} 6479
+hl{m,16,0,3fff54cc} 6480
+hl{f,3fff3f1c,0} 6481
+hl{m,16,0,3fff3f1c} 6482
+hl{f,3fff54cc,0} 6483
+hl{m,16,0,3fff54cc} 6484
+hl{f,3fff3f1c,0} 6485
+hl{m,16,0,3fff3f1c} 6486
+hl{f,3fff54cc,0} 6487
+hl{m,16,0,3fff54cc} 6488
+hl{f,3fff54cc,0} 6489
+hl{m,16,0,3fff54cc} 6490
+hl{f,3fff3f1c,0} 6491
+hl{m,16,0,3fff3f1c} 6492
+hl{m,28,0,3fff5674} 6493
+hl{m,3,0,3fff7f44} 6494
+hl{m,20,0,3fff3d94} 6495
+hl{m,20,0,3fff8b4c} 6496
+hl{f,3fff3d94,0} 6497
+hl{f,3fff8b4c,0} 6498
+hl{f,3fff54cc,0} 6499
+hl{m,16,0,3fff54cc} 6500
+hl{m,756,0,3fff9274} 6501
+hl{f,3fff9274,0} 6502
+hl flush 6502 - remains 12608
+dns_tmr: dns_check_entries
+
+hl{f,3fff3f1c,0} 6503
+hl{m,16,0,3fff3f1c} 6504
+hl{f,3fff4c64,0} 6505
+hl{m,16,0,3fff4c64} 6506
+hl{f,3fff45a4,0} 6507
+hl{m,16,0,3fff45a4} 6508
+hl{f,3fff54cc,0} 6509
+hl{m,16,0,3fff54cc} 6510
+hl{m,756,0,3fff9274} 6511
+hl{f,3fff9274,0} 6512
+hl{f,3fff3f1c,0} 6513
+hl{m,16,0,3fff3f1c} 6514
+hl{m,756,0,3fff9274} 6515
+hl{f,3fff9274,0} 6516
+hl{f,3fff54cc,0} 6517
+hl{m,16,0,3fff54cc} 6518
+hl{m,756,0,3fff9274} 6519
+hl{f,3fff9274,0} 6520
+hl{f,3fff3f1c,0} 6521
+hl{m,16,0,3fff3f1c} 6522
+hl{f,3fff54cc,0} 6523
+hl{m,16,0,3fff54cc} 6524
+hl{m,756,0,3fff9274} 6525
+hl{f,3fff9274,0} 6526
+hl{f,3fff54cc,0} 6527
+hl{m,16,0,3fff54cc} 6528
+hl{f,3fff3f1c,0} 6529
+hl{m,16,0,3fff3f1c} 6530
+hl{m,756,0,3fff9274} 6531
+hl{f,3fff9274,0} 6532
+hl{f,3fff54cc,0} 6533
+hl{m,16,0,3fff54cc} 6534
+hl flush 6534 - remains 12608
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0
+hl{f,3fff3f1c,0} 6535
+hl{m,16,0,3fff3f1c} 6536
+hl{m,756,0,3fff9274} 6537
+hl{f,3fff9274,0} 6538
+hl{f,3fff45a4,0} 6539
+hl{m,16,0,3fff45a4} 6540
+hl{f,3fff54cc,0} 6541
+hl{m,16,0,3fff54cc} 6542
+hl{f,3fff3f1c,0} 6543
+hl{m,25,0,3fff8b4c} 6544
+hl{f,3fff8b4c,0} 6545
+hl{m,48,0,3fff8b4c} 6546
+hl{f,3fff8b4c,0} 6547
+hl{m,1572,0,3fff978c} 6548
+hl{m,24,0,3fff8b4c} 6549
+hl{f,3fff7f44,0} 6550
+hl{f,3fff5674,0} 6551
+hl{m,16,0,3fff3f1c} 6552
+hl{m,756,0,3fff9274} 6553
+hl{f,3fff9274,0} 6554
+hl{f,3fff54cc,0} 6555
+hl{m,16,0,3fff54cc} 6556
+hl{m,20,0,3fff3d94} 6557
+hl{f,3fff3d64,0} 6558
+hl{m,20,0,3fff3d64} 6559
+hl{f,3fff978c,0} 6560
+hl{f,3fff8b4c,0} 6561
+hl{m,54,0,3fff8b4c} 6562
+hl{f,3fff8b4c,0} 6563
+hl{m,54,0,3fff8b4c} 6564
+hl{f,3fff8b4c,0} 6565
+hl{m,25,0,3fff5674} 6566
+hl flush 6566 - remains 12600
+<axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl{f,3fff5674,0} 6567
+hl{m,2,0,3fff7f44} 6568
+hl{m,116,0,3fff8b4c} 6569
+hl{f,3fff7f44,0} 6570
+hl{f,3fff3d64,0} 6571
+hl{m,3,0,3fff7f44} 6572
+hl{f,3fff7f44,0} 6573
+hl{f,3fff8b4c,0} 6574
+hl{f,3fff3f1c,0} 6575
+hl{m,112,0,3fff8b4c} 6576
+hl{m,16,0,3fff3f1c} 6577
+hl{f,3fff54cc,0} 6578
+hl{m,16,0,3fff54cc} 6579
+hl{f,3fff8b4c,0} 6580
+hl{f,3fff54cc,0} 6581
+hl{m,16,0,3fff54cc} 6582
+hl{f,3fff3f1c,0} 6583
+hl{m,16,0,3fff3f1c} 6584
+hl{f,3fff54cc,0} 6585
+hl{m,16,0,3fff54cc} 6586
+hl{m,756,0,3fff9274} 6587
+hl{f,3fff9274,0} 6588
+hl{f,3fff3f1c,0} 6589
+hl{m,16,0,3fff3f1c} 6590
+hl{m,756,0,3fff9274} 6591
+hl{f,3fff9274,0} 6592
+hl{f,3fff4c64,0} 6593
+hl{m,16,0,3fff4c64} 6594
+hl{f,3fff45a4,0} 6595
+hl{m,16,0,3fff45a4} 6596
+hl{f,3fff54cc,0} 6597
+hl{m,16,0,3fff54cc} 6598
+hl flush 6598 - remains 11864
+dwscli Sending PING
+LTcpClient: Malloc 2 bytes in stream
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒
+hl{m,756,0,3fff9274} 6599
+hl{f,3fff9274,0} 6600
+hl{f,3fff3f1c,0} 6601
+hl{m,16,0,3fff3f1c} 6602
+hl{f,3fff54cc,0} 6603
+hl{m,16,0,3fff54cc} 6604
+hl{f,3fff3f1c,0} 6605
+hl{m,16,0,3fff3f1c} 6606
+hl{f,3fff54cc,0} 6607
+hl{m,16,0,3fff54cc} 6608
+hl{m,756,0,3fff9274} 6609
+hl{f,3fff9274,0} 6610
+hl{f,3fff54cc,0} 6611
+hl{m,16,0,3fff54cc} 6612
+hl{f,3fff3f1c,0} 6613
+hl{m,16,0,3fff3f1c} 6614
+hl{m,756,0,3fff9274} 6615
+hl{f,3fff9274,0} 6616
+hl{f,3fff54cc,0} 6617
+hl{m,16,0,3fff54cc} 6618
+hl{m,756,0,3fff9274} 6619
+hl{f,3fff9274,0} 6620
+hl{f,3fff3f1c,0} 6621
+hl{m,16,0,3fff3f1c} 6622
+hl{f,3fff45a4,0} 6623
+hl{m,16,0,3fff45a4} 6624
+hl{f,3fff54cc,0} 6625
+hl{m,16,0,3fff54cc} 6626
+hl{m,28,0,3fff5674} 6627
+hl{m,3,0,3fff7f44} 6628
+hl{f,3fff3f1c,0} 6629
+hl{m,25,0,3fff8b4c} 6630
+hl flush 6630 - remains 12608
+axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+▒axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl{f,3fff8b4c,0} 6631
+hl{m,48,0,3fff8b4c} 6632
+hl{f,3fff8b4c,0} 6633
+hl{m,1572,0,3fff978c} 6634
+hl{m,24,0,3fff8b4c} 6635
+hl{f,3fff7f44,0} 6636
+hl{f,3fff5674,0} 6637
+hl{m,16,0,3fff3f1c} 6638
+hl{m,756,0,3fff9274} 6639
+hl{f,3fff9274,0} 6640
+hl{f,3fff54cc,0} 6641
+hl{m,16,0,3fff54cc} 6642
+hl{m,20,0,3fff3d64} 6643
+hl{f,3fff978c,0} 6644
+hl{f,3fff8b4c,0} 6645
+hl{m,54,0,3fff8b4c} 6646
+hl{f,3fff8b4c,0} 6647
+hl{m,54,0,3fff8b4c} 6648
+hl{f,3fff8b4c,0} 6649
+hl{m,25,0,3fff5674} 6650
+hl{f,3fff5674,0} 6651
+hl{m,2,0,3fff7f44} 6652
+hl{m,116,0,3fff8b4c} 6653
+hl{f,3fff7f44,0} 6654
+hl{f,3fff3d64,0} 6655
+hl{m,3,0,3fff7f44} 6656
+hl{f,3fff7f44,0} 6657
+hl{f,3fff8b4c,0} 6658
+hl{f,3fff3f1c,0} 6659
+hl{m,112,0,3fff8b4c} 6660
+hl{m,16,0,3fff3f1c} 6661
+hl{f,3fff54cc,0} 6662
+hl flush 6662 - remains 12504
+dns_tmr: dns_check_entries
+
+hl{m,16,0,3fff54cc} 6663
+hl{f,3fff8b4c,0} 6664
+hl{f,3fff54cc,0} 6665
+hl{m,16,0,3fff54cc} 6666
+hl{f,3fff3f1c,0} 6667
+hl{m,16,0,3fff3f1c} 6668
+hl{f,3fff54cc,0} 6669
+hl{m,16,0,3fff54cc} 6670
+hl{m,756,0,3fff9274} 6671
+hl{f,3fff9274,0} 6672
+hl{f,3fff3f1c,0} 6673
+hl{m,16,0,3fff3f1c} 6674
+hl{f,3fff4c64,0} 6675
+hl{m,16,0,3fff4c64} 6676
+hl{f,3fff45a4,0} 6677
+hl{m,16,0,3fff45a4} 6678
+hl{f,3fff54cc,0} 6679
+hl{m,16,0,3fff54cc} 6680
+hl{m,756,0,3fff9274} 6681
+hl{f,3fff9274,0} 6682
+hl{f,3fff3f1c,0} 6683
+hl{m,16,0,3fff3f1c} 6684
+hl{m,756,0,3fff9274} 6685
+hl{f,3fff9274,0} 6686
+hl{f,3fff54cc,0} 6687
+hl{m,16,0,3fff54cc} 6688
+hl{m,756,0,3fff9274} 6689
+hl{f,3fff9274,0} 6690
+hl{f,3fff3f1c,0} 6691
+hl{m,16,0,3fff3f1c} 6692
+hl{f,3fff54cc,0} 6693
+hl{m,16,0,3fff54cc} 6694
+hl flush 6694 - remains 11864
+d
+hl{m,756,0,3fff9274} 6695
+hl{f,3fff9274,0} 6696
+hl{f,3fff54cc,0} 6697
+hl{m,16,0,3fff54cc} 6698
+hl{f,3fff3f1c,0} 6699
+hl{m,16,0,3fff3f1c} 6700
+hl{f,3fff54cc,0} 6701
+hl{m,16,0,3fff54cc} 6702
+hl{f,3fff3f1c,0} 6703
+hl{m,16,0,3fff3f1c} 6704
+hl{f,3fff45a4,0} 6705
+hl{m,16,0,3fff45a4} 6706
+hl{f,3fff54cc,0} 6707
+hl{m,16,0,3fff54cc} 6708
+hl{m,756,0,3fff9274} 6709
+hl{f,3fff9274,0} 6710
+hl{f,3fff3f1c,0} 6711
+hl{m,16,0,3fff3f1c} 6712
+hl{f,3fff54cc,0} 6713
+hl{m,16,0,3fff54cc} 6714
+hl{m,756,0,3fff9274} 6715
+hl{f,3fff9274,0} 6716
+hl{f,3fff3f1c,0} 6717
+hl{m,16,0,3fff3f1c} 6718
+hl{f,3fff54cc,0} 6719
+hl{m,16,0,3fff54cc} 6720
+hl{m,756,0,3fff9274} 6721
+hl{f,3fff9274,0} 6722
+hl{f,3fff54cc,0} 6723
+hl{m,16,0,3fff54cc} 6724
+hl{m,756,0,3fff9274} 6725
+hl{f,3fff9274,0} 6726
+hl flush 6726 - remains 12648
+dns_tmr: dns_check_entries
+ 6:10:33 Dormitor H:56.50(56.7) T:18.10(17.9 0.0)/24.7 SetPt:23.00 needHeat:1
+QHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{f,3fff3f1c,0} 6727
+hl{m,16,0,3fff3f1c} 6728
+hl{f,3fff54cc,0} 6729
+hl{m,16,0,3fff54cc} 6730
+hl{m,756,0,3fff9274} 6731
+hl{f,3fff9274,0} 6732
+hl{f,3fff3f1c,0} 6733
+hl{m,16,0,3fff3f1c} 6734
+hl{m,756,0,3fff9274} 6735
+hl{f,3fff9274,0} 6736
+hl{f,3fff3d34,0} 6737
+hl{m,16,0,3fff3d34} 6738
+hl{f,3fff4c64,0} 6739
+hl{m,16,0,3fff4c64} 6740
+hl{f,3fff45a4,0} 6741
+hl{m,16,0,3fff45a4} 6742
+hl{f,3fff54cc,0} 6743
+hl{m,16,0,3fff54cc} 6744
+hl{f,3fff3f1c,0} 6745
+hl{m,16,0,3fff3f1c} 6746
+hl{f,3fff54cc,0} 6747
+hl{m,16,0,3fff54cc} 6748
+hl{m,756,0,3fff9274} 6749
+hl{f,3fff9274,0} 6750
+hl{f,3fff3f1c,0} 6751
+hl{m,16,0,3fff3f1c} 6752
+hl{f,3fff54cc,0} 6753
+hl{m,16,0,3fff54cc} 6754
+hl{m,20,0,3fff3d64} 6755
+hl{f,3fff3d7c,0} 6756
+hl{f,3fff54cc,0} 6757
+hl{m,16,0,3fff54cc} 6758
+hl flush 6758 - remains 12648
+dns_tmr: dns_check_entries
+
+hl{f,3fff3f1c,0} 6759
+hl{m,16,0,3fff3f1c} 6760
+hl{f,3fff54cc,0} 6761
+hl{m,16,0,3fff54cc} 6762
+hl{f,3fff3f1c,0} 6763
+hl{m,16,0,3fff3f1c} 6764
+hl{f,3fff45a4,0} 6765
+hl{m,16,0,3fff45a4} 6766
+hl{f,3fff54cc,0} 6767
+hl{m,16,0,3fff54cc} 6768
+hl{f,3fff3f1c,0} 6769
+hl{m,16,0,3fff3f1c} 6770
+hl{f,3fff54cc,0} 6771
+hl{m,16,0,3fff54cc} 6772
+hl{f,3fff3f1c,0} 6773
+hl{m,16,0,3fff3f1c} 6774
+hl{f,3fff54cc,0} 6775
+hl{m,16,0,3fff54cc} 6776
+hl{f,3fff54cc,0} 6777
+hl{m,16,0,3fff54cc} 6778
+hl{f,3fff3f1c,0} 6779
+hl{m,16,0,3fff3f1c} 6780
+hl{f,3fff54cc,0} 6781
+hl{m,16,0,3fff54cc} 6782
+hl{f,3fff3f1c,0} 6783
+hl{m,16,0,3fff3f1c} 6784
+hl{f,3fff4c64,0} 6785
+hl{m,16,0,3fff4c64} 6786
+hl{f,3fff45a4,0} 6787
+hl{m,16,0,3fff45a4} 6788
+hl{f,3fff54cc,0} 6789
+hl{m,16,0,3fff54cc} 6790
+hl flush 6790 - remains 12648
+wscli Sending PING
+TcpClient: Malloc 2 bytes in stream
+
+hl{f,3fff3f1c,0} 6791
+hl{m,16,0,3fff3f1c} 6792
+hl{f,3fff54cc,0} 6793
+hl{m,16,0,3fff54cc} 6794
+hl{f,3fff3f1c,0} 6795
+hl{m,16,0,3fff3f1c} 6796
+hl{f,3fff54cc,0} 6797
+hl{m,16,0,3fff54cc} 6798
+hl{m,756,0,3fff9274} 6799
+hl{f,3fff9274,0} 6800
+hl{m,28,0,3fff5674} 6801
+hl{m,3,0,3fff7f44} 6802
+hl{f,3fff54cc,0} 6803
+hl{m,16,0,3fff54cc} 6804
+hl{m,756,0,3fff9274} 6805
+hl{f,3fff9274,0} 6806
+hl{f,3fff3f1c,0} 6807
+hl{m,16,0,3fff3f1c} 6808
+hl{m,756,0,3fff9274} 6809
+hl{f,3fff9274,0} 6810
+hl{f,3fff54cc,0} 6811
+hl{m,16,0,3fff54cc} 6812
+hl{f,3fff3f1c,0} 6813
+hl{m,16,0,3fff3f1c} 6814
+hl{m,756,0,3fff9274} 6815
+hl{f,3fff9274,0} 6816
+hl{f,3fff45a4,0} 6817
+hl{m,16,0,3fff45a4} 6818
+hl{f,3fff54cc,0} 6819
+hl{m,16,0,3fff54cc} 6820
+hl{m,756,0,3fff9274} 6821
+hl{f,3fff9274,0} 6822
+hl flush 6822 - remains 12608
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl{f,3fff3f1c,0} 6823
+hl{m,25,0,3fff8b4c} 6824
+hl{f,3fff8b4c,0} 6825
+hl{m,48,0,3fff8b4c} 6826
+hl{f,3fff8b4c,0} 6827
+hl{m,1572,0,3fff978c} 6828
+hl{m,24,0,3fff8b4c} 6829
+hl{f,3fff7f44,0} 6830
+hl{f,3fff5674,0} 6831
+hl{m,16,0,3fff3f1c} 6832
+hl{f,3fff54cc,0} 6833
+hl{m,16,0,3fff54cc} 6834
+hl{m,756,0,3fff9274} 6835
+hl{f,3fff9274,0} 6836
+hl{m,20,0,3fff3d7c} 6837
+hl{f,3fff978c,0} 6838
+hl{f,3fff8b4c,0} 6839
+hl{m,54,0,3fff8b4c} 6840
+hl{f,3fff8b4c,0} 6841
+hl{m,54,0,3fff8b4c} 6842
+hl{f,3fff8b4c,0} 6843
+hl{m,25,0,3fff5674} 6844
+hl{f,3fff5674,0} 6845
+hl{m,2,0,3fff7f44} 6846
+hl{m,116,0,3fff8b4c} 6847
+hl{f,3fff7f44,0} 6848
+hl{f,3fff3d7c,0} 6849
+hl{m,3,0,3fff7f44} 6850
+hl{f,3fff7f44,0} 6851
+hl{f,3fff8b4c,0} 6852
+hl{f,3fff3f1c,0} 6853
+hl{m,112,0,3fff8b4c} 6854
+hl flush 6854 - remains 12504
+dns_tmr: dns_check_entries
+
+hl{m,16,0,3fff3f1c} 6855
+hl{f,3fff54cc,0} 6856
+hl{m,16,0,3fff54cc} 6857
+hl{f,3fff8b4c,0} 6858
+hl{f,3fff54cc,0} 6859
+hl{m,16,0,3fff54cc} 6860
+hl{f,3fff3f1c,0} 6861
+hl{m,16,0,3fff3f1c} 6862
+hl{m,756,0,3fff9274} 6863
+hl{f,3fff9274,0} 6864
+hl{f,3fff54cc,0} 6865
+hl{m,16,0,3fff54cc} 6866
+hl{m,756,0,3fff9274} 6867
+hl{f,3fff9274,0} 6868
+hl{f,3fff3f1c,0} 6869
+hl{m,16,0,3fff3f1c} 6870
+hl{m,20,0,3fff3d7c} 6871
+hl{f,3fff3d94,0} 6872
+hl{f,3fff4c64,0} 6873
+hl{m,16,0,3fff4c64} 6874
+hl{f,3fff45a4,0} 6875
+hl{m,16,0,3fff45a4} 6876
+hl{f,3fff54cc,0} 6877
+hl{m,16,0,3fff54cc} 6878
+hl{m,756,0,3fff9274} 6879
+hl{f,3fff9274,0} 6880
+hl{f,3fff3f1c,0} 6881
+hl{m,16,0,3fff3f1c} 6882
+hl{f,3fff54cc,0} 6883
+hl{m,16,0,3fff54cc} 6884
+hl{m,756,0,3fff9274} 6885
+hl{f,3fff9274,0} 6886
+hl flush 6886 - remains 12648
+
+hl{f,3fff3f1c,0} 6887
+hl{m,16,0,3fff3f1c} 6888
+hl{f,3fff54cc,0} 6889
+hl{m,16,0,3fff54cc} 6890
+hl{m,756,0,3fff9274} 6891
+hl{f,3fff9274,0} 6892
+hl{f,3fff54cc,0} 6893
+hl{m,16,0,3fff54cc} 6894
+hl{f,3fff3f1c,0} 6895
+hl{m,16,0,3fff3f1c} 6896
+hl{m,756,0,3fff9274} 6897
+hl{f,3fff9274,0} 6898
+hl{f,3fff54cc,0} 6899
+hl{m,16,0,3fff54cc} 6900
+hl{m,756,0,3fff9274} 6901
+hl{f,3fff9274,0} 6902
+hl{f,3fff3f1c,0} 6903
+hl{m,16,0,3fff3f1c} 6904
+hl{f,3fff45a4,0} 6905
+hl{m,16,0,3fff45a4} 6906
+hl{f,3fff54cc,0} 6907
+hl{m,16,0,3fff54cc} 6908
+hl{f,3fff3f1c,0} 6909
+hl{m,16,0,3fff3f1c} 6910
+hl{f,3fff54cc,0} 6911
+hl{m,16,0,3fff54cc} 6912
+hl{m,756,0,3fff9274} 6913
+hl{f,3fff9274,0} 6914
+hl{f,3fff3f1c,0} 6915
+hl{m,16,0,3fff3f1c} 6916
+hl{f,3fff54cc,0} 6917
+hl{m,16,0,3fff54cc} 6918
+hl flush 6918 - remains 11864
+(wscli Sending PING
+LTcpClient: Malloc 2 bytes in stream
+dns_tmr: dns_check_entries
+
+hl{m,756,0,3fff9274} 6919
+hl{f,3fff9274,0} 6920
+hl{f,3fff54cc,0} 6921
+hl{m,16,0,3fff54cc} 6922
+hl{f,3fff3f1c,0} 6923
+hl{m,16,0,3fff3f1c} 6924
+hl{m,756,0,3fff9274} 6925
+hl{f,3fff9274,0} 6926
+hl{m,28,0,3fff5674} 6927
+hl{m,3,0,3fff7f44} 6928
+hl{f,3fff54cc,0} 6929
+hl{m,16,0,3fff54cc} 6930
+hl{f,3fff3f1c,0} 6931
+hl{m,16,0,3fff3f1c} 6932
+hl{m,756,0,3fff9274} 6933
+hl{f,3fff9274,0} 6934
+hl{f,3fff4c64,0} 6935
+hl{m,16,0,3fff4c64} 6936
+hl{f,3fff45a4,0} 6937
+hl{m,16,0,3fff45a4} 6938
+hl{f,3fff54cc,0} 6939
+hl{m,16,0,3fff54cc} 6940
+hl{m,756,0,3fff9274} 6941
+hl{f,3fff9274,0} 6942
+hl{f,3fff3f1c,0} 6943
+hl{m,16,0,3fff3f1c} 6944
+hl{f,3fff54cc,0} 6945
+hl{m,16,0,3fff54cc} 6946
+hl{m,756,0,3fff9274} 6947
+hl{f,3fff9274,0} 6948
+hl{f,3fff3f1c,0} 6949
+hl{m,16,0,3fff3f1c} 6950
+hl flush 6950 - remains 12608
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@
+hl{f,3fff54cc,0} 6951
+hl{m,16,0,3fff54cc} 6952
+hl{m,756,0,3fff9274} 6953
+hl{f,3fff9274,0} 6954
+hl{f,3fff54cc,0} 6955
+hl{m,16,0,3fff54cc} 6956
+hl{m,756,0,3fff9274} 6957
+hl{f,3fff9274,0} 6958
+hl{f,3fff3f1c,0} 6959
+hl{m,16,0,3fff3f1c} 6960
+hl{m,756,0,3fff9274} 6961
+hl{f,3fff9274,0} 6962
+hl{f,3fff54cc,0} 6963
+hl{m,16,0,3fff54cc} 6964
+hl{f,3fff3f1c,0} 6965
+hl{m,16,0,3fff3f1c} 6966
+hl{m,756,0,3fff9274} 6967
+hl{f,3fff9274,0} 6968
+hl{f,3fff45a4,0} 6969
+hl{m,16,0,3fff45a4} 6970
+hl{f,3fff54cc,0} 6971
+hl{m,16,0,3fff54cc} 6972
+hl{m,756,0,3fff9274} 6973
+hl{f,3fff9274,0} 6974
+hl{f,3fff3f1c,0} 6975
+hl{m,25,0,3fff8b4c} 6976
+hl{f,3fff8b4c,0} 6977
+hl{m,48,0,3fff8b4c} 6978
+hl{f,3fff8b4c,0} 6979
+hl{m,1572,0,3fff978c} 6980
+hl{m,24,0,3fff8b4c} 6981
+hl{f,3fff7f44,0} 6982
+hl flush 6982 - remains 11040
+▒onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl{f,3fff5674,0} 6983
+hl{m,16,0,3fff3f1c} 6984
+hl{m,756,0,3fff9274} 6985
+hl{f,3fff9274,0} 6986
+hl{f,3fff54cc,0} 6987
+hl{m,16,0,3fff54cc} 6988
+hl{m,20,0,3fff3d94} 6989
+hl{f,3fff978c,0} 6990
+hl{f,3fff8b4c,0} 6991
+hl{m,54,0,3fff8b4c} 6992
+hl{f,3fff8b4c,0} 6993
+hl{m,54,0,3fff8b4c} 6994
+hl{f,3fff8b4c,0} 6995
+hl{m,25,0,3fff5674} 6996
+hl{f,3fff5674,0} 6997
+hl{m,2,0,3fff7f44} 6998
+hl{m,116,0,3fff8b4c} 6999
+hl{f,3fff7f44,0} 7000
+hl{f,3fff3d94,0} 7001
+hl{m,3,0,3fff7f44} 7002
+hl{f,3fff7f44,0} 7003
+hl{f,3fff8b4c,0} 7004
+hl{f,3fff3f1c,0} 7005
+hl{m,112,0,3fff8b4c} 7006
+hl{m,16,0,3fff3f1c} 7007
+hl{f,3fff54cc,0} 7008
+hl{m,16,0,3fff54cc} 7009
+hl{f,3fff8b4c,0} 7010
+hl{f,3fff54cc,0} 7011
+hl{m,16,0,3fff54cc} 7012
+hl{f,3fff3f1c,0} 7013
+hl{m,16,0,3fff3f1c} 7014
+hl flush 7014 - remains 12648
+dns_tmr: dns_check_entries
+
+hl{f,3fff54cc,0} 7015
+hl{m,16,0,3fff54cc} 7016
+hl{m,756,0,3fff9274} 7017
+hl{f,3fff9274,0} 7018
+hl{f,3fff3f1c,0} 7019
+hl{m,16,0,3fff3f1c} 7020
+hl{f,3fff4c64,0} 7021
+hl{m,16,0,3fff4c64} 7022
+hl{f,3fff45a4,0} 7023
+hl{m,16,0,3fff45a4} 7024
+hl{f,3fff54cc,0} 7025
+hl{m,16,0,3fff54cc} 7026
+hl{f,3fff3f1c,0} 7027
+hl{m,16,0,3fff3f1c} 7028
+hl{m,756,0,3fff9274} 7029
+hl{f,3fff9274,0} 7030
+hl{f,3fff54cc,0} 7031
+hl{m,16,0,3fff54cc} 7032
+hl{m,756,0,3fff9274} 7033
+hl{f,3fff9274,0} 7034
+hl{f,3fff3f1c,0} 7035
+hl{m,16,0,3fff3f1c} 7036
+hl{f,3fff54cc,0} 7037
+hl{m,16,0,3fff54cc} 7038
+hl{m,756,0,3fff9274} 7039
+hl{f,3fff9274,0} 7040
+hl{f,3fff54cc,0} 7041
+hl{m,16,0,3fff54cc} 7042
+hl{f,3fff3f1c,0} 7043
+hl{m,16,0,3fff3f1c} 7044
+hl{m,756,0,3fff9274} 7045
+hl{f,3fff9274,0} 7046
+hl flush 7046 - remains 12648
+ 6:10:38 Dormitor H:56.50(56.6) T:18.10(17.9 0.0)/24.7 SetPt:23.00 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{f,3fff54cc,0} 7047
+hl{m,16,0,3fff54cc} 7048
+hl{m,756,0,3fff9274} 7049
+hl{f,3fff9274,0} 7050
+hl{f,3fff3f1c,0} 7051
+hl{m,16,0,3fff3f1c} 7052
+hl{f,3fff45a4,0} 7053
+hl{m,16,0,3fff45a4} 7054
+hl{f,3fff54cc,0} 7055
+hl{m,16,0,3fff54cc} 7056
+hl{m,756,0,3fff9274} 7057
+hl{f,3fff9274,0} 7058
+hl{m,20,0,3fff3d94} 7059
+hl{f,3fff3d64,0} 7060
+hl{f,3fff3f1c,0} 7061
+hl{m,16,0,3fff3f1c} 7062
+hl{f,3fff54cc,0} 7063
+hl{m,16,0,3fff54cc} 7064
+hl{f,3fff3f1c,0} 7065
+hl{m,16,0,3fff3f1c} 7066
+hl{f,3fff54cc,0} 7067
+hl{m,16,0,3fff54cc} 7068
+hl{f,3fff54cc,0} 7069
+hl{m,16,0,3fff54cc} 7070
+hl{f,3fff3f1c,0} 7071
+hl{m,16,0,3fff3f1c} 7072
+hl{f,3fff54cc,0} 7073
+hl{m,16,0,3fff54cc} 7074
+hl{f,3fff3f1c,0} 7075
+hl{m,16,0,3fff3f1c} 7076
+hl{f,3fff3d34,0} 7077
+hl{m,16,0,3fff3d34} 7078
+hl flush 7078 - remains 12648
+dns_tmr: dns_check_entries
+wscli Sending PING
+TcpClient: Malloc 2 bytes in stream
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒
+hl{f,3fff4c64,0} 7079
+hl{m,16,0,3fff4c64} 7080
+hl{f,3fff45a4,0} 7081
+hl{m,16,0,3fff45a4} 7082
+hl{f,3fff54cc,0} 7083
+hl{m,16,0,3fff54cc} 7084
+hl{f,3fff3f1c,0} 7085
+hl{m,16,0,3fff3f1c} 7086
+hl{f,3fff54cc,0} 7087
+hl{m,16,0,3fff54cc} 7088
+hl{f,3fff3f1c,0} 7089
+hl{m,16,0,3fff3f1c} 7090
+hl{f,3fff54cc,0} 7091
+hl{m,16,0,3fff54cc} 7092
+hl{f,3fff54cc,0} 7093
+hl{m,16,0,3fff54cc} 7094
+hl{f,3fff3f1c,0} 7095
+hl{m,16,0,3fff3f1c} 7096
+hl{f,3fff54cc,0} 7097
+hl{m,16,0,3fff54cc} 7098
+hl{f,3fff3f1c,0} 7099
+hl{m,16,0,3fff3f1c} 7100
+hl{f,3fff45a4,0} 7101
+hl{m,16,0,3fff45a4} 7102
+hl{f,3fff54cc,0} 7103
+hl{m,16,0,3fff54cc} 7104
+hl{m,28,0,3fff5674} 7105
+hl{m,3,0,3fff7f44} 7106
+hl{m,756,0,3fff9274} 7107
+hl{f,3fff9274,0} 7108
+hl{f,3fff3f1c,0} 7109
+hl{m,25,0,3fff8b4c} 7110
+hl flush 7110 - remains 12608
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl{f,3fff8b4c,0} 7111
+hl{m,48,0,3fff8b4c} 7112
+hl{f,3fff8b4c,0} 7113
+hl{m,1572,0,3fff978c} 7114
+hl{m,24,0,3fff8b4c} 7115
+hl{f,3fff7f44,0} 7116
+hl{f,3fff5674,0} 7117
+hl{m,16,0,3fff3f1c} 7118
+hl{m,756,0,3fff9274} 7119
+hl{f,3fff9274,0} 7120
+hl{f,3fff54cc,0} 7121
+hl{m,16,0,3fff54cc} 7122
+hl{m,20,0,3fff3d64} 7123
+hl{f,3fff978c,0} 7124
+hl{f,3fff8b4c,0} 7125
+hl{m,54,0,3fff8b4c} 7126
+hl{f,3fff8b4c,0} 7127
+hl{m,54,0,3fff8b4c} 7128
+hl{f,3fff8b4c,0} 7129
+hl{m,25,0,3fff5674} 7130
+hl{f,3fff5674,0} 7131
+hl{m,2,0,3fff7f44} 7132
+hl{m,116,0,3fff8b4c} 7133
+hl{f,3fff7f44,0} 7134
+hl{f,3fff3d64,0} 7135
+hl{m,3,0,3fff7f44} 7136
+hl{f,3fff7f44,0} 7137
+hl{f,3fff8b4c,0} 7138
+hl{f,3fff3f1c,0} 7139
+hl{m,112,0,3fff8b4c} 7140
+hl{m,16,0,3fff3f1c} 7141
+hl{f,3fff54cc,0} 7142
+hl flush 7142 - remains 12504
+dns_tmr: dns_check_entries
+
+hl{m,16,0,3fff54cc} 7143
+hl{f,3fff8b4c,0} 7144
+hl{f,3fff54cc,0} 7145
+hl{m,16,0,3fff54cc} 7146
+hl{f,3fff3f1c,0} 7147
+hl{m,16,0,3fff3f1c} 7148
+hl{m,756,0,3fff9274} 7149
+hl{f,3fff9274,0} 7150
+hl{f,3fff54cc,0} 7151
+hl{m,16,0,3fff54cc} 7152
+hl{f,3fff3f1c,0} 7153
+hl{m,16,0,3fff3f1c} 7154
+hl{m,756,0,3fff9274} 7155
+hl{f,3fff9274,0} 7156
+hl{f,3fff4c64,0} 7157
+hl{m,16,0,3fff4c64} 7158
+hl{f,3fff45a4,0} 7159
+hl{m,16,0,3fff45a4} 7160
+hl{f,3fff54cc,0} 7161
+hl{m,16,0,3fff54cc} 7162
+hl{m,756,0,3fff9274} 7163
+hl{f,3fff9274,0} 7164
+hl{f,3fff3f1c,0} 7165
+hl{m,16,0,3fff3f1c} 7166
+hl{f,3fff54cc,0} 7167
+hl{m,16,0,3fff54cc} 7168
+hl{m,756,0,3fff9274} 7169
+hl{f,3fff9274,0} 7170
+hl{f,3fff3f1c,0} 7171
+hl{m,16,0,3fff3f1c} 7172
+hl{f,3fff54cc,0} 7173
+hl{m,16,0,3fff54cc} 7174
+hl flush 7174 - remains 11864
+d
+hl{m,756,0,3fff9274} 7175
+hl{f,3fff9274,0} 7176
+hl{f,3fff54cc,0} 7177
+hl{m,16,0,3fff54cc} 7178
+hl{f,3fff3f1c,0} 7179
+hl{m,16,0,3fff3f1c} 7180
+hl{m,20,0,3fff3d64} 7181
+hl{f,3fff3d7c,0} 7182
+hl{f,3fff54cc,0} 7183
+hl{m,16,0,3fff54cc} 7184
+hl{f,3fff3f1c,0} 7185
+hl{m,16,0,3fff3f1c} 7186
+hl{f,3fff45a4,0} 7187
+hl{m,16,0,3fff45a4} 7188
+hl{f,3fff54cc,0} 7189
+hl{m,16,0,3fff54cc} 7190
+hl{m,756,0,3fff9274} 7191
+hl{f,3fff9274,0} 7192
+hl{f,3fff3f1c,0} 7193
+hl{m,16,0,3fff3f1c} 7194
+hl{f,3fff54cc,0} 7195
+hl{m,16,0,3fff54cc} 7196
+hl{m,756,0,3fff9274} 7197
+hl{f,3fff9274,0} 7198
+hl{f,3fff3f1c,0} 7199
+hl{m,16,0,3fff3f1c} 7200
+hl{f,3fff54cc,0} 7201
+hl{m,16,0,3fff54cc} 7202
+hl{m,756,0,3fff9274} 7203
+hl{f,3fff9274,0} 7204
+hl{f,3fff54cc,0} 7205
+hl{m,16,0,3fff54cc} 7206
+hl flush 7206 - remains 11864
+(dns_tmr: dns_check_entries
+
+hl{m,756,0,3fff9274} 7207
+hl{f,3fff9274,0} 7208
+hl{f,3fff3f1c,0} 7209
+hl{m,16,0,3fff3f1c} 7210
+hl{f,3fff54cc,0} 7211
+hl{m,16,0,3fff54cc} 7212
+hl{f,3fff3f1c,0} 7213
+hl{m,16,0,3fff3f1c} 7214
+hl{m,756,0,3fff9274} 7215
+hl{f,3fff9274,0} 7216
+hl{f,3fff4c64,0} 7217
+hl{m,16,0,3fff4c64} 7218
+hl{f,3fff45a4,0} 7219
+hl{m,16,0,3fff45a4} 7220
+hl{f,3fff54cc,0} 7221
+hl{m,16,0,3fff54cc} 7222
+hl{m,756,0,3fff9274} 7223
+hl{f,3fff9274,0} 7224
+hl{f,3fff3f1c,0} 7225
+hl{m,16,0,3fff3f1c} 7226
+hl{f,3fff54cc,0} 7227
+hl{m,16,0,3fff54cc} 7228
+hl{m,756,0,3fff9274} 7229
+hl{f,3fff9274,0} 7230
+hl{f,3fff3f1c,0} 7231
+hl{m,16,0,3fff3f1c} 7232
+hl{f,3fff54cc,0} 7233
+hl{m,16,0,3fff54cc} 7234
+hl{m,756,0,3fff9274} 7235
+hl{f,3fff9274,0} 7236
+hl{f,3fff54cc,0} 7237
+hl{m,16,0,3fff54cc} 7238
+hl flush 7238 - remains 12648
+wscli Sending PING
+LTcpClient: Malloc 2 bytes in stream
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@
+hl{f,3fff3f1c,0} 7239
+hl{m,16,0,3fff3f1c} 7240
+hl{m,28,0,3fff5674} 7241
+hl{m,3,0,3fff7f44} 7242
+hl{m,756,0,3fff9274} 7243
+hl{f,3fff9274,0} 7244
+hl{f,3fff54cc,0} 7245
+hl{m,16,0,3fff54cc} 7246
+hl{f,3fff3f1c,0} 7247
+hl{m,16,0,3fff3f1c} 7248
+hl{m,756,0,3fff9274} 7249
+hl{f,3fff9274,0} 7250
+hl{f,3fff45a4,0} 7251
+hl{m,16,0,3fff45a4} 7252
+hl{f,3fff54cc,0} 7253
+hl{m,16,0,3fff54cc} 7254
+hl{m,756,0,3fff9274} 7255
+hl{f,3fff9274,0} 7256
+hl{f,3fff3f1c,0} 7257
+hl{m,25,0,3fff8b4c} 7258
+hl{f,3fff8b4c,0} 7259
+hl{m,48,0,3fff8b4c} 7260
+hl{f,3fff8b4c,0} 7261
+hl{m,1572,0,3fff978c} 7262
+hl{m,24,0,3fff8b4c} 7263
+hl{f,3fff7f44,0} 7264
+hl{f,3fff5674,0} 7265
+hl{m,16,0,3fff3f1c} 7266
+hl{f,3fff54cc,0} 7267
+hl{m,16,0,3fff54cc} 7268
+hl{m,20,0,3fff3d7c} 7269
+hl{f,3fff978c,0} 7270
+hl flush 7270 - remains 12600
+onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl{f,3fff8b4c,0} 7271
+hl{m,54,0,3fff8b4c} 7272
+hl{f,3fff8b4c,0} 7273
+hl{m,54,0,3fff8b4c} 7274
+hl{f,3fff8b4c,0} 7275
+hl{m,25,0,3fff5674} 7276
+hl{f,3fff5674,0} 7277
+hl{m,2,0,3fff7f44} 7278
+hl{m,116,0,3fff8b4c} 7279
+hl{f,3fff7f44,0} 7280
+hl{f,3fff3d7c,0} 7281
+hl{m,3,0,3fff7f44} 7282
+hl{f,3fff7f44,0} 7283
+hl{f,3fff8b4c,0} 7284
+hl{f,3fff3f1c,0} 7285
+hl{m,112,0,3fff8b4c} 7286
+hl{m,16,0,3fff3f1c} 7287
+hl{f,3fff54cc,0} 7288
+hl{m,16,0,3fff54cc} 7289
+hl{f,3fff8b4c,0} 7290
+hl{f,3fff54cc,0} 7291
+hl{m,16,0,3fff54cc} 7292
+hl{f,3fff3f1c,0} 7293
+hl{m,16,0,3fff3f1c} 7294
+hl{f,3fff54cc,0} 7295
+hl{m,16,0,3fff54cc} 7296
+hl{m,756,0,3fff9274} 7297
+hl{f,3fff9274,0} 7298
+hl{f,3fff3f1c,0} 7299
+hl{m,16,0,3fff3f1c} 7300
+hl{f,3fff4c64,0} 7301
+hl{m,16,0,3fff4c64} 7302
+hl flush 7302 - remains 12648
+
+hl{f,3fff45a4,0} 7303
+hl{m,16,0,3fff45a4} 7304
+hl{f,3fff54cc,0} 7305
+hl{m,16,0,3fff54cc} 7306
+hl{f,3fff3f1c,0} 7307
+hl{m,16,0,3fff3f1c} 7308
+hl{m,756,0,3fff9274} 7309
+hl{f,3fff9274,0} 7310
+hl{f,3fff54cc,0} 7311
+hl{m,16,0,3fff54cc} 7312
+hl{m,756,0,3fff9274} 7313
+hl{f,3fff9274,0} 7314
+hl{f,3fff3f1c,0} 7315
+hl{m,16,0,3fff3f1c} 7316
+hl{f,3fff54cc,0} 7317
+hl{m,16,0,3fff54cc} 7318
+hl{f,3fff54cc,0} 7319
+hl{m,16,0,3fff54cc} 7320
+hl{f,3fff3f1c,0} 7321
+hl{m,16,0,3fff3f1c} 7322
+hl{m,756,0,3fff9274} 7323
+hl{f,3fff9274,0} 7324
+hl{f,3fff54cc,0} 7325
+hl{m,16,0,3fff54cc} 7326
+hl{f,3fff3f1c,0} 7327
+hl{m,16,0,3fff3f1c} 7328
+hl{m,756,0,3fff9274} 7329
+hl{f,3fff9274,0} 7330
+hl{f,3fff45a4,0} 7331
+hl{m,16,0,3fff45a4} 7332
+hl{f,3fff54cc,0} 7333
+hl{m,16,0,3fff54cc} 7334
+hl flush 7334 - remains 11864
+Edns_tmr: dns_check_entries
+
+hl{m,756,0,3fff9274} 7335
+hl{f,3fff9274,0} 7336
+hl{f,3fff3f1c,0} 7337
+hl{m,16,0,3fff3f1c} 7338
+hl{f,3fff54cc,0} 7339
+hl{m,16,0,3fff54cc} 7340
+hl{f,3fff3f1c,0} 7341
+hl{m,16,0,3fff3f1c} 7342
+hl{f,3fff54cc,0} 7343
+hl{m,16,0,3fff54cc} 7344
+hl{m,756,0,3fff9274} 7345
+hl{f,3fff9274,0} 7346
+hl{f,3fff54cc,0} 7347
+hl{m,16,0,3fff54cc} 7348
+hl{f,3fff3f1c,0} 7349
+hl{m,16,0,3fff3f1c} 7350
+hl{m,756,0,3fff9274} 7351
+hl{f,3fff9274,0} 7352
+hl{f,3fff54cc,0} 7353
+hl{m,16,0,3fff54cc} 7354
+hl{m,756,0,3fff9274} 7355
+hl{f,3fff9274,0} 7356
+hl{f,3fff3f1c,0} 7357
+hl{m,16,0,3fff3f1c} 7358
+hl{f,3fff4c64,0} 7359
+hl{m,16,0,3fff4c64} 7360
+hl{f,3fff45a4,0} 7361
+hl{m,16,0,3fff45a4} 7362
+hl{f,3fff54cc,0} 7363
+hl{m,16,0,3fff54cc} 7364
+hl{m,756,0,3fff9274} 7365
+hl{f,3fff9274,0} 7366
+hl flush 7366 - remains 12648
+ 6:10:43 Dormitor H:56.40(56.6) T:18.10(18.0 0.0)/24.7 SetPt:23.00 needHeat:1
+▒HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{f,3fff3f1c,0} 7367
+hl{m,16,0,3fff3f1c} 7368
+hl{m,20,0,3fff3d7c} 7369
+hl{f,3fff3d94,0} 7370
+hl{f,3fff54cc,0} 7371
+hl{m,16,0,3fff54cc} 7372
+hl{f,3fff3f1c,0} 7373
+hl{m,16,0,3fff3f1c} 7374
+hl{f,3fff54cc,0} 7375
+hl{m,16,0,3fff54cc} 7376
+hl{f,3fff54cc,0} 7377
+hl{m,16,0,3fff54cc} 7378
+hl{f,3fff3f1c,0} 7379
+hl{m,16,0,3fff3f1c} 7380
+hl{f,3fff54cc,0} 7381
+hl{m,16,0,3fff54cc} 7382
+hl{f,3fff3f1c,0} 7383
+hl{m,16,0,3fff3f1c} 7384
+hl{f,3fff45a4,0} 7385
+hl{m,16,0,3fff45a4} 7386
+hl{f,3fff54cc,0} 7387
+hl{m,16,0,3fff54cc} 7388
+hl{f,3fff3f1c,0} 7389
+hl{m,16,0,3fff3f1c} 7390
+hl{f,3fff54cc,0} 7391
+hl{m,16,0,3fff54cc} 7392
+hl{f,3fff3f1c,0} 7393
+hl{m,16,0,3fff3f1c} 7394
+hl{f,3fff54cc,0} 7395
+hl{m,16,0,3fff54cc} 7396
+hl{f,3fff54cc,0} 7397
+hl{m,16,0,3fff54cc} 7398
+hl flush 7398 - remains 12648
+dns_tmr: dns_check_entries
+dns_check_entry: "pool.ntp.org": flush
+dns_check_entry: "pool.ntp.org": flush
+wscli Sending PING
+TcpClient: Malloc 2 bytes in stream
+
+hl{f,3fff3f1c,0} 7399
+hl{m,16,0,3fff3f1c} 7400
+hl{f,3fff54cc,0} 7401
+hl{m,16,0,3fff54cc} 7402
+hl{f,3fff3f1c,0} 7403
+hl{m,16,0,3fff3f1c} 7404
+hl{f,3fff3d34,0} 7405
+hl{m,16,0,3fff3d34} 7406
+hl{f,3fff4c64,0} 7407
+hl{m,16,0,3fff4c64} 7408
+hl{f,3fff45a4,0} 7409
+hl{m,16,0,3fff45a4} 7410
+hl{f,3fff54cc,0} 7411
+hl{m,16,0,3fff54cc} 7412
+hl{m,28,0,3fff5674} 7413
+hl{m,3,0,3fff7f44} 7414
+hl{m,756,0,3fff9274} 7415
+hl{f,3fff9274,0} 7416
+hl{f,3fff3f1c,0} 7417
+hl{m,16,0,3fff3f1c} 7418
+hl{f,3fff54cc,0} 7419
+hl{m,16,0,3fff54cc} 7420
+hl{m,756,0,3fff9274} 7421
+hl{f,3fff9274,0} 7422
+hl{f,3fff3f1c,0} 7423
+hl{m,16,0,3fff3f1c} 7424
+hl{f,3fff54cc,0} 7425
+hl{m,16,0,3fff54cc} 7426
+hl{m,756,0,3fff9274} 7427
+hl{f,3fff9274,0} 7428
+hl{f,3fff54cc,0} 7429
+hl{m,16,0,3fff54cc} 7430
+hl flush 7430 - remains 11824
+daxtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+▒
+hl{m,756,0,3fff9274} 7431
+hl{f,3fff9274,0} 7432
+hl{f,3fff3f1c,0} 7433
+hl{m,16,0,3fff3f1c} 7434
+hl{f,3fff54cc,0} 7435
+hl{m,16,0,3fff54cc} 7436
+hl{f,3fff3f1c,0} 7437
+hl{m,16,0,3fff3f1c} 7438
+hl{m,756,0,3fff9274} 7439
+hl{f,3fff9274,0} 7440
+hl{f,3fff45a4,0} 7441
+hl{m,16,0,3fff45a4} 7442
+hl{f,3fff54cc,0} 7443
+hl{m,16,0,3fff54cc} 7444
+hl{m,756,0,3fff9274} 7445
+hl{f,3fff9274,0} 7446
+hl{f,3fff3f1c,0} 7447
+hl{m,25,0,3fff8b4c} 7448
+hl{f,3fff8b4c,0} 7449
+hl{m,48,0,3fff8b4c} 7450
+hl{f,3fff8b4c,0} 7451
+hl{m,1572,0,3fff978c} 7452
+hl{m,24,0,3fff8b4c} 7453
+hl{f,3fff7f44,0} 7454
+hl{f,3fff5674,0} 7455
+hl{m,16,0,3fff3f1c} 7456
+hl{f,3fff54cc,0} 7457
+hl{m,16,0,3fff54cc} 7458
+hl{m,20,0,3fff3d94} 7459
+hl{f,3fff978c,0} 7460
+hl{f,3fff8b4c,0} 7461
+hl{m,54,0,3fff8b4c} 7462
+hl flush 7462 - remains 12600
+axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl{f,3fff8b4c,0} 7463
+hl{m,54,0,3fff8b4c} 7464
+hl{f,3fff8b4c,0} 7465
+hl{m,25,0,3fff5674} 7466
+hl{f,3fff5674,0} 7467
+hl{m,2,0,3fff7f44} 7468
+hl{m,116,0,3fff8b4c} 7469
+hl{f,3fff7f44,0} 7470
+hl{f,3fff3d94,0} 7471
+hl{m,3,0,3fff7f44} 7472
+hl{f,3fff7f44,0} 7473
+hl{f,3fff8b4c,0} 7474
+hl{f,3fff3f1c,0} 7475
+hl{m,112,0,3fff8b4c} 7476
+hl{m,16,0,3fff3f1c} 7477
+hl{f,3fff54cc,0} 7478
+hl{m,16,0,3fff54cc} 7479
+hl{f,3fff8b4c,0} 7480
+hl{f,3fff54cc,0} 7481
+hl{m,16,0,3fff54cc} 7482
+hl{f,3fff3f1c,0} 7483
+hl{m,16,0,3fff3f1c} 7484
+hl{m,20,0,3fff3d94} 7485
+hl{f,3fff3d64,0} 7486
+hl{f,3fff54cc,0} 7487
+hl{m,16,0,3fff54cc} 7488
+hl{m,756,0,3fff9274} 7489
+hl{f,3fff9274,0} 7490
+hl{f,3fff3f1c,0} 7491
+hl{m,16,0,3fff3f1c} 7492
+hl{m,756,0,3fff9274} 7493
+hl{f,3fff9274,0} 7494
+hl flush 7494 - remains 12648
+dns_tmr: dns_check_entries
+
+hl{f,3fff4c64,0} 7495
+hl{m,16,0,3fff4c64} 7496
+hl{f,3fff45a4,0} 7497
+hl{m,16,0,3fff45a4} 7498
+hl{f,3fff54cc,0} 7499
+hl{m,16,0,3fff54cc} 7500
+hl{m,756,0,3fff9274} 7501
+hl{f,3fff9274,0} 7502
+hl{f,3fff3f1c,0} 7503
+hl{m,16,0,3fff3f1c} 7504
+hl{f,3fff54cc,0} 7505
+hl{m,16,0,3fff54cc} 7506
+hl{m,756,0,3fff9274} 7507
+hl{f,3fff9274,0} 7508
+hl{f,3fff3f1c,0} 7509
+hl{m,16,0,3fff3f1c} 7510
+hl{f,3fff54cc,0} 7511
+hl{m,16,0,3fff54cc} 7512
+hl{m,756,0,3fff9274} 7513
+hl{f,3fff9274,0} 7514
+hl{f,3fff54cc,0} 7515
+hl{m,16,0,3fff54cc} 7516
+hl{f,3fff3f1c,0} 7517
+hl{m,16,0,3fff3f1c} 7518
+hl{m,756,0,3fff9274} 7519
+hl{f,3fff9274,0} 7520
+hl{f,3fff54cc,0} 7521
+hl{m,16,0,3fff54cc} 7522
+hl{m,756,0,3fff9274} 7523
+hl{f,3fff9274,0} 7524
+hl{f,3fff3f1c,0} 7525
+hl{m,16,0,3fff3f1c} 7526
+hl flush 7526 - remains 12648
+wscli Sending PING
+LTcpClient: Malloc 2 bytes in stream
+
+hl{f,3fff45a4,0} 7527
+hl{m,16,0,3fff45a4} 7528
+hl{f,3fff54cc,0} 7529
+hl{m,16,0,3fff54cc} 7530
+hl{m,756,0,3fff9274} 7531
+hl{f,3fff9274,0} 7532
+hl{f,3fff3f1c,0} 7533
+hl{m,16,0,3fff3f1c} 7534
+hl{m,756,0,3fff9274} 7535
+hl{f,3fff9274,0} 7536
+hl{f,3fff54cc,0} 7537
+hl{m,16,0,3fff54cc} 7538
+hl{m,28,0,3fff5674} 7539
+hl{m,3,0,3fff7f44} 7540
+hl{m,756,0,3fff9274} 7541
+hl{f,3fff9274,0} 7542
+hl{f,3fff3f1c,0} 7543
+hl{m,16,0,3fff3f1c} 7544
+hl{f,3fff54cc,0} 7545
+hl{m,16,0,3fff54cc} 7546
+hl{m,756,0,3fff9274} 7547
+hl{f,3fff9274,0} 7548
+hl{f,3fff54cc,0} 7549
+hl{m,16,0,3fff54cc} 7550
+hl{f,3fff3f1c,0} 7551
+hl{m,16,0,3fff3f1c} 7552
+hl{m,756,0,3fff9274} 7553
+hl{f,3fff9274,0} 7554
+hl{f,3fff54cc,0} 7555
+hl{m,16,0,3fff54cc} 7556
+hl{m,756,0,3fff9274} 7557
+hl{f,3fff9274,0} 7558
+hl flush 7558 - remains 12608
+dns_tmr: dns_check_entries
+
+hl{f,3fff3f1c,0} 7559
+hl{m,16,0,3fff3f1c} 7560
+hl{f,3fff4c64,0} 7561
+hl{m,16,0,3fff4c64} 7562
+hl{f,3fff45a4,0} 7563
+hl{m,16,0,3fff45a4} 7564
+hl{f,3fff54cc,0} 7565
+hl{m,16,0,3fff54cc} 7566
+hl{f,3fff3f1c,0} 7567
+hl{m,16,0,3fff3f1c} 7568
+hl{f,3fff54cc,0} 7569
+hl{m,16,0,3fff54cc} 7570
+hl{m,756,0,3fff9274} 7571
+hl{f,3fff9274,0} 7572
+hl{f,3fff3f1c,0} 7573
+hl{m,16,0,3fff3f1c} 7574
+hl{f,3fff54cc,0} 7575
+hl{m,16,0,3fff54cc} 7576
+hl{m,756,0,3fff9274} 7577
+hl{f,3fff9274,0} 7578
+hl{f,3fff54cc,0} 7579
+hl{m,16,0,3fff54cc} 7580
+hl{f,3fff3f1c,0} 7581
+hl{m,16,0,3fff3f1c} 7582
+hl{m,756,0,3fff9274} 7583
+hl{f,3fff9274,0} 7584
+hl{f,3fff54cc,0} 7585
+hl{m,16,0,3fff54cc} 7586
+hl{m,756,0,3fff9274} 7587
+hl{f,3fff9274,0} 7588
+hl{f,3fff3f1c,0} 7589
+hl{m,16,0,3fff3f1c} 7590
+hl flush 7590 - remains 12608
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+▒axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$
+hl{f,3fff45a4,0} 7591
+hl{m,16,0,3fff45a4} 7592
+hl{f,3fff54cc,0} 7593
+hl{m,16,0,3fff54cc} 7594
+hl{m,756,0,3fff9274} 7595
+hl{f,3fff9274,0} 7596
+hl{f,3fff3f1c,0} 7597
+hl{m,25,0,3fff8b4c} 7598
+hl{f,3fff8b4c,0} 7599
+hl{m,48,0,3fff8b4c} 7600
+hl{f,3fff8b4c,0} 7601
+hl{m,1572,0,3fff978c} 7602
+hl{m,24,0,3fff8b4c} 7603
+hl{f,3fff7f44,0} 7604
+hl{f,3fff5674,0} 7605
+hl{m,16,0,3fff3f1c} 7606
+hl{m,756,0,3fff9274} 7607
+hl{f,3fff9274,0} 7608
+hl{f,3fff54cc,0} 7609
+hl{m,16,0,3fff54cc} 7610
+hl{m,20,0,3fff3d64} 7611
+hl{f,3fff978c,0} 7612
+hl{f,3fff8b4c,0} 7613
+hl{m,54,0,3fff8b4c} 7614
+hl{f,3fff8b4c,0} 7615
+hl{m,54,0,3fff8b4c} 7616
+hl{f,3fff8b4c,0} 7617
+hl{m,25,0,3fff5674} 7618
+hl{f,3fff5674,0} 7619
+hl{m,2,0,3fff7f44} 7620
+hl{m,116,0,3fff8b4c} 7621
+hl{f,3fff7f44,0} 7622
+hl flush 7622 - remains 12504
+wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl{f,3fff3d64,0} 7623
+hl{m,3,0,3fff7f44} 7624
+hl{f,3fff7f44,0} 7625
+hl{f,3fff8b4c,0} 7626
+hl{f,3fff3f1c,0} 7627
+hl{m,112,0,3fff8b4c} 7628
+hl{m,16,0,3fff3f1c} 7629
+hl{f,3fff54cc,0} 7630
+hl{m,16,0,3fff54cc} 7631
+hl{f,3fff8b4c,0} 7632
+hl{f,3fff54cc,0} 7633
+hl{m,16,0,3fff54cc} 7634
+hl{f,3fff3f1c,0} 7635
+hl{m,16,0,3fff3f1c} 7636
+hl{m,756,0,3fff9274} 7637
+hl{f,3fff9274,0} 7638
+hl{f,3fff54cc,0} 7639
+hl{m,16,0,3fff54cc} 7640
+hl{m,756,0,3fff9274} 7641
+hl{f,3fff9274,0} 7642
+hl{f,3fff3f1c,0} 7643
+hl{m,16,0,3fff3f1c} 7644
+hl{f,3fff4c64,0} 7645
+hl{m,16,0,3fff4c64} 7646
+hl{f,3fff45a4,0} 7647
+hl{m,16,0,3fff45a4} 7648
+hl{f,3fff54cc,0} 7649
+hl{m,16,0,3fff54cc} 7650
+hl{m,756,0,3fff9274} 7651
+hl{f,3fff9274,0} 7652
+hl{f,3fff3f1c,0} 7653
+hl{m,16,0,3fff3f1c} 7654
+hl flush 7654 - remains 12648
+ 6:10:48 Dormitor H:56.40(56.6) T:18.10(18.0 0.0)/24.7 SetPt:23.00 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{f,3fff54cc,0} 7655
+hl{m,16,0,3fff54cc} 7656
+hl{m,756,0,3fff9274} 7657
+hl{f,3fff9274,0} 7658
+hl{f,3fff3f1c,0} 7659
+hl{m,16,0,3fff3f1c} 7660
+hl{f,3fff54cc,0} 7661
+hl{m,16,0,3fff54cc} 7662
+hl{m,756,0,3fff9274} 7663
+hl{f,3fff9274,0} 7664
+hl{f,3fff54cc,0} 7665
+hl{m,16,0,3fff54cc} 7666
+hl{m,756,0,3fff9274} 7667
+hl{f,3fff9274,0} 7668
+hl{f,3fff3f1c,0} 7669
+hl{m,16,0,3fff3f1c} 7670
+hl{m,756,0,3fff9274} 7671
+hl{f,3fff9274,0} 7672
+hl{f,3fff54cc,0} 7673
+hl{m,16,0,3fff54cc} 7674
+hl{m,20,0,3fff3d64} 7675
+hl{f,3fff3d7c,0} 7676
+hl{f,3fff3f1c,0} 7677
+hl{m,16,0,3fff3f1c} 7678
+hl{f,3fff45a4,0} 7679
+hl{m,16,0,3fff45a4} 7680
+hl{f,3fff54cc,0} 7681
+hl{m,16,0,3fff54cc} 7682
+hl{f,3fff3f1c,0} 7683
+hl{m,16,0,3fff3f1c} 7684
+hl{f,3fff54cc,0} 7685
+hl{m,16,0,3fff54cc} 7686
+hl flush 7686 - remains 12648
+dns_tmr: dns_check_entries
+wscli Sending PING
+TcpClient: Malloc 2 bytes in stream
+
+hl{f,3fff3f1c,0} 7687
+hl{m,16,0,3fff3f1c} 7688
+hl{f,3fff54cc,0} 7689
+hl{m,16,0,3fff54cc} 7690
+hl{f,3fff54cc,0} 7691
+hl{m,16,0,3fff54cc} 7692
+hl{f,3fff3f1c,0} 7693
+hl{m,16,0,3fff3f1c} 7694
+hl{f,3fff54cc,0} 7695
+hl{m,16,0,3fff54cc} 7696
+hl{f,3fff3f1c,0} 7697
+hl{m,16,0,3fff3f1c} 7698
+hl{f,3fff4c64,0} 7699
+hl{m,16,0,3fff4c64} 7700
+hl{f,3fff45a4,0} 7701
+hl{m,16,0,3fff45a4} 7702
+hl{f,3fff54cc,0} 7703
+hl{m,16,0,3fff54cc} 7704
+hl{f,3fff3f1c,0} 7705
+hl{m,16,0,3fff3f1c} 7706
+hl{f,3fff54cc,0} 7707
+hl{m,16,0,3fff54cc} 7708
+hl{f,3fff3f1c,0} 7709
+hl{m,16,0,3fff3f1c} 7710
+hl{f,3fff54cc,0} 7711
+hl{m,16,0,3fff54cc} 7712
+hl{f,3fff54cc,0} 7713
+hl{m,16,0,3fff54cc} 7714
+hl{f,3fff3f1c,0} 7715
+hl{m,16,0,3fff3f1c} 7716
+hl{m,28,0,3fff5674} 7717
+hl{m,3,0,3fff7f44} 7718
+hl flush 7718 - remains 12560
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$
+hl{m,20,0,3fff3d7c} 7719
+hl{f,3fff3d7c,0} 7720
+hl{m,20,0,3fff3d7c} 7721
+hl{f,3fff3d7c,0} 7722
+hl{f,3fff54cc,0} 7723
+hl{m,16,0,3fff54cc} 7724
+hl{f,3fff3f1c,0} 7725
+hl{m,16,0,3fff3f1c} 7726
+hl{m,20,0,3fff3d7c} 7727
+hl{f,3fff3d7c,0} 7728
+hl{f,3fff45a4,0} 7729
+hl{m,16,0,3fff45a4} 7730
+hl{f,3fff54cc,0} 7731
+hl{m,16,0,3fff54cc} 7732
+hl{f,3fff3f1c,0} 7733
+hl{m,25,0,3fff8b4c} 7734
+hl{f,3fff8b4c,0} 7735
+hl{m,48,0,3fff8b4c} 7736
+hl{f,3fff8b4c,0} 7737
+hl{m,1572,0,3fff978c} 7738
+hl{m,24,0,3fff8b4c} 7739
+hl{f,3fff7f44,0} 7740
+hl{f,3fff5674,0} 7741
+hl{m,16,0,3fff3f1c} 7742
+hl{f,3fff54cc,0} 7743
+hl{m,16,0,3fff54cc} 7744
+hl{m,20,0,3fff3d7c} 7745
+hl{f,3fff978c,0} 7746
+hl{f,3fff8b4c,0} 7747
+hl{m,54,0,3fff8b4c} 7748
+hl{f,3fff8b4c,0} 7749
+hl{m,54,0,3fff8b4c} 7750
+hl flush 7750 - remains 12600
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl{f,3fff8b4c,0} 7751
+hl{m,25,0,3fff5674} 7752
+hl{f,3fff5674,0} 7753
+hl{m,2,0,3fff7f44} 7754
+hl{m,116,0,3fff8b4c} 7755
+hl{f,3fff7f44,0} 7756
+hl{f,3fff3d7c,0} 7757
+hl{m,3,0,3fff7f44} 7758
+hl{f,3fff7f44,0} 7759
+hl{f,3fff8b4c,0} 7760
+hl{f,3fff3f1c,0} 7761
+hl{m,112,0,3fff8b4c} 7762
+hl{m,16,0,3fff3f1c} 7763
+hl{f,3fff54cc,0} 7764
+hl{m,16,0,3fff54cc} 7765
+hl{f,3fff8b4c,0} 7766
+hl{f,3fff54cc,0} 7767
+hl{m,16,0,3fff54cc} 7768
+hl{f,3fff3f1c,0} 7769
+hl{m,16,0,3fff3f1c} 7770
+hl{m,20,0,3fff3d7c} 7771
+hl{f,3fff3d7c,0} 7772
+hl{f,3fff54cc,0} 7773
+hl{m,16,0,3fff54cc} 7774
+hl{m,20,0,3fff3d7c} 7775
+hl{f,3fff3d7c,0} 7776
+hl{f,3fff3f1c,0} 7777
+hl{m,16,0,3fff3f1c} 7778
+hl{f,3fff3d34,0} 7779
+hl{m,16,0,3fff3d34} 7780
+hl{f,3fff4c64,0} 7781
+hl{m,16,0,3fff4c64} 7782
+hl flush 7782 - remains 12648
+
+hl{f,3fff45a4,0} 7783
+hl{m,16,0,3fff45a4} 7784
+hl{f,3fff54cc,0} 7785
+hl{m,16,0,3fff54cc} 7786
+hl{f,3fff3f1c,0} 7787
+hl{m,16,0,3fff3f1c} 7788
+hl{m,756,0,3fff9274} 7789
+hl{f,3fff9274,0} 7790
+hl{f,3fff54cc,0} 7791
+hl{m,16,0,3fff54cc} 7792
+hl{m,756,0,3fff9274} 7793
+hl{f,3fff9274,0} 7794
+hl{f,3fff3f1c,0} 7795
+hl{m,16,0,3fff3f1c} 7796
+hl{f,3fff54cc,0} 7797
+hl{m,16,0,3fff54cc} 7798
+hl{m,20,0,3fff3d7c} 7799
+hl{f,3fff3d94,0} 7800
+hl{m,756,0,3fff9274} 7801
+hl{f,3fff9274,0} 7802
+hl{f,3fff54cc,0} 7803
+hl{m,16,0,3fff54cc} 7804
+hl{f,3fff3f1c,0} 7805
+hl{m,16,0,3fff3f1c} 7806
+hl{m,756,0,3fff9274} 7807
+hl{f,3fff9274,0} 7808
+hl{f,3fff54cc,0} 7809
+hl{m,16,0,3fff54cc} 7810
+hl{f,3fff3f1c,0} 7811
+hl{m,16,0,3fff3f1c} 7812
+hl{m,756,0,3fff9274} 7813
+hl{f,3fff9274,0} 7814
+hl flush 7814 - remains 12648
+
+hl{f,3fff45a4,0} 7815
+hl{m,16,0,3fff45a4} 7816
+hl{f,3fff54cc,0} 7817
+hl{m,16,0,3fff54cc} 7818
+hl{m,756,0,3fff9274} 7819
+hl{f,3fff9274,0} 7820
+hl{f,3fff3f1c,0} 7821
+hl{m,16,0,3fff3f1c} 7822
+hl{f,3fff54cc,0} 7823
+hl{m,16,0,3fff54cc} 7824
+hl{m,756,0,3fff9274} 7825
+hl{f,3fff9274,0} 7826
+hl{f,3fff3f1c,0} 7827
+hl{m,16,0,3fff3f1c} 7828
+hl{f,3fff54cc,0} 7829
+hl{m,16,0,3fff54cc} 7830
+hl{m,756,0,3fff9274} 7831
+hl{f,3fff9274,0} 7832
+hl{f,3fff54cc,0} 7833
+hl{m,16,0,3fff54cc} 7834
+hl{m,756,0,3fff9274} 7835
+hl{f,3fff9274,0} 7836
+hl{f,3fff3f1c,0} 7837
+hl{m,16,0,3fff3f1c} 7838
+hl{m,756,0,3fff9274} 7839
+hl{f,3fff9274,0} 7840
+hl{f,3fff54cc,0} 7841
+hl{m,16,0,3fff54cc} 7842
+hl{f,3fff3f1c,0} 7843
+hl{m,16,0,3fff3f1c} 7844
+hl{m,756,0,3fff9274} 7845
+hl{f,3fff9274,0} 7846
+hl flush 7846 - remains 12648
+dns_tmr: dns_check_entries
+wscli Sending PING
+@TcpClient: Malloc 2 bytes in stream
+
+hl{f,3fff4c64,0} 7847
+hl{m,16,0,3fff4c64} 7848
+hl{f,3fff45a4,0} 7849
+hl{m,16,0,3fff45a4} 7850
+hl{f,3fff54cc,0} 7851
+hl{m,16,0,3fff54cc} 7852
+hl{m,756,0,3fff9274} 7853
+hl{f,3fff9274,0} 7854
+hl{f,3fff3f1c,0} 7855
+hl{m,16,0,3fff3f1c} 7856
+hl{f,3fff54cc,0} 7857
+hl{m,16,0,3fff54cc} 7858
+hl{m,28,0,3fff5674} 7859
+hl{m,3,0,3fff7f44} 7860
+hl{m,756,0,3fff9274} 7861
+hl{f,3fff9274,0} 7862
+hl{f,3fff3f1c,0} 7863
+hl{m,16,0,3fff3f1c} 7864
+hl{f,3fff54cc,0} 7865
+hl{m,16,0,3fff54cc} 7866
+hl{m,756,0,3fff9274} 7867
+hl{f,3fff9274,0} 7868
+hl{f,3fff54cc,0} 7869
+hl{m,16,0,3fff54cc} 7870
+hl{f,3fff3f1c,0} 7871
+hl{m,16,0,3fff3f1c} 7872
+hl{m,756,0,3fff9274} 7873
+hl{f,3fff9274,0} 7874
+hl{f,3fff54cc,0} 7875
+hl{m,16,0,3fff54cc} 7876
+hl{m,756,0,3fff9274} 7877
+hl{f,3fff9274,0} 7878
+hl flush 7878 - remains 12608
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$
+hl{f,3fff3f1c,0} 7879
+hl{m,16,0,3fff3f1c} 7880
+hl{f,3fff45a4,0} 7881
+hl{m,16,0,3fff45a4} 7882
+hl{f,3fff54cc,0} 7883
+hl{m,16,0,3fff54cc} 7884
+hl{f,3fff3f1c,0} 7885
+hl{m,25,0,3fff8b4c} 7886
+hl{f,3fff8b4c,0} 7887
+hl{m,48,0,3fff8b4c} 7888
+hl{f,3fff8b4c,0} 7889
+hl{m,1572,0,3fff978c} 7890
+hl{m,24,0,3fff8b4c} 7891
+hl{f,3fff7f44,0} 7892
+hl{f,3fff5674,0} 7893
+hl{m,16,0,3fff3f1c} 7894
+hl{m,756,0,3fff9274} 7895
+hl{f,3fff9274,0} 7896
+hl{f,3fff54cc,0} 7897
+hl{m,16,0,3fff54cc} 7898
+hl{m,20,0,3fff3d94} 7899
+hl{f,3fff978c,0} 7900
+hl{f,3fff8b4c,0} 7901
+hl{m,54,0,3fff8b4c} 7902
+hl{f,3fff8b4c,0} 7903
+hl{m,54,0,3fff8b4c} 7904
+hl{f,3fff8b4c,0} 7905
+hl{m,25,0,3fff5674} 7906
+hl{f,3fff5674,0} 7907
+hl{m,2,0,3fff7f44} 7908
+hl{m,116,0,3fff8b4c} 7909
+hl{f,3fff7f44,0} 7910
+hl flush 7910 - remains 12504
+wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl{f,3fff3d94,0} 7911
+hl{m,3,0,3fff7f44} 7912
+hl{f,3fff7f44,0} 7913
+hl{f,3fff8b4c,0} 7914
+hl{f,3fff3f1c,0} 7915
+hl{m,112,0,3fff8b4c} 7916
+hl{m,16,0,3fff3f1c} 7917
+hl{f,3fff54cc,0} 7918
+hl{m,16,0,3fff54cc} 7919
+hl{f,3fff8b4c,0} 7920
+hl{f,3fff54cc,0} 7921
+hl{m,16,0,3fff54cc} 7922
+hl{f,3fff3f1c,0} 7923
+hl{m,16,0,3fff3f1c} 7924
+hl{m,756,0,3fff9274} 7925
+hl{f,3fff9274,0} 7926
+hl{f,3fff54cc,0} 7927
+hl{m,16,0,3fff54cc} 7928
+hl{m,756,0,3fff9274} 7929
+hl{f,3fff9274,0} 7930
+hl{f,3fff3f1c,0} 7931
+hl{m,16,0,3fff3f1c} 7932
+hl{f,3fff4c64,0} 7933
+hl{m,16,0,3fff4c64} 7934
+hl{f,3fff45a4,0} 7935
+hl{m,16,0,3fff45a4} 7936
+hl{f,3fff54cc,0} 7937
+hl{m,16,0,3fff54cc} 7938
+hl{f,3fff3f1c,0} 7939
+hl{m,16,0,3fff3f1c} 7940
+hl{f,3fff54cc,0} 7941
+hl{m,16,0,3fff54cc} 7942
+hl flush 7942 - remains 11864
+d
+hl{m,756,0,3fff9274} 7943
+hl{f,3fff9274,0} 7944
+hl{f,3fff3f1c,0} 7945
+hl{m,16,0,3fff3f1c} 7946
+hl{f,3fff54cc,0} 7947
+hl{m,16,0,3fff54cc} 7948
+hl{f,3fff54cc,0} 7949
+hl{m,16,0,3fff54cc} 7950
+hl{m,756,0,3fff9274} 7951
+hl{f,3fff9274,0} 7952
+hl{f,3fff3f1c,0} 7953
+hl{m,16,0,3fff3f1c} 7954
+hl{m,756,0,3fff9274} 7955
+hl{f,3fff9274,0} 7956
+hl{f,3fff54cc,0} 7957
+hl{m,16,0,3fff54cc} 7958
+hl{f,3fff3f1c,0} 7959
+hl{m,16,0,3fff3f1c} 7960
+hl{m,756,0,3fff9274} 7961
+hl{f,3fff9274,0} 7962
+hl{f,3fff45a4,0} 7963
+hl{m,16,0,3fff45a4} 7964
+hl{f,3fff54cc,0} 7965
+hl{m,16,0,3fff54cc} 7966
+hl{m,756,0,3fff9274} 7967
+hl{f,3fff9274,0} 7968
+hl{f,3fff3f1c,0} 7969
+hl{m,16,0,3fff3f1c} 7970
+hl{f,3fff54cc,0} 7971
+hl{m,16,0,3fff54cc} 7972
+hl{m,756,0,3fff9274} 7973
+hl{f,3fff9274,0} 7974
+hl flush 7974 - remains 12648
+ 6:10:53 Dormitor H:56.30(56.5) T:18.20(18.0 0.0)/24.7 SetPt:23.00 needHeat:1
+▒HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:dns_tmr: dns_check_entries
+
+hl{f,3fff3f1c,0} 7975
+hl{m,16,0,3fff3f1c} 7976
+hl{f,3fff54cc,0} 7977
+hl{m,16,0,3fff54cc} 7978
+hl{m,756,0,3fff9274} 7979
+hl{f,3fff9274,0} 7980
+hl{m,20,0,3fff3d94} 7981
+hl{f,3fff3d64,0} 7982
+hl{f,3fff54cc,0} 7983
+hl{m,16,0,3fff54cc} 7984
+hl{f,3fff3f1c,0} 7985
+hl{m,16,0,3fff3f1c} 7986
+hl{f,3fff54cc,0} 7987
+hl{m,16,0,3fff54cc} 7988
+hl{f,3fff3f1c,0} 7989
+hl{m,16,0,3fff3f1c} 7990
+hl{f,3fff4c64,0} 7991
+hl{m,16,0,3fff4c64} 7992
+hl{f,3fff45a4,0} 7993
+hl{m,16,0,3fff45a4} 7994
+hl{f,3fff54cc,0} 7995
+hl{m,16,0,3fff54cc} 7996
+hl{f,3fff3f1c,0} 7997
+hl{m,16,0,3fff3f1c} 7998
+hl{f,3fff54cc,0} 7999
+hl{m,16,0,3fff54cc} 8000
+hl{f,3fff3f1c,0} 8001
+hl{m,16,0,3fff3f1c} 8002
+hl{f,3fff54cc,0} 8003
+hl{m,16,0,3fff54cc} 8004
+hl{f,3fff54cc,0} 8005
+hl{m,16,0,3fff54cc} 8006
+hl flush 8006 - remains 12648
+wscli Sending PING
+TcpClient: Malloc 2 bytes in stream
+3
+hl{f,3fff3f1c,0} 8007
+hl{m,16,0,3fff3f1c} 8008
+hl{f,3fff54cc,0} 8009
+hl{m,16,0,3fff54cc} 8010
+hl{f,3fff3f1c,0} 8011
+hl{m,16,0,3fff3f1c} 8012
+hl{f,3fff45a4,0} 8013
+hl{m,16,0,3fff45a4} 8014
+hl{f,3fff54cc,0} 8015
+hl{m,16,0,3fff54cc} 8016
+hl{f,3fff3f1c,0} 8017
+hl{m,16,0,3fff3f1c} 8018
+hl{f,3fff54cc,0} 8019
+hl{m,16,0,3fff54cc} 8020
+hl{f,3fff3f1c,0} 8021
+hl{m,16,0,3fff3f1c} 8022
+hl{f,3fff54cc,0} 8023
+hl{m,16,0,3fff54cc} 8024
+hl{m,28,0,3fff5674} 8025
+hl{m,3,0,3fff7f44} 8026
+hl{m,756,0,3fff9274} 8027
+hl{f,3fff9274,0} 8028
+hl{f,3fff54cc,0} 8029
+hl{m,16,0,3fff54cc} 8030
+hl{f,3fff3f1c,0} 8031
+hl{m,16,0,3fff3f1c} 8032
+hl{m,756,0,3fff9274} 8033
+hl{f,3fff9274,0} 8034
+hl{f,3fff54cc,0} 8035
+hl{m,16,0,3fff54cc} 8036
+hl{f,3fff3f1c,0} 8037
+hl{m,16,0,3fff3f1c} 8038
+hl flush 8038 - remains 11824
+(dns_tmr: dns_check_entries
+
+hl{m,756,0,3fff9274} 8039
+hl{f,3fff9274,0} 8040
+hl{f,3fff4c64,0} 8041
+hl{m,16,0,3fff4c64} 8042
+hl{f,3fff45a4,0} 8043
+hl{m,16,0,3fff45a4} 8044
+hl{f,3fff54cc,0} 8045
+hl{m,16,0,3fff54cc} 8046
+hl{f,3fff3f1c,0} 8047
+hl{m,16,0,3fff3f1c} 8048
+hl{f,3fff54cc,0} 8049
+hl{m,16,0,3fff54cc} 8050
+hl{f,3fff3f1c,0} 8051
+hl{m,16,0,3fff3f1c} 8052
+hl{f,3fff54cc,0} 8053
+hl{m,16,0,3fff54cc} 8054
+hl{m,756,0,3fff9274} 8055
+hl{f,3fff9274,0} 8056
+hl{f,3fff54cc,0} 8057
+hl{m,16,0,3fff54cc} 8058
+hl{m,756,0,3fff9274} 8059
+hl{f,3fff9274,0} 8060
+hl{f,3fff3f1c,0} 8061
+hl{m,16,0,3fff3f1c} 8062
+hl{m,756,0,3fff9274} 8063
+hl{f,3fff9274,0} 8064
+hl{f,3fff54cc,0} 8065
+hl{m,16,0,3fff54cc} 8066
+hl{f,3fff3f1c,0} 8067
+hl{m,16,0,3fff3f1c} 8068
+hl{m,756,0,3fff9274} 8069
+hl{f,3fff9274,0} 8070
+hl flush 8070 - remains 12608
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+▒axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl{f,3fff45a4,0} 8071
+hl{m,16,0,3fff45a4} 8072
+hl{f,3fff54cc,0} 8073
+hl{m,16,0,3fff54cc} 8074
+hl{f,3fff3f1c,0} 8075
+hl{m,25,0,3fff8b4c} 8076
+hl{f,3fff8b4c,0} 8077
+hl{m,48,0,3fff8b4c} 8078
+hl{f,3fff8b4c,0} 8079
+hl{m,1572,0,3fff978c} 8080
+hl{m,24,0,3fff8b4c} 8081
+hl{f,3fff7f44,0} 8082
+hl{f,3fff5674,0} 8083
+hl{m,16,0,3fff3f1c} 8084
+hl{m,756,0,3fff9274} 8085
+hl{f,3fff9274,0} 8086
+hl{f,3fff54cc,0} 8087
+hl{m,16,0,3fff54cc} 8088
+hl{m,20,0,3fff3d64} 8089
+hl{f,3fff978c,0} 8090
+hl{f,3fff8b4c,0} 8091
+hl{m,54,0,3fff8b4c} 8092
+hl{f,3fff8b4c,0} 8093
+hl{m,54,0,3fff8b4c} 8094
+hl{f,3fff8b4c,0} 8095
+hl{m,25,0,3fff5674} 8096
+hl{f,3fff5674,0} 8097
+hl{m,2,0,3fff7f44} 8098
+hl{m,116,0,3fff8b4c} 8099
+hl{f,3fff7f44,0} 8100
+hl{f,3fff3d64,0} 8101
+hl{m,3,0,3fff7f44} 8102
+hl flush 8102 - remains 12504
+dns_tmr: dns_check_entries
+
+hl{f,3fff7f44,0} 8103
+hl{f,3fff8b4c,0} 8104
+hl{m,20,0,3fff3d64} 8105
+hl{f,3fff3d7c,0} 8106
+hl{f,3fff3f1c,0} 8107
+hl{m,112,0,3fff8b4c} 8108
+hl{m,16,0,3fff3f1c} 8109
+hl{f,3fff54cc,0} 8110
+hl{m,16,0,3fff54cc} 8111
+hl{f,3fff8b4c,0} 8112
+hl{f,3fff54cc,0} 8113
+hl{m,16,0,3fff54cc} 8114
+hl{f,3fff3f1c,0} 8115
+hl{m,16,0,3fff3f1c} 8116
+hl{m,756,0,3fff9274} 8117
+hl{f,3fff9274,0} 8118
+hl{f,3fff54cc,0} 8119
+hl{m,16,0,3fff54cc} 8120
+hl{m,756,0,3fff9274} 8121
+hl{f,3fff9274,0} 8122
+hl{f,3fff3f1c,0} 8123
+hl{m,16,0,3fff3f1c} 8124
+hl{f,3fff3d34,0} 8125
+hl{m,16,0,3fff3d34} 8126
+hl{f,3fff4c64,0} 8127
+hl{m,16,0,3fff4c64} 8128
+hl{f,3fff45a4,0} 8129
+hl{m,16,0,3fff45a4} 8130
+hl{f,3fff54cc,0} 8131
+hl{m,16,0,3fff54cc} 8132
+hl{m,756,0,3fff9274} 8133
+hl{f,3fff9274,0} 8134
+hl flush 8134 - remains 12648
+wscli Sending PING
+LTcpClient: Malloc 2 bytes in stream
+
+hl{f,3fff3f1c,0} 8135
+hl{m,16,0,3fff3f1c} 8136
+hl{f,3fff54cc,0} 8137
+hl{m,16,0,3fff54cc} 8138
+hl{m,756,0,3fff9274} 8139
+hl{f,3fff9274,0} 8140
+hl{f,3fff3f1c,0} 8141
+hl{m,16,0,3fff3f1c} 8142
+hl{f,3fff54cc,0} 8143
+hl{m,16,0,3fff54cc} 8144
+hl{m,756,0,3fff9274} 8145
+hl{f,3fff9274,0} 8146
+hl{f,3fff54cc,0} 8147
+hl{m,16,0,3fff54cc} 8148
+hl{m,756,0,3fff9274} 8149
+hl{f,3fff9274,0} 8150
+hl{f,3fff3f1c,0} 8151
+hl{m,16,0,3fff3f1c} 8152
+hl{m,756,0,3fff9274} 8153
+hl{f,3fff9274,0} 8154
+hl{f,3fff54cc,0} 8155
+hl{m,16,0,3fff54cc} 8156
+hl{f,3fff3f1c,0} 8157
+hl{m,16,0,3fff3f1c} 8158
+hl{m,28,0,3fff5674} 8159
+hl{m,3,0,3fff7f44} 8160
+hl{m,756,0,3fff9274} 8161
+hl{f,3fff9274,0} 8162
+hl{f,3fff45a4,0} 8163
+hl{m,16,0,3fff45a4} 8164
+hl{f,3fff54cc,0} 8165
+hl{m,16,0,3fff54cc} 8166
+hl flush 8166 - remains 12608
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@26.04.2016 08:10:56 Heap: 10992
+▒onReadyToSendData: 2
+▒axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$
+hl{f,3fff3f1c,0} 8167
+hl{m,25,0,3fff8b4c} 8168
+hl{f,3fff8b4c,0} 8169
+hl{m,48,0,3fff8b4c} 8170
+hl{f,3fff8b4c,0} 8171
+hl{m,1572,0,3fff978c} 8172
+hl{m,24,0,3fff8b4c} 8173
+hl{f,3fff7f44,0} 8174
+hl{f,3fff5674,0} 8175
+hl{m,16,0,3fff3f1c} 8176
+hl{m,11,0,3fff3d7c} 8177
+hl{m,11,0,3fff5674} 8178
+hl{m,9,0,3fff5684} 8179
+hl{m,20,0,3fff8b6c} 8180
+hl{f,3fff5674,0} 8181
+hl{m,20,0,3fff8b84} 8182
+hl{f,3fff5684,0} 8183
+hl{f,3fff8b6c,0} 8184
+hl{f,3fff3d7c,0} 8185
+hl{f,3fff8b84,0} 8186
+hl{f,3fff54cc,0} 8187
+hl{m,16,0,3fff54cc} 8188
+hl{m,20,0,3fff3d7c} 8189
+hl{f,3fff978c,0} 8190
+hl{f,3fff8b4c,0} 8191
+hl{m,54,0,3fff8b4c} 8192
+hl{f,3fff8b4c,0} 8193
+hl{m,54,0,3fff8b4c} 8194
+hl{f,3fff8b4c,0} 8195
+hl{m,25,0,3fff5674} 8196
+hl{f,3fff5674,0} 8197
+hl{m,2,0,3fff7f44} 8198
+hl flush 8198 - remains 12472
+wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl{m,116,0,3fff8b4c} 8199
+hl{f,3fff7f44,0} 8200
+hl{f,3fff3d7c,0} 8201
+hl{m,3,0,3fff7f44} 8202
+hl{f,3fff7f44,0} 8203
+hl{f,3fff8b4c,0} 8204
+hl{f,3fff3f1c,0} 8205
+hl{m,112,0,3fff8b4c} 8206
+hl{m,16,0,3fff3f1c} 8207
+hl{f,3fff54cc,0} 8208
+hl{m,16,0,3fff54cc} 8209
+hl{f,3fff8b4c,0} 8210
+hl{f,3fff54cc,0} 8211
+hl{m,16,0,3fff54cc} 8212
+hl{f,3fff3f1c,0} 8213
+hl{m,16,0,3fff3f1c} 8214
+hl{m,756,0,3fff9274} 8215
+hl{f,3fff9274,0} 8216
+hl{f,3fff54cc,0} 8217
+hl{m,16,0,3fff54cc} 8218
+hl{f,3fff3f1c,0} 8219
+hl{m,16,0,3fff3f1c} 8220
+hl{m,756,0,3fff9274} 8221
+hl{f,3fff9274,0} 8222
+hl{f,3fff4c64,0} 8223
+hl{m,16,0,3fff4c64} 8224
+hl{f,3fff45a4,0} 8225
+hl{m,16,0,3fff45a4} 8226
+hl{f,3fff54cc,0} 8227
+hl{m,16,0,3fff54cc} 8228
+hl{m,756,0,3fff9274} 8229
+hl{f,3fff9274,0} 8230
+hl flush 8230 - remains 12648
+
+hl{f,3fff3f1c,0} 8231
+hl{m,16,0,3fff3f1c} 8232
+hl{f,3fff54cc,0} 8233
+hl{m,16,0,3fff54cc} 8234
+hl{m,756,0,3fff9274} 8235
+hl{f,3fff9274,0} 8236
+hl{f,3fff3f1c,0} 8237
+hl{m,16,0,3fff3f1c} 8238
+hl{f,3fff54cc,0} 8239
+hl{m,16,0,3fff54cc} 8240
+hl{m,756,0,3fff9274} 8241
+hl{f,3fff9274,0} 8242
+hl{f,3fff54cc,0} 8243
+hl{m,16,0,3fff54cc} 8244
+hl{f,3fff3f1c,0} 8245
+hl{m,16,0,3fff3f1c} 8246
+hl{m,756,0,3fff9274} 8247
+hl{f,3fff9274,0} 8248
+hl{f,3fff54cc,0} 8249
+hl{m,16,0,3fff54cc} 8250
+hl{f,3fff3f1c,0} 8251
+hl{m,16,0,3fff3f1c} 8252
+hl{m,756,0,3fff9274} 8253
+hl{f,3fff9274,0} 8254
+hl{f,3fff45a4,0} 8255
+hl{m,16,0,3fff45a4} 8256
+hl{f,3fff54cc,0} 8257
+hl{m,16,0,3fff54cc} 8258
+hl{m,756,0,3fff9274} 8259
+hl{f,3fff9274,0} 8260
+hl{f,3fff3f1c,0} 8261
+hl{m,16,0,3fff3f1c} 8262
+hl flush 8262 - remains 12648
+dns_tmr: dns_check_entries
+
+hl{f,3fff54cc,0} 8263
+hl{m,16,0,3fff54cc} 8264
+hl{m,756,0,3fff9274} 8265
+hl{f,3fff9274,0} 8266
+hl{f,3fff3f1c,0} 8267
+hl{m,16,0,3fff3f1c} 8268
+hl{f,3fff54cc,0} 8269
+hl{m,16,0,3fff54cc} 8270
+hl{m,756,0,3fff9274} 8271
+hl{f,3fff9274,0} 8272
+hl{f,3fff54cc,0} 8273
+hl{m,16,0,3fff54cc} 8274
+hl{m,756,0,3fff9274} 8275
+hl{f,3fff9274,0} 8276
+hl{f,3fff3f1c,0} 8277
+hl{m,16,0,3fff3f1c} 8278
+hl{m,756,0,3fff9274} 8279
+hl{f,3fff9274,0} 8280
+hl{f,3fff54cc,0} 8281
+hl{m,16,0,3fff54cc} 8282
+hl{f,3fff3f1c,0} 8283
+hl{m,16,0,3fff3f1c} 8284
+hl{f,3fff4c64,0} 8285
+hl{m,16,0,3fff4c64} 8286
+hl{f,3fff45a4,0} 8287
+hl{m,16,0,3fff45a4} 8288
+hl{f,3fff54cc,0} 8289
+hl{m,16,0,3fff54cc} 8290
+hl{m,756,0,3fff9274} 8291
+hl{f,3fff9274,0} 8292
+hl{f,3fff3f1c,0} 8293
+hl{m,16,0,3fff3f1c} 8294
+hl flush 8294 - remains 12648
+ 6:10:58 Dormitor H:56.20(56.5) T:18.20(18.0 0.0)/24.7 SetPt:23.00 needHeat:1
+QHEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{f,3fff54cc,0} 8295
+hl{m,16,0,3fff54cc} 8296
+hl{m,756,0,3fff9274} 8297
+hl{f,3fff9274,0} 8298
+hl{m,20,0,3fff3d7c} 8299
+hl{f,3fff3d94,0} 8300
+hl{f,3fff3f1c,0} 8301
+hl{m,16,0,3fff3f1c} 8302
+hl{f,3fff54cc,0} 8303
+hl{m,16,0,3fff54cc} 8304
+hl{f,3fff54cc,0} 8305
+hl{m,16,0,3fff54cc} 8306
+hl{f,3fff3f1c,0} 8307
+hl{m,16,0,3fff3f1c} 8308
+hl{f,3fff54cc,0} 8309
+hl{m,16,0,3fff54cc} 8310
+hl{f,3fff3f1c,0} 8311
+hl{m,16,0,3fff3f1c} 8312
+hl{f,3fff45a4,0} 8313
+hl{m,16,0,3fff45a4} 8314
+hl{f,3fff54cc,0} 8315
+hl{m,16,0,3fff54cc} 8316
+hl{f,3fff3f1c,0} 8317
+hl{m,16,0,3fff3f1c} 8318
+hl{f,3fff54cc,0} 8319
+hl{m,16,0,3fff54cc} 8320
+hl{f,3fff3f1c,0} 8321
+hl{m,16,0,3fff3f1c} 8322
+hl{f,3fff54cc,0} 8323
+hl{m,16,0,3fff54cc} 8324
+hl{f,3fff54cc,0} 8325
+hl{m,16,0,3fff54cc} 8326
+hl flush 8326 - remains 12648
+dns_tmr: dns_check_entries
+wscli Sending PING
+TcpClient: Malloc 2 bytes in stream
+3
+hl{f,3fff3f1c,0} 8327
+hl{m,16,0,3fff3f1c} 8328
+hl{f,3fff54cc,0} 8329
+hl{m,16,0,3fff54cc} 8330
+hl{f,3fff3f1c,0} 8331
+hl{m,16,0,3fff3f1c} 8332
+hl{f,3fff4c64,0} 8333
+hl{m,16,0,3fff4c64} 8334
+hl{f,3fff45a4,0} 8335
+hl{m,16,0,3fff45a4} 8336
+hl{f,3fff54cc,0} 8337
+hl{m,16,0,3fff54cc} 8338
+hl{f,3fff3f1c,0} 8339
+hl{m,16,0,3fff3f1c} 8340
+hl{f,3fff54cc,0} 8341
+hl{m,16,0,3fff54cc} 8342
+hl{m,28,0,3fff5674} 8343
+hl{m,3,0,3fff7f44} 8344
+hl{m,756,0,3fff9274} 8345
+hl{f,3fff9274,0} 8346
+hl{f,3fff3f1c,0} 8347
+hl{m,16,0,3fff3f1c} 8348
+hl{f,3fff54cc,0} 8349
+hl{m,16,0,3fff54cc} 8350
+hl{m,756,0,3fff9274} 8351
+hl{f,3fff9274,0} 8352
+hl{f,3fff54cc,0} 8353
+hl{m,16,0,3fff54cc} 8354
+hl{m,756,0,3fff9274} 8355
+hl{f,3fff9274,0} 8356
+hl{f,3fff3f1c,0} 8357
+hl{m,16,0,3fff3f1c} 8358
+hl flush 8358 - remains 11824
+daxtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+▒axl_ssl_read: Read bytes: 0
+
+$
+hl{m,756,0,3fff9274} 8359
+hl{f,3fff9274,0} 8360
+hl{f,3fff54cc,0} 8361
+hl{m,16,0,3fff54cc} 8362
+hl{f,3fff3f1c,0} 8363
+hl{m,16,0,3fff3f1c} 8364
+hl{f,3fff45a4,0} 8365
+hl{m,16,0,3fff45a4} 8366
+hl{f,3fff54cc,0} 8367
+hl{m,16,0,3fff54cc} 8368
+hl{m,756,0,3fff9274} 8369
+hl{f,3fff9274,0} 8370
+hl{f,3fff3f1c,0} 8371
+hl{m,25,0,3fff8b4c} 8372
+hl{f,3fff8b4c,0} 8373
+hl{m,48,0,3fff8b4c} 8374
+hl{f,3fff8b4c,0} 8375
+hl{m,1572,0,3fff978c} 8376
+hl{m,24,0,3fff8b4c} 8377
+hl{f,3fff7f44,0} 8378
+hl{f,3fff5674,0} 8379
+hl{m,16,0,3fff3f1c} 8380
+hl{f,3fff54cc,0} 8381
+hl{m,16,0,3fff54cc} 8382
+hl{m,756,0,3fff9274} 8383
+hl{f,3fff9274,0} 8384
+hl{m,20,0,3fff3d94} 8385
+hl{f,3fff978c,0} 8386
+hl{f,3fff8b4c,0} 8387
+hl{m,54,0,3fff8b4c} 8388
+hl{f,3fff8b4c,0} 8389
+hl{m,54,0,3fff8b4c} 8390
+hl flush 8390 - remains 12600
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl{f,3fff8b4c,0} 8391
+hl{m,25,0,3fff5674} 8392
+hl{f,3fff5674,0} 8393
+hl{m,2,0,3fff7f44} 8394
+hl{m,116,0,3fff8b4c} 8395
+hl{f,3fff7f44,0} 8396
+hl{f,3fff3d94,0} 8397
+hl{m,3,0,3fff7f44} 8398
+hl{f,3fff7f44,0} 8399
+hl{f,3fff8b4c,0} 8400
+hl{f,3fff3f1c,0} 8401
+hl{m,112,0,3fff8b4c} 8402
+hl{m,16,0,3fff3f1c} 8403
+hl{f,3fff54cc,0} 8404
+hl{m,16,0,3fff54cc} 8405
+hl{f,3fff8b4c,0} 8406
+hl{f,3fff54cc,0} 8407
+hl{m,16,0,3fff54cc} 8408
+hl{f,3fff3f1c,0} 8409
+hl{m,16,0,3fff3f1c} 8410
+hl{m,756,0,3fff9274} 8411
+hl{f,3fff9274,0} 8412
+hl{f,3fff54cc,0} 8413
+hl{m,16,0,3fff54cc} 8414
+hl{f,3fff3f1c,0} 8415
+hl{m,16,0,3fff3f1c} 8416
+hl{m,756,0,3fff9274} 8417
+hl{f,3fff9274,0} 8418
+hl{f,3fff4c64,0} 8419
+hl{m,16,0,3fff4c64} 8420
+hl{f,3fff45a4,0} 8421
+hl{m,16,0,3fff45a4} 8422
+hl flush 8422 - remains 12648
+
+hl{f,3fff54cc,0} 8423
+hl{m,16,0,3fff54cc} 8424
+hl{m,756,0,3fff9274} 8425
+hl{f,3fff9274,0} 8426
+hl{f,3fff3f1c,0} 8427
+hl{m,16,0,3fff3f1c} 8428
+hl{m,20,0,3fff3d94} 8429
+hl{f,3fff3d64,0} 8430
+hl{f,3fff54cc,0} 8431
+hl{m,16,0,3fff54cc} 8432
+hl{m,756,0,3fff9274} 8433
+hl{f,3fff9274,0} 8434
+hl{f,3fff3f1c,0} 8435
+hl{m,16,0,3fff3f1c} 8436
+hl{f,3fff54cc,0} 8437
+hl{m,16,0,3fff54cc} 8438
+hl{m,756,0,3fff9274} 8439
+hl{f,3fff9274,0} 8440
+hl{f,3fff54cc,0} 8441
+hl{m,16,0,3fff54cc} 8442
+hl{m,756,0,3fff9274} 8443
+hl{f,3fff9274,0} 8444
+hl{f,3fff3f1c,0} 8445
+hl{m,16,0,3fff3f1c} 8446
+hl{f,3fff54cc,0} 8447
+hl{m,16,0,3fff54cc} 8448
+hl{f,3fff3f1c,0} 8449
+hl{m,16,0,3fff3f1c} 8450
+hl{m,756,0,3fff9274} 8451
+hl{f,3fff9274,0} 8452
+hl{f,3fff45a4,0} 8453
+hl{m,16,0,3fff45a4} 8454
+hl flush 8454 - remains 12648
+wscli Sending PING
+LTcpClient: Malloc 2 bytes in stream
+
+hl{f,3fff54cc,0} 8455
+hl{m,16,0,3fff54cc} 8456
+hl{m,756,0,3fff9274} 8457
+hl{f,3fff9274,0} 8458
+hl{f,3fff3f1c,0} 8459
+hl{m,16,0,3fff3f1c} 8460
+hl{f,3fff54cc,0} 8461
+hl{m,16,0,3fff54cc} 8462
+hl{m,756,0,3fff9274} 8463
+hl{f,3fff9274,0} 8464
+hl{f,3fff3f1c,0} 8465
+hl{m,16,0,3fff3f1c} 8466
+hl{f,3fff54cc,0} 8467
+hl{m,16,0,3fff54cc} 8468
+hl{m,756,0,3fff9274} 8469
+hl{f,3fff9274,0} 8470
+hl{f,3fff54cc,0} 8471
+hl{m,16,0,3fff54cc} 8472
+hl{f,3fff3f1c,0} 8473
+hl{m,16,0,3fff3f1c} 8474
+hl{m,756,0,3fff9274} 8475
+hl{f,3fff9274,0} 8476
+hl{m,28,0,3fff5674} 8477
+hl{m,3,0,3fff7f44} 8478
+hl{f,3fff54cc,0} 8479
+hl{m,16,0,3fff54cc} 8480
+hl{m,756,0,3fff9274} 8481
+hl{f,3fff9274,0} 8482
+hl{f,3fff3f1c,0} 8483
+hl{m,16,0,3fff3f1c} 8484
+hl{f,3fff3d34,0} 8485
+hl{m,16,0,3fff3d34} 8486
+hl flush 8486 - remains 12608
+dns_tmr: dns_check_entries
+
+hl{f,3fff4c64,0} 8487
+hl{m,16,0,3fff4c64} 8488
+hl{f,3fff45a4,0} 8489
+hl{m,16,0,3fff45a4} 8490
+hl{f,3fff54cc,0} 8491
+hl{m,16,0,3fff54cc} 8492
+hl{m,756,0,3fff9274} 8493
+hl{f,3fff9274,0} 8494
+hl{f,3fff3f1c,0} 8495
+hl{m,16,0,3fff3f1c} 8496
+hl{m,756,0,3fff9274} 8497
+hl{f,3fff9274,0} 8498
+hl{f,3fff54cc,0} 8499
+hl{m,16,0,3fff54cc} 8500
+hl{m,756,0,3fff9274} 8501
+hl{f,3fff9274,0} 8502
+hl{f,3fff3f1c,0} 8503
+hl{m,16,0,3fff3f1c} 8504
+hl{f,3fff54cc,0} 8505
+hl{m,16,0,3fff54cc} 8506
+hl{m,756,0,3fff9274} 8507
+hl{f,3fff9274,0} 8508
+hl{f,3fff54cc,0} 8509
+hl{m,16,0,3fff54cc} 8510
+hl{f,3fff3f1c,0} 8511
+hl{m,16,0,3fff3f1c} 8512
+hl{m,756,0,3fff9274} 8513
+hl{f,3fff9274,0} 8514
+hl{f,3fff54cc,0} 8515
+hl{m,16,0,3fff54cc} 8516
+hl{m,756,0,3fff9274} 8517
+hl{f,3fff9274,0} 8518
+hl flush 8518 - remains 12608
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$
+hl{f,3fff3f1c,0} 8519
+hl{m,16,0,3fff3f1c} 8520
+hl{f,3fff45a4,0} 8521
+hl{m,16,0,3fff45a4} 8522
+hl{f,3fff54cc,0} 8523
+hl{m,16,0,3fff54cc} 8524
+hl{m,756,0,3fff9274} 8525
+hl{f,3fff9274,0} 8526
+hl{f,3fff3f1c,0} 8527
+hl{m,25,0,3fff8b4c} 8528
+hl{f,3fff8b4c,0} 8529
+hl{m,48,0,3fff8b4c} 8530
+hl{f,3fff8b4c,0} 8531
+hl{m,1572,0,3fff978c} 8532
+hl{m,24,0,3fff8b4c} 8533
+hl{f,3fff7f44,0} 8534
+hl{f,3fff5674,0} 8535
+hl{m,16,0,3fff3f1c} 8536
+hl{m,756,0,3fff9274} 8537
+hl{f,3fff9274,0} 8538
+hl{f,3fff54cc,0} 8539
+hl{m,16,0,3fff54cc} 8540
+hl{m,20,0,3fff3d64} 8541
+hl{f,3fff978c,0} 8542
+hl{f,3fff8b4c,0} 8543
+hl{m,54,0,3fff8b4c} 8544
+hl{f,3fff8b4c,0} 8545
+hl{m,54,0,3fff8b4c} 8546
+hl{f,3fff8b4c,0} 8547
+hl{m,25,0,3fff5674} 8548
+hl{f,3fff5674,0} 8549
+hl{m,2,0,3fff7f44} 8550
+hl flush 8550 - remains 12472
+wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl{m,116,0,3fff8b4c} 8551
+hl{f,3fff7f44,0} 8552
+hl{f,3fff3d64,0} 8553
+hl{m,3,0,3fff7f44} 8554
+hl{f,3fff7f44,0} 8555
+hl{f,3fff8b4c,0} 8556
+hl{f,3fff3f1c,0} 8557
+hl{m,112,0,3fff8b4c} 8558
+hl{m,16,0,3fff3f1c} 8559
+hl{f,3fff54cc,0} 8560
+hl{m,16,0,3fff54cc} 8561
+hl{f,3fff8b4c,0} 8562
+hl{f,3fff54cc,0} 8563
+hl{m,16,0,3fff54cc} 8564
+hl{f,3fff3f1c,0} 8565
+hl{m,16,0,3fff3f1c} 8566
+hl{m,756,0,3fff9274} 8567
+hl{f,3fff9274,0} 8568
+hl{f,3fff54cc,0} 8569
+hl{m,16,0,3fff54cc} 8570
+hl{m,756,0,3fff9274} 8571
+hl{f,3fff9274,0} 8572
+hl{f,3fff3f1c,0} 8573
+hl{m,16,0,3fff3f1c} 8574
+hl{f,3fff4c64,0} 8575
+hl{m,16,0,3fff4c64} 8576
+hl{f,3fff45a4,0} 8577
+hl{m,16,0,3fff45a4} 8578
+hl{f,3fff54cc,0} 8579
+hl{m,16,0,3fff54cc} 8580
+hl{m,756,0,3fff9274} 8581
+hl{f,3fff9274,0} 8582
+hl flush 8582 - remains 12648
+ 6:11: 3 Dormitor H:56.20(56.5) T:18.20(18.0 0.0)/24.7 SetPt:23.00 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{f,3fff3f1c,0} 8583
+hl{m,16,0,3fff3f1c} 8584
+hl{f,3fff54cc,0} 8585
+hl{m,16,0,3fff54cc} 8586
+hl{m,756,0,3fff9274} 8587
+hl{f,3fff9274,0} 8588
+hl{f,3fff3f1c,0} 8589
+hl{m,16,0,3fff3f1c} 8590
+hl{f,3fff54cc,0} 8591
+hl{m,16,0,3fff54cc} 8592
+hl{m,756,0,3fff9274} 8593
+hl{f,3fff9274,0} 8594
+hl{f,3fff54cc,0} 8595
+hl{m,16,0,3fff54cc} 8596
+hl{m,756,0,3fff9274} 8597
+hl{f,3fff9274,0} 8598
+hl{f,3fff3f1c,0} 8599
+hl{m,16,0,3fff3f1c} 8600
+hl{m,756,0,3fff9274} 8601
+hl{f,3fff9274,0} 8602
+hl{f,3fff54cc,0} 8603
+hl{m,16,0,3fff54cc} 8604
+hl{f,3fff3f1c,0} 8605
+hl{m,16,0,3fff3f1c} 8606
+hl{m,756,0,3fff9274} 8607
+hl{f,3fff9274,0} 8608
+hl{f,3fff45a4,0} 8609
+hl{m,16,0,3fff45a4} 8610
+hl{f,3fff54cc,0} 8611
+hl{m,16,0,3fff54cc} 8612
+hl{m,20,0,3fff3d64} 8613
+hl{f,3fff3d7c,0} 8614
+hl flush 8614 - remains 12648
+dns_tmr: dns_check_entries
+
+hl{f,3fff3f1c,0} 8615
+hl{m,16,0,3fff3f1c} 8616
+hl{f,3fff54cc,0} 8617
+hl{m,16,0,3fff54cc} 8618
+hl{f,3fff3f1c,0} 8619
+hl{m,16,0,3fff3f1c} 8620
+hl{f,3fff54cc,0} 8621
+hl{m,16,0,3fff54cc} 8622
+hl{f,3fff54cc,0} 8623
+hl{m,16,0,3fff54cc} 8624
+hl{f,3fff3f1c,0} 8625
+hl{m,16,0,3fff3f1c} 8626
+hl{f,3fff54cc,0} 8627
+hl{m,16,0,3fff54cc} 8628
+hl{f,3fff3f1c,0} 8629
+hl{m,16,0,3fff3f1c} 8630
+hl{f,3fff4c64,0} 8631
+hl{m,16,0,3fff4c64} 8632
+hl{f,3fff45a4,0} 8633
+hl{m,16,0,3fff45a4} 8634
+hl{f,3fff54cc,0} 8635
+hl{m,16,0,3fff54cc} 8636
+hl{f,3fff3f1c,0} 8637
+hl{m,16,0,3fff3f1c} 8638
+hl{f,3fff54cc,0} 8639
+hl{m,16,0,3fff54cc} 8640
+hl{f,3fff3f1c,0} 8641
+hl{m,16,0,3fff3f1c} 8642
+hl{f,3fff54cc,0} 8643
+hl{m,16,0,3fff54cc} 8644
+hl{f,3fff54cc,0} 8645
+hl{m,16,0,3fff54cc} 8646
+hl flush 8646 - remains 12648
+wscli Sending PING
+TcpClient: Malloc 2 bytes in stream
+3axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$
+hl{f,3fff3f1c,0} 8647
+hl{m,16,0,3fff3f1c} 8648
+hl{f,3fff54cc,0} 8649
+hl{m,16,0,3fff54cc} 8650
+hl{f,3fff3f1c,0} 8651
+hl{m,16,0,3fff3f1c} 8652
+hl{f,3fff45a4,0} 8653
+hl{m,16,0,3fff45a4} 8654
+hl{f,3fff54cc,0} 8655
+hl{m,16,0,3fff54cc} 8656
+hl{m,28,0,3fff5674} 8657
+hl{m,3,0,3fff7f44} 8658
+hl{m,756,0,3fff9274} 8659
+hl{f,3fff9274,0} 8660
+hl{f,3fff3f1c,0} 8661
+hl{m,25,0,3fff8b4c} 8662
+hl{f,3fff8b4c,0} 8663
+hl{m,48,0,3fff8b4c} 8664
+hl{f,3fff8b4c,0} 8665
+hl{m,1572,0,3fff978c} 8666
+hl{m,24,0,3fff8b4c} 8667
+hl{f,3fff7f44,0} 8668
+hl{f,3fff5674,0} 8669
+hl{m,16,0,3fff3f1c} 8670
+hl{f,3fff54cc,0} 8671
+hl{m,16,0,3fff54cc} 8672
+hl{m,20,0,3fff3d7c} 8673
+hl{f,3fff978c,0} 8674
+hl{f,3fff8b4c,0} 8675
+hl{m,54,0,3fff8b4c} 8676
+hl{f,3fff8b4c,0} 8677
+hl{m,54,0,3fff8b4c} 8678
+hl flush 8678 - remains 12600
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl{f,3fff8b4c,0} 8679
+hl{m,25,0,3fff5674} 8680
+hl{f,3fff5674,0} 8681
+hl{m,2,0,3fff7f44} 8682
+hl{m,116,0,3fff8b4c} 8683
+hl{f,3fff7f44,0} 8684
+hl{f,3fff3d7c,0} 8685
+hl{m,3,0,3fff7f44} 8686
+hl{f,3fff7f44,0} 8687
+hl{f,3fff8b4c,0} 8688
+hl{f,3fff3f1c,0} 8689
+hl{m,112,0,3fff8b4c} 8690
+hl{m,16,0,3fff3f1c} 8691
+hl{f,3fff54cc,0} 8692
+hl{m,16,0,3fff54cc} 8693
+hl{f,3fff8b4c,0} 8694
+hl{f,3fff54cc,0} 8695
+hl{m,16,0,3fff54cc} 8696
+hl{f,3fff3f1c,0} 8697
+hl{m,16,0,3fff3f1c} 8698
+hl{m,756,0,3fff9274} 8699
+hl{f,3fff9274,0} 8700
+hl{f,3fff54cc,0} 8701
+hl{m,16,0,3fff54cc} 8702
+hl{m,756,0,3fff9274} 8703
+hl{f,3fff9274,0} 8704
+hl{f,3fff3f1c,0} 8705
+hl{m,16,0,3fff3f1c} 8706
+hl{f,3fff4c64,0} 8707
+hl{m,16,0,3fff4c64} 8708
+hl{f,3fff45a4,0} 8709
+hl{m,16,0,3fff45a4} 8710
+hl flush 8710 - remains 12648
+
+hl{f,3fff54cc,0} 8711
+hl{m,16,0,3fff54cc} 8712
+hl{m,756,0,3fff9274} 8713
+hl{f,3fff9274,0} 8714
+hl{f,3fff3f1c,0} 8715
+hl{m,16,0,3fff3f1c} 8716
+hl{f,3fff54cc,0} 8717
+hl{m,16,0,3fff54cc} 8718
+hl{m,756,0,3fff9274} 8719
+hl{f,3fff9274,0} 8720
+hl{f,3fff3f1c,0} 8721
+hl{m,16,0,3fff3f1c} 8722
+hl{f,3fff54cc,0} 8723
+hl{m,16,0,3fff54cc} 8724
+hl{f,3fff54cc,0} 8725
+hl{m,16,0,3fff54cc} 8726
+hl{m,756,0,3fff9274} 8727
+hl{f,3fff9274,0} 8728
+hl{f,3fff3f1c,0} 8729
+hl{m,16,0,3fff3f1c} 8730
+hl{f,3fff54cc,0} 8731
+hl{m,16,0,3fff54cc} 8732
+hl{m,756,0,3fff9274} 8733
+hl{f,3fff9274,0} 8734
+hl{f,3fff3f1c,0} 8735
+hl{m,16,0,3fff3f1c} 8736
+hl{m,756,0,3fff9274} 8737
+hl{f,3fff9274,0} 8738
+hl{f,3fff45a4,0} 8739
+hl{m,16,0,3fff45a4} 8740
+hl{f,3fff54cc,0} 8741
+hl{m,16,0,3fff54cc} 8742
+hl flush 8742 - remains 12600
+Edns_tmr: dns_check_entries
+
+hl{m,20,0,3fff3d7c} 8743
+hl{f,3fff3d94,0} 8744
+hl{m,756,0,3fff9274} 8745
+hl{f,3fff9274,0} 8746
+hl{f,3fff3f1c,0} 8747
+hl{m,16,0,3fff3f1c} 8748
+hl{f,3fff54cc,0} 8749
+hl{m,16,0,3fff54cc} 8750
+hl{m,756,0,3fff9274} 8751
+hl{f,3fff9274,0} 8752
+hl{f,3fff3f1c,0} 8753
+hl{m,16,0,3fff3f1c} 8754
+hl{f,3fff54cc,0} 8755
+hl{m,16,0,3fff54cc} 8756
+hl{m,756,0,3fff9274} 8757
+hl{f,3fff9274,0} 8758
+hl{f,3fff54cc,0} 8759
+hl{m,16,0,3fff54cc} 8760
+hl{f,3fff3f1c,0} 8761
+hl{m,16,0,3fff3f1c} 8762
+hl{m,756,0,3fff9274} 8763
+hl{f,3fff9274,0} 8764
+hl{f,3fff54cc,0} 8765
+hl{m,16,0,3fff54cc} 8766
+hl{f,3fff3f1c,0} 8767
+hl{m,16,0,3fff3f1c} 8768
+hl{m,756,0,3fff9274} 8769
+hl{f,3fff9274,0} 8770
+hl{f,3fff4c64,0} 8771
+hl{m,16,0,3fff4c64} 8772
+hl{f,3fff45a4,0} 8773
+hl{m,16,0,3fff45a4} 8774
+hl flush 8774 - remains 12648
+wscli Sending PING
+LTcpClient: Malloc 2 bytes in stream
+
+hl{f,3fff54cc,0} 8775
+hl{m,16,0,3fff54cc} 8776
+hl{m,756,0,3fff9274} 8777
+hl{f,3fff9274,0} 8778
+hl{f,3fff3f1c,0} 8779
+hl{m,16,0,3fff3f1c} 8780
+hl{f,3fff54cc,0} 8781
+hl{m,16,0,3fff54cc} 8782
+hl{m,756,0,3fff9274} 8783
+hl{f,3fff9274,0} 8784
+hl{f,3fff3f1c,0} 8785
+hl{m,16,0,3fff3f1c} 8786
+hl{f,3fff54cc,0} 8787
+hl{m,16,0,3fff54cc} 8788
+hl{m,756,0,3fff9274} 8789
+hl{f,3fff9274,0} 8790
+hl{f,3fff54cc,0} 8791
+hl{m,16,0,3fff54cc} 8792
+hl{f,3fff3f1c,0} 8793
+hl{m,16,0,3fff3f1c} 8794
+hl{m,28,0,3fff5674} 8795
+hl{m,3,0,3fff7f44} 8796
+hl{m,756,0,3fff9274} 8797
+hl{f,3fff9274,0} 8798
+hl{f,3fff54cc,0} 8799
+hl{m,16,0,3fff54cc} 8800
+hl{m,756,0,3fff9274} 8801
+hl{f,3fff9274,0} 8802
+hl{f,3fff3f1c,0} 8803
+hl{m,16,0,3fff3f1c} 8804
+hl{f,3fff45a4,0} 8805
+hl{m,16,0,3fff45a4} 8806
+hl flush 8806 - remains 12608
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl{f,3fff54cc,0} 8807
+hl{m,16,0,3fff54cc} 8808
+hl{m,756,0,3fff9274} 8809
+hl{f,3fff9274,0} 8810
+hl{f,3fff3f1c,0} 8811
+hl{m,25,0,3fff8b4c} 8812
+hl{f,3fff8b4c,0} 8813
+hl{m,48,0,3fff8b4c} 8814
+hl{f,3fff8b4c,0} 8815
+hl{m,1572,0,3fff978c} 8816
+hl{m,24,0,3fff8b4c} 8817
+hl{f,3fff7f44,0} 8818
+hl{f,3fff5674,0} 8819
+hl{m,16,0,3fff3f1c} 8820
+hl{m,756,0,3fff9274} 8821
+hl{f,3fff9274,0} 8822
+hl{f,3fff54cc,0} 8823
+hl{m,16,0,3fff54cc} 8824
+hl{m,20,0,3fff3d94} 8825
+hl{f,3fff978c,0} 8826
+hl{f,3fff8b4c,0} 8827
+hl{m,54,0,3fff8b4c} 8828
+hl{f,3fff8b4c,0} 8829
+hl{m,54,0,3fff8b4c} 8830
+hl{f,3fff8b4c,0} 8831
+hl{m,25,0,3fff5674} 8832
+hl{f,3fff5674,0} 8833
+hl{m,2,0,3fff7f44} 8834
+hl{m,116,0,3fff8b4c} 8835
+hl{f,3fff7f44,0} 8836
+hl{f,3fff3d94,0} 8837
+hl{m,3,0,3fff7f44} 8838
+hl flush 8838 - remains 12504
+dns_tmr: dns_check_entries
+
+hl{f,3fff7f44,0} 8839
+hl{f,3fff8b4c,0} 8840
+hl{f,3fff3f1c,0} 8841
+hl{m,112,0,3fff8b4c} 8842
+hl{m,16,0,3fff3f1c} 8843
+hl{f,3fff54cc,0} 8844
+hl{m,16,0,3fff54cc} 8845
+hl{f,3fff8b4c,0} 8846
+hl{f,3fff54cc,0} 8847
+hl{m,16,0,3fff54cc} 8848
+hl{f,3fff3f1c,0} 8849
+hl{m,16,0,3fff3f1c} 8850
+hl{m,756,0,3fff9274} 8851
+hl{f,3fff9274,0} 8852
+hl{f,3fff54cc,0} 8853
+hl{m,16,0,3fff54cc} 8854
+hl{f,3fff3f1c,0} 8855
+hl{m,16,0,3fff3f1c} 8856
+hl{m,756,0,3fff9274} 8857
+hl{f,3fff9274,0} 8858
+hl{f,3fff3d4c,0} 8859
+hl{m,16,0,3fff3d4c} 8860
+hl{f,3fff3d34,0} 8861
+hl{m,16,0,3fff3d34} 8862
+hl{f,3fff4c64,0} 8863
+hl{m,16,0,3fff4c64} 8864
+hl{f,3fff45a4,0} 8865
+hl{m,16,0,3fff45a4} 8866
+hl{f,3fff54cc,0} 8867
+hl{m,16,0,3fff54cc} 8868
+hl{m,756,0,3fff9274} 8869
+hl{f,3fff9274,0} 8870
+hl flush 8870 - remains 12648
+
+hl{f,3fff3f1c,0} 8871
+hl{m,16,0,3fff3f1c} 8872
+hl{f,3fff54cc,0} 8873
+hl{m,16,0,3fff54cc} 8874
+hl{m,756,0,3fff9274} 8875
+hl{f,3fff9274,0} 8876
+hl{f,3fff3f1c,0} 8877
+hl{m,16,0,3fff3f1c} 8878
+hl{f,3fff54cc,0} 8879
+hl{m,16,0,3fff54cc} 8880
+hl{m,756,0,3fff9274} 8881
+hl{f,3fff9274,0} 8882
+hl{f,3fff54cc,0} 8883
+hl{m,16,0,3fff54cc} 8884
+hl{f,3fff3f1c,0} 8885
+hl{m,16,0,3fff3f1c} 8886
+hl{m,756,0,3fff9274} 8887
+hl{f,3fff9274,0} 8888
+hl{f,3fff54cc,0} 8889
+hl{m,16,0,3fff54cc} 8890
+hl{m,756,0,3fff9274} 8891
+hl{f,3fff9274,0} 8892
+hl{f,3fff3f1c,0} 8893
+hl{m,16,0,3fff3f1c} 8894
+hl{f,3fff45a4,0} 8895
+hl{m,16,0,3fff45a4} 8896
+hl{f,3fff54cc,0} 8897
+hl{m,16,0,3fff54cc} 8898
+hl{m,756,0,3fff9274} 8899
+hl{f,3fff9274,0} 8900
+hl{f,3fff3f1c,0} 8901
+hl{m,16,0,3fff3f1c} 8902
+hl flush 8902 - remains 12648
+dns_tmr: dns_check_entries
+
+hl{f,3fff54cc,0} 8903
+hl{m,16,0,3fff54cc} 8904
+hl{m,756,0,3fff9274} 8905
+hl{f,3fff9274,0} 8906
+hl{f,3fff3f1c,0} 8907
+hl{m,16,0,3fff3f1c} 8908
+hl{f,3fff54cc,0} 8909
+hl{m,16,0,3fff54cc} 8910
+hl{m,756,0,3fff9274} 8911
+hl{f,3fff9274,0} 8912
+hl{f,3fff54cc,0} 8913
+hl{m,16,0,3fff54cc} 8914
+hl{m,756,0,3fff9274} 8915
+hl{f,3fff9274,0} 8916
+hl{f,3fff3f1c,0} 8917
+hl{m,16,0,3fff3f1c} 8918
+hl{f,3fff54cc,0} 8919
+hl{m,16,0,3fff54cc} 8920
+hl{m,756,0,3fff9274} 8921
+hl{f,3fff9274,0} 8922
+hl{f,3fff3f1c,0} 8923
+hl{m,16,0,3fff3f1c} 8924
+hl{m,756,0,3fff9274} 8925
+hl{f,3fff9274,0} 8926
+hl{f,3fff4c64,0} 8927
+hl{m,16,0,3fff4c64} 8928
+hl{f,3fff45a4,0} 8929
+hl{m,16,0,3fff45a4} 8930
+hl{f,3fff54cc,0} 8931
+hl{m,16,0,3fff54cc} 8932
+hl{f,3fff3f1c,0} 8933
+hl{m,16,0,3fff3f1c} 8934
+hl flush 8934 - remains 11864
+d 6:11: 8 Dormitor H:56.20(56.4) T:18.20(18.0 0.0)/24.7 SetPt:23.00 needHeat:1
+▒HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{m,756,0,3fff9274} 8935
+hl{f,3fff9274,0} 8936
+hl{m,20,0,3fff3d94} 8937
+hl{f,3fff3d64,0} 8938
+hl{f,3fff54cc,0} 8939
+hl{m,16,0,3fff54cc} 8940
+hl{f,3fff3f1c,0} 8941
+hl{m,16,0,3fff3f1c} 8942
+hl{f,3fff54cc,0} 8943
+hl{m,16,0,3fff54cc} 8944
+hl{f,3fff54cc,0} 8945
+hl{m,16,0,3fff54cc} 8946
+hl{f,3fff3f1c,0} 8947
+hl{m,16,0,3fff3f1c} 8948
+hl{f,3fff54cc,0} 8949
+hl{m,16,0,3fff54cc} 8950
+hl{f,3fff3f1c,0} 8951
+hl{m,16,0,3fff3f1c} 8952
+hl{f,3fff45a4,0} 8953
+hl{m,16,0,3fff45a4} 8954
+hl{f,3fff54cc,0} 8955
+hl{m,16,0,3fff54cc} 8956
+hl{f,3fff3f1c,0} 8957
+hl{m,16,0,3fff3f1c} 8958
+hl{f,3fff54cc,0} 8959
+hl{m,16,0,3fff54cc} 8960
+hl{f,3fff3f1c,0} 8961
+hl{m,16,0,3fff3f1c} 8962
+hl{f,3fff54cc,0} 8963
+hl{m,16,0,3fff54cc} 8964
+hl{f,3fff54cc,0} 8965
+hl{m,16,0,3fff54cc} 8966
+hl flush 8966 - remains 12648
+dns_tmr: dns_check_entries
+wscli Sending PING
+TcpClient: Malloc 2 bytes in stream
+3
+hl{f,3fff3f1c,0} 8967
+hl{m,16,0,3fff3f1c} 8968
+hl{f,3fff54cc,0} 8969
+hl{m,16,0,3fff54cc} 8970
+hl{f,3fff3f1c,0} 8971
+hl{m,16,0,3fff3f1c} 8972
+hl{f,3fff4c64,0} 8973
+hl{m,16,0,3fff4c64} 8974
+hl{f,3fff45a4,0} 8975
+hl{m,16,0,3fff45a4} 8976
+hl{f,3fff54cc,0} 8977
+hl{m,16,0,3fff54cc} 8978
+hl{m,28,0,3fff5674} 8979
+hl{m,3,0,3fff7f44} 8980
+hl{f,3fff3f1c,0} 8981
+hl{m,16,0,3fff3f1c} 8982
+hl{f,3fff54cc,0} 8983
+hl{m,16,0,3fff54cc} 8984
+hl{m,756,0,3fff9274} 8985
+hl{f,3fff9274,0} 8986
+hl{f,3fff3f1c,0} 8987
+hl{m,16,0,3fff3f1c} 8988
+hl{f,3fff54cc,0} 8989
+hl{m,16,0,3fff54cc} 8990
+hl{m,756,0,3fff9274} 8991
+hl{f,3fff9274,0} 8992
+hl{f,3fff54cc,0} 8993
+hl{m,16,0,3fff54cc} 8994
+hl{f,3fff3f1c,0} 8995
+hl{m,16,0,3fff3f1c} 8996
+hl{m,756,0,3fff9274} 8997
+hl{f,3fff9274,0} 8998
+hl flush 8998 - remains 12608
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0
+hl{f,3fff54cc,0} 8999
+hl{m,16,0,3fff54cc} 9000
+hl{m,756,0,3fff9274} 9001
+hl{f,3fff9274,0} 9002
+hl{f,3fff3f1c,0} 9003
+hl{m,16,0,3fff3f1c} 9004
+hl{f,3fff45a4,0} 9005
+hl{m,16,0,3fff45a4} 9006
+hl{f,3fff54cc,0} 9007
+hl{m,16,0,3fff54cc} 9008
+hl{m,20,0,3fff3d64} 9009
+hl{f,3fff3d64,0} 9010
+hl{f,3fff3f1c,0} 9011
+hl{m,25,0,3fff8b4c} 9012
+hl{f,3fff8b4c,0} 9013
+hl{m,48,0,3fff8b4c} 9014
+hl{f,3fff8b4c,0} 9015
+hl{m,1572,0,3fff978c} 9016
+hl{m,24,0,3fff8b4c} 9017
+hl{f,3fff7f44,0} 9018
+hl{f,3fff5674,0} 9019
+hl{m,16,0,3fff3f1c} 9020
+hl{f,3fff54cc,0} 9021
+hl{m,16,0,3fff54cc} 9022
+hl{m,20,0,3fff3d64} 9023
+hl{f,3fff978c,0} 9024
+hl{f,3fff8b4c,0} 9025
+hl{m,54,0,3fff8b4c} 9026
+hl{f,3fff8b4c,0} 9027
+hl{m,54,0,3fff8b4c} 9028
+hl{f,3fff8b4c,0} 9029
+hl{m,25,0,3fff5674} 9030
+hl flush 9030 - remains 12600
+!axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+dns_tmr: dns_check_entries
+
+hl{f,3fff5674,0} 9031
+hl{m,2,0,3fff7f44} 9032
+hl{m,116,0,3fff8b4c} 9033
+hl{f,3fff7f44,0} 9034
+hl{f,3fff3d64,0} 9035
+hl{m,3,0,3fff7f44} 9036
+hl{f,3fff7f44,0} 9037
+hl{f,3fff8b4c,0} 9038
+hl{f,3fff3f1c,0} 9039
+hl{m,112,0,3fff8b4c} 9040
+hl{m,16,0,3fff3f1c} 9041
+hl{f,3fff54cc,0} 9042
+hl{m,16,0,3fff54cc} 9043
+hl{f,3fff8b4c,0} 9044
+hl{f,3fff54cc,0} 9045
+hl{m,16,0,3fff54cc} 9046
+hl{f,3fff3f1c,0} 9047
+hl{m,16,0,3fff3f1c} 9048
+hl{m,20,0,3fff3d64} 9049
+hl{f,3fff3d64,0} 9050
+hl{f,3fff54cc,0} 9051
+hl{m,16,0,3fff54cc} 9052
+hl{f,3fff3f1c,0} 9053
+hl{m,16,0,3fff3f1c} 9054
+hl{f,3fff4c64,0} 9055
+hl{m,16,0,3fff4c64} 9056
+hl{f,3fff45a4,0} 9057
+hl{m,16,0,3fff45a4} 9058
+hl{f,3fff54cc,0} 9059
+hl{m,16,0,3fff54cc} 9060
+hl{m,756,0,3fff9274} 9061
+hl{f,3fff9274,0} 9062
+hl flush 9062 - remains 12600
+d
+hl{m,20,0,3fff3d64} 9063
+hl{f,3fff3d7c,0} 9064
+hl{f,3fff3f1c,0} 9065
+hl{m,16,0,3fff3f1c} 9066
+hl{f,3fff54cc,0} 9067
+hl{m,16,0,3fff54cc} 9068
+hl{m,756,0,3fff9274} 9069
+hl{f,3fff9274,0} 9070
+hl{f,3fff3f1c,0} 9071
+hl{m,16,0,3fff3f1c} 9072
+hl{f,3fff54cc,0} 9073
+hl{m,16,0,3fff54cc} 9074
+hl{m,20,0,3fff3d7c} 9075
+hl{f,3fff3d7c,0} 9076
+hl{f,3fff54cc,0} 9077
+hl{m,16,0,3fff54cc} 9078
+hl{f,3fff3f1c,0} 9079
+hl{m,16,0,3fff3f1c} 9080
+hl{f,3fff54cc,0} 9081
+hl{m,16,0,3fff54cc} 9082
+hl{m,756,0,3fff9274} 9083
+hl{f,3fff9274,0} 9084
+hl{f,3fff3f1c,0} 9085
+hl{m,16,0,3fff3f1c} 9086
+hl{f,3fff45a4,0} 9087
+hl{m,16,0,3fff45a4} 9088
+hl{f,3fff54cc,0} 9089
+hl{m,16,0,3fff54cc} 9090
+hl{m,20,0,3fff3d7c} 9091
+hl{f,3fff3d7c,0} 9092
+hl{f,3fff3f1c,0} 9093
+hl{m,16,0,3fff3f1c} 9094
+hl flush 9094 - remains 12648
+wscli Sending PING
+LTcpClient: Malloc 2 bytes in stream
+dns_tmr: dns_check_entries
+
+hl{f,3fff54cc,0} 9095
+hl{m,16,0,3fff54cc} 9096
+hl{f,3fff3f1c,0} 9097
+hl{m,16,0,3fff3f1c} 9098
+hl{f,3fff54cc,0} 9099
+hl{m,16,0,3fff54cc} 9100
+hl{m,756,0,3fff9274} 9101
+hl{f,3fff9274,0} 9102
+hl{m,28,0,3fff5674} 9103
+hl{m,3,0,3fff7f44} 9104
+hl{f,3fff54cc,0} 9105
+hl{m,16,0,3fff54cc} 9106
+hl{f,3fff3f1c,0} 9107
+hl{m,16,0,3fff3f1c} 9108
+hl{m,756,0,3fff9274} 9109
+hl{f,3fff9274,0} 9110
+hl{f,3fff54cc,0} 9111
+hl{m,16,0,3fff54cc} 9112
+hl{m,756,0,3fff9274} 9113
+hl{f,3fff9274,0} 9114
+hl{f,3fff3f1c,0} 9115
+hl{m,16,0,3fff3f1c} 9116
+hl{m,756,0,3fff9274} 9117
+hl{f,3fff9274,0} 9118
+hl{f,3fff4c64,0} 9119
+hl{m,16,0,3fff4c64} 9120
+hl{f,3fff45a4,0} 9121
+hl{m,16,0,3fff45a4} 9122
+hl{f,3fff54cc,0} 9123
+hl{m,16,0,3fff54cc} 9124
+hl{m,756,0,3fff9274} 9125
+hl{f,3fff9274,0} 9126
+hl flush 9126 - remains 12608
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒
+hl{f,3fff3f1c,0} 9127
+hl{m,16,0,3fff3f1c} 9128
+hl{f,3fff54cc,0} 9129
+hl{m,16,0,3fff54cc} 9130
+hl{m,756,0,3fff9274} 9131
+hl{f,3fff9274,0} 9132
+hl{f,3fff3f1c,0} 9133
+hl{m,16,0,3fff3f1c} 9134
+hl{f,3fff54cc,0} 9135
+hl{m,16,0,3fff54cc} 9136
+hl{m,756,0,3fff9274} 9137
+hl{f,3fff9274,0} 9138
+hl{f,3fff54cc,0} 9139
+hl{m,16,0,3fff54cc} 9140
+hl{f,3fff3f1c,0} 9141
+hl{m,16,0,3fff3f1c} 9142
+hl{m,756,0,3fff9274} 9143
+hl{f,3fff9274,0} 9144
+hl{f,3fff54cc,0} 9145
+hl{m,16,0,3fff54cc} 9146
+hl{m,756,0,3fff9274} 9147
+hl{f,3fff9274,0} 9148
+hl{f,3fff3f1c,0} 9149
+hl{m,16,0,3fff3f1c} 9150
+hl{f,3fff45a4,0} 9151
+hl{m,16,0,3fff45a4} 9152
+hl{f,3fff54cc,0} 9153
+hl{m,16,0,3fff54cc} 9154
+hl{m,756,0,3fff9274} 9155
+hl{f,3fff9274,0} 9156
+hl{f,3fff3f1c,0} 9157
+hl{m,25,0,3fff8b4c} 9158
+hl flush 9158 - remains 12608
+<axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+▒axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl{f,3fff8b4c,0} 9159
+hl{m,48,0,3fff8b4c} 9160
+hl{f,3fff8b4c,0} 9161
+hl{m,1572,0,3fff978c} 9162
+hl{m,24,0,3fff8b4c} 9163
+hl{f,3fff7f44,0} 9164
+hl{f,3fff5674,0} 9165
+hl{m,16,0,3fff3f1c} 9166
+hl{m,756,0,3fff9274} 9167
+hl{f,3fff9274,0} 9168
+hl{f,3fff54cc,0} 9169
+hl{m,16,0,3fff54cc} 9170
+hl{m,20,0,3fff3d7c} 9171
+hl{f,3fff978c,0} 9172
+hl{f,3fff8b4c,0} 9173
+hl{m,54,0,3fff8b4c} 9174
+hl{f,3fff8b4c,0} 9175
+hl{m,54,0,3fff8b4c} 9176
+hl{f,3fff8b4c,0} 9177
+hl{m,25,0,3fff5674} 9178
+hl{f,3fff5674,0} 9179
+hl{m,2,0,3fff7f44} 9180
+hl{m,116,0,3fff8b4c} 9181
+hl{f,3fff7f44,0} 9182
+hl{f,3fff3d7c,0} 9183
+hl{m,3,0,3fff7f44} 9184
+hl{f,3fff7f44,0} 9185
+hl{f,3fff8b4c,0} 9186
+hl{f,3fff3f1c,0} 9187
+hl{m,112,0,3fff8b4c} 9188
+hl{m,16,0,3fff3f1c} 9189
+hl{f,3fff54cc,0} 9190
+hl flush 9190 - remains 12504
+Edns_tmr: dns_check_entries
+
+hl{m,16,0,3fff54cc} 9191
+hl{f,3fff8b4c,0} 9192
+hl{f,3fff54cc,0} 9193
+hl{m,16,0,3fff54cc} 9194
+hl{f,3fff3f1c,0} 9195
+hl{m,16,0,3fff3f1c} 9196
+hl{m,756,0,3fff9274} 9197
+hl{f,3fff9274,0} 9198
+hl{f,3fff54cc,0} 9199
+hl{m,16,0,3fff54cc} 9200
+hl{f,3fff3f1c,0} 9201
+hl{m,16,0,3fff3f1c} 9202
+hl{m,756,0,3fff9274} 9203
+hl{f,3fff9274,0} 9204
+hl{f,3fff3d34,0} 9205
+hl{m,16,0,3fff3d34} 9206
+hl{f,3fff4c64,0} 9207
+hl{m,16,0,3fff4c64} 9208
+hl{f,3fff45a4,0} 9209
+hl{m,16,0,3fff45a4} 9210
+hl{f,3fff54cc,0} 9211
+hl{m,16,0,3fff54cc} 9212
+hl{m,756,0,3fff9274} 9213
+hl{f,3fff9274,0} 9214
+hl{f,3fff3f1c,0} 9215
+hl{m,16,0,3fff3f1c} 9216
+hl{f,3fff54cc,0} 9217
+hl{m,16,0,3fff54cc} 9218
+hl{f,3fff3f1c,0} 9219
+hl{m,16,0,3fff3f1c} 9220
+hl{f,3fff54cc,0} 9221
+hl{m,16,0,3fff54cc} 9222
+hl flush 9222 - remains 11864
+d 6:11:13 Dormitor H:56.20(56.4) T:18.20(18.1 0.0)/24.7 SetPt:23.00 needHeat:1
+▒HEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{m,756,0,3fff9274} 9223
+hl{f,3fff9274,0} 9224
+hl{f,3fff54cc,0} 9225
+hl{m,16,0,3fff54cc} 9226
+hl{f,3fff3f1c,0} 9227
+hl{m,16,0,3fff3f1c} 9228
+hl{f,3fff54cc,0} 9229
+hl{m,16,0,3fff54cc} 9230
+hl{m,756,0,3fff9274} 9231
+hl{f,3fff9274,0} 9232
+hl{f,3fff3f1c,0} 9233
+hl{m,16,0,3fff3f1c} 9234
+hl{m,20,0,3fff3d7c} 9235
+hl{f,3fff3d94,0} 9236
+hl{f,3fff45a4,0} 9237
+hl{m,16,0,3fff45a4} 9238
+hl{f,3fff54cc,0} 9239
+hl{m,16,0,3fff54cc} 9240
+hl{f,3fff3f1c,0} 9241
+hl{m,16,0,3fff3f1c} 9242
+hl{f,3fff54cc,0} 9243
+hl{m,16,0,3fff54cc} 9244
+hl{f,3fff3f1c,0} 9245
+hl{m,16,0,3fff3f1c} 9246
+hl{f,3fff54cc,0} 9247
+hl{m,16,0,3fff54cc} 9248
+hl{f,3fff54cc,0} 9249
+hl{m,16,0,3fff54cc} 9250
+hl{f,3fff3f1c,0} 9251
+hl{m,16,0,3fff3f1c} 9252
+hl{f,3fff54cc,0} 9253
+hl{m,16,0,3fff54cc} 9254
+hl flush 9254 - remains 12648
+dns_tmr: dns_check_entries
+wscli Sending PING
+TcpClient: Malloc 2 bytes in stream
+3
+hl{f,3fff3f1c,0} 9255
+hl{m,16,0,3fff3f1c} 9256
+hl{f,3fff4c64,0} 9257
+hl{m,16,0,3fff4c64} 9258
+hl{f,3fff45a4,0} 9259
+hl{m,16,0,3fff45a4} 9260
+hl{f,3fff54cc,0} 9261
+hl{m,16,0,3fff54cc} 9262
+hl{f,3fff3f1c,0} 9263
+hl{m,16,0,3fff3f1c} 9264
+hl{f,3fff54cc,0} 9265
+hl{m,16,0,3fff54cc} 9266
+hl{f,3fff3f1c,0} 9267
+hl{m,16,0,3fff3f1c} 9268
+hl{f,3fff54cc,0} 9269
+hl{m,16,0,3fff54cc} 9270
+hl{f,3fff54cc,0} 9271
+hl{m,16,0,3fff54cc} 9272
+hl{f,3fff3f1c,0} 9273
+hl{m,16,0,3fff3f1c} 9274
+hl{f,3fff54cc,0} 9275
+hl{m,16,0,3fff54cc} 9276
+hl{f,3fff3f1c,0} 9277
+hl{m,16,0,3fff3f1c} 9278
+hl{m,28,0,3fff5674} 9279
+hl{m,3,0,3fff7f44} 9280
+hl{m,756,0,3fff9274} 9281
+hl{f,3fff9274,0} 9282
+hl{f,3fff45a4,0} 9283
+hl{m,16,0,3fff45a4} 9284
+hl{f,3fff54cc,0} 9285
+hl{m,16,0,3fff54cc} 9286
+hl flush 9286 - remains 12608
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl{f,3fff3f1c,0} 9287
+hl{m,25,0,3fff8b4c} 9288
+hl{f,3fff8b4c,0} 9289
+hl{m,48,0,3fff8b4c} 9290
+hl{f,3fff8b4c,0} 9291
+hl{m,1572,0,3fff978c} 9292
+hl{m,24,0,3fff8b4c} 9293
+hl{f,3fff7f44,0} 9294
+hl{f,3fff5674,0} 9295
+hl{m,16,0,3fff3f1c} 9296
+hl{m,756,0,3fff9274} 9297
+hl{f,3fff9274,0} 9298
+hl{f,3fff54cc,0} 9299
+hl{m,16,0,3fff54cc} 9300
+hl{m,20,0,3fff3d94} 9301
+hl{f,3fff978c,0} 9302
+hl{f,3fff8b4c,0} 9303
+hl{m,54,0,3fff8b4c} 9304
+hl{f,3fff8b4c,0} 9305
+hl{m,54,0,3fff8b4c} 9306
+hl{f,3fff8b4c,0} 9307
+hl{m,25,0,3fff5674} 9308
+hl{f,3fff5674,0} 9309
+hl{m,2,0,3fff7f44} 9310
+hl{m,116,0,3fff8b4c} 9311
+hl{f,3fff7f44,0} 9312
+hl{f,3fff3d94,0} 9313
+hl{m,3,0,3fff7f44} 9314
+hl{f,3fff7f44,0} 9315
+hl{f,3fff8b4c,0} 9316
+hl{f,3fff3f1c,0} 9317
+hl{m,112,0,3fff8b4c} 9318
+hl flush 9318 - remains 12504
+dns_tmr: dns_check_entries
+
+hl{m,16,0,3fff3f1c} 9319
+hl{f,3fff54cc,0} 9320
+hl{m,16,0,3fff54cc} 9321
+hl{f,3fff8b4c,0} 9322
+hl{f,3fff54cc,0} 9323
+hl{m,16,0,3fff54cc} 9324
+hl{f,3fff3f1c,0} 9325
+hl{m,16,0,3fff3f1c} 9326
+hl{m,756,0,3fff9274} 9327
+hl{f,3fff9274,0} 9328
+hl{f,3fff54cc,0} 9329
+hl{m,16,0,3fff54cc} 9330
+hl{f,3fff3f1c,0} 9331
+hl{m,16,0,3fff3f1c} 9332
+hl{m,756,0,3fff9274} 9333
+hl{f,3fff9274,0} 9334
+hl{f,3fff4c64,0} 9335
+hl{m,16,0,3fff4c64} 9336
+hl{f,3fff45a4,0} 9337
+hl{m,16,0,3fff45a4} 9338
+hl{f,3fff54cc,0} 9339
+hl{m,16,0,3fff54cc} 9340
+hl{m,756,0,3fff9274} 9341
+hl{f,3fff9274,0} 9342
+hl{f,3fff3f1c,0} 9343
+hl{m,16,0,3fff3f1c} 9344
+hl{f,3fff54cc,0} 9345
+hl{m,16,0,3fff54cc} 9346
+hl{m,756,0,3fff9274} 9347
+hl{f,3fff9274,0} 9348
+hl{f,3fff3f1c,0} 9349
+hl{m,16,0,3fff3f1c} 9350
+hl flush 9350 - remains 12648
+
+hl{f,3fff54cc,0} 9351
+hl{m,16,0,3fff54cc} 9352
+hl{m,756,0,3fff9274} 9353
+hl{f,3fff9274,0} 9354
+hl{f,3fff54cc,0} 9355
+hl{m,16,0,3fff54cc} 9356
+hl{f,3fff3f1c,0} 9357
+hl{m,16,0,3fff3f1c} 9358
+hl{m,756,0,3fff9274} 9359
+hl{f,3fff9274,0} 9360
+hl{f,3fff54cc,0} 9361
+hl{m,16,0,3fff54cc} 9362
+hl{m,756,0,3fff9274} 9363
+hl{f,3fff9274,0} 9364
+hl{f,3fff3f1c,0} 9365
+hl{m,16,0,3fff3f1c} 9366
+hl{f,3fff45a4,0} 9367
+hl{m,16,0,3fff45a4} 9368
+hl{f,3fff54cc,0} 9369
+hl{m,16,0,3fff54cc} 9370
+hl{m,756,0,3fff9274} 9371
+hl{f,3fff9274,0} 9372
+hl{m,20,0,3fff3d94} 9373
+hl{f,3fff3d64,0} 9374
+hl{f,3fff3f1c,0} 9375
+hl{m,16,0,3fff3f1c} 9376
+hl{m,756,0,3fff9274} 9377
+hl{f,3fff9274,0} 9378
+hl{f,3fff54cc,0} 9379
+hl{m,16,0,3fff54cc} 9380
+hl{f,3fff3f1c,0} 9381
+hl{m,16,0,3fff3f1c} 9382
+hl flush 9382 - remains 12648
+dns_tmr: dns_check_entries
+wscli Sending PING
+LTcpClient: Malloc 2 bytes in stream
+M
+hl{f,3fff54cc,0} 9383
+hl{m,16,0,3fff54cc} 9384
+hl{m,756,0,3fff9274} 9385
+hl{f,3fff9274,0} 9386
+hl{f,3fff54cc,0} 9387
+hl{m,16,0,3fff54cc} 9388
+hl{m,756,0,3fff9274} 9389
+hl{f,3fff9274,0} 9390
+hl{f,3fff3f1c,0} 9391
+hl{m,16,0,3fff3f1c} 9392
+hl{f,3fff54cc,0} 9393
+hl{m,16,0,3fff54cc} 9394
+hl{m,756,0,3fff9274} 9395
+hl{f,3fff9274,0} 9396
+hl{f,3fff3f1c,0} 9397
+hl{m,16,0,3fff3f1c} 9398
+hl{m,756,0,3fff9274} 9399
+hl{f,3fff9274,0} 9400
+hl{f,3fff4c64,0} 9401
+hl{m,16,0,3fff4c64} 9402
+hl{f,3fff45a4,0} 9403
+hl{m,16,0,3fff45a4} 9404
+hl{f,3fff54cc,0} 9405
+hl{m,16,0,3fff54cc} 9406
+hl{m,756,0,3fff9274} 9407
+hl{f,3fff9274,0} 9408
+hl{f,3fff3f1c,0} 9409
+hl{m,16,0,3fff3f1c} 9410
+hl{f,3fff54cc,0} 9411
+hl{m,16,0,3fff54cc} 9412
+hl{m,28,0,3fff5674} 9413
+hl{m,3,0,3fff7f44} 9414
+hl flush 9414 - remains 11824
+Eaxtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@
+hl{m,756,0,3fff9274} 9415
+hl{f,3fff9274,0} 9416
+hl{f,3fff3f1c,0} 9417
+hl{m,16,0,3fff3f1c} 9418
+hl{f,3fff54cc,0} 9419
+hl{m,16,0,3fff54cc} 9420
+hl{f,3fff54cc,0} 9421
+hl{m,16,0,3fff54cc} 9422
+hl{f,3fff3f1c,0} 9423
+hl{m,16,0,3fff3f1c} 9424
+hl{m,756,0,3fff9274} 9425
+hl{f,3fff9274,0} 9426
+hl{f,3fff54cc,0} 9427
+hl{m,16,0,3fff54cc} 9428
+hl{m,756,0,3fff9274} 9429
+hl{f,3fff9274,0} 9430
+hl{f,3fff3f1c,0} 9431
+hl{m,16,0,3fff3f1c} 9432
+hl{f,3fff45a4,0} 9433
+hl{m,16,0,3fff45a4} 9434
+hl{f,3fff54cc,0} 9435
+hl{m,16,0,3fff54cc} 9436
+hl{m,756,0,3fff9274} 9437
+hl{f,3fff9274,0} 9438
+hl{f,3fff3f1c,0} 9439
+hl{m,25,0,3fff8b4c} 9440
+hl{f,3fff8b4c,0} 9441
+hl{m,48,0,3fff8b4c} 9442
+hl{f,3fff8b4c,0} 9443
+hl{m,1572,0,3fff978c} 9444
+hl{m,24,0,3fff8b4c} 9445
+hl{f,3fff7f44,0} 9446
+hl flush 9446 - remains 11040
+▒onReadyToSendData: 2
+▒axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl{f,3fff5674,0} 9447
+hl{m,16,0,3fff3f1c} 9448
+hl{m,756,0,3fff9274} 9449
+hl{f,3fff9274,0} 9450
+hl{f,3fff54cc,0} 9451
+hl{m,16,0,3fff54cc} 9452
+hl{m,20,0,3fff3d64} 9453
+hl{f,3fff978c,0} 9454
+hl{f,3fff8b4c,0} 9455
+hl{m,54,0,3fff8b4c} 9456
+hl{f,3fff8b4c,0} 9457
+hl{m,54,0,3fff8b4c} 9458
+hl{f,3fff8b4c,0} 9459
+hl{m,25,0,3fff5674} 9460
+hl{f,3fff5674,0} 9461
+hl{m,2,0,3fff7f44} 9462
+hl{m,116,0,3fff8b4c} 9463
+hl{f,3fff7f44,0} 9464
+hl{f,3fff3d64,0} 9465
+hl{m,3,0,3fff7f44} 9466
+hl{f,3fff7f44,0} 9467
+hl{f,3fff8b4c,0} 9468
+hl{f,3fff3f1c,0} 9469
+hl{m,112,0,3fff8b4c} 9470
+hl{m,16,0,3fff3f1c} 9471
+hl{f,3fff54cc,0} 9472
+hl{m,16,0,3fff54cc} 9473
+hl{f,3fff8b4c,0} 9474
+hl{f,3fff54cc,0} 9475
+hl{m,16,0,3fff54cc} 9476
+hl{f,3fff3f1c,0} 9477
+hl{m,16,0,3fff3f1c} 9478
+hl flush 9478 - remains 11864
+dns_tmr: dns_check_entries
+
+hl{m,756,0,3fff9274} 9479
+hl{f,3fff9274,0} 9480
+hl{f,3fff54cc,0} 9481
+hl{m,16,0,3fff54cc} 9482
+hl{f,3fff3f1c,0} 9483
+hl{m,16,0,3fff3f1c} 9484
+hl{f,3fff4c64,0} 9485
+hl{m,16,0,3fff4c64} 9486
+hl{f,3fff45a4,0} 9487
+hl{m,16,0,3fff45a4} 9488
+hl{f,3fff54cc,0} 9489
+hl{m,16,0,3fff54cc} 9490
+hl{m,756,0,3fff9274} 9491
+hl{f,3fff9274,0} 9492
+hl{f,3fff3f1c,0} 9493
+hl{m,16,0,3fff3f1c} 9494
+hl{f,3fff54cc,0} 9495
+hl{m,16,0,3fff54cc} 9496
+hl{m,756,0,3fff9274} 9497
+hl{f,3fff9274,0} 9498
+hl{f,3fff3f1c,0} 9499
+hl{m,16,0,3fff3f1c} 9500
+hl{f,3fff54cc,0} 9501
+hl{m,16,0,3fff54cc} 9502
+hl{f,3fff54cc,0} 9503
+hl{m,16,0,3fff54cc} 9504
+hl{m,756,0,3fff9274} 9505
+hl{f,3fff9274,0} 9506
+hl{f,3fff3f1c,0} 9507
+hl{m,16,0,3fff3f1c} 9508
+hl{m,756,0,3fff9274} 9509
+hl{f,3fff9274,0} 9510
+hl flush 9510 - remains 12648
+ 6:11:17 Dormitor H:56.20(56.4) T:18.30(18.1 0.0)/24.7 SetPt:23.00 needHeat:1
+QHEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{f,3fff54cc,0} 9511
+hl{m,16,0,3fff54cc} 9512
+hl{f,3fff3f1c,0} 9513
+hl{m,16,0,3fff3f1c} 9514
+hl{m,756,0,3fff9274} 9515
+hl{f,3fff9274,0} 9516
+hl{f,3fff45a4,0} 9517
+hl{m,16,0,3fff45a4} 9518
+hl{f,3fff54cc,0} 9519
+hl{m,16,0,3fff54cc} 9520
+hl{m,756,0,3fff9274} 9521
+hl{f,3fff9274,0} 9522
+hl{f,3fff3f1c,0} 9523
+hl{m,16,0,3fff3f1c} 9524
+hl{f,3fff54cc,0} 9525
+hl{m,16,0,3fff54cc} 9526
+hl{m,756,0,3fff9274} 9527
+hl{f,3fff9274,0} 9528
+hl{f,3fff3f1c,0} 9529
+hl{m,16,0,3fff3f1c} 9530
+hl{f,3fff54cc,0} 9531
+hl{m,16,0,3fff54cc} 9532
+hl{m,756,0,3fff9274} 9533
+hl{f,3fff9274,0} 9534
+hl{f,3fff54cc,0} 9535
+hl{m,16,0,3fff54cc} 9536
+hl{f,3fff3f1c,0} 9537
+hl{m,16,0,3fff3f1c} 9538
+hl{m,756,0,3fff9274} 9539
+hl{f,3fff9274,0} 9540
+hl{m,20,0,3fff3d64} 9541
+hl{f,3fff3d7c,0} 9542
+hl flush 9542 - remains 12648
+dns_tmr: dns_check_entries
+
+hl{f,3fff54cc,0} 9543
+hl{m,16,0,3fff54cc} 9544
+hl{f,3fff3f1c,0} 9545
+hl{m,16,0,3fff3f1c} 9546
+hl{f,3fff3d34,0} 9547
+hl{m,16,0,3fff3d34} 9548
+hl{f,3fff4c64,0} 9549
+hl{m,16,0,3fff4c64} 9550
+hl{f,3fff45a4,0} 9551
+hl{m,16,0,3fff45a4} 9552
+hl{f,3fff54cc,0} 9553
+hl{m,16,0,3fff54cc} 9554
+hl{f,3fff3f1c,0} 9555
+hl{m,16,0,3fff3f1c} 9556
+hl{f,3fff54cc,0} 9557
+hl{m,16,0,3fff54cc} 9558
+hl{f,3fff3f1c,0} 9559
+hl{m,16,0,3fff3f1c} 9560
+hl{f,3fff54cc,0} 9561
+hl{m,16,0,3fff54cc} 9562
+hl{f,3fff54cc,0} 9563
+hl{m,16,0,3fff54cc} 9564
+hl{f,3fff3f1c,0} 9565
+hl{m,16,0,3fff3f1c} 9566
+hl{f,3fff54cc,0} 9567
+hl{m,16,0,3fff54cc} 9568
+hl{f,3fff3f1c,0} 9569
+hl{m,16,0,3fff3f1c} 9570
+hl{f,3fff45a4,0} 9571
+hl{m,16,0,3fff45a4} 9572
+hl{f,3fff54cc,0} 9573
+hl{m,16,0,3fff54cc} 9574
+hl flush 9574 - remains 12648
+wscli Sending PING
+TcpClient: Malloc 2 bytes in stream
+Ldns_tmr: dns_check_entries
+
+hl{f,3fff3f1c,0} 9575
+hl{m,16,0,3fff3f1c} 9576
+hl{f,3fff54cc,0} 9577
+hl{m,16,0,3fff54cc} 9578
+hl{f,3fff3f1c,0} 9579
+hl{m,16,0,3fff3f1c} 9580
+hl{f,3fff54cc,0} 9581
+hl{m,16,0,3fff54cc} 9582
+hl{f,3fff54cc,0} 9583
+hl{m,16,0,3fff54cc} 9584
+hl{f,3fff3f1c,0} 9585
+hl{m,16,0,3fff3f1c} 9586
+hl{m,28,0,3fff5674} 9587
+hl{m,3,0,3fff7f44} 9588
+hl{f,3fff54cc,0} 9589
+hl{m,16,0,3fff54cc} 9590
+hl{m,756,0,3fff9274} 9591
+hl{f,3fff9274,0} 9592
+hl{f,3fff3f1c,0} 9593
+hl{m,16,0,3fff3f1c} 9594
+hl{f,3fff4c64,0} 9595
+hl{m,16,0,3fff4c64} 9596
+hl{f,3fff45a4,0} 9597
+hl{m,16,0,3fff45a4} 9598
+hl{f,3fff54cc,0} 9599
+hl{m,16,0,3fff54cc} 9600
+hl{m,756,0,3fff9274} 9601
+hl{f,3fff9274,0} 9602
+hl{f,3fff3f1c,0} 9603
+hl{m,16,0,3fff3f1c} 9604
+hl{f,3fff54cc,0} 9605
+hl{m,16,0,3fff54cc} 9606
+hl flush 9606 - remains 12608
+axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff8b4c left 12576
+
+
+axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12552
+
+
+
+hl{f,3fff3f1c,0} 9607
+hl{m,16,0,3fff3f1c} 9608
+hl{f,3fff54cc,0} 9609
+hl{m,16,0,3fff54cc} 9610
+hl{m,756,0,3fff9274} 9611
+hl{f,3fff9274,0} 9612
+hl{f,3fff54cc,0} 9613
+hl{m,16,0,3fff54cc} 9614
+hl{m,756,0,3fff9274} 9615
+hl{f,3fff9274,0} 9616
+hl{f,3fff3f1c,0} 9617
+hl{m,16,0,3fff3f1c} 9618
+hl{m,756,0,3fff9274} 9619
+hl{f,3fff9274,0} 9620
+hl{f,3fff54cc,0} 9621
+hl{m,16,0,3fff54cc} 9622
+hl{f,3fff3f1c,0} 9623
+hl{m,16,0,3fff3f1c} 9624
+hl{m,756,0,3fff9274} 9625
+hl{f,3fff9274,0} 9626
+hl{f,3fff45a4,0} 9627
+hl{m,16,0,3fff45a4} 9628
+hl{f,3fff54cc,0} 9629
+hl{m,16,0,3fff54cc} 9630
+hl{m,756,0,3fff9274} 9631
+hl{f,3fff9274,0} 9632
+hl{f,3fff3f1c,0} 9633
+hl{m,25,0,3fff8b4c} 9634
+hl{f,3fff8b4c,0} 9635
+hl{m,48,0,3fff8b4c} 9636
+hl{f,3fff8b4c,0} 9637
+hl{m,1572,0,3fff978c} 9638
+hl flush 9638 - remains 11000
+^ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+@onReadyToSendData: 2
+axl_ssl_read: Read bytes: 0
+
+$axtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+0axl_ssl_read: Read bytes: 2
+
+$wscli RX data ▒, size 2 1
+
+wscli Got pong ...
+ionReadyToSendData: 1
+
+hl{m,24,0,3fff8b4c} 9639
+hl{f,3fff7f44,0} 9640
+hl{f,3fff5674,0} 9641
+hl{m,16,0,3fff3f1c} 9642
+hl{m,756,0,3fff9274} 9643
+hl{f,3fff9274,0} 9644
+hl{f,3fff54cc,0} 9645
+hl{m,16,0,3fff54cc} 9646
+hl{m,20,0,3fff3d7c} 9647
+hl{f,3fff978c,0} 9648
+hl{f,3fff8b4c,0} 9649
+hl{m,54,0,3fff8b4c} 9650
+hl{f,3fff8b4c,0} 9651
+hl{m,54,0,3fff8b4c} 9652
+hl{f,3fff8b4c,0} 9653
+hl{m,25,0,3fff5674} 9654
+hl{f,3fff5674,0} 9655
+hl{m,2,0,3fff7f44} 9656
+hl{m,116,0,3fff8b4c} 9657
+hl{f,3fff7f44,0} 9658
+hl{f,3fff3d7c,0} 9659
+hl{m,3,0,3fff7f44} 9660
+hl{f,3fff7f44,0} 9661
+hl{f,3fff8b4c,0} 9662
+hl{f,3fff3f1c,0} 9663
+hl{m,112,0,3fff8b4c} 9664
+hl{m,16,0,3fff3f1c} 9665
+hl{f,3fff54cc,0} 9666
+hl{m,16,0,3fff54cc} 9667
+hl{f,3fff8b4c,0} 9668
+hl{f,3fff54cc,0} 9669
+hl{m,16,0,3fff54cc} 9670
+hl flush 9670 - remains 12648
+dns_tmr: dns_check_entries
+
+hl{f,3fff3f1c,0} 9671
+hl{m,16,0,3fff3f1c} 9672
+hl{m,756,0,3fff9274} 9673
+hl{f,3fff9274,0} 9674
+hl{f,3fff54cc,0} 9675
+hl{m,16,0,3fff54cc} 9676
+hl{m,756,0,3fff9274} 9677
+hl{f,3fff9274,0} 9678
+hl{f,3fff3f1c,0} 9679
+hl{m,16,0,3fff3f1c} 9680
+hl{m,20,0,3fff3d7c} 9681
+hl{f,3fff3d94,0} 9682
+hl{f,3fff4c64,0} 9683
+hl{m,16,0,3fff4c64} 9684
+hl{f,3fff45a4,0} 9685
+hl{m,16,0,3fff45a4} 9686
+hl{f,3fff54cc,0} 9687
+hl{m,16,0,3fff54cc} 9688
+hl{m,756,0,3fff9274} 9689
+hl{f,3fff9274,0} 9690
+hl{f,3fff3f1c,0} 9691
+hl{m,16,0,3fff3f1c} 9692
+hl{f,3fff54cc,0} 9693
+hl{m,16,0,3fff54cc} 9694
+hl{m,756,0,3fff9274} 9695
+hl{f,3fff9274,0} 9696
+hl{f,3fff3f1c,0} 9697
+hl{m,16,0,3fff3f1c} 9698
+hl{f,3fff54cc,0} 9699
+hl{m,16,0,3fff54cc} 9700
+hl{m,756,0,3fff9274} 9701
+hl{f,3fff9274,0} 9702
+hl flush 9702 - remains 12648
+wscli Sending PING
+LTcpClient: Malloc 2 bytes in stream
+
+hl{f,3fff54cc,0} 9703
+hl{m,16,0,3fff54cc} 9704
+hl{f,3fff3f1c,0} 9705
+hl{m,16,0,3fff3f1c} 9706
+hl{m,756,0,3fff9274} 9707
+hl{f,3fff9274,0} 9708
+hl{f,3fff54cc,0} 9709
+hl{m,16,0,3fff54cc} 9710
+hl{m,756,0,3fff9274} 9711
+hl{f,3fff9274,0} 9712
+hl{f,3fff3f1c,0} 9713
+hl{m,16,0,3fff3f1c} 9714
+hl{m,756,0,3fff9274} 9715
+hl{f,3fff9274,0} 9716
+hl{f,3fff45a4,0} 9717
+hl{m,16,0,3fff45a4} 9718
+hl{f,3fff54cc,0} 9719
+hl{m,16,0,3fff54cc} 9720
+hl{f,3fff3f1c,0} 9721
+hl{m,16,0,3fff3f1c} 9722
+hl{f,3fff54cc,0} 9723
+hl{m,16,0,3fff54cc} 9724
+hl{m,28,0,3fff5674} 9725
+hl{m,3,0,3fff7f44} 9726
+hl{m,756,0,3fff9274} 9727
+hl{f,3fff9274,0} 9728
+hl{f,3fff3f1c,0} 9729
+hl{m,16,0,3fff3f1c} 9730
+hl{f,3fff54cc,0} 9731
+hl{m,16,0,3fff54cc} 9732
+hl{m,756,0,3fff9274} 9733
+hl{f,3fff9274,0} 9734
+hl flush 9734 - remains 12608
+wscli:wsCliOnTimerStayConnected() disconnecting
+▒wscli Terminating Websocket connection.
+TcpClient: Malloc 2 bytes in stream
+MStream realloc 2 -> 133
+dns_tmr: dns_check_entries
+
+hl{f,3fff54cc,0} 9735
+hl{m,16,0,3fff54cc} 9736
+hl{f,3fff3f1c,0} 9737
+hl{m,16,0,3fff3f1c} 9738
+hl{m,756,0,3fff9274} 9739
+hl{f,3fff9274,0} 9740
+hl{f,3fff54cc,0} 9741
+hl{m,16,0,3fff54cc} 9742
+hl{m,133,0,3fff8b4c} 9743
+hl{f,3fff7f44,0} 9744
+hl{m,756,0,3fff9274} 9745
+hl{f,3fff9274,0} 9746
+hl{f,3fff3f1c,0} 9747
+hl{m,16,0,3fff3f1c} 9748
+hl{f,3fff4c64,0} 9749
+hl{m,16,0,3fff4c64} 9750
+hl{f,3fff45a4,0} 9751
+hl{m,16,0,3fff45a4} 9752
+hl{f,3fff54cc,0} 9753
+hl{m,16,0,3fff54cc} 9754
+hl{m,756,0,3fff9274} 9755
+hl{f,3fff9274,0} 9756
+hl{f,3fff3f1c,0} 9757
+hl{m,16,0,3fff3f1c} 9758
+hl{f,3fff54cc,0} 9759
+hl{m,16,0,3fff54cc} 9760
+hl{m,756,0,3fff9274} 9761
+hl{f,3fff9274,0} 9762
+hl{f,3fff3f1c,0} 9763
+hl{m,16,0,3fff3f1c} 9764
+hl{f,3fff54cc,0} 9765
+hl{m,16,0,3fff54cc} 9766
+hl flush 9766 - remains 11688
+daxtls-8266/ssl/tls1.c:646 malloc 27 => 3fff8bdc left 12440
+
+
+▒axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8bdc left 12416
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+TcpClient request completed
+▒
+hl{m,756,0,3fff9274} 9767
+hl{f,3fff9274,0} 9768
+hl{f,3fff54cc,0} 9769
+hl{m,16,0,3fff54cc} 9770
+hl{f,3fff3f1c,0} 9771
+hl{m,16,0,3fff3f1c} 9772
+hl{m,756,0,3fff9274} 9773
+hl{f,3fff9274,0} 9774
+hl{f,3fff54cc,0} 9775
+hl{m,16,0,3fff54cc} 9776
+hl{f,3fff3f1c,0} 9777
+hl{m,16,0,3fff3f1c} 9778
+hl{m,756,0,3fff9274} 9779
+hl{f,3fff9274,0} 9780
+hl{f,3fff45a4,0} 9781
+hl{m,16,0,3fff45a4} 9782
+hl{f,3fff54cc,0} 9783
+hl{m,16,0,3fff54cc} 9784
+hl{m,756,0,3fff9274} 9785
+hl{f,3fff9274,0} 9786
+hl{f,3fff3f1c,0} 9787
+hl{m,27,0,3fff8bdc} 9788
+hl{f,3fff8bdc,0} 9789
+hl{m,48,0,3fff8bdc} 9790
+hl{f,3fff8bdc,0} 9791
+hl{m,1572,0,3fff978c} 9792
+hl{m,24,0,3fff8bdc} 9793
+hl{f,3fff8b4c,0} 9794
+hl{f,3fff5674,0} 9795
+hl{m,16,0,3fff3f1c} 9796
+hl{m,756,0,3fff9274} 9797
+hl{f,3fff9274,0} 9798
+hl flush 9798 - remains 11040
+onReadyToSendData: 2
+wscli Websocket Closed Normally.
+wscli:WsCli disc by request
+HSSL: closing ...
+laxtls-8266/ssl/tls1.c:646 malloc 25 => 3fff5674 left 12568
+
+
+axtls-8266/ssl/tls1.c:1091 malloc 48 => 3fff8b4c left 12544
+
+
+ax_port_write: send_raw_packet length 53(53)
+
+Alert:
+▒close notify
+▒
+
+o
+hl{f,3fff54cc,0} 9799
+hl{m,16,0,3fff54cc} 9800
+hl{m,20,0,3fff3d94} 9801
+hl{f,3fff978c,0} 9802
+hl{f,3fff8bdc,0} 9803
+hl{m,25,0,3fff5674} 9804
+hl{f,3fff5674,0} 9805
+hl{m,48,0,3fff8b4c} 9806
+hl{f,3fff8b4c,0} 9807
+hl{m,1572,0,3fff978c} 9808
+hl{m,24,0,3fff5674} 9809
+hl{f,3fff7524,0} 9810
+hl{f,3fff771c,0} 9811
+hl{f,3fff55ec,0} 9812
+hl{f,3fff792c,0} 9813
+hl{f,3fff5634,0} 9814
+hl{f,3fff7914,0} 9815
+hl{f,3fff55d4,0} 9816
+hl{f,3fff7944,0} 9817
+hl{f,3fff7e64,0} 9818
+hl{f,3fff7e8c,0} 9819
+hl{f,3fff7ea4,0} 9820
+hl{f,3fff7e7c,0} 9821
+hl{f,3fff7aac,0} 9822
+hl{f,3fff7a94,0} 9823
+hl{f,3fff7c24,0} 9824
+hl{f,3fff7c0c,0} 9825
+hl{f,3fff7f64,0} 9826
+hl{f,3fff7f4c,0} 9827
+hl{f,3fff9584,0} 9828
+hl{f,3fff7aec,0} 9829
+hl{f,3fff8194,0} 9830
+hl flush 9830 - remains 14728
+
+hl{f,3fff7d2c,0} 9831
+hl{f,3fff808c,0} 9832
+hl{f,3fff8074,0} 9833
+hl{f,3fff7a4c,0} 9834
+hl{f,3fff7abc,0} 9835
+hl{f,3fff57ac,0} 9836
+hl{f,3fff85a4,0} 9837
+hl{f,3fff85e4,0} 9838
+hl{f,3fff7efc,0} 9839
+hl{f,3fff7f2c,0} 9840
+hl{f,3fff7f14,0} 9841
+hl{f,3fff85cc,0} 9842
+hl{f,3fff8614,0} 9843
+hl{f,3fff8b34,0} 9844
+hl{f,3fff877c,0} 9845
+hl{f,3fff8764,0} 9846
+hl{f,3fff88f4,0} 9847
+hl{f,3fff88dc,0} 9848
+hl{f,3fff8c34,0} 9849
+hl{f,3fff8c1c,0} 9850
+hl{f,3fff87d4,0} 9851
+hl{f,3fff87bc,0} 9852
+hl{f,3fff8e64,0} 9853
+hl{f,3fff89fc,0} 9854
+hl{f,3fff8d5c,0} 9855
+hl{f,3fff8d44,0} 9856
+hl{f,3fff8a2c,0} 9857
+hl{f,3fff8a14,0} 9858
+hl{f,3fff871c,0} 9859
+hl{f,3fff878c,0} 9860
+hl{f,3fff7ebc,0} 9861
+hl{f,3fff590c,0} 9862
+hl flush 9862 - remains 25304
+▒TCP connection closing
+Naxl_free: Freeing 1 tcp item
+▒-TCP connection
+gdns_tmr: dns_check_entries
+
+hl{f,3fff3dac,0} 9863
+hl{f,3fff56ec,0} 9864
+hl{f,3fff3d94,0} 9865
+hl{m,20,0,3fff5634} 9866
+hl{m,112,0,3fff9db4} 9867
+hl{f,3fff5634,0} 9868
+hl{f,3fff9db4,0} 9869
+hl{m,20,0,3fff5634} 9870
+hl{f,3fff978c,0} 9871
+hl{f,3fff5674,0} 9872
+hl{f,3fff5634,0} 9873
+hl{f,3fff3f1c,0} 9874
+hl{m,16,0,3fff3f1c} 9875
+hl{f,3fff54cc,0} 9876
+hl{m,16,0,3fff54cc} 9877
+hl{f,3fff54cc,0} 9878
+hl{m,16,0,3fff54cc} 9879
+hl{f,3fff3f1c,0} 9880
+hl{m,16,0,3fff3f1c} 9881
+hl{m,756,0,3fff56ec} 9882
+hl{f,3fff56ec,0} 9883
+hl{f,3fff54cc,0} 9884
+hl{m,16,0,3fff54cc} 9885
+hl{f,3fff3f1c,0} 9886
+hl{m,16,0,3fff3f1c} 9887
+hl{m,756,0,3fff56ec} 9888
+hl{f,3fff56ec,0} 9889
+hl{m,20,0,3fff5634} 9890
+hl{f,3fff5634,0} 9891
+hl{f,3fff5524,0} 9892
+hl{f,3fff4c64,0} 9893
+hl{m,16,0,3fff4c64} 9894
+hl flush 9894 - remains 27328
+ 6:11:22 Dormitor H:56.10(56.3) T:18.30(18.1 0.0)/24.7 SetPt:23.00 needHeat:1
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{f,3fff45a4,0} 9895
+hl{m,16,0,3fff45a4} 9896
+hl{f,3fff54cc,0} 9897
+hl{m,16,0,3fff54cc} 9898
+hl{f,3fff3f1c,0} 9899
+hl{f,3fff54cc,0} 9900
+hl{m,16,0,3fff54cc} 9901
+hl{m,756,0,3fff56ec} 9902
+hl{f,3fff56ec,0} 9903
+hl{f,3fff54cc,0} 9904
+hl{m,16,0,3fff54cc} 9905
+hl{m,756,0,3fff56ec} 9906
+hl{f,3fff56ec,0} 9907
+hl{m,20,0,3fff3f1c} 9908
+hl{f,3fff3d64,0} 9909
+hl{f,3fff54cc,0} 9910
+hl{m,16,0,3fff54cc} 9911
+hl{f,3fff54cc,0} 9912
+hl{m,16,0,3fff54cc} 9913
+hl{f,3fff45a4,0} 9914
+hl{m,16,0,3fff45a4} 9915
+hl{f,3fff54cc,0} 9916
+hl{m,16,0,3fff54cc} 9917
+hl{f,3fff54cc,0} 9918
+hl{m,16,0,3fff54cc} 9919
+hl{f,3fff54cc,0} 9920
+hl{m,16,0,3fff54cc} 9921
+hl{f,3fff54cc,0} 9922
+hl{m,16,0,3fff54cc} 9923
+hl{f,3fff54cc,0} 9924
+hl{m,16,0,3fff54cc} 9925
+hl{f,3fff3d34,0} 9926
+hl flush 9926 - remains 27328
+Edns_tmr: dns_check_entries
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 9142 ackno 1340994038.
+tcp_input: no PCB match found, resetting.
+tcp_rst: seqno 9142 ackno 1340994038.
+
+hl{m,16,0,3fff3d34} 9927
+hl{f,3fff4c64,0} 9928
+hl{m,16,0,3fff4c64} 9929
+hl{f,3fff45a4,0} 9930
+hl{m,16,0,3fff45a4} 9931
+hl{f,3fff54cc,0} 9932
+hl{m,16,0,3fff54cc} 9933
+hl{f,3fff54cc,0} 9934
+hl{m,16,0,3fff54cc} 9935
+hl{f,3fff54cc,0} 9936
+hl{m,16,0,3fff54cc} 9937
+hl{m,756,0,3fff56ec} 9938
+hl{f,3fff56ec,0} 9939
+hl{f,3fff54cc,0} 9940
+hl{m,16,0,3fff54cc} 9941
+hl{m,20,0,3fff3d64} 9942
+hl{m,112,0,3fff5524} 9943
+hl{f,3fff3d64,0} 9944
+hl{m,20,0,3fff3d64} 9945
+hl{m,112,0,3fff559c} 9946
+hl{f,3fff3d64,0} 9947
+hl{f,3fff5524,0} 9948
+hl{f,3fff559c,0} 9949
+hl{f,3fff54cc,0} 9950
+hl{m,16,0,3fff54cc} 9951
+hl{f,3fff45a4,0} 9952
+hl{m,16,0,3fff45a4} 9953
+hl{f,3fff54cc,0} 9954
+hl{m,16,0,3fff54cc} 9955
+hl{m,756,0,3fff56ec} 9956
+hl{f,3fff56ec,0} 9957
+hl{f,3fff54cc,0} 9958
+hl flush 9958 - remains 27328
+dns_tmr: dns_check_entries
+
+hl{m,16,0,3fff54cc} 9959
+hl{m,756,0,3fff56ec} 9960
+hl{f,3fff56ec,0} 9961
+hl{f,3fff54cc,0} 9962
+hl{m,16,0,3fff54cc} 9963
+hl{f,3fff54cc,0} 9964
+hl{m,16,0,3fff54cc} 9965
+hl{m,756,0,3fff56ec} 9966
+hl{f,3fff56ec,0} 9967
+hl{f,3fff54cc,0} 9968
+hl{m,16,0,3fff54cc} 9969
+hl{m,756,0,3fff56ec} 9970
+hl{f,3fff56ec,0} 9971
+hl{f,3fff4c64,0} 9972
+hl{m,16,0,3fff4c64} 9973
+hl{f,3fff45a4,0} 9974
+hl{m,16,0,3fff45a4} 9975
+hl{f,3fff54cc,0} 9976
+hl{m,16,0,3fff54cc} 9977
+hl{m,756,0,3fff56ec} 9978
+hl{f,3fff56ec,0} 9979
+hl{f,3fff54cc,0} 9980
+hl{m,16,0,3fff54cc} 9981
+hl{m,756,0,3fff56ec} 9982
+hl{f,3fff56ec,0} 9983
+hl{f,3fff54cc,0} 9984
+hl{m,16,0,3fff54cc} 9985
+hl{m,756,0,3fff56ec} 9986
+hl{f,3fff56ec,0} 9987
+hl{f,3fff54cc,0} 9988
+hl{m,16,0,3fff54cc} 9989
+hl{m,756,0,3fff56ec} 9990
+hl flush 9990 - remains 27328
+▒dns_tmr: dns_check_entries
+
+hl{f,3fff56ec,0} 9991
+hl{m,756,0,3fff56ec} 9992
+hl{f,3fff56ec,0} 9993
+hl{f,3fff54cc,0} 9994
+hl{m,16,0,3fff54cc} 9995
+hl{m,20,0,3fff3d64} 9996
+hl{f,3fff3d7c,0} 9997
+hl{m,756,0,3fff56ec} 9998
+hl{f,3fff56ec,0} 9999
+hl{f,3fff45a4,0} 10000
+hl{m,16,0,3fff45a4} 10001
+hl{f,3fff54cc,0} 10002
+hl{m,16,0,3fff54cc} 10003
+hl{m,756,0,3fff56ec} 10004
+hl{f,3fff56ec,0} 10005
+hl{f,3fff54cc,0} 10006
+hl{m,16,0,3fff54cc} 10007
+hl{m,756,0,3fff56ec} 10008
+hl{f,3fff56ec,0} 10009
+hl{f,3fff54cc,0} 10010
+hl{m,16,0,3fff54cc} 10011
+hl{m,756,0,3fff56ec} 10012
+hl{f,3fff56ec,0} 10013
+hl{f,3fff54cc,0} 10014
+hl{m,16,0,3fff54cc} 10015
+hl{m,756,0,3fff56ec} 10016
+hl{f,3fff56ec,0} 10017
+hl{f,3fff54cc,0} 10018
+hl{m,16,0,3fff54cc} 10019
+hl{m,756,0,3fff56ec} 10020
+hl{f,3fff56ec,0} 10021
+hl{f,3fff4c64,0} 10022
+hl flush 10022 - remains 27328
+
+hl{m,16,0,3fff4c64} 10023
+hl{f,3fff45a4,0} 10024
+hl{m,16,0,3fff45a4} 10025
+hl{f,3fff54cc,0} 10026
+hl{m,16,0,3fff54cc} 10027
+hl{m,756,0,3fff56ec} 10028
+hl{f,3fff56ec,0} 10029
+hl{f,3fff54cc,0} 10030
+hl{m,16,0,3fff54cc} 10031
+hl{f,3fff54cc,0} 10032
+hl{m,16,0,3fff54cc} 10033
+hl{m,756,0,3fff56ec} 10034
+hl{f,3fff56ec,0} 10035
+hl{f,3fff54cc,0} 10036
+hl{m,16,0,3fff54cc} 10037
+hl{m,756,0,3fff56ec} 10038
+hl{f,3fff56ec,0} 10039
+hl{f,3fff54cc,0} 10040
+hl{m,16,0,3fff54cc} 10041
+hl{m,756,0,3fff56ec} 10042
+hl{f,3fff56ec,0} 10043
+hl{f,3fff45a4,0} 10044
+hl{m,16,0,3fff45a4} 10045
+hl{f,3fff54cc,0} 10046
+hl{m,16,0,3fff54cc} 10047
+hl{m,756,0,3fff56ec} 10048
+hl{f,3fff56ec,0} 10049
+hl{f,3fff54cc,0} 10050
+hl{m,16,0,3fff54cc} 10051
+hl{m,756,0,3fff56ec} 10052
+hl{f,3fff56ec,0} 10053
+hl{f,3fff54cc,0} 10054
+hl flush 10054 - remains 27328
+Edns_tmr: dns_check_entries
+
+hl{m,16,0,3fff54cc} 10055
+hl{m,756,0,3fff56ec} 10056
+hl{f,3fff56ec,0} 10057
+hl{f,3fff54cc,0} 10058
+hl{m,16,0,3fff54cc} 10059
+hl{m,756,0,3fff56ec} 10060
+hl{f,3fff56ec,0} 10061
+hl{f,3fff54cc,0} 10062
+hl{m,16,0,3fff54cc} 10063
+hl{m,756,0,3fff56ec} 10064
+hl{f,3fff56ec,0} 10065
+hl{f,3fff4c64,0} 10066
+hl{m,16,0,3fff4c64} 10067
+hl{f,3fff45a4,0} 10068
+hl{m,16,0,3fff45a4} 10069
+hl{f,3fff54cc,0} 10070
+hl{m,16,0,3fff54cc} 10071
+hl{m,756,0,3fff56ec} 10072
+hl{f,3fff56ec,0} 10073
+hl{f,3fff54cc,0} 10074
+hl{m,16,0,3fff54cc} 10075
+hl{m,756,0,3fff56ec} 10076
+hl{f,3fff56ec,0} 10077
+hl{f,3fff54cc,0} 10078
+hl{m,16,0,3fff54cc} 10079
+hl{m,756,0,3fff56ec} 10080
+hl{f,3fff56ec,0} 10081
+hl{f,3fff54cc,0} 10082
+hl{m,16,0,3fff54cc} 10083
+hl{m,756,0,3fff56ec} 10084
+hl{f,3fff56ec,0} 10085
+hl{f,3fff54cc,0} 10086
+hl flush 10086 - remains 27328
+Edns_tmr: dns_check_entries
+dns_check_entry: "homea.herokuapp.com": flush
+ 6:11:27 Dormitor H:56.10(56.3) T:18.30(18.1 0.0)/24.7 SetPt:23.00 needHeat:1
+rHEATER(1) Force radio send
+:HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+HEATER(1) TX: ON
+ARX timeout
+HEATER(1) TX FAIL:1
+(RX timeout
+HEATER(1) TX FAIL:2
+(RX timeout
+HEATER(1) TX FAIL:3
+(RX timeout
+HEATER(1) TX FAIL:4
+(RX timeout
+HEATER(1) TX FAIL:5
+(TH(0) BROADCAST to 0 clients
+
+:
+hl{m,16,0,3fff54cc} 10087
+hl{m,756,0,3fff56ec} 10088
+hl{f,3fff56ec,0} 10089
+hl{f,3fff45a4,0} 10090
+hl{m,16,0,3fff45a4} 10091
+hl{f,3fff54cc,0} 10092
+hl{m,16,0,3fff54cc} 10093
+hl{m,756,0,3fff56ec} 10094
+hl{f,3fff56ec,0} 10095
+hl{f,3fff54cc,0} 10096
+hl{m,16,0,3fff54cc} 10097
+hl{m,756,0,3fff56ec} 10098
+hl{f,3fff56ec,0} 10099
+hl{f,3fff54cc,0} 10100
+hl{m,16,0,3fff54cc} 10101
+hl{f,3fff54cc,0} 10102
+hl{m,16,0,3fff54cc} 10103
+hl{m,756,0,3fff56ec} 10104
+hl{f,3fff56ec,0} 10105
+hl{f,3fff54cc,0} 10106
+hl{m,16,0,3fff54cc} 10107
+hl{m,756,0,3fff56ec} 10108
+hl{f,3fff56ec,0} 10109
+hl{f,3fff4c64,0} 10110
+hl{m,16,0,3fff4c64} 10111
+hl{f,3fff45a4,0} 10112
+hl{m,16,0,3fff45a4} 10113
+hl{f,3fff54cc,0} 10114
+hl{m,16,0,3fff54cc} 10115
+hl{m,20,0,3fff5634} 10116
+hl{f,3fff3f1c,0} 10117
+hl{m,756,0,3fff56ec} 10118
+hl flush 10118 - remains 27328
+▒dns_tmr: dns_check_entries
+
+hl{f,3fff56ec,0} 10119
+hl{f,3fff54cc,0} 10120
+hl{m,16,0,3fff54cc} 10121
+hl{f,3fff54cc,0} 10122
+hl{m,16,0,3fff54cc} 10123
+hl{f,3fff54cc,0} 10124
+hl{m,16,0,3fff54cc} 10125
+hl{f,3fff54cc,0} 10126
+hl{m,16,0,3fff54cc} 10127
+hl{f,3fff45a4,0} 10128
+hl{m,16,0,3fff45a4} 10129
+hl{f,3fff54cc,0} 10130
+hl{m,16,0,3fff54cc} 10131
+hl{f,3fff54cc,0} 10132
+hl{m,16,0,3fff54cc} 10133
+hl{f,3fff54cc,0} 10134
+hl{m,16,0,3fff54cc} 10135
+hl{f,3fff54cc,0} 10136
+hl{m,16,0,3fff54cc} 10137
+hl{f,3fff54cc,0} 10138
+hl{m,16,0,3fff54cc} 10139
+hl{f,3fff3d34,0} 10140
+hl{m,16,0,3fff3d34} 10141
+hl{f,3fff4c64,0} 10142
+hl{m,16,0,3fff4c64} 10143
+hl{f,3fff45a4,0} 10144
+hl{m,16,0,3fff45a4} 10145
+hl{f,3fff54cc,0} 10146
+hl{m,16,0,3fff54cc} 10147
+hl{f,3fff54cc,0} 10148
+hl{m,16,0,3fff54cc} 10149
+hl{m,756,0,3fff56ec} 10150
+hl flush 10150 - remains 27328
+s
+hl{f,3fff56ec,0} 10151
+hl{f,3fff54cc,0} 10152
+hl{m,16,0,3fff54cc} 10153
+hl{m,756,0,3fff56ec} 10154
+hl{f,3fff56ec,0} 10155
+hl{f,3fff54cc,0} 10156
+hl{m,16,0,3fff54cc} 10157
+hl{m,756,0,3fff56ec} 10158
+hl{f,3fff56ec,0} 10159
+hl{f,3fff54cc,0} 10160
+hl{m,16,0,3fff54cc} 10161
+hl{m,756,0,3fff56ec} 10162
+hl{f,3fff56ec,0} 10163
+hl{f,3fff45a4,0} 10164
+hl{m,16,0,3fff45a4} 10165
+hl{f,3fff54cc,0} 10166
+hl{m,16,0,3fff54cc} 10167
+hl{m,756,0,3fff56ec} 10168
+hl{f,3fff56ec,0} 10169
+hl{f,3fff54cc,0} 10170
+hl{m,16,0,3fff54cc} 10171
+hl{m,756,0,3fff56ec} 10172
+hl{f,3fff56ec,0} 10173
+hl{f,3fff54cc,0} 10174
+hl{m,16,0,3fff54cc} 10175
+hl{m,756,0,3fff56ec} 10176
+hl{f,3fff56ec,0} 10177
+hl{f,3fff54cc,0} 10178
+hl{m,16,0,3fff54cc} 10179
+hl{m,756,0,3fff56ec} 10180
+hl{f,3fff56ec,0} 10181
+hl{f,3fff54cc,0} 10182
+hl flush 10182 - remains 27328
+▒dns_tmr: dns_check_entries
+
+hl{m,16,0,3fff54cc} 10183
+hl{m,756,0,3fff56ec} 10184
+hl{f,3fff56ec,0} 10185
+hl{f,3fff4c64,0} 10186
+hl{m,16,0,3fff4c64} 10187
+hl{f,3fff45a4,0} 10188
+hl{m,16,0,3fff45a4} 10189
+hl{f,3fff54cc,0} 10190
+hl{m,16,0,3fff54cc} 10191
+hl{m,756,0,3fff56ec} 10192
+hl{f,3fff56ec,0} 10193
+hl{f,3fff54cc,0} 10194
+hl{m,16,0,3fff54cc} 10195
+hl{m,756,0,3fff56ec} 10196
+hl{f,3fff56ec,0} 10197
+hl{f,3fff54cc,0} 10198
+hl{m,16,0,3fff54cc} 10199
+hl{m,756,0,3fff56ec} 10200
+hl{f,3fff56ec,0} 10201
+hl{m,20,0,3fff3f1c} 10202
+hl{f,3fff3d64,0} 10203
+hl{f,3fff54cc,0} 10204
+hl{m,16,0,3fff54cc} 10205
+hl{m,756,0,3fff56ec} 10206
+hl{f,3fff56ec,0} 10207
+hl{f,3fff54cc,0} 10208
+hl{m,16,0,3fff54cc} 10209
+hl{m,756,0,3fff56ec} 10210
+hl{f,3fff56ec,0} 10211
+hl{f,3fff45a4,0} 10212
+hl{m,16,0,3fff45a4} 10213
+hl{f,3fff54cc,0} 10214
+hl flush 10214 - remains 27328
+dns_tmr: dns_check_entries
+
+hl{m,16,0,3fff54cc} 10215
+hl{m,756,0,3fff56ec} 10216
+hl{f,3fff56ec,0} 10217
+hl{f,3fff54cc,0} 10218
+hl{m,16,0,3fff54cc} 10219
+hl{m,20,0,3fff5674} 10220
+hl{f,3fff5674,0} 10221
+hl{f,3fff54cc,0} 10222
+hl{m,16,0,3fff54cc} 10223
+hl{f,3fff54cc,0} 10224
+hl{m,16,0,3fff54cc} 10225
+hl{m,756,0,3fff56ec} 10226
+hl{f,3fff56ec,0} 10227
+hl{f,3fff54cc,0} 10228
+hl{m,16,0,3fff54cc} 10229
+hl{m,20,0,3fff5674} 10230
+hl{f,3fff5674,0} 10231
+hl{f,3fff4c64,0} 10232
+hl{m,16,0,3fff4c64} 10233
+hl{f,3fff45a4,0} 10234
+hl{m,16,0,3fff45a4} 10235
+hl{f,3fff54cc,0} 10236
+hl{m,16,0,3fff54cc} 10237
+hl{m,20,0,3fff5674} 10238
+hl{f,3fff5674,0} 10239
+hl{f,3fff54cc,0} 10240
+hl{m,16,0,3fff54cc} 10241
+hl{m,20,0,3fff5674} 10242
+hl{f,3fff5674,0} 10243
+hl{f,3fff54cc,0} 10244
+hl{m,16,0,3fff54cc} 10245
+hl{m,20,0,3fff5674} 10246
+hl flush 10246 - remains 27328
+Edns_tmr: dns_check_entries
+
+hl{f,3fff5674,0} 10247
+hl{f,3fff54cc,0} 10248
+hl{m,16,0,3fff54cc} 10249
+hl{m,20,0,3fff5674} 10250
+hl{f,3fff5674,0} 10251
+hl{f,3fff54cc,0} 10252
+hl{m,16,0,3fff54cc} 10253
+hl{m,20,0,3fff5674} 10254
+hl{f,3fff5674,0} 10255
+hl{f,3fff45a4,0} 10256
+hl{m,16,0,3fff45a4} 10257
+hl{f,3fff54cc,0} 10258
+hl{m,16,0,3fff54cc} 10259
+hl{m,20,0,3fff5674} 10260
+hl{f,3fff5674,0} 10261
+hl{f,3fff54cc,0} 10262
+hl{m,16,0,3fff54cc} 10263
+hl{m,20,0,3fff5674} 10264
+hl{f,3fff5674,0} 10265
+hl{f,3fff54cc,0} 10266
+hl{m,16,0,3fff54cc} 10267
+hl{m,20,0,3fff5674} 10268
+hl{f,3fff5674,0} 10269
+hl{f,3fff54cc,0} 10270
+hl{m,16,0,3fff54cc} 10271
+hl{f,3fff54cc,0} 10272
+hl{m,16,0,3fff54cc} 10273
+hl{m,756,0,3fff56ec} 10274
+hl{f,3fff56ec,0} 10275
+hl{f,3fff4c64,0} 10276
+hl{m,16,0,3fff4c64} 10277
+hl{f,3fff45a4,0} 10278
+hl flush 10278 - remains 27328
++TCP connection
+TCP connect() to: homea.herokuapp.com:443 SSL
+3dns_enqueue: "homea.herokuapp.com": use DNS entry 0
+dns_send: dns_servers[0] "homea.herokuapp.com": request
+DNS lookup in progress...
+
+
+hl{m,16,0,3fff45a4} 10279
+hl{f,3fff54cc,0} 10280
+hl{m,16,0,3fff54cc} 10281
+hl{m,756,0,3fff56ec} 10282
+hl{f,3fff56ec,0} 10283
+hl{m,27,0,3fff5674} 10284
+hl{m,27,0,3fff3d64} 10285
+hl{m,1,0,3fff564c} 10286
+hl{m,1,0,3fff41f4} 10287
+hl{m,1,0,3fff401c} 10288
+hl{m,1,0,3fff54ec} 10289
+hl{m,1,0,3fff51cc} 10290
+hl{f,3fff51cc,0} 10291
+hl{m,1,0,3fff51cc} 10292
+hl{f,3fff564c,0} 10293
+hl{m,1,0,3fff564c} 10294
+hl{m,20,0,3fff3d84} 10295
+hl{f,3fff564c,0} 10296
+hl{f,3fff41f4,0} 10297
+hl{m,1,0,3fff41f4} 10298
+hl{f,3fff401c,0} 10299
+hl{f,3fff3fdc,0} 10300
+hl{f,3fff3e84,0} 10301
+hl{f,3fff54e4,0} 10302
+hl{f,3fff3fd4,0} 10303
+hl{f,3fff3d64,0} 10304
+hl{m,20,0,3fff3e84} 10305
+hl{m,20,0,3fff3d64} 10306
+hl{m,172,0,3fff5524} 10307
+hl{m,120,0,3fff56ec} 10308
+hl{m,8,0,3fff3fd4} 10309
+hl{m,256,0,3fff576c} 10310
+hl flush 10310 - remains 26688
+(wscli Connecting to Server
+wscli enc key string euhdwdK9UO5pjccUftzDsQ==
+eTcpClient: Malloc 4 bytes in stream
+TcpClient: Malloc 1 bytes in stream
+MStream realloc 4 -> 134
+TcpClient: Malloc 11 bytes in stream
+TcpClient: Malloc 21 bytes in stream
+TcpClient: Malloc 20 bytes in stream
+TcpClient: Malloc 17 bytes in stream
+TcpClient: Malloc 6 bytes in stream
+TcpClient: Malloc 19 bytes in stream
+TcpClient: Malloc 2 bytes in stream
+TcpClient: Malloc 19 bytes in stream
+TcpClient: Malloc 24 bytes in stream
+MStream realloc 120 -> 273
+TcpClient: Malloc 2 bytes in stream
+
+hl{f,3fff3d64,0} 10311
+hl{f,3fff3e84,0} 10312
+hl{m,5,0,3fff3e84} 10313
+hl{m,5,0,3fff3d64} 10314
+hl{m,28,0,3fff3d9c} 10315
+hl{m,5,0,3fff3d74} 10316
+hl{f,3fff3d64,0} 10317
+hl{m,2,0,3fff3e94} 10318
+hl{m,134,0,3fff5874} 10319
+hl{f,3fff3d74,0} 10320
+hl{f,3fff3e94,0} 10321
+hl{m,12,0,3fff3d64} 10322
+hl{f,3fff3d64,0} 10323
+hl{m,22,0,3fff3d64} 10324
+hl{f,3fff3d64,0} 10325
+hl{m,21,0,3fff3d64} 10326
+hl{f,3fff3d64,0} 10327
+hl{m,18,0,3fff3d64} 10328
+hl{f,3fff3d64,0} 10329
+hl{m,7,0,3fff3d64} 10330
+hl{f,3fff3d64,0} 10331
+hl{m,20,0,3fff3d64} 10332
+hl{f,3fff3d64,0} 10333
+hl{m,3,0,3fff3e94} 10334
+hl{f,3fff3e94,0} 10335
+hl{m,20,0,3fff3d64} 10336
+hl{f,3fff3d64,0} 10337
+hl{m,25,0,3fff3d64} 10338
+hl{f,3fff598c,0} 10339
+hl{f,3fff3d64,0} 10340
+hl{m,3,0,3fff3e94} 10341
+hl{f,3fff3e94,0} 10342
+hl flush 10342 - remains 26352
+hTcpClient: Malloc 24 bytes in stream
+TcpClient: Malloc 4 bytes in stream
+TcpClient: Malloc 2 bytes in stream
+TcpClient: Malloc 27 bytes in stream
+TcpClient: Malloc 2 bytes in stream
+dns_recv: "homea.herokuapp.com": response = 46.137.168.242
+DNS record found: homea.herokuapp.com = 46.137.168.242
+TcpConnection::connect result:, 0
+staticOnConnected: useSSL: 1, Error: 0
+,SSL: Show debug data ...
+:SSL: Starting connection...
+dSSL: Switching to 160 MHz
+.SSL: handshake start
+ axtls-8266/ssl/tls1.c:552 malloc 184 => 3fff576c left 26472
+
+
+Saxtls-8266/ssl/tls1.c:556 malloc 6864 => 3fff598c left 19600
+
+
+Saxtls-8266/ssl/tls1.c:1673 malloc 316 => 3fff7464 left 19280
+
+
+=axtls-8266/ssl/tls1.c:584 malloc 500 => 3fff75a4 left 18776
+
+
+t
+hl{m,25,0,3fff3d64} 10343
+hl{f,3fff3d64,0} 10344
+hl{m,5,0,3fff3d64} 10345
+hl{f,3fff3d64,0} 10346
+hl{m,3,0,3fff3e94} 10347
+hl{f,3fff3e94,0} 10348
+hl{m,28,0,3fff3d64} 10349
+hl{f,3fff3d64,0} 10350
+hl{m,3,0,3fff3e94} 10351
+hl{f,3fff3e94,0} 10352
+hl{f,3fff3e84,0} 10353
+hl{f,3fff5674,0} 10354
+hl{f,3fff54cc,0} 10355
+hl{m,16,0,3fff3e84} 10356
+hl{m,756,0,3fff598c} 10357
+hl{f,3fff598c,0} 10358
+hl{f,3fff576c,0} 10359
+hl{m,20,0,3fff54cc} 10360
+hl{m,515,0,3fff598c} 10361
+hl{m,116,0,3fff576c} 10362
+hl{m,24,0,3fff5674} 10363
+hl{m,16,0,3fff3d64} 10364
+hl{f,3fff3fd4,0} 10365
+hl{f,3fff54cc,0} 10366
+hl{f,3fff598c,0} 10367
+hl{m,20,0,3fff54cc} 10368
+hl{f,3fff576c,0} 10369
+hl{f,3fff5674,0} 10370
