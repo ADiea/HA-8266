@@ -3,9 +3,9 @@
 
 //provided by linker
 extern char _heap_start;
-
+#ifdef MEMLEAK_DEBUG
 extern uint8_t gHeapOpFlushAfter;
-
+#endif
 //TODO: CHANGE static const char secret[] PROGMEM = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
 //TODO: make PR to remove spiffs_mount(); from appinit/user_main.cpp
 #include "device.h"
@@ -232,9 +232,9 @@ extern void init()
 	SystemClock.setTimeZone(2);
 
 	LOG_I("\nhlog_param:{\"heap_start\":0x%x, \"heap_end\":0x3fffc000}", ((uint32_t)&_heap_start));
-
+#ifdef MEMLEAK_DEBUG
 	gHeapOpFlushAfter = 32;
-
+#endif
 	WifiStation.enable(true);
 	WifiStation.config(WIFI_SSID, WIFI_PWD);
 	WifiAccessPoint.enable(false);
