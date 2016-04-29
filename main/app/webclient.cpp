@@ -134,6 +134,16 @@ void wsConnected(wsMode Mode)
 
 		g_wsCliConnStatus = wsState_new;
 		gTmrStayConnected.initializeUs(TMR_CHECK_CONN, wsCliOnTimerStayConnected).start();
+//debug info
+		SSL* ssl = wsClient.getSsl();
+		if (ssl) {
+			const char *common_name = ssl_get_cert_dn(ssl,SSL_X509_CERT_COMMON_NAME);
+			if (common_name) {
+				LOG_I("Common Name:\t%s\n", common_name);
+			}
+			displayCipher(ssl);
+			//displaySessionId(ssl);
+		}
 	}
 	else
 	{
@@ -148,21 +158,7 @@ void wsMessageReceived(String message)
     LOG_I("wscli:WebSocket message received: %s", message.c_str());
 
 
-    /****/
-    //LOG_I("Got response code: %d", client.getResponseCode());
-    //LOG_I("Got content starting with: %s", client.getResponseString().substring(0, 50).c_str());
-    //LOG_I("Success: %d", success);
 
-	SSL* ssl = wsClient.getSsl();
-	if (ssl) {
-		const char *common_name = ssl_get_cert_dn(ssl,SSL_X509_CERT_COMMON_NAME);
-		if (common_name) {
-			LOG_I("Common Name:\t%s\n", common_name);
-		}
-		displayCipher(ssl);
-		//displaySessionId(ssl);
-	}
-    /******/
 
     message.getBytes((unsigned char*)g_devScrapBuffer, sizeof(g_devScrapBuffer));
 
