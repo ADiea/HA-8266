@@ -10,7 +10,7 @@
 #define PIN_CARD_CK 15	/* Serial Clock */
 #define PIN_CARD_SS 12	/* Slave Select */
 
-uint8_t devSDCard_init(uint8_t operation)
+uint8_t init_DEV_SDCARD(uint8_t operation)
 {
 	uint8_t retVal = DEV_ERR_OK;
 	do

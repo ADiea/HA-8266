@@ -4,6 +4,6 @@
 
 #include "device.h"
 
-uint8_t devMQ135_init(uint8_t operation);
+uint8_t init_DEV_MQ135(uint8_t operation);
 
 #endif /*DRV_MQ135*/

@@ -1,13 +1,11 @@
 #include "device.h"
 
-
-
 bool devicesLoadFromDisk();
 bool deviceReadFromDisk(char* path);
 
 char g_devScrapBuffer[MAXDEVSZ];
 
- Vector<CGenericDevice*> g_activeDevices;
+Vector<CGenericDevice*> g_activeDevices;
 
 unsigned short gDevicesState = 0x0000;
 
@@ -17,34 +15,31 @@ struct devCtl
 	uint8_t (*initFunc)(uint8_t);
 };
 
-devCtl gDevices[] =
-{
-	{DEV_RADIO, devRadio_init},
-	{DEV_SDCARD, devSDCard_init},
-	{DEV_RGB, devRGB_init},
-	{DEV_MQ135, devMQ135_init},
-	{DEV_DHT22, devDHT22_init},
-	{DEV_WIFI, devWiFi_init},
-	{DEV_DSTEMP, devDSTemp_init},
-	{DEV_UART, devUART_init}
-};
+#define enableDev(device, op) \
+		if(DEV_ERR_OK == init_##device (op)) updateDeviceStatus(device, op);
 
-#define NUM_DEVICES (sizeof(gDevices)/sizeof(gDevices[0]))
+void updateDeviceStatus(unsigned short dev, uint8_t op)
+{
+	if(op & DISABLE)
+		gDevicesState &= ~dev;
+	else
+		gDevicesState |= dev;
+}
 
 void initDevices()
 {
-	int retry = 10;
+	int retry = 3;
 
 	enableDev(DEV_UART, ENABLE | CONFIG);
 
 	//setup SDCard and load custom system settings
 	enableDev(DEV_SDCARD, ENABLE | CONFIG);
-	//enableDev(DEV_SDCARD, DISABLE);
 
 	//DHT22 periodically enabled to read data
 	enableDev(DEV_DHT22, ENABLE | CONFIG);
 
-	enableDev(DEV_MQ135, ENABLE | CONFIG);
+	//MQ135 not yet equipped
+	enableDev(DEV_MQ135, DISABLE);
 
 	//RGB periodically enabled to send data
 	enableDev(DEV_RGB, DISABLE);
@@ -52,73 +47,10 @@ void initDevices()
 	//enable and config Radio
 	enableDev(DEV_RADIO, ENABLE | CONFIG);
 
-	//start listening for incoming packets
-	if(Radio)
-		Radio->startListening();
-
 	//setup Wifi
 	enableDev(DEV_WIFI, ENABLE | CONFIG);
 
 	while(!devicesLoadFromDisk() && --retry);
-
-}
-
-
-/*generic local device logic */
-//TODO: test if GPIO pins correspond to HW layout
-void enableDev(unsigned short dev, uint8_t op)
-{
-	uint8_t i = 0;
-	uint8_t retVal;
-	do
-	{
-		if(op & DISABLE)
-		{
-			if(!isDevEnabled(dev))
-			{
-				LOG_I( "DEV %x is DIS\n", dev);
-				break;
-			}
-		}
-		else
-		{
-			if(isDevEnabled(dev))
-			{
-				LOG_I( "DEV %x is ENA\n", dev);
-				break;
-			}
-		}
-
-		for(; i<NUM_DEVICES; i++)
-		{
-			if(dev == gDevices[i].dev)
-			{
-				retVal = gDevices[i].initFunc(op);
-				if(DEV_ERR_OK != retVal)
-				{
-					LOG_E( "DEV %x,%x FAIL: %d\n", dev, op, retVal);
-				}
-				break;
-			}
-		}
-
-		if( NUM_DEVICES == i )
-		{
-			LOG_E( "DEV %x unknown\n", dev);
-			break;
-		}
-
-		//All went well, update gDevicesState
-		if(op & DISABLE)
-		{
-			gDevicesState &= ~dev;
-		}
-		else
-		{
-			gDevicesState |= dev;
-		}
-	}
-	while(0);
 }
 
 bool devicesLoadFromDisk()
@@ -150,7 +82,7 @@ bool devicesLoadFromDisk()
 		}
 		else
 		{
-			LOG_E( "devicesLoadFromDisk: err %d", (int)res);
+			LOG_E( "f_opendir err %d", (int)res);
 		}
 
 		releaseRadio();
@@ -158,7 +90,7 @@ bool devicesLoadFromDisk()
 	}
 	else
 	{
-		LOG_E( "devicesLoadFromDisk: radio busy");
+		LOG_E( "Radio busy");
 	}
 
 	return bRet;
@@ -166,73 +98,46 @@ bool devicesLoadFromDisk()
 
 bool deviceWriteToDisk(CGenericDevice *dev)
 {
-	WDT.alive();
-
-	bool bRet = false;
-	FIL file;
-	FRESULT fRes;
-
-	uint32_t actual, size;
-
-	char fname[128];
-
 	if(!dev )
 		return false;
 
+	bool bRet = false;
+	uint32_t actual, size;
+	char fname[128];
 	unsigned long now = millis();
+
+	WDT.alive();
 
 	if( now - dev->m_LastWriteToDiskTimestamp < MIN_TIME_WRITE_TO_DISK)
 	{
-		LOG_E("devWriteDisk HOLD UPDATE for %d\n", dev->m_ID);
+		LOG_E("HOLD UPDATE for %d\n", dev->m_ID);
 		return false;
 	}
 
 	m_snprintf(fname, sizeof(fname), "DEV_%d", dev->m_ID);
 
-	if(getRadio(1000))
+	do
 	{
-		do
+		size = dev->serialize(g_devScrapBuffer, MAXDEVSZ);
+
+		if(size == MAXDEVSZ)
 		{
-			size = dev->serialize(g_devScrapBuffer, MAXDEVSZ);
+			LOG_E("NOSPACE %d\n", dev->m_ID);
 
-			if(size == MAXDEVSZ)
-			{
-				LOG_E("devWriteDisk NOSPACE %d\n", dev->m_ID);
-				f_close(&file);
-				break;
-			}
-
-			fRes = f_open(&file, fname, FA_WRITE | FA_CREATE_ALWAYS);
-
-			if (fRes != FR_OK)
-			{
-				LOG_E("devWriteDisk err %d", (int)fRes);
-				break;
-			}
-
-			f_write(&file, g_devScrapBuffer, size, &actual);
-
-			if (actual != size)
-			{
-				LOG_E("devWriteDisk written %d of %d bytes\n", actual, size);
-			}
-			else
-			{
-				LOG_E("devWriteDisk SAVED %d\n", dev->m_ID);
-				bRet = true;
-			}
-
-			f_close(&file);
-			dev->m_LastWriteToDiskTimestamp = now;
+			break;
 		}
-		while(0);
 
-		releaseRadio();
+		actual = writeFileFull(fname, g_devScrapBuffer, size);
+
+		if (actual == size)
+		{
+			LOG_E("SAVED %d\n", dev->m_ID);
+			bRet = true;
+		}
+
+		dev->m_LastWriteToDiskTimestamp = now;
 	}
-	else
-	{
-		LOG_E( "devWriteDisk: radio busy");
-	}
+	while(0);
 
 	return bRet;
 }
@@ -241,9 +146,6 @@ bool deviceReadFromDisk(char* path)
 {
 	WDT.alive();
 
-	FIL file;
-	FRESULT fRes;
-	FILINFO fno;
 	uint32_t fActualSize;
 	CGenericDevice *device = NULL;
 
@@ -251,50 +153,12 @@ bool deviceReadFromDisk(char* path)
 	char *devicesString = NULL, *originalDevString = NULL;
 	int devType;
 
-	do{
-		fRes = f_stat(path, &fno);
-		if(fRes != FR_OK)
-		{
-			LOG_E("devReadDisk err %d", (int)fRes);
-			break;
-		}
-
-		if(fno.fsize == 0)
-		{
-			LOG_E("File %s has 0 bytes", path);
-			break;
-		}
-
-		devicesString = new char[fno.fsize + 1];
+	do
+	{
+		fActualSize = readFileFull(path, &devicesString, true);
 		originalDevString = devicesString;
 		if(!devicesString)
-		{
-			LOG_E("devReadDisk no heap");
 			break;
-		}
-
-		LOG_I("Loading dev %s, %d bytes", path, fno.fsize);
-
-		fRes = f_open(&file, path, FA_READ);
-
-		if (fRes != FR_OK)
-		{
-			LOG_E("devReadDisk fopen: %d", (int)fRes);
-			break;
-		}
-
-		f_read(&file, devicesString, fno.fsize, &fActualSize);
-		f_close(&file);
-
-		if(fActualSize != fno.fsize)
-		{
-			LOG_E("devReadDisk only read %d", fActualSize);
-			break;
-		}
-
-		LOG_D("devReadDisk read %d:%s", fActualSize, devicesString);
-
-		devicesString[fActualSize] = 0;
 
 		if(!skipInt((const char**)&devicesString, &devType))
 			break;
@@ -329,12 +193,12 @@ bool deviceReadFromDisk(char* path)
 
 		if(!device)
 		{
-			LOG_E("devReadDisk noheap or unkn");
+			LOG_E("noheap or unkn");
 			break;
 		}
 		else if( !device->deserialize((const char**)&devicesString))
 		{
-			LOG_E("devReadDisk !deserial");
+			LOG_E("!deserial");
 			delete device;
 			device = NULL;
 			break;
@@ -342,13 +206,13 @@ bool deviceReadFromDisk(char* path)
 
 		if(!device->initDevice())
 		{
-			LOG_E("devReadDisk !init");
+			LOG_E("!init");
 		}
 	}
 	while(0);
 
 	if(originalDevString)
-			delete[] originalDevString;
+			delete originalDevString;
 
 	if(device)
 	{
@@ -379,7 +243,7 @@ bool deviceDeleteLog(uint32_t id)
 			fRes = f_open(&file, fname, FA_WRITE | FA_CREATE_ALWAYS);
 			if (fRes != FR_OK)
 			{
-				LOG_E("deviceDeleteLog err %d", (int)fRes);
+				LOG_E("f_open err %d", (int)fRes);
 				break;
 			}
 			bRet = true;
@@ -390,7 +254,7 @@ bool deviceDeleteLog(uint32_t id)
 	}
 	else
 	{
-		LOG_E( "deviceDeleteLog: radio busy");
+		LOG_E( "Radio busy");
 	}
 
 	return bRet;
@@ -421,12 +285,12 @@ bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry, 
 
 			if (fRes != FR_OK)
 			{
-				LOG_E("deviceAppendLog err %d %s", (int)fRes, fname);
+				LOG_E("f_open err %d %s", (int)fRes, fname);
 				break;
 			}
-			else LOG_I("deviceAppendLog fopen %s", fname);
+			else LOG_I("Fopen %s", fname);
 
-			LOG_E("deviceAppendLog ftell %d fsize %d", f_tell(&file), f_size(&file));
+			LOG_E("Ftell %d fsize %d", f_tell(&file), f_size(&file));
 
 			if(f_size(&file) > 0)
 			{
@@ -448,7 +312,7 @@ bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry, 
 				}
 			}
 
-			LOG_E("deviceAppendLog ftell %d ", f_tell(&file));
+			LOG_E("Ftell %d ", f_tell(&file));
 
 			///
 			//f_close(&file);
@@ -459,14 +323,14 @@ bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry, 
 
 			if (actual != size)
 			{
-				LOG_E("deviceAppendLog written %d of %d bytes\n", actual, size);
+				LOG_E("Written %d of %d bytes\n", actual, size);
 			}
 			else
 			{
 				bRet = true;
 			}
 
-			LOG_E("deviceAppendLog ftell %d fsize %d", f_tell(&file), f_size(&file));
+			LOG_E("Ftell %d fsize %d", f_tell(&file), f_size(&file));
 			f_close(&file);
 		}
 		while(0);
@@ -475,7 +339,7 @@ bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry, 
 	}
 	else
 	{
-		LOG_E( "deviceAppendLog: radio busy");
+		LOG_E( "Radio busy");
 	}
 
 	return bRet;
@@ -509,7 +373,7 @@ uint32_t deviceReadLogGetFileOffset(uint32_t id, unsigned long fromTime)
 
 		if (fRes != FR_OK)
 		{
-			LOG_E("deviceReadLogGetFOffset fopen: %d %s", (int)fRes, path);
+			LOG_E("Fopen: %d %s", (int)fRes, path);
 			break;
 		}
 
@@ -526,7 +390,7 @@ uint32_t deviceReadLogGetFileOffset(uint32_t id, unsigned long fromTime)
 
 			path[fActualSize] = 0;
 			bufPtr = path;
-			LOG_I("deviceReadLogGetFileOffset read %d:%s [%d %d]", (int)fActualSize, path, intervalLow, intervalHigh);
+			LOG_I("Read %d:%s [%d %d]", (int)fActualSize, path, intervalLow, intervalHigh);
 
 			foundPipe = false;
 
@@ -552,13 +416,13 @@ uint32_t deviceReadLogGetFileOffset(uint32_t id, unsigned long fromTime)
 					//retOffset = intervalLow;
 					intervalHigh = (intervalHigh - intervalLow)/2  + intervalLow;
 
-					LOG_I("deviceReadLogGetFileOffset %d > %d [%d %d]", token, fromTime, intervalLow, intervalHigh);
+					LOG_I("Token %d > %d [%d %d]", token, fromTime, intervalLow, intervalHigh);
 				}
 				else
 				{
 					retOffset = posPipe;
 					intervalLow = (intervalHigh - intervalLow)/2 + intervalLow;
-					LOG_I("deviceReadLogGetFileOffset %d < %d [%d %d] offset %d", token, fromTime, intervalLow, intervalHigh, retOffset);
+					LOG_I("Token %d < %d [%d %d] offset %d", token, fromTime, intervalLow, intervalHigh, retOffset);
 				}
 			}
 			else
@@ -571,7 +435,7 @@ uint32_t deviceReadLogGetFileOffset(uint32_t id, unsigned long fromTime)
 	}
 	while(0);
 
-	LOG_I("deviceReadLogGetFileOffset end");
+	LOG_I("End");
 	return retOffset;
 }
 ///////////////////
@@ -624,11 +488,11 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 
 			if (fRes != FR_OK)
 			{
-				LOG_E("deviceReadLog fopen: %d %s", (int)fRes, path);
+				LOG_E("Fopen: %d %s", (int)fRes, path);
 				releaseRadio();
 				break;
 			}
-			else LOG_I("deviceReadLog fopen %s Time:%u Decim:%d Entries %d/%d",
+			else LOG_I("Fopen %s Time:%u Decim:%d Entries %d/%d",
 					path, fromTime, decimation, entriesWritten, numEntries);
 
 			fileOpened = true;
@@ -638,7 +502,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 		}
 		else
 		{
-			LOG_E( "deviceReadLog: radio busy(1)");
+			LOG_E( "Radio busy(1)");
 			break;
 		}
 
@@ -670,7 +534,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 		if(printHeader)
 				sizeWritten += m_snprintf(buf + sizeWritten, size - sizeWritten, "%d;", token);
 
-		LOG_I("deviceReadLog start out:%s path:%s i:%d f:%d off:%d offcur:%d", buf, path, paramTotalInt, paramTotalFloat, fOffset, startPtr - path);
+		LOG_I("Start out:%s path:%s i:%d f:%d off:%d offcur:%d", buf, path, paramTotalInt, paramTotalFloat, fOffset, startPtr - path);
 
 		if(printHeader)
 			printHeader = false; //printed header, don't print for the rest
@@ -686,7 +550,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 		}
 		else
 		{
-			LOG_E( "deviceReadLog: radio busy(2)");
+			LOG_E( "Radio busy(2)");
 			break;
 		}
 
@@ -701,13 +565,13 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 			}
 			else
 			{
-				LOG_E( "deviceReadLog: radio busy(2)");
+				LOG_E( "Radio busy(2)");
 				isError = true;
 				break;
 			}
 
 			path[remainingBytes+fActualSize] = 0;
-			LOG_I("deviceReadLog read %d:%s", (int)fActualSize, path);
+			LOG_I("Read %d:%s", (int)fActualSize, path);
 
 			foundSemicolon = false;
 			bufPtr = path + remainingBytes + fActualSize;
@@ -715,7 +579,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 			{
 				if(*bufPtr ==';' )
 				{
-					LOG_I("deviceReadLog last; %s pos %d", bufPtr, bufPtr - path);
+					LOG_I("Last; %s pos %d", bufPtr, bufPtr - path);
 					foundSemicolon = true;
 					savedChar = *(bufPtr + 1);
 					*(bufPtr + 1) = 0;
@@ -764,7 +628,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 								skipCurEntry = true;
 
 							if(!skipCurEntry)
-							LOG_I("deviceReadLog Entry %d(%d) TS %u skip:%d",
+							LOG_I("Entry %d(%d) TS %u skip:%d",
 									entriesWritten, entriesRead, token, skipCurEntry);
 
 							paramNoInt = 0;
@@ -857,7 +721,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 	if(fileOpened)
 		f_close(&file);
 
-	LOG_I("deviceReadLog end");
+	LOG_I("End");
 
 	return sizeWritten;
 }

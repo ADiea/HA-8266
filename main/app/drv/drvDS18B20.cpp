@@ -1,6 +1,6 @@
 #include "drv/drvDS18B20.h"
 
-uint8_t devDSTemp_init(uint8_t operation)
+uint8_t init_DEV_DSTEMP(uint8_t operation)
 {
 	uint8_t retVal = DEV_ERR_OK;
 	do

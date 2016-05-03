@@ -4,6 +4,6 @@
 
 #include "device.h"
 
-uint8_t devWiFi_init(uint8_t operation);
+uint8_t init_DEV_WIFI(uint8_t operation);
 
 #endif /*DRV_WIFI*/

@@ -261,7 +261,12 @@ bool CDeviceTempHumid::deserialize(const char **devicesString)
 				{
 					return false;
 				}
-				m_autoPrograms[j].addElement(programSlot);
+
+				if(k < MAX_PROGRAMS_PER_DAY)
+					m_autoPrograms[j].addElement(programSlot);
+				else
+					LOG_E("TH[%d] ignore prog %d for day %d", m_ID, k, j);
+
 			}
 		}
 	}

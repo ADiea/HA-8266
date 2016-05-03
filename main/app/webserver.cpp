@@ -72,7 +72,7 @@
 		{
 			if(g_sockDataPool[i].isInvalid)
 			{
-				CAbstractPeer *pNewPeer = new CLanPeer(-1);
+				CAbstractPeer *pNewPeer = new CLanPeer(-1, &socket);
 				if(!pNewPeer)
 				{
 					LOG_E( "WS Conn: No heap\n");

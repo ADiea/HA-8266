@@ -42,9 +42,9 @@ bool CDeviceHeater::sendHeaterStatus(byte status)
 				break;
 			}
 		}
-		LOG_I("HEATER(%d) TX FAIL:%d", m_ID, retry + 1);
+		LOG_II("HEATER(%d) TX FAIL #%d", m_ID, retry + 1);
 	}
-	while(retry++ < 4);
+	while(++retry < 4);
 
 	return bRet;
 }

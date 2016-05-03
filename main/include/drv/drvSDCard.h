@@ -3,7 +3,7 @@
 
 #include "device.h"
 
-uint8_t devSDCard_init(uint8_t operation);
+uint8_t init_DEV_SDCARD(uint8_t operation);
 void devSDCard_benchmark();
 
 #endif /*DRV_SDCARD*/

@@ -55,7 +55,7 @@ public:
 class CLanPeer : public CAbstractPeer
 {
 public:
-	CLanPeer(uint32_t _id):CAbstractPeer(ePeerLAN, _id), pSocket(NULL){};
+	CLanPeer(uint32_t _id, WebSocket *ws):CAbstractPeer(ePeerLAN, _id), pSocket(ws){};
 	
 	virtual void onReceiveFromPeer(const char* message);
 	virtual void sendToPeer(const char* msg, uint32_t size);

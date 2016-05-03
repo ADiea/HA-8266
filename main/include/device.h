@@ -42,15 +42,14 @@
 
 #define MAX_FRIENDLY_NAME 64
 
-#define MAXDEVSZ 2048
+#define MAXDEVSZ 1472
 extern char g_devScrapBuffer[MAXDEVSZ];
 
 #define MIN_TIME_WRITE_TO_DISK 5000 //5s
-#define ONE_MINUTE 60000 //5s
+#define ONE_MINUTE 60000
 
 #define isDevEnabled(dev) ((dev) & gDevicesState)
 
-void enableDev(unsigned short, uint8_t op);
 void initDevices();
 
 class CGenericDevice;

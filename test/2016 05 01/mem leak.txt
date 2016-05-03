@@ -1,0 +1,1047 @@
+
+L 148:  1:46:57 Dormitor H:41.00(40.6) T:18.80(18.7 18.6)/25.0 SetPt:20.00 needH                             eat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:47: 2 Dormitor H:41.00(40.6) T:18.80(18.7 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 291: deviceAppendLog fopen L00
+L 293: deviceAppendLog ftell 0 fsize 3137
+L 315: deviceAppendLog ftell 3137 f
+L 333: deviceAppendLog ftell 3161 fsize 3161
+L 186: TH(0) saved to log: |6422;17;18.7;18.6;40.6;c
+L 148:  1:47: 6 Dormitor H:41.10(40.7) T:18.80(18.7 18.6)/25.0 SetPt:20.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:47:11 Dormitor H:41.10(40.7) T:18.80(18.7 18.6)/25.0 SetPt:20.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:47:16 Dormitor H:41.00(40.8) T:18.80(18.7 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:47:21 Dormitor H:41.00(40.8) T:18.80(18.7 18.6)/25.0 SetPt:20.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:47:26 Dormitor H:41.00(40.8) T:18.80(18.7 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:47:30 Dormitor H:40.90(40.9) T:18.80(18.7 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:47:35 Dormitor H:40.80(40.9) T:18.80(18.7 18.6)/25.0 SetPt:20.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L  17: 01.01.1970 01:47:40 Heap: 30832
+L 148:  1:47:40 Dormitor H:40.80(40.9) T:18.80(18.7 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:47:45 Dormitor H:40.60(40.9) T:18.80(18.7 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:47:49 Dormitor H:40.50(40.9) T:18.80(18.7 18.6)/25.0 SetPt:20.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:47:54 Dormitor H:40.30(40.8) T:18.80(18.7 18.6)/25.0 SetPt:20.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:47:59 Dormitor H:40.30(40.8) T:18.80(18.8 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:48: 4 Dormitor H:40.20(40.7) T:18.80(18.8 18.6)/25.0 SetPt:20.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 291: deviceAppendLog fopen L00
+L 293: deviceAppendLog ftell 0 fsize 3161
+L 315: deviceAppendLog ftell 3161 f
+L 333: deviceAppendLog ftell 3185 fsize 3185
+L 186: TH(0) saved to log: |6484;17;18.8;18.6;40.7;cadd 2
+
+aid 2
+
+station: 04:46:65:8b:c3:0a join, AID = 2
+
+
+L 148:  1:48: 9 Dormitor H:40.10(40.7) T:18.80(18.8 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0B
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:48:13 Dormitor H:40.10(40.6) T:18.80(18.8 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutgHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:48:18 Dormitor H:40.30(40.6) T:18.90(18.8 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutgHEATER(1) TX FAIL #1: H
+L 234: RX timeoutgHEATER(1) TX FAIL #2: H
+L 234: RX timeoutgHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:48:23 Dormitor H:40.20(40.5) T:18.80(18.8 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:48:28 Dormitor H:40.30(40.5) T:18.90(18.8 18.6)/25.0 SetPt:20.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:48:32 Dormitor H:40.30(40.4) T:18.90(18.8 18.6)/25.0 SetPt:20.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 148:  1:48:37 Dormitor H:40.60(40.4) T:18.90(18.8 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 0 clients
+T
+L 110: onAccept state: 0 K=0▒
+L  76: Free heap size=30200, K=0
+L  28: +TcpConnection USE 3fff494c 1
+L 334: +TCP connection=
+L  93: timeout updating: 70 -> 902
+L 131: TcpServer onClient: 192.168.1.2
+
+u
+L 110: path=/
+L 136: Host === 192.168.1.1
+L 136: Sec-WebSocket-Key === JkoW7oUmlzgsMNH0SJ6UkA==
+L 136: Sec-WebSocket-Version === 13
+L 136: Upgrade === websocket
+L 146: parsed
+L  57: Request: GET, nodata▒
+L 176: onReadyToSendData: 1
+L 120: response sendHeadere
+L 125: Switched to WebSocket Protocola
+L  93: timeout updating: 90 -> 65535
+L 176: onReadyToSendData: 2L
+L 136: WS 3fff4b84: 19;1;l
+L 160: ********** Lwip Active PCB states:
+
+
+L 163: LWIP_DEBUG: Port 80 | 39017 flg:41 tmr:03ac ESTABLISHED
+
+
+L 167: ********** Lwip Listen PCB states:
+
+r
+L 170: LWIP_DEBUG: Port 80 | 19501 flg:ba tmr:2b802bc LISTEN
+
+
+L 174: ********** Lwip TIME-WAIT PCB states:
+
+0
+L 180: LWIP_DEBUG: none
+
+M
+L  28: Send to peer 0;0;0;0;e
+L  58: websock sentr
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2L
+L 136: WS 3fff4b84: 22;0;0;Dormitor;20.0;15.0;27.0;0;1;0;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;3;17.5;0;0;8;4;18.0;8;4;8;6;18.5;8;6;23;11;0;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;11;l
+L 108: found dev
+M
+L 207: TH device: 0;Dormitor;20.0;15.0;27.0;0;1;0;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;3;17.5;0;0;8;4;18.0;8;4;8;6;18.5;8;6;23;11;0;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;11;
+L 214: TH device ID:0 NAME: Dormitor
+L 111: deserialized
+
+L 134: devWriteDisk SAVED 0
+%
+L  28: Send to peer 0;0;22;11;▒
+L  58: websock sentr
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2L
+L  17: 01.01.1970 01:48:40 Heap: 29168
+L 148:  1:48:42 Dormitor H:40.50(40.4) T:18.90(18.8 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2
+L 148:  1:48:47 Dormitor H:40.50(40.4) T:18.90(18.8 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 136: WS 3fff4b84: 5;1;12;"
+L  58: websock sent?
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2▒
+L 136: WS 3fff4b84: 5;2;13;l
+L  58: websock sent
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2▒
+L 148:  1:48:52 Dormitor H:40.50(40.3) T:18.90(18.8 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 148:  1:48:56 Dormitor H:40.50(40.3) T:18.90(18.8 18.6)/25.0 SetPt:20.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 148:  1:49: 1 Dormitor H:40.40(40.3) T:18.90(18.8 18.6)/25.0 SetPt:20.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 136: WS 3fff4b84: 22;0;0;Dormitor;20.5;15.0;27.0;0;1;0;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;3;17.5;0;0;8;4;18.0;8;4;8;6;18.5;8;6;23;11;0;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;14;l
+L 108: found dev
+
+L 207: TH device: 0;Dormitor;20.5;15.0;27.0;0;1;0;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;3;17.5;0;0;8;4;18.0;8;4;8;6;18.5;8;6;23;11;0;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;14;
+L 214: TH device ID:0 NAME: Dormitor
+L 111: deserialized
+
+L 134: devWriteDisk SAVED 0
+%
+L  28: Send to peer 0;0;22;14;▒
+L  58: websock sentr
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2▒
+L 148:  1:49: 6 Dormitor H:40.40(40.3) T:18.90(18.8 18.6)/25.0 SetPt:20.50 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 291: deviceAppendLog fopen L00
+L 293: deviceAppendLog ftell 0 fsize 3185
+L 315: deviceAppendLog ftell 3185 f
+L 333: deviceAppendLog ftell 3209 fsize 3209
+L 186: TH(0) saved to log: |6546;17;18.8;18.6;40.3;c
+L 176: onReadyToSendData: 2▒
+L 136: WS 3fff4b84: 5;1;15;l
+L  58: websock sent?
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2▒
+L 136: WS 3fff4b84: 5;2;16;l
+L  58: websock sent
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2▒
+L 136: WS 3fff4b84: 22;0;0;Dormitor;20.0;15.0;27.0;0;1;0;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;3;17.5;0;0;8;4;18.0;8;4;8;6;18.5;8;6;23;11;0;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;17;l
+L 108: found dev
+
+L 207: TH device: 0;Dormitor;20.0;15.0;27.0;0;1;0;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;3;17.5;0;0;8;4;18.0;8;4;8;6;18.5;8;6;23;11;0;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;17;
+L 214: TH device ID:0 NAME: Dormitor
+L 111: deserialized
+▒
+L 134: devWriteDisk SAVED 0
+%
+L  28: Send to peer 0;0;22;17;1
+L  58: websock sentr
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 20
+L 148:  1:49:11 Dormitor H:40.40(40.3) T:18.90(18.8 18.6)/25.0 SetPt:20.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 148:  1:49:15 Dormitor H:40.30(40.3) T:18.90(18.8 18.6)/25.0 SetPt:20.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒station: 1c:cb:99:35:48:80 leave, AID = 1
+
+rm 1
+
+
+L 148:  1:49:20 Dormitor H:40.30(40.3) T:18.90(18.8 18.6)/25.0 SetPt:20.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 148:  1:49:25 Dormitor H:40.30(40.3) T:18.90(18.8 18.6)/25.0 SetPt:20.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 136: WS 3fff4b84: 22;0;0;Dormitor;20.5;15.0;27.0;0;1;0;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;3;17.5;0;0;8;4;18.0;8;4;8;6;18.5;8;6;23;11;0;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;18;
+L 108: found dev
+D
+L 207: TH device: 0;Dormitor;20.5;15.0;27.0;0;1;0;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;3;17.5;0;0;8;4;18.0;8;4;8;6;18.5;8;6;23;11;0;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;18;
+L 214: TH device ID:0 NAME: Dormitor
+L 111: deserialized
+
+L 134: devWriteDisk SAVED 0
+%
+L  28: Send to peer 0;0;22;18;▒
+L  58: websock sentr
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2▒
+L 176: onReadyToSendData: 2▒
+L 136: WS 3fff4b84: 5;1;19;l
+L  58: websock sent?
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2▒
+L 136: WS 3fff4b84: 5;2;20;l
+L  58: websock sent
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2▒
+L 148:  1:49:30 Dormitor H:40.30(40.3) T:18.90(18.8 18.6)/25.0 SetPt:20.50 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 148:  1:49:35 Dormitor H:40.30(40.3) T:18.90(18.8 18.6)/25.0 SetPt:20.50 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 136: WS 3fff4b84: 22;0;0;Dormitor;21.0;15.0;27.0;0;1;0;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;3;17.5;0;0;8;4;18.0;8;4;8;6;18.5;8;6;23;11;0;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;21;
+L 108: found dev
+D
+L 207: TH device: 0;Dormitor;21.0;15.0;27.0;0;1;0;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;3;17.5;0;0;8;4;18.0;8;4;8;6;18.5;8;6;23;11;0;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;21;
+L 214: TH device ID:0 NAME: Dormitor
+L 111: deserialized
+
+L 134: devWriteDisk SAVED 0
+%
+L  28: Send to peer 0;0;22;21;▒
+L  58: websock sentr
+L 176: onReadyToSendData: 1
+L 136: WS 3fff4b84: 22;0;0;Dormitor;22.5;15.0;27.0;0;1;0;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;3;17.5;0;0;8;4;18.0;8;4;8;6;18.5;8;6;23;11;0;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;22;▒
+L 108: found dev
+
+L 207: TH device: 0;Dormitor;22.5;15.0;27.0;0;1;0;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;3;17.5;0;0;8;4;18.0;8;4;8;6;18.5;8;6;23;11;0;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;22;
+L 214: TH device ID:0 NAME: Dormitor
+L 111: deserialized
+▒
+L 113: devWriteDisk HOLD UPDATE for 0
+
+L  28: Send to peer 0;0;22;22;▒
+L  58: websock sentr
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2▒
+L 113: devWriteDisk HOLD UPDATE for 0
+?
+L 148:  1:49:39 Dormitor H:40.10(40.3) T:18.90(18.9 18.6)/25.0 SetPt:22.50 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L  17: 01.01.1970 01:49:40 Heap: 27840
+L 176: onReadyToSendData: 2▒
+L 136: WS 3fff4b84: 22;0;0;Dormitor;27.0;15.0;27.0;0;1;0;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;3;17.5;0;0;8;4;18.0;8;4;8;6;18.5;8;6;23;11;0;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;23;l
+L 108: found dev
+
+L 207: TH device: 0;Dormitor;27.0;15.0;27.0;0;1;0;3;22.5;0;0;8;0;19.0;8;0;17;0;23.5;17;0;23;11;1;23.0;0;0;23;11;1;23.0;0;0;23;11;0;3;17.5;0;0;8;4;18.0;8;4;8;6;18.5;8;6;23;11;0;0;0;0;0;0;0.0;0.0;0.0;0.0;0.0;0.0;23;
+L 214: TH device ID:0 NAME: Dormitor
+L 111: deserialized
+
+L 134: devWriteDisk SAVED 0
+%
+L  28: Send to peer 0;0;22;23;▒
+L  58: websock sentr
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2▒
+L 148:  1:49:44 Dormitor H:39.80(40.3) T:18.90(18.9 18.6)/25.0 SetPt:27.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2
+L 136: WS 3fff4b84: 5;1;24;l
+L  58: websock sent?
+L 176: onReadyToSendData: 1
+L 148:  1:49:49 Dormitor H:39.70(40.3) T:18.90(18.9 18.6)/25.0 SetPt:27.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 136: WS 3fff4b84: 5;2;25;l
+L  58: websock sent
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2▒
+L 148:  1:49:54 Dormitor H:39.70(40.2) T:18.90(18.9 18.6)/25.0 SetPt:27.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0B
+L  30: HEATER(1) TX: ONH
+L 234: RX timeout;HEATER(1) TX FAIL #1: H
+L 234: RX timeout;HEATER(1) TX FAIL #2: H
+L 234: RX timeout;HEATER(1) TX FAIL #3: H
+L 234: RX timeout;HEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?add 1
+
+aid 1
+
+station: 1c:cb:99:35:48:80 join, AID = 1
+
+
+L 176: onReadyToSendData: 2▒
+L 148:  1:49:58 Dormitor H:39.80(40.2) T:18.90(18.9 18.6)/25.0 SetPt:27.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+L  30: HEATER(1) TX: ONH
+L 234: RX timeout;HEATER(1) TX FAIL #1: H
+L 234: RX timeout;HEATER(1) TX FAIL #2: H
+L 234: RX timeout;HEATER(1) TX FAIL #3: H
+L 234: RX timeout;HEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?station: 1c:cb:99:35:48:80 join, AID = 1
+
+
+L 176: onReadyToSendData: 2
+L 148:  1:50: 3 Dormitor H:40.00(40.1) T:18.90(18.9 18.7)/25.0 SetPt:27.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0B
+L  30: HEATER(1) TX: ONH
+L 234: RX timeout;HEATER(1) TX FAIL #1: H
+L 234: RX timeout;HEATER(1) TX FAIL #2: H
+L 234: RX timeout;HEATER(1) TX FAIL #3: H
+L 234: RX timeout;HEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 148:  1:50: 8 Dormitor H:39.90(40.1) T:18.90(18.9 18.7)/25.0 SetPt:27.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0B
+L  30: HEATER(1) TX: ONH
+L 234: RX timeout;HEATER(1) TX FAIL #1: H
+L 234: RX timeout;HEATER(1) TX FAIL #2: H
+L 234: RX timeout;HEATER(1) TX FAIL #3: H
+L 234: RX timeout;HEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 291: deviceAppendLog fopen L00
+L 293: deviceAppendLog ftell 0 fsize 3209
+L 315: deviceAppendLog ftell 3209 f
+L 333: deviceAppendLog ftell 3233 fsize 3233
+L 186: TH(0) saved to log: |6608;17;18.9;18.7;40.1;c
+L 136: WS 3fff4b84: 5;1;26;k
+L  58: websock sent?
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2▒
+L 176: onReadyToSendData: 2▒
+L 136: WS 3fff4b84: 5;2;27;l
+L  58: websock sent
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2▒
+L 148:  1:50:13 Dormitor H:39.90(40.1) T:18.80(18.8 18.7)/25.0 SetPt:27.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0B
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 148:  1:50:18 Dormitor H:39.80(40.0) T:18.80(18.8 18.7)/25.0 SetPt:27.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 148:  1:50:22 Dormitor H:39.90(40.0) T:18.80(18.8 18.7)/25.0 SetPt:27.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 148:  1:50:27 Dormitor H:40.10(40.0) T:18.80(18.8 18.7)/25.0 SetPt:27.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 136: WS 3fff4b84: 5;1;28;l
+L  58: websock sent?
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2▒
+L 136: WS 3fff4b84: 5;2;29;l
+L  58: websock sent
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2▒station: 1c:cb:99:35:48:80 leave, AID = 1
+
+rm 1
+
+
+L 148:  1:50:32 Dormitor H:40.20(40.0) T:18.80(18.8 18.7)/25.0 SetPt:27.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 148:  1:50:37 Dormitor H:40.40(40.0) T:18.80(18.8 18.7)/25.0 SetPt:27.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L  17: 01.01.1970 01:50:40 Heap: 26232
+L 148:  1:50:41 Dormitor H:40.40(40.0) T:18.80(18.8 18.7)/25.0 SetPt:27.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 148:  1:50:46 Dormitor H:40.50(40.0) T:18.80(18.8 18.7)/25.0 SetPt:27.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 136: WS 3fff4b84: 5;1;30;
+L  58: websock sent?
+L 176: onReadyToSendData: 1
+L 136: WS 3fff4b84: 5;2;31;
+L  58: websock sent
+L 176: onReadyToSendData: 1
+L 148:  1:50:51 Dormitor H:40.50(40.0) T:18.80(18.8 18.7)/25.0 SetPt:27.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 189: WS remove connection item
+L 201: WS Close?
+L 302: TCP connection closing
+L  34: ~TCP connectionc
+L 110: onAccept state: 0 K=0"
+L  76: Free heap size=19048, K=0
+L  28: +TcpConnection USE 3fff4dbc 1
+L 334: +TCP connection=
+L  93: timeout updating: 70 -> 907
+L 131: TcpServer onClient: 192.168.1.2
+
+u
+L 342: -TCP connection
+L 110: path=/
+L 136: Host === 192.168.1.1
+L 136: Sec-WebSocket-Key === J5gS7OrF87g7ImNfsjdNiQ==
+L 136: Sec-WebSocket-Version === 13
+L 136: Upgrade === websocket
+L 146: parsed
+L  57: Request: GET, nodata▒
+L 176: onReadyToSendData: 1
+L 120: response sendHeadere
+L 125: Switched to WebSocket Protocola
+L  93: timeout updating: 90 -> 65535
+L 176: onReadyToSendData: 2L
+L 136: WS 3fff490c: 19;1;l
+L 160: ********** Lwip Active PCB states:
+
+
+L 163: LWIP_DEBUG: Port 80 | 56206 flg:41 tmr:059f ESTABLISHED
+
+
+L 163: LWIP_DEBUG: Port 80 | 39017 flg:70 tmr:059e FIN_WAIT_1
+
+
+L 167: ********** Lwip Listen PCB states:
+
+r
+L 170: LWIP_DEBUG: Port 80 | 19501 flg:ba tmr:2b802bc LISTEN
+
+
+L 174: ********** Lwip TIME-WAIT PCB states:
+
+0
+L 180: LWIP_DEBUG: none
+
+M
+L  28: Send to peer 0;0;0;0;e
+L  58: websock sentr
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2L
+L 148:  1:50:56 Dormitor H:40.50(40.0) T:18.80(18.8 18.7)/25.0 SetPt:27.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 148:  1:51: 1 Dormitor H:40.40(40.1) T:18.80(18.8 18.7)/25.0 SetPt:27.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 148:  1:51: 5 Dormitor H:40.30(40.1) T:18.80(18.8 18.7)/25.0 SetPt:27.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 176: onReadyToSendData: 2▒
+L 136: WS 3fff490c: 5;1;32;l
+L  58: websock sent?
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 20
+L 136: WS 3fff490c: 5;2;33;l
+L  58: websock sent
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 20
+L 148:  1:51:10 Dormitor H:40.10(40.1) T:18.80(18.8 18.7)/25.0 SetPt:27.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 291: deviceAppendLog fopen L00
+L 293: deviceAppendLog ftell 0 fsize 3233
+L 315: deviceAppendLog ftell 3233 f
+L 333: deviceAppendLog ftell 3257 fsize 3257
+L 186: TH(0) saved to log: |6670;17;18.8;18.7;40.1;c
+L 176: onReadyToSendData: 2▒
+L 148:  1:51:15 Dormitor H:40.00(40.1) T:18.80(18.8 18.7)/25.0 SetPt:27.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 148:  1:51:20 Dormitor H:39.90(40.1) T:18.80(18.8 18.7)/25.0 SetPt:27.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 148:  1:51:24 Dormitor H:39.90(40.1) T:18.70(18.7 18.7)/25.0 SetPt:27.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 136: WS 3fff490c: 5;1;34;
+L  58: websock sent?
+L 176: onReadyToSendData: 1
+L 136: WS 3fff490c: 5;2;35;
+L  58: websock sent
+L 176: onReadyToSendData: 1
+L 148:  1:51:29 Dormitor H:39.80(40.1) T:18.70(18.7 18.7)/25.0 SetPt:27.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 148:  1:51:34 Dormitor H:39.70(40.1) T:18.80(18.7 18.7)/25.0 SetPt:27.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0▒
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L 189: WS remove connection item
+L 201: WS Close?
+L 302: TCP connection closing
+L  34: ~TCP connectionc
+L 110: onAccept state: 0 K=0"
+L  76: Free heap size=7464, K=0▒
+L  28: +TcpConnection USE 3fff799c 1
+L 334: +TCP connection=
+L  93: timeout updating: 70 -> 90M
+L 131: TcpServer onClient: 192.168.1.2
+
+u
+L 110: path=/
+L 136: Host === 192.168.1.1
+L 136: Sec-WebSocket-Key === u5Tz3Bv2cgZxCoUH8oxcbg==
+L 136: Sec-WebSocket-Version === 13
+L 136: Upgrade === websocket
+L 146: parsed
+L  57: Request: GET, nodata▒
+L 176: onReadyToSendData: 1
+L 120: response sendHeadere
+L 125: Switched to WebSocket Protocola
+L  93: timeout updating: 90 -> 65535
+L 176: onReadyToSendData: 2L
+L 136: WS 3fff7a9c: 19;1;l
+L 160: ********** Lwip Active PCB states:
+
+
+L 163: LWIP_DEBUG: Port 80 | 55678 flg:41 tmr:0635 ESTABLISHED
+
+
+L 163: LWIP_DEBUG: Port 80 | 56206 flg:40 tmr:0635 ESTABLISHED
+
+
+L 163: LWIP_DEBUG: Port 80 | 39017 flg:70 tmr:059e FIN_WAIT_1
+
+
+L 167: ********** Lwip Listen PCB states:
+
+r
+L 170: LWIP_DEBUG: Port 80 | 19501 flg:ba tmr:2b802bc LISTEN
+
+
+L 174: ********** Lwip TIME-WAIT PCB states:
+
+0
+L 180: LWIP_DEBUG: none
+
+M
+L  28: Send to peer 0;0;0;0;e
+L  58: websock sentr
+L 176: onReadyToSendData: 1
+L 176: onReadyToSendData: 2L
+L 342: -TCP connection
+L  90: LOW HEAP: 6304
+
+
+L  90: LOW HEAP: 6304
+
+
+L  90: LOW HEAP: 6016
+
+
+L 148:  1:51:39 Dormitor H:39.50(40.1) T:18.70(18.7 18.7)/25.0 SetPt:27.00 needHeat:1
+L 124: HEATER(1) Force radio sendt
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:00
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L  90: LOW HEAP: 4696
+
+
+L 176: onReadyToSendData: 2▒
+L  17: 01.01.1970 01:51:40 Heap: 6280
+L  90: LOW HEAP: 6304
+
+
+L  90: LOW HEAP: 6304
+
+
+L  90: LOW HEAP: 6304
+
+
+L 148:  1:51:44 Dormitor H:39.40(40.0) T:18.80(18.7 18.7)/25.0 SetPt:27.00 needHeat:1?
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:03
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L  90: LOW HEAP: 4696
+
+
+L  90: LOW HEAP: 4696
+
+
+L  90: LOW HEAP: 4696
+
+
+L  90: LOW HEAP: 4696
+
+
+L 148:  1:51:48 Dormitor H:39.40(40.0) T:18.70(18.7 18.7)/25.0 SetPt:27.00 needHeat:1
+L 130: HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:06
+L  30: HEATER(1) TX: ONH
+L 234: RX timeoutHEATER(1) TX FAIL #1: H
+L 234: RX timeoutHEATER(1) TX FAIL #2: H
+L 234: RX timeoutHEATER(1) TX FAIL #3: H
+L 234: RX timeoutHEATER(1) TX FAIL #4: H
+L 168: TH(0) BROADCAST to 1 clients
+T
+L  58: websock sent?
+L  90: LOW HEAP: 3088
+
+
+L 136: WS 3fff7a9c: 5;1;36;
+L  58: websock sent?
+L 176: onReadyToSendData: 1
+L 136: WS 3fff7a9c: 5;2;37;NO HEAP req 1572 have 1440
+L 166:  SAVED▒
+L  36: Reset now䀀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒

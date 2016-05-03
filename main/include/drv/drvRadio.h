@@ -9,7 +9,7 @@
 
 #define RADIO_WAIT_ACK_MS 150
 
-uint8_t devRadio_init(uint8_t operation);
+uint8_t init_DEV_RADIO(uint8_t operation);
 
 uint8_t RadioNextSeqID();
 

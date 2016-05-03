@@ -3,6 +3,7 @@
 #include "util.h"
 #include "webserver.h"
 #include "netpeer.h"
+#include "appMain.h"
 
 bool broadcastDeviceInfo(ConnectedPeerList &clients, CGenericDevice *device,
 						CAbstractPeer* exceptPeer/* = NULL*/)
@@ -21,10 +22,32 @@ bool broadcastDeviceInfo(ConnectedPeerList &clients, CGenericDevice *device,
 	}
 }
 
+void sendWiFiAPListToPeer(CAbstractPeer* peer, BssList& list)
+{
+	size_t sizePkt = m_snprintf(g_devScrapBuffer, sizeof(g_devScrapBuffer),
+						"%d;%d;", cwReportWiFiList, list.count());
+
+	for (int i = 0; i < list.count(); i++)
+	{
+		sizePkt += m_snprintf(g_devScrapBuffer + sizePkt,
+							(uint32_t)(sizeof(g_devScrapBuffer) - sizePkt),
+							"%s;%02x:%02x:%02x:%02x:%02x:%02x;%s;%d;%d;%d;",
+							list[i].ssid.c_str(),
+							list[i].bssid[0], list[i].bssid[1], list[i].bssid[2],
+							list[i].bssid[3], list[i].bssid[4], list[i].bssid[5],
+							list[i].getAuthorizationMethodName(), list[i].channel,
+							list[i].rssi, list[i].hidden ? 1:0);
+	}
+
+	LOG_I("wifi list:%s", g_devScrapBuffer);
+	peer->sendToPeer((const char*)g_devScrapBuffer, sizePkt);
+}
+
 bool reply_cwReplyToCommand(CAbstractPeer& peer, eCommWebErrorCodes err, int lastCmdType = 0, int sequence = 0)
 {
 	int sizePkt = m_snprintf(g_devScrapBuffer, sizeof(g_devScrapBuffer), "%d;%d;%d;%d;", cwReplyToCommand, err, lastCmdType, sequence);
 	peer.sendToPeer((const char*)g_devScrapBuffer, sizePkt);
+	LOG_I( "Sent to peer %s", g_devScrapBuffer);
 }
 
 bool handle_cwErrorHandler(CAbstractPeer& peer, const char **pkt)
@@ -49,7 +72,7 @@ bool handle_cwGetDevicesOfType(CAbstractPeer& peer, const char **pkt)
 
 	if (!skipInt(pkt, &devType))
 	{
-		LOG_E( "handle_cwGetDevicesOfType: Cannot get Pkt Type");
+		LOG_E( "Cannot get Pkt Type");
 	}
 
 	for(; i < g_activeDevices.count(); i++)
@@ -176,7 +199,7 @@ bool handle_cwGetGenericDeviceLogs(CAbstractPeer& peer, const char **pkt)
 		!skipInt(pkt, &numEntries)
 	)
 	{
-		LOG_E( "handle_cwGetGenericDeviceLogs: Invalid pkg");
+		LOG_E( "Invalid pkg");
 	}
 	else
 	{
@@ -198,7 +221,7 @@ bool handle_cwGetGenericDeviceLogs(CAbstractPeer& peer, const char **pkt)
 				}
 				while( numEntries > entriesWritten && SystemClock.now(eTZ_UTC).toUnixTime() > fromTime);
 
-				LOG_I("cwGetGenericDeviceLogs %s", g_devScrapBuffer);
+				//LOG_I("cwGetGenericDeviceLogs %s", g_devScrapBuffer);
 				peer.sendToPeer((const char*)g_devScrapBuffer, sizePkt);
 				break;
 			}
@@ -260,8 +283,7 @@ bool handle_cwSpecialCommand(CAbstractPeer& peer, const char **pkt)
 		switch(debugCommand)
 		{
 		case 0:
-			LOG_I("DBG: RESTART");
-			system_restart();
+			restartSystem();
 			break;
 
 		case 1:
@@ -277,6 +299,50 @@ bool handle_cwSpecialCommand(CAbstractPeer& peer, const char **pkt)
 	reply_cwReplyToCommand(peer, retCode);
 
 }
+
+bool handle_cwStartWiFiScan(CAbstractPeer& peer, const char **pkt)
+{
+	int secTimeout = 0;//, forceScan = 0;
+	eCommWebErrorCodes retCode = cwErrSuccess;
+	do
+	{
+		if(!skipInt(pkt, &secTimeout))
+		{
+			retCode = cwErrInvalidCommandParams;
+			break;
+		}
+		/*if(!skipInt(pkt, &forceScan))
+		{
+			retCode = cwErrInvalidCommandParams;
+			break;
+		}*/
+
+		if(eLoginOK != Login.startWiFiScan(&peer))
+			retCode = cwErrUnknown;
+
+	}while(false);
+	reply_cwReplyToCommand(peer, retCode);
+}
+
+bool handle_cwSetWiFiParams(CAbstractPeer& peer, const char **pkt)
+{
+	int forceScan = 0; //force set new settings even if wifi network already set=> system reboot
+	int op = 0; //set or forget
+	eCommWebErrorCodes retCode = cwErrSuccess;
+	do
+	{
+		if(!skipInt(pkt, &forceScan))
+		{
+			retCode = cwErrInvalidCommandParams;
+			break;
+		}
+
+//...
+
+	}while(false);
+	reply_cwReplyToCommand(peer, retCode);
+}
+
 
 
 bool (*gCWHandlers[cwMaxId])(CAbstractPeer& peer, const char**) =
@@ -315,6 +381,9 @@ bool (*gCWHandlers[cwMaxId])(CAbstractPeer& peer, const char**) =
 
 	handle_cwGetGenericDeviceLogs,
 	handle_cwReplyGenericDeviceLogs,
+	handle_cwStartWiFiScan,
+	handle_cwErrorHandler,
+	handle_cwSetWiFiParams,
 
 };
 
@@ -326,7 +395,7 @@ bool cwReceivePacket(CAbstractPeer& peer, const char* pkt)
 
 	if (!skipInt(&pkt, &pktId))
 	{
-		LOG_E( "cwReceivePacket: Cannot get Pkt ID");
+		LOG_E( "Cannot get Pkt ID");
 	}
 	else
 	{
@@ -334,14 +403,13 @@ bool cwReceivePacket(CAbstractPeer& peer, const char* pkt)
 
 		if(pktId >=  cwMaxId)
 		{
-			LOG_E( "cwReceivePacket: Bad pkt ID rx: %d", pktId);
+			LOG_E( "Bad pkt ID rx: %d", pktId);
 		}
 		else
 		{
 			retVal = gCWHandlers[pktId](peer, &pkt);
 		}
 	}
-
 	return retVal;
 }
 

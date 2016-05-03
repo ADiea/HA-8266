@@ -1,12 +1,11 @@
 #include "drv/drvDHT22.h"
 #include <SmingCore/SmingCore.h>
 
-
 #define SENSOR_PIN 14 //GPIO14
 
 DHT *dht = NULL;
 
-uint8_t devDHT22_init(uint8_t operation)
+uint8_t init_DEV_DHT22(uint8_t operation)
 {
 	uint8_t retVal = DEV_ERR_OK;
 	do
@@ -68,7 +67,6 @@ uint8_t devDHT22_read(TempAndHumidity& dest)
 
 float devDHT22_heatIndex()
 {
-
 	if(dht)
 	{
 		return dht->getHeatIndex();
@@ -82,22 +80,17 @@ float devDHT22_dewPoint()
 	{
 		uint32_t tick1, tick2;
 		tick1 = system_get_time();
-		LOG_I( ",");
-		//Serial.print(dht->getDewPoint(DEW_ACCURATE));
+		LOG_I( ",%.2f", dht->getDewPoint(DEW_ACCURATE));
 		tick2 = system_get_time(); LOG_I( ",%lu", tick2 - tick1);tick1 = system_get_time();
 
-		LOG_I( ",");
-		//Serial.print(dht->getDewPoint(DEW_ACCURATE_FAST));
+		LOG_I( ",%.2f", dht->getDewPoint(DEW_ACCURATE_FAST));
 		tick2 = system_get_time(); LOG_I( ",%lu", tick2 - tick1);tick1 = system_get_time();
 
-		LOG_I( ",");
-		//Serial.print(dht->getDewPoint(DEW_FAST));
+		LOG_I( ",%.2f", dht->getDewPoint(DEW_FAST));
 		tick2 = system_get_time(); LOG_I( ",%lu", tick2 - tick1);tick1 = system_get_time();
 
-		LOG_I( ",");
-		//Serial.print(dht->getDewPoint(DEW_FASTEST));
+		LOG_I( ",%.2f", dht->getDewPoint(DEW_FASTEST));
 		tick2 = system_get_time(); LOG_I( ",%lu", tick2 - tick1);tick1 = system_get_time();
-
 	}
 	return 0;
 }
@@ -107,9 +100,7 @@ float devDHT22_comfortRatio()
 	ComfortState cf;
 	if(dht)
 	{
-		LOG_I( ",");
-		//Serial.print(dht->getComfortRatio(cf));
-		LOG_I( ",");
+		LOG_I( ",%.2f:", dht->getComfortRatio(cf));
 		switch(cf)
 		{
 		case Comfort_OK:

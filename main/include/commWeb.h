@@ -54,6 +54,10 @@ enum eCommWebMsgTypes
 	cwGetGenericDeviceLogs,
 	cwReplyGenericDeviceLogs,
 
+	cwStartWiFiScan,
+	cwReportWiFiList,
+	cwSetWiFiParams,
+
 //	cwGetDevices,
 //	cwReplyDeviceList,
 
@@ -116,5 +120,7 @@ bool cwReceivePacket(CAbstractPeer& peer, const char* pkt);
 
 bool broadcastDeviceInfo(ConnectedPeerList &clients, CGenericDevice *device,
 						CAbstractPeer* exceptPeer = NULL);
+
+void sendWiFiAPListToPeer(CAbstractPeer* peer, BssList& list);
 
 #endif

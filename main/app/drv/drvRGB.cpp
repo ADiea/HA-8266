@@ -8,7 +8,7 @@ tColor COLOR_GREEN = {0, 0x33, 0};
 tColor COLOR_BLUE = {0, 0, 0x33};
 tColor COLOR_OFF = {0, 0, 0};
 
-uint8_t devRGB_init(uint8_t operation)
+uint8_t init_DEV_RGB(uint8_t operation)
 {
 	uint8_t retVal = DEV_ERR_OK;
 	do

@@ -20,7 +20,7 @@ extern tColor COLOR_GREEN;
 extern tColor COLOR_BLUE;
 extern tColor COLOR_OFF;
 
-uint8_t devRGB_init(uint8_t operation);
+uint8_t init_DEV_RGB(uint8_t operation);
 
 void devRGB_setColor(tColor c);
 

@@ -1,6 +1,6 @@
 #include "drv/drvWiFi.h"
 
-uint8_t devWiFi_init(uint8_t operation)
+uint8_t init_DEV_WIFI(uint8_t operation)
 {
 	uint8_t retVal = DEV_ERR_OK;
 	do

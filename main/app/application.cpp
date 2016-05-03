@@ -1,19 +1,4 @@
-#include <user_config.h>
-#include <SmingCore/SmingCore.h>
-
-//provided by linker
-extern char _heap_start;
-#ifdef MEMLEAK_DEBUG
-extern uint8_t gHeapOpFlushAfter;
-#endif
-//TODO: CHANGE static const char secret[] PROGMEM = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
-//TODO: make PR to remove spiffs_mount(); from appinit/user_main.cpp
-#include "device.h"
-#include "commWeb.h"
-#include "webserver.h"
-#include "webclient.h"
-
-//#include
+#include "appMain.h"
 
 /*
  The following 2 defines are present in wifipass.h
@@ -22,36 +7,17 @@ extern uint8_t gHeapOpFlushAfter;
 */
 #include "wifipass.h"
 
-#define ONE_SECOND 1000000
-
-static inline unsigned get_ccount(void)
-{
-	unsigned r;
-	asm volatile ("rsr %0, ccount" : "=r"(r));
-	return r;
-}
-
 static void mainLoop(void);
+
+extern void (*outOfMemoryCb)(size_t);
 
 Timer tmrMainLoop;
 #define LOOP_TIME (1 * ONE_SECOND)
 
-#if DEBUG_BUILD
-	#define HEART_BEAT (60 * ONE_SECOND)
-	Timer tmrHeartBeat;
-
-	static void heartbeat_cb(void)
-	{
-		LOG_I( "%s Heap: %ld",
-				SystemClock.getSystemTimeString().c_str(),
-				system_get_free_heap_size());
-	}
-#endif /*DEBUG_BUILD*/
-
 // Will be called when WiFi station was connected to AP
 void connectOk()
 {
-	LOG_I( "AP CONNECT");
+	LOG_I( "AP connect OK");
 	startWebServers();
 	wsCliStart();
 }
@@ -59,89 +25,46 @@ void connectOk()
 // Will be called when WiFi station timeout was reached
 void connectFail()
 {
-	LOG_E("FAIL CONNECT");
+	LOG_E("AP connect FAIL");
 	WifiStation.waitConnection(connectOk, 10, connectFail); // Repeat and check again
+}
+
+void restartSystem()
+{
+	saveSystemSettings();
+
+	LOG_I("Reset now");
+	((void (*)(void))0x40000080)();
+	system_restart();
 }
 
 void startSystem()
 {
+	uint8_t retryCnt = 3;
 
-#if DEBUG_BUILD
-	tmrHeartBeat.initializeUs(HEART_BEAT, heartbeat_cb).start();
+	do{
+		if(loadSystemSettings())
+			break;
+	}while(--retryCnt);
 
-	#define CASE(x) case x: \
-		LOG_I( #x); \
-		break;
-
-	/*
-	 enum rst_reason {
-REANSON_DEFAULT_RST = 0, // normal startup by power on
-REANSON_WDT_RST = 1, // hardware watch dog reset
-REANSON_EXCEPTION_RST = 2,// exception reset, GPIO status won’t change
-REANSON_SOFT_WDT_RST = 3,// software watch dog reset, GPIO status won’t change
-REANSON_SOFT_RESTART = 4,// software restart ,system_restart , GPIO status won’t change
-REANSON_DEEP_SLEEP_AWAKE = 5, // wake up from deep-sleep
-};
-
-	 */
-
-
-	LOG_I( "Reset: ");
-	rst_info* rstInfo = system_get_rst_info();
-	if(rstInfo)
+	if(!retryCnt)
 	{
-		switch(rstInfo->reason)
-		{
-			CASE(REASON_DEFAULT_RST)
-			CASE(REASON_WDT_RST) 		// hardware watch dog reset
-			CASE(REASON_EXCEPTION_RST)	// exception reset, GPIO status won’t change
-			CASE(REASON_SOFT_WDT_RST)	// software watch dog reset, GPIO status won’t change
-			CASE(REASON_SOFT_RESTART)	// software restart ,system_restart , GPIO status won’t change
-			CASE(REASON_DEEP_SLEEP_AWAKE)
-			default:
-				LOG_I( "UNKNOWN (%d)", rstInfo->reason);
-				break;
-		}
+		LOG_E("Loading default settings");
+		resetSystemSettings(resetSystemSettings());
+		saveSystemSettings();
 	}
 
-	LOG_I( "\nChip id=%ld\r\n", system_get_chip_id());
-	LOG_I( "Flash id=%ld\r\n", spi_flash_get_id());
+	// set timezone hourly difference to UTC
+	//TODO: send from mobile phone
+	SystemClock.setTimeZone(gSysCfg.timeZone);
+	SystemClock.setLastKnownTime(gSysCfg.lastKnownTimeStamp);
 
-	LOG_I( "Mem info:\r\n");
-	system_print_meminfo();
-
-#endif
+	//start main loop
 	tmrMainLoop.initializeUs(LOOP_TIME, mainLoop).start();
 
-	/*Test timings 80Mhz -> tick=12.5ns -> 1us ~ 80 ticks*/
-	/*
-	unsigned tick1;
-	unsigned tick2;
-	unsigned tickdiff, tickdiff2;
-
-	tick1 = get_ccount();
-	tick2 = get_ccount();
-	tickdiff = tick2 - tick1;
-	LOG_I( "Tick diff %lu\r\n", tickdiff);
-
-	tick1 = get_ccount();
-	os_delay_us(1);
-	tick2 = get_ccount();
-	tickdiff2 = tick2 - tick1;
-	LOG_I( "Tick diff 1us %lu corrected %lu\r\n", tickdiff2, tickdiff2 - tickdiff);
-
-	tick1 = system_get_time();
-	os_delay_us(10);
-	tick2 = system_get_time();
-	tickdiff = tick2 - tick1;
-	LOG_I( "Tick diff 10us %lu\r\n", tickdiff);
-	*/
-
-	/*
-	LOG_I("Time,H,T,readTime(us),H_idx_C,DP_Acc,DP_Acc(us),DP_AccFast," \
-			"DP_AccFast(us),DP_Fast,DP_Fast(us),DP_Fastest,DP_Fastest(us)," \
-			"ComfortRatio,ComfortText\n");
-	*/
+#if DEBUG_BUILD
+	debugStart();
+#endif /*DEBUG_BUILD*/
 }
 
 static void mainLoop()
@@ -152,19 +75,24 @@ static void mainLoop()
 	byte len = 0;
 	uint16_t i;
 
+	gSysCfg.lastKnownTimeStamp = RTC.getRtcSeconds();
+
 	/*
 	if(loopCount % 2)
 		devRGB_setColor(COLOR_BLUE);
 	else
 		devRGB_setColor(COLOR_OFF);
-*/
+	 */
 	wsPruneConnections();
 
-	if (system_get_free_heap_size() < 6500 &&
-		gHttpServer.getActiveWebSockets().count() == 0)
+	if (system_get_free_heap_size() < 6500)
 	{
 		LOG_E("LOW HEAP: %d\r\n", system_get_free_heap_size());
-		//system_restart();
+		if( gHttpServer.getActiveWebSockets().count() == 0)
+		{
+			//disconnect all, deinit and restart
+			//restartSystem();
+		}
 	}
 
 	if(Radio && getRadio(5))
@@ -174,7 +102,7 @@ static void mainLoop()
 			Radio->getPacketReceived(&len, pkg);
 			if(len > 0)
 			{
-				LOG_I("ASYNC RX (%d):", len);
+				LOG_II("ASYNC RX (%d):", len);
 
 				for (i = 0; i < len; ++i)
 				{
@@ -190,7 +118,6 @@ static void mainLoop()
 						g_activeDevices[i]->radioPktReceivedFromDevice((char*)pkg, len);
 					}
 				}
-
 			}
 
 		}
@@ -204,41 +131,60 @@ static void mainLoop()
 
 static void initNetwork()
 {
-	LOG_I("initNetwork() OLD: TCP_WND=%d TCP_MAXRTX=%d TCP_SYNMAXRTX=%d",
+	LOG_I("OLD: TCP_WND=%d TCP_MAXRTX=%d TCP_SYNMAXRTX=%d",
 		 TCP_WND, TCP_MAXRTX, TCP_SYNMAXRTX);
 
 	  TCP_WND = (4 * TCP_MSS);
 	  TCP_MAXRTX = 5;
 	  TCP_SYNMAXRTX = 3;
 
-	LOG_I("initNetwork() NEW: TCP_WND=%d TCP_MAXRTX=%d TCP_SYNMAXRTX=%d",
+	LOG_I("NEW: TCP_WND=%d TCP_MAXRTX=%d TCP_SYNMAXRTX=%d",
 			 TCP_WND, TCP_MAXRTX, TCP_SYNMAXRTX);
+}
+
+void systemOutOfHeap(size_t requested)
+{
+	m_printf("NO HEAP req %d have %d", requested, system_get_free_heap_size());
+	restartSystem();
+}
+
+void startSoftAP()
+{
+	LOG_E("WiFi AP not set, switch on SoftAP");
+
+	WifiAccessPoint.config("Casa_1254", "", AUTH_OPEN);
+
+	startWebServers();
 }
 
 
 
 extern void init()
 {
+	outOfMemoryCb = systemOutOfHeap;
+	WDT.enable(false);
+
 	initNetwork();
 
 	initDevices();
 
-	WDT.enable(false);
-
 	startSystem();
 
-	// set timezone hourly difference to UTC
-	//TODO: send from mobile phone & store on disk
-	SystemClock.setTimeZone(2);
+	if(gSysCfg.wifiStationIsConfigured)
+	{
+		WifiAccessPoint.enable(false);
+		WifiStation.enable(true);
+		WifiStation.config(WIFI_SSID, WIFI_PWD);
 
-	LOG_I("\nhlog_param:{\"heap_start\":0x%x, \"heap_end\":0x3fffc000}", ((uint32_t)&_heap_start));
-#ifdef MEMLEAK_DEBUG
-	gHeapOpFlushAfter = 32;
-#endif
-	WifiStation.enable(true);
-	WifiStation.config(WIFI_SSID, WIFI_PWD);
-	WifiAccessPoint.enable(false);
-
-	// Run our method when station was connected to AP
-	WifiStation.waitConnection(connectOk, 30, connectFail);
+		// Run our method when station was connected to AP
+		WifiStation.waitConnection(connectOk, 30, connectFail);
+	}
+	else
+	{
+		// Set system ready callback method
+		System.onReady(startSoftAP);
+		WifiStation.enable(true);
+		WifiAccessPoint.enable(true);
+		WifiAccessPoint.setIP(IPAddress(192, 168, 1, 1));
+	}
 }

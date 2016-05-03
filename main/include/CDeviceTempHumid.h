@@ -11,7 +11,7 @@
 #define FILTER_8M_MOD 127
 #define FILTER_8M_DIV 7
 
-
+#define MAX_PROGRAMS_PER_DAY 10
 
 struct FilterMovingAve
 {

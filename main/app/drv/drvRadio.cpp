@@ -1,6 +1,5 @@
 #include "drv/drvRadio.h"
 
-
 /*(!) Warning on some hardware versions (ESP07, maybe ESP12)
  * 		pins GPIO4 and GPIO5 are swapped !*/
 #define PIN_RADIO_DO 5	/* Master In Slave Out */
@@ -44,6 +43,7 @@ bool getRadio(uint32_t waitMs)
 			//LOG_I("Take RADIO");
 			return true;
 		}
+		WDT.alive();
 	}
 	while (millis() - enterMillis < waitMs) ;
 
@@ -115,32 +115,32 @@ bool RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitMs)
 				gRadioSendFaults = 0;
 				result = err_NoError;
 #if DEBUG_SI4432
-				LOG_I(" SENT! SYNC RX (%d):", *outLen);
+				LOG_II(" SENT! SYNC RX (%d):", *outLen);
 
 				for (byte i = 0; i < *outLen; ++i)
 				{
 					m_printf( "%x ", pkg[i]);
 				}
 
-				LOG_I("\n");
+				LOG_II("\n");
 #endif
 			}
 		}
 		else
 		{
-			LOG_I( "Radio busy\n");
+			LOG_I( "Radio busy");
 			result = err_RadioBusy;
 		}
 	}
 	else
 	{
-		LOG_I( "Radio not init\n");
+		LOG_I( "Radio not init");
 	}
 	
 	return result;
 }
 
-uint8_t devRadio_init(uint8_t operation)
+uint8_t init_DEV_RADIO(uint8_t operation)
 {
 	uint8_t retVal = DEV_ERR_OK;
 	do
@@ -152,10 +152,15 @@ uint8_t devRadio_init(uint8_t operation)
 			//configure device
 			if(operation & CONFIG)
 			{
+				if(pRadioSPI)
+					delete pRadioSPI;
+
 				pRadioSPI = new SPISoft(PIN_RADIO_DO, PIN_RADIO_DI, PIN_RADIO_CK, PIN_RADIO_SS, 0);
 
 				if(pRadioSPI)
 				{
+					if(Radio)
+						delete Radio;
 					Radio = new Si4432(pRadioSPI);
 				}
 
@@ -175,13 +180,18 @@ uint8_t devRadio_init(uint8_t operation)
 				}
 				else
 				{
-					LOG_E("Error not enough heap\n");
+					//LOG_E("No heap %s:%d", __FUNCTION__, __LINE__);
+					break;
 				}
 			}
+
+			Radio->startListening();
 		}
 		else
 		{
 			//deinit GPIO
+			//if(Radio) delete Radio;
+			//if(pRadioSPI) delete pRadioSPI;
 		}
 	}
 	while(0);
