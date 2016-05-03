@@ -148,15 +148,41 @@ void systemOutOfHeap(size_t requested)
 	restartSystem();
 }
 
-void startSoftAP()
+
+
+void scanAPFinished(bool succeeded, BssList list)
+{
+	if (!succeeded)
+	{
+		LOG_E("Failed to scan networks");
+		startAPScan();
+	}
+
+	for (int i = 0; i < list.count(); i++)
+	{
+		LOG_I("\tWiFi: %s, %s, %s", list[i].ssid, list[i].getAuthorizationMethodName(),
+				list[i].hidden ? "(bcast)":"(hidden)");
+	}
+
+	//Login.announceScanCompleted(list);
+	setupAPMode();
+}
+
+void setupAPMode()
 {
 	LOG_E("WiFi AP not set, switch on SoftAP");
-
+	WifiStation.enable(false);
+	WifiAccessPoint.enable(true);
+	
 	WifiAccessPoint.config("Casa_1254", "", AUTH_OPEN);
 
 	startWebServers();
 }
 
+void startAPScan()
+{
+	WifiStation.startScan(scanAPFinished);
+}
 
 
 extern void init()
@@ -169,12 +195,16 @@ extern void init()
 	initDevices();
 
 	startSystem();
+	
+	wifi_station_set_auto_connect(false); //the ESP8266 station will not try to connect to the router automatically when power on until wifi_station_connect is called.
 
 	if(gSysCfg.wifiStationIsConfigured)
 	{
 		WifiAccessPoint.enable(false);
 		WifiStation.enable(true);
-		WifiStation.config(WIFI_SSID, WIFI_PWD);
+		WifiStation.config(gSysCfg.wifiSSID, gSysCfg.wifiPwd);
+		
+		wifi_station_set_reconnect_policy(true); 
 
 		// Run our method when station was connected to AP
 		WifiStation.waitConnection(connectOk, 30, connectFail);
@@ -182,9 +212,16 @@ extern void init()
 	else
 	{
 		// Set system ready callback method
-		System.onReady(startSoftAP);
+		System.onReady(startAPScan);
+		
+		WifiAccessPoint.enable(false);
 		WifiStation.enable(true);
-		WifiAccessPoint.enable(true);
+		
+		wifi_station_set_reconnect_policy(false); 
+
+		WifiStation.disconnect();
+		
+		//WifiAccessPoint.enable(true);
 		WifiAccessPoint.setIP(IPAddress(192, 168, 1, 1));
 	}
 }
