@@ -74,7 +74,7 @@ bool RadioMakePacket(byte *pkgBuffer,
 }
 */
 
-bool RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitMs)
+eRadioError RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitMs)
 {
 	eRadioError result = err_RadioNotInit;
 	

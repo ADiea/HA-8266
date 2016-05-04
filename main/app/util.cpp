@@ -270,7 +270,7 @@ uint32_t writeFileFull(const char* path, char* buf, uint32_t len, bool bForce/* 
 
 			if (actual != len)
 			{
-				LOG_E("written %d of %d bytes\n", actual, len);
+				LOG_E("written %d of %d bytes", actual, len);
 			}
 			f_close(&file);
 		}

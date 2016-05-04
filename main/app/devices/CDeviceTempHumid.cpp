@@ -128,7 +128,7 @@ void CDeviceTempHumid::requestUpdateState()
 
 				m_state.tempSetpoint = m_autoPrograms[newAutopilotDay][newAutopilotIndex].setTemp;
 
-				LOG_I( "TH(%d) CHANGE autopilot idx=%d temp=%f\n", m_ID, m_state.m_autopilotIndex, m_state.tempSetpoint);
+				LOG_I( "TH(%d) CHANGE autopilot idx=%d temp=%f", m_ID, m_state.m_autopilotIndex, m_state.tempSetpoint);
 			}
 
 			if(m_state.tempSetpoint > m_tempThreshold + fTurnOnTemp)
@@ -165,7 +165,7 @@ void CDeviceTempHumid::requestUpdateState()
 				oldState.m_autopilotDay != m_state.m_autopilotDay ||
 				oldState.m_autopilotIndex != m_state.m_autopilotIndex )
 			{
-				LOG_I( "TH(%d) BROADCAST to %d clients\n", m_ID, gHttpServer.getActiveWebSockets().count());
+				LOG_I( "TH(%d) BROADCAST to %d clients", m_ID, gHttpServer.getActiveWebSockets().count());
 				broadcastDeviceInfo(gConnectedPeers, (CGenericDevice*)this);
 			}
 
@@ -189,7 +189,7 @@ void CDeviceTempHumid::requestUpdateState()
 		}
 		else
 		{
-			LOG_E( "DHT22 read FAIL:%d (%d)\n", errValue, (int)devDHT22_getLastError());
+			LOG_E( "DHT22 read FAIL:%d (%d)", errValue, (int)devDHT22_getLastError());
 		}
 	}
 	else //request by radio

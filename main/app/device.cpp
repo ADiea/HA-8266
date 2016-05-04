@@ -110,7 +110,7 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 
 	if( now - dev->m_LastWriteToDiskTimestamp < MIN_TIME_WRITE_TO_DISK)
 	{
-		LOG_E("HOLD UPDATE for %d\n", dev->m_ID);
+		LOG_E("HOLD UPDATE for %d", dev->m_ID);
 		return false;
 	}
 
@@ -122,7 +122,7 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 
 		if(size == MAXDEVSZ)
 		{
-			LOG_E("NOSPACE %d\n", dev->m_ID);
+			LOG_E("NOSPACE %d", dev->m_ID);
 
 			break;
 		}
@@ -131,7 +131,7 @@ bool deviceWriteToDisk(CGenericDevice *dev)
 
 		if (actual == size)
 		{
-			LOG_E("SAVED %d\n", dev->m_ID);
+			LOG_E("SAVED %d", dev->m_ID);
 			bRet = true;
 		}
 
@@ -323,7 +323,7 @@ bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry, 
 
 			if (actual != size)
 			{
-				LOG_E("Written %d of %d bytes\n", actual, size);
+				LOG_E("Written %d of %d bytes", actual, size);
 			}
 			else
 			{

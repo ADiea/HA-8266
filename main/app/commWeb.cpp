@@ -126,10 +126,10 @@ bool handle_cwSetGenericDeviceParams(CAbstractPeer& peer, const char **pkt)
 		{
 			if(devID == g_activeDevices[i]->m_ID)
 			{
-				LOG_I("found dev\n");
+				//LOG_I("found dev");
 				if(g_activeDevices[i]->deserialize(pkt))
 				{
-					LOG_I("deserialized\n");
+					//LOG_I("deserialized");
 					retCode = cwErrSuccess;
 
 					if(!skipInt(pkt, &sequence))

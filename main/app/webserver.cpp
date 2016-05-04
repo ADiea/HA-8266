@@ -15,7 +15,7 @@
 		void dataArrived()
 		{
 			aliveState = ALIVE_OK_STATE;
-			lastDataTime = millis();
+			lastDataTime = (unsigned long)SystemClock.now(eTZ_Local).toUnixTime();
 		}
 
 		bool isAlive(uint32_t timeout)
@@ -27,10 +27,11 @@
 			}
 			else if(aliveState == ALIVE_TEST_STATE)
 			{
-				return false;
+				//LOG_I("sock %x in test phase",(uint32_t)webSock);
+				//return false;
 			}
 
-			if(millis() - lastDataTime > timeout*1000)
+			if((unsigned long)SystemClock.now(eTZ_Local).toUnixTime() - lastDataTime > timeout*1000)
 			{
 				return false;
 			}
@@ -75,7 +76,7 @@
 				CAbstractPeer *pNewPeer = new CLanPeer(-1, &socket);
 				if(!pNewPeer)
 				{
-					LOG_E( "WS Conn: No heap\n");
+					LOG_E( "WS Conn: No heap");
 					return;
 				}
 				
@@ -93,7 +94,7 @@
 
 		if(!freeSlot)
 		{
-			LOG_I( "WS Cannot accept new conn.\n");
+			LOG_I( "WS Cannot accept new conn.");
 		}
 	}
 
@@ -157,9 +158,10 @@
 					{
 						if(!g_sockDataPool[i].isAlive((10*60)/clients.count()))
 						{
-							LOG_I("WS: close inactive connection %x (%d)",
+							LOG_I("WS: close inactive connection %x (%d > %d)",
 									g_sockDataPool[i].webSock,
-									millis() - g_sockDataPool[i].lastDataTime);
+									(unsigned long)SystemClock.now(eTZ_Local).toUnixTime() - g_sockDataPool[i].lastDataTime,
+									(10*60)/clients.count());
 
 							clients[s].close();
 							g_sockDataPool[i].invalidate();

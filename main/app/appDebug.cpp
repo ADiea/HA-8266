@@ -43,7 +43,7 @@ void debugStart()
 	}
 	LOG_I( "Chip id=%ld", system_get_chip_id());
 	LOG_I( "Flash id=%ld", spi_flash_get_id());
-	LOG_I( "Mem info:\r\n");
+	LOG_I( "Mem info:");
 	system_print_meminfo();
 #ifdef MEMLEAK_DEBUG
 	LOG_I("\nhlog_param:{\"heap_start\":0x%x, \"heap_end\":0x3fffc000}", ((uint32_t)&_heap_start));

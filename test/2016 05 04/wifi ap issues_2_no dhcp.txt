@@ -1,0 +1,333 @@
+ReadFileFull sysCfg, 18 bytes   [util:215]
+rtc time init...        [RTC:56]
+Reset: REASON_DEFAULT_RST       [appDebug:33]
+Chip id=10502778        [appDebug:44]
+Flash id=1261768        [appDebug:45]
+Mem info:       [appDebug:46]
+data  : 0x3ffe8000 ~ 0x3ffe8406, len: 1030
+
+rodata: 0x3ffe8408 ~ 0x3ffeb99c, len: 13716
+
+bss   : 0x3ffeb9a0 ~ 0x3fff2be8, len: 29256
+
+heap  : 0x3fff2be8 ~ 0x3fffc000, len: 37912
+
+WiFi is _not_ configured        [application:221]
+Set AP configuration in background      [AccessPoint:72]
+mode : sta(18:fe:34:a0:42:7a) + softAP(1a:fe:34:a0:42:7a)
+
+add if0
+
+add if1
+
+dhcp server start:(ip:192.168.4.1,mask:255.255.255.0,gw:192.168.4.1)
+
+bcn 100
+
+start ap scan   [application:171]
+f r0, AP configuration was updated on system ready event        [AccessPoint:157]
+scandone
+
+WiFi: found 4 networks  [application:183]
+WiFi: Dana, WPA2_PSK, (hidden)  [application:187]
+WiFi: Silvia, WPA2_PSK, (hidden)        [application:187]
+WiFi: Andrei2003, WPA_WPA2_PSK, (hidden)        [application:187]
+WiFi: TP-LINK_B4EB92, WPA2_PSK, (hidden)        [application:187]
+scan completed: 4 found         [Station:306]
+ 0: 0: 3 Dormitor H:45.20(0.0) T:22.50(0.0 0.0)/26.1 SetPt:26.00 needHeat:1    [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+WiFi AP not set, switch on SoftAP       [application:158]
+del if0
+
+mode : softAP(1a:fe:34:a0:42:7a)
+
+'/' registered  [HttpServer:57]
+HTTP server STARTED 0.0.0.0     [webserver:191]
+NTP client STARTED      [webserver:201]
+ 0: 0: 7 Dormitor H:45.20(0.0) T:22.50(0.0 0.0)/26.1 SetPt:26.00 needHeat:1    [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 0:12 Dormitor H:45.30(0.0) T:22.50(0.0 0.0)/26.1 SetPt:26.00 needHeat:1    [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 0:17 Dormitor H:45.30(0.0) T:22.50(0.0 0.0)/26.1 SetPt:26.00 needHeat:1    [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 0:22 Dormitor H:45.30(0.0) T:22.40(0.0 0.0)/26.0 SetPt:26.00 needHeat:1    [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 0:26 Dormitor H:45.40(0.0) T:22.40(0.0 0.0)/26.0 SetPt:26.00 needHeat:1    [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 0:31 Dormitor H:45.40(0.0) T:22.40(0.0 0.0)/26.0 SetPt:26.00 needHeat:1    [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 0:36 Dormitor H:45.40(0.0) T:22.40(0.0 0.0)/26.0 SetPt:26.00 needHeat:1    [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 0:41 Dormitor H:45.40(0.0) T:22.40(0.0 0.0)/26.0 SetPt:26.00 needHeat:1    [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+chg_A3:-180
+
+ 0: 0:45 Dormitor H:45.50(0.0) T:22.40(0.0 0.0)/26.0 SetPt:26.00 needHeat:1    [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 0:50 Dormitor H:45.50(0.0) T:22.40(0.0 0.0)/26.0 SetPt:26.00 needHeat:1    [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 0:55 Dormitor H:45.50(0.0) T:22.40(0.0 0.0)/26.0 SetPt:26.00 needHeat:1    [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+chg_A3:0
+
+01.01.1970 00:01:00 Heap: 32008         [appDebug:17]
+ 0: 1: 0 Dormitor H:45.60(0.0) T:22.40(0.0 0.0)/26.0 SetPt:26.00 needHeat:1    [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+dhcp_coarse_tmr()
+        [lwip_core_dhcp:369]
+ 0: 1: 5 Dormitor H:45.60(0.0) T:22.40(0.0 0.0)/26.0 SetPt:26.00 needHeat:1    [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 1: 9 Dormitor H:45.70(0.0) T:22.30(0.0 0.0)/26.0 SetPt:26.00 needHeat:1    [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+chg_A3:-180
+
+ 0: 1:14 Dormitor H:45.70(45.4) T:22.30(22.4 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 1:19 Dormitor H:45.70(45.4) T:22.30(22.4 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 1:24 Dormitor H:45.70(45.5) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 1:28 Dormitor H:45.70(45.5) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+chg_A3:0
+
+add 1
+
+aid 1
+
+station: 00:21:6b:1d:34:28 join, AID = 1
+
+ 0: 1:33 Dormitor H:45.80(45.5) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+station: 00:21:6b:1d:34:28 leave, AID = 1
+
+rm 1
+
+add 1
+
+aid 1
+
+station: 00:21:6b:1d:34:28 join, AID = 1
+
+ 0: 1:38 Dormitor H:45.80(45.5) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 1:43 Dormitor H:45.80(45.6) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 1:48 Dormitor H:45.80(45.6) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+chg_A3:-180
+
+ 0: 1:52 Dormitor H:45.80(45.6) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 1:57 Dormitor H:45.90(45.6) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+01.01.1970 00:01:59 Heap: 31688         [appDebug:17]
+ 0: 2: 2 Dormitor H:45.90(45.7) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+dhcp_coarse_tmr()
+        [lwip_core_dhcp:369]
+chg_A3:0
+
+ 0: 2: 7 Dormitor H:45.90(45.7) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+station: 00:21:6b:1d:34:28 leave, AID = 1
+
+rm 1
+
+ 0: 2:11 Dormitor H:45.90(45.7) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 2:16 Dormitor H:45.90(45.7) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 2:21 Dormitor H:45.90(45.8) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 2:26 Dormitor H:46.00(45.8) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 2:30 Dormitor H:46.00(45.8) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 2:35 Dormitor H:46.10(45.8) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 2:40 Dormitor H:46.00(45.8) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 2:45 Dormitor H:46.00(45.9) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 2:50 Dormitor H:46.00(45.9) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 2:54 Dormitor H:46.00(45.9) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 2:59 Dormitor H:46.00(45.9) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+01.01.1970 00:03:00 Heap: 31968         [appDebug:17]
+ 0: 3: 4 Dormitor H:46.00(45.9) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+dhcp_coarse_tmr()
+        [lwip_core_dhcp:369]
+ 0: 3: 9 Dormitor H:46.00(45.9) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+chg_A3:-180
+
+ 0: 3:13 Dormitor H:46.00(45.9) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 3:18 Dormitor H:46.00(45.9) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 3:23 Dormitor H:46.00(45.9) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 3:28 Dormitor H:46.00(45.9) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+chg_A3:0
+
+add 1
+
+aid 1
+
+station: 00:21:6b:1d:34:28 join, AID = 1
+
+ 0: 3:33 Dormitor H:46.00(46.0) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 3:37 Dormitor H:46.00(46.0) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 3:42 Dormitor H:46.00(46.0) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 3:47 Dormitor H:46.00(46.0) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 3:52 Dormitor H:46.00(46.0) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 3:56 Dormitor H:46.00(46.0) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+01.01.1970 00:04:00 Heap: 31688         [appDebug:17]
+ 0: 4: 1 Dormitor H:46.00(46.0) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 4: 6 Dormitor H:46.00(46.0) T:22.30(22.3 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) Force radio send      [devices_CDeviceHeater:124]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+dhcp_coarse_tmr()
+        [lwip_core_dhcp:369]
+ 0: 4:11 Dormitor H:45.90(45.9) T:22.20(22.2 0.0)/25.9 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+ 0: 4:15 Dormitor H:45.90(45.9) T:22.30(22.2 0.0)/26.0 SetPt:26.00 needHeat:1  [devices_CDeviceTempHumid:148]
+HEATER(1) trigState send:1 reqHeat:1 isSync:0 state:0   [devices_CDeviceHeater:130]
+HEATER(1) TX: ON        [devices_CDeviceHeater:30]
+TH(0) BROADCAST to 0 clients    [devices_CDeviceTempHumid:168]
+s

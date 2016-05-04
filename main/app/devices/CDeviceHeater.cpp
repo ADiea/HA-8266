@@ -31,7 +31,7 @@ bool CDeviceHeater::sendHeaterStatus(byte status)
 
 	do
 	{
-		if(RadioSend(pkg, PKG_HEATER_LEN, &outLength, 20))
+		if(err_NoError == RadioSend(pkg, PKG_HEATER_LEN, &outLength, 20))
 		{
 			if(PKG_HEATER_STATUS_LEN == outLength &&
 				PKG_TYPE_HEATER_STATUS == pkg[2] &&
@@ -42,7 +42,7 @@ bool CDeviceHeater::sendHeaterStatus(byte status)
 				break;
 			}
 		}
-		LOG_II("HEATER(%d) TX FAIL #%d", m_ID, retry + 1);
+		//else log error type LOG_II("HEATER(%d) TX FAIL #%d", m_ID, retry + 1);
 	}
 	while(++retry < 4);
 

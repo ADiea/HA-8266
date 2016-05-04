@@ -154,7 +154,7 @@ bool saveSystemSettings()
 
 		if(size == MAXDEVSZ)
 		{
-			LOG_E("settings too large\n");
+			LOG_E("settings too large");
 
 			break;
 		}

@@ -16,7 +16,7 @@ uint8_t RadioNextSeqID();
 uint8_t checkRadioChecksum(byte *pkg, uint8_t length);
 
 extern Si4432 *Radio;
-bool RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitMs);
+eRadioError RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitMs);
 void releaseRadio();
 bool getRadio(uint32_t waitMs);
 

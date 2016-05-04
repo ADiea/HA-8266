@@ -14,6 +14,9 @@ extern void (*outOfMemoryCb)(size_t);
 Timer tmrMainLoop;
 #define LOOP_TIME (1 * ONE_SECOND)
 
+Timer tmrHalfSecond;
+#define HALF_SECOND (ONE_SECOND >> 1)
+
 // Will be called when WiFi station was connected to AP
 void connectOk()
 {
@@ -87,7 +90,7 @@ static void mainLoop()
 
 	if (system_get_free_heap_size() < 6500)
 	{
-		LOG_E("LOW HEAP: %d\r\n", system_get_free_heap_size());
+		LOG_E("LOW HEAP: %d", system_get_free_heap_size());
 		if( gHttpServer.getActiveWebSockets().count() == 0)
 		{
 			//disconnect all, deinit and restart
@@ -144,11 +147,30 @@ static void initNetwork()
 
 void systemOutOfHeap(size_t requested)
 {
-	m_printf("NO HEAP req %d have %d", requested, system_get_free_heap_size());
+	m_printf("OUT OF HEAP req %d have %d", requested, system_get_free_heap_size());
 	restartSystem();
 }
 
+void scanAPFinished(bool succeeded, BssList list);
 
+void setupAPMode()
+{
+	LOG_E("WiFi AP not set, switch on SoftAP");
+	WifiStation.enable(false);
+
+	//WifiAccessPoint.enable(true);
+
+
+
+	//startWebServers();
+	tmrHalfSecond.initializeUs(ONE_SECOND, startWebServers).start(false);
+}
+
+void startAPScan()
+{
+	LOG_I("start ap scan");
+	WifiStation.startScan(scanAPFinished);
+}
 
 void scanAPFinished(bool succeeded, BssList list)
 {
@@ -158,32 +180,16 @@ void scanAPFinished(bool succeeded, BssList list)
 		startAPScan();
 	}
 
+	LOG_I("WiFi: found %d networks", list.count());
 	for (int i = 0; i < list.count(); i++)
 	{
-		LOG_I("\tWiFi: %s, %s, %s", list[i].ssid, list[i].getAuthorizationMethodName(),
+		LOG_I("WiFi: %s, %s, %s", list[i].ssid.c_str(), list[i].getAuthorizationMethodName(),
 				list[i].hidden ? "(bcast)":"(hidden)");
 	}
 
 	//Login.announceScanCompleted(list);
-	setupAPMode();
+	tmrHalfSecond.initializeUs(ONE_SECOND, setupAPMode).start(false);
 }
-
-void setupAPMode()
-{
-	LOG_E("WiFi AP not set, switch on SoftAP");
-	WifiStation.enable(false);
-	WifiAccessPoint.enable(true);
-	
-	WifiAccessPoint.config("Casa_1254", "", AUTH_OPEN);
-
-	startWebServers();
-}
-
-void startAPScan()
-{
-	WifiStation.startScan(scanAPFinished);
-}
-
 
 extern void init()
 {
@@ -200,6 +206,7 @@ extern void init()
 
 	if(gSysCfg.wifiStationIsConfigured)
 	{
+		LOG_I("WiFi is configured, start STA");
 		WifiAccessPoint.enable(false);
 		WifiStation.enable(true);
 		WifiStation.config(gSysCfg.wifiSSID, gSysCfg.wifiPwd);
@@ -211,17 +218,16 @@ extern void init()
 	}
 	else
 	{
+		LOG_I("WiFi is _not_ configured");
 		// Set system ready callback method
 		System.onReady(startAPScan);
-		
-		WifiAccessPoint.enable(false);
-		WifiStation.enable(true);
-		
-		wifi_station_set_reconnect_policy(false); 
 
+		WifiStation.enable(true);
+		wifi_station_set_reconnect_policy(false);
 		WifiStation.disconnect();
 		
-		//WifiAccessPoint.enable(true);
 		WifiAccessPoint.setIP(IPAddress(192, 168, 1, 1));
+		WifiAccessPoint.enable(true);
+		WifiAccessPoint.config("Casa_1254", "", AUTH_OPEN);
 	}
 }

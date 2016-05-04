@@ -51,8 +51,6 @@ void displayCipher(SSL *ssl)
         	LOG_I("Unknown - %d", ssl_get_cipher_id(ssl));
             break;
     }
-
-    LOG_I("\n");
 }
 
 
@@ -139,7 +137,7 @@ void wsConnected(wsMode Mode)
 		if (ssl) {
 			const char *common_name = ssl_get_cert_dn(ssl,SSL_X509_CERT_COMMON_NAME);
 			if (common_name) {
-				LOG_I("Common Name:\t%s\n", common_name);
+				LOG_I("Common Name:\t%s", common_name);
 			}
 			displayCipher(ssl);
 			//displaySessionId(ssl);
@@ -155,7 +153,7 @@ void wsConnected(wsMode Mode)
 }
 void wsMessageReceived(String message)
 {
-    LOG_I("wscli:WebSocket message received: %s", message.c_str());
+    LOG_I("wscli:msg RX: %s", message.c_str());
 
 
 
@@ -177,12 +175,12 @@ void wsMessageReceived(String message)
     }
 
     op = extractInt(g_devScrapBuffer + index + 5);
-    LOG_I("wscli:WebSockCli RX Op is:%d", op);
+    LOG_I("wscli:RX Op is:%d", op);
 
     switch(op)
     {
     	case wsOP_servHello:
-    			LOG_I("wscli:WebSockCli State is %d SrvHello, login", g_wsCliConnStatus, op);
+    			LOG_I("wscli:State is %d SrvHello, login", g_wsCliConnStatus, op);
     			g_wsCliConnStatus = wsState_hello;
 				m_snprintf(g_devScrapBuffer, sizeof(g_devScrapBuffer),
 									"{\"op\":%d,\"type\":%d,\"id\":%d}",
@@ -201,16 +199,16 @@ void wsMessageReceived(String message)
     	    }
 
     	    peerId = extractInt(g_devScrapBuffer + index + 7);
-    	    LOG_I("wscli:WebSockCli RX peer id:%d", peerId);
+    	    LOG_I("wscli:RX peer id:%d", peerId);
 
     		pRemoteClient = findPeer(peerId);
     		if(!pRemoteClient)
     		{
-    			LOG_I("wscli:WebSockCli RX new peer");
+    			LOG_I("wscli:RX new peer");
     			pRemoteClient = new CWebPeer(peerId);
 				if(!pRemoteClient)
 				{
-					LOG_E( "wscli:wsOP_msgRelay: No heap for peer\n");
+					LOG_E( "wscli: No heap for peer");
 					//reply nack?
 					return;
 				}
