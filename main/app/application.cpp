@@ -156,11 +156,8 @@ void scanAPFinished(bool succeeded, BssList list);
 void setupAPMode()
 {
 	LOG_E("WiFi AP not set, switch on SoftAP");
-	WifiStation.enable(false);
-
+	//WifiStation.enable(false);
 	//WifiAccessPoint.enable(true);
-
-
 
 	//startWebServers();
 	tmrHalfSecond.initializeUs(ONE_SECOND, startWebServers).start(false);
@@ -169,7 +166,7 @@ void setupAPMode()
 void startAPScan()
 {
 	LOG_I("start ap scan");
-	WifiStation.startScan(scanAPFinished);
+	//WifiStation.startScan(scanAPFinished);
 }
 
 void scanAPFinished(bool succeeded, BssList list)
@@ -219,15 +216,30 @@ extern void init()
 	else
 	{
 		LOG_I("WiFi is _not_ configured");
-		// Set system ready callback method
-		System.onReady(startAPScan);
+		
+		/*
+		PHY_MODE_11B	= 1,
+		PHY_MODE_11G	= 2,
+		PHY_MODE_11N    = 3
+		*/
+		wifi_set_phy_mode(PHY_MODE_11B);
+		LOG_I("Phy is %d", wifi_get_phy_mode());
 
-		WifiStation.enable(true);
+		WifiStation.enable(false);
 		wifi_station_set_reconnect_policy(false);
 		WifiStation.disconnect();
-		
-		WifiAccessPoint.setIP(IPAddress(192, 168, 1, 1));
+
+
+
 		WifiAccessPoint.enable(true);
+
+		WifiAccessPoint.setIP(IPAddress(192, 168, 1, 1),
+							  IPAddress(192, 168, 1, 2),
+							  IPAddress(192, 168, 1, 6));
+
 		WifiAccessPoint.config("Casa_1254", "", AUTH_OPEN);
+
+		// Set system ready callback method
+		System.onReady(startAPScan);
 	}
 }

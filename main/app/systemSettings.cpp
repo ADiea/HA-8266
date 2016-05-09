@@ -1,23 +1,5 @@
 #include "appMain.h"
 
-/*
-struct SystemSettings
-{
-	SystemSettings():fwVerMinor(0), fwVerMajor(0), wifiStationIsConfigured(0),
-			wifiSSID(NULL), wifiPwd(NULL), dbgNumRestarts(0),
-			lastKnownTimeStamp(0)
-	{}
-	uint16_t fwVerMinor;
-	uint16_t fwVerMajor;
-	uint8_t wifiStationIsConfigured;
-	char* wifiSSID; //max size 32
-	char* wifiPwd; //max size 64
-	//TODO backup wifi ssid/pwd
-	uint32_t dbgNumRestarts;
-	uint32_t lastKnownTimeStamp;
-};
-*/
-
 SystemSettings gSysCfg;
 
 // Restores settings to default. Prevents accidental calling
