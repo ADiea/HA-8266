@@ -127,7 +127,7 @@ static void mainLoop()
 		Radio->startListening();
 		releaseRadio();
 	}
-	else LOG_I("MainLoop: no radio");
+	else LOG_I("Radio busy");
 	WDT.alive();
 	++loopCount;
 }
@@ -204,6 +204,11 @@ void scanAPFinished(bool succeeded, BssList list)
 	tmrHalfSecond.initializeUs(ONE_SECOND, setupAPMode).start(false);
 }
 
+void probeRcved(int16_t rssi, uint8_t* mac)
+{
+	LOG_I("probe %d", rssi);
+}
+
 extern void init()
 {
 	outOfMemoryCb = systemOutOfHeap;
@@ -238,14 +243,15 @@ extern void init()
 		PHY_MODE_11G	= 2,
 		PHY_MODE_11N    = 3
 		*/
-		wifi_set_phy_mode(PHY_MODE_11B);
-		LOG_I("Phy is %d", wifi_get_phy_mode());
+		if(wifi_get_phy_mode() != PHY_MODE_11N)
+		{
+			wifi_set_phy_mode(PHY_MODE_11N);
+			LOG_I("Set WiFi PHY mode to N");
+		}
 
 		WifiStation.enable(true);
 		wifi_station_set_reconnect_policy(false);
 		WifiStation.disconnect();
-
-
 
 		WifiAccessPoint.enable(true);
 
@@ -257,5 +263,7 @@ extern void init()
 
 		// Set system ready callback method
 		System.onReady(startAPScan);
+
+		WifiEvents.onAccessPointProbeReqRecved(probeRcved);
 	}
 }

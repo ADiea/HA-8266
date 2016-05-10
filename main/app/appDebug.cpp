@@ -43,6 +43,7 @@ void debugStart()
 	}
 	LOG_I( "Chip id=%ld", system_get_chip_id());
 	LOG_I( "Flash id=%ld", spi_flash_get_id());
+	LOG_I("\n SDK version:%s\n", system_get_sdk_version());
 	LOG_I( "Mem info:");
 	system_print_meminfo();
 #ifdef MEMLEAK_DEBUG
