@@ -160,13 +160,25 @@ void setupAPMode()
 	//WifiAccessPoint.enable(true);
 
 	//startWebServers();
+
+	softap_config config = {0};
+	wifi_softap_get_config(&config);
+	LOG_I("AP is set to ch%d maxc%d beacon%d", config.channel,
+			config.max_connection, config.beacon_interval);
+
+	WifiAccessPoint.config("Casa_1254", "", AUTH_OPEN, false, 8, 300);
+
+	wifi_softap_get_config(&config);
+	LOG_I("(2)AP is set to ch%d maxc%d beacon%d", config.channel,
+			config.max_connection, config.beacon_interval);
+
 	tmrHalfSecond.initializeUs(ONE_SECOND, startWebServers).start(false);
 }
 
 void startAPScan()
 {
 	LOG_I("start ap scan");
-	//WifiStation.startScan(scanAPFinished);
+	WifiStation.startScan(scanAPFinished);
 }
 
 void scanAPFinished(bool succeeded, BssList list)
@@ -180,9 +192,13 @@ void scanAPFinished(bool succeeded, BssList list)
 	LOG_I("WiFi: found %d networks", list.count());
 	for (int i = 0; i < list.count(); i++)
 	{
-		LOG_I("WiFi: %s, %s, %s", list[i].ssid.c_str(), list[i].getAuthorizationMethodName(),
-				list[i].hidden ? "(bcast)":"(hidden)");
+		LOG_I("WiFi: %s, %s, %s ch:%d", list[i].ssid.c_str(), list[i].getAuthorizationMethodName(),
+				list[i].hidden ? "(bcast)":"(hidden)", list[i].channel);
 	}
+
+	wifi_station_set_reconnect_policy(false);
+	wifi_station_set_auto_connect(false);
+	wifi_station_disconnect();
 
 	//Login.announceScanCompleted(list);
 	tmrHalfSecond.initializeUs(ONE_SECOND, setupAPMode).start(false);
@@ -225,7 +241,7 @@ extern void init()
 		wifi_set_phy_mode(PHY_MODE_11B);
 		LOG_I("Phy is %d", wifi_get_phy_mode());
 
-		WifiStation.enable(false);
+		WifiStation.enable(true);
 		wifi_station_set_reconnect_policy(false);
 		WifiStation.disconnect();
 
@@ -234,10 +250,10 @@ extern void init()
 		WifiAccessPoint.enable(true);
 
 		WifiAccessPoint.setIP(IPAddress(192, 168, 1, 1),
-							  IPAddress(192, 168, 1, 2),
+							  IPAddress(192, 168, 1, 3),
 							  IPAddress(192, 168, 1, 6));
 
-		WifiAccessPoint.config("Casa_1254", "", AUTH_OPEN);
+		WifiAccessPoint.config("Casa_1254", "", AUTH_OPEN, false, 8, 300);
 
 		// Set system ready callback method
 		System.onReady(startAPScan);
