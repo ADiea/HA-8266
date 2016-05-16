@@ -156,11 +156,11 @@ void scanAPFinished(bool succeeded, BssList list);
 void setupAPMode()
 {
 	LOG_E("WiFi AP not set, switch on SoftAP");
-	//WifiStation.enable(false);
+	WifiStation.enable(false);
 	//WifiAccessPoint.enable(true);
 
 	//startWebServers();
-
+/*
 	softap_config config = {0};
 	wifi_softap_get_config(&config);
 	LOG_I("AP is set to ch%d maxc%d beacon%d", config.channel,
@@ -171,7 +171,7 @@ void setupAPMode()
 	wifi_softap_get_config(&config);
 	LOG_I("(2)AP is set to ch%d maxc%d beacon%d", config.channel,
 			config.max_connection, config.beacon_interval);
-
+*/
 	tmrHalfSecond.initializeUs(ONE_SECOND, startWebServers).start(false);
 }
 
@@ -206,7 +206,7 @@ void scanAPFinished(bool succeeded, BssList list)
 
 void probeRcved(int16_t rssi, uint8_t* mac)
 {
-	LOG_I("probe %d", rssi);
+	//LOG_I("probe %d", rssi);
 }
 
 extern void init()

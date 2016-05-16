@@ -7,6 +7,7 @@ bool CDeviceHeater::sendHeaterStatus(byte status)
 	byte seq = RadioNextSeqID();
 	bool bRet = false;
 	byte retry = 0;
+	eRadioError radioError = err_NoError;
 
 	pkg[0] = m_ID;
 	pkg[1] = GATEWAY_ID;
@@ -31,7 +32,8 @@ bool CDeviceHeater::sendHeaterStatus(byte status)
 
 	do
 	{
-		if(err_NoError == RadioSend(pkg, PKG_HEATER_LEN, &outLength, 20))
+		radioError = RadioSend(pkg, PKG_HEATER_LEN, &outLength, 20);
+		if(err_NoError == radioError)
 		{
 			if(PKG_HEATER_STATUS_LEN == outLength &&
 				PKG_TYPE_HEATER_STATUS == pkg[2] &&
@@ -42,9 +44,13 @@ bool CDeviceHeater::sendHeaterStatus(byte status)
 				break;
 			}
 		}
-		//else log error type LOG_II("HEATER(%d) TX FAIL #%d", m_ID, retry + 1);
 	}
 	while(++retry < 4);
+
+	if(!bRet)
+	{
+		LOG_I("HEATER(%d) TX FAIL err:%d", m_ID, radioError);
+	}
 
 	return bRet;
 }

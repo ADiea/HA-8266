@@ -165,7 +165,10 @@ void CDeviceTempHumid::requestUpdateState()
 				oldState.m_autopilotDay != m_state.m_autopilotDay ||
 				oldState.m_autopilotIndex != m_state.m_autopilotIndex )
 			{
-				LOG_I( "TH(%d) BROADCAST to %d clients", m_ID, gHttpServer.getActiveWebSockets().count());
+				if(gHttpServer.getActiveWebSockets().count())
+				{
+					LOG_I( "TH(%d) BROADCAST to %d clients", m_ID, gHttpServer.getActiveWebSockets().count());
+				}
 				broadcastDeviceInfo(gConnectedPeers, (CGenericDevice*)this);
 			}
 
