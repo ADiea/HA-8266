@@ -40,6 +40,18 @@ void debugStart()
 				LOG_I( "UNKNOWN (%d)", rstInfo->reason);
 				break;
 		}
+
+		if (rstInfo->reason == REASON_WDT_RST ||
+				rstInfo->reason == REASON_EXCEPTION_RST ||
+				rstInfo->reason == REASON_SOFT_WDT_RST)
+		{
+			if (rstInfo->reason == REASON_EXCEPTION_RST)
+			{
+				LOG_I("Fatal exception (%d):\n", rstInfo->exccause);
+			}
+			LOG_I("epc1=0x%08x, epc2=0x%08x, epc3=0x%08x, excvaddr=0x%08x, depc=0x%08x\n",
+					rstInfo->epc1, rstInfo->epc2, rstInfo->epc3, rstInfo->excvaddr, rstInfo->depc);
+		}
 	}
 	LOG_I( "Chip id=%ld", system_get_chip_id());
 	LOG_I( "Flash id=%ld", spi_flash_get_id());

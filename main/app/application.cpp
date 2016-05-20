@@ -156,7 +156,7 @@ void scanAPFinished(bool succeeded, BssList list);
 void setupAPMode()
 {
 	LOG_E("WiFi AP not set, switch on SoftAP");
-	WifiStation.enable(false);
+	//WifiStation.enable(false);
 	//WifiAccessPoint.enable(true);
 
 	//startWebServers();
@@ -172,6 +172,7 @@ void setupAPMode()
 	LOG_I("(2)AP is set to ch%d maxc%d beacon%d", config.channel,
 			config.max_connection, config.beacon_interval);
 */
+	debugf("AP. ip: %s mac: %s", WifiAccessPoint.getIP().toString().c_str(), WifiAccessPoint.getMAC().c_str());
 	tmrHalfSecond.initializeUs(ONE_SECOND, startWebServers).start(false);
 }
 
@@ -196,9 +197,9 @@ void scanAPFinished(bool succeeded, BssList list)
 				list[i].hidden ? "(bcast)":"(hidden)", list[i].channel);
 	}
 
-	wifi_station_set_reconnect_policy(false);
-	wifi_station_set_auto_connect(false);
-	wifi_station_disconnect();
+	//wifi_station_set_reconnect_policy(false);
+	//wifi_station_set_auto_connect(false);
+	//wifi_station_disconnect();
 
 	//Login.announceScanCompleted(list);
 	tmrHalfSecond.initializeUs(ONE_SECOND, setupAPMode).start(false);
@@ -220,7 +221,9 @@ extern void init()
 
 	startSystem();
 	
-	wifi_station_set_auto_connect(false); //the ESP8266 station will not try to connect to the router automatically when power on until wifi_station_connect is called.
+	//the ESP8266 station will not try to connect
+	//to the router automatically when power on until wifi_station_connect is called.
+	wifi_station_set_auto_connect(false);
 
 	if(gSysCfg.wifiStationIsConfigured)
 	{
@@ -249,17 +252,17 @@ extern void init()
 			LOG_I("Set WiFi PHY mode to N");
 		}
 
+		WifiAccessPoint.enable(true);
+		WifiAccessPoint.config("Casa_1254", "abcd1234", AUTH_WPA2_PSK, false, 8, 300);
+
 		WifiStation.enable(true);
 		wifi_station_set_reconnect_policy(false);
 		WifiStation.disconnect();
 
-		WifiAccessPoint.enable(true);
 
 		WifiAccessPoint.setIP(IPAddress(192, 168, 1, 1),
 							  IPAddress(192, 168, 1, 3),
 							  IPAddress(192, 168, 1, 6));
-
-		WifiAccessPoint.config("Casa_1254", "", AUTH_OPEN, false, 8, 300);
 
 		// Set system ready callback method
 		System.onReady(startAPScan);
