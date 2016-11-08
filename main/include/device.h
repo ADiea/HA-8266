@@ -9,6 +9,8 @@
 #include "drv/drvMQ135.h"
 #include "drv/drvWiFi.h"
 #include "drv/drvDS18B20.h"
+#include "drv/drvSHT21.h"
+#include "drv/drvGesture.h"
 
 #include "Wiring/WVector.h"
 #include <Libraries/DHT/DHT.h>
@@ -30,6 +32,8 @@
 #define DEV_WIFI    0x0020
 #define DEV_DSTEMP  0x0040
 #define DEV_UART    0x0080
+#define DEV_SHT21   0x0100
+#define DEV_GEST    0x0200
 
 #define DISABLE 	0x01
 #define ENABLE 		0x02
@@ -67,6 +71,36 @@ enum eDeviceType
 	devTypeLight,
 	devTypeTH,
 	devTypeHeater,
+};
+
+enum eDriverOp
+{
+	drvAlloc =    0x1,
+	drvEnable =  (0x2 | 0x1),
+
+	drvDisable =  0x4,
+	drvDealloc = (0x8 | 0x4)
+};
+
+enum eDriverState
+{
+	drvEnabled = 0,
+	drvDisabled = 1
+};
+
+class CGenericDriver
+{
+public:
+	CGenericDriver():m_ID(INVALID_DEVICE_ID), m_isBusy(0){};
+
+//	bool isInit()
+//		{return (m_ID != INVALID_DEVICE_ID) && (m_Error == );}
+
+	virtual bool doOperation(eDriverOp op) = 0;
+	virtual bool isBusy(){return m_isBusy;}
+
+	uint32_t m_ID;
+	uint8_t m_isBusy;
 };
 
 class CGenericDevice
