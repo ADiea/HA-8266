@@ -1,21 +1,7 @@
 #ifndef __DEVICE_H_
 #define __DEVICE_H_
 
-#include "drv/drvUART.h"
-#include "drv/drvRGB.h"
-#include "drv/drvRadio.h"
-#include "drv/drvSDCard.h"
-#include "drv/drvDHT22.h"
-#include "drv/drvMQ135.h"
-#include "drv/drvWiFi.h"
-#include "drv/drvDS18B20.h"
-#include "drv/drvSHT21.h"
-#include "drv/drvGesture.h"
-
-#include "Wiring/WVector.h"
-#include <Libraries/DHT/DHT.h>
-#include <SmingCore/SmingCore.h>
-
+#include "driver.h"
 #include "util.h"
 
 #define LOCAL_TEMPHUMID_SENSOR_ID 0
@@ -24,26 +10,6 @@
 
 #define DEV_PATH_ON_DISK "/"
 
-#define DEV_RADIO   0x0001
-#define DEV_SDCARD  0x0002
-#define DEV_RGB     0x0004
-#define DEV_MQ135   0x0008
-#define DEV_DHT22   0x0010
-#define DEV_WIFI    0x0020
-#define DEV_DSTEMP  0x0040
-#define DEV_UART    0x0080
-#define DEV_SHT21   0x0100
-#define DEV_GEST    0x0200
-
-#define DISABLE 	0x01
-#define ENABLE 		0x02
-#define CONFIG 		0x04
-
-#define DEV_ERR_OK 		0
-#define DEV_OTHER_ERR 	1
-#define DEV_DEVIO_ERR 	2
-#define DEV_PARAM_ERR 	3
-
 #define MAX_FRIENDLY_NAME 64
 
 #define MAXDEVSZ 1472
@@ -51,8 +17,6 @@ extern char g_devScrapBuffer[MAXDEVSZ];
 
 #define MIN_TIME_WRITE_TO_DISK 5000 //5s
 #define ONE_MINUTE 60000
-
-#define isDevEnabled(dev) ((dev) & gDevicesState)
 
 void initDevices();
 
@@ -73,35 +37,6 @@ enum eDeviceType
 	devTypeHeater,
 };
 
-enum eDriverOp
-{
-	drvAlloc =    0x1,
-	drvEnable =  (0x2 | 0x1),
-
-	drvDisable =  0x4,
-	drvDealloc = (0x8 | 0x4)
-};
-
-enum eDriverState
-{
-	drvEnabled = 0,
-	drvDisabled = 1
-};
-
-class CGenericDriver
-{
-public:
-	CGenericDriver():m_ID(INVALID_DEVICE_ID), m_isBusy(0){};
-
-//	bool isInit()
-//		{return (m_ID != INVALID_DEVICE_ID) && (m_Error == );}
-
-	virtual bool doOperation(eDriverOp op) = 0;
-	virtual bool isBusy(){return m_isBusy;}
-
-	uint32_t m_ID;
-	uint8_t m_isBusy;
-};
 
 class CGenericDevice
 {

@@ -97,8 +97,9 @@ static void mainLoop()
 			//restartSystem();
 		}
 	}
+	CBusAutoRelease bus(devSPI_Radio, 5);
 
-	if(Radio && getRadio(5))
+	if(DrvRadio.isEnabled() && bus.getBus())
 	{
 		if(Radio->isPacketReceived())
 		{

@@ -15,7 +15,7 @@ printat RSSI
 */
 #include "main.h"
 
-#define NUM_COLORS 4
+
 uint16_t g_LedStateInterval = 1000;
 
 #define LOOP_DELAY 30
@@ -25,13 +25,8 @@ typedef unsigned short u16;
 
 volatile unsigned long int pktSecv = 0;
 
-volatile tRGB gColorPallette[NUM_COLORS] = //g r b
-{
-	{0x00, 0x00, 0x00}, //black/off
-	{0x20, 0x00, 0x00}, //green
-	{0x00, 0x20, 0x00}, //red
-	{0x00, 0x00, 0x20}	//blue
-};
+
+
 
 
 void initHw()
@@ -68,21 +63,6 @@ void initHw()
 	
 	//enable pullups, just to be sure
 	MCUCR &= ~(1<<PUD);
-}
-
-void mcpy(char *d, char *s, unsigned int sz)
-{
-	for(; sz > 0; --sz)
-	{
-		*d++ = *s++;
-	}
-}
-
-unsigned int slen(char *s)
-{
-	unsigned int sz = 0;
-	while(*(s++)) ++sz;
-	return sz;	
 }
 
 int main(void)

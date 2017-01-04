@@ -18,10 +18,13 @@
 #include "light.h"
 #include "heater.h"
 #include "../../protocol/radio_protocol.h"
+#include "utils.h"
 
 #define NODE_LIGHT 0
 #define NODE_THSENSOR 1
 #define NODE_HEATER 2
+#define NODE_LAMP 3
+
 
 #define NODETYPE NODE_HEATER
 #define HAS_RGBLED 0

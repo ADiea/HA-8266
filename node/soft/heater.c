@@ -112,7 +112,7 @@ void heater_loop()
 		
 		g_heaterLastGasReading = feedGasBuffer(adcValue);
 	
-		//debugf("ADC adc:%d mean:%d\n", adcValue, g_heaterLastGasReading);
+		debugf("ADC adc:%d mean:%d\n", adcValue, g_heaterLastGasReading);
 		
 		if(g_heaterLastGasReading >= g_heaterMedGasThresh && 
 			(g_heaterStatus & HEATER_STATUS_ON))

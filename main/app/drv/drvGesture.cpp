@@ -1,44 +1,64 @@
 #include "drv/drvGesture.h"
-#include <SmingCore/SmingCore.h>
 
-SparkFun_APDS9960 *gestureChip;
+CDrvGesture DrvGest;
 
-uint8_t init_DEV_GEST(uint8_t operation)
+virtual eDriverError CDrvGesture::setup(eDriverOp op)
 {
-	uint8_t retVal = DEV_ERR_OK;
+	eDriverError retErr = drvErrOther;
 	do
 	{
-		if(operation & ENABLE)
+		if(drvEnable == op)
 		{
-			//init GPIO, enable device
-			
-			//configure device
-			if(operation & CONFIG)
+			if(m_theChip)
 			{
-				if(gestureChip)
+				delete m_theChip;
+				m_theChip = NULL;
+			}
+
+			m_theChip = new SparkFun_APDS9960();
+
+			if(m_theChip)
+			{
+				CBusAutoRelease bus(devI2C_Gesture);
+
+				if(bus.getBus())
 				{
-					delete gestureChip;
-					gestureChip = NULL;
+					if(m_theChip->init())
+					{
+						retErr = drvErrOK;
+						m_State = drvEnabled;
+					}
+					else
+					{
+						retErr = drvErrIO;
+					}
 				}
-
-				gestureChip = new SI7021();
-
-				gestureChip->begin();
+				else
+				{
+					retErr = drvErrBus;
+				}
 			}
-		}
-		else
-		{
-			//deinit GPIO
-			if(gestureChip)
+			else
 			{
-				delete gestureChip;
-				gestureChip = NULL;
+				retErr = drvErrMalloc;
 			}
 		}
-	}
-	while(0);
+		else if (drvDisable == op)
+		{
+			if(m_theChip)
+			{
+				delete m_theChip;
+				m_theChip = NULL;
+			}
 
-	return retVal;
+			retErr = drvErrOK;
+			m_State = drvDisabled;
+		}
+	} while(0);
+
+	return retErr;
 }
+
+
 
 

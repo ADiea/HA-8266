@@ -1,5 +1,4 @@
 #include "drv/drvSDCard.h"
-#include <SmingCore/SmingCore.h>
 #include <Libraries/SDCard/SDCard.h>
 
 

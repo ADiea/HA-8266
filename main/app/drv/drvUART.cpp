@@ -1,5 +1,4 @@
 #include "drv/drvUART.h"
-#include <SmingCore/SmingCore.h>
 
 uint8_t init_DEV_UART(uint8_t operation)
 {

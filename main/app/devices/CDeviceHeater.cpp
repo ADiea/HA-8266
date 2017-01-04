@@ -152,7 +152,6 @@ bool CDeviceHeater::radioPktReceivedFromDevice(char* pkg, uint16_t pktLen)
 	   checkRadioChecksum((byte*)pkg, PKG_HEATER_REQUEST_LEN))
 	{
 		LOG_I("HEATER(%d) REQUEST", m_ID);
-		releaseRadio();
 		sendHeaterStatus(m_state.isOn ? HEATER_REQ_ON : HEATER_REQ_OFF);
 	}
 	else if(PKG_HEATER_STATUS_LEN == pktLen &&

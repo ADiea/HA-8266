@@ -186,8 +186,8 @@ uint32_t readFileFull(const char* path, char** buf, bool bForce/* = false*/)
 	FRESULT fRes;
 	FILINFO fno;
 	uint32_t fActualSize = 0;
-
-	if(bForce || getRadio(1000))
+	CBusAutoRelease bus(devSPI_Radio, 1000);
+	if(bForce || bus.getBus())
 	{
 		do
 		{
@@ -254,7 +254,8 @@ uint32_t writeFileFull(const char* path, char* buf, uint32_t len, bool bForce/* 
 
 	uint32_t actual = 0;
 
-	if(bForce || getRadio(1000))
+	CBusAutoRelease bus(devSPI_Radio, 1000);
+	if(bForce || bus.getBus())
 	{
 		do
 		{

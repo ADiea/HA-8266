@@ -1,8 +1,7 @@
 #ifndef DRV_WIFI
 #define DRV_WIFI
 
-
-#include "device.h"
+#include "driver.h"
 
 uint8_t init_DEV_WIFI(uint8_t operation);
 

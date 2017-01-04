@@ -1,5 +1,4 @@
 #include "drv/drvSHT21.h"
-#include <SmingCore/SmingCore.h>
 
 
 SI7021 *thChip = NULL;

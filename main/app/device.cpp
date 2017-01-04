@@ -26,11 +26,26 @@ void updateDeviceStatus(unsigned short dev, uint8_t op)
 		gDevicesState |= dev;
 }
 
+bool doPOST()
+{
+	return true;
+}
+
+void initBSP()
+{
+	BusSPI.setup();
+	BusI2C.setup();
+
+	doPOST();
+}
+
 void initDevices()
 {
 	int retry = 3;
 
-	enableDev(DEV_UART, ENABLE | CONFIG);
+	initBSP();
+
+	/*enableDev(DEV_UART, ENABLE | CONFIG);
 
 	//setup SDCard and load custom system settings
 	enableDev(DEV_SDCARD, ENABLE | CONFIG);
@@ -41,14 +56,12 @@ void initDevices()
 	//MQ135 not yet equipped
 	enableDev(DEV_MQ135, DISABLE);
 
-	//RGB periodically enabled to send data
-	enableDev(DEV_RGB, DISABLE);
-
 	//enable and config Radio
 	enableDev(DEV_RADIO, ENABLE | CONFIG);
 
 	//setup Wifi
 	enableDev(DEV_WIFI, ENABLE | CONFIG);
+	*/
 
 	while(!devicesLoadFromDisk() && --retry);
 }
@@ -63,7 +76,8 @@ bool devicesLoadFromDisk()
 	int i;
 	char *fn;   /* This function assumes non-Unicode configuration */
 
-	if(getRadio(1000))
+	CBusAutoRelease bus(devSPI_Radio, 1000);
+	if(bus.getBus())
 	{
 		res = f_opendir(&dir, DEV_PATH_ON_DISK);                       /* Open the directory */
 		if (res == FR_OK)
@@ -236,7 +250,8 @@ bool deviceDeleteLog(uint32_t id)
 
 	m_snprintf(fname, sizeof(fname), "LOG_%d", id);
 
-	if(getRadio(1000))
+	CBusAutoRelease bus(devSPI_Radio, 1000);
+	if(bus.getBus())
 	{
 		do
 		{
@@ -275,7 +290,8 @@ bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry, 
 
 	m_snprintf(fname, sizeof(fname), "L%x%x", id, timestamp >> 13);
 
-	if(getRadio(1000))
+	CBusAutoRelease bus(devSPI_Radio, 1000);
+	if(bus.getBus())
 	{
 		do
 		{
@@ -478,7 +494,8 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 	m_snprintf(path, sizeof(path), "L%x%x", id, fromTime >> 13);
 
 	do{
-		if(getRadio(1000))
+		CBusAutoRelease bus(devSPI_Radio, 1000);
+		if(bus.getBus())
 		{
 			//on first opened file search for proper offset to start with
 			if(printHeader)
@@ -539,7 +556,8 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 		if(printHeader)
 			printHeader = false; //printed header, don't print for the rest
 
-		if(getRadio(1000))
+		CBusAutoRelease bus(devSPI_Radio, 1000);
+		if(bus.getBus())
 		{
 			if(fOffset > 0)
 				f_lseek(&file, fOffset);
@@ -558,7 +576,8 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 		{
 			WDT.alive();
 
-			if(getRadio(1000))
+			CBusAutoRelease bus(devSPI_Radio, 1000);
+			if(bus.getBus())
 			{
 				f_read(&file, path + remainingBytes, sizeof(path) - remainingBytes - 1, &fActualSize);
 				releaseRadio();
