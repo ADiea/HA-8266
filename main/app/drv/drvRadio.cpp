@@ -9,29 +9,7 @@ uint8_t CDrvRadio::checkRadioChecksum(byte *pkg, uint8_t length)
 	return chk == pkg[length-1];
 }
 
-
-
-bool _isRadioBusy()
-{
-	return bRadioBusy;
-}
-
-
-
-/*
-bool RadioMakePacket(byte *pkgBuffer, 
-					uint8_t maxLen,
-					uint8_t destAddress,
-					uint8_t pkgType,
-					
-					)
-{
-	pkg[0] = destAddress;
-	pkg[1] = pkgType;
-}
-*/
-
-eRadioError RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitMs)
+eRadioError CDrvRadio::RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitMs)
 {
 	eRadioError result = err_RadioNotInit;
 	
@@ -101,61 +79,66 @@ eRadioError RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uint32_t waitM
 	return result;
 }
 
-uint8_t init_DEV_RADIO(uint8_t operation)
+virtual eDriverError CDrvRadio::setup(eDriverOp op/* = drvEnable*/)
 {
-	uint8_t retVal = DEV_ERR_OK;
+	eDriverError retErr = drvErrOther;
 	do
 	{
-		if(operation & ENABLE)
+		if(drvEnable == op)
 		{
-			//init GPIO, enable device
-			
-			//configure device
-			if(operation & CONFIG)
+			if(pRadioSPI)
 			{
-				if(pRadioSPI)
-					delete pRadioSPI;
+				delete pRadioSPI;
+			}
+			
+			pRadioSPI = new SPISoft(PIN_RADIO_DO, PIN_RADIO_DI, PIN_RADIO_CK, PIN_RADIO_SS, 0);
 
-				pRadioSPI = new SPISoft(PIN_RADIO_DO, PIN_RADIO_DI, PIN_RADIO_CK, PIN_RADIO_SS, 0);
-
-				if(pRadioSPI)
+			if(pRadioSPI)
+			{
+				if(m_theChip)
 				{
-					if(Radio)
-						delete Radio;
-					Radio = new Si4432(pRadioSPI);
+					delete m_theChip;
 				}
-
-				if(Radio)
-				{
-					delay(100);
-
-					//initialise radio with default settings
-					Radio->init();
-
-					//explicitly set baudrate and channel
-					Radio->setBaudRateFast(eBaud_38k4);
-					Radio->setChannel(0);
-
-					//dump the register configuration to console
-					Radio->readAll();
-				}
-				else
-				{
-					//LOG_E("No heap %s:%d", __FUNCTION__, __LINE__);
-					break;
-				}
+				m_theChip = new Si4432(pRadioSPI);
 			}
 
-			Radio->startListening();
-		}
-		else
-		{
-			//deinit GPIO
-			//if(Radio) delete Radio;
-			//if(pRadioSPI) delete pRadioSPI;
-		}
-	}
-	while(0);
+			if(m_theChip)
+			{
+				//SPIoI2C does auto request the SPI and i2c bus
 
-	return retVal;
+				//initialise radio with default settings
+				m_theChip->init();
+
+				//explicitly set baudrate and channel
+				m_theChip->setBaudRateFast(eBaud_38k4);
+				m_theChip->setChannel(0);
+
+				//dump the register configuration to console
+				m_theChip->readAll();
+
+				m_theChip->startListening();
+
+				retErr = drvErrOK;
+				m_State = drvEnabled;
+			}
+			else
+			{
+				retErr = drvErrMalloc;
+				break;
+			}
+		}
+		else if (drvDisable == op)
+		{
+			if(m_theChip)
+			{
+				delete m_theChip;
+				m_theChip = NULL;
+			}
+
+			retErr = drvErrOK;
+			m_State = drvDisabled;
+		}
+	} while(0);
+
+	return retErr;
 }
