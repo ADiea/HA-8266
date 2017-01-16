@@ -2,13 +2,17 @@
 #define DRV_BUS_MASTER
 
 #include "driver.h"
+#include <SPISoft.h>
 
 #define BUS_WAIT_TIME 5 //ms
 
+extern SPISoft SysSPI;
+extern CDrvBus BusSPI, BusI2C;
 
 enum eBusDevices
 {
-	devBus_NoDevice,
+	devBus_NoDevice,  //Bus is free
+	devBus_SameDevice, //The same requester is already using the bus from a different thread
 	devSPI_SDCard,
 	devSPI_Radio,
 
@@ -30,6 +34,7 @@ class CDrvBus : public CGenericDriver
 {
 	CDrvBus():currentDeviceUsingBus(devBus_NoDevice){}
 	virtual eDriverError setup(eDriverOp op = drvEnable);
+	virtual ~CDrvBus(){setup(drvDisable);}
 
 	/*return when no device is using SPI bus
 	 * or return when timeout occurred
@@ -42,7 +47,7 @@ class CDrvBus : public CGenericDriver
 	eBusDevices currentDeviceUsingBus;
 };
 
-extern CDrvBus BusSPI, BusI2C;
+
 
 class CBusAutoRelease
 {

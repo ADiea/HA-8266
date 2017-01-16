@@ -43,12 +43,14 @@ private:
 };
 
 #include "drv/drvBusMaster.h"
+#include "drv/drvIO.h"
 #include "drv/drvUART.h"
 #include "drv/drvRadio.h"
 #include "drv/drvSDCard.h"
 #include "drv/drvWiFi.h"
 #include "drv/drvSHT21.h"
 #include "drv/drvGesture.h"
+#include "drv/drvHaptic.h"
 #include "drv/drvLCD.h"
 
 #endif /*__DRIVER_H_*/

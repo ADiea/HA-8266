@@ -1,33 +1,78 @@
 #include "drv/drvSDCard.h"
-#include <Libraries/SDCard/SDCard.h>
 
+CDrvSD DrvSD;
 
-
-uint8_t init_DEV_SDCARD(uint8_t operation)
+bool CDrvSD::DelegateCS(eSPIChipSelect op)
 {
-	uint8_t retVal = DEV_ERR_OK;
+	bool bRet = false;
+	eBusDevices result;
+
 	do
 	{
-		if(operation & ENABLE)
+/*		result = BusSPI.getBus(devSPI_SDCard, RADIO_WAIT_SPI_BUS);
+
+		if(devSPI_SDCard != result)
 		{
-			//init GPIO, enable device
-			
-			//configure device
-			if(operation & CONFIG)
+			LOG_W("SD: SPI busy: %d", result);
+			break;
+		}
+*/
+		if(op == eSPIRelease)
+		{
+			bRet = DrvIO.setPin(IO_PIN_CS_SD, 1);
+		}
+		else //Select
+		{
+			bRet = DrvIO.setPin(IO_PIN_CS_SD, 0);
+		}
+/*
+		if(!bRet || (op == eSPIRelease))
+		{
+			BusSPI.releaseBus();
+		}
+*/
+	}while(0);
+
+	return bRet;
+}
+
+virtual eDriverError CDrvSD::setup(eDriverOp op/* = drvEnable*/)
+{
+	eDriverError retErr = drvErrOther;
+	do
+	{
+		if(drvEnable == op)
+		{
+			CBusAutoRelease bus(devSPI_SDCard, SD_WAIT_SPI_BUS);
+			if(bus.getBus())
 			{
-				SDCardSPI = new SPISoft(PIN_CARD_DO, PIN_CARD_DI, PIN_CARD_CK, PIN_CARD_SS, 10);
-				SDCard_begin(PIN_CARD_SS);
+				SDCardSPI = &SysSPI;
+
+				SDCard_begin(0xFF, DelegateCS);
+
+				retErr = drvErrOK;
+				m_State = drvEnabled;
+			}
+			else
+			{
+				retErr = drvErrBus;
 			}
 		}
-		else
+		else if (drvDisable == op)
 		{
-			//deinit GPIO
-		}
-	}
-	while(0);
+			/* nothing to do */
 
-	return retVal;
+			retErr = drvErrOK;
+			m_State = drvDisabled;
+		}
+	} while(0);
+
+	return retErr;
 }
+
+
+
+
 
 
 

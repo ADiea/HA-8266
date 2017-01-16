@@ -101,9 +101,9 @@ static void mainLoop()
 
 	if(DrvRadio.isEnabled() && bus.getBus())
 	{
-		if(Radio->isPacketReceived())
+		if(DrvRadio.get()->isPacketReceived())
 		{
-			Radio->getPacketReceived(&len, pkg);
+			DrvRadio.get()->getPacketReceived(&len, pkg);
 			if(len > 0)
 			{
 				LOG_II("ASYNC RX (%d):", len);
@@ -125,10 +125,11 @@ static void mainLoop()
 			}
 
 		}
-		Radio->startListening();
-		releaseRadio();
+		DrvRadio.get()->startListening();
 	}
-	else LOG_I("Radio busy");
+	else
+		LOG_I("Radio busy(main)");
+
 	WDT.alive();
 	++loopCount;
 }

@@ -6,7 +6,7 @@ CDrvBus BusSPI, BusI2C;
 #define PIN_SPI_DI 4	/* Master Out Slave In */
 #define PIN_SPI_CK 5	/* Serial Clock */
 
-SPISoft sysSPIBus(PIN_SPI_DO, PIN_SPI_DI, PIN_SPI_CK, 0);
+SPISoft SysSPI(PIN_SPI_DO, PIN_SPI_DI, PIN_SPI_CK);
 
 virtual eDriverError CDrvBus::setup(eDriverOp op)
 {
@@ -20,20 +20,25 @@ virtual eDriverError CDrvBus::setup(eDriverOp op)
  * Returns current device holding the SPI busy*/
 eBusDevices CDrvBus::getBus(eBusDevices who, uint32_t waitMs/* = BUS_WAIT_TIME*/)
 {
-	if(currentDeviceUsingBus != who)
-	{
-		uint64_t exitMillis = millis() + waitMs;
+	eBusDevices curDev = currentDeviceUsingBus;
+	uint64_t exitMillis = millis() + waitMs;
 
-		do
-		{
-			if(currentDeviceUsingBus == devBus_NoDevice)
-			{
-				currentDeviceUsingBus = who;
-				break;
-			}
-			WDT.alive();
-		}
-		while (millis() < exitMillis) ;
+	if(currentDeviceUsingBus == who)
+	{
+		curDev = devBus_SameDevice;
 	}
-	return currentDeviceUsingBus;
+
+	do
+	{
+		if(currentDeviceUsingBus == devBus_NoDevice)
+		{
+			currentDeviceUsingBus = who;
+			curDev = who;
+			break;
+		}
+		WDT.alive();
+	}
+	while (millis() < exitMillis) ;
+
+	return curDev;
 }

@@ -10,7 +10,7 @@ public:
 	CDrvLCD():m_nexList(NULL){}
 
 	virtual eDriverError setup(eDriverOp op = drvEnable);
-	virtual ~CDrvLCD();
+	virtual ~CDrvLCD(){setup(drvDisable);}
 	void setNexListenList(NexTouch* nexList);
 	void runLoop();
 private:

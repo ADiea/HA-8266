@@ -32,7 +32,7 @@ bool CDeviceHeater::sendHeaterStatus(byte status)
 
 	do
 	{
-		radioError = RadioSend(pkg, PKG_HEATER_LEN, &outLength, 20);
+		radioError = DrvRadio.RadioSend(pkg, PKG_HEATER_LEN, &outLength, 20);
 		if(err_NoError == radioError)
 		{
 			if(PKG_HEATER_STATUS_LEN == outLength &&

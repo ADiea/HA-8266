@@ -76,7 +76,7 @@ bool devicesLoadFromDisk()
 	int i;
 	char *fn;   /* This function assumes non-Unicode configuration */
 
-	CBusAutoRelease bus(devSPI_Radio, 1000);
+	CBusAutoRelease bus(devSPI_SDCard, 1000);
 	if(bus.getBus())
 	{
 		res = f_opendir(&dir, DEV_PATH_ON_DISK);                       /* Open the directory */
@@ -98,13 +98,10 @@ bool devicesLoadFromDisk()
 		{
 			LOG_E( "f_opendir err %d", (int)res);
 		}
-
-		releaseRadio();
-
 	}
 	else
 	{
-		LOG_E( "Radio busy");
+		LOG_E( "SPI busy");
 	}
 
 	return bRet;
@@ -250,7 +247,7 @@ bool deviceDeleteLog(uint32_t id)
 
 	m_snprintf(fname, sizeof(fname), "LOG_%d", id);
 
-	CBusAutoRelease bus(devSPI_Radio, 1000);
+	CBusAutoRelease bus(devSPI_SDCard, 1000);
 	if(bus.getBus())
 	{
 		do
@@ -265,11 +262,10 @@ bool deviceDeleteLog(uint32_t id)
 			f_close(&file);
 		}
 		while(0);
-		releaseRadio();
 	}
 	else
 	{
-		LOG_E( "Radio busy");
+		LOG_E( "SPI busy");
 	}
 
 	return bRet;
@@ -290,7 +286,7 @@ bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry, 
 
 	m_snprintf(fname, sizeof(fname), "L%x%x", id, timestamp >> 13);
 
-	CBusAutoRelease bus(devSPI_Radio, 1000);
+	CBusAutoRelease bus(devSPI_SDCard, 1000);
 	if(bus.getBus())
 	{
 		do
@@ -350,12 +346,10 @@ bool deviceAppendLogEntry(uint32_t id, unsigned long timestamp, char* logEntry, 
 			f_close(&file);
 		}
 		while(0);
-
-		releaseRadio();
 	}
 	else
 	{
-		LOG_E( "Radio busy");
+		LOG_E( "SPI busy");
 	}
 
 	return bRet;
@@ -494,7 +488,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 	m_snprintf(path, sizeof(path), "L%x%x", id, fromTime >> 13);
 
 	do{
-		CBusAutoRelease bus(devSPI_Radio, 1000);
+		CBusAutoRelease bus(devSPI_SDCard, 1000);
 		if(bus.getBus())
 		{
 			//on first opened file search for proper offset to start with
@@ -514,12 +508,10 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 
 			fileOpened = true;
 			f_read(&file, path, 127, &fActualSize); //only interested in header, read 127 bytes
-
-			releaseRadio();
 		}
 		else
 		{
-			LOG_E( "Radio busy(1)");
+			LOG_E( "SPI busy(1)");
 			break;
 		}
 
@@ -556,7 +548,7 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 		if(printHeader)
 			printHeader = false; //printed header, don't print for the rest
 
-		CBusAutoRelease bus(devSPI_Radio, 1000);
+		CBusAutoRelease bus(devSPI_SDCard, 1000);
 		if(bus.getBus())
 		{
 			if(fOffset > 0)
@@ -564,11 +556,10 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 			else
 				f_lseek(&file, (startPtr - path));
 
-			releaseRadio();
 		}
 		else
 		{
-			LOG_E( "Radio busy(2)");
+			LOG_E( "SPI busy(2)");
 			break;
 		}
 
@@ -576,15 +567,14 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 		{
 			WDT.alive();
 
-			CBusAutoRelease bus(devSPI_Radio, 1000);
+			CBusAutoRelease bus(devSPI_SDCard, 1000);
 			if(bus.getBus())
 			{
 				f_read(&file, path + remainingBytes, sizeof(path) - remainingBytes - 1, &fActualSize);
-				releaseRadio();
 			}
 			else
 			{
-				LOG_E( "Radio busy(2)");
+				LOG_E( "SPI busy(2)");
 				isError = true;
 				break;
 			}

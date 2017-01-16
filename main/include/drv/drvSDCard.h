@@ -2,8 +2,22 @@
 #define DRV_SDCARD
 
 #include "driver.h"
+#include <Libraries/SDCard/SDCard.h>
 
-uint8_t init_DEV_SDCARD(uint8_t operation);
-void devSDCard_benchmark();
+#define SD_WAIT_SPI_BUS 30
+
+class CDrvSD : public CGenericDriver
+{
+public:
+	CDrvSD(){}
+
+	virtual eDriverError setup(eDriverOp op = drvEnable);
+	virtual ~CDrvSD(){setup(drvDisable);}
+
+	bool DelegateCS(eSPIChipSelect op);
+
+};
+
+extern CDrvSD DrvSD;
 
 #endif /*DRV_SDCARD*/

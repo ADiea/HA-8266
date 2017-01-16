@@ -23,46 +23,13 @@
 							<option id="cdt.managedbuild.option.gnu.cross.path.393887888" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path"/>
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.712123812" isAbstract="false" osList="all"/>
 							<builder id="cdt.managedbuild.builder.gnu.cross.2110485170" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder"/>
-							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.1168221903" name="Cross GCC Compiler">
-								<option id="gnu.c.compiler.option.include.paths.357494572" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${SMING_HOME}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SMING_HOME}/system/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SMING_HOME}/Libraries&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ESP_HOME}/sdk/include&quot;"/>
-								</option>
-								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.313321806" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
-							</tool>
-							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1999763015" name="Cross G++ Compiler">
-								<option id="gnu.cpp.compiler.option.include.paths.611746109" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${SMING_HOME}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SMING_HOME}/system/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SMING_HOME}/Libraries&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ESP_HOME}/sdk/include&quot;"/>
-								</option>
-								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1330530366" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
-							</tool>
-							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.65193859" name="Cross GCC Linker"/>
-							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.1795850540" name="Cross G++ Linker">
-								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.364843833" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
-									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
-									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
-								</inputType>
-							</tool>
-							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.525412186" name="Cross GCC Archiver"/>
-							<tool id="cdt.managedbuild.tool.gnu.cross.assembler.587940548" name="Cross GCC Assembler">
-								<option id="gnu.both.asm.option.include.paths.1067006329" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${SMING_HOME}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SMING_HOME}/system/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SMING_HOME}/Libraries&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ESP_HOME}/sdk/include&quot;"/>
-								</option>
-								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.651581712" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
-							</tool>
 						</toolChain>
 					</folderInfo>
 				</configuration>
 			</storageModule>
-			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings">
+				<externalSettings containerId="SmingFramework;cdt.managedbuild.toolchain.gnu.mingw.base.1135534147" factoryId="org.eclipse.cdt.core.cfg.export.settings.sipplier"/>
+			</storageModule>
 		</cconfiguration>
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">

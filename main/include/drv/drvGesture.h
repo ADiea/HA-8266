@@ -10,7 +10,7 @@ public:
 	CDrvGesture():m_theChip(NULL){}
 
 	virtual eDriverError setup(eDriverOp op = drvEnable);
-	virtual ~CDrvGesture();
+	virtual ~CDrvGesture(){setup(drvDisable);}
 private:
 	SparkFun_APDS9960 *m_theChip;
 };

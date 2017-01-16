@@ -186,7 +186,7 @@ uint32_t readFileFull(const char* path, char** buf, bool bForce/* = false*/)
 	FRESULT fRes;
 	FILINFO fno;
 	uint32_t fActualSize = 0;
-	CBusAutoRelease bus(devSPI_Radio, 1000);
+	CBusAutoRelease bus(devSPI_SDCard, 1000);
 	if(bForce || bus.getBus())
 	{
 		do
@@ -235,12 +235,10 @@ uint32_t readFileFull(const char* path, char** buf, bool bForce/* = false*/)
 		}
 		while(0);
 
-		if(!bForce)
-			releaseRadio();
 	}
 	else
 	{
-		LOG_E( "radio busy");
+		LOG_E( "SPI busy");
 	}
 	return fActualSize;
 }
@@ -254,7 +252,7 @@ uint32_t writeFileFull(const char* path, char* buf, uint32_t len, bool bForce/* 
 
 	uint32_t actual = 0;
 
-	CBusAutoRelease bus(devSPI_Radio, 1000);
+	CBusAutoRelease bus(devSPI_SDCard, 1000);
 	if(bForce || bus.getBus())
 	{
 		do
@@ -282,7 +280,7 @@ uint32_t writeFileFull(const char* path, char* buf, uint32_t len, bool bForce/* 
 	}
 	else
 	{
-		LOG_E( "Radio busy");
+		LOG_E( "SPI busy");
 	}
 
 	return actual;
