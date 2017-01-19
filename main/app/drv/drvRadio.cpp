@@ -102,7 +102,7 @@ eRadioError CDrvRadio::RadioSend(byte *pkg, uint8_t length, uint8_t *outLen, uin
 }
 
 
-virtual eDriverError CDrvRadio::setup(eDriverOp op/* = drvEnable*/)
+eDriverError CDrvRadio::setup(eDriverOp op/* = drvEnable*/)
 {
 	eDriverError retErr = drvErrOther;
 	do
@@ -113,7 +113,7 @@ virtual eDriverError CDrvRadio::setup(eDriverOp op/* = drvEnable*/)
 			{
 				delete m_theChip;
 			}
-			m_theChip = new Si4432(&SysSPI, 0, DelegateCS);
+			m_theChip = new Si4432(&SysSPI, 0, SPIDelegateCS(&CDrvRadio::DelegateCS, this));
 
 			if(m_theChip)
 			{
@@ -145,7 +145,7 @@ virtual eDriverError CDrvRadio::setup(eDriverOp op/* = drvEnable*/)
 			m_State = drvDisabled;
 		}
 	} while(0);
-
+	m_lastError = retErr;
 	return retErr;
 }
 

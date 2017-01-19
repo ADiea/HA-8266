@@ -15,17 +15,6 @@ struct devCtl
 	uint8_t (*initFunc)(uint8_t);
 };
 
-#define enableDev(device, op) \
-		if(DEV_ERR_OK == init_##device (op)) updateDeviceStatus(device, op);
-
-void updateDeviceStatus(unsigned short dev, uint8_t op)
-{
-	if(op & DISABLE)
-		gDevicesState &= ~dev;
-	else
-		gDevicesState |= dev;
-}
-
 bool doPOST()
 {
 	return true;
@@ -500,7 +489,6 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 			if (fRes != FR_OK)
 			{
 				LOG_E("Fopen: %d %s", (int)fRes, path);
-				releaseRadio();
 				break;
 			}
 			else LOG_I("Fopen %s Time:%u Decim:%d Entries %d/%d",
@@ -548,36 +536,21 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 		if(printHeader)
 			printHeader = false; //printed header, don't print for the rest
 
-		CBusAutoRelease bus(devSPI_SDCard, 1000);
-		if(bus.getBus())
-		{
+
 			if(fOffset > 0)
 				f_lseek(&file, fOffset);
 			else
 				f_lseek(&file, (startPtr - path));
 
-		}
-		else
-		{
-			LOG_E( "SPI busy(2)");
-			break;
-		}
+
 
 		do
 		{
 			WDT.alive();
 
-			CBusAutoRelease bus(devSPI_SDCard, 1000);
-			if(bus.getBus())
-			{
+
 				f_read(&file, path + remainingBytes, sizeof(path) - remainingBytes - 1, &fActualSize);
-			}
-			else
-			{
-				LOG_E( "SPI busy(2)");
-				isError = true;
-				break;
-			}
+
 
 			path[remainingBytes+fActualSize] = 0;
 			LOG_I("Read %d:%s", (int)fActualSize, path);

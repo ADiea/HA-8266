@@ -1,68 +1,99 @@
 #include "drv/drvSHT21.h"
 
+CDrvSHT21 DrvTempHumid;
 
-SI7021 *thChip = NULL;
-
-uint8_t init_DEV_SHT21(uint8_t operation)
+eDriverError CDrvSHT21::setup(eDriverOp op/* = drvEnable*/)
 {
-	uint8_t retVal = DEV_ERR_OK;
+	eDriverError retErr = drvErrOther;
 	do
 	{
-		if(operation & ENABLE)
+		if(drvEnable == op)
 		{
-			//init GPIO, enable device
-			
-			//configure device
-			if(operation & CONFIG)
+			if(m_theChip)
 			{
-				if(thChip)
+				delete m_theChip;
+				m_theChip = NULL;
+			}
+
+			m_theChip = new SI7021();
+
+			if(m_theChip)
+			{
+				CBusAutoRelease bus(devI2C_THSensor);
+
+				if(bus.getBus())
 				{
-					delete thChip;
-					thChip = NULL;
+					if(m_theChip->begin())
+					{
+						retErr = drvErrOK;
+						m_State = drvEnabled;
+					}
+					else
+					{
+						retErr = drvErrIO;
+					}
 				}
+				else
+				{
+					retErr = drvErrBus;
+				}
+			}
+			else
+			{
+				retErr = drvErrMalloc;
+			}
+		}
+		else if (drvDisable == op)
+		{
+			if(m_theChip)
+			{
+				delete m_theChip;
+				m_theChip = NULL;
+			}
 
-				thChip = new SI7021();
+			retErr = drvErrOK;
+			m_State = drvDisabled;
+		}
+	} while(0);
 
-				thChip->begin();
+	m_lastError = retErr;
+	return retErr;
+}
+
+
+eDriverError CDrvSHT21::readTempHumid(TempHumidity& dest)
+{
+	m_lastError = drvErrNullDevice;
+	si7021_env result;
+
+	if(m_theChip)
+	{
+		CBusAutoRelease bus(devI2C_THSensor);
+
+		if(bus.getBus())
+		{
+			m_theChip->getHumidityAndTemperature();
+
+			if(result.error_crc)
+			{
+				m_lastError = drvErrCRC;
+			}
+			else
+			{
+				dest.humid = result.humidityPercent / 100.0f;
+				dest.temp  = result.temperature / 100.0f;
+				m_lastError = drvErrOK;
 			}
 		}
 		else
 		{
-			//deinit GPIO
-			if(thChip)
-			{
-				delete thChip;
-				thChip = NULL;
-			}
+			m_lastError = drvErrBus;
 		}
 	}
-	while(0);
 
-	return retVal;
+	return m_lastError;
 }
 /*
-ErrorDHT devDHT22_getLastError()
-{
-	if(dht)
-		return dht->getLastError();
-	else
-		return errDHT_Other;
-}
-
-uint8_t devDHT22_read(TempAndHumidity& dest)
-{
-	if(dht)
-	{
-		if (!dht->readTempAndHumidity(dest))
-		{
-			return DEV_DEVIO_ERR;
-		}
-
-		return DEV_ERR_OK;
-	}
-	return DEV_PARAM_ERR;
-}
-
 float devDHT22_heatIndex()
 {
 	if(dht)

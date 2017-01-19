@@ -6,6 +6,8 @@
 
 #define BUS_WAIT_TIME 5 //ms
 
+class CDrvBus;
+
 extern SPISoft SysSPI;
 extern CDrvBus BusSPI, BusI2C;
 
@@ -32,6 +34,7 @@ enum eBusType
 
 class CDrvBus : public CGenericDriver
 {
+public:
 	CDrvBus():currentDeviceUsingBus(devBus_NoDevice){}
 	virtual eDriverError setup(eDriverOp op = drvEnable);
 	virtual ~CDrvBus(){setup(drvDisable);}
@@ -43,7 +46,7 @@ class CDrvBus : public CGenericDriver
 	eBusDevices getBus(eBusDevices who, uint32_t waitMs = BUS_WAIT_TIME);
 
 	void releaseBus(){currentDeviceUsingBus = devBus_NoDevice;}
-
+private:
 	eBusDevices currentDeviceUsingBus;
 };
 
@@ -51,6 +54,7 @@ class CDrvBus : public CGenericDriver
 
 class CBusAutoRelease
 {
+public:
 	CBusAutoRelease(eBusDevices who, uint32_t waitMs = BUS_WAIT_TIME):
 		m_requester(who), m_waitTime(waitMs), m_shouldRelease(false)
 	{
@@ -99,7 +103,7 @@ class CBusAutoRelease
 
 		return m_shouldRelease;
 	}
-
+private:
 	eBusType m_type;
 	eBusDevices m_requester;
 	uint32_t m_waitTime;

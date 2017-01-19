@@ -31,7 +31,7 @@ public:
 	CDrvIO():m_theChip(NULL), mPin(0xFF), mPort(0xFF), mDdr(0x00){}
 
 	bool setPin(uint8_t pin, uint8_t val);
-	uint8_t testPin(uint8_T pin);
+	uint8_t testPin(uint8_t pin);
 
 	void setDirection(uint8_t pin, eIODirection dir);
 

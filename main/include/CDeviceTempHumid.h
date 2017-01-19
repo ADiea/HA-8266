@@ -82,7 +82,7 @@ struct tTempHumidState
 
 	}
 
-	TempAndHumidity lastTH;
+	TempHumidity lastTH;
 	float tempSetpoint, tempSetpointMin, tempSetpointMax;
 
 	bool bEnabled;

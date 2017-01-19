@@ -12,7 +12,7 @@
 class CDrvRadio : public CGenericDriver
 {
 public:
-	CDrvRadio():m_theChip(NULL), pRadioSPI(NULL), mRadioSendFaults(0),
+	CDrvRadio():m_theChip(NULL), mRadioSendFaults(0),
 	mSeqID(0){}
 
 	virtual eDriverError setup(eDriverOp op = drvEnable);

@@ -8,7 +8,7 @@ CDrvBus BusSPI, BusI2C;
 
 SPISoft SysSPI(PIN_SPI_DO, PIN_SPI_DI, PIN_SPI_CK);
 
-virtual eDriverError CDrvBus::setup(eDriverOp op)
+eDriverError CDrvBus::setup(eDriverOp op)
 {
 	m_State = (op == drvEnable) ? drvEnabled : drvDisabled;
 	return drvErrOK;

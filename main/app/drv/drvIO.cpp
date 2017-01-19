@@ -22,7 +22,7 @@ bool CDrvIO::setPin(uint8_t pin, uint8_t val)
 	return false;
 }
 
-uint8_t CDrvIO::testPin(uint8_T pin)
+uint8_t CDrvIO::testPin(uint8_t pin)
 {
 	if(isPinValid(pin))
 	{
@@ -58,7 +58,7 @@ void CDrvIO::setDirection(uint8_t pin, eIODirection dir)
 
 uint8_t CDrvIO::safePort()
 {
-	return (mPort | ~ddr);
+	return (mPort | ~mDdr);
 }
 
 bool CDrvIO::readIO()
@@ -88,7 +88,7 @@ bool CDrvIO::writeIO()
 }
 
 
-virtual eDriverError CDrvIO::setup(eDriverOp op)
+eDriverError CDrvIO::setup(eDriverOp op)
 {
 	eDriverError retErr = drvErrOther;
 	do
@@ -109,8 +109,7 @@ virtual eDriverError CDrvIO::setup(eDriverOp op)
 
 				if(bus.getBus())
 				{
-					if(m_theChip->begin(IO_CHIP_ADDR))
-					{
+					m_theChip->begin(IO_CHIP_ADDR);
 						setDirection(IO_PIN_CS_SD, eIO_Out);
 						setDirection(IO_PIN_ENA_RST, eIO_Out);
 						setDirection(IO_PIN_CS_RF, eIO_Out);
@@ -120,11 +119,7 @@ virtual eDriverError CDrvIO::setup(eDriverOp op)
 
 						retErr = drvErrOK;
 						m_State = drvEnabled;
-					}
-					else
-					{
-						retErr = drvErrIO;
-					}
+
 				}
 				else
 				{
@@ -149,7 +144,7 @@ virtual eDriverError CDrvIO::setup(eDriverOp op)
 			m_State = drvDisabled;
 		}
 	} while(0);
-
+	m_lastError = retErr;
 	return retErr;
 }
 

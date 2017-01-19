@@ -54,16 +54,16 @@ void CDeviceTempHumid::onUpdateTimer()
 
 void CDeviceTempHumid::requestUpdateState()
 {
-	uint8_t errValue;
+	eDriverError errValue;
 	char logEntry[64];
 
 	float fTurnOnTemp, fTurnOffTemp;
 	int i;
 	if(locLocal == m_location)
 	{
-		errValue = devDHT22_read(m_state.lastTH);
+		errValue = DrvTempHumid.readTempHumid(m_state.lastTH);
 
-		if(DEV_ERR_OK == errValue)
+		if(drvErrOK == errValue)
 		{
 			tTempHumidState oldState = m_state;
 
@@ -144,7 +144,7 @@ void CDeviceTempHumid::requestUpdateState()
 
 			LOG_I("%02d:%02d:%02d %s H:%.2f(%.1f) T:%.2f(%.1f %.1f)/%.1f SetPt:%.2f needHeat:%d", now.Hour, now.Minute, now.Second, m_FriendlyName.c_str(),
 					m_state.lastTH.humid, m_state.fLastRH_1m, m_state.lastTH.temp, m_state.fLastTemp_1m ,
-					m_state.fLastTemp_8m, devDHT22_heatIndex(), m_state.tempSetpoint,
+					m_state.fLastTemp_8m, /*devDHT22_heatIndex()*/0, m_state.tempSetpoint,
 					m_state.bNeedHeating);
 
 			for(i=0; i < m_devWatchersList.count(); i++)
@@ -192,7 +192,7 @@ void CDeviceTempHumid::requestUpdateState()
 		}
 		else
 		{
-			LOG_E( "DHT22 read FAIL:%d (%d)", errValue, (int)devDHT22_getLastError());
+			LOG_E( "DHT22 read FAIL:%d", errValue);
 		}
 	}
 	else //request by radio

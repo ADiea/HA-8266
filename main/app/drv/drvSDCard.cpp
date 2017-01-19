@@ -36,7 +36,7 @@ bool CDrvSD::DelegateCS(eSPIChipSelect op)
 	return bRet;
 }
 
-virtual eDriverError CDrvSD::setup(eDriverOp op/* = drvEnable*/)
+eDriverError CDrvSD::setup(eDriverOp op/* = drvEnable*/)
 {
 	eDriverError retErr = drvErrOther;
 	do
@@ -48,7 +48,7 @@ virtual eDriverError CDrvSD::setup(eDriverOp op/* = drvEnable*/)
 			{
 				SDCardSPI = &SysSPI;
 
-				SDCard_begin(0xFF, DelegateCS);
+				SDCard_begin(0xFF, SPIDelegateCS(&CDrvSD::DelegateCS, this));
 
 				retErr = drvErrOK;
 				m_State = drvEnabled;
@@ -66,7 +66,7 @@ virtual eDriverError CDrvSD::setup(eDriverOp op/* = drvEnable*/)
 			m_State = drvDisabled;
 		}
 	} while(0);
-
+	m_lastError = retErr;
 	return retErr;
 }
 

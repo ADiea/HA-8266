@@ -4,7 +4,7 @@ bool CDeviceHeater::sendHeaterStatus(byte status)
 {
 	byte pkg[64] = {0};
 	byte outLength;
-	byte seq = RadioNextSeqID();
+	byte seq = DrvRadio.RadioNextSeqID();
 	bool bRet = false;
 	byte retry = 0;
 	eRadioError radioError = err_NoError;
@@ -149,7 +149,7 @@ bool CDeviceHeater::radioPktReceivedFromDevice(char* pkg, uint16_t pktLen)
 		pkg[1] == m_ID &&
 		pkg[0] == GATEWAY_ID &&
 		PKG_TYPE_HEATER_REQUEST == pkg[2] &&
-	   checkRadioChecksum((byte*)pkg, PKG_HEATER_REQUEST_LEN))
+	   DrvRadio.checkRadioChecksum((byte*)pkg, PKG_HEATER_REQUEST_LEN))
 	{
 		LOG_I("HEATER(%d) REQUEST", m_ID);
 		sendHeaterStatus(m_state.isOn ? HEATER_REQ_ON : HEATER_REQ_OFF);
@@ -158,7 +158,7 @@ bool CDeviceHeater::radioPktReceivedFromDevice(char* pkg, uint16_t pktLen)
 		pkg[1] == m_ID &&
 		pkg[0] == GATEWAY_ID &&
 		PKG_TYPE_HEATER_STATUS == pkg[2] &&
-	   checkRadioChecksum((byte*)pkg, PKG_HEATER_STATUS_LEN))
+		DrvRadio.checkRadioChecksum((byte*)pkg, PKG_HEATER_STATUS_LEN))
 	{
 		if(!m_state.isOn && (pkg[3] & HEATER_STATUS_ON))//turning on
 		{

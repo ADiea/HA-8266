@@ -2,7 +2,7 @@
 
 CDrvGesture DrvGest;
 
-virtual eDriverError CDrvGesture::setup(eDriverOp op)
+eDriverError CDrvGesture::setup(eDriverOp op)
 {
 	eDriverError retErr = drvErrOther;
 	do
@@ -55,7 +55,7 @@ virtual eDriverError CDrvGesture::setup(eDriverOp op)
 			m_State = drvDisabled;
 		}
 	} while(0);
-
+	m_lastError = retErr;
 	return retErr;
 }
 

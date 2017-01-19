@@ -275,8 +275,7 @@ uint32_t writeFileFull(const char* path, char* buf, uint32_t len, bool bForce/* 
 		}
 		while(0);
 
-		if(!bForce)
-			releaseRadio();
+
 	}
 	else
 	{
