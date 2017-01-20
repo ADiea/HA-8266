@@ -51,7 +51,6 @@ protected:
 
 #include "drv/drvBusMaster.h"
 #include "drv/drvIO.h"
-#include "drv/drvUART.h"
 #include "drv/drvRadio.h"
 #include "drv/drvSDCard.h"
 #include "drv/drvWiFi.h"

@@ -15,6 +15,7 @@ extern uint32_t phy_get_rand();
 #include "webserver.h"
 #include "webclient.h"
 #include "login.h"
+#include "ui.h"
 
 #include "systemSettings.h"
 

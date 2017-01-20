@@ -23,6 +23,7 @@ eDriverError CDrvLCD::setup(eDriverOp op)
 	m_lastError = retErr;
 	return retErr;
 }
+
 /*
 void CDrvLCD::setNexListenList(NexTouch* nexList)
 {

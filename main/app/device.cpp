@@ -1,4 +1,5 @@
 #include "device.h"
+#include "ui.h"
 
 bool devicesLoadFromDisk();
 bool deviceReadFromDisk(char* path);
@@ -7,13 +8,11 @@ char g_devScrapBuffer[MAXDEVSZ];
 
 Vector<CGenericDevice*> g_activeDevices;
 
-unsigned short gDevicesState = 0x0000;
+#define INIT_DEVICE(x) \
+		setupResult = x.setup(drvEnable); \
+		if(setupResult != drvErrOK) \
+		 	LOG_E( "Setup " #x " failed: %d", (int)setupResult);
 
-struct devCtl
-{
-	unsigned short dev;
-	uint8_t (*initFunc)(uint8_t);
-};
 
 bool doPOST()
 {
@@ -22,35 +21,45 @@ bool doPOST()
 
 void initBSP()
 {
-	BusSPI.setup();
-	BusI2C.setup();
-
 	doPOST();
+
+	uart_div_modify(0, UART_CLK_FREQ / (921600));
+
+#if DEBUG_BUILD
+	// enable some system messages
+	system_set_os_print(1);
+#endif
+
 }
 
 void initDevices()
 {
 	int retry = 3;
+	eDriverError setupResult = drvErrOK;
 
 	initBSP();
 
-	/*enableDev(DEV_UART, ENABLE | CONFIG);
+	//Enable and config IO hub
+	INIT_DEVICE(DrvIO);
 
-	//setup SDCard and load custom system settings
-	enableDev(DEV_SDCARD, ENABLE | CONFIG);
+	//Enable LCD and setup splash screen
+	INIT_DEVICE(DrvLCD);
+	UI.showPage(UI_LoadingPage);
 
-	//DHT22 periodically enabled to read data
-	enableDev(DEV_DHT22, ENABLE | CONFIG);
+	//Enable SDCard and load custom system settings
+	INIT_DEVICE(DrvSD);
 
-	//MQ135 not yet equipped
-	enableDev(DEV_MQ135, DISABLE);
+	//Enable SHT21 sensor
+	INIT_DEVICE(DrvTempHumid);
 
-	//enable and config Radio
-	enableDev(DEV_RADIO, ENABLE | CONFIG);
+	//Enable Gesture sensor
+	INIT_DEVICE(DrvGest);
 
-	//setup Wifi
-	enableDev(DEV_WIFI, ENABLE | CONFIG);
-	*/
+	//Enable Radio
+	INIT_DEVICE(DrvRadio);
+
+	//Enable WiFi
+	INIT_DEVICE(DrvWiFi);
 
 	while(!devicesLoadFromDisk() && --retry);
 }
@@ -217,7 +226,7 @@ bool deviceReadFromDisk(char* path)
 	if(device)
 	{
 		g_activeDevices.addElement(device);
-		LOG_E("Added device.");
+		LOG_I("Added device.");
 		bRet = true;
 	}
 
@@ -541,8 +550,6 @@ uint32_t deviceReadLog(uint32_t id, unsigned long fromTime, uint32_t decimation,
 				f_lseek(&file, fOffset);
 			else
 				f_lseek(&file, (startPtr - path));
-
-
 
 		do
 		{
